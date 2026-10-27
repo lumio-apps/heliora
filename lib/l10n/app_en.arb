@@ -1,0 +1,177 @@
+{
+  "@@locale": "en",
+  "appTitle": "Heliora",
+  "tagline": "Explore the Solar System, fully offline",
+  "navExplore": "Explore",
+  "navCompare": "Compare",
+  "navWeight": "Weight",
+  "navQuiz": "Quiz",
+  "viewMode": "View mode",
+  "settings": "Settings",
+  "notToScale": "Not to scale · Tap a planet to open it",
+  "dragToRotate": "Drag to rotate · Pinch to zoom",
+  "planetsTitle": "Planets",
+  "planetMercury": "Mercury",
+  "planetVenus": "Venus",
+  "planetEarth": "Earth",
+  "planetMars": "Mars",
+  "planetJupiter": "Jupiter",
+  "planetSaturn": "Saturn",
+  "planetUranus": "Uranus",
+  "planetNeptune": "Neptune",
+  "planetOrder": "Planet {n} from the Sun",
+  "@planetOrder": {
+    "placeholders": {
+      "n": {"type": "int"}
+    }
+  },
+  "openDetails": "Open details",
+  "diameter": "Diameter",
+  "gravity": "Gravity",
+  "avgTemp": "Average temperature",
+  "avgTempShort": "Avg temp",
+  "dayLength": "Day",
+  "yearLength": "Year",
+  "moons": "Known moons",
+  "moonsShort": "Moons",
+  "distance": "Distance from the Sun",
+  "pressure": "Surface pressure",
+  "noSurface": "No solid surface",
+  "valueKm": "{value} km",
+  "@valueKm": {
+    "placeholders": {
+      "value": {"type": "String"}
+    }
+  },
+  "valueMillionKm": "{value} million km",
+  "@valueMillionKm": {
+    "placeholders": {
+      "value": {"type": "String"}
+    }
+  },
+  "valueHours": "{value} h",
+  "@valueHours": {
+    "placeholders": {
+      "value": {"type": "String"}
+    }
+  },
+  "valueDays": "{value} days",
+  "@valueDays": {
+    "placeholders": {
+      "value": {"type": "String"}
+    }
+  },
+  "valueYears": "{value} years",
+  "@valueYears": {
+    "placeholders": {
+      "value": {"type": "String"}
+    }
+  },
+  "atmosphere": "Atmosphere",
+  "thinAtmosphere": "Almost no atmosphere. These gases form a very thin layer called an exosphere.",
+  "oxygen": "Oxygen",
+  "oxygenVsEarth": "Oxygen vs Earth",
+  "breathable": "Breathable for humans",
+  "notBreathable": "Not breathable, a spacesuit is needed",
+  "weightFeelsLike": "{weight} kg on Earth feels like",
+  "@weightFeelsLike": {
+    "placeholders": {
+      "weight": {"type": "String"}
+    }
+  },
+  "gasCo2": "Carbon dioxide",
+  "gasN2": "Nitrogen",
+  "gasO2": "Oxygen",
+  "gasAr": "Argon",
+  "gasH2": "Hydrogen",
+  "gasHe": "Helium",
+  "gasCh4": "Methane",
+  "gasNa": "Sodium",
+  "gasK": "Potassium",
+  "compareTitle": "Compare planets",
+  "compareHint": "Pick two planets to see them side by side.",
+  "weightTitle": "Your weight on other planets",
+  "weightInput": "Your weight on Earth (kg)",
+  "gravityTimes": "{factor}× Earth's gravity",
+  "@gravityTimes": {
+    "placeholders": {
+      "factor": {"type": "String"}
+    }
+  },
+  "quizTitle": "Planet quiz",
+  "quizIntro": "10 questions about the planets. How many can you get right?",
+  "quizStart": "Start quiz",
+  "quizProgress": "Question {current} of {total}",
+  "@quizProgress": {
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "quizNext": "Next",
+  "quizSeeResult": "See result",
+  "quizCorrect": "Correct!",
+  "quizWrong": "Not quite. The answer is {answer}.",
+  "@quizWrong": {
+    "placeholders": {
+      "answer": {"type": "String"}
+    }
+  },
+  "quizScore": "You got {score} of {total}",
+  "@quizScore": {
+    "placeholders": {
+      "score": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "quizBest": "Best score: {score}",
+  "@quizBest": {
+    "placeholders": {
+      "score": {"type": "int"}
+    }
+  },
+  "quizNewBest": "New best score!",
+  "quizAgain": "Play again",
+  "qLargest": "Which planet is the largest?",
+  "qSmallest": "Which planet is the smallest?",
+  "qHottest": "Which planet is the hottest?",
+  "qColdest": "Which planet is the coldest?",
+  "qMostMoons": "Which planet has the most known moons?",
+  "qBreathable": "On which planet can humans breathe the air?",
+  "qClosest": "Which planet is closest to the Sun?",
+  "qFarthest": "Which planet is farthest from the Sun?",
+  "qStrongestGravity": "Which planet has the strongest gravity?",
+  "qShortestDay": "Which planet has the shortest day?",
+  "qLongestDay": "Which planet has the longest day?",
+  "appearance": "Appearance",
+  "theme": "Theme",
+  "themeSystem": "System",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "language": "Language",
+  "appLanguage": "App language",
+  "languageNote": "20 languages · planet names too",
+  "phoneLanguage": "Phone language",
+  "updates": "Updates",
+  "version": "Version",
+  "checkForUpdates": "Check for updates",
+  "checking": "Checking…",
+  "autoUpdateCheck": "Check automatically once a day",
+  "updateNote": "Updates come from GitHub Releases. Your settings stay on your phone.",
+  "upToDate": "You have the latest version.",
+  "updateFailed": "Could not reach GitHub. Check your internet and try again.",
+  "updateAvailable": "Update available",
+  "updateReady": "Version {version} is ready to download.",
+  "@updateReady": {
+    "placeholders": {
+      "version": {"type": "String"}
+    }
+  },
+  "download": "Download",
+  "later": "Later",
+  "about": "About",
+  "sourceCode": "Source code on GitHub",
+  "privacyLine": "Offline · No ads · No tracking",
+  "dataSource": "Facts: NASA Planetary Fact Sheet",
+  "openFailed": "Could not open the link."
+}
