@@ -155,5 +155,18 @@
   "setBirthDate": "Indiquez votre date de naissance",
   "changeBirthDate": "Modifier",
   "nextBirthday": "Prochain anniversaire dans {days} jours",
-  "ageNote": "Votre date de naissance reste uniquement sur ce téléphone."
+  "ageNote": "Votre date de naissance reste uniquement sur ce téléphone.",
+  "share": "Partager",
+  "shareText": "{planet} dans Heliora, l’app gratuite du Système solaire hors ligne : https://github.com/lumio-apps/heliora",
+  "shareFailed": "Impossible de partager l’image.",
+  "travelTitle": "À quelle distance ?",
+  "distanceFromEarth": "Distance de la Terre aujourd’hui",
+  "lightTime": "La lumière met",
+  "bySpacecraft": "En vaisseau à 60 000 km/h",
+  "byCar": "En voiture à 100 km/h",
+  "valueSeconds": "{value} s",
+  "valueMinutes": "{value} min",
+  "sizeTitle": "Taille",
+  "sizeTimes": "{big} est {times}× plus large que {small}.",
+  "sizeSimilar": "{a} et {b} ont à peu près la même taille."
 }

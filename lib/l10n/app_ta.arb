@@ -155,5 +155,18 @@
   "setBirthDate": "உங்கள் பிறந்த தேதியை அமை",
   "changeBirthDate": "மாற்று",
   "nextBirthday": "அடுத்த பிறந்தநாள் {days} நாளில்",
-  "ageNote": "உங்கள் பிறந்த தேதி இந்த ஃபோனில் மட்டுமே சேமிக்கப்படும்."
+  "ageNote": "உங்கள் பிறந்த தேதி இந்த ஃபோனில் மட்டுமே சேமிக்கப்படும்.",
+  "share": "பகிர்",
+  "shareText": "Heliora இல் {planet}, இலவச ஆஃப்லைன் சூரியக் குடும்ப ஆப்: https://github.com/lumio-apps/heliora",
+  "shareFailed": "படத்தைப் பகிர முடியவில்லை.",
+  "travelTitle": "எவ்வளவு தூரம்?",
+  "distanceFromEarth": "இன்று பூமியிலிருந்து தூரம்",
+  "lightTime": "ஒளிக்கு ஆகும் நேரம்",
+  "bySpacecraft": "மணிக்கு 60,000 கி.மீ விண்கலத்தில்",
+  "byCar": "மணிக்கு 100 கி.மீ காரில்",
+  "valueSeconds": "{value} வி",
+  "valueMinutes": "{value} நிமி",
+  "sizeTitle": "அளவு",
+  "sizeTimes": "{big} அகலத்தில் {small} ஐ விட {times}× பெரியது.",
+  "sizeSimilar": "{a} மற்றும் {b} ஏறக்குறைய ஒரே அளவு."
 }

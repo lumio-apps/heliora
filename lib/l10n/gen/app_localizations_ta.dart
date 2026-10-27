@@ -522,4 +522,53 @@ class AppLocalizationsTa extends AppLocalizations {
   @override
   String get ageNote =>
       'உங்கள் பிறந்த தேதி இந்த ஃபோனில் மட்டுமே சேமிக்கப்படும்.';
+
+  @override
+  String get share => 'பகிர்';
+
+  @override
+  String shareText(String planet) {
+    return 'Heliora இல் $planet, இலவச ஆஃப்லைன் சூரியக் குடும்ப ஆப்: https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => 'படத்தைப் பகிர முடியவில்லை.';
+
+  @override
+  String get travelTitle => 'எவ்வளவு தூரம்?';
+
+  @override
+  String get distanceFromEarth => 'இன்று பூமியிலிருந்து தூரம்';
+
+  @override
+  String get lightTime => 'ஒளிக்கு ஆகும் நேரம்';
+
+  @override
+  String get bySpacecraft => 'மணிக்கு 60,000 கி.மீ விண்கலத்தில்';
+
+  @override
+  String get byCar => 'மணிக்கு 100 கி.மீ காரில்';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value வி';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value நிமி';
+  }
+
+  @override
+  String get sizeTitle => 'அளவு';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$big அகலத்தில் $small ஐ விட $times× பெரியது.';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a மற்றும் $b ஏறக்குறைய ஒரே அளவு.';
+  }
 }

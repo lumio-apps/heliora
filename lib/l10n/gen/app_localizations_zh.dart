@@ -509,4 +509,53 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get ageNote => '你的生日只保存在这部手机上。';
+
+  @override
+  String get share => '分享';
+
+  @override
+  String shareText(String planet) {
+    return 'Heliora 中的$planet，免费离线太阳系应用：https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => '无法分享图片。';
+
+  @override
+  String get travelTitle => '有多远？';
+
+  @override
+  String get distanceFromEarth => '今天与地球的距离';
+
+  @override
+  String get lightTime => '光需要';
+
+  @override
+  String get bySpacecraft => '乘时速 60,000 公里的飞船';
+
+  @override
+  String get byCar => '乘时速 100 公里的汽车';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value 秒';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value 分钟';
+  }
+
+  @override
+  String get sizeTitle => '大小';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$big的直径是$small的 $times×。';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a和$b大小差不多。';
+  }
 }

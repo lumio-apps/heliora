@@ -155,5 +155,18 @@
   "setBirthDate": "Atur tanggal lahir",
   "changeBirthDate": "Ubah",
   "nextBirthday": "Ulang tahun berikutnya dalam {days} hari",
-  "ageNote": "Tanggal lahir Anda hanya disimpan di ponsel ini."
+  "ageNote": "Tanggal lahir Anda hanya disimpan di ponsel ini.",
+  "share": "Bagikan",
+  "shareText": "{planet} di Heliora, aplikasi Tata Surya offline gratis: https://github.com/lumio-apps/heliora",
+  "shareFailed": "Gambar tidak bisa dibagikan.",
+  "travelTitle": "Seberapa jauh?",
+  "distanceFromEarth": "Jarak dari Bumi hari ini",
+  "lightTime": "Cahaya butuh",
+  "bySpacecraft": "Dengan wahana 60.000 km/jam",
+  "byCar": "Dengan mobil 100 km/jam",
+  "valueSeconds": "{value} dtk",
+  "valueMinutes": "{value} mnt",
+  "sizeTitle": "Ukuran",
+  "sizeTimes": "{big} {times}× lebih lebar dari {small}.",
+  "sizeSimilar": "{a} dan {b} hampir sama besar."
 }

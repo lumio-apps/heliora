@@ -155,5 +155,18 @@
   "setBirthDate": "Նշեք ծննդյան ամսաթիվը",
   "changeBirthDate": "Փոխել",
   "nextBirthday": "Հաջորդ ծննդյան օրը՝ {days} օրից",
-  "ageNote": "Ձեր ծննդյան ամսաթիվը պահվում է միայն այս հեռախոսում։"
+  "ageNote": "Ձեր ծննդյան ամսաթիվը պահվում է միայն այս հեռախոսում։",
+  "share": "Կիսվել",
+  "shareText": "{planet}-ը Heliora-ում՝ անվճար անցանց Արեգակնային համակարգի հավելված․ https://github.com/lumio-apps/heliora",
+  "shareFailed": "Չհաջողվեց կիսվել նկարով։",
+  "travelTitle": "Որքա՞ն հեռու է",
+  "distanceFromEarth": "Հեռավորությունը Երկրից այսօր",
+  "lightTime": "Լույսին պետք է",
+  "bySpacecraft": "Տիեզերանավով՝ 60 000 կմ/ժ",
+  "byCar": "Մեքենայով՝ 100 կմ/ժ",
+  "valueSeconds": "{value} վ",
+  "valueMinutes": "{value} ր",
+  "sizeTitle": "Չափ",
+  "sizeTimes": "{big}-ը {times}× ավելի լայն է, քան {small}-ը։",
+  "sizeSimilar": "{a}-ը և {b}-ը գրեթե նույն չափի են։"
 }

@@ -155,5 +155,18 @@
   "setBirthDate": "તમારી જન્મતારીખ નાખો",
   "changeBirthDate": "બદલો",
   "nextBirthday": "આગલો જન્મદિવસ {days} દિવસમાં",
-  "ageNote": "તમારી જન્મતારીખ ફક્ત આ ફોનમાં જ સેવ થાય છે."
+  "ageNote": "તમારી જન્મતારીખ ફક્ત આ ફોનમાં જ સેવ થાય છે.",
+  "share": "શેર કરો",
+  "shareText": "Heliora માં {planet}, મફત ઑફલાઇન સૂર્યમંડળ ઍપ: https://github.com/lumio-apps/heliora",
+  "shareFailed": "ચિત્ર શેર ન થઈ શક્યું.",
+  "travelTitle": "કેટલું દૂર છે?",
+  "distanceFromEarth": "આજે પૃથ્વીથી અંતર",
+  "lightTime": "પ્રકાશને લાગે",
+  "bySpacecraft": "60,000 કિમી/કલાકના અવકાશયાનથી",
+  "byCar": "100 કિમી/કલાકની કારથી",
+  "valueSeconds": "{value} સેકન્ડ",
+  "valueMinutes": "{value} મિનિટ",
+  "sizeTitle": "કદ",
+  "sizeTimes": "{big} પહોળાઈમાં {small} કરતાં {times}× મોટું છે.",
+  "sizeSimilar": "{a} અને {b} લગભગ સરખા કદના છે."
 }

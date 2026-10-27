@@ -155,5 +155,18 @@
   "setBirthDate": "अपनी जन्मतिथि डालें",
   "changeBirthDate": "बदलें",
   "nextBirthday": "अगला जन्मदिन {days} दिन में",
-  "ageNote": "आपकी जन्मतिथि सिर्फ़ इसी फ़ोन में सेव होती है।"
+  "ageNote": "आपकी जन्मतिथि सिर्फ़ इसी फ़ोन में सेव होती है।",
+  "share": "शेयर करें",
+  "shareText": "Heliora में {planet}, मुफ़्त ऑफ़लाइन सौरमंडल ऐप: https://github.com/lumio-apps/heliora",
+  "shareFailed": "तस्वीर शेयर नहीं हो पाई।",
+  "travelTitle": "कितनी दूर है?",
+  "distanceFromEarth": "आज पृथ्वी से दूरी",
+  "lightTime": "रोशनी को लगता है",
+  "bySpacecraft": "60,000 किमी/घंटा वाले अंतरिक्ष यान से",
+  "byCar": "100 किमी/घंटा वाली कार से",
+  "valueSeconds": "{value} सेकंड",
+  "valueMinutes": "{value} मिनट",
+  "sizeTitle": "आकार",
+  "sizeTimes": "{big} चौड़ाई में {small} से {times}× बड़ा है।",
+  "sizeSimilar": "{a} और {b} लगभग एक जितने बड़े हैं।"
 }

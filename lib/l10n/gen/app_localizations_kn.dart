@@ -518,4 +518,53 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get ageNote => 'ನಿಮ್ಮ ಜನ್ಮದಿನಾಂಕ ಈ ಫೋನ್‌ನಲ್ಲಿ ಮಾತ್ರ ಉಳಿಯುತ್ತದೆ.';
+
+  @override
+  String get share => 'ಹಂಚಿ';
+
+  @override
+  String shareText(String planet) {
+    return 'Heliora ದಲ್ಲಿ $planet, ಉಚಿತ ಆಫ್‌ಲೈನ್ ಸೌರವ್ಯೂಹ ಆ್ಯಪ್: https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => 'ಚಿತ್ರ ಹಂಚಲು ಆಗಲಿಲ್ಲ.';
+
+  @override
+  String get travelTitle => 'ಎಷ್ಟು ದೂರ?';
+
+  @override
+  String get distanceFromEarth => 'ಇಂದು ಭೂಮಿಯಿಂದ ದೂರ';
+
+  @override
+  String get lightTime => 'ಬೆಳಕಿಗೆ ಬೇಕಾಗುವ ಸಮಯ';
+
+  @override
+  String get bySpacecraft => 'ಗಂಟೆಗೆ 60,000 ಕಿಮೀ ಬಾಹ್ಯಾಕಾಶ ನೌಕೆಯಲ್ಲಿ';
+
+  @override
+  String get byCar => 'ಗಂಟೆಗೆ 100 ಕಿಮೀ ಕಾರಿನಲ್ಲಿ';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value ಸೆ';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value ನಿಮಿಷ';
+  }
+
+  @override
+  String get sizeTitle => 'ಗಾತ್ರ';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$big ಅಗಲದಲ್ಲಿ $small ಗಿಂತ $times× ದೊಡ್ಡದು.';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a ಮತ್ತು $b ಬಹುತೇಕ ಒಂದೇ ಗಾತ್ರ.';
+  }
 }

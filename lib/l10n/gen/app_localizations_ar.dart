@@ -516,4 +516,53 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get ageNote => 'يُحفظ تاريخ ميلادك على هذا الهاتف فقط.';
+
+  @override
+  String get share => 'مشاركة';
+
+  @override
+  String shareText(String planet) {
+    return '$planet في Heliora، تطبيق المجموعة الشمسية المجاني دون إنترنت: https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => 'تعذّرت مشاركة الصورة.';
+
+  @override
+  String get travelTitle => 'كم يبعد؟';
+
+  @override
+  String get distanceFromEarth => 'البعد عن الأرض اليوم';
+
+  @override
+  String get lightTime => 'يستغرق الضوء';
+
+  @override
+  String get bySpacecraft => 'بمركبة فضائية بسرعة 60,000 كم/س';
+
+  @override
+  String get byCar => 'بسيارة بسرعة 100 كم/س';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value ث';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value د';
+  }
+
+  @override
+  String get sizeTitle => 'الحجم';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return 'عرض $big يساوي $times× عرض $small.';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a و$b بالحجم نفسه تقريبًا.';
+  }
 }

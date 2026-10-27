@@ -1069,6 +1069,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Your birth date is saved only on this phone.'**
   String get ageNote;
+
+  /// No description provided for @share.
+  ///
+  /// In en, this message translates to:
+  /// **'Share'**
+  String get share;
+
+  /// No description provided for @shareText.
+  ///
+  /// In en, this message translates to:
+  /// **'{planet} in Heliora, the free offline Solar System app: https://github.com/lumio-apps/heliora'**
+  String shareText(String planet);
+
+  /// No description provided for @shareFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not share the picture.'**
+  String get shareFailed;
+
+  /// No description provided for @travelTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'How far is it?'**
+  String get travelTitle;
+
+  /// No description provided for @distanceFromEarth.
+  ///
+  /// In en, this message translates to:
+  /// **'Distance from Earth today'**
+  String get distanceFromEarth;
+
+  /// No description provided for @lightTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Light takes'**
+  String get lightTime;
+
+  /// No description provided for @bySpacecraft.
+  ///
+  /// In en, this message translates to:
+  /// **'By spacecraft at 60,000 km/h'**
+  String get bySpacecraft;
+
+  /// No description provided for @byCar.
+  ///
+  /// In en, this message translates to:
+  /// **'By car at 100 km/h'**
+  String get byCar;
+
+  /// No description provided for @valueSeconds.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} s'**
+  String valueSeconds(String value);
+
+  /// No description provided for @valueMinutes.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} min'**
+  String valueMinutes(String value);
+
+  /// No description provided for @sizeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Size'**
+  String get sizeTitle;
+
+  /// No description provided for @sizeTimes.
+  ///
+  /// In en, this message translates to:
+  /// **'{big} is {times}× as wide as {small}.'**
+  String sizeTimes(String big, String times, String small);
+
+  /// No description provided for @sizeSimilar.
+  ///
+  /// In en, this message translates to:
+  /// **'{a} and {b} are about the same size.'**
+  String sizeSimilar(String a, String b);
 }
 
 class _AppLocalizationsDelegate

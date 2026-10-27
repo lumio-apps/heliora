@@ -1,12 +1,18 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import '../core/format.dart';
 import '../core/habitability.dart';
+import '../core/orbits.dart';
 import '../data/planets.dart';
 import '../l10n/gen/app_localizations.dart';
 import '../l10n/names.dart';
+import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/share_card.dart';
 
 /// Text helpers shared by the planet and compare screens.
 class PlanetText {
@@ -72,15 +78,85 @@ class PlanetText {
   }
 
   String oxygen(Planet p) => formatPercent(context, p.oxygenPercent);
+
+  /// A length of time in the easiest unit: seconds up to years.
+  String duration(double seconds) {
+    if (seconds < 60) {
+      return l.valueSeconds(formatNumber(context, seconds, decimals: 1));
+    }
+    final minutes = seconds / 60;
+    if (minutes < 60) {
+      return l.valueMinutes(
+          formatNumber(context, minutes, decimals: minutes < 10 ? 1 : 0));
+    }
+    final hours = minutes / 60;
+    if (hours < 48) {
+      return l.valueHours(formatNumber(context, hours, decimals: 1));
+    }
+    final days = hours / 24;
+    if (days < 730) {
+      return l.valueDays(formatNumber(context, days));
+    }
+    final years = days / 365.25;
+    return l.valueYears(
+        formatNumber(context, years, decimals: years < 100 ? 1 : 0));
+  }
+
+  /// A distance in km, or in millions of km when it is large.
+  String kilometres(double km) => km < 1e6
+      ? l.valueKm(formatNumber(context, km))
+      : l.valueMillionKm(formatNumber(context, km / 1e6, decimals: 1));
 }
 
-class PlanetScreen extends StatelessWidget {
+class PlanetScreen extends StatefulWidget {
   const PlanetScreen({super.key, required this.planet});
 
   final Planet planet;
 
   @override
+  State<PlanetScreen> createState() => _PlanetScreenState();
+}
+
+class _PlanetScreenState extends State<PlanetScreen> {
+  /// The part of the page that becomes the shared image.
+  final GlobalKey _cardKey = GlobalKey();
+  bool _sharing = false;
+
+  Future<void> _share() async {
+    final l = context.l10n;
+    final palette = Palette.of(context);
+    final messenger = ScaffoldMessenger.of(context);
+    final bridge = AppScope.read(context).bridge;
+    final name = planetName(l, widget.planet);
+    setState(() => _sharing = true);
+    var shared = false;
+    try {
+      final boundary = _cardKey.currentContext?.findRenderObject();
+      if (boundary is RenderRepaintBoundary) {
+        final bytes = await renderShareCard(boundary, palette);
+        final dir = await bridge.sharedDir();
+        if (dir.isNotEmpty) {
+          final file = File('$dir${Platform.pathSeparator}'
+              'Heliora-${widget.planet.id}.png');
+          await file.writeAsBytes(bytes, flush: true);
+          shared = await bridge.shareImage(file.path, l.shareText(name));
+        }
+      }
+    } on Exception {
+      shared = false;
+    }
+    if (!mounted) {
+      return;
+    }
+    setState(() => _sharing = false);
+    if (!shared) {
+      messenger.showSnackBar(SnackBar(content: Text(l.shareFailed)));
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final planet = widget.planet;
     final l = context.l10n;
     final p = Palette.of(context);
     final t = PlanetText(context);
@@ -91,10 +167,29 @@ class PlanetScreen extends StatelessWidget {
         : '';
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            tooltip: l.share,
+            onPressed: _sharing ? null : _share,
+            icon: _sharing
+                ? const SizedBox.square(
+                    dimension: 20,
+                    child: CircularProgressIndicator(strokeWidth: 2))
+                : const Icon(Icons.share_outlined),
+          ),
+        ],
+      ),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 32),
         children: <Widget>[
+          RepaintBoundary(
+            key: _cardKey,
+            child: ColoredBox(
+              color: p.background,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
           Row(
             children: <Widget>[
               PlanetBall(planet: planet, size: 88),
@@ -149,6 +244,10 @@ class PlanetScreen extends StatelessWidget {
               StatTile(label: l.pressure, value: t.pressure(planet)),
             ],
           ),
+                ],
+              ),
+            ),
+          ),
           if (moons.isNotEmpty) ...<Widget>[
             const SizedBox(height: 24),
             Text(l.majorMoons,
@@ -198,6 +297,10 @@ class PlanetScreen extends StatelessWidget {
           ],
           const SizedBox(height: 16),
           _LifeCard(planet: planet),
+          if (planet.id != 'earth') ...<Widget>[
+            const SizedBox(height: 12),
+            _TravelCard(planet: planet),
+          ],
           const SizedBox(height: 16),
           SurfaceCard(
             child: Column(
@@ -448,6 +551,82 @@ class _LifeCard extends StatelessWidget {
           const SizedBox(height: 6),
           Text(l.lifeNote,
               style: TextStyle(fontSize: 12, color: p.muted, height: 1.4)),
+        ],
+      ),
+    );
+  }
+}
+
+/// How far the body is from Earth today and how long it would take to get
+/// there. Worked out from the orbits on the phone.
+class _TravelCard extends StatelessWidget {
+  const _TravelCard({required this.planet});
+
+  final Planet planet;
+
+  /// Average Earth to Moon distance in km.
+  static const double _moonKm = 384400;
+
+  /// Speed of light in km per second.
+  static const double _lightKmS = 299792.458;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final p = Palette.of(context);
+    final t = PlanetText(context);
+    final double km;
+    if (planet.id == 'moon') {
+      km = _moonKm;
+    } else {
+      final id = planet.isMoon ? (planet.parentId ?? 'earth') : planet.id;
+      km = id == 'sun' || hasOrbit(id)
+          ? distanceFromEarthKm(id, DateTime.now())
+          : 0;
+    }
+    if (km <= 0) {
+      return const SizedBox.shrink();
+    }
+
+    Widget row(IconData icon, String label, String value) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 6),
+        child: Row(
+          children: <Widget>[
+            Icon(icon, size: 20, color: p.muted),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(label,
+                  style: TextStyle(fontSize: 13, color: p.muted)),
+            ),
+            const SizedBox(width: 8),
+            Flexible(
+              child: Text(value,
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: p.text)),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return SurfaceCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(l.travelTitle,
+              style: TextStyle(
+                  fontSize: 16, fontWeight: FontWeight.w700, color: p.text)),
+          const SizedBox(height: 8),
+          row(Icons.straighten, l.distanceFromEarth, t.kilometres(km)),
+          row(Icons.flare, l.lightTime, t.duration(km / _lightKmS)),
+          row(Icons.rocket_launch_outlined, l.bySpacecraft,
+              t.duration(km / 60000 * 3600)),
+          row(Icons.directions_car_outlined, l.byCar,
+              t.duration(km / 100 * 3600)),
         ],
       ),
     );

@@ -518,4 +518,53 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get ageNote => 'Tanggal lahir Anda hanya disimpan di ponsel ini.';
+
+  @override
+  String get share => 'Bagikan';
+
+  @override
+  String shareText(String planet) {
+    return '$planet di Heliora, aplikasi Tata Surya offline gratis: https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => 'Gambar tidak bisa dibagikan.';
+
+  @override
+  String get travelTitle => 'Seberapa jauh?';
+
+  @override
+  String get distanceFromEarth => 'Jarak dari Bumi hari ini';
+
+  @override
+  String get lightTime => 'Cahaya butuh';
+
+  @override
+  String get bySpacecraft => 'Dengan wahana 60.000 km/jam';
+
+  @override
+  String get byCar => 'Dengan mobil 100 km/jam';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value dtk';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value mnt';
+  }
+
+  @override
+  String get sizeTitle => 'Ukuran';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$big $times× lebih lebar dari $small.';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a dan $b hampir sama besar.';
+  }
 }

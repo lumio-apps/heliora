@@ -155,5 +155,18 @@
   "setBirthDate": "ನಿಮ್ಮ ಜನ್ಮದಿನಾಂಕ ಹಾಕಿ",
   "changeBirthDate": "ಬದಲಿಸಿ",
   "nextBirthday": "ಮುಂದಿನ ಹುಟ್ಟುಹಬ್ಬ {days} ದಿನಗಳಲ್ಲಿ",
-  "ageNote": "ನಿಮ್ಮ ಜನ್ಮದಿನಾಂಕ ಈ ಫೋನ್‌ನಲ್ಲಿ ಮಾತ್ರ ಉಳಿಯುತ್ತದೆ."
+  "ageNote": "ನಿಮ್ಮ ಜನ್ಮದಿನಾಂಕ ಈ ಫೋನ್‌ನಲ್ಲಿ ಮಾತ್ರ ಉಳಿಯುತ್ತದೆ.",
+  "share": "ಹಂಚಿ",
+  "shareText": "Heliora ದಲ್ಲಿ {planet}, ಉಚಿತ ಆಫ್‌ಲೈನ್ ಸೌರವ್ಯೂಹ ಆ್ಯಪ್: https://github.com/lumio-apps/heliora",
+  "shareFailed": "ಚಿತ್ರ ಹಂಚಲು ಆಗಲಿಲ್ಲ.",
+  "travelTitle": "ಎಷ್ಟು ದೂರ?",
+  "distanceFromEarth": "ಇಂದು ಭೂಮಿಯಿಂದ ದೂರ",
+  "lightTime": "ಬೆಳಕಿಗೆ ಬೇಕಾಗುವ ಸಮಯ",
+  "bySpacecraft": "ಗಂಟೆಗೆ 60,000 ಕಿಮೀ ಬಾಹ್ಯಾಕಾಶ ನೌಕೆಯಲ್ಲಿ",
+  "byCar": "ಗಂಟೆಗೆ 100 ಕಿಮೀ ಕಾರಿನಲ್ಲಿ",
+  "valueSeconds": "{value} ಸೆ",
+  "valueMinutes": "{value} ನಿಮಿಷ",
+  "sizeTitle": "ಗಾತ್ರ",
+  "sizeTimes": "{big} ಅಗಲದಲ್ಲಿ {small} ಗಿಂತ {times}× ದೊಡ್ಡದು.",
+  "sizeSimilar": "{a} ಮತ್ತು {b} ಬಹುತೇಕ ಒಂದೇ ಗಾತ್ರ."
 }

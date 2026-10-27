@@ -1,5 +1,6 @@
 package online.lumioapps.heliora
 
+import android.content.ClipData
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -24,6 +25,14 @@ class MainActivity : FlutterActivity() {
                     result.success(dir.absolutePath)
                 }
                 "installApk" -> result.success(installApk(call.argument<String>("path")))
+                "sharedDir" -> {
+                    val dir = java.io.File(cacheDir, "shared")
+                    dir.mkdirs()
+                    result.success(dir.absolutePath)
+                }
+                "shareImage" -> result.success(
+                    shareImage(call.argument<String>("path"), call.argument<String>("text"))
+                )
                 "appVersion" -> result.success(appVersion())
                 "openUrl" -> result.success(openUrl(call.argument<String>("url")))
                 else -> result.notImplemented()
@@ -66,6 +75,32 @@ class MainActivity : FlutterActivity() {
             }
         } catch (e: Exception) {
             "error"
+        }
+    }
+
+    /** Opens the Android share sheet with a PNG and a line of text. */
+    private fun shareImage(path: String?, text: String?): Boolean {
+        if (path == null) {
+            return false
+        }
+        val file = java.io.File(path)
+        if (!file.exists()) {
+            return false
+        }
+        return try {
+            val uri = FileProvider.getUriForFile(this, "$packageName.fileprovider", file)
+            val send = Intent(Intent.ACTION_SEND)
+                .setType("image/png")
+                .putExtra(Intent.EXTRA_STREAM, uri)
+                .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            if (text != null) {
+                send.putExtra(Intent.EXTRA_TEXT, text)
+            }
+            send.clipData = ClipData.newRawUri(null, uri)
+            startActivity(Intent.createChooser(send, null))
+            true
+        } catch (e: Exception) {
+            false
         }
     }
 

@@ -519,4 +519,53 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get ageNote => 'Дата рождения хранится только на этом телефоне.';
+
+  @override
+  String get share => 'Поделиться';
+
+  @override
+  String shareText(String planet) {
+    return '$planet в Heliora — бесплатное офлайн-приложение о Солнечной системе: https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => 'Не удалось поделиться картинкой.';
+
+  @override
+  String get travelTitle => 'Как далеко?';
+
+  @override
+  String get distanceFromEarth => 'Расстояние от Земли сегодня';
+
+  @override
+  String get lightTime => 'Свет летит';
+
+  @override
+  String get bySpacecraft => 'На корабле со скоростью 60 000 км/ч';
+
+  @override
+  String get byCar => 'На машине со скоростью 100 км/ч';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value с';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value мин';
+  }
+
+  @override
+  String get sizeTitle => 'Размер';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$big в $times× шире, чем $small.';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a и $b почти одного размера.';
+  }
 }

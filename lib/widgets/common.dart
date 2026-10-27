@@ -15,13 +15,13 @@ class HelioraLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox.square(
       dimension: size,
-      child: const CustomPaint(painter: _LogoPainter()),
+      child: const CustomPaint(painter: HelioraLogoPainter()),
     );
   }
 }
 
-class _LogoPainter extends CustomPainter {
-  const _LogoPainter();
+class HelioraLogoPainter extends CustomPainter {
+  const HelioraLogoPainter();
 
   @override
   void paint(Canvas canvas, Size size) {

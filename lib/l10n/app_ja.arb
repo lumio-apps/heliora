@@ -155,5 +155,18 @@
   "setBirthDate": "誕生日を設定",
   "changeBirthDate": "変更",
   "nextBirthday": "次の誕生日まであと {days} 日",
-  "ageNote": "誕生日はこのスマホにだけ保存されます。"
+  "ageNote": "誕生日はこのスマホにだけ保存されます。",
+  "share": "共有",
+  "shareText": "Heliora の{planet}。無料・オフラインの太陽系アプリ：https://github.com/lumio-apps/heliora",
+  "shareFailed": "画像を共有できませんでした。",
+  "travelTitle": "どれくらい遠い？",
+  "distanceFromEarth": "今日の地球からの距離",
+  "lightTime": "光でかかる時間",
+  "bySpacecraft": "時速 60,000 km の宇宙船で",
+  "byCar": "時速 100 km の車で",
+  "valueSeconds": "{value} 秒",
+  "valueMinutes": "{value} 分",
+  "sizeTitle": "大きさ",
+  "sizeTimes": "{big}の直径は{small}の {times}× です。",
+  "sizeSimilar": "{a}と{b}はほぼ同じ大きさです。"
 }

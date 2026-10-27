@@ -155,5 +155,18 @@
   "setBirthDate": "Укажите дату рождения",
   "changeBirthDate": "Изменить",
   "nextBirthday": "До следующего дня рождения: {days} дн.",
-  "ageNote": "Дата рождения хранится только на этом телефоне."
+  "ageNote": "Дата рождения хранится только на этом телефоне.",
+  "share": "Поделиться",
+  "shareText": "{planet} в Heliora — бесплатное офлайн-приложение о Солнечной системе: https://github.com/lumio-apps/heliora",
+  "shareFailed": "Не удалось поделиться картинкой.",
+  "travelTitle": "Как далеко?",
+  "distanceFromEarth": "Расстояние от Земли сегодня",
+  "lightTime": "Свет летит",
+  "bySpacecraft": "На корабле со скоростью 60 000 км/ч",
+  "byCar": "На машине со скоростью 100 км/ч",
+  "valueSeconds": "{value} с",
+  "valueMinutes": "{value} мин",
+  "sizeTitle": "Размер",
+  "sizeTimes": "{big} в {times}× шире, чем {small}.",
+  "sizeSimilar": "{a} и {b} почти одного размера."
 }

@@ -155,5 +155,18 @@
   "setBirthDate": "మీ పుట్టిన తేదీ ఇవ్వండి",
   "changeBirthDate": "మార్చు",
   "nextBirthday": "తదుపరి పుట్టినరోజు {days} రోజుల్లో",
-  "ageNote": "మీ పుట్టిన తేదీ ఈ ఫోన్‌లో మాత్రమే సేవ్ అవుతుంది."
+  "ageNote": "మీ పుట్టిన తేదీ ఈ ఫోన్‌లో మాత్రమే సేవ్ అవుతుంది.",
+  "share": "షేర్ చేయండి",
+  "shareText": "Heliora లో {planet}, ఉచిత ఆఫ్‌లైన్ సౌర కుటుంబ యాప్: https://github.com/lumio-apps/heliora",
+  "shareFailed": "చిత్రాన్ని షేర్ చేయలేకపోయాం.",
+  "travelTitle": "ఎంత దూరం?",
+  "distanceFromEarth": "ఈరోజు భూమి నుండి దూరం",
+  "lightTime": "కాంతికి పట్టే సమయం",
+  "bySpacecraft": "గంటకు 60,000 కి.మీ అంతరిక్ష నౌకలో",
+  "byCar": "గంటకు 100 కి.మీ కారులో",
+  "valueSeconds": "{value} సె",
+  "valueMinutes": "{value} నిమి",
+  "sizeTitle": "పరిమాణం",
+  "sizeTimes": "{big} వెడల్పులో {small} కంటే {times}× పెద్దది.",
+  "sizeSimilar": "{a}, {b} దాదాపు ఒకే పరిమాణం."
 }

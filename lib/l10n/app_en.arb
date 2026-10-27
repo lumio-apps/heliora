@@ -280,5 +280,62 @@
         "type": "String"
       }
     }
+  },
+  "share": "Share",
+  "shareText": "{planet} in Heliora, the free offline Solar System app: https://github.com/lumio-apps/heliora",
+  "shareFailed": "Could not share the picture.",
+  "travelTitle": "How far is it?",
+  "distanceFromEarth": "Distance from Earth today",
+  "lightTime": "Light takes",
+  "bySpacecraft": "By spacecraft at 60,000 km/h",
+  "byCar": "By car at 100 km/h",
+  "valueSeconds": "{value} s",
+  "valueMinutes": "{value} min",
+  "sizeTitle": "Size",
+  "sizeTimes": "{big} is {times}× as wide as {small}.",
+  "sizeSimilar": "{a} and {b} are about the same size.",
+  "@shareText": {
+    "placeholders": {
+      "planet": {
+        "type": "String"
+      }
+    }
+  },
+  "@valueSeconds": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@valueMinutes": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@sizeTimes": {
+    "placeholders": {
+      "big": {
+        "type": "String"
+      },
+      "times": {
+        "type": "String"
+      },
+      "small": {
+        "type": "String"
+      }
+    }
+  },
+  "@sizeSimilar": {
+    "placeholders": {
+      "a": {
+        "type": "String"
+      },
+      "b": {
+        "type": "String"
+      }
+    }
   }
 }

@@ -155,5 +155,18 @@
   "setBirthDate": "ਆਪਣੀ ਜਨਮ ਤਾਰੀਖ਼ ਪਾਓ",
   "changeBirthDate": "ਬਦਲੋ",
   "nextBirthday": "ਅਗਲਾ ਜਨਮਦਿਨ {days} ਦਿਨਾਂ ਵਿੱਚ",
-  "ageNote": "ਤੁਹਾਡੀ ਜਨਮ ਤਾਰੀਖ਼ ਸਿਰਫ਼ ਇਸ ਫ਼ੋਨ ਵਿੱਚ ਸੇਵ ਹੁੰਦੀ ਹੈ।"
+  "ageNote": "ਤੁਹਾਡੀ ਜਨਮ ਤਾਰੀਖ਼ ਸਿਰਫ਼ ਇਸ ਫ਼ੋਨ ਵਿੱਚ ਸੇਵ ਹੁੰਦੀ ਹੈ।",
+  "share": "ਸਾਂਝਾ ਕਰੋ",
+  "shareText": "Heliora ਵਿੱਚ {planet}, ਮੁਫ਼ਤ ਆਫ਼ਲਾਈਨ ਸੂਰਜੀ ਮੰਡਲ ਐਪ: https://github.com/lumio-apps/heliora",
+  "shareFailed": "ਤਸਵੀਰ ਸਾਂਝੀ ਨਹੀਂ ਹੋ ਸਕੀ।",
+  "travelTitle": "ਕਿੰਨੀ ਦੂਰ ਹੈ?",
+  "distanceFromEarth": "ਅੱਜ ਧਰਤੀ ਤੋਂ ਦੂਰੀ",
+  "lightTime": "ਰੋਸ਼ਨੀ ਨੂੰ ਲੱਗਦਾ ਹੈ",
+  "bySpacecraft": "60,000 ਕਿਮੀ/ਘੰਟਾ ਵਾਲੇ ਪੁਲਾੜ ਯਾਨ ਨਾਲ",
+  "byCar": "100 ਕਿਮੀ/ਘੰਟਾ ਵਾਲੀ ਕਾਰ ਨਾਲ",
+  "valueSeconds": "{value} ਸਕਿੰਟ",
+  "valueMinutes": "{value} ਮਿੰਟ",
+  "sizeTitle": "ਆਕਾਰ",
+  "sizeTimes": "{big} ਚੌੜਾਈ ਵਿੱਚ {small} ਤੋਂ {times}× ਵੱਡਾ ਹੈ।",
+  "sizeSimilar": "{a} ਅਤੇ {b} ਲਗਭਗ ਇੱਕੋ ਆਕਾਰ ਦੇ ਹਨ।"
 }

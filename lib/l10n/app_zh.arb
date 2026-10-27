@@ -155,5 +155,18 @@
   "setBirthDate": "设置你的生日",
   "changeBirthDate": "更改",
   "nextBirthday": "{days} 天后过下一个生日",
-  "ageNote": "你的生日只保存在这部手机上。"
+  "ageNote": "你的生日只保存在这部手机上。",
+  "share": "分享",
+  "shareText": "Heliora 中的{planet}，免费离线太阳系应用：https://github.com/lumio-apps/heliora",
+  "shareFailed": "无法分享图片。",
+  "travelTitle": "有多远？",
+  "distanceFromEarth": "今天与地球的距离",
+  "lightTime": "光需要",
+  "bySpacecraft": "乘时速 60,000 公里的飞船",
+  "byCar": "乘时速 100 公里的汽车",
+  "valueSeconds": "{value} 秒",
+  "valueMinutes": "{value} 分钟",
+  "sizeTitle": "大小",
+  "sizeTimes": "{big}的直径是{small}的 {times}×。",
+  "sizeSimilar": "{a}和{b}大小差不多。"
 }

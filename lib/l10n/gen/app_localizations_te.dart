@@ -517,4 +517,53 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get ageNote => 'మీ పుట్టిన తేదీ ఈ ఫోన్‌లో మాత్రమే సేవ్ అవుతుంది.';
+
+  @override
+  String get share => 'షేర్ చేయండి';
+
+  @override
+  String shareText(String planet) {
+    return 'Heliora లో $planet, ఉచిత ఆఫ్‌లైన్ సౌర కుటుంబ యాప్: https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => 'చిత్రాన్ని షేర్ చేయలేకపోయాం.';
+
+  @override
+  String get travelTitle => 'ఎంత దూరం?';
+
+  @override
+  String get distanceFromEarth => 'ఈరోజు భూమి నుండి దూరం';
+
+  @override
+  String get lightTime => 'కాంతికి పట్టే సమయం';
+
+  @override
+  String get bySpacecraft => 'గంటకు 60,000 కి.మీ అంతరిక్ష నౌకలో';
+
+  @override
+  String get byCar => 'గంటకు 100 కి.మీ కారులో';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value సె';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value నిమి';
+  }
+
+  @override
+  String get sizeTitle => 'పరిమాణం';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$big వెడల్పులో $small కంటే $times× పెద్దది.';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a, $b దాదాపు ఒకే పరిమాణం.';
+  }
 }

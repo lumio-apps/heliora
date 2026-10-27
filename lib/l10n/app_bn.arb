@@ -155,5 +155,18 @@
   "setBirthDate": "আপনার জন্মতারিখ দিন",
   "changeBirthDate": "বদলান",
   "nextBirthday": "পরের জন্মদিন {days} দিন পরে",
-  "ageNote": "আপনার জন্মতারিখ শুধু এই ফোনেই সেভ থাকে।"
+  "ageNote": "আপনার জন্মতারিখ শুধু এই ফোনেই সেভ থাকে।",
+  "share": "শেয়ার",
+  "shareText": "Heliora-তে {planet}, বিনামূল্যের অফলাইন সৌরজগৎ অ্যাপ: https://github.com/lumio-apps/heliora",
+  "shareFailed": "ছবি শেয়ার করা যায়নি।",
+  "travelTitle": "কত দূরে?",
+  "distanceFromEarth": "আজ পৃথিবী থেকে দূরত্ব",
+  "lightTime": "আলোর লাগে",
+  "bySpacecraft": "৬০,০০০ কিমি/ঘণ্টার মহাকাশযানে",
+  "byCar": "১০০ কিমি/ঘণ্টার গাড়িতে",
+  "valueSeconds": "{value} সেকেন্ড",
+  "valueMinutes": "{value} মিনিট",
+  "sizeTitle": "আকার",
+  "sizeTimes": "{big} চওড়ায় {small}-এর {times}× বড়।",
+  "sizeSimilar": "{a} আর {b} প্রায় একই আকারের।"
 }

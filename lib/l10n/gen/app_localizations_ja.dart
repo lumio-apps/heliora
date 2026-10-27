@@ -510,4 +510,53 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get ageNote => '誕生日はこのスマホにだけ保存されます。';
+
+  @override
+  String get share => '共有';
+
+  @override
+  String shareText(String planet) {
+    return 'Heliora の$planet。無料・オフラインの太陽系アプリ：https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => '画像を共有できませんでした。';
+
+  @override
+  String get travelTitle => 'どれくらい遠い？';
+
+  @override
+  String get distanceFromEarth => '今日の地球からの距離';
+
+  @override
+  String get lightTime => '光でかかる時間';
+
+  @override
+  String get bySpacecraft => '時速 60,000 km の宇宙船で';
+
+  @override
+  String get byCar => '時速 100 km の車で';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value 秒';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value 分';
+  }
+
+  @override
+  String get sizeTitle => '大きさ';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$bigの直径は$smallの $times× です。';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$aと$bはほぼ同じ大きさです。';
+  }
 }

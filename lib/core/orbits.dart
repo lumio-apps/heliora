@@ -92,10 +92,10 @@ double _rad(double degrees) => degrees * math.pi / 180;
 /// True when the app knows the orbit of [id].
 bool hasOrbit(String id) => _table.containsKey(id);
 
-/// Heliocentric ecliptic longitude of a planet on [date], in degrees from
-/// 0 to 360, measured from the March equinox direction. This is where the
-/// planet really is around the Sun, seen from above the Solar System.
-double heliocentricLongitude(String id, DateTime date) {
+/// Position of a planet around the Sun on [date], in astronomical units, in
+/// the ecliptic frame: x points to the March equinox direction, z points
+/// north out of Earth's orbital plane.
+({double x, double y, double z}) heliocentricPosition(String id, DateTime date) {
   final el = _table[id];
   if (el == null) {
     throw ArgumentError.value(id, 'id', 'No orbit for this body');
@@ -132,15 +132,41 @@ double heliocentricLongitude(String id, DateTime date) {
 
   final cw = math.cos(omega), sw = math.sin(omega);
   final cn = math.cos(node), sn = math.sin(node);
-  final ci = math.cos(inc);
-  final x = (cw * cn - sw * sn * ci) * xp + (-sw * cn - cw * sn * ci) * yp;
-  final y = (cw * sn + sw * cn * ci) * xp + (-sw * sn + cw * cn * ci) * yp;
+  final ci = math.cos(inc), si = math.sin(inc);
+  return (
+    x: (cw * cn - sw * sn * ci) * xp + (-sw * cn - cw * sn * ci) * yp,
+    y: (cw * sn + sw * cn * ci) * xp + (-sw * sn + cw * cn * ci) * yp,
+    z: (sw * si) * xp + (cw * si) * yp,
+  );
+}
 
-  var lon = math.atan2(y, x) * 180 / math.pi;
+/// Heliocentric ecliptic longitude of a planet on [date], in degrees from
+/// 0 to 360, measured from the March equinox direction. This is where the
+/// planet really is around the Sun, seen from above the Solar System.
+double heliocentricLongitude(String id, DateTime date) {
+  final p = heliocentricPosition(id, date);
+  var lon = math.atan2(p.y, p.x) * 180 / math.pi;
   if (lon < 0) {
     lon += 360;
   }
   return lon;
+}
+
+/// Kilometres in one astronomical unit.
+const double kmPerAu = 149597870.7;
+
+/// Distance in km between Earth and the planet [id] on [date]. 'sun' gives
+/// the Earth to Sun distance.
+double distanceFromEarthKm(String id, DateTime date) {
+  final d = clampOrbitDate(date);
+  final earth = heliocentricPosition('earth', d);
+  if (id == 'sun') {
+    return math.sqrt(earth.x * earth.x + earth.y * earth.y + earth.z * earth.z) *
+        kmPerAu;
+  }
+  final p = heliocentricPosition(id, d);
+  final dx = p.x - earth.x, dy = p.y - earth.y, dz = p.z - earth.z;
+  return math.sqrt(dx * dx + dy * dy + dz * dz) * kmPerAu;
 }
 
 /// How old someone born on [birth] is on a body whose year lasts

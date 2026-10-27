@@ -1,5 +1,8 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
+import '../core/format.dart';
 import '../data/planets.dart';
 import '../l10n/names.dart';
 import '../theme.dart';
@@ -64,6 +67,8 @@ class _CompareScreenState extends State<CompareScreen> {
             ),
           ],
         ),
+        const SizedBox(height: 16),
+        _SizeCompare(a: a, b: b),
         const SizedBox(height: 16),
         SurfaceCard(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
@@ -153,6 +158,72 @@ class _PlanetPicker extends StatelessWidget {
               ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+/// The two bodies drawn side by side at their true sizes.
+class _SizeCompare extends StatelessWidget {
+  const _SizeCompare({required this.a, required this.b});
+
+  final Planet a;
+  final Planet b;
+
+  static const double _maxSize = 120;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final p = Palette.of(context);
+    final big = a.diameterKm >= b.diameterKm ? a : b;
+    final small = identical(big, a) ? b : a;
+    final ratio = big.diameterKm / small.diameterKm;
+
+    double sizeOf(Planet body) =>
+        math.max(3.0, _maxSize * body.diameterKm / big.diameterKm);
+
+    Widget ball(Planet body) {
+      final size = sizeOf(body);
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          PlanetBall(planet: body, size: size),
+          const SizedBox(height: 8),
+          Text(planetName(l, body),
+              style: TextStyle(
+                  fontSize: 13, fontWeight: FontWeight.w600, color: p.text)),
+        ],
+      );
+    }
+
+    final text = ratio < 1.05
+        ? l.sizeSimilar(planetName(l, a), planetName(l, b))
+        : l.sizeTimes(
+            planetName(l, big),
+            formatNumber(context, ratio, decimals: ratio < 10 ? 1 : 0),
+            planetName(l, small),
+          );
+
+    return SurfaceCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(l.sizeTitle,
+              style: TextStyle(
+                  fontSize: 16, fontWeight: FontWeight.w700, color: p.text)),
+          const SizedBox(height: 12),
+          SizedBox(
+            height: _maxSize + 30,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[ball(a), ball(b)],
+            ),
+          ),
+          const SizedBox(height: 12),
+          Text(text, style: TextStyle(fontSize: 14, color: p.text, height: 1.4)),
+        ],
       ),
     );
   }

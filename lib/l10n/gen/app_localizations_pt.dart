@@ -518,4 +518,53 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get ageNote => 'Sua data de nascimento fica salva só neste telefone.';
+
+  @override
+  String get share => 'Compartilhar';
+
+  @override
+  String shareText(String planet) {
+    return '$planet no Heliora, o app gratuito do Sistema Solar offline: https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => 'Não foi possível compartilhar a imagem.';
+
+  @override
+  String get travelTitle => 'A que distância fica?';
+
+  @override
+  String get distanceFromEarth => 'Distância da Terra hoje';
+
+  @override
+  String get lightTime => 'A luz leva';
+
+  @override
+  String get bySpacecraft => 'De nave espacial a 60.000 km/h';
+
+  @override
+  String get byCar => 'De carro a 100 km/h';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value s';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value min';
+  }
+
+  @override
+  String get sizeTitle => 'Tamanho';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$big é $times× mais largo que $small.';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a e $b têm quase o mesmo tamanho.';
+  }
 }

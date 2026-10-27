@@ -155,5 +155,18 @@
   "setBirthDate": "നിങ്ങളുടെ ജനനത്തീയതി നൽകുക",
   "changeBirthDate": "മാറ്റുക",
   "nextBirthday": "അടുത്ത ജന്മദിനം {days} ദിവസത്തിൽ",
-  "ageNote": "നിങ്ങളുടെ ജനനത്തീയതി ഈ ഫോണിൽ മാത്രം സൂക്ഷിക്കും."
+  "ageNote": "നിങ്ങളുടെ ജനനത്തീയതി ഈ ഫോണിൽ മാത്രം സൂക്ഷിക്കും.",
+  "share": "പങ്കിടുക",
+  "shareText": "Heliora-യിൽ {planet}, സൗജന്യ ഓഫ്‌ലൈൻ സൗരയൂഥ ആപ്പ്: https://github.com/lumio-apps/heliora",
+  "shareFailed": "ചിത്രം പങ്കിടാനായില്ല.",
+  "travelTitle": "എത്ര ദൂരെയാണ്?",
+  "distanceFromEarth": "ഇന്ന് ഭൂമിയിൽ നിന്നുള്ള ദൂരം",
+  "lightTime": "പ്രകാശത്തിന് വേണ്ട സമയം",
+  "bySpacecraft": "മണിക്കൂറിൽ 60,000 കി.മീ ബഹിരാകാശ പേടകത്തിൽ",
+  "byCar": "മണിക്കൂറിൽ 100 കി.മീ കാറിൽ",
+  "valueSeconds": "{value} സെ",
+  "valueMinutes": "{value} മിനിറ്റ്",
+  "sizeTitle": "വലിപ്പം",
+  "sizeTimes": "{big} വീതിയിൽ {small}-നെക്കാൾ {times}× വലുതാണ്.",
+  "sizeSimilar": "{a}-യും {b}-യും ഏകദേശം ഒരേ വലിപ്പം."
 }

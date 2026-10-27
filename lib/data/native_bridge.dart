@@ -41,6 +41,27 @@ class NativeBridge {
     }
   }
 
+  /// Folder in the app cache for images the user shares.
+  Future<String> sharedDir() async {
+    try {
+      final result = await _channel.invokeMethod<String>('sharedDir');
+      return result ?? '';
+    } on Exception {
+      return '';
+    }
+  }
+
+  /// Opens the Android share sheet with the PNG at [path] and [text].
+  Future<bool> shareImage(String path, String text) async {
+    try {
+      final result = await _channel.invokeMethod<bool>(
+          'shareImage', <String, String>{'path': path, 'text': text});
+      return result ?? false;
+    } on Exception {
+      return false;
+    }
+  }
+
   /// The installed version name, for example "1.0.0". Empty when unknown.
   Future<String> appVersion() async {
     try {

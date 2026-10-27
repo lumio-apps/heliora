@@ -516,4 +516,53 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get ageNote => 'ਤੁਹਾਡੀ ਜਨਮ ਤਾਰੀਖ਼ ਸਿਰਫ਼ ਇਸ ਫ਼ੋਨ ਵਿੱਚ ਸੇਵ ਹੁੰਦੀ ਹੈ।';
+
+  @override
+  String get share => 'ਸਾਂਝਾ ਕਰੋ';
+
+  @override
+  String shareText(String planet) {
+    return 'Heliora ਵਿੱਚ $planet, ਮੁਫ਼ਤ ਆਫ਼ਲਾਈਨ ਸੂਰਜੀ ਮੰਡਲ ਐਪ: https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => 'ਤਸਵੀਰ ਸਾਂਝੀ ਨਹੀਂ ਹੋ ਸਕੀ।';
+
+  @override
+  String get travelTitle => 'ਕਿੰਨੀ ਦੂਰ ਹੈ?';
+
+  @override
+  String get distanceFromEarth => 'ਅੱਜ ਧਰਤੀ ਤੋਂ ਦੂਰੀ';
+
+  @override
+  String get lightTime => 'ਰੋਸ਼ਨੀ ਨੂੰ ਲੱਗਦਾ ਹੈ';
+
+  @override
+  String get bySpacecraft => '60,000 ਕਿਮੀ/ਘੰਟਾ ਵਾਲੇ ਪੁਲਾੜ ਯਾਨ ਨਾਲ';
+
+  @override
+  String get byCar => '100 ਕਿਮੀ/ਘੰਟਾ ਵਾਲੀ ਕਾਰ ਨਾਲ';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value ਸਕਿੰਟ';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value ਮਿੰਟ';
+  }
+
+  @override
+  String get sizeTitle => 'ਆਕਾਰ';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$big ਚੌੜਾਈ ਵਿੱਚ $small ਤੋਂ $times× ਵੱਡਾ ਹੈ।';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a ਅਤੇ $b ਲਗਭਗ ਇੱਕੋ ਆਕਾਰ ਦੇ ਹਨ।';
+  }
 }

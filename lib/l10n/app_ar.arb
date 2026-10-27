@@ -155,5 +155,18 @@
   "setBirthDate": "أدخل تاريخ ميلادك",
   "changeBirthDate": "تغيير",
   "nextBirthday": "عيد ميلادك القادم بعد {days} يوم",
-  "ageNote": "يُحفظ تاريخ ميلادك على هذا الهاتف فقط."
+  "ageNote": "يُحفظ تاريخ ميلادك على هذا الهاتف فقط.",
+  "share": "مشاركة",
+  "shareText": "{planet} في Heliora، تطبيق المجموعة الشمسية المجاني دون إنترنت: https://github.com/lumio-apps/heliora",
+  "shareFailed": "تعذّرت مشاركة الصورة.",
+  "travelTitle": "كم يبعد؟",
+  "distanceFromEarth": "البعد عن الأرض اليوم",
+  "lightTime": "يستغرق الضوء",
+  "bySpacecraft": "بمركبة فضائية بسرعة 60,000 كم/س",
+  "byCar": "بسيارة بسرعة 100 كم/س",
+  "valueSeconds": "{value} ث",
+  "valueMinutes": "{value} د",
+  "sizeTitle": "الحجم",
+  "sizeTimes": "عرض {big} يساوي {times}× عرض {small}.",
+  "sizeSimilar": "{a} و{b} بالحجم نفسه تقريبًا."
 }

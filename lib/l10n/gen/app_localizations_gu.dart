@@ -516,4 +516,53 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get ageNote => 'તમારી જન્મતારીખ ફક્ત આ ફોનમાં જ સેવ થાય છે.';
+
+  @override
+  String get share => 'શેર કરો';
+
+  @override
+  String shareText(String planet) {
+    return 'Heliora માં $planet, મફત ઑફલાઇન સૂર્યમંડળ ઍપ: https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => 'ચિત્ર શેર ન થઈ શક્યું.';
+
+  @override
+  String get travelTitle => 'કેટલું દૂર છે?';
+
+  @override
+  String get distanceFromEarth => 'આજે પૃથ્વીથી અંતર';
+
+  @override
+  String get lightTime => 'પ્રકાશને લાગે';
+
+  @override
+  String get bySpacecraft => '60,000 કિમી/કલાકના અવકાશયાનથી';
+
+  @override
+  String get byCar => '100 કિમી/કલાકની કારથી';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value સેકન્ડ';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value મિનિટ';
+  }
+
+  @override
+  String get sizeTitle => 'કદ';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$big પહોળાઈમાં $small કરતાં $times× મોટું છે.';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a અને $b લગભગ સરખા કદના છે.';
+  }
 }

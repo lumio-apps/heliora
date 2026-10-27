@@ -522,4 +522,53 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get ageNote => 'നിങ്ങളുടെ ജനനത്തീയതി ഈ ഫോണിൽ മാത്രം സൂക്ഷിക്കും.';
+
+  @override
+  String get share => 'പങ്കിടുക';
+
+  @override
+  String shareText(String planet) {
+    return 'Heliora-യിൽ $planet, സൗജന്യ ഓഫ്‌ലൈൻ സൗരയൂഥ ആപ്പ്: https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => 'ചിത്രം പങ്കിടാനായില്ല.';
+
+  @override
+  String get travelTitle => 'എത്ര ദൂരെയാണ്?';
+
+  @override
+  String get distanceFromEarth => 'ഇന്ന് ഭൂമിയിൽ നിന്നുള്ള ദൂരം';
+
+  @override
+  String get lightTime => 'പ്രകാശത്തിന് വേണ്ട സമയം';
+
+  @override
+  String get bySpacecraft => 'മണിക്കൂറിൽ 60,000 കി.മീ ബഹിരാകാശ പേടകത്തിൽ';
+
+  @override
+  String get byCar => 'മണിക്കൂറിൽ 100 കി.മീ കാറിൽ';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value സെ';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value മിനിറ്റ്';
+  }
+
+  @override
+  String get sizeTitle => 'വലിപ്പം';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$big വീതിയിൽ $small-നെക്കാൾ $times× വലുതാണ്.';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a-യും $b-യും ഏകദേശം ഒരേ വലിപ്പം.';
+  }
 }

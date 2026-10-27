@@ -155,5 +155,18 @@
   "setBirthDate": "तुमची जन्मतारीख टाका",
   "changeBirthDate": "बदला",
   "nextBirthday": "पुढचा वाढदिवस {days} दिवसांत",
-  "ageNote": "तुमची जन्मतारीख फक्त या फोनमध्येच सेव्ह होते."
+  "ageNote": "तुमची जन्मतारीख फक्त या फोनमध्येच सेव्ह होते.",
+  "share": "शेअर करा",
+  "shareText": "Heliora मध्ये {planet}, मोफत ऑफलाइन सूर्यमाला ॲप: https://github.com/lumio-apps/heliora",
+  "shareFailed": "चित्र शेअर करता आले नाही.",
+  "travelTitle": "किती दूर आहे?",
+  "distanceFromEarth": "आज पृथ्वीपासून अंतर",
+  "lightTime": "प्रकाशाला लागतात",
+  "bySpacecraft": "ताशी 60,000 किमी अंतराळयानाने",
+  "byCar": "ताशी 100 किमी कारने",
+  "valueSeconds": "{value} सेकंद",
+  "valueMinutes": "{value} मिनिटे",
+  "sizeTitle": "आकार",
+  "sizeTimes": "{big} रुंदीत {small} पेक्षा {times}× मोठा आहे.",
+  "sizeSimilar": "{a} आणि {b} जवळजवळ सारख्या आकाराचे आहेत."
 }

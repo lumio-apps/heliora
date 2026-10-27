@@ -142,6 +142,15 @@ void main() {
       expect(clampOrbitDate(DateTime.utc(2100)), orbitMaxDate);
     });
 
+    test('distance from Earth matches known dates', () {
+      // Mars was closest on 12 Jan 2025, about 96 million km away.
+      expect(distanceFromEarthKm('mars', DateTime.utc(2025, 1, 12)) / 1e6,
+          closeTo(96, 1.5));
+      // Earth is closest to the Sun in early January, about 147.1 million km.
+      expect(distanceFromEarthKm('sun', DateTime.utc(2026, 1, 3)) / 1e6,
+          closeTo(147.1, 0.3));
+    });
+
     test('age on other planets', () {
       final birth = DateTime.utc(2000, 1, 1);
       final now = DateTime.utc(2020, 1, 1);

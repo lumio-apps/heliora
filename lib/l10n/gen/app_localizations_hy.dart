@@ -519,4 +519,53 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get ageNote => 'Ձեր ծննդյան ամսաթիվը պահվում է միայն այս հեռախոսում։';
+
+  @override
+  String get share => 'Կիսվել';
+
+  @override
+  String shareText(String planet) {
+    return '$planet-ը Heliora-ում՝ անվճար անցանց Արեգակնային համակարգի հավելված․ https://github.com/lumio-apps/heliora';
+  }
+
+  @override
+  String get shareFailed => 'Չհաջողվեց կիսվել նկարով։';
+
+  @override
+  String get travelTitle => 'Որքա՞ն հեռու է';
+
+  @override
+  String get distanceFromEarth => 'Հեռավորությունը Երկրից այսօր';
+
+  @override
+  String get lightTime => 'Լույսին պետք է';
+
+  @override
+  String get bySpacecraft => 'Տիեզերանավով՝ 60 000 կմ/ժ';
+
+  @override
+  String get byCar => 'Մեքենայով՝ 100 կմ/ժ';
+
+  @override
+  String valueSeconds(String value) {
+    return '$value վ';
+  }
+
+  @override
+  String valueMinutes(String value) {
+    return '$value ր';
+  }
+
+  @override
+  String get sizeTitle => 'Չափ';
+
+  @override
+  String sizeTimes(String big, String times, String small) {
+    return '$big-ը $times× ավելի լայն է, քան $small-ը։';
+  }
+
+  @override
+  String sizeSimilar(String a, String b) {
+    return '$a-ը և $b-ը գրեթե նույն չափի են։';
+  }
 }
