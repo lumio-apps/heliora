@@ -22,7 +22,9 @@
   "planetOrder": "Planet {n} from the Sun",
   "@planetOrder": {
     "placeholders": {
-      "n": {"type": "int"}
+      "n": {
+        "type": "int"
+      }
     }
   },
   "openDetails": "Open details",
@@ -40,31 +42,41 @@
   "valueKm": "{value} km",
   "@valueKm": {
     "placeholders": {
-      "value": {"type": "String"}
+      "value": {
+        "type": "String"
+      }
     }
   },
   "valueMillionKm": "{value} million km",
   "@valueMillionKm": {
     "placeholders": {
-      "value": {"type": "String"}
+      "value": {
+        "type": "String"
+      }
     }
   },
   "valueHours": "{value} h",
   "@valueHours": {
     "placeholders": {
-      "value": {"type": "String"}
+      "value": {
+        "type": "String"
+      }
     }
   },
   "valueDays": "{value} days",
   "@valueDays": {
     "placeholders": {
-      "value": {"type": "String"}
+      "value": {
+        "type": "String"
+      }
     }
   },
   "valueYears": "{value} years",
   "@valueYears": {
     "placeholders": {
-      "value": {"type": "String"}
+      "value": {
+        "type": "String"
+      }
     }
   },
   "atmosphere": "Atmosphere",
@@ -76,7 +88,9 @@
   "weightFeelsLike": "{weight} kg on Earth feels like",
   "@weightFeelsLike": {
     "placeholders": {
-      "weight": {"type": "String"}
+      "weight": {
+        "type": "String"
+      }
     }
   },
   "gasCo2": "Carbon dioxide",
@@ -95,7 +109,9 @@
   "gravityTimes": "{factor}× Earth's gravity",
   "@gravityTimes": {
     "placeholders": {
-      "factor": {"type": "String"}
+      "factor": {
+        "type": "String"
+      }
     }
   },
   "quizTitle": "Planet quiz",
@@ -104,8 +120,12 @@
   "quizProgress": "Question {current} of {total}",
   "@quizProgress": {
     "placeholders": {
-      "current": {"type": "int"},
-      "total": {"type": "int"}
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
   "quizNext": "Next",
@@ -114,20 +134,28 @@
   "quizWrong": "Not quite. The answer is {answer}.",
   "@quizWrong": {
     "placeholders": {
-      "answer": {"type": "String"}
+      "answer": {
+        "type": "String"
+      }
     }
   },
   "quizScore": "You got {score} of {total}",
   "@quizScore": {
     "placeholders": {
-      "score": {"type": "int"},
-      "total": {"type": "int"}
+      "score": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
   "quizBest": "Best score: {score}",
   "@quizBest": {
     "placeholders": {
-      "score": {"type": "int"}
+      "score": {
+        "type": "int"
+      }
     }
   },
   "quizNewBest": "New best score!",
@@ -164,7 +192,9 @@
   "updateReady": "Version {version} is ready to download.",
   "@updateReady": {
     "placeholders": {
-      "version": {"type": "String"}
+      "version": {
+        "type": "String"
+      }
     }
   },
   "download": "Download",
@@ -173,5 +203,50 @@
   "sourceCode": "Source code on GitHub",
   "privacyLine": "Offline · No ads · No tracking",
   "dataSource": "Facts: NASA Planetary Fact Sheet",
-  "openFailed": "Could not open the link."
+  "openFailed": "Could not open the link.",
+  "bodySun": "Sun",
+  "bodyMoon": "Moon",
+  "bodyPluto": "Pluto",
+  "moonIo": "Io",
+  "moonEuropa": "Europa",
+  "moonGanymede": "Ganymede",
+  "moonCallisto": "Callisto",
+  "moonTitan": "Titan",
+  "moonEnceladus": "Enceladus",
+  "moonTriton": "Triton",
+  "kindStar": "Our star, the centre of the Solar System",
+  "kindDwarf": "Dwarf planet",
+  "moonOf": "Moon of {planet}",
+  "orbitPeriod": "One orbit",
+  "distanceFrom": "Distance from {body}",
+  "composition": "What it is made of",
+  "noAtmosphere": "No real atmosphere, it is almost a vacuum.",
+  "majorMoons": "Major moons",
+  "lifeTitle": "Could humans live here?",
+  "lifeScoreShort": "Life score",
+  "lifeNote": "Scored from temperature, air pressure, oxygen, water, surface and gravity. Earth scores 10.",
+  "water": "Water",
+  "waterLiquid": "Liquid water",
+  "waterIce": "Ice",
+  "waterOcean": "Ocean under the ice",
+  "waterNone": "No water",
+  "surface": "Surface",
+  "solidSurface": "Solid surface",
+  "lifeHome": "Just like home",
+  "lifeHard": "Very hard, people would need a closed base and spacesuits",
+  "lifeNo": "Impossible for humans",
+  "@moonOf": {
+    "placeholders": {
+      "planet": {
+        "type": "String"
+      }
+    }
+  },
+  "@distanceFrom": {
+    "placeholders": {
+      "body": {
+        "type": "String"
+      }
+    }
+  }
 }

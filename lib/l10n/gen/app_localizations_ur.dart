@@ -359,4 +359,102 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get openFailed => 'لنک نہیں کھل سکا۔';
+
+  @override
+  String get bodySun => 'سورج';
+
+  @override
+  String get bodyMoon => 'چاند';
+
+  @override
+  String get bodyPluto => 'پلوٹو';
+
+  @override
+  String get moonIo => 'آئیو';
+
+  @override
+  String get moonEuropa => 'یوروپا';
+
+  @override
+  String get moonGanymede => 'گینیمیڈ';
+
+  @override
+  String get moonCallisto => 'کیلسٹو';
+
+  @override
+  String get moonTitan => 'ٹائٹن';
+
+  @override
+  String get moonEnceladus => 'اینسیلاڈس';
+
+  @override
+  String get moonTriton => 'ٹرائٹن';
+
+  @override
+  String get kindStar => 'ہمارا ستارہ، نظامِ شمسی کا مرکز';
+
+  @override
+  String get kindDwarf => 'بونا سیارہ';
+
+  @override
+  String moonOf(String planet) {
+    return '$planet کا چاند';
+  }
+
+  @override
+  String get orbitPeriod => 'ایک چکر';
+
+  @override
+  String distanceFrom(String body) {
+    return '$body سے فاصلہ';
+  }
+
+  @override
+  String get composition => 'یہ کس چیز سے بنا ہے';
+
+  @override
+  String get noAtmosphere => 'اصل فضا نہیں، تقریباً خلا ہے۔';
+
+  @override
+  String get majorMoons => 'اہم چاند';
+
+  @override
+  String get lifeTitle => 'کیا انسان یہاں رہ سکتے ہیں؟';
+
+  @override
+  String get lifeScoreShort => 'زندگی اسکور';
+
+  @override
+  String get lifeNote =>
+      'درجۂ حرارت، ہوا کے دباؤ، آکسیجن، پانی، سطح اور کششِ ثقل سے حساب۔ زمین کا اسکور 10 ہے۔';
+
+  @override
+  String get water => 'پانی';
+
+  @override
+  String get waterLiquid => 'مائع پانی';
+
+  @override
+  String get waterIce => 'برف';
+
+  @override
+  String get waterOcean => 'برف کے نیچے سمندر';
+
+  @override
+  String get waterNone => 'پانی نہیں';
+
+  @override
+  String get surface => 'سطح';
+
+  @override
+  String get solidSurface => 'ٹھوس سطح';
+
+  @override
+  String get lifeHome => 'بالکل گھر جیسا';
+
+  @override
+  String get lifeHard => 'بہت مشکل، بند اڈا اور اسپیس سوٹ چاہیے';
+
+  @override
+  String get lifeNo => 'انسانوں کے لیے ناممکن';
 }

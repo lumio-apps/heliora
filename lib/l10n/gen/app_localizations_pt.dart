@@ -358,4 +358,103 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get openFailed => 'Não foi possível abrir o link.';
+
+  @override
+  String get bodySun => 'Sol';
+
+  @override
+  String get bodyMoon => 'Lua';
+
+  @override
+  String get bodyPluto => 'Plutão';
+
+  @override
+  String get moonIo => 'Io';
+
+  @override
+  String get moonEuropa => 'Europa';
+
+  @override
+  String get moonGanymede => 'Ganimedes';
+
+  @override
+  String get moonCallisto => 'Calisto';
+
+  @override
+  String get moonTitan => 'Titã';
+
+  @override
+  String get moonEnceladus => 'Encélado';
+
+  @override
+  String get moonTriton => 'Tritão';
+
+  @override
+  String get kindStar => 'Nossa estrela, o centro do Sistema Solar';
+
+  @override
+  String get kindDwarf => 'Planeta anão';
+
+  @override
+  String moonOf(String planet) {
+    return 'Lua de $planet';
+  }
+
+  @override
+  String get orbitPeriod => 'Uma órbita';
+
+  @override
+  String distanceFrom(String body) {
+    return 'Distância de $body';
+  }
+
+  @override
+  String get composition => 'Do que é feito';
+
+  @override
+  String get noAtmosphere => 'Não tem atmosfera de verdade, é quase vácuo.';
+
+  @override
+  String get majorMoons => 'Luas principais';
+
+  @override
+  String get lifeTitle => 'Humanos poderiam viver aqui?';
+
+  @override
+  String get lifeScoreShort => 'Pontuação de vida';
+
+  @override
+  String get lifeNote =>
+      'Calculada pela temperatura, pressão do ar, oxigênio, água, superfície e gravidade. A Terra tira 10.';
+
+  @override
+  String get water => 'Água';
+
+  @override
+  String get waterLiquid => 'Água líquida';
+
+  @override
+  String get waterIce => 'Gelo';
+
+  @override
+  String get waterOcean => 'Oceano sob o gelo';
+
+  @override
+  String get waterNone => 'Sem água';
+
+  @override
+  String get surface => 'Superfície';
+
+  @override
+  String get solidSurface => 'Superfície sólida';
+
+  @override
+  String get lifeHome => 'Igual a estar em casa';
+
+  @override
+  String get lifeHard =>
+      'Muito difícil, seria preciso uma base fechada e trajes espaciais';
+
+  @override
+  String get lifeNo => 'Impossível para humanos';
 }

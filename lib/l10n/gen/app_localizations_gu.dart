@@ -357,4 +357,102 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get openFailed => 'લિંક ખોલી શકાઈ નહીં.';
+
+  @override
+  String get bodySun => 'સૂર્ય';
+
+  @override
+  String get bodyMoon => 'ચંદ્ર';
+
+  @override
+  String get bodyPluto => 'પ્લૂટો';
+
+  @override
+  String get moonIo => 'આયો';
+
+  @override
+  String get moonEuropa => 'યુરોપા';
+
+  @override
+  String get moonGanymede => 'ગેનિમીડ';
+
+  @override
+  String get moonCallisto => 'કૅલિસ્ટો';
+
+  @override
+  String get moonTitan => 'ટાઇટન';
+
+  @override
+  String get moonEnceladus => 'એન્સેલેડસ';
+
+  @override
+  String get moonTriton => 'ટ્રાઇટન';
+
+  @override
+  String get kindStar => 'આપણો તારો, સૂર્યમંડળનું કેન્દ્ર';
+
+  @override
+  String get kindDwarf => 'વામન ગ્રહ';
+
+  @override
+  String moonOf(String planet) {
+    return '$planetનો ચંદ્ર';
+  }
+
+  @override
+  String get orbitPeriod => 'એક પરિક્રમા';
+
+  @override
+  String distanceFrom(String body) {
+    return '$bodyથી અંતર';
+  }
+
+  @override
+  String get composition => 'તે શેનાથી બનેલું છે';
+
+  @override
+  String get noAtmosphere => 'ખરું વાતાવરણ નથી, લગભગ શૂન્યાવકાશ છે.';
+
+  @override
+  String get majorMoons => 'મુખ્ય ચંદ્રો';
+
+  @override
+  String get lifeTitle => 'શું માણસો અહીં રહી શકે?';
+
+  @override
+  String get lifeScoreShort => 'જીવન સ્કોર';
+
+  @override
+  String get lifeNote =>
+      'તાપમાન, હવાનું દબાણ, ઑક્સિજન, પાણી, સપાટી અને ગુરુત્વાકર્ષણ પરથી ગણાયું. પૃથ્વીનો સ્કોર 10 છે.';
+
+  @override
+  String get water => 'પાણી';
+
+  @override
+  String get waterLiquid => 'પ્રવાહી પાણી';
+
+  @override
+  String get waterIce => 'બરફ';
+
+  @override
+  String get waterOcean => 'બરફ નીચે સમુદ્ર';
+
+  @override
+  String get waterNone => 'પાણી નથી';
+
+  @override
+  String get surface => 'સપાટી';
+
+  @override
+  String get solidSurface => 'નક્કર સપાટી';
+
+  @override
+  String get lifeHome => 'બિલકુલ ઘર જેવું';
+
+  @override
+  String get lifeHard => 'ખૂબ મુશ્કેલ, બંધ બેઝ અને સ્પેસસૂટ જોઈએ';
+
+  @override
+  String get lifeNo => 'માણસો માટે અશક્ય';
 }

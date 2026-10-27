@@ -360,4 +360,102 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get openFailed => 'Չհաջողվեց բացել հղումը։';
+
+  @override
+  String get bodySun => 'Արեգակ';
+
+  @override
+  String get bodyMoon => 'Լուսին';
+
+  @override
+  String get bodyPluto => 'Պլուտոն';
+
+  @override
+  String get moonIo => 'Իո';
+
+  @override
+  String get moonEuropa => 'Եվրոպա';
+
+  @override
+  String get moonGanymede => 'Գանիմեդ';
+
+  @override
+  String get moonCallisto => 'Կալիստո';
+
+  @override
+  String get moonTitan => 'Տիտան';
+
+  @override
+  String get moonEnceladus => 'Էնցելադ';
+
+  @override
+  String get moonTriton => 'Տրիտոն';
+
+  @override
+  String get kindStar => 'Մեր աստղը՝ Արեգակնային համակարգի կենտրոնը';
+
+  @override
+  String get kindDwarf => 'Գաճաճ մոլորակ';
+
+  @override
+  String moonOf(String planet) {
+    return '$planet-ի արբանյակ';
+  }
+
+  @override
+  String get orbitPeriod => 'Մեկ պտույտ';
+
+  @override
+  String distanceFrom(String body) {
+    return 'Հեռավորությունը՝ $body';
+  }
+
+  @override
+  String get composition => 'Ինչից է բաղկացած';
+
+  @override
+  String get noAtmosphere => 'Իրական մթնոլորտ չունի, գրեթե վակուում է։';
+
+  @override
+  String get majorMoons => 'Գլխավոր արբանյակներ';
+
+  @override
+  String get lifeTitle => 'Կարո՞ղ են մարդիկ այստեղ ապրել';
+
+  @override
+  String get lifeScoreShort => 'Կյանքի միավոր';
+
+  @override
+  String get lifeNote =>
+      'Հաշվված է ջերմաստիճանից, օդի ճնշումից, թթվածնից, ջրից, մակերևույթից և ձգողությունից։ Երկիրը ստանում է 10։';
+
+  @override
+  String get water => 'Ջուր';
+
+  @override
+  String get waterLiquid => 'Հեղուկ ջուր';
+
+  @override
+  String get waterIce => 'Սառույց';
+
+  @override
+  String get waterOcean => 'Օվկիանոս սառույցի տակ';
+
+  @override
+  String get waterNone => 'Ջուր չկա';
+
+  @override
+  String get surface => 'Մակերևույթ';
+
+  @override
+  String get solidSurface => 'Պինդ մակերևույթ';
+
+  @override
+  String get lifeHome => 'Ճիշտ տան պես';
+
+  @override
+  String get lifeHard => 'Շատ դժվար է, պետք են փակ բազա և տիեզերական հագուստ';
+
+  @override
+  String get lifeNo => 'Անհնար է մարդկանց համար';
 }

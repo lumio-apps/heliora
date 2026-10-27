@@ -360,4 +360,102 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get openFailed => 'Не удалось открыть ссылку.';
+
+  @override
+  String get bodySun => 'Солнце';
+
+  @override
+  String get bodyMoon => 'Луна';
+
+  @override
+  String get bodyPluto => 'Плутон';
+
+  @override
+  String get moonIo => 'Ио';
+
+  @override
+  String get moonEuropa => 'Европа';
+
+  @override
+  String get moonGanymede => 'Ганимед';
+
+  @override
+  String get moonCallisto => 'Каллисто';
+
+  @override
+  String get moonTitan => 'Титан';
+
+  @override
+  String get moonEnceladus => 'Энцелад';
+
+  @override
+  String get moonTriton => 'Тритон';
+
+  @override
+  String get kindStar => 'Наша звезда, центр Солнечной системы';
+
+  @override
+  String get kindDwarf => 'Карликовая планета';
+
+  @override
+  String moonOf(String planet) {
+    return 'Спутник: $planet';
+  }
+
+  @override
+  String get orbitPeriod => 'Один оборот';
+
+  @override
+  String distanceFrom(String body) {
+    return 'Расстояние до: $body';
+  }
+
+  @override
+  String get composition => 'Из чего состоит';
+
+  @override
+  String get noAtmosphere => 'Настоящей атмосферы нет, почти вакуум.';
+
+  @override
+  String get majorMoons => 'Главные спутники';
+
+  @override
+  String get lifeTitle => 'Смогут ли здесь жить люди?';
+
+  @override
+  String get lifeScoreShort => 'Индекс жизни';
+
+  @override
+  String get lifeNote =>
+      'Считается по температуре, давлению воздуха, кислороду, воде, поверхности и гравитации. У Земли 10.';
+
+  @override
+  String get water => 'Вода';
+
+  @override
+  String get waterLiquid => 'Жидкая вода';
+
+  @override
+  String get waterIce => 'Лёд';
+
+  @override
+  String get waterOcean => 'Океан подо льдом';
+
+  @override
+  String get waterNone => 'Воды нет';
+
+  @override
+  String get surface => 'Поверхность';
+
+  @override
+  String get solidSurface => 'Твёрдая поверхность';
+
+  @override
+  String get lifeHome => 'Совсем как дома';
+
+  @override
+  String get lifeHard => 'Очень трудно, нужна закрытая база и скафандры';
+
+  @override
+  String get lifeNo => 'Невозможно для людей';
 }

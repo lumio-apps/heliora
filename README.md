@@ -7,6 +7,8 @@ Part of [Lumio Apps](https://github.com/lumio-apps): no ads, no account, no trac
 ## Features
 
 - **2D and 3D views**: a moving top-down map of the Solar System, and 3D planets you can rotate and zoom. Switch with the 2D / 3D button.
+- **Sun, Pluto, the Moon and 7 other major moons**: Io, Europa, Ganymede, Callisto, Titan, Enceladus and Triton, each with its own page and 3D globe.
+- **Could humans live here?**: a simple 0 to 10 life score for every body, from temperature, air pressure, oxygen, water, surface and gravity.
 - **Planet facts**: diameter, gravity, temperature, length of day and year, known moons, distance from the Sun and surface pressure.
 - **Atmosphere and oxygen**: what each atmosphere is made of, and how its oxygen compares with Earth's.
 - **Compare**: any two planets side by side.

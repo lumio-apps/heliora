@@ -357,4 +357,102 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get openFailed => 'ਲਿੰਕ ਨਹੀਂ ਖੁੱਲ੍ਹ ਸਕਿਆ।';
+
+  @override
+  String get bodySun => 'ਸੂਰਜ';
+
+  @override
+  String get bodyMoon => 'ਚੰਦਰਮਾ';
+
+  @override
+  String get bodyPluto => 'ਪਲੂਟੋ';
+
+  @override
+  String get moonIo => 'ਆਇਓ';
+
+  @override
+  String get moonEuropa => 'ਯੂਰੋਪਾ';
+
+  @override
+  String get moonGanymede => 'ਗੈਨੀਮੀਡ';
+
+  @override
+  String get moonCallisto => 'ਕੈਲਿਸਟੋ';
+
+  @override
+  String get moonTitan => 'ਟਾਈਟਨ';
+
+  @override
+  String get moonEnceladus => 'ਐਨਸੇਲਾਡਸ';
+
+  @override
+  String get moonTriton => 'ਟ੍ਰਾਈਟਨ';
+
+  @override
+  String get kindStar => 'ਸਾਡਾ ਤਾਰਾ, ਸੂਰਜੀ ਮੰਡਲ ਦਾ ਕੇਂਦਰ';
+
+  @override
+  String get kindDwarf => 'ਬੌਣਾ ਗ੍ਰਹਿ';
+
+  @override
+  String moonOf(String planet) {
+    return '$planet ਦਾ ਚੰਦਰਮਾ';
+  }
+
+  @override
+  String get orbitPeriod => 'ਇੱਕ ਚੱਕਰ';
+
+  @override
+  String distanceFrom(String body) {
+    return '$body ਤੋਂ ਦੂਰੀ';
+  }
+
+  @override
+  String get composition => 'ਇਹ ਕਿਸ ਚੀਜ਼ ਦਾ ਬਣਿਆ ਹੈ';
+
+  @override
+  String get noAtmosphere => 'ਅਸਲ ਵਾਯੂਮੰਡਲ ਨਹੀਂ, ਲਗਭਗ ਖਲਾਅ ਹੈ।';
+
+  @override
+  String get majorMoons => 'ਮੁੱਖ ਚੰਦਰਮਾ';
+
+  @override
+  String get lifeTitle => 'ਕੀ ਮਨੁੱਖ ਇੱਥੇ ਰਹਿ ਸਕਦੇ ਹਨ?';
+
+  @override
+  String get lifeScoreShort => 'ਜੀਵਨ ਸਕੋਰ';
+
+  @override
+  String get lifeNote =>
+      'ਤਾਪਮਾਨ, ਹਵਾ ਦੇ ਦਬਾਅ, ਆਕਸੀਜਨ, ਪਾਣੀ, ਸਤ੍ਹਾ ਅਤੇ ਗੁਰੂਤਾ ਤੋਂ ਗਿਣਿਆ। ਧਰਤੀ ਦਾ ਸਕੋਰ 10 ਹੈ।';
+
+  @override
+  String get water => 'ਪਾਣੀ';
+
+  @override
+  String get waterLiquid => 'ਤਰਲ ਪਾਣੀ';
+
+  @override
+  String get waterIce => 'ਬਰਫ਼';
+
+  @override
+  String get waterOcean => 'ਬਰਫ਼ ਹੇਠ ਸਮੁੰਦਰ';
+
+  @override
+  String get waterNone => 'ਪਾਣੀ ਨਹੀਂ';
+
+  @override
+  String get surface => 'ਸਤ੍ਹਾ';
+
+  @override
+  String get solidSurface => 'ਠੋਸ ਸਤ੍ਹਾ';
+
+  @override
+  String get lifeHome => 'ਬਿਲਕੁਲ ਘਰ ਵਰਗਾ';
+
+  @override
+  String get lifeHard => 'ਬਹੁਤ ਔਖਾ, ਬੰਦ ਬੇਸ ਅਤੇ ਸਪੇਸਸੂਟ ਚਾਹੀਦੇ ਹਨ';
+
+  @override
+  String get lifeNo => 'ਮਨੁੱਖਾਂ ਲਈ ਅਸੰਭਵ';
 }

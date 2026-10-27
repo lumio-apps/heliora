@@ -775,6 +775,192 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Could not open the link.'**
   String get openFailed;
+
+  /// No description provided for @bodySun.
+  ///
+  /// In en, this message translates to:
+  /// **'Sun'**
+  String get bodySun;
+
+  /// No description provided for @bodyMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Moon'**
+  String get bodyMoon;
+
+  /// No description provided for @bodyPluto.
+  ///
+  /// In en, this message translates to:
+  /// **'Pluto'**
+  String get bodyPluto;
+
+  /// No description provided for @moonIo.
+  ///
+  /// In en, this message translates to:
+  /// **'Io'**
+  String get moonIo;
+
+  /// No description provided for @moonEuropa.
+  ///
+  /// In en, this message translates to:
+  /// **'Europa'**
+  String get moonEuropa;
+
+  /// No description provided for @moonGanymede.
+  ///
+  /// In en, this message translates to:
+  /// **'Ganymede'**
+  String get moonGanymede;
+
+  /// No description provided for @moonCallisto.
+  ///
+  /// In en, this message translates to:
+  /// **'Callisto'**
+  String get moonCallisto;
+
+  /// No description provided for @moonTitan.
+  ///
+  /// In en, this message translates to:
+  /// **'Titan'**
+  String get moonTitan;
+
+  /// No description provided for @moonEnceladus.
+  ///
+  /// In en, this message translates to:
+  /// **'Enceladus'**
+  String get moonEnceladus;
+
+  /// No description provided for @moonTriton.
+  ///
+  /// In en, this message translates to:
+  /// **'Triton'**
+  String get moonTriton;
+
+  /// No description provided for @kindStar.
+  ///
+  /// In en, this message translates to:
+  /// **'Our star, the centre of the Solar System'**
+  String get kindStar;
+
+  /// No description provided for @kindDwarf.
+  ///
+  /// In en, this message translates to:
+  /// **'Dwarf planet'**
+  String get kindDwarf;
+
+  /// No description provided for @moonOf.
+  ///
+  /// In en, this message translates to:
+  /// **'Moon of {planet}'**
+  String moonOf(String planet);
+
+  /// No description provided for @orbitPeriod.
+  ///
+  /// In en, this message translates to:
+  /// **'One orbit'**
+  String get orbitPeriod;
+
+  /// No description provided for @distanceFrom.
+  ///
+  /// In en, this message translates to:
+  /// **'Distance from {body}'**
+  String distanceFrom(String body);
+
+  /// No description provided for @composition.
+  ///
+  /// In en, this message translates to:
+  /// **'What it is made of'**
+  String get composition;
+
+  /// No description provided for @noAtmosphere.
+  ///
+  /// In en, this message translates to:
+  /// **'No real atmosphere, it is almost a vacuum.'**
+  String get noAtmosphere;
+
+  /// No description provided for @majorMoons.
+  ///
+  /// In en, this message translates to:
+  /// **'Major moons'**
+  String get majorMoons;
+
+  /// No description provided for @lifeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Could humans live here?'**
+  String get lifeTitle;
+
+  /// No description provided for @lifeScoreShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Life score'**
+  String get lifeScoreShort;
+
+  /// No description provided for @lifeNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Scored from temperature, air pressure, oxygen, water, surface and gravity. Earth scores 10.'**
+  String get lifeNote;
+
+  /// No description provided for @water.
+  ///
+  /// In en, this message translates to:
+  /// **'Water'**
+  String get water;
+
+  /// No description provided for @waterLiquid.
+  ///
+  /// In en, this message translates to:
+  /// **'Liquid water'**
+  String get waterLiquid;
+
+  /// No description provided for @waterIce.
+  ///
+  /// In en, this message translates to:
+  /// **'Ice'**
+  String get waterIce;
+
+  /// No description provided for @waterOcean.
+  ///
+  /// In en, this message translates to:
+  /// **'Ocean under the ice'**
+  String get waterOcean;
+
+  /// No description provided for @waterNone.
+  ///
+  /// In en, this message translates to:
+  /// **'No water'**
+  String get waterNone;
+
+  /// No description provided for @surface.
+  ///
+  /// In en, this message translates to:
+  /// **'Surface'**
+  String get surface;
+
+  /// No description provided for @solidSurface.
+  ///
+  /// In en, this message translates to:
+  /// **'Solid surface'**
+  String get solidSurface;
+
+  /// No description provided for @lifeHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Just like home'**
+  String get lifeHome;
+
+  /// No description provided for @lifeHard.
+  ///
+  /// In en, this message translates to:
+  /// **'Very hard, people would need a closed base and spacesuits'**
+  String get lifeHard;
+
+  /// No description provided for @lifeNo.
+  ///
+  /// In en, this message translates to:
+  /// **'Impossible for humans'**
+  String get lifeNo;
 }
 
 class _AppLocalizationsDelegate

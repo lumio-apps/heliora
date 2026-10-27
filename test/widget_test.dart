@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:heliora/core/format.dart';
+import 'package:heliora/core/habitability.dart';
 import 'package:heliora/core/quiz.dart';
 import 'package:heliora/core/version.dart';
 import 'package:heliora/data/planets.dart';
@@ -19,7 +20,7 @@ void main() {
     });
 
     test('atmospheres add up to about 100%', () {
-      for (final planet in planets) {
+      for (final planet in allBodies.where((b) => b.atmosphere.isNotEmpty)) {
         final total =
             planet.atmosphere.fold<double>(0, (sum, s) => sum + s.percent);
         expect(total, closeTo(100, 1.5), reason: planet.id);
@@ -39,7 +40,46 @@ void main() {
     });
 
     test('unknown id falls back to Earth', () {
-      expect(planetById('pluto').id, 'earth');
+      expect(planetById('vulcan').id, 'earth');
+    });
+
+    test('Sun, Pluto and moons', () {
+      expect(allBodies.length, 18);
+      expect(allBodies.map((b) => b.id).toSet().length, 18);
+      expect(planetById('sun').isStar, isTrue);
+      expect(planetById('pluto').kind, BodyKind.dwarf);
+      expect(moonsOf('jupiter').map((m) => m.id),
+          <String>['io', 'europa', 'ganymede', 'callisto']);
+      expect(moonsOf('earth').single.id, 'moon');
+      for (final moon in allBodies.where((b) => b.isMoon)) {
+        expect(planets.any((p) => p.id == moon.parentId), isTrue,
+            reason: moon.id);
+      }
+    });
+  });
+
+  group('life score', () {
+    test('Earth is 10 and the rest are lower', () {
+      expect(lifeScore(planetById('earth')).total, 10);
+      for (final body in allBodies.where((b) => b.id != 'earth')) {
+        expect(lifeScore(body).total, lessThan(10), reason: body.id);
+      }
+    });
+
+    test('known scores', () {
+      expect(lifeScore(planetById('mars')).total, 4);
+      expect(lifeScore(planetById('venus')).total, 2);
+      expect(lifeScore(planetById('titan')).total, 4);
+      expect(lifeScore(planetById('moon')).total, 3);
+      expect(lifeScore(planetById('jupiter')).total, 0);
+      expect(lifeScore(planetById('sun')).total, 0);
+    });
+
+    test('Mercury gets no oxygen points from its exosphere', () {
+      final oxygen = lifeScore(planetById('mercury'))
+          .factors
+          .firstWhere((f) => f.factor == LifeFactor.oxygen);
+      expect(oxygen.points, 0);
     });
   });
 

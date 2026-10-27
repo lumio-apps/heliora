@@ -358,4 +358,102 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get openFailed => 'లింక్ తెరవలేకపోయాం.';
+
+  @override
+  String get bodySun => 'సూర్యుడు';
+
+  @override
+  String get bodyMoon => 'చంద్రుడు';
+
+  @override
+  String get bodyPluto => 'ప్లూటో';
+
+  @override
+  String get moonIo => 'అయో';
+
+  @override
+  String get moonEuropa => 'యూరోపా';
+
+  @override
+  String get moonGanymede => 'గానిమీడ్';
+
+  @override
+  String get moonCallisto => 'కాలిస్టో';
+
+  @override
+  String get moonTitan => 'టైటాన్';
+
+  @override
+  String get moonEnceladus => 'ఎన్సెలాడస్';
+
+  @override
+  String get moonTriton => 'ట్రైటాన్';
+
+  @override
+  String get kindStar => 'మన నక్షత్రం, సౌర కుటుంబ కేంద్రం';
+
+  @override
+  String get kindDwarf => 'మరుగుజ్జు గ్రహం';
+
+  @override
+  String moonOf(String planet) {
+    return '$planet చంద్రుడు';
+  }
+
+  @override
+  String get orbitPeriod => 'ఒక పరిభ్రమణం';
+
+  @override
+  String distanceFrom(String body) {
+    return '$body నుండి దూరం';
+  }
+
+  @override
+  String get composition => 'ఇది దేనితో తయారైంది';
+
+  @override
+  String get noAtmosphere => 'నిజమైన వాతావరణం లేదు, దాదాపు శూన్యం.';
+
+  @override
+  String get majorMoons => 'ముఖ్య చంద్రులు';
+
+  @override
+  String get lifeTitle => 'మనుషులు ఇక్కడ జీవించగలరా?';
+
+  @override
+  String get lifeScoreShort => 'జీవ స్కోరు';
+
+  @override
+  String get lifeNote =>
+      'ఉష్ణోగ్రత, గాలి పీడనం, ఆక్సిజన్, నీరు, ఉపరితలం, గురుత్వాకర్షణ ఆధారంగా లెక్క. భూమికి 10.';
+
+  @override
+  String get water => 'నీరు';
+
+  @override
+  String get waterLiquid => 'ద్రవ నీరు';
+
+  @override
+  String get waterIce => 'మంచు';
+
+  @override
+  String get waterOcean => 'మంచు కింద సముద్రం';
+
+  @override
+  String get waterNone => 'నీరు లేదు';
+
+  @override
+  String get surface => 'ఉపరితలం';
+
+  @override
+  String get solidSurface => 'ఘన ఉపరితలం';
+
+  @override
+  String get lifeHome => 'అచ్చం ఇంటిలాగే';
+
+  @override
+  String get lifeHard => 'చాలా కష్టం, మూసి ఉన్న స్థావరం, స్పేస్‌సూట్ అవసరం';
+
+  @override
+  String get lifeNo => 'మనుషులకు అసాధ్యం';
 }

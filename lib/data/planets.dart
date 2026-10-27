@@ -1,7 +1,7 @@
 import 'dart:ui' show Color;
 
 /// The gases that appear in the planets' atmospheres.
-enum Gas { co2, n2, o2, ar, h2, he, ch4, na, k }
+enum Gas { co2, n2, o2, ar, h2, h, he, ch4, na, k }
 
 extension GasFormula on Gas {
   /// Chemical formula shown next to the translated name.
@@ -17,6 +17,8 @@ extension GasFormula on Gas {
         return 'Ar';
       case Gas.h2:
         return 'H₂';
+      case Gas.h:
+        return 'H';
       case Gas.he:
         return 'He';
       case Gas.ch4:
@@ -40,6 +42,7 @@ extension GasFormula on Gas {
       case Gas.ar:
         return const Color(0xFFB794F6);
       case Gas.h2:
+      case Gas.h:
         return const Color(0xFFF2C14E);
       case Gas.he:
         return const Color(0xFFF08BB4);
@@ -61,11 +64,20 @@ class GasShare {
   final double percent;
 }
 
-/// How the 3D globe draws a planet's surface (see shaders/planet.frag).
-enum SurfaceStyle { rocky, earth, banded, ice }
+/// How the 3D globe draws a surface (see shaders/planet.frag). The index is
+/// passed to the shader, so new styles go at the end.
+enum SurfaceStyle { rocky, earth, banded, ice, sun, icyMoon }
 
-/// Facts about one planet. Values come from the NASA Planetary Fact Sheet;
-/// moon counts are NASA's known moons as of mid 2026.
+/// What kind of body this is.
+enum BodyKind { star, planet, dwarf, moon }
+
+/// Water found on or under the surface.
+enum Water { none, ice, ocean, liquid }
+
+/// Facts about one body: the Sun, a planet, a dwarf planet or a moon. Values
+/// come from NASA fact sheets; moon counts are NASA's known moons as of mid
+/// 2026. The class keeps the name Planet because most of the app shows
+/// planets.
 class Planet {
   const Planet({
     required this.id,
@@ -87,12 +99,17 @@ class Planet {
     this.polarCaps = false,
     this.spot = false,
     this.tiltDeg = 0,
+    this.kind = BodyKind.planet,
+    this.parentId,
+    this.water = Water.none,
+    this.hasSurface = true,
   });
 
   /// Stable key, also used for translated names and stored settings.
   final String id;
 
-  /// 1 for Mercury up to 8 for Neptune.
+  /// 1 for Mercury up to 8 for Neptune. 0 for the Sun, 9 for Pluto; for
+  /// moons the order of the planet they belong to.
   final int order;
   final int diameterKm;
 
@@ -103,9 +120,12 @@ class Planet {
   /// Length of one solar day in Earth hours.
   final double dayHours;
 
-  /// Length of one year in Earth days.
+  /// One trip around the Sun in Earth days. For a moon: one trip around its
+  /// planet. 0 for the Sun.
   final double yearDays;
   final int moons;
+
+  /// Distance from the Sun. For a moon: distance from its planet.
   final double distanceMillionKm;
 
   /// Surface pressure in bar. Null for giant planets without a surface.
@@ -129,6 +149,17 @@ class Planet {
 
   /// Axial tilt shown on the 3D globe, in degrees.
   final double tiltDeg;
+  final BodyKind kind;
+
+  /// The planet a moon goes around.
+  final String? parentId;
+  final Water water;
+
+  /// False for the Sun and the giant planets, which are made of gas.
+  final bool hasSurface;
+
+  bool get isMoon => kind == BodyKind.moon;
+  bool get isStar => kind == BodyKind.star;
 
   static const double earthGravity = 9.8;
 
@@ -175,6 +206,7 @@ const List<Planet> planets = <Planet>[
     color: Color(0xFF9C9A96),
     colors: <Color>[Color(0xFF8E8A85), Color(0xFF5E5B57), Color(0xFFB9B5AE)],
     style: SurfaceStyle.rocky,
+    water: Water.ice,
   ),
   Planet(
     id: 'venus',
@@ -220,6 +252,7 @@ const List<Planet> planets = <Planet>[
     style: SurfaceStyle.earth,
     polarCaps: true,
     tiltDeg: 23.4,
+    water: Water.liquid,
   ),
   Planet(
     id: 'mars',
@@ -244,6 +277,7 @@ const List<Planet> planets = <Planet>[
     style: SurfaceStyle.rocky,
     polarCaps: true,
     tiltDeg: 25.2,
+    water: Water.ice,
   ),
   Planet(
     id: 'jupiter',
@@ -266,6 +300,7 @@ const List<Planet> planets = <Planet>[
     style: SurfaceStyle.banded,
     spot: true,
     tiltDeg: 3.1,
+    hasSurface: false,
   ),
   Planet(
     id: 'saturn',
@@ -289,6 +324,7 @@ const List<Planet> planets = <Planet>[
     style: SurfaceStyle.banded,
     hasRings: true,
     tiltDeg: 26.7,
+    hasSurface: false,
   ),
   Planet(
     id: 'uranus',
@@ -311,6 +347,7 @@ const List<Planet> planets = <Planet>[
     colors: <Color>[Color(0xFF9EDCE3), Color(0xFF7BC4CF), Color(0xFFC6EEF1)],
     style: SurfaceStyle.ice,
     tiltDeg: 82,
+    hasSurface: false,
   ),
   Planet(
     id: 'neptune',
@@ -333,14 +370,250 @@ const List<Planet> planets = <Planet>[
     colors: <Color>[Color(0xFF3F64D6), Color(0xFF2A47A8), Color(0xFF7D9BF0)],
     style: SurfaceStyle.ice,
     tiltDeg: 28.3,
+    hasSurface: false,
   ),
 ];
 
-/// Finds a planet by [id], falling back to Earth.
+/// The Sun, Pluto and the best-known moons.
+const List<Planet> otherBodies = <Planet>[
+  Planet(
+    id: 'sun',
+    order: 0,
+    kind: BodyKind.star,
+    diameterKm: 1392700,
+    gravity: 274,
+    meanTempC: 5500,
+    dayHours: 609.1,
+    yearDays: 0,
+    moons: 0,
+    distanceMillionKm: 0,
+    pressureBar: null,
+    atmosphere: <GasShare>[
+      GasShare(Gas.h, 92.1),
+      GasShare(Gas.he, 7.8),
+    ],
+    thinAtmosphere: false,
+    color: Color(0xFFF5A524),
+    colors: <Color>[Color(0xFFFFB13B), Color(0xFFE0620F), Color(0xFFFFE08A)],
+    style: SurfaceStyle.sun,
+    hasSurface: false,
+    tiltDeg: 7.25,
+  ),
+  Planet(
+    id: 'moon',
+    order: 3,
+    kind: BodyKind.moon,
+    parentId: 'earth',
+    diameterKm: 3475,
+    gravity: 1.62,
+    meanTempC: -23,
+    dayHours: 708.7,
+    yearDays: 27.3,
+    moons: 0,
+    distanceMillionKm: 0.3844,
+    pressureBar: 0,
+    atmosphere: <GasShare>[],
+    thinAtmosphere: true,
+    color: Color(0xFFBDBAB3),
+    colors: <Color>[Color(0xFFB8B5AE), Color(0xFF6E6B66), Color(0xFFD9D6CF)],
+    style: SurfaceStyle.rocky,
+    water: Water.ice,
+    tiltDeg: 6.7,
+  ),
+  Planet(
+    id: 'pluto',
+    order: 9,
+    kind: BodyKind.dwarf,
+    diameterKm: 2376,
+    gravity: 0.62,
+    meanTempC: -225,
+    dayHours: 153.3,
+    yearDays: 90560,
+    moons: 5,
+    distanceMillionKm: 5906.4,
+    pressureBar: 0.00001,
+    atmosphere: <GasShare>[
+      GasShare(Gas.n2, 99),
+      GasShare(Gas.ch4, 1),
+    ],
+    thinAtmosphere: false,
+    color: Color(0xFFD8B99A),
+    colors: <Color>[Color(0xFFD9BC9C), Color(0xFF8A5A3C), Color(0xFFF1E4D2)],
+    style: SurfaceStyle.rocky,
+    water: Water.ice,
+    tiltDeg: 57,
+  ),
+  Planet(
+    id: 'io',
+    order: 5,
+    kind: BodyKind.moon,
+    parentId: 'jupiter',
+    diameterKm: 3643,
+    gravity: 1.80,
+    meanTempC: -143,
+    dayHours: 42.5,
+    yearDays: 1.77,
+    moons: 0,
+    distanceMillionKm: 0.4217,
+    pressureBar: 0,
+    atmosphere: <GasShare>[],
+    thinAtmosphere: true,
+    color: Color(0xFFE8D25A),
+    colors: <Color>[Color(0xFFE9D46A), Color(0xFFB0602A), Color(0xFFF6EFB0)],
+    style: SurfaceStyle.rocky,
+  ),
+  Planet(
+    id: 'europa',
+    order: 5,
+    kind: BodyKind.moon,
+    parentId: 'jupiter',
+    diameterKm: 3122,
+    gravity: 1.31,
+    meanTempC: -160,
+    dayHours: 85.2,
+    yearDays: 3.55,
+    moons: 0,
+    distanceMillionKm: 0.6709,
+    pressureBar: 0,
+    atmosphere: <GasShare>[],
+    thinAtmosphere: true,
+    color: Color(0xFFE6DCCB),
+    colors: <Color>[Color(0xFFEDE5D6), Color(0xFF9C6B45), Color(0xFFF8F4EC)],
+    style: SurfaceStyle.icyMoon,
+    water: Water.ocean,
+  ),
+  Planet(
+    id: 'ganymede',
+    order: 5,
+    kind: BodyKind.moon,
+    parentId: 'jupiter',
+    diameterKm: 5268,
+    gravity: 1.43,
+    meanTempC: -163,
+    dayHours: 171.7,
+    yearDays: 7.15,
+    moons: 0,
+    distanceMillionKm: 1.0704,
+    pressureBar: 0,
+    atmosphere: <GasShare>[],
+    thinAtmosphere: true,
+    color: Color(0xFFA89F93),
+    colors: <Color>[Color(0xFFA59C90), Color(0xFF5F574D), Color(0xFFD8D2C8)],
+    style: SurfaceStyle.rocky,
+    water: Water.ocean,
+  ),
+  Planet(
+    id: 'callisto',
+    order: 5,
+    kind: BodyKind.moon,
+    parentId: 'jupiter',
+    diameterKm: 4821,
+    gravity: 1.24,
+    meanTempC: -139,
+    dayHours: 400.5,
+    yearDays: 16.69,
+    moons: 0,
+    distanceMillionKm: 1.8827,
+    pressureBar: 0,
+    atmosphere: <GasShare>[],
+    thinAtmosphere: true,
+    color: Color(0xFF7D7366),
+    colors: <Color>[Color(0xFF6E655A), Color(0xFF3F3933), Color(0xFFC9C2B6)],
+    style: SurfaceStyle.rocky,
+    water: Water.ocean,
+  ),
+  Planet(
+    id: 'titan',
+    order: 6,
+    kind: BodyKind.moon,
+    parentId: 'saturn',
+    diameterKm: 5150,
+    gravity: 1.35,
+    meanTempC: -179,
+    dayHours: 382.7,
+    yearDays: 15.95,
+    moons: 0,
+    distanceMillionKm: 1.2219,
+    pressureBar: 1.45,
+    atmosphere: <GasShare>[
+      GasShare(Gas.n2, 98.4),
+      GasShare(Gas.ch4, 1.4),
+      GasShare(Gas.h2, 0.2),
+    ],
+    thinAtmosphere: false,
+    color: Color(0xFFD9A54A),
+    colors: <Color>[Color(0xFFDDA851), Color(0xFFB57A2E), Color(0xFFEBC77E)],
+    style: SurfaceStyle.ice,
+    water: Water.ocean,
+  ),
+  Planet(
+    id: 'enceladus',
+    order: 6,
+    kind: BodyKind.moon,
+    parentId: 'saturn',
+    diameterKm: 504,
+    gravity: 0.11,
+    meanTempC: -198,
+    dayHours: 32.9,
+    yearDays: 1.37,
+    moons: 0,
+    distanceMillionKm: 0.238,
+    pressureBar: 0,
+    atmosphere: <GasShare>[],
+    thinAtmosphere: true,
+    color: Color(0xFFF2F6FA),
+    colors: <Color>[Color(0xFFF4F7FB), Color(0xFF8FB4D6), Color(0xFFFFFFFF)],
+    style: SurfaceStyle.icyMoon,
+    water: Water.ocean,
+  ),
+  Planet(
+    id: 'triton',
+    order: 8,
+    kind: BodyKind.moon,
+    parentId: 'neptune',
+    diameterKm: 2707,
+    gravity: 0.78,
+    meanTempC: -235,
+    dayHours: 141.0,
+    yearDays: 5.88,
+    moons: 0,
+    distanceMillionKm: 0.3548,
+    pressureBar: 0.000014,
+    atmosphere: <GasShare>[
+      GasShare(Gas.n2, 99.9),
+      GasShare(Gas.ch4, 0.1),
+    ],
+    thinAtmosphere: false,
+    color: Color(0xFFE3CFC6),
+    colors: <Color>[Color(0xFFE6D3CA), Color(0xFFA77E70), Color(0xFFF6EDE8)],
+    style: SurfaceStyle.icyMoon,
+    water: Water.ice,
+  ),
+];
+
+/// Everything in the app, in the order it is listed: Sun, planets, Pluto,
+/// then the moons.
+final List<Planet> allBodies = <Planet>[
+  otherBodies.firstWhere((b) => b.id == 'sun'),
+  ...planets,
+  otherBodies.firstWhere((b) => b.id == 'pluto'),
+  ...otherBodies.where((b) => b.isMoon),
+];
+
+/// The moons in the app that go around [planetId].
+List<Planet> moonsOf(String planetId) =>
+    otherBodies.where((b) => b.parentId == planetId).toList();
+
+/// Finds a body by [id], falling back to Earth.
 Planet planetById(String id) {
-  for (final planet in planets) {
-    if (planet.id == id) {
-      return planet;
+  for (final body in planets) {
+    if (body.id == id) {
+      return body;
+    }
+  }
+  for (final body in otherBodies) {
+    if (body.id == id) {
+      return body;
     }
   }
   return planets[2];

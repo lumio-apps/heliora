@@ -357,4 +357,102 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get openFailed => 'লিংক খোলা যায়নি।';
+
+  @override
+  String get bodySun => 'সূর্য';
+
+  @override
+  String get bodyMoon => 'চাঁদ';
+
+  @override
+  String get bodyPluto => 'প্লুটো';
+
+  @override
+  String get moonIo => 'আইও';
+
+  @override
+  String get moonEuropa => 'ইউরোপা';
+
+  @override
+  String get moonGanymede => 'গ্যানিমিড';
+
+  @override
+  String get moonCallisto => 'ক্যালিস্টো';
+
+  @override
+  String get moonTitan => 'টাইটান';
+
+  @override
+  String get moonEnceladus => 'এনসেলাডাস';
+
+  @override
+  String get moonTriton => 'ট্রাইটন';
+
+  @override
+  String get kindStar => 'আমাদের তারা, সৌরজগতের কেন্দ্র';
+
+  @override
+  String get kindDwarf => 'বামন গ্রহ';
+
+  @override
+  String moonOf(String planet) {
+    return '$planet-এর চাঁদ';
+  }
+
+  @override
+  String get orbitPeriod => 'একবার প্রদক্ষিণ';
+
+  @override
+  String distanceFrom(String body) {
+    return '$body থেকে দূরত্ব';
+  }
+
+  @override
+  String get composition => 'এটি কী দিয়ে তৈরি';
+
+  @override
+  String get noAtmosphere => 'আসল বায়ুমণ্ডল নেই, প্রায় শূন্যস্থান।';
+
+  @override
+  String get majorMoons => 'প্রধান চাঁদ';
+
+  @override
+  String get lifeTitle => 'মানুষ কি এখানে থাকতে পারবে?';
+
+  @override
+  String get lifeScoreShort => 'জীবন স্কোর';
+
+  @override
+  String get lifeNote =>
+      'তাপমাত্রা, বায়ুচাপ, অক্সিজেন, পানি, পৃষ্ঠ আর মাধ্যাকর্ষণ থেকে হিসাব। পৃথিবীর স্কোর ১০।';
+
+  @override
+  String get water => 'পানি';
+
+  @override
+  String get waterLiquid => 'তরল পানি';
+
+  @override
+  String get waterIce => 'বরফ';
+
+  @override
+  String get waterOcean => 'বরফের নিচে সমুদ্র';
+
+  @override
+  String get waterNone => 'পানি নেই';
+
+  @override
+  String get surface => 'পৃষ্ঠ';
+
+  @override
+  String get solidSurface => 'শক্ত পৃষ্ঠ';
+
+  @override
+  String get lifeHome => 'একদম বাড়ির মতো';
+
+  @override
+  String get lifeHard => 'খুব কঠিন, বন্ধ ঘাঁটি আর স্পেসস্যুট লাগবে';
+
+  @override
+  String get lifeNo => 'মানুষের পক্ষে অসম্ভব';
 }

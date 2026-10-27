@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/format.dart';
+import '../core/habitability.dart';
 import '../data/planets.dart';
 import '../data/settings.dart';
 import '../l10n/names.dart';
@@ -265,10 +266,18 @@ class _PlanetCards extends StatelessWidget {
   final String selectedId;
   final ValueChanged<Planet> onTap;
 
+  /// The Sun, the eight planets and Pluto. Moons open from their planet.
+  static final List<Planet> _bodies = <Planet>[
+    planetById('sun'),
+    ...planets,
+    planetById('pluto'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     final l = context.l10n;
     final p = Palette.of(context);
+    final bodies = _bodies;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -285,10 +294,10 @@ class _PlanetCards extends StatelessWidget {
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-            itemCount: planets.length,
+            itemCount: bodies.length,
             separatorBuilder: (context, index) => const SizedBox(width: 12),
             itemBuilder: (context, index) {
-              final planet = planets[index];
+              final planet = bodies[index];
               final on = planet.id == selectedId;
               return SizedBox(
                 width: 128,
@@ -354,10 +363,10 @@ class _PlanetChips extends StatelessWidget {
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        itemCount: planets.length,
+        itemCount: allBodies.length,
         separatorBuilder: (context, index) => const SizedBox(width: 8),
         itemBuilder: (context, index) {
-          final planet = planets[index];
+          final planet = allBodies[index];
           final on = planet.id == selectedId;
           return ChoiceChip(
             selected: on,
@@ -425,8 +434,10 @@ class _GlobeInfoCard extends StatelessWidget {
               ),
               Flexible(
                 child: Text(
-                  l.planetOrder(planet.order),
+                  bodySubtitle(l, planet),
                   textAlign: TextAlign.end,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 13, color: p.muted),
                 ),
               ),
@@ -438,7 +449,8 @@ class _GlobeInfoCard extends StatelessWidget {
               stat(l.oxygen, formatPercent(context, planet.oxygenPercent)),
               stat(l.avgTempShort,
                   '${formatNumber(context, planet.meanTempC)} °C'),
-              stat(l.moonsShort, formatNumber(context, planet.moons)),
+              stat(l.lifeScoreShort,
+                  '${formatNumber(context, lifeScore(planet).total)}/${formatNumber(context, LifeScore.maxTotal)}'),
             ],
           ),
           const SizedBox(height: 12),

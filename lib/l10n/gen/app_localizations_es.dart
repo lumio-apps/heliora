@@ -359,4 +359,103 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get openFailed => 'No se pudo abrir el enlace.';
+
+  @override
+  String get bodySun => 'Sol';
+
+  @override
+  String get bodyMoon => 'Luna';
+
+  @override
+  String get bodyPluto => 'Plutón';
+
+  @override
+  String get moonIo => 'Ío';
+
+  @override
+  String get moonEuropa => 'Europa';
+
+  @override
+  String get moonGanymede => 'Ganímedes';
+
+  @override
+  String get moonCallisto => 'Calisto';
+
+  @override
+  String get moonTitan => 'Titán';
+
+  @override
+  String get moonEnceladus => 'Encélado';
+
+  @override
+  String get moonTriton => 'Tritón';
+
+  @override
+  String get kindStar => 'Nuestra estrella, el centro del sistema solar';
+
+  @override
+  String get kindDwarf => 'Planeta enano';
+
+  @override
+  String moonOf(String planet) {
+    return 'Luna de $planet';
+  }
+
+  @override
+  String get orbitPeriod => 'Una órbita';
+
+  @override
+  String distanceFrom(String body) {
+    return 'Distancia a $body';
+  }
+
+  @override
+  String get composition => 'De qué está hecho';
+
+  @override
+  String get noAtmosphere => 'No tiene una atmósfera real, es casi el vacío.';
+
+  @override
+  String get majorMoons => 'Lunas principales';
+
+  @override
+  String get lifeTitle => '¿Podrían vivir aquí los humanos?';
+
+  @override
+  String get lifeScoreShort => 'Puntuación de vida';
+
+  @override
+  String get lifeNote =>
+      'Calculada con la temperatura, la presión del aire, el oxígeno, el agua, la superficie y la gravedad. La Tierra saca 10.';
+
+  @override
+  String get water => 'Agua';
+
+  @override
+  String get waterLiquid => 'Agua líquida';
+
+  @override
+  String get waterIce => 'Hielo';
+
+  @override
+  String get waterOcean => 'Océano bajo el hielo';
+
+  @override
+  String get waterNone => 'Sin agua';
+
+  @override
+  String get surface => 'Superficie';
+
+  @override
+  String get solidSurface => 'Superficie sólida';
+
+  @override
+  String get lifeHome => 'Como en casa';
+
+  @override
+  String get lifeHard =>
+      'Muy difícil, se necesitaría una base cerrada y trajes espaciales';
+
+  @override
+  String get lifeNo => 'Imposible para los humanos';
 }

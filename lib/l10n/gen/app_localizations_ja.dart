@@ -354,4 +354,101 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get openFailed => 'リンクを開けませんでした。';
+
+  @override
+  String get bodySun => '太陽';
+
+  @override
+  String get bodyMoon => '月';
+
+  @override
+  String get bodyPluto => '冥王星';
+
+  @override
+  String get moonIo => 'イオ';
+
+  @override
+  String get moonEuropa => 'エウロパ';
+
+  @override
+  String get moonGanymede => 'ガニメデ';
+
+  @override
+  String get moonCallisto => 'カリスト';
+
+  @override
+  String get moonTitan => 'タイタン';
+
+  @override
+  String get moonEnceladus => 'エンケラドゥス';
+
+  @override
+  String get moonTriton => 'トリトン';
+
+  @override
+  String get kindStar => '私たちの恒星、太陽系の中心';
+
+  @override
+  String get kindDwarf => '準惑星';
+
+  @override
+  String moonOf(String planet) {
+    return '$planetの衛星';
+  }
+
+  @override
+  String get orbitPeriod => '1 周';
+
+  @override
+  String distanceFrom(String body) {
+    return '$bodyからの距離';
+  }
+
+  @override
+  String get composition => '何でできているか';
+
+  @override
+  String get noAtmosphere => '本当の大気はなく、ほぼ真空です。';
+
+  @override
+  String get majorMoons => '主な衛星';
+
+  @override
+  String get lifeTitle => '人間はここで暮らせる？';
+
+  @override
+  String get lifeScoreShort => 'くらしスコア';
+
+  @override
+  String get lifeNote => '気温・気圧・酸素・水・地表・重力から計算。地球は 10 点。';
+
+  @override
+  String get water => '水';
+
+  @override
+  String get waterLiquid => '液体の水';
+
+  @override
+  String get waterIce => '氷';
+
+  @override
+  String get waterOcean => '氷の下の海';
+
+  @override
+  String get waterNone => '水なし';
+
+  @override
+  String get surface => '地表';
+
+  @override
+  String get solidSurface => '固い地表';
+
+  @override
+  String get lifeHome => 'まるで我が家';
+
+  @override
+  String get lifeHard => 'とても大変、密閉された基地と宇宙服が必要';
+
+  @override
+  String get lifeNo => '人間には不可能';
 }

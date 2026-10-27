@@ -359,4 +359,102 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get openFailed => 'ಲಿಂಕ್ ತೆರೆಯಲು ಆಗಲಿಲ್ಲ.';
+
+  @override
+  String get bodySun => 'ಸೂರ್ಯ';
+
+  @override
+  String get bodyMoon => 'ಚಂದ್ರ';
+
+  @override
+  String get bodyPluto => 'ಪ್ಲೂಟೊ';
+
+  @override
+  String get moonIo => 'ಅಯೋ';
+
+  @override
+  String get moonEuropa => 'ಯುರೋಪಾ';
+
+  @override
+  String get moonGanymede => 'ಗ್ಯಾನಿಮೀಡ್';
+
+  @override
+  String get moonCallisto => 'ಕ್ಯಾಲಿಸ್ಟೊ';
+
+  @override
+  String get moonTitan => 'ಟೈಟಾನ್';
+
+  @override
+  String get moonEnceladus => 'ಎನ್ಸೆಲಾಡಸ್';
+
+  @override
+  String get moonTriton => 'ಟ್ರೈಟನ್';
+
+  @override
+  String get kindStar => 'ನಮ್ಮ ನಕ್ಷತ್ರ, ಸೌರವ್ಯೂಹದ ಕೇಂದ್ರ';
+
+  @override
+  String get kindDwarf => 'ಕುಬ್ಜ ಗ್ರಹ';
+
+  @override
+  String moonOf(String planet) {
+    return '$planet ನ ಚಂದ್ರ';
+  }
+
+  @override
+  String get orbitPeriod => 'ಒಂದು ಪರಿಭ್ರಮಣ';
+
+  @override
+  String distanceFrom(String body) {
+    return '$body ನಿಂದ ದೂರ';
+  }
+
+  @override
+  String get composition => 'ಇದು ಯಾವುದರಿಂದ ಮಾಡಲ್ಪಟ್ಟಿದೆ';
+
+  @override
+  String get noAtmosphere => 'ನಿಜವಾದ ವಾತಾವರಣವಿಲ್ಲ, ಬಹುತೇಕ ನಿರ್ವಾತ.';
+
+  @override
+  String get majorMoons => 'ಮುಖ್ಯ ಚಂದ್ರರು';
+
+  @override
+  String get lifeTitle => 'ಮನುಷ್ಯರು ಇಲ್ಲಿ ಬದುಕಬಹುದೇ?';
+
+  @override
+  String get lifeScoreShort => 'ಜೀವ ಸ್ಕೋರ್';
+
+  @override
+  String get lifeNote =>
+      'ತಾಪಮಾನ, ಗಾಳಿಯ ಒತ್ತಡ, ಆಮ್ಲಜನಕ, ನೀರು, ಮೇಲ್ಮೈ ಮತ್ತು ಗುರುತ್ವದಿಂದ ಲೆಕ್ಕ. ಭೂಮಿಯ ಸ್ಕೋರ್ 10.';
+
+  @override
+  String get water => 'ನೀರು';
+
+  @override
+  String get waterLiquid => 'ದ್ರವ ನೀರು';
+
+  @override
+  String get waterIce => 'ಮಂಜುಗಡ್ಡೆ';
+
+  @override
+  String get waterOcean => 'ಮಂಜಿನ ಕೆಳಗೆ ಸಾಗರ';
+
+  @override
+  String get waterNone => 'ನೀರಿಲ್ಲ';
+
+  @override
+  String get surface => 'ಮೇಲ್ಮೈ';
+
+  @override
+  String get solidSurface => 'ಗಟ್ಟಿ ಮೇಲ್ಮೈ';
+
+  @override
+  String get lifeHome => 'ಸಂಪೂರ್ಣ ಮನೆಯಂತೆ';
+
+  @override
+  String get lifeHard => 'ತುಂಬಾ ಕಷ್ಟ, ಮುಚ್ಚಿದ ನೆಲೆ ಮತ್ತು ಬಾಹ್ಯಾಕಾಶ ಉಡುಪು ಬೇಕು';
+
+  @override
+  String get lifeNo => 'ಮನುಷ್ಯರಿಗೆ ಅಸಾಧ್ಯ';
 }

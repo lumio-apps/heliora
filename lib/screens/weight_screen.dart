@@ -71,7 +71,7 @@ class _WeightScreenState extends State<WeightScreen> {
           ),
         ),
         const SizedBox(height: 16),
-        for (final planet in planets) ...<Widget>[
+        for (final planet in allBodies) ...<Widget>[
           SurfaceCard(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             borderColor: planet.id == 'earth' ? p.accentText : null,

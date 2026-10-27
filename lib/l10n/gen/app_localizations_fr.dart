@@ -362,4 +362,103 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get openFailed => 'Impossible d’ouvrir le lien.';
+
+  @override
+  String get bodySun => 'Soleil';
+
+  @override
+  String get bodyMoon => 'Lune';
+
+  @override
+  String get bodyPluto => 'Pluton';
+
+  @override
+  String get moonIo => 'Io';
+
+  @override
+  String get moonEuropa => 'Europe';
+
+  @override
+  String get moonGanymede => 'Ganymède';
+
+  @override
+  String get moonCallisto => 'Callisto';
+
+  @override
+  String get moonTitan => 'Titan';
+
+  @override
+  String get moonEnceladus => 'Encelade';
+
+  @override
+  String get moonTriton => 'Triton';
+
+  @override
+  String get kindStar => 'Notre étoile, le centre du Système solaire';
+
+  @override
+  String get kindDwarf => 'Planète naine';
+
+  @override
+  String moonOf(String planet) {
+    return 'Lune de $planet';
+  }
+
+  @override
+  String get orbitPeriod => 'Une orbite';
+
+  @override
+  String distanceFrom(String body) {
+    return 'Distance à $body';
+  }
+
+  @override
+  String get composition => 'De quoi il est fait';
+
+  @override
+  String get noAtmosphere => 'Pas de vraie atmosphère, c’est presque le vide.';
+
+  @override
+  String get majorMoons => 'Lunes principales';
+
+  @override
+  String get lifeTitle => 'Les humains pourraient-ils vivre ici ?';
+
+  @override
+  String get lifeScoreShort => 'Score de vie';
+
+  @override
+  String get lifeNote =>
+      'Calculé d’après la température, la pression de l’air, l’oxygène, l’eau, la surface et la gravité. La Terre obtient 10.';
+
+  @override
+  String get water => 'Eau';
+
+  @override
+  String get waterLiquid => 'Eau liquide';
+
+  @override
+  String get waterIce => 'Glace';
+
+  @override
+  String get waterOcean => 'Océan sous la glace';
+
+  @override
+  String get waterNone => 'Pas d’eau';
+
+  @override
+  String get surface => 'Surface';
+
+  @override
+  String get solidSurface => 'Surface solide';
+
+  @override
+  String get lifeHome => 'Comme à la maison';
+
+  @override
+  String get lifeHard =>
+      'Très difficile, il faudrait une base fermée et des combinaisons';
+
+  @override
+  String get lifeNo => 'Impossible pour les humains';
 }

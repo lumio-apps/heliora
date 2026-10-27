@@ -17,7 +17,7 @@ uniform float uZoom;       // 5  planet radius as part of half the box
 uniform vec3 uColorA;      // 6, 7, 8
 uniform vec3 uColorB;      // 9, 10, 11
 uniform vec3 uColorC;      // 12, 13, 14
-uniform float uStyle;      // 15  0 rocky, 1 earth, 2 banded, 3 ice
+uniform float uStyle;      // 15  0 rocky, 1 earth, 2 banded, 3 ice, 4 sun, 5 icy moon
 uniform float uCaps;       // 16  polar caps
 uniform float uSpot;       // 17  Jupiter's Great Red Spot
 uniform float uSeed;       // 18
@@ -123,11 +123,23 @@ void main() {
       float spot = 1.0 - smoothstep(0.6, 1.0, length(s));
       col = mix(col, vec3(0.78, 0.36, 0.22), spot * 0.85);
     }
-  } else {
-    // Ice giants: Uranus, Neptune.
+  } else if (uStyle < 3.5) {
+    // Ice giants and hazy Titan.
     float band = sin(lat * 8.0 + fbm(b * 2.0) * 1.5);
     col = mix(uColorA, uColorB, 0.5 + 0.25 * band);
     col = mix(col, uColorC, smoothstep(0.6, 1.0, fbm(b * 4.0)) * 0.3);
+  } else if (uStyle < 4.5) {
+    // The Sun: boiling granules and darker spots.
+    float g = fbm(b * 9.0 + vec3(uTime * 0.06, uTime * 0.04, 0.0));
+    col = mix(uColorB, uColorA, smoothstep(0.25, 0.7, g));
+    col = mix(col, uColorC, smoothstep(0.62, 0.85, fbm(b * 3.0 - vec3(uTime * 0.02))) * 0.6);
+  } else {
+    // Icy moons: bright ice crossed by thin dark cracks.
+    col = mix(uColorA, uColorC, fbm(b * 3.0));
+    float crack = abs(noise(b * 5.0) - 0.5);
+    float crack2 = abs(noise(b * 11.0 + vec3(2.0)) - 0.5);
+    float lines = (1.0 - smoothstep(0.0, 0.035, crack)) + 0.6 * (1.0 - smoothstep(0.0, 0.025, crack2));
+    col = mix(col, uColorB, clamp(lines, 0.0, 1.0) * 0.75);
   }
 
   if (uCaps > 0.5) {
@@ -135,10 +147,16 @@ void main() {
     col = mix(col, vec3(0.95, 0.96, 0.98), cap);
   }
 
-  // Sunlight from the upper left, plus a little ambient light.
+  // Sunlight from the upper left, plus a little ambient light. The Sun makes
+  // its own light, so it only gets darker towards its edge.
   vec3 light = normalize(vec3(-0.55, 0.45, 0.7));
   float diffuse = max(dot(n, light), 0.0);
-  col *= 0.10 + 0.95 * diffuse;
+  if (uStyle > 3.5 && uStyle < 4.5) {
+    diffuse = 1.0;
+    col *= 0.55 + 0.5 * z;
+  } else {
+    col *= 0.10 + 0.95 * diffuse;
+  }
 
   // Atmosphere rim.
   float rim = pow(1.0 - z, 2.5) * uGlowAmount;

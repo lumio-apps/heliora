@@ -362,4 +362,102 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get openFailed => 'இணைப்பைத் திறக்க முடியவில்லை.';
+
+  @override
+  String get bodySun => 'சூரியன்';
+
+  @override
+  String get bodyMoon => 'நிலவு';
+
+  @override
+  String get bodyPluto => 'புளூட்டோ';
+
+  @override
+  String get moonIo => 'ஐயோ';
+
+  @override
+  String get moonEuropa => 'யூரோப்பா';
+
+  @override
+  String get moonGanymede => 'கனிமீடு';
+
+  @override
+  String get moonCallisto => 'காலிஸ்டோ';
+
+  @override
+  String get moonTitan => 'டைட்டன்';
+
+  @override
+  String get moonEnceladus => 'என்செலடஸ்';
+
+  @override
+  String get moonTriton => 'ட்ரைட்டன்';
+
+  @override
+  String get kindStar => 'நமது நட்சத்திரம், சூரியக் குடும்பத்தின் மையம்';
+
+  @override
+  String get kindDwarf => 'குள்ளக் கிரகம்';
+
+  @override
+  String moonOf(String planet) {
+    return '$planet இன் நிலவு';
+  }
+
+  @override
+  String get orbitPeriod => 'ஒரு சுற்று';
+
+  @override
+  String distanceFrom(String body) {
+    return '$body இலிருந்து தூரம்';
+  }
+
+  @override
+  String get composition => 'இது எதனால் ஆனது';
+
+  @override
+  String get noAtmosphere => 'உண்மையான வளிமண்டலம் இல்லை, ஏறக்குறைய வெற்றிடம்.';
+
+  @override
+  String get majorMoons => 'முக்கிய நிலவுகள்';
+
+  @override
+  String get lifeTitle => 'மனிதர்கள் இங்கே வாழ முடியுமா?';
+
+  @override
+  String get lifeScoreShort => 'வாழ்க்கை மதிப்பெண்';
+
+  @override
+  String get lifeNote =>
+      'வெப்பநிலை, காற்றழுத்தம், ஆக்சிஜன், நீர், மேற்பரப்பு, ஈர்ப்பு ஆகியவற்றிலிருந்து கணக்கிடப்பட்டது. பூமிக்கு 10.';
+
+  @override
+  String get water => 'நீர்';
+
+  @override
+  String get waterLiquid => 'திரவ நீர்';
+
+  @override
+  String get waterIce => 'பனிக்கட்டி';
+
+  @override
+  String get waterOcean => 'பனிக்கு அடியில் கடல்';
+
+  @override
+  String get waterNone => 'நீர் இல்லை';
+
+  @override
+  String get surface => 'மேற்பரப்பு';
+
+  @override
+  String get solidSurface => 'திடமான மேற்பரப்பு';
+
+  @override
+  String get lifeHome => 'அப்படியே வீடு போல';
+
+  @override
+  String get lifeHard => 'மிகக் கடினம், மூடிய தளமும் விண்வெளி உடையும் தேவை';
+
+  @override
+  String get lifeNo => 'மனிதர்களுக்குச் சாத்தியமில்லை';
 }

@@ -357,4 +357,102 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get openFailed => 'लिंक नहीं खुल पाया।';
+
+  @override
+  String get bodySun => 'सूर्य';
+
+  @override
+  String get bodyMoon => 'चंद्रमा';
+
+  @override
+  String get bodyPluto => 'प्लूटो';
+
+  @override
+  String get moonIo => 'आयो';
+
+  @override
+  String get moonEuropa => 'यूरोपा';
+
+  @override
+  String get moonGanymede => 'गैनिमीड';
+
+  @override
+  String get moonCallisto => 'कैलिस्टो';
+
+  @override
+  String get moonTitan => 'टाइटन';
+
+  @override
+  String get moonEnceladus => 'एन्सेलेडस';
+
+  @override
+  String get moonTriton => 'ट्राइटन';
+
+  @override
+  String get kindStar => 'हमारा तारा, सौरमंडल का केंद्र';
+
+  @override
+  String get kindDwarf => 'बौना ग्रह';
+
+  @override
+  String moonOf(String planet) {
+    return '$planet का चंद्रमा';
+  }
+
+  @override
+  String get orbitPeriod => 'एक परिक्रमा';
+
+  @override
+  String distanceFrom(String body) {
+    return '$body से दूरी';
+  }
+
+  @override
+  String get composition => 'यह किससे बना है';
+
+  @override
+  String get noAtmosphere => 'असली वायुमंडल नहीं है, लगभग निर्वात है।';
+
+  @override
+  String get majorMoons => 'मुख्य चंद्रमा';
+
+  @override
+  String get lifeTitle => 'क्या इंसान यहाँ रह सकते हैं?';
+
+  @override
+  String get lifeScoreShort => 'जीवन स्कोर';
+
+  @override
+  String get lifeNote =>
+      'तापमान, हवा के दबाव, ऑक्सीजन, पानी, सतह और गुरुत्वाकर्षण से गिना गया। पृथ्वी का स्कोर 10 है।';
+
+  @override
+  String get water => 'पानी';
+
+  @override
+  String get waterLiquid => 'तरल पानी';
+
+  @override
+  String get waterIce => 'बर्फ़';
+
+  @override
+  String get waterOcean => 'बर्फ़ के नीचे समुद्र';
+
+  @override
+  String get waterNone => 'पानी नहीं';
+
+  @override
+  String get surface => 'सतह';
+
+  @override
+  String get solidSurface => 'ठोस सतह';
+
+  @override
+  String get lifeHome => 'बिल्कुल घर जैसा';
+
+  @override
+  String get lifeHard => 'बहुत मुश्किल, बंद बेस और स्पेससूट चाहिए';
+
+  @override
+  String get lifeNo => 'इंसानों के लिए असंभव';
 }

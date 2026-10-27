@@ -354,4 +354,101 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get openFailed => '无法打开链接。';
+
+  @override
+  String get bodySun => '太阳';
+
+  @override
+  String get bodyMoon => '月球';
+
+  @override
+  String get bodyPluto => '冥王星';
+
+  @override
+  String get moonIo => '木卫一';
+
+  @override
+  String get moonEuropa => '木卫二';
+
+  @override
+  String get moonGanymede => '木卫三';
+
+  @override
+  String get moonCallisto => '木卫四';
+
+  @override
+  String get moonTitan => '土卫六';
+
+  @override
+  String get moonEnceladus => '土卫二';
+
+  @override
+  String get moonTriton => '海卫一';
+
+  @override
+  String get kindStar => '我们的恒星，太阳系的中心';
+
+  @override
+  String get kindDwarf => '矮行星';
+
+  @override
+  String moonOf(String planet) {
+    return '$planet的卫星';
+  }
+
+  @override
+  String get orbitPeriod => '公转一周';
+
+  @override
+  String distanceFrom(String body) {
+    return '与$body的距离';
+  }
+
+  @override
+  String get composition => '它由什么组成';
+
+  @override
+  String get noAtmosphere => '没有真正的大气，几乎是真空。';
+
+  @override
+  String get majorMoons => '主要卫星';
+
+  @override
+  String get lifeTitle => '人类能在这里生活吗？';
+
+  @override
+  String get lifeScoreShort => '宜居分';
+
+  @override
+  String get lifeNote => '根据温度、气压、氧气、水、表面和重力计算。地球为 10 分。';
+
+  @override
+  String get water => '水';
+
+  @override
+  String get waterLiquid => '液态水';
+
+  @override
+  String get waterIce => '冰';
+
+  @override
+  String get waterOcean => '冰层下的海洋';
+
+  @override
+  String get waterNone => '没有水';
+
+  @override
+  String get surface => '表面';
+
+  @override
+  String get solidSurface => '固体表面';
+
+  @override
+  String get lifeHome => '就像家一样';
+
+  @override
+  String get lifeHard => '非常困难，需要封闭基地和宇航服';
+
+  @override
+  String get lifeNo => '人类无法生存';
 }

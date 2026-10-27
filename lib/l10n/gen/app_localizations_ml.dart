@@ -362,4 +362,103 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get openFailed => 'ലിങ്ക് തുറക്കാനായില്ല.';
+
+  @override
+  String get bodySun => 'സൂര്യൻ';
+
+  @override
+  String get bodyMoon => 'ചന്ദ്രൻ';
+
+  @override
+  String get bodyPluto => 'പ്ലൂട്ടോ';
+
+  @override
+  String get moonIo => 'അയോ';
+
+  @override
+  String get moonEuropa => 'യൂറോപ്പ';
+
+  @override
+  String get moonGanymede => 'ഗാനിമീഡ്';
+
+  @override
+  String get moonCallisto => 'കാലിസ്റ്റോ';
+
+  @override
+  String get moonTitan => 'ടൈറ്റൻ';
+
+  @override
+  String get moonEnceladus => 'എൻസെലാഡസ്';
+
+  @override
+  String get moonTriton => 'ട്രൈറ്റൺ';
+
+  @override
+  String get kindStar => 'നമ്മുടെ നക്ഷത്രം, സൗരയൂഥത്തിന്റെ കേന്ദ്രം';
+
+  @override
+  String get kindDwarf => 'കുള്ളൻ ഗ്രഹം';
+
+  @override
+  String moonOf(String planet) {
+    return '$planet-ന്റെ ഉപഗ്രഹം';
+  }
+
+  @override
+  String get orbitPeriod => 'ഒരു ഭ്രമണം';
+
+  @override
+  String distanceFrom(String body) {
+    return '$body-ൽ നിന്നുള്ള ദൂരം';
+  }
+
+  @override
+  String get composition => 'ഇത് എന്തുകൊണ്ട് നിർമ്മിച്ചതാണ്';
+
+  @override
+  String get noAtmosphere => 'യഥാർത്ഥ അന്തരീക്ഷമില്ല, ഏകദേശം ശൂന്യത.';
+
+  @override
+  String get majorMoons => 'പ്രധാന ഉപഗ്രഹങ്ങൾ';
+
+  @override
+  String get lifeTitle => 'മനുഷ്യർക്ക് ഇവിടെ ജീവിക്കാനാകുമോ?';
+
+  @override
+  String get lifeScoreShort => 'ജീവൻ സ്കോർ';
+
+  @override
+  String get lifeNote =>
+      'താപനില, വായുമർദ്ദം, ഓക്സിജൻ, വെള്ളം, ഉപരിതലം, ഗുരുത്വാകർഷണം എന്നിവയിൽ നിന്ന് കണക്കാക്കിയത്. ഭൂമിക്ക് 10.';
+
+  @override
+  String get water => 'വെള്ളം';
+
+  @override
+  String get waterLiquid => 'ദ്രാവക ജലം';
+
+  @override
+  String get waterIce => 'ഐസ്';
+
+  @override
+  String get waterOcean => 'ഐസിനടിയിൽ സമുദ്രം';
+
+  @override
+  String get waterNone => 'വെള്ളമില്ല';
+
+  @override
+  String get surface => 'ഉപരിതലം';
+
+  @override
+  String get solidSurface => 'ഉറച്ച ഉപരിതലം';
+
+  @override
+  String get lifeHome => 'വീട് പോലെ തന്നെ';
+
+  @override
+  String get lifeHard =>
+      'വളരെ ബുദ്ധിമുട്ട്, അടച്ച താവളവും സ്പേസ് സ്യൂട്ടും വേണം';
+
+  @override
+  String get lifeNo => 'മനുഷ്യർക്ക് അസാധ്യം';
 }

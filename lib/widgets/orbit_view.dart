@@ -48,6 +48,11 @@ class _OrbitViewState extends State<OrbitView>
 
   void _handleTap(TapUpDetails details, Size size) {
     final layout = OrbitLayout(size);
+    if ((details.localPosition - layout.center).distance <
+        layout.sunRadius + 8) {
+      widget.onPlanetTap(planetById('sun'));
+      return;
+    }
     Planet? best;
     var bestDistance = double.infinity;
     for (final planet in planets) {

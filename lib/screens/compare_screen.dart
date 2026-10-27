@@ -135,7 +135,7 @@ class _PlanetPicker extends StatelessWidget {
             }
           },
           items: <DropdownMenuItem<String>>[
-            for (final planet in planets)
+            for (final planet in allBodies)
               DropdownMenuItem<String>(
                 value: planet.id,
                 child: Row(

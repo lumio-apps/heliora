@@ -357,4 +357,102 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get openFailed => 'تعذّر فتح الرابط.';
+
+  @override
+  String get bodySun => 'الشمس';
+
+  @override
+  String get bodyMoon => 'القمر';
+
+  @override
+  String get bodyPluto => 'بلوتو';
+
+  @override
+  String get moonIo => 'آيو';
+
+  @override
+  String get moonEuropa => 'يوروبا';
+
+  @override
+  String get moonGanymede => 'غانيميد';
+
+  @override
+  String get moonCallisto => 'كاليستو';
+
+  @override
+  String get moonTitan => 'تيتان';
+
+  @override
+  String get moonEnceladus => 'إنسيلادوس';
+
+  @override
+  String get moonTriton => 'تريتون';
+
+  @override
+  String get kindStar => 'نجمنا، مركز المجموعة الشمسية';
+
+  @override
+  String get kindDwarf => 'كوكب قزم';
+
+  @override
+  String moonOf(String planet) {
+    return 'قمر $planet';
+  }
+
+  @override
+  String get orbitPeriod => 'دورة واحدة';
+
+  @override
+  String distanceFrom(String body) {
+    return 'البعد عن $body';
+  }
+
+  @override
+  String get composition => 'مِمَّ يتكوّن';
+
+  @override
+  String get noAtmosphere => 'لا يوجد غلاف جوي حقيقي، إنه شبه فراغ.';
+
+  @override
+  String get majorMoons => 'الأقمار الرئيسية';
+
+  @override
+  String get lifeTitle => 'هل يستطيع البشر العيش هنا؟';
+
+  @override
+  String get lifeScoreShort => 'درجة الحياة';
+
+  @override
+  String get lifeNote =>
+      'محسوبة من الحرارة وضغط الهواء والأكسجين والماء والسطح والجاذبية. الأرض تحصل على 10.';
+
+  @override
+  String get water => 'الماء';
+
+  @override
+  String get waterLiquid => 'ماء سائل';
+
+  @override
+  String get waterIce => 'جليد';
+
+  @override
+  String get waterOcean => 'محيط تحت الجليد';
+
+  @override
+  String get waterNone => 'لا يوجد ماء';
+
+  @override
+  String get surface => 'السطح';
+
+  @override
+  String get solidSurface => 'سطح صلب';
+
+  @override
+  String get lifeHome => 'تمامًا مثل الوطن';
+
+  @override
+  String get lifeHard => 'صعب جدًا، يلزم مقر مغلق وبدلات فضاء';
+
+  @override
+  String get lifeNo => 'مستحيل على البشر';
 }

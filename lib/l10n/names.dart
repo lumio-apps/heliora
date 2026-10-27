@@ -60,8 +60,66 @@ String planetName(AppLocalizations l, Planet planet) {
       return l.planetUranus;
     case 'neptune':
       return l.planetNeptune;
+    case 'sun':
+      return l.bodySun;
+    case 'moon':
+      return l.bodyMoon;
+    case 'pluto':
+      return l.bodyPluto;
+    case 'io':
+      return l.moonIo;
+    case 'europa':
+      return l.moonEuropa;
+    case 'ganymede':
+      return l.moonGanymede;
+    case 'callisto':
+      return l.moonCallisto;
+    case 'titan':
+      return l.moonTitan;
+    case 'enceladus':
+      return l.moonEnceladus;
+    case 'triton':
+      return l.moonTriton;
   }
   return planet.id;
+}
+
+/// One line under a body's name: "Planet 3 from the Sun", "Moon of Jupiter".
+String bodySubtitle(AppLocalizations l, Planet body) {
+  switch (body.kind) {
+    case BodyKind.star:
+      return l.kindStar;
+    case BodyKind.dwarf:
+      return l.kindDwarf;
+    case BodyKind.moon:
+      return l.moonOf(planetName(l, planetById(body.parentId ?? 'earth')));
+    case BodyKind.planet:
+      return l.planetOrder(body.order);
+  }
+}
+
+String waterName(AppLocalizations l, Water water) {
+  switch (water) {
+    case Water.liquid:
+      return l.waterLiquid;
+    case Water.ice:
+      return l.waterIce;
+    case Water.ocean:
+      return l.waterOcean;
+    case Water.none:
+      return l.waterNone;
+  }
+}
+
+/// A short verdict for a life score from 0 to 10.
+String lifeVerdict(AppLocalizations l, int score) {
+  if (score >= 8) {
+    return l.lifeHome;
+  }
+  if (score >= 3) {
+    return l.lifeHard;
+  }
+  return l.lifeNo;
 }
 
 String gasName(AppLocalizations l, Gas gas) {
@@ -75,6 +133,7 @@ String gasName(AppLocalizations l, Gas gas) {
     case Gas.ar:
       return l.gasAr;
     case Gas.h2:
+    case Gas.h:
       return l.gasH2;
     case Gas.he:
       return l.gasHe;

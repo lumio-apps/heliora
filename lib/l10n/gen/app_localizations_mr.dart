@@ -357,4 +357,102 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get openFailed => 'लिंक उघडता आली नाही.';
+
+  @override
+  String get bodySun => 'सूर्य';
+
+  @override
+  String get bodyMoon => 'चंद्र';
+
+  @override
+  String get bodyPluto => 'प्लूटो';
+
+  @override
+  String get moonIo => 'आयो';
+
+  @override
+  String get moonEuropa => 'युरोपा';
+
+  @override
+  String get moonGanymede => 'गॅनिमीड';
+
+  @override
+  String get moonCallisto => 'कॅलिस्टो';
+
+  @override
+  String get moonTitan => 'टायटन';
+
+  @override
+  String get moonEnceladus => 'एन्सेलाडस';
+
+  @override
+  String get moonTriton => 'ट्रायटन';
+
+  @override
+  String get kindStar => 'आपला तारा, सूर्यमालेचे केंद्र';
+
+  @override
+  String get kindDwarf => 'बटू ग्रह';
+
+  @override
+  String moonOf(String planet) {
+    return '$planet चा चंद्र';
+  }
+
+  @override
+  String get orbitPeriod => 'एक प्रदक्षिणा';
+
+  @override
+  String distanceFrom(String body) {
+    return '$body पासून अंतर';
+  }
+
+  @override
+  String get composition => 'हे कशापासून बनले आहे';
+
+  @override
+  String get noAtmosphere => 'खरे वातावरण नाही, जवळजवळ निर्वात आहे.';
+
+  @override
+  String get majorMoons => 'मुख्य चंद्र';
+
+  @override
+  String get lifeTitle => 'माणूस इथे राहू शकेल का?';
+
+  @override
+  String get lifeScoreShort => 'जीवन गुण';
+
+  @override
+  String get lifeNote =>
+      'तापमान, हवेचा दाब, ऑक्सिजन, पाणी, पृष्ठभाग आणि गुरुत्वाकर्षणावरून मोजले. पृथ्वीचे गुण 10.';
+
+  @override
+  String get water => 'पाणी';
+
+  @override
+  String get waterLiquid => 'द्रव पाणी';
+
+  @override
+  String get waterIce => 'बर्फ';
+
+  @override
+  String get waterOcean => 'बर्फाखाली महासागर';
+
+  @override
+  String get waterNone => 'पाणी नाही';
+
+  @override
+  String get surface => 'पृष्ठभाग';
+
+  @override
+  String get solidSurface => 'घन पृष्ठभाग';
+
+  @override
+  String get lifeHome => 'अगदी घरासारखे';
+
+  @override
+  String get lifeHard => 'खूप कठीण, बंद तळ आणि स्पेससूट लागेल';
+
+  @override
+  String get lifeNo => 'माणसांसाठी अशक्य';
 }

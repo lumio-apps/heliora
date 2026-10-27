@@ -358,4 +358,103 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get openFailed => 'Tidak bisa membuka tautan.';
+
+  @override
+  String get bodySun => 'Matahari';
+
+  @override
+  String get bodyMoon => 'Bulan';
+
+  @override
+  String get bodyPluto => 'Pluto';
+
+  @override
+  String get moonIo => 'Io';
+
+  @override
+  String get moonEuropa => 'Europa';
+
+  @override
+  String get moonGanymede => 'Ganymede';
+
+  @override
+  String get moonCallisto => 'Callisto';
+
+  @override
+  String get moonTitan => 'Titan';
+
+  @override
+  String get moonEnceladus => 'Enceladus';
+
+  @override
+  String get moonTriton => 'Triton';
+
+  @override
+  String get kindStar => 'Bintang kita, pusat Tata Surya';
+
+  @override
+  String get kindDwarf => 'Planet kerdil';
+
+  @override
+  String moonOf(String planet) {
+    return 'Bulan milik $planet';
+  }
+
+  @override
+  String get orbitPeriod => 'Satu orbit';
+
+  @override
+  String distanceFrom(String body) {
+    return 'Jarak dari $body';
+  }
+
+  @override
+  String get composition => 'Terbuat dari apa';
+
+  @override
+  String get noAtmosphere => 'Tidak punya atmosfer sungguhan, hampir hampa.';
+
+  @override
+  String get majorMoons => 'Bulan utama';
+
+  @override
+  String get lifeTitle => 'Bisakah manusia tinggal di sini?';
+
+  @override
+  String get lifeScoreShort => 'Skor kehidupan';
+
+  @override
+  String get lifeNote =>
+      'Dihitung dari suhu, tekanan udara, oksigen, air, permukaan, dan gravitasi. Bumi mendapat 10.';
+
+  @override
+  String get water => 'Air';
+
+  @override
+  String get waterLiquid => 'Air cair';
+
+  @override
+  String get waterIce => 'Es';
+
+  @override
+  String get waterOcean => 'Lautan di bawah es';
+
+  @override
+  String get waterNone => 'Tidak ada air';
+
+  @override
+  String get surface => 'Permukaan';
+
+  @override
+  String get solidSurface => 'Permukaan padat';
+
+  @override
+  String get lifeHome => 'Seperti di rumah';
+
+  @override
+  String get lifeHard =>
+      'Sangat sulit, perlu pangkalan tertutup dan baju antariksa';
+
+  @override
+  String get lifeNo => 'Mustahil bagi manusia';
 }

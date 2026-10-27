@@ -177,7 +177,8 @@ class _GlobePainter extends CustomPainter {
     f(planet.style.index.toDouble());
     f(planet.polarCaps ? 1.0 : 0.0);
     f(planet.spot ? 1.0 : 0.0);
-    f(planet.order * 0.37);
+    // A different noise pattern for every body.
+    f((planet.id.codeUnits.fold<int>(0, (a, c) => a + c) % 50) * 0.13);
     color(_glowColor(planet));
     f(_glowAmount(planet));
     f(state.time);
@@ -226,6 +227,10 @@ class _GlobePainter extends CustomPainter {
 
   Color _glowColor(Planet p) {
     switch (p.id) {
+      case 'sun':
+        return const Color(0xFFFFB347);
+      case 'titan':
+        return const Color(0xFFF0B060);
       case 'earth':
         return const Color(0xFF7FB2FF);
       case 'venus':
@@ -241,10 +246,17 @@ class _GlobePainter extends CustomPainter {
   }
 
   double _glowAmount(Planet p) {
-    if (p.thinAtmosphere) {
+    if (p.thinAtmosphere || p.atmosphere.isEmpty) {
       return 0;
     }
     switch (p.id) {
+      case 'sun':
+        return 1.0;
+      case 'titan':
+        return 0.9;
+      case 'pluto':
+      case 'triton':
+        return 0.15;
       case 'earth':
         return 0.9;
       case 'venus':

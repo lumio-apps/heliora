@@ -358,4 +358,103 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get openFailed => 'Could not open the link.';
+
+  @override
+  String get bodySun => 'Sun';
+
+  @override
+  String get bodyMoon => 'Moon';
+
+  @override
+  String get bodyPluto => 'Pluto';
+
+  @override
+  String get moonIo => 'Io';
+
+  @override
+  String get moonEuropa => 'Europa';
+
+  @override
+  String get moonGanymede => 'Ganymede';
+
+  @override
+  String get moonCallisto => 'Callisto';
+
+  @override
+  String get moonTitan => 'Titan';
+
+  @override
+  String get moonEnceladus => 'Enceladus';
+
+  @override
+  String get moonTriton => 'Triton';
+
+  @override
+  String get kindStar => 'Our star, the centre of the Solar System';
+
+  @override
+  String get kindDwarf => 'Dwarf planet';
+
+  @override
+  String moonOf(String planet) {
+    return 'Moon of $planet';
+  }
+
+  @override
+  String get orbitPeriod => 'One orbit';
+
+  @override
+  String distanceFrom(String body) {
+    return 'Distance from $body';
+  }
+
+  @override
+  String get composition => 'What it is made of';
+
+  @override
+  String get noAtmosphere => 'No real atmosphere, it is almost a vacuum.';
+
+  @override
+  String get majorMoons => 'Major moons';
+
+  @override
+  String get lifeTitle => 'Could humans live here?';
+
+  @override
+  String get lifeScoreShort => 'Life score';
+
+  @override
+  String get lifeNote =>
+      'Scored from temperature, air pressure, oxygen, water, surface and gravity. Earth scores 10.';
+
+  @override
+  String get water => 'Water';
+
+  @override
+  String get waterLiquid => 'Liquid water';
+
+  @override
+  String get waterIce => 'Ice';
+
+  @override
+  String get waterOcean => 'Ocean under the ice';
+
+  @override
+  String get waterNone => 'No water';
+
+  @override
+  String get surface => 'Surface';
+
+  @override
+  String get solidSurface => 'Solid surface';
+
+  @override
+  String get lifeHome => 'Just like home';
+
+  @override
+  String get lifeHard =>
+      'Very hard, people would need a closed base and spacesuits';
+
+  @override
+  String get lifeNo => 'Impossible for humans';
 }
