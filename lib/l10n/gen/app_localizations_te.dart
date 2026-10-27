@@ -456,4 +456,26 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get lifeNo => 'మనుషులకు అసాధ్యం';
+
+  @override
+  String get downloadInstall => 'డౌన్‌లోడ్ చేసి ఇన్‌స్టాల్ చేయండి';
+
+  @override
+  String downloadingPercent(String percent) {
+    return 'డౌన్‌లోడ్ అవుతోంది… $percent%';
+  }
+
+  @override
+  String get installNow => 'ఇన్‌స్టాల్';
+
+  @override
+  String get allowInstalls =>
+      'తెరిచిన స్క్రీన్‌లో Heliora కు యాప్‌లు ఇన్‌స్టాల్ చేసే అనుమతి ఇవ్వండి, తర్వాత తిరిగి వచ్చి ఇన్‌స్టాల్ నొక్కండి.';
+
+  @override
+  String get downloadFailed =>
+      'డౌన్‌లోడ్ పూర్తి కాలేదు. ఇంటర్నెట్ చూసి మళ్లీ ప్రయత్నించండి.';
+
+  @override
+  String get tryAgain => 'మళ్లీ ప్రయత్నించండి';
 }

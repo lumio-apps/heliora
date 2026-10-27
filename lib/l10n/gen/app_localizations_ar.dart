@@ -455,4 +455,26 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get lifeNo => 'مستحيل على البشر';
+
+  @override
+  String get downloadInstall => 'تنزيل وتثبيت';
+
+  @override
+  String downloadingPercent(String percent) {
+    return 'جارٍ التنزيل… $percent%';
+  }
+
+  @override
+  String get installNow => 'تثبيت';
+
+  @override
+  String get allowInstalls =>
+      'اسمح لتطبيق Heliora بتثبيت التطبيقات في الشاشة التي فُتحت، ثم ارجع واضغط تثبيت.';
+
+  @override
+  String get downloadFailed =>
+      'لم يكتمل التنزيل. تحقق من الإنترنت وحاول مرة أخرى.';
+
+  @override
+  String get tryAgain => 'حاول مرة أخرى';
 }

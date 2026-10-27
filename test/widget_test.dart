@@ -130,6 +130,18 @@ void main() {
       expect(info.notes, 'Fixes');
     });
 
+    test('updates download only from GitHub', () {
+      expect(
+          UpdateService.isTrustedDownload(
+              'https://github.com/lumio-apps/heliora/releases/download/v1.2.0/Heliora-v1.2.0.apk'),
+          isTrue);
+      expect(UpdateService.isTrustedDownload('http://github.com/x.apk'),
+          isFalse);
+      expect(UpdateService.isTrustedDownload('https://evil.example/x.apk'),
+          isFalse);
+      expect(UpdateService.isTrustedDownload('not a link'), isFalse);
+    });
+
     test('release without apk opens the release page', () {
       final info = UpdateService.parse('{"tag_name":"v1.2.0","assets":[]}');
       expect(info.apkUrl, isNull);

@@ -137,5 +137,11 @@
   "solidSurface": "Permukaan padat",
   "lifeHome": "Seperti di rumah",
   "lifeHard": "Sangat sulit, perlu pangkalan tertutup dan baju antariksa",
-  "lifeNo": "Mustahil bagi manusia"
+  "lifeNo": "Mustahil bagi manusia",
+  "downloadInstall": "Unduh dan pasang",
+  "downloadingPercent": "Mengunduh… {percent}%",
+  "installNow": "Pasang",
+  "allowInstalls": "Izinkan Heliora memasang aplikasi di layar yang terbuka, lalu kembali dan ketuk Pasang.",
+  "downloadFailed": "Unduhan tidak selesai. Periksa internet lalu coba lagi.",
+  "tryAgain": "Coba lagi"
 }

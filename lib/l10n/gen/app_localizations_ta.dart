@@ -460,4 +460,26 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get lifeNo => 'மனிதர்களுக்குச் சாத்தியமில்லை';
+
+  @override
+  String get downloadInstall => 'பதிவிறக்கி நிறுவு';
+
+  @override
+  String downloadingPercent(String percent) {
+    return 'பதிவிறக்குகிறது… $percent%';
+  }
+
+  @override
+  String get installNow => 'நிறுவு';
+
+  @override
+  String get allowInstalls =>
+      'திறந்த திரையில் Heliora ஆப்ஸ்களை நிறுவ அனுமதி கொடுத்து, திரும்பி வந்து நிறுவு என்பதைத் தட்டவும்.';
+
+  @override
+  String get downloadFailed =>
+      'பதிவிறக்கம் முடியவில்லை. இணையத்தைச் சரிபார்த்து மீண்டும் முயலவும்.';
+
+  @override
+  String get tryAgain => 'மீண்டும் முயல்';
 }

@@ -457,4 +457,26 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get lifeNo => 'Mustahil bagi manusia';
+
+  @override
+  String get downloadInstall => 'Unduh dan pasang';
+
+  @override
+  String downloadingPercent(String percent) {
+    return 'Mengunduh… $percent%';
+  }
+
+  @override
+  String get installNow => 'Pasang';
+
+  @override
+  String get allowInstalls =>
+      'Izinkan Heliora memasang aplikasi di layar yang terbuka, lalu kembali dan ketuk Pasang.';
+
+  @override
+  String get downloadFailed =>
+      'Unduhan tidak selesai. Periksa internet lalu coba lagi.';
+
+  @override
+  String get tryAgain => 'Coba lagi';
 }

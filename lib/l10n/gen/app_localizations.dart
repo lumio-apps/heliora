@@ -961,6 +961,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Impossible for humans'**
   String get lifeNo;
+
+  /// No description provided for @downloadInstall.
+  ///
+  /// In en, this message translates to:
+  /// **'Download and install'**
+  String get downloadInstall;
+
+  /// No description provided for @downloadingPercent.
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading… {percent}%'**
+  String downloadingPercent(String percent);
+
+  /// No description provided for @installNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Install'**
+  String get installNow;
+
+  /// No description provided for @allowInstalls.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow Heliora to install apps on the screen that opened, then come back and tap Install.'**
+  String get allowInstalls;
+
+  /// No description provided for @downloadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'The download did not finish. Check your internet and try again.'**
+  String get downloadFailed;
+
+  /// No description provided for @tryAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get tryAgain;
 }
 
 class _AppLocalizationsDelegate

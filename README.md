@@ -16,11 +16,11 @@ Part of [Lumio Apps](https://github.com/lumio-apps): no ads, no account, no trac
 - **Quiz**: 10 questions built from the planet data, with a best score.
 - **Light, dark or system theme.**
 - **20 languages**: English, Hindi, Bengali, Gujarati, Kannada, Malayalam, Marathi, Punjabi, Tamil, Telugu, Urdu, Arabic, Chinese, Japanese, Spanish, French, Portuguese, Russian, Indonesian and Armenian.
-- **In-app update check** from GitHub Releases. Settings are kept when you update.
+- **In-app updates** from GitHub Releases: the new version downloads inside the app with a progress bar and the Android installer opens. Settings are kept when you update.
 
 ## Privacy
 
-Heliora works without internet. The only network request is the optional update check, which asks GitHub for the latest release and sends nothing about you. It can be turned off in Settings.
+Heliora works without internet. Internet is used only for updates: the app asks GitHub for the latest release and, when you tap Download and install, downloads the signed APK from that release. Nothing about you is sent. The daily check can be turned off in Settings.
 
 ## Data
 

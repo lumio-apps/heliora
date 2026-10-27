@@ -457,4 +457,26 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get lifeNo => 'Impossible for humans';
+
+  @override
+  String get downloadInstall => 'Download and install';
+
+  @override
+  String downloadingPercent(String percent) {
+    return 'Downloading… $percent%';
+  }
+
+  @override
+  String get installNow => 'Install';
+
+  @override
+  String get allowInstalls =>
+      'Allow Heliora to install apps on the screen that opened, then come back and tap Install.';
+
+  @override
+  String get downloadFailed =>
+      'The download did not finish. Check your internet and try again.';
+
+  @override
+  String get tryAgain => 'Try again';
 }

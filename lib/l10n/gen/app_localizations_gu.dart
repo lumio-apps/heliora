@@ -455,4 +455,26 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get lifeNo => 'માણસો માટે અશક્ય';
+
+  @override
+  String get downloadInstall => 'ડાઉનલોડ કરી ઇન્સ્ટોલ કરો';
+
+  @override
+  String downloadingPercent(String percent) {
+    return 'ડાઉનલોડ થઈ રહ્યું છે… $percent%';
+  }
+
+  @override
+  String get installNow => 'ઇન્સ્ટોલ કરો';
+
+  @override
+  String get allowInstalls =>
+      'ખુલેલી સ્ક્રીનમાં Heliora ને ઍપ ઇન્સ્ટોલ કરવાની મંજૂરી આપો, પછી પાછા આવીને ઇન્સ્ટોલ દબાવો.';
+
+  @override
+  String get downloadFailed =>
+      'ડાઉનલોડ પૂરું ન થયું. ઇન્ટરનેટ તપાસીને ફરી પ્રયાસ કરો.';
+
+  @override
+  String get tryAgain => 'ફરી પ્રયાસ કરો';
 }

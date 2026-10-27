@@ -461,4 +461,26 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get lifeNo => 'മനുഷ്യർക്ക് അസാധ്യം';
+
+  @override
+  String get downloadInstall => 'ഡൗൺലോഡ് ചെയ്ത് ഇൻസ്റ്റാൾ ചെയ്യുക';
+
+  @override
+  String downloadingPercent(String percent) {
+    return 'ഡൗൺലോഡ് ചെയ്യുന്നു… $percent%';
+  }
+
+  @override
+  String get installNow => 'ഇൻസ്റ്റാൾ';
+
+  @override
+  String get allowInstalls =>
+      'തുറന്ന സ്ക്രീനിൽ Heliora-യ്ക്ക് ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ അനുവാദം നൽകുക, തിരികെ വന്ന് ഇൻസ്റ്റാൾ അമർത്തുക.';
+
+  @override
+  String get downloadFailed =>
+      'ഡൗൺലോഡ് പൂർത്തിയായില്ല. ഇന്റർനെറ്റ് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.';
+
+  @override
+  String get tryAgain => 'വീണ്ടും ശ്രമിക്കുക';
 }

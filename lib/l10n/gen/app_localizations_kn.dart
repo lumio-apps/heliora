@@ -457,4 +457,26 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get lifeNo => 'ಮನುಷ್ಯರಿಗೆ ಅಸಾಧ್ಯ';
+
+  @override
+  String get downloadInstall => 'ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ';
+
+  @override
+  String downloadingPercent(String percent) {
+    return 'ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ… $percent%';
+  }
+
+  @override
+  String get installNow => 'ಇನ್‌ಸ್ಟಾಲ್';
+
+  @override
+  String get allowInstalls =>
+      'ತೆರೆದ ಪರದೆಯಲ್ಲಿ Heliora ಗೆ ಆ್ಯಪ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲು ಅನುಮತಿ ನೀಡಿ, ನಂತರ ಹಿಂದಿರುಗಿ ಇನ್‌ಸ್ಟಾಲ್ ಒತ್ತಿ.';
+
+  @override
+  String get downloadFailed =>
+      'ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣವಾಗಲಿಲ್ಲ. ಇಂಟರ್ನೆಟ್ ಪರಿಶೀಲಿಸಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
+
+  @override
+  String get tryAgain => 'ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ';
 }

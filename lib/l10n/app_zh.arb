@@ -137,5 +137,11 @@
   "solidSurface": "固体表面",
   "lifeHome": "就像家一样",
   "lifeHard": "非常困难，需要封闭基地和宇航服",
-  "lifeNo": "人类无法生存"
+  "lifeNo": "人类无法生存",
+  "downloadInstall": "下载并安装",
+  "downloadingPercent": "正在下载… {percent}%",
+  "installNow": "安装",
+  "allowInstalls": "请在打开的页面中允许 Heliora 安装应用，然后返回点按“安装”。",
+  "downloadFailed": "下载未完成。请检查网络后重试。",
+  "tryAgain": "重试"
 }

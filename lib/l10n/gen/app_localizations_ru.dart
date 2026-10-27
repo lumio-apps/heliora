@@ -458,4 +458,26 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get lifeNo => 'Невозможно для людей';
+
+  @override
+  String get downloadInstall => 'Скачать и установить';
+
+  @override
+  String downloadingPercent(String percent) {
+    return 'Загрузка… $percent%';
+  }
+
+  @override
+  String get installNow => 'Установить';
+
+  @override
+  String get allowInstalls =>
+      'Разрешите Heliora устанавливать приложения на открывшемся экране, затем вернитесь и нажмите «Установить».';
+
+  @override
+  String get downloadFailed =>
+      'Загрузка не завершилась. Проверьте интернет и попробуйте снова.';
+
+  @override
+  String get tryAgain => 'Повторить';
 }

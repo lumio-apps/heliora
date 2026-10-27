@@ -137,5 +137,11 @@
   "solidSurface": "Superfície sólida",
   "lifeHome": "Igual a estar em casa",
   "lifeHard": "Muito difícil, seria preciso uma base fechada e trajes espaciais",
-  "lifeNo": "Impossível para humanos"
+  "lifeNo": "Impossível para humanos",
+  "downloadInstall": "Baixar e instalar",
+  "downloadingPercent": "Baixando… {percent}%",
+  "installNow": "Instalar",
+  "allowInstalls": "Permita que o Heliora instale apps na tela que abriu, depois volte e toque em Instalar.",
+  "downloadFailed": "O download não terminou. Verifique a internet e tente de novo.",
+  "tryAgain": "Tentar de novo"
 }

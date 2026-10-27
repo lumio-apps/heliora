@@ -458,4 +458,26 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get lifeNo => 'Անհնար է մարդկանց համար';
+
+  @override
+  String get downloadInstall => 'Ներբեռնել և տեղադրել';
+
+  @override
+  String downloadingPercent(String percent) {
+    return 'Ներբեռնվում է… $percent%';
+  }
+
+  @override
+  String get installNow => 'Տեղադրել';
+
+  @override
+  String get allowInstalls =>
+      'Բացված էկրանին թույլ տվեք Heliora-ին տեղադրել հավելվածներ, հետո վերադարձեք և սեղմեք «Տեղադրել»։';
+
+  @override
+  String get downloadFailed =>
+      'Ներբեռնումը չավարտվեց։ Ստուգեք ինտերնետը և նորից փորձեք։';
+
+  @override
+  String get tryAgain => 'Նորից փորձել';
 }

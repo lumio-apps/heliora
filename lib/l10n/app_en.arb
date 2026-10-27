@@ -248,5 +248,18 @@
         "type": "String"
       }
     }
+  },
+  "downloadInstall": "Download and install",
+  "downloadingPercent": "Downloading… {percent}%",
+  "installNow": "Install",
+  "allowInstalls": "Allow Heliora to install apps on the screen that opened, then come back and tap Install.",
+  "downloadFailed": "The download did not finish. Check your internet and try again.",
+  "tryAgain": "Try again",
+  "@downloadingPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
   }
 }

@@ -2,6 +2,9 @@ package online.lumioapps.heliora
 
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
+import android.provider.Settings
+import androidx.core.content.FileProvider
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
@@ -15,10 +18,54 @@ class MainActivity : FlutterActivity() {
         ).setMethodCallHandler { call, result ->
             when (call.method) {
                 "filesDir" -> result.success(filesDir.absolutePath)
+                "updatesDir" -> {
+                    val dir = java.io.File(cacheDir, "updates")
+                    dir.mkdirs()
+                    result.success(dir.absolutePath)
+                }
+                "installApk" -> result.success(installApk(call.argument<String>("path")))
                 "appVersion" -> result.success(appVersion())
                 "openUrl" -> result.success(openUrl(call.argument<String>("url")))
                 else -> result.notImplemented()
             }
+        }
+    }
+
+    /** Returns "ok", "permission" (the user must allow installs) or "error". */
+    private fun installApk(path: String?): String {
+        if (path == null) {
+            return "error"
+        }
+        val file = java.io.File(path)
+        if (!file.exists()) {
+            return "error"
+        }
+        return try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O &&
+                !packageManager.canRequestPackageInstalls()
+            ) {
+                startActivity(
+                    Intent(
+                        Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
+                        Uri.parse("package:$packageName")
+                    )
+                )
+                "permission"
+            } else {
+                val uri = FileProvider.getUriForFile(
+                    this,
+                    "$packageName.fileprovider",
+                    file
+                )
+                val intent = Intent(Intent.ACTION_VIEW)
+                    .setDataAndType(uri, "application/vnd.android.package-archive")
+                    .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+                "ok"
+            }
+        } catch (e: Exception) {
+            "error"
         }
     }
 

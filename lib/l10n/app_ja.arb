@@ -137,5 +137,11 @@
   "solidSurface": "固い地表",
   "lifeHome": "まるで我が家",
   "lifeHard": "とても大変、密閉された基地と宇宙服が必要",
-  "lifeNo": "人間には不可能"
+  "lifeNo": "人間には不可能",
+  "downloadInstall": "ダウンロードしてインストール",
+  "downloadingPercent": "ダウンロード中… {percent}%",
+  "installNow": "インストール",
+  "allowInstalls": "開いた画面で Heliora にアプリのインストールを許可し、戻って「インストール」をタップしてください。",
+  "downloadFailed": "ダウンロードが完了しませんでした。インターネットを確認してもう一度お試しください。",
+  "tryAgain": "再試行"
 }

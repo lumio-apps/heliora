@@ -451,4 +451,24 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get lifeNo => '人类无法生存';
+
+  @override
+  String get downloadInstall => '下载并安装';
+
+  @override
+  String downloadingPercent(String percent) {
+    return '正在下载… $percent%';
+  }
+
+  @override
+  String get installNow => '安装';
+
+  @override
+  String get allowInstalls => '请在打开的页面中允许 Heliora 安装应用，然后返回点按“安装”。';
+
+  @override
+  String get downloadFailed => '下载未完成。请检查网络后重试。';
+
+  @override
+  String get tryAgain => '重试';
 }
