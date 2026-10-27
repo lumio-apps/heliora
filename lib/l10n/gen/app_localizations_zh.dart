@@ -471,4 +471,42 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get tryAgain => '重试';
+
+  @override
+  String get today => '今天';
+
+  @override
+  String get play => '播放';
+
+  @override
+  String get pause => '暂停';
+
+  @override
+  String get monthBack => '提前 30 天';
+
+  @override
+  String get monthForward => '推后 30 天';
+
+  @override
+  String get positionsNote => '这一天的真实位置 · 大小和距离未按比例 · 点按行星';
+
+  @override
+  String get navYou => '我';
+
+  @override
+  String get ageTitle => '你在其他行星上的年龄';
+
+  @override
+  String get setBirthDate => '设置你的生日';
+
+  @override
+  String get changeBirthDate => '更改';
+
+  @override
+  String nextBirthday(String days) {
+    return '$days 天后过下一个生日';
+  }
+
+  @override
+  String get ageNote => '你的生日只保存在这部手机上。';
 }

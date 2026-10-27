@@ -472,4 +472,42 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get tryAgain => '再試行';
+
+  @override
+  String get today => '今日';
+
+  @override
+  String get play => '再生';
+
+  @override
+  String get pause => '一時停止';
+
+  @override
+  String get monthBack => '30 日前';
+
+  @override
+  String get monthForward => '30 日後';
+
+  @override
+  String get positionsNote => 'この日の実際の位置 · 大きさと距離は縮尺どおりではありません · 惑星をタップ';
+
+  @override
+  String get navYou => 'あなた';
+
+  @override
+  String get ageTitle => 'ほかの惑星でのあなたの年齢';
+
+  @override
+  String get setBirthDate => '誕生日を設定';
+
+  @override
+  String get changeBirthDate => '変更';
+
+  @override
+  String nextBirthday(String days) {
+    return '次の誕生日まであと $days 日';
+  }
+
+  @override
+  String get ageNote => '誕生日はこのスマホにだけ保存されます。';
 }

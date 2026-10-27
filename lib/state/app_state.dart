@@ -64,6 +64,9 @@ class AppState extends ChangeNotifier {
   Future<void> setAutoUpdateCheck(bool value) =>
       _update(_settings.copyWith(autoUpdateCheck: value));
 
+  Future<void> setBirthDate(DateTime date) => _update(
+      _settings.copyWith(birthDateMs: date.millisecondsSinceEpoch));
+
   /// Keeps the best quiz score. Returns true when [score] is a new best.
   Future<bool> recordQuizScore(int score) async {
     if (score <= _settings.bestQuizScore) {

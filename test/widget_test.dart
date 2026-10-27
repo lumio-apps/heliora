@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:heliora/core/format.dart';
 import 'package:heliora/core/habitability.dart';
+import 'package:heliora/core/orbits.dart';
 import 'package:heliora/core/quiz.dart';
 import 'package:heliora/core/version.dart';
 import 'package:heliora/data/planets.dart';
@@ -110,6 +111,48 @@ void main() {
     });
   });
 
+  group('real positions', () {
+    test('Earth at J2000 and at the March equinox', () {
+      expect(heliocentricLongitude('earth', DateTime.utc(2000, 1, 1, 12)),
+          closeTo(100.4, 0.5));
+      expect(heliocentricLongitude('earth', DateTime.utc(2026, 3, 20, 15)),
+          closeTo(180, 1));
+    });
+
+    test('planets line up with Earth at opposition', () {
+      double gap(String id, DateTime d) {
+        final diff = (heliocentricLongitude(id, d) -
+                    heliocentricLongitude('earth', d))
+                .abs() %
+            360;
+        return diff > 180 ? 360 - diff : diff;
+      }
+
+      expect(gap('mars', DateTime.utc(2025, 1, 16)), lessThan(2));
+      expect(gap('jupiter', DateTime.utc(2026, 1, 10)), lessThan(2));
+      expect(gap('saturn', DateTime.utc(2025, 9, 21)), lessThan(2));
+    });
+
+    test('every planet has an orbit and dates are kept in range', () {
+      for (final planet in planets) {
+        expect(hasOrbit(planet.id), isTrue, reason: planet.id);
+      }
+      expect(hasOrbit('moon'), isFalse);
+      expect(clampOrbitDate(DateTime.utc(1700)), orbitMinDate);
+      expect(clampOrbitDate(DateTime.utc(2100)), orbitMaxDate);
+    });
+
+    test('age on other planets', () {
+      final birth = DateTime.utc(2000, 1, 1);
+      final now = DateTime.utc(2020, 1, 1);
+      expect(ageOn(birth, now, 365.25), closeTo(20, 0.01));
+      expect(ageOn(birth, now, 88), closeTo(83, 0.1));
+      final days = daysToNextBirthday(birth, now, 88);
+      expect(days, greaterThan(0));
+      expect(days, lessThanOrEqualTo(88));
+    });
+  });
+
   group('versions', () {
     test('newer and older', () {
       expect(isNewerVersion('v1.0.1', '1.0.0'), isTrue);
@@ -158,6 +201,7 @@ void main() {
         autoUpdateCheck: false,
         lastUpdateCheckMs: 42,
         bestQuizScore: 7,
+        birthDateMs: 946728000000,
       );
       final back = HelioraSettings.fromJson(s.toJson());
       expect(back.themeMode, ThemeMode.dark);
@@ -166,6 +210,8 @@ void main() {
       expect(back.autoUpdateCheck, isFalse);
       expect(back.lastUpdateCheckMs, 42);
       expect(back.bestQuizScore, 7);
+      expect(back.birthDateMs, 946728000000);
+      expect(back.birthDate, isNotNull);
     });
 
     test('broken values fall back to defaults', () {

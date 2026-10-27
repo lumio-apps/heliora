@@ -477,4 +477,43 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get tryAgain => 'ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ';
+
+  @override
+  String get today => 'ਅੱਜ';
+
+  @override
+  String get play => 'ਚਲਾਓ';
+
+  @override
+  String get pause => 'ਰੋਕੋ';
+
+  @override
+  String get monthBack => '30 ਦਿਨ ਪਹਿਲਾਂ';
+
+  @override
+  String get monthForward => '30 ਦਿਨ ਬਾਅਦ';
+
+  @override
+  String get positionsNote =>
+      'ਇਸ ਤਾਰੀਖ਼ ਦੀ ਅਸਲ ਸਥਿਤੀ · ਆਕਾਰ ਅਤੇ ਦੂਰੀ ਪੈਮਾਨੇ ਮੁਤਾਬਕ ਨਹੀਂ · ਗ੍ਰਹਿ ’ਤੇ ਟੈਪ ਕਰੋ';
+
+  @override
+  String get navYou => 'ਤੁਸੀਂ';
+
+  @override
+  String get ageTitle => 'ਹੋਰ ਗ੍ਰਹਿਆਂ ’ਤੇ ਤੁਹਾਡੀ ਉਮਰ';
+
+  @override
+  String get setBirthDate => 'ਆਪਣੀ ਜਨਮ ਤਾਰੀਖ਼ ਪਾਓ';
+
+  @override
+  String get changeBirthDate => 'ਬਦਲੋ';
+
+  @override
+  String nextBirthday(String days) {
+    return 'ਅਗਲਾ ਜਨਮਦਿਨ $days ਦਿਨਾਂ ਵਿੱਚ';
+  }
+
+  @override
+  String get ageNote => 'ਤੁਹਾਡੀ ਜਨਮ ਤਾਰੀਖ਼ ਸਿਰਫ਼ ਇਸ ਫ਼ੋਨ ਵਿੱਚ ਸੇਵ ਹੁੰਦੀ ਹੈ।';
 }

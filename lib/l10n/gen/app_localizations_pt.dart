@@ -479,4 +479,43 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get tryAgain => 'Tentar de novo';
+
+  @override
+  String get today => 'Hoje';
+
+  @override
+  String get play => 'Reproduzir';
+
+  @override
+  String get pause => 'Pausar';
+
+  @override
+  String get monthBack => '30 dias antes';
+
+  @override
+  String get monthForward => '30 dias depois';
+
+  @override
+  String get positionsNote =>
+      'Posições reais nesta data · Tamanhos e distâncias fora de escala · Toque num planeta';
+
+  @override
+  String get navYou => 'Você';
+
+  @override
+  String get ageTitle => 'Sua idade em outros planetas';
+
+  @override
+  String get setBirthDate => 'Informe sua data de nascimento';
+
+  @override
+  String get changeBirthDate => 'Alterar';
+
+  @override
+  String nextBirthday(String days) {
+    return 'Próximo aniversário em $days dias';
+  }
+
+  @override
+  String get ageNote => 'Sua data de nascimento fica salva só neste telefone.';
 }

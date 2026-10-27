@@ -477,4 +477,43 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get tryAgain => 'फिर कोशिश करें';
+
+  @override
+  String get today => 'आज';
+
+  @override
+  String get play => 'चलाएँ';
+
+  @override
+  String get pause => 'रोकें';
+
+  @override
+  String get monthBack => '30 दिन पहले';
+
+  @override
+  String get monthForward => '30 दिन बाद';
+
+  @override
+  String get positionsNote =>
+      'इस तारीख़ पर असली स्थिति · आकार और दूरी पैमाने पर नहीं · ग्रह पर टैप करें';
+
+  @override
+  String get navYou => 'आप';
+
+  @override
+  String get ageTitle => 'दूसरे ग्रहों पर आपकी उम्र';
+
+  @override
+  String get setBirthDate => 'अपनी जन्मतिथि डालें';
+
+  @override
+  String get changeBirthDate => 'बदलें';
+
+  @override
+  String nextBirthday(String days) {
+    return 'अगला जन्मदिन $days दिन में';
+  }
+
+  @override
+  String get ageNote => 'आपकी जन्मतिथि सिर्फ़ इसी फ़ोन में सेव होती है।';
 }

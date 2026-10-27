@@ -483,4 +483,43 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get tryAgain => 'വീണ്ടും ശ്രമിക്കുക';
+
+  @override
+  String get today => 'ഇന്ന്';
+
+  @override
+  String get play => 'പ്ലേ';
+
+  @override
+  String get pause => 'നിർത്തുക';
+
+  @override
+  String get monthBack => '30 ദിവസം മുമ്പ്';
+
+  @override
+  String get monthForward => '30 ദിവസം കഴിഞ്ഞ്';
+
+  @override
+  String get positionsNote =>
+      'ഈ തീയതിയിലെ യഥാർത്ഥ സ്ഥാനങ്ങൾ · വലിപ്പവും ദൂരവും അളവിനനുസരിച്ചല്ല · ഗ്രഹത്തിൽ ടാപ്പ് ചെയ്യുക';
+
+  @override
+  String get navYou => 'നിങ്ങൾ';
+
+  @override
+  String get ageTitle => 'മറ്റ് ഗ്രഹങ്ങളിൽ നിങ്ങളുടെ പ്രായം';
+
+  @override
+  String get setBirthDate => 'നിങ്ങളുടെ ജനനത്തീയതി നൽകുക';
+
+  @override
+  String get changeBirthDate => 'മാറ്റുക';
+
+  @override
+  String nextBirthday(String days) {
+    return 'അടുത്ത ജന്മദിനം $days ദിവസത്തിൽ';
+  }
+
+  @override
+  String get ageNote => 'നിങ്ങളുടെ ജനനത്തീയതി ഈ ഫോണിൽ മാത്രം സൂക്ഷിക്കും.';
 }

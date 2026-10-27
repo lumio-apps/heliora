@@ -479,4 +479,43 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get tryAgain => 'ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ';
+
+  @override
+  String get today => 'ಇಂದು';
+
+  @override
+  String get play => 'ಚಾಲನೆ';
+
+  @override
+  String get pause => 'ವಿರಾಮ';
+
+  @override
+  String get monthBack => '30 ದಿನ ಹಿಂದೆ';
+
+  @override
+  String get monthForward => '30 ದಿನ ಮುಂದೆ';
+
+  @override
+  String get positionsNote =>
+      'ಈ ದಿನಾಂಕದ ನಿಜವಾದ ಸ್ಥಾನಗಳು · ಗಾತ್ರ ಮತ್ತು ದೂರ ಅಳತೆಗೆ ತಕ್ಕಂತೆ ಇಲ್ಲ · ಗ್ರಹವನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ';
+
+  @override
+  String get navYou => 'ನೀವು';
+
+  @override
+  String get ageTitle => 'ಬೇರೆ ಗ್ರಹಗಳಲ್ಲಿ ನಿಮ್ಮ ವಯಸ್ಸು';
+
+  @override
+  String get setBirthDate => 'ನಿಮ್ಮ ಜನ್ಮದಿನಾಂಕ ಹಾಕಿ';
+
+  @override
+  String get changeBirthDate => 'ಬದಲಿಸಿ';
+
+  @override
+  String nextBirthday(String days) {
+    return 'ಮುಂದಿನ ಹುಟ್ಟುಹಬ್ಬ $days ದಿನಗಳಲ್ಲಿ';
+  }
+
+  @override
+  String get ageNote => 'ನಿಮ್ಮ ಜನ್ಮದಿನಾಂಕ ಈ ಫೋನ್‌ನಲ್ಲಿ ಮಾತ್ರ ಉಳಿಯುತ್ತದೆ.';
 }

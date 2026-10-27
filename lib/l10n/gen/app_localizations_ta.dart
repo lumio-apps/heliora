@@ -482,4 +482,44 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get tryAgain => 'மீண்டும் முயல்';
+
+  @override
+  String get today => 'இன்று';
+
+  @override
+  String get play => 'இயக்கு';
+
+  @override
+  String get pause => 'நிறுத்து';
+
+  @override
+  String get monthBack => '30 நாள் முன்';
+
+  @override
+  String get monthForward => '30 நாள் பின்';
+
+  @override
+  String get positionsNote =>
+      'இந்தத் தேதியில் உண்மையான இடங்கள் · அளவும் தூரமும் அளவுப்படி இல்லை · கிரகத்தைத் தட்டவும்';
+
+  @override
+  String get navYou => 'நீங்கள்';
+
+  @override
+  String get ageTitle => 'மற்ற கிரகங்களில் உங்கள் வயது';
+
+  @override
+  String get setBirthDate => 'உங்கள் பிறந்த தேதியை அமை';
+
+  @override
+  String get changeBirthDate => 'மாற்று';
+
+  @override
+  String nextBirthday(String days) {
+    return 'அடுத்த பிறந்தநாள் $days நாளில்';
+  }
+
+  @override
+  String get ageNote =>
+      'உங்கள் பிறந்த தேதி இந்த ஃபோனில் மட்டுமே சேமிக்கப்படும்.';
 }

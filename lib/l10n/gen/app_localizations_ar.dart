@@ -477,4 +477,43 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get tryAgain => 'حاول مرة أخرى';
+
+  @override
+  String get today => 'اليوم';
+
+  @override
+  String get play => 'تشغيل';
+
+  @override
+  String get pause => 'إيقاف مؤقت';
+
+  @override
+  String get monthBack => 'قبل 30 يومًا';
+
+  @override
+  String get monthForward => 'بعد 30 يومًا';
+
+  @override
+  String get positionsNote =>
+      'المواقع الحقيقية في هذا التاريخ · الأحجام والمسافات ليست بمقياس حقيقي · اضغط على كوكب';
+
+  @override
+  String get navYou => 'أنت';
+
+  @override
+  String get ageTitle => 'عمرك على الكواكب الأخرى';
+
+  @override
+  String get setBirthDate => 'أدخل تاريخ ميلادك';
+
+  @override
+  String get changeBirthDate => 'تغيير';
+
+  @override
+  String nextBirthday(String days) {
+    return 'عيد ميلادك القادم بعد $days يوم';
+  }
+
+  @override
+  String get ageNote => 'يُحفظ تاريخ ميلادك على هذا الهاتف فقط.';
 }

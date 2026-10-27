@@ -480,4 +480,43 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get tryAgain => 'Повторить';
+
+  @override
+  String get today => 'Сегодня';
+
+  @override
+  String get play => 'Пуск';
+
+  @override
+  String get pause => 'Пауза';
+
+  @override
+  String get monthBack => 'На 30 дней раньше';
+
+  @override
+  String get monthForward => 'На 30 дней позже';
+
+  @override
+  String get positionsNote =>
+      'Реальные положения на эту дату · Размеры и расстояния не в масштабе · Нажмите на планету';
+
+  @override
+  String get navYou => 'Вы';
+
+  @override
+  String get ageTitle => 'Ваш возраст на других планетах';
+
+  @override
+  String get setBirthDate => 'Укажите дату рождения';
+
+  @override
+  String get changeBirthDate => 'Изменить';
+
+  @override
+  String nextBirthday(String days) {
+    return 'До следующего дня рождения: $days дн.';
+  }
+
+  @override
+  String get ageNote => 'Дата рождения хранится только на этом телефоне.';
 }

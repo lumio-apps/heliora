@@ -477,4 +477,43 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get tryAgain => 'पुन्हा प्रयत्न करा';
+
+  @override
+  String get today => 'आज';
+
+  @override
+  String get play => 'चालवा';
+
+  @override
+  String get pause => 'थांबवा';
+
+  @override
+  String get monthBack => '30 दिवस आधी';
+
+  @override
+  String get monthForward => '30 दिवस नंतर';
+
+  @override
+  String get positionsNote =>
+      'या तारखेची खरी स्थिती · आकार आणि अंतर प्रमाणात नाही · ग्रहावर टॅप करा';
+
+  @override
+  String get navYou => 'तुम्ही';
+
+  @override
+  String get ageTitle => 'इतर ग्रहांवर तुमचे वय';
+
+  @override
+  String get setBirthDate => 'तुमची जन्मतारीख टाका';
+
+  @override
+  String get changeBirthDate => 'बदला';
+
+  @override
+  String nextBirthday(String days) {
+    return 'पुढचा वाढदिवस $days दिवसांत';
+  }
+
+  @override
+  String get ageNote => 'तुमची जन्मतारीख फक्त या फोनमध्येच सेव्ह होते.';
 }

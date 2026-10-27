@@ -143,5 +143,17 @@
   "installNow": "安装",
   "allowInstalls": "请在打开的页面中允许 Heliora 安装应用，然后返回点按“安装”。",
   "downloadFailed": "下载未完成。请检查网络后重试。",
-  "tryAgain": "重试"
+  "tryAgain": "重试",
+  "today": "今天",
+  "play": "播放",
+  "pause": "暂停",
+  "monthBack": "提前 30 天",
+  "monthForward": "推后 30 天",
+  "positionsNote": "这一天的真实位置 · 大小和距离未按比例 · 点按行星",
+  "navYou": "我",
+  "ageTitle": "你在其他行星上的年龄",
+  "setBirthDate": "设置你的生日",
+  "changeBirthDate": "更改",
+  "nextBirthday": "{days} 天后过下一个生日",
+  "ageNote": "你的生日只保存在这部手机上。"
 }

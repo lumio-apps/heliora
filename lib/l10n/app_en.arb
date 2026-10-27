@@ -261,5 +261,24 @@
         "type": "String"
       }
     }
+  },
+  "today": "Today",
+  "play": "Play",
+  "pause": "Pause",
+  "monthBack": "30 days earlier",
+  "monthForward": "30 days later",
+  "positionsNote": "Real positions on this date · Sizes and distances not to scale · Tap a planet",
+  "navYou": "You",
+  "ageTitle": "Your age on other planets",
+  "setBirthDate": "Set your birth date",
+  "changeBirthDate": "Change",
+  "nextBirthday": "Next birthday in {days} days",
+  "ageNote": "Your birth date is saved only on this phone.",
+  "@nextBirthday": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
   }
 }

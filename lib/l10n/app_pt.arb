@@ -143,5 +143,17 @@
   "installNow": "Instalar",
   "allowInstalls": "Permita que o Heliora instale apps na tela que abriu, depois volte e toque em Instalar.",
   "downloadFailed": "O download não terminou. Verifique a internet e tente de novo.",
-  "tryAgain": "Tentar de novo"
+  "tryAgain": "Tentar de novo",
+  "today": "Hoje",
+  "play": "Reproduzir",
+  "pause": "Pausar",
+  "monthBack": "30 dias antes",
+  "monthForward": "30 dias depois",
+  "positionsNote": "Posições reais nesta data · Tamanhos e distâncias fora de escala · Toque num planeta",
+  "navYou": "Você",
+  "ageTitle": "Sua idade em outros planetas",
+  "setBirthDate": "Informe sua data de nascimento",
+  "changeBirthDate": "Alterar",
+  "nextBirthday": "Próximo aniversário em {days} dias",
+  "ageNote": "Sua data de nascimento fica salva só neste telefone."
 }

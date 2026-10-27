@@ -1,62 +1,41 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 
+import '../core/orbits.dart';
 import '../data/planets.dart';
 import '../theme.dart';
 import 'common.dart';
 
-/// Top-down 2D view of the Solar System. Planets move slowly around the Sun
-/// (not to scale); tapping one calls [onPlanetTap].
-class OrbitView extends StatefulWidget {
+/// Top-down 2D view of the Solar System, seen from above the Sun's north
+/// pole. Each planet sits at its real direction from the Sun on [date];
+/// sizes and distances are not to scale. Tapping a planet calls
+/// [onPlanetTap].
+class OrbitView extends StatelessWidget {
   const OrbitView({
     super.key,
+    required this.date,
     required this.selectedId,
     required this.onPlanetTap,
     required this.nameOf,
   });
 
+  final DateTime date;
   final String selectedId;
   final ValueChanged<Planet> onPlanetTap;
   final String Function(Planet planet) nameOf;
-
-  @override
-  State<OrbitView> createState() => _OrbitViewState();
-}
-
-class _OrbitViewState extends State<OrbitView>
-    with SingleTickerProviderStateMixin {
-  final ValueNotifier<double> _time = ValueNotifier<double>(0);
-  late final Ticker _ticker;
-
-  @override
-  void initState() {
-    super.initState();
-    _ticker = createTicker((elapsed) {
-      _time.value = elapsed.inMicroseconds / 1e6;
-    })
-      ..start();
-  }
-
-  @override
-  void dispose() {
-    _ticker.dispose();
-    _time.dispose();
-    super.dispose();
-  }
 
   void _handleTap(TapUpDetails details, Size size) {
     final layout = OrbitLayout(size);
     if ((details.localPosition - layout.center).distance <
         layout.sunRadius + 8) {
-      widget.onPlanetTap(planetById('sun'));
+      onPlanetTap(planetById('sun'));
       return;
     }
     Planet? best;
     var bestDistance = double.infinity;
     for (final planet in planets) {
-      final position = layout.position(planet, _time.value);
+      final position = layout.position(planet, date);
       final distance = (position - details.localPosition).distance;
       final reach = math.max(layout.planetRadius(planet) + 14, 24.0);
       if (distance < reach && distance < bestDistance) {
@@ -65,7 +44,7 @@ class _OrbitViewState extends State<OrbitView>
       }
     }
     if (best != null) {
-      widget.onPlanetTap(best);
+      onPlanetTap(best);
     }
   }
 
@@ -82,10 +61,10 @@ class _OrbitViewState extends State<OrbitView>
           child: CustomPaint(
             size: size,
             painter: _OrbitPainter(
-              time: _time,
+              date: date,
               palette: palette,
-              selectedId: widget.selectedId,
-              selectedName: widget.nameOf(planetById(widget.selectedId)),
+              selectedId: selectedId,
+              selectedName: nameOf(planetById(selectedId)),
               textColor: textColor,
             ),
           ),
@@ -115,16 +94,17 @@ class OrbitLayout {
     return (2.6 + scale * 1.9).clamp(3.0, 11.0).toDouble();
   }
 
-  /// Angle in radians at [seconds]. Inner planets move faster, but the
-  /// difference is softened so the outer ones still visibly move.
-  double angle(Planet planet, double seconds) {
-    final speed = 0.25 * math.sqrt(365.2 / planet.yearDays);
-    final start = planet.order * 2.3;
-    return start - seconds * speed;
+  /// Screen angle in radians on [date]. Planets go round anticlockwise, as
+  /// seen from above; the screen's y axis points down, hence the minus.
+  double angle(Planet planet, DateTime date) {
+    final degrees = hasOrbit(planet.id)
+        ? heliocentricLongitude(planet.id, clampOrbitDate(date))
+        : 0.0;
+    return -degrees * math.pi / 180;
   }
 
-  Offset position(Planet planet, double seconds) {
-    final a = angle(planet, seconds);
+  Offset position(Planet planet, DateTime date) {
+    final a = angle(planet, date);
     final r = orbitRadius(planet);
     return center + Offset(math.cos(a) * r, math.sin(a) * r);
   }
@@ -132,14 +112,14 @@ class OrbitLayout {
 
 class _OrbitPainter extends CustomPainter {
   _OrbitPainter({
-    required this.time,
+    required this.date,
     required this.palette,
     required this.selectedId,
     required this.selectedName,
     required this.textColor,
-  }) : super(repaint: time);
+  });
 
-  final ValueNotifier<double> time;
+  final DateTime date;
   final Palette palette;
   final String selectedId;
   final String selectedName;
@@ -154,7 +134,6 @@ class _OrbitPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final layout = OrbitLayout(size);
-    final t = time.value;
 
     if (palette.star.a > 0) {
       final starPaint = Paint()..color = palette.star;
@@ -186,7 +165,7 @@ class _OrbitPainter extends CustomPainter {
         layout.center, layout.sunRadius, Paint()..color = palette.accent);
 
     for (final planet in planets) {
-      final position = layout.position(planet, t);
+      final position = layout.position(planet, date);
       final radius = layout.planetRadius(planet);
       paintPlanetBall(canvas, planet, position, radius);
       if (planet.id == selectedId) {
@@ -237,6 +216,7 @@ class _OrbitPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant _OrbitPainter oldDelegate) =>
+      oldDelegate.date != date ||
       oldDelegate.palette != palette ||
       oldDelegate.selectedId != selectedId ||
       oldDelegate.selectedName != selectedName;

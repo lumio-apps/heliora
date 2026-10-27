@@ -479,4 +479,43 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get tryAgain => 'Coba lagi';
+
+  @override
+  String get today => 'Hari ini';
+
+  @override
+  String get play => 'Putar';
+
+  @override
+  String get pause => 'Jeda';
+
+  @override
+  String get monthBack => '30 hari sebelumnya';
+
+  @override
+  String get monthForward => '30 hari sesudahnya';
+
+  @override
+  String get positionsNote =>
+      'Posisi asli pada tanggal ini · Ukuran dan jarak tidak sesuai skala · Ketuk planet';
+
+  @override
+  String get navYou => 'Anda';
+
+  @override
+  String get ageTitle => 'Umur Anda di planet lain';
+
+  @override
+  String get setBirthDate => 'Atur tanggal lahir';
+
+  @override
+  String get changeBirthDate => 'Ubah';
+
+  @override
+  String nextBirthday(String days) {
+    return 'Ulang tahun berikutnya dalam $days hari';
+  }
+
+  @override
+  String get ageNote => 'Tanggal lahir Anda hanya disimpan di ponsel ini.';
 }

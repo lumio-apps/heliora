@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../core/format.dart';
+import '../core/orbits.dart';
 import '../data/planets.dart';
 import '../l10n/names.dart';
+import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 
-/// What the user would weigh on every planet.
+/// What the user would weigh, and how old they would be, on other worlds.
 class WeightScreen extends StatefulWidget {
   const WeightScreen({super.key});
 
@@ -109,6 +111,125 @@ class _WeightScreenState extends State<WeightScreen> {
             ),
           ),
           const SizedBox(height: 8),
+        ],
+        const SizedBox(height: 24),
+        const _AgeSection(),
+      ],
+    );
+  }
+}
+
+/// "Your age on other planets": the user's age in each planet's years and
+/// the days until their next birthday there.
+class _AgeSection extends StatelessWidget {
+  const _AgeSection();
+
+  /// Bodies with a year around the Sun: the planets and Pluto.
+  static final List<Planet> _bodies = <Planet>[
+    ...planets,
+    planetById('pluto'),
+  ];
+
+  Future<void> _pick(BuildContext context, DateTime? current) async {
+    final state = AppScope.read(context);
+    final now = DateTime.now();
+    final picked = await showDatePicker(
+      context: context,
+      initialDate: current ?? DateTime(now.year - 20, now.month, now.day),
+      firstDate: DateTime(1900),
+      lastDate: now,
+    );
+    if (picked != null) {
+      await state.setBirthDate(
+          DateTime(picked.year, picked.month, picked.day, 12));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final p = Palette.of(context);
+    final saved = AppScope.of(context).settings.birthDate;
+    final now = DateTime.now();
+    final DateTime? birth =
+        saved != null && saved.isBefore(now) ? saved : null;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        Text(l.ageTitle,
+            style: TextStyle(
+                fontSize: 22, fontWeight: FontWeight.w700, color: p.text)),
+        const SizedBox(height: 12),
+        SurfaceCard(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Row(
+            children: <Widget>[
+              Icon(Icons.cake_outlined, color: p.accentText),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  birth != null
+                      ? MaterialLocalizations.of(context)
+                          .formatMediumDate(birth)
+                      : l.setBirthDate,
+                  style: TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w600, color: p.text),
+                ),
+              ),
+              TextButton(
+                onPressed: () => _pick(context, birth),
+                child:
+                    Text(birth != null ? l.changeBirthDate : l.setBirthDate),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 6),
+        Text(l.ageNote, style: TextStyle(fontSize: 12, color: p.muted)),
+        if (birth != null) ...<Widget>[
+          const SizedBox(height: 12),
+          for (final body in _bodies) ...<Widget>[
+            SurfaceCard(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              borderColor: body.id == 'earth' ? p.accentText : null,
+              child: Row(
+                children: <Widget>[
+                  PlanetBall(planet: body, size: 32),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(planetName(l, body),
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: p.text)),
+                        Text(
+                          l.nextBirthday(formatNumber(context,
+                              daysToNextBirthday(birth, now, body.yearDays))),
+                          style: TextStyle(fontSize: 12, color: p.muted),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Text(
+                    l.valueYears(formatNumber(
+                        context, ageOn(birth, now, body.yearDays),
+                        decimals: body.yearDays > 3000 ? 3 : 1)),
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w700,
+                      color: p.accentText,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 8),
+          ],
         ],
       ],
     );

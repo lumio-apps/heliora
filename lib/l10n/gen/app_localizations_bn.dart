@@ -477,4 +477,43 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get tryAgain => 'আবার চেষ্টা করুন';
+
+  @override
+  String get today => 'আজ';
+
+  @override
+  String get play => 'চালান';
+
+  @override
+  String get pause => 'থামান';
+
+  @override
+  String get monthBack => '৩০ দিন আগে';
+
+  @override
+  String get monthForward => '৩০ দিন পরে';
+
+  @override
+  String get positionsNote =>
+      'এই তারিখে আসল অবস্থান · আকার ও দূরত্ব মাপমতো নয় · গ্রহে ট্যাপ করুন';
+
+  @override
+  String get navYou => 'আপনি';
+
+  @override
+  String get ageTitle => 'অন্য গ্রহে আপনার বয়স';
+
+  @override
+  String get setBirthDate => 'আপনার জন্মতারিখ দিন';
+
+  @override
+  String get changeBirthDate => 'বদলান';
+
+  @override
+  String nextBirthday(String days) {
+    return 'পরের জন্মদিন $days দিন পরে';
+  }
+
+  @override
+  String get ageNote => 'আপনার জন্মতারিখ শুধু এই ফোনেই সেভ থাকে।';
 }

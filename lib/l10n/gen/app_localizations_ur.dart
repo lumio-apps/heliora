@@ -479,4 +479,43 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get tryAgain => 'دوبارہ کوشش کریں';
+
+  @override
+  String get today => 'آج';
+
+  @override
+  String get play => 'چلائیں';
+
+  @override
+  String get pause => 'روکیں';
+
+  @override
+  String get monthBack => '30 دن پہلے';
+
+  @override
+  String get monthForward => '30 دن بعد';
+
+  @override
+  String get positionsNote =>
+      'اس تاریخ پر اصل مقام · سائز اور فاصلہ پیمانے پر نہیں · سیارے پر ٹیپ کریں';
+
+  @override
+  String get navYou => 'آپ';
+
+  @override
+  String get ageTitle => 'دوسرے سیاروں پر آپ کی عمر';
+
+  @override
+  String get setBirthDate => 'اپنی تاریخِ پیدائش درج کریں';
+
+  @override
+  String get changeBirthDate => 'بدلیں';
+
+  @override
+  String nextBirthday(String days) {
+    return 'اگلی سالگرہ $days دن میں';
+  }
+
+  @override
+  String get ageNote => 'آپ کی تاریخِ پیدائش صرف اسی فون میں محفوظ رہتی ہے۔';
 }

@@ -477,4 +477,43 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get tryAgain => 'ફરી પ્રયાસ કરો';
+
+  @override
+  String get today => 'આજે';
+
+  @override
+  String get play => 'ચલાવો';
+
+  @override
+  String get pause => 'રોકો';
+
+  @override
+  String get monthBack => '30 દિવસ પહેલાં';
+
+  @override
+  String get monthForward => '30 દિવસ પછી';
+
+  @override
+  String get positionsNote =>
+      'આ તારીખે ખરી સ્થિતિ · કદ અને અંતર માપ પ્રમાણે નથી · ગ્રહ પર ટૅપ કરો';
+
+  @override
+  String get navYou => 'તમે';
+
+  @override
+  String get ageTitle => 'બીજા ગ્રહો પર તમારી ઉંમર';
+
+  @override
+  String get setBirthDate => 'તમારી જન્મતારીખ નાખો';
+
+  @override
+  String get changeBirthDate => 'બદલો';
+
+  @override
+  String nextBirthday(String days) {
+    return 'આગલો જન્મદિવસ $days દિવસમાં';
+  }
+
+  @override
+  String get ageNote => 'તમારી જન્મતારીખ ફક્ત આ ફોનમાં જ સેવ થાય છે.';
 }

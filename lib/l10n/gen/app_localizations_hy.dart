@@ -480,4 +480,43 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get tryAgain => 'Նորից փորձել';
+
+  @override
+  String get today => 'Այսօր';
+
+  @override
+  String get play => 'Միացնել';
+
+  @override
+  String get pause => 'Դադար';
+
+  @override
+  String get monthBack => '30 օր առաջ';
+
+  @override
+  String get monthForward => '30 օր հետո';
+
+  @override
+  String get positionsNote =>
+      'Իրական դիրքերը այս ամսաթվին · Չափերը և հեռավորությունները մասշտաբով չեն · Հպեք մոլորակին';
+
+  @override
+  String get navYou => 'Դուք';
+
+  @override
+  String get ageTitle => 'Ձեր տարիքը այլ մոլորակների վրա';
+
+  @override
+  String get setBirthDate => 'Նշեք ծննդյան ամսաթիվը';
+
+  @override
+  String get changeBirthDate => 'Փոխել';
+
+  @override
+  String nextBirthday(String days) {
+    return 'Հաջորդ ծննդյան օրը՝ $days օրից';
+  }
+
+  @override
+  String get ageNote => 'Ձեր ծննդյան ամսաթիվը պահվում է միայն այս հեռախոսում։';
 }

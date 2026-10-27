@@ -479,4 +479,43 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tryAgain => 'Try again';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get play => 'Play';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get monthBack => '30 days earlier';
+
+  @override
+  String get monthForward => '30 days later';
+
+  @override
+  String get positionsNote =>
+      'Real positions on this date · Sizes and distances not to scale · Tap a planet';
+
+  @override
+  String get navYou => 'You';
+
+  @override
+  String get ageTitle => 'Your age on other planets';
+
+  @override
+  String get setBirthDate => 'Set your birth date';
+
+  @override
+  String get changeBirthDate => 'Change';
+
+  @override
+  String nextBirthday(String days) {
+    return 'Next birthday in $days days';
+  }
+
+  @override
+  String get ageNote => 'Your birth date is saved only on this phone.';
 }

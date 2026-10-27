@@ -478,4 +478,43 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get tryAgain => 'మళ్లీ ప్రయత్నించండి';
+
+  @override
+  String get today => 'ఈరోజు';
+
+  @override
+  String get play => 'ప్లే';
+
+  @override
+  String get pause => 'ఆపు';
+
+  @override
+  String get monthBack => '30 రోజుల ముందు';
+
+  @override
+  String get monthForward => '30 రోజుల తర్వాత';
+
+  @override
+  String get positionsNote =>
+      'ఈ తేదీన నిజమైన స్థానాలు · పరిమాణం, దూరం స్కేల్ ప్రకారం కాదు · గ్రహంపై నొక్కండి';
+
+  @override
+  String get navYou => 'మీరు';
+
+  @override
+  String get ageTitle => 'ఇతర గ్రహాలపై మీ వయసు';
+
+  @override
+  String get setBirthDate => 'మీ పుట్టిన తేదీ ఇవ్వండి';
+
+  @override
+  String get changeBirthDate => 'మార్చు';
+
+  @override
+  String nextBirthday(String days) {
+    return 'తదుపరి పుట్టినరోజు $days రోజుల్లో';
+  }
+
+  @override
+  String get ageNote => 'మీ పుట్టిన తేదీ ఈ ఫోన్‌లో మాత్రమే సేవ్ అవుతుంది.';
 }

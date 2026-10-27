@@ -143,5 +143,17 @@
   "installNow": "Pasang",
   "allowInstalls": "Izinkan Heliora memasang aplikasi di layar yang terbuka, lalu kembali dan ketuk Pasang.",
   "downloadFailed": "Unduhan tidak selesai. Periksa internet lalu coba lagi.",
-  "tryAgain": "Coba lagi"
+  "tryAgain": "Coba lagi",
+  "today": "Hari ini",
+  "play": "Putar",
+  "pause": "Jeda",
+  "monthBack": "30 hari sebelumnya",
+  "monthForward": "30 hari sesudahnya",
+  "positionsNote": "Posisi asli pada tanggal ini · Ukuran dan jarak tidak sesuai skala · Ketuk planet",
+  "navYou": "Anda",
+  "ageTitle": "Umur Anda di planet lain",
+  "setBirthDate": "Atur tanggal lahir",
+  "changeBirthDate": "Ubah",
+  "nextBirthday": "Ulang tahun berikutnya dalam {days} hari",
+  "ageNote": "Tanggal lahir Anda hanya disimpan di ponsel ini."
 }

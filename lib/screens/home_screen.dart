@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 
 import '../core/format.dart';
 import '../core/habitability.dart';
+import '../core/orbits.dart';
 import '../data/planets.dart';
 import '../data/settings.dart';
 import '../l10n/names.dart';
@@ -74,9 +76,9 @@ class _HomeScreenState extends State<HomeScreen> {
             label: l.navCompare,
           ),
           NavigationDestination(
-            icon: const Icon(Icons.monitor_weight_outlined),
-            selectedIcon: const Icon(Icons.monitor_weight),
-            label: l.navWeight,
+            icon: const Icon(Icons.person_outline),
+            selectedIcon: const Icon(Icons.person),
+            label: l.navYou,
           ),
           NavigationDestination(
             icon: const Icon(Icons.quiz_outlined),
@@ -100,8 +102,83 @@ class ExploreTab extends StatefulWidget {
   State<ExploreTab> createState() => _ExploreTabState();
 }
 
-class _ExploreTabState extends State<ExploreTab> {
+class _ExploreTabState extends State<ExploreTab>
+    with SingleTickerProviderStateMixin {
   String _selectedId = 'earth';
+
+  /// The date the 2D view shows. Starts at today.
+  DateTime _date = DateTime.now();
+  bool _playing = false;
+  late final Ticker _ticker = createTicker(_tick);
+  Duration _last = Duration.zero;
+
+  /// While playing, time runs this many days per second.
+  static const double _daysPerSecond = 20;
+
+  @override
+  void dispose() {
+    _ticker.dispose();
+    super.dispose();
+  }
+
+  @override
+  void didUpdateWidget(ExploreTab oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (!widget.active && _playing) {
+      // Already rebuilding, so no setState is needed here.
+      _ticker.stop();
+      _playing = false;
+    }
+  }
+
+  void _tick(Duration elapsed) {
+    final seconds = (elapsed - _last).inMicroseconds / 1e6;
+    _last = elapsed;
+    final next = _date.add(Duration(
+        minutes: (seconds * _daysPerSecond * 24 * 60).round()));
+    if (next.isAfter(orbitMaxDate)) {
+      _stop();
+      setState(() => _date = orbitMaxDate.toLocal());
+      return;
+    }
+    setState(() => _date = next);
+  }
+
+  void _togglePlay() {
+    if (_playing) {
+      _stop();
+    } else {
+      _last = Duration.zero;
+      _ticker.start();
+      setState(() => _playing = true);
+    }
+  }
+
+  void _stop() {
+    _ticker.stop();
+    if (mounted) {
+      setState(() => _playing = false);
+    }
+  }
+
+  void _setDate(DateTime date) {
+    if (_playing) {
+      _stop();
+    }
+    setState(() => _date = clampOrbitDate(date.toUtc()).toLocal());
+  }
+
+  Future<void> _pickDate() async {
+    final picked = await showDatePicker(
+      context: context,
+      initialDate: _date,
+      firstDate: orbitMinDate.toLocal(),
+      lastDate: orbitMaxDate.toLocal(),
+    );
+    if (picked != null) {
+      _setDate(DateTime(picked.year, picked.month, picked.day, 12));
+    }
+  }
 
   void _openPlanet(Planet planet) {
     setState(() => _selectedId = planet.id);
@@ -164,6 +241,7 @@ class _ExploreTabState extends State<ExploreTab> {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: mode == ViewMode.flat
                       ? OrbitView(
+                          date: _date,
                           selectedId: _selectedId,
                           onPlanetTap: _openPlanet,
                           nameOf: (planet) => planetName(l, planet),
@@ -171,10 +249,20 @@ class _ExploreTabState extends State<ExploreTab> {
                       : GlobeView(planet: selected),
                 ),
         ),
+        if (mode == ViewMode.flat)
+          _DateBar(
+            date: _date,
+            playing: _playing,
+            onPick: _pickDate,
+            onBack: () => _setDate(_date.subtract(const Duration(days: 30))),
+            onForward: () => _setDate(_date.add(const Duration(days: 30))),
+            onPlay: _togglePlay,
+            onToday: () => _setDate(DateTime.now()),
+          ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
           child: Text(
-            mode == ViewMode.flat ? l.notToScale : l.dragToRotate,
+            mode == ViewMode.flat ? l.positionsNote : l.dragToRotate,
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 12, color: p.muted),
           ),
@@ -195,6 +283,82 @@ class _ExploreTabState extends State<ExploreTab> {
           ),
         ],
       ],
+    );
+  }
+}
+
+/// Date controls under the 2D view: back, the date, forward, play, today.
+class _DateBar extends StatelessWidget {
+  const _DateBar({
+    required this.date,
+    required this.playing,
+    required this.onPick,
+    required this.onBack,
+    required this.onForward,
+    required this.onPlay,
+    required this.onToday,
+  });
+
+  final DateTime date;
+  final bool playing;
+  final VoidCallback onPick;
+  final VoidCallback onBack;
+  final VoidCallback onForward;
+  final VoidCallback onPlay;
+  final VoidCallback onToday;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final p = Palette.of(context);
+    final now = DateTime.now();
+    final isToday = date.year == now.year &&
+        date.month == now.month &&
+        date.day == now.day;
+    final text = MaterialLocalizations.of(context).formatMediumDate(date);
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      child: Row(
+        children: <Widget>[
+          IconButton(
+            tooltip: l.monthBack,
+            onPressed: onBack,
+            icon: const Icon(Icons.chevron_left),
+          ),
+          Expanded(
+            child: TextButton.icon(
+              onPressed: onPick,
+              icon: const Icon(Icons.calendar_today_outlined, size: 18),
+              label: Text(
+                text,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                    fontWeight: FontWeight.w600, color: p.text, fontSize: 15),
+              ),
+            ),
+          ),
+          IconButton(
+            tooltip: l.monthForward,
+            onPressed: onForward,
+            icon: const Icon(Icons.chevron_right),
+          ),
+          IconButton.filledTonal(
+            tooltip: playing ? l.pause : l.play,
+            style: IconButton.styleFrom(
+              backgroundColor: playing ? p.accent : p.surface,
+              foregroundColor: playing ? p.onAccent : p.text,
+            ),
+            onPressed: onPlay,
+            icon: Icon(playing ? Icons.pause : Icons.play_arrow),
+          ),
+          const SizedBox(width: 4),
+          TextButton(
+            onPressed: isToday && !playing ? null : onToday,
+            child: Text(l.today),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -19,6 +19,7 @@ class HelioraSettings {
     this.autoUpdateCheck = true,
     this.lastUpdateCheckMs = 0,
     this.bestQuizScore = 0,
+    this.birthDateMs = 0,
   });
 
   final ThemeMode themeMode;
@@ -30,6 +31,14 @@ class HelioraSettings {
   final int lastUpdateCheckMs;
   final int bestQuizScore;
 
+  /// The user's birth date for "your age on other planets", or 0 when not
+  /// set. It never leaves the phone.
+  final int birthDateMs;
+
+  DateTime? get birthDate => birthDateMs == 0
+      ? null
+      : DateTime.fromMillisecondsSinceEpoch(birthDateMs);
+
   HelioraSettings copyWith({
     ThemeMode? themeMode,
     String? localeCode,
@@ -37,6 +46,7 @@ class HelioraSettings {
     bool? autoUpdateCheck,
     int? lastUpdateCheckMs,
     int? bestQuizScore,
+    int? birthDateMs,
   }) {
     return HelioraSettings(
       themeMode: themeMode ?? this.themeMode,
@@ -45,6 +55,7 @@ class HelioraSettings {
       autoUpdateCheck: autoUpdateCheck ?? this.autoUpdateCheck,
       lastUpdateCheckMs: lastUpdateCheckMs ?? this.lastUpdateCheckMs,
       bestQuizScore: bestQuizScore ?? this.bestQuizScore,
+      birthDateMs: birthDateMs ?? this.birthDateMs,
     );
   }
 
@@ -57,6 +68,7 @@ class HelioraSettings {
       'autoUpdateCheck': autoUpdateCheck,
       'lastUpdateCheckMs': lastUpdateCheckMs,
       'bestQuizScore': bestQuizScore,
+      'birthDateMs': birthDateMs,
     };
   }
 
@@ -80,6 +92,7 @@ class HelioraSettings {
     final auto = json['autoUpdateCheck'];
     final last = json['lastUpdateCheckMs'];
     final best = json['bestQuizScore'];
+    final birth = json['birthDateMs'];
     return HelioraSettings(
       themeMode: theme,
       localeCode: locale is String ? locale : d.localeCode,
@@ -87,6 +100,7 @@ class HelioraSettings {
       autoUpdateCheck: auto is bool ? auto : d.autoUpdateCheck,
       lastUpdateCheckMs: last is int ? last : d.lastUpdateCheckMs,
       bestQuizScore: best is int ? best : d.bestQuizScore,
+      birthDateMs: birth is int ? birth : d.birthDateMs,
     );
   }
 }

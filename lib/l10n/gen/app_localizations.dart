@@ -997,6 +997,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Try again'**
   String get tryAgain;
+
+  /// No description provided for @today.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get today;
+
+  /// No description provided for @play.
+  ///
+  /// In en, this message translates to:
+  /// **'Play'**
+  String get play;
+
+  /// No description provided for @pause.
+  ///
+  /// In en, this message translates to:
+  /// **'Pause'**
+  String get pause;
+
+  /// No description provided for @monthBack.
+  ///
+  /// In en, this message translates to:
+  /// **'30 days earlier'**
+  String get monthBack;
+
+  /// No description provided for @monthForward.
+  ///
+  /// In en, this message translates to:
+  /// **'30 days later'**
+  String get monthForward;
+
+  /// No description provided for @positionsNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Real positions on this date · Sizes and distances not to scale · Tap a planet'**
+  String get positionsNote;
+
+  /// No description provided for @navYou.
+  ///
+  /// In en, this message translates to:
+  /// **'You'**
+  String get navYou;
+
+  /// No description provided for @ageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your age on other planets'**
+  String get ageTitle;
+
+  /// No description provided for @setBirthDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Set your birth date'**
+  String get setBirthDate;
+
+  /// No description provided for @changeBirthDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Change'**
+  String get changeBirthDate;
+
+  /// No description provided for @nextBirthday.
+  ///
+  /// In en, this message translates to:
+  /// **'Next birthday in {days} days'**
+  String nextBirthday(String days);
+
+  /// No description provided for @ageNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Your birth date is saved only on this phone.'**
+  String get ageNote;
 }
 
 class _AppLocalizationsDelegate
