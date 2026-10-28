@@ -569,4 +569,131 @@ class AppLocalizationsEs extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a y $b tienen casi el mismo tamaño.';
   }
+
+  @override
+  String get navSky => 'Cielo';
+
+  @override
+  String get skyTitle => 'El cielo de esta noche';
+
+  @override
+  String get chooseCity => 'Elige tu ciudad';
+
+  @override
+  String get chooseCityHint =>
+      'Elige la ciudad más cercana para ver la Luna y los planetas visibles esta noche. No se necesita permiso de ubicación y se queda en tu teléfono.';
+
+  @override
+  String get searchCity => 'Buscar ciudad';
+
+  @override
+  String get noCityFound => 'No se encontró ninguna ciudad';
+
+  @override
+  String get cityNote =>
+      'Las horas están en la zona horaria de tu teléfono. Un planeta cuenta como visible si está al menos 5° sobre el horizonte con el cielo oscuro.';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% iluminada';
+  }
+
+  @override
+  String get moonrise => 'Salida de la Luna';
+
+  @override
+  String get moonset => 'Puesta de la Luna';
+
+  @override
+  String get sunset => 'Puesta de sol';
+
+  @override
+  String get sunrise => 'Salida del sol';
+
+  @override
+  String get nextFull => 'Próxima luna llena';
+
+  @override
+  String get nextNew => 'Próxima luna nueva';
+
+  @override
+  String get phaseNew => 'Luna nueva';
+
+  @override
+  String get phaseWaxingCrescent => 'Creciente';
+
+  @override
+  String get phaseFirstQuarter => 'Cuarto creciente';
+
+  @override
+  String get phaseWaxingGibbous => 'Gibosa creciente';
+
+  @override
+  String get phaseFull => 'Luna llena';
+
+  @override
+  String get phaseWaningGibbous => 'Gibosa menguante';
+
+  @override
+  String get phaseLastQuarter => 'Cuarto menguante';
+
+  @override
+  String get phaseWaningCrescent => 'Menguante';
+
+  @override
+  String get planetsTonight => 'Planetas esta noche';
+
+  @override
+  String get statusVisible => 'Visible esta noche';
+
+  @override
+  String get statusEvening => 'Al atardecer, tras la puesta de sol';
+
+  @override
+  String get statusMorning => 'Al amanecer, antes de la salida del sol';
+
+  @override
+  String get statusNotVisible => 'No visible esta noche';
+
+  @override
+  String bestAt(String time) {
+    return 'Mejor a las $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction, a $degrees° de altura';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'Sale $rise · Se pone $set';
+  }
+
+  @override
+  String get needsTelescope => 'Hacen falta prismáticos o telescopio';
+
+  @override
+  String get dirN => 'Norte';
+
+  @override
+  String get dirNE => 'Noreste';
+
+  @override
+  String get dirE => 'Este';
+
+  @override
+  String get dirSE => 'Sureste';
+
+  @override
+  String get dirS => 'Sur';
+
+  @override
+  String get dirSW => 'Suroeste';
+
+  @override
+  String get dirW => 'Oeste';
+
+  @override
+  String get dirNW => 'Noroeste';
 }

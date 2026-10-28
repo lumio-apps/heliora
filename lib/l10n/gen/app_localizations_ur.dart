@@ -567,4 +567,131 @@ class AppLocalizationsUr extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a اور $b تقریباً ایک جتنے بڑے ہیں۔';
   }
+
+  @override
+  String get navSky => 'آسمان';
+
+  @override
+  String get skyTitle => 'آج رات کا آسمان';
+
+  @override
+  String get chooseCity => 'اپنا شہر چنیں';
+
+  @override
+  String get chooseCityHint =>
+      'چاند اور آج رات نظر آنے والے سیارے دیکھنے کے لیے قریبی شہر چنیں۔ لوکیشن کی اجازت نہیں چاہیے، اور یہ فون میں ہی رہتا ہے۔';
+
+  @override
+  String get searchCity => 'شہر تلاش کریں';
+
+  @override
+  String get noCityFound => 'کوئی شہر نہیں ملا';
+
+  @override
+  String get cityNote =>
+      'اوقات آپ کے فون کے ٹائم زون میں ہیں۔ اندھیرے آسمان میں افق سے کم از کم 5° اوپر ہونے پر سیارہ نظر آنے والا مانا جاتا ہے۔';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% روشن';
+  }
+
+  @override
+  String get moonrise => 'چاند نکلنا';
+
+  @override
+  String get moonset => 'چاند ڈوبنا';
+
+  @override
+  String get sunset => 'غروبِ آفتاب';
+
+  @override
+  String get sunrise => 'طلوعِ آفتاب';
+
+  @override
+  String get nextFull => 'اگلا پورا چاند';
+
+  @override
+  String get nextNew => 'اگلا نیا چاند';
+
+  @override
+  String get phaseNew => 'نیا چاند';
+
+  @override
+  String get phaseWaxingCrescent => 'بڑھتا ہلال';
+
+  @override
+  String get phaseFirstQuarter => 'پہلا چوتھائی';
+
+  @override
+  String get phaseWaxingGibbous => 'بڑھتا چاند';
+
+  @override
+  String get phaseFull => 'پورا چاند';
+
+  @override
+  String get phaseWaningGibbous => 'گھٹتا چاند';
+
+  @override
+  String get phaseLastQuarter => 'آخری چوتھائی';
+
+  @override
+  String get phaseWaningCrescent => 'گھٹتا ہلال';
+
+  @override
+  String get planetsTonight => 'آج رات کے سیارے';
+
+  @override
+  String get statusVisible => 'آج رات نظر آئے گا';
+
+  @override
+  String get statusEvening => 'شام کو، غروب کے بعد';
+
+  @override
+  String get statusMorning => 'صبح، طلوع سے پہلے';
+
+  @override
+  String get statusNotVisible => 'آج رات نظر نہیں آئے گا';
+
+  @override
+  String bestAt(String time) {
+    return 'بہترین وقت $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction، $degrees° بلند';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'طلوع $rise · غروب $set';
+  }
+
+  @override
+  String get needsTelescope => 'دوربین یا ٹیلی اسکوپ چاہیے';
+
+  @override
+  String get dirN => 'شمال';
+
+  @override
+  String get dirNE => 'شمال مشرق';
+
+  @override
+  String get dirE => 'مشرق';
+
+  @override
+  String get dirSE => 'جنوب مشرق';
+
+  @override
+  String get dirS => 'جنوب';
+
+  @override
+  String get dirSW => 'جنوب مغرب';
+
+  @override
+  String get dirW => 'مغرب';
+
+  @override
+  String get dirNW => 'شمال مغرب';
 }

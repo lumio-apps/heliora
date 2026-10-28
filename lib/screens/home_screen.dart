@@ -16,6 +16,7 @@ import 'compare_screen.dart';
 import 'planet_screen.dart';
 import 'quiz_screen.dart';
 import 'settings_screen.dart';
+import 'sky_screen.dart';
 import 'update_dialog.dart';
 import 'weight_screen.dart';
 
@@ -55,6 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
           index: _tab,
           children: <Widget>[
             ExploreTab(active: _tab == 0),
+            const SkyScreen(),
             const CompareScreen(),
             const WeightScreen(),
             const QuizScreen(),
@@ -69,6 +71,11 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: const Icon(Icons.public_outlined),
             selectedIcon: const Icon(Icons.public),
             label: l.navExplore,
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.nights_stay_outlined),
+            selectedIcon: const Icon(Icons.nights_stay),
+            label: l.navSky,
           ),
           NavigationDestination(
             icon: const Icon(Icons.bar_chart_outlined),

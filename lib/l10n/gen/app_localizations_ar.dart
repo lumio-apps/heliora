@@ -565,4 +565,131 @@ class AppLocalizationsAr extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a و$b بالحجم نفسه تقريبًا.';
   }
+
+  @override
+  String get navSky => 'السماء';
+
+  @override
+  String get skyTitle => 'سماء الليلة';
+
+  @override
+  String get chooseCity => 'اختر مدينتك';
+
+  @override
+  String get chooseCityHint =>
+      'اختر أقرب مدينة إليك لترى القمر والكواكب الظاهرة الليلة. لا حاجة لإذن الموقع، وتبقى على هاتفك.';
+
+  @override
+  String get searchCity => 'ابحث عن مدينة';
+
+  @override
+  String get noCityFound => 'لم يتم العثور على مدينة';
+
+  @override
+  String get cityNote =>
+      'الأوقات بتوقيت هاتفك. يُعدّ الكوكب ظاهرًا إذا ارتفع 5° على الأقل فوق الأفق في سماء مظلمة.';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% مضاء';
+  }
+
+  @override
+  String get moonrise => 'شروق القمر';
+
+  @override
+  String get moonset => 'غروب القمر';
+
+  @override
+  String get sunset => 'غروب الشمس';
+
+  @override
+  String get sunrise => 'شروق الشمس';
+
+  @override
+  String get nextFull => 'البدر القادم';
+
+  @override
+  String get nextNew => 'المحاق القادم';
+
+  @override
+  String get phaseNew => 'محاق';
+
+  @override
+  String get phaseWaxingCrescent => 'هلال متزايد';
+
+  @override
+  String get phaseFirstQuarter => 'تربيع أول';
+
+  @override
+  String get phaseWaxingGibbous => 'أحدب متزايد';
+
+  @override
+  String get phaseFull => 'بدر';
+
+  @override
+  String get phaseWaningGibbous => 'أحدب متناقص';
+
+  @override
+  String get phaseLastQuarter => 'تربيع أخير';
+
+  @override
+  String get phaseWaningCrescent => 'هلال متناقص';
+
+  @override
+  String get planetsTonight => 'كواكب الليلة';
+
+  @override
+  String get statusVisible => 'ظاهر الليلة';
+
+  @override
+  String get statusEvening => 'مساءً، بعد الغروب';
+
+  @override
+  String get statusMorning => 'صباحًا، قبل الشروق';
+
+  @override
+  String get statusNotVisible => 'غير ظاهر الليلة';
+
+  @override
+  String bestAt(String time) {
+    return 'أفضل وقت $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction، على ارتفاع $degrees°';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'يشرق $rise · يغرب $set';
+  }
+
+  @override
+  String get needsTelescope => 'يحتاج إلى منظار أو تلسكوب';
+
+  @override
+  String get dirN => 'الشمال';
+
+  @override
+  String get dirNE => 'الشمال الشرقي';
+
+  @override
+  String get dirE => 'الشرق';
+
+  @override
+  String get dirSE => 'الجنوب الشرقي';
+
+  @override
+  String get dirS => 'الجنوب';
+
+  @override
+  String get dirSW => 'الجنوب الغربي';
+
+  @override
+  String get dirW => 'الغرب';
+
+  @override
+  String get dirNW => 'الشمال الغربي';
 }

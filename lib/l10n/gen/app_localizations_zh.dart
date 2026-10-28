@@ -558,4 +558,129 @@ class AppLocalizationsZh extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a和$b大小差不多。';
   }
+
+  @override
+  String get navSky => '星空';
+
+  @override
+  String get skyTitle => '今晚的星空';
+
+  @override
+  String get chooseCity => '选择你的城市';
+
+  @override
+  String get chooseCityHint => '选择离你最近的城市，查看月亮和今晚能看到的行星。不需要定位权限，数据只保存在手机上。';
+
+  @override
+  String get searchCity => '搜索城市';
+
+  @override
+  String get noCityFound => '没有找到城市';
+
+  @override
+  String get cityNote => '时间采用手机的时区。行星在黑暗天空中高于地平线至少 5° 时算作可见。';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% 被照亮';
+  }
+
+  @override
+  String get moonrise => '月出';
+
+  @override
+  String get moonset => '月落';
+
+  @override
+  String get sunset => '日落';
+
+  @override
+  String get sunrise => '日出';
+
+  @override
+  String get nextFull => '下次满月';
+
+  @override
+  String get nextNew => '下次新月';
+
+  @override
+  String get phaseNew => '新月';
+
+  @override
+  String get phaseWaxingCrescent => '娥眉月';
+
+  @override
+  String get phaseFirstQuarter => '上弦月';
+
+  @override
+  String get phaseWaxingGibbous => '盈凸月';
+
+  @override
+  String get phaseFull => '满月';
+
+  @override
+  String get phaseWaningGibbous => '亏凸月';
+
+  @override
+  String get phaseLastQuarter => '下弦月';
+
+  @override
+  String get phaseWaningCrescent => '残月';
+
+  @override
+  String get planetsTonight => '今晚的行星';
+
+  @override
+  String get statusVisible => '今晚可见';
+
+  @override
+  String get statusEvening => '傍晚，日落后';
+
+  @override
+  String get statusMorning => '清晨，日出前';
+
+  @override
+  String get statusNotVisible => '今晚不可见';
+
+  @override
+  String bestAt(String time) {
+    return '最佳时间 $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction，高度 $degrees°';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return '升起 $rise · 落下 $set';
+  }
+
+  @override
+  String get needsTelescope => '需要双筒望远镜或天文望远镜';
+
+  @override
+  String get dirN => '北';
+
+  @override
+  String get dirNE => '东北';
+
+  @override
+  String get dirE => '东';
+
+  @override
+  String get dirSE => '东南';
+
+  @override
+  String get dirS => '南';
+
+  @override
+  String get dirSW => '西南';
+
+  @override
+  String get dirW => '西';
+
+  @override
+  String get dirNW => '西北';
 }

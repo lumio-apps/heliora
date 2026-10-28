@@ -64,6 +64,9 @@ class AppState extends ChangeNotifier {
   Future<void> setAutoUpdateCheck(bool value) =>
       _update(_settings.copyWith(autoUpdateCheck: value));
 
+  Future<void> setCity(String id) =>
+      _update(_settings.copyWith(cityId: id));
+
   Future<void> setBirthDate(DateTime date) => _update(
       _settings.copyWith(birthDateMs: date.millisecondsSinceEpoch));
 

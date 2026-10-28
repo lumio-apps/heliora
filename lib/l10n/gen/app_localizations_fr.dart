@@ -572,4 +572,131 @@ class AppLocalizationsFr extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a et $b ont à peu près la même taille.';
   }
+
+  @override
+  String get navSky => 'Ciel';
+
+  @override
+  String get skyTitle => 'Le ciel de ce soir';
+
+  @override
+  String get chooseCity => 'Choisissez votre ville';
+
+  @override
+  String get chooseCityHint =>
+      'Choisissez la ville la plus proche pour voir la Lune et les planètes visibles ce soir. Aucune autorisation de position n’est nécessaire et le choix reste sur votre téléphone.';
+
+  @override
+  String get searchCity => 'Rechercher une ville';
+
+  @override
+  String get noCityFound => 'Aucune ville trouvée';
+
+  @override
+  String get cityNote =>
+      'Les heures sont dans le fuseau horaire du téléphone. Une planète est visible si elle est à au moins 5° au-dessus de l’horizon dans un ciel noir.';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent % éclairée';
+  }
+
+  @override
+  String get moonrise => 'Lever de lune';
+
+  @override
+  String get moonset => 'Coucher de lune';
+
+  @override
+  String get sunset => 'Coucher du soleil';
+
+  @override
+  String get sunrise => 'Lever du soleil';
+
+  @override
+  String get nextFull => 'Prochaine pleine lune';
+
+  @override
+  String get nextNew => 'Prochaine nouvelle lune';
+
+  @override
+  String get phaseNew => 'Nouvelle lune';
+
+  @override
+  String get phaseWaxingCrescent => 'Premier croissant';
+
+  @override
+  String get phaseFirstQuarter => 'Premier quartier';
+
+  @override
+  String get phaseWaxingGibbous => 'Gibbeuse croissante';
+
+  @override
+  String get phaseFull => 'Pleine lune';
+
+  @override
+  String get phaseWaningGibbous => 'Gibbeuse décroissante';
+
+  @override
+  String get phaseLastQuarter => 'Dernier quartier';
+
+  @override
+  String get phaseWaningCrescent => 'Dernier croissant';
+
+  @override
+  String get planetsTonight => 'Planètes ce soir';
+
+  @override
+  String get statusVisible => 'Visible ce soir';
+
+  @override
+  String get statusEvening => 'Le soir, après le coucher du soleil';
+
+  @override
+  String get statusMorning => 'Le matin, avant le lever du soleil';
+
+  @override
+  String get statusNotVisible => 'Pas visible ce soir';
+
+  @override
+  String bestAt(String time) {
+    return 'Idéal à $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction, à $degrees° de hauteur';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'Lever $rise · Coucher $set';
+  }
+
+  @override
+  String get needsTelescope => 'Jumelles ou télescope nécessaires';
+
+  @override
+  String get dirN => 'Nord';
+
+  @override
+  String get dirNE => 'Nord-est';
+
+  @override
+  String get dirE => 'Est';
+
+  @override
+  String get dirSE => 'Sud-est';
+
+  @override
+  String get dirS => 'Sud';
+
+  @override
+  String get dirSW => 'Sud-ouest';
+
+  @override
+  String get dirW => 'Ouest';
+
+  @override
+  String get dirNW => 'Nord-ouest';
 }

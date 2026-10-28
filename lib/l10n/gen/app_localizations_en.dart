@@ -567,4 +567,131 @@ class AppLocalizationsEn extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a and $b are about the same size.';
   }
+
+  @override
+  String get navSky => 'Sky';
+
+  @override
+  String get skyTitle => 'Tonight\'s sky';
+
+  @override
+  String get chooseCity => 'Choose your city';
+
+  @override
+  String get chooseCityHint =>
+      'Pick the city nearest to you to see the Moon and which planets you can spot tonight. No location permission is needed, and it stays on your phone.';
+
+  @override
+  String get searchCity => 'Search city';
+
+  @override
+  String get noCityFound => 'No city found';
+
+  @override
+  String get cityNote =>
+      'Times are in your phone\'s time zone. A planet counts as visible when it is at least 5° above the horizon in a dark sky.';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% lit';
+  }
+
+  @override
+  String get moonrise => 'Moonrise';
+
+  @override
+  String get moonset => 'Moonset';
+
+  @override
+  String get sunset => 'Sunset';
+
+  @override
+  String get sunrise => 'Sunrise';
+
+  @override
+  String get nextFull => 'Next full moon';
+
+  @override
+  String get nextNew => 'Next new moon';
+
+  @override
+  String get phaseNew => 'New moon';
+
+  @override
+  String get phaseWaxingCrescent => 'Waxing crescent';
+
+  @override
+  String get phaseFirstQuarter => 'First quarter';
+
+  @override
+  String get phaseWaxingGibbous => 'Waxing gibbous';
+
+  @override
+  String get phaseFull => 'Full moon';
+
+  @override
+  String get phaseWaningGibbous => 'Waning gibbous';
+
+  @override
+  String get phaseLastQuarter => 'Last quarter';
+
+  @override
+  String get phaseWaningCrescent => 'Waning crescent';
+
+  @override
+  String get planetsTonight => 'Planets tonight';
+
+  @override
+  String get statusVisible => 'Visible tonight';
+
+  @override
+  String get statusEvening => 'In the evening, after sunset';
+
+  @override
+  String get statusMorning => 'In the morning, before sunrise';
+
+  @override
+  String get statusNotVisible => 'Not visible tonight';
+
+  @override
+  String bestAt(String time) {
+    return 'Best at $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction, $degrees° high';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'Rises $rise · Sets $set';
+  }
+
+  @override
+  String get needsTelescope => 'Needs binoculars or a telescope';
+
+  @override
+  String get dirN => 'North';
+
+  @override
+  String get dirNE => 'North-east';
+
+  @override
+  String get dirE => 'East';
+
+  @override
+  String get dirSE => 'South-east';
+
+  @override
+  String get dirS => 'South';
+
+  @override
+  String get dirSW => 'South-west';
+
+  @override
+  String get dirW => 'West';
+
+  @override
+  String get dirNW => 'North-west';
 }

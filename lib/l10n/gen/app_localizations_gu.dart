@@ -565,4 +565,131 @@ class AppLocalizationsGu extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a અને $b લગભગ સરખા કદના છે.';
   }
+
+  @override
+  String get navSky => 'આકાશ';
+
+  @override
+  String get skyTitle => 'આજ રાતનું આકાશ';
+
+  @override
+  String get chooseCity => 'તમારું શહેર પસંદ કરો';
+
+  @override
+  String get chooseCityHint =>
+      'ચંદ્ર અને આજ રાતે દેખાતા ગ્રહો જોવા નજીકનું શહેર પસંદ કરો. લોકેશન પરવાનગી જોઈતી નથી, અને તે ફોનમાં જ રહે છે.';
+
+  @override
+  String get searchCity => 'શહેર શોધો';
+
+  @override
+  String get noCityFound => 'કોઈ શહેર મળ્યું નથી';
+
+  @override
+  String get cityNote =>
+      'સમય તમારા ફોનના ટાઇમ ઝોનમાં છે. અંધારા આકાશમાં ક્ષિતિજથી ઓછામાં ઓછું 5° ઉપર હોય તો ગ્રહ દેખાતો ગણાય.';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% પ્રકાશિત';
+  }
+
+  @override
+  String get moonrise => 'ચંદ્રોદય';
+
+  @override
+  String get moonset => 'ચંદ્રાસ્ત';
+
+  @override
+  String get sunset => 'સૂર્યાસ્ત';
+
+  @override
+  String get sunrise => 'સૂર્યોદય';
+
+  @override
+  String get nextFull => 'આગલી પૂનમ';
+
+  @override
+  String get nextNew => 'આગલી અમાસ';
+
+  @override
+  String get phaseNew => 'અમાસ';
+
+  @override
+  String get phaseWaxingCrescent => 'વધતો બીજનો ચંદ્ર';
+
+  @override
+  String get phaseFirstQuarter => 'સુદ આઠમ';
+
+  @override
+  String get phaseWaxingGibbous => 'વધતો ચંદ્ર';
+
+  @override
+  String get phaseFull => 'પૂનમ';
+
+  @override
+  String get phaseWaningGibbous => 'ઘટતો ચંદ્ર';
+
+  @override
+  String get phaseLastQuarter => 'વદ આઠમ';
+
+  @override
+  String get phaseWaningCrescent => 'ઘટતો બીજનો ચંદ્ર';
+
+  @override
+  String get planetsTonight => 'આજ રાતના ગ્રહો';
+
+  @override
+  String get statusVisible => 'આજ રાતે દેખાશે';
+
+  @override
+  String get statusEvening => 'સાંજે, સૂર્યાસ્ત પછી';
+
+  @override
+  String get statusMorning => 'સવારે, સૂર્યોદય પહેલાં';
+
+  @override
+  String get statusNotVisible => 'આજ રાતે નહીં દેખાય';
+
+  @override
+  String bestAt(String time) {
+    return 'શ્રેષ્ઠ સમય $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction, $degrees° ઊંચે';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'ઉદય $rise · અસ્ત $set';
+  }
+
+  @override
+  String get needsTelescope => 'દૂરબીન કે ટેલિસ્કોપ જોઈએ';
+
+  @override
+  String get dirN => 'ઉત્તર';
+
+  @override
+  String get dirNE => 'ઈશાન';
+
+  @override
+  String get dirE => 'પૂર્વ';
+
+  @override
+  String get dirSE => 'અગ્નિ';
+
+  @override
+  String get dirS => 'દક્ષિણ';
+
+  @override
+  String get dirSW => 'નૈઋત્ય';
+
+  @override
+  String get dirW => 'પશ્ચિમ';
+
+  @override
+  String get dirNW => 'વાયવ્ય';
 }

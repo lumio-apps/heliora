@@ -565,4 +565,131 @@ class AppLocalizationsPa extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a ਅਤੇ $b ਲਗਭਗ ਇੱਕੋ ਆਕਾਰ ਦੇ ਹਨ।';
   }
+
+  @override
+  String get navSky => 'ਅਸਮਾਨ';
+
+  @override
+  String get skyTitle => 'ਅੱਜ ਰਾਤ ਦਾ ਅਸਮਾਨ';
+
+  @override
+  String get chooseCity => 'ਆਪਣਾ ਸ਼ਹਿਰ ਚੁਣੋ';
+
+  @override
+  String get chooseCityHint =>
+      'ਚੰਦਰਮਾ ਅਤੇ ਅੱਜ ਰਾਤ ਦਿਸਣ ਵਾਲੇ ਗ੍ਰਹਿ ਦੇਖਣ ਲਈ ਨੇੜਲਾ ਸ਼ਹਿਰ ਚੁਣੋ। ਲੋਕੇਸ਼ਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਚਾਹੀਦੀ, ਅਤੇ ਇਹ ਫ਼ੋਨ ਵਿੱਚ ਹੀ ਰਹਿੰਦਾ ਹੈ।';
+
+  @override
+  String get searchCity => 'ਸ਼ਹਿਰ ਲੱਭੋ';
+
+  @override
+  String get noCityFound => 'ਕੋਈ ਸ਼ਹਿਰ ਨਹੀਂ ਮਿਲਿਆ';
+
+  @override
+  String get cityNote =>
+      'ਸਮਾਂ ਤੁਹਾਡੇ ਫ਼ੋਨ ਦੇ ਟਾਈਮ ਜ਼ੋਨ ਵਿੱਚ ਹੈ। ਹਨੇਰੇ ਅਸਮਾਨ ਵਿੱਚ ਦਿਸਹੱਦੇ ਤੋਂ ਘੱਟੋ-ਘੱਟ 5° ਉੱਪਰ ਹੋਣ ’ਤੇ ਗ੍ਰਹਿ ਦਿਸਦਾ ਮੰਨਿਆ ਜਾਂਦਾ ਹੈ।';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% ਰੌਸ਼ਨ';
+  }
+
+  @override
+  String get moonrise => 'ਚੰਦਰਮਾ ਚੜ੍ਹਨਾ';
+
+  @override
+  String get moonset => 'ਚੰਦਰਮਾ ਛਿਪਣਾ';
+
+  @override
+  String get sunset => 'ਸੂਰਜ ਛਿਪਣਾ';
+
+  @override
+  String get sunrise => 'ਸੂਰਜ ਚੜ੍ਹਨਾ';
+
+  @override
+  String get nextFull => 'ਅਗਲੀ ਪੂਰਨਮਾਸ਼ੀ';
+
+  @override
+  String get nextNew => 'ਅਗਲੀ ਮੱਸਿਆ';
+
+  @override
+  String get phaseNew => 'ਮੱਸਿਆ';
+
+  @override
+  String get phaseWaxingCrescent => 'ਵਧਦਾ ਅੱਧ-ਚੰਨ';
+
+  @override
+  String get phaseFirstQuarter => 'ਸ਼ੁਕਲ ਅਸ਼ਟਮੀ';
+
+  @override
+  String get phaseWaxingGibbous => 'ਵਧਦਾ ਚੰਨ';
+
+  @override
+  String get phaseFull => 'ਪੂਰਨਮਾਸ਼ੀ';
+
+  @override
+  String get phaseWaningGibbous => 'ਘਟਦਾ ਚੰਨ';
+
+  @override
+  String get phaseLastQuarter => 'ਕ੍ਰਿਸ਼ਨ ਅਸ਼ਟਮੀ';
+
+  @override
+  String get phaseWaningCrescent => 'ਘਟਦਾ ਅੱਧ-ਚੰਨ';
+
+  @override
+  String get planetsTonight => 'ਅੱਜ ਰਾਤ ਦੇ ਗ੍ਰਹਿ';
+
+  @override
+  String get statusVisible => 'ਅੱਜ ਰਾਤ ਦਿਸੇਗਾ';
+
+  @override
+  String get statusEvening => 'ਸ਼ਾਮ ਨੂੰ, ਸੂਰਜ ਛਿਪਣ ਤੋਂ ਬਾਅਦ';
+
+  @override
+  String get statusMorning => 'ਸਵੇਰੇ, ਸੂਰਜ ਚੜ੍ਹਨ ਤੋਂ ਪਹਿਲਾਂ';
+
+  @override
+  String get statusNotVisible => 'ਅੱਜ ਰਾਤ ਨਹੀਂ ਦਿਸੇਗਾ';
+
+  @override
+  String bestAt(String time) {
+    return 'ਸਭ ਤੋਂ ਵਧੀਆ ਸਮਾਂ $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction, $degrees° ਉੱਚਾ';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'ਚੜ੍ਹਦਾ $rise · ਛਿਪਦਾ $set';
+  }
+
+  @override
+  String get needsTelescope => 'ਦੂਰਬੀਨ ਜਾਂ ਟੈਲੀਸਕੋਪ ਚਾਹੀਦੀ ਹੈ';
+
+  @override
+  String get dirN => 'ਉੱਤਰ';
+
+  @override
+  String get dirNE => 'ਉੱਤਰ-ਪੂਰਬ';
+
+  @override
+  String get dirE => 'ਪੂਰਬ';
+
+  @override
+  String get dirSE => 'ਦੱਖਣ-ਪੂਰਬ';
+
+  @override
+  String get dirS => 'ਦੱਖਣ';
+
+  @override
+  String get dirSW => 'ਦੱਖਣ-ਪੱਛਮ';
+
+  @override
+  String get dirW => 'ਪੱਛਮ';
+
+  @override
+  String get dirNW => 'ਉੱਤਰ-ਪੱਛਮ';
 }

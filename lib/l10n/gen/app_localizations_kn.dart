@@ -567,4 +567,131 @@ class AppLocalizationsKn extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a ಮತ್ತು $b ಬಹುತೇಕ ಒಂದೇ ಗಾತ್ರ.';
   }
+
+  @override
+  String get navSky => 'ಆಕಾಶ';
+
+  @override
+  String get skyTitle => 'ಇಂದು ರಾತ್ರಿಯ ಆಕಾಶ';
+
+  @override
+  String get chooseCity => 'ನಿಮ್ಮ ನಗರ ಆರಿಸಿ';
+
+  @override
+  String get chooseCityHint =>
+      'ಚಂದ್ರ ಮತ್ತು ಇಂದು ರಾತ್ರಿ ಕಾಣುವ ಗ್ರಹಗಳನ್ನು ನೋಡಲು ಹತ್ತಿರದ ನಗರ ಆರಿಸಿ. ಸ್ಥಳದ ಅನುಮತಿ ಬೇಡ, ಇದು ಫೋನ್‌ನಲ್ಲೇ ಉಳಿಯುತ್ತದೆ.';
+
+  @override
+  String get searchCity => 'ನಗರ ಹುಡುಕಿ';
+
+  @override
+  String get noCityFound => 'ಯಾವ ನಗರವೂ ಸಿಗಲಿಲ್ಲ';
+
+  @override
+  String get cityNote =>
+      'ಸಮಯ ನಿಮ್ಮ ಫೋನ್‌ನ ಟೈಮ್ ಝೋನ್‌ನಲ್ಲಿದೆ. ಕತ್ತಲ ಆಕಾಶದಲ್ಲಿ ದಿಗಂತದಿಂದ ಕನಿಷ್ಠ 5° ಮೇಲಿದ್ದರೆ ಗ್ರಹ ಕಾಣುತ್ತದೆ ಎಂದು ಪರಿಗಣಿಸಲಾಗುತ್ತದೆ.';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% ಬೆಳಕು';
+  }
+
+  @override
+  String get moonrise => 'ಚಂದ್ರೋದಯ';
+
+  @override
+  String get moonset => 'ಚಂದ್ರಾಸ್ತ';
+
+  @override
+  String get sunset => 'ಸೂರ್ಯಾಸ್ತ';
+
+  @override
+  String get sunrise => 'ಸೂರ್ಯೋದಯ';
+
+  @override
+  String get nextFull => 'ಮುಂದಿನ ಹುಣ್ಣಿಮೆ';
+
+  @override
+  String get nextNew => 'ಮುಂದಿನ ಅಮಾವಾಸ್ಯೆ';
+
+  @override
+  String get phaseNew => 'ಅಮಾವಾಸ್ಯೆ';
+
+  @override
+  String get phaseWaxingCrescent => 'ಬೆಳೆಯುವ ಬಿದಿಗೆ ಚಂದ್ರ';
+
+  @override
+  String get phaseFirstQuarter => 'ಶುಕ್ಲ ಅಷ್ಟಮಿ';
+
+  @override
+  String get phaseWaxingGibbous => 'ಬೆಳೆಯುವ ಚಂದ್ರ';
+
+  @override
+  String get phaseFull => 'ಹುಣ್ಣಿಮೆ';
+
+  @override
+  String get phaseWaningGibbous => 'ಕರಗುವ ಚಂದ್ರ';
+
+  @override
+  String get phaseLastQuarter => 'ಕೃಷ್ಣ ಅಷ್ಟಮಿ';
+
+  @override
+  String get phaseWaningCrescent => 'ಕರಗುವ ಬಿದಿಗೆ ಚಂದ್ರ';
+
+  @override
+  String get planetsTonight => 'ಇಂದು ರಾತ್ರಿಯ ಗ್ರಹಗಳು';
+
+  @override
+  String get statusVisible => 'ಇಂದು ರಾತ್ರಿ ಕಾಣುತ್ತದೆ';
+
+  @override
+  String get statusEvening => 'ಸಂಜೆ, ಸೂರ್ಯಾಸ್ತದ ನಂತರ';
+
+  @override
+  String get statusMorning => 'ಬೆಳಿಗ್ಗೆ, ಸೂರ್ಯೋದಯಕ್ಕೆ ಮೊದಲು';
+
+  @override
+  String get statusNotVisible => 'ಇಂದು ರಾತ್ರಿ ಕಾಣುವುದಿಲ್ಲ';
+
+  @override
+  String bestAt(String time) {
+    return 'ಉತ್ತಮ ಸಮಯ $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction, $degrees° ಎತ್ತರ';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'ಉದಯ $rise · ಅಸ್ತ $set';
+  }
+
+  @override
+  String get needsTelescope => 'ಬೈನಾಕ್ಯುಲರ್ ಅಥವಾ ದೂರದರ್ಶಕ ಬೇಕು';
+
+  @override
+  String get dirN => 'ಉತ್ತರ';
+
+  @override
+  String get dirNE => 'ಈಶಾನ್ಯ';
+
+  @override
+  String get dirE => 'ಪೂರ್ವ';
+
+  @override
+  String get dirSE => 'ಆಗ್ನೇಯ';
+
+  @override
+  String get dirS => 'ದಕ್ಷಿಣ';
+
+  @override
+  String get dirSW => 'ನೈಋತ್ಯ';
+
+  @override
+  String get dirW => 'ಪಶ್ಚಿಮ';
+
+  @override
+  String get dirNW => 'ವಾಯವ್ಯ';
 }

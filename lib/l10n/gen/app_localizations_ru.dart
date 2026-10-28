@@ -568,4 +568,131 @@ class AppLocalizationsRu extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a и $b почти одного размера.';
   }
+
+  @override
+  String get navSky => 'Небо';
+
+  @override
+  String get skyTitle => 'Небо сегодня ночью';
+
+  @override
+  String get chooseCity => 'Выберите город';
+
+  @override
+  String get chooseCityHint =>
+      'Выберите ближайший город, чтобы увидеть Луну и планеты, видимые сегодня ночью. Доступ к геолокации не нужен, выбор хранится только на телефоне.';
+
+  @override
+  String get searchCity => 'Найти город';
+
+  @override
+  String get noCityFound => 'Город не найден';
+
+  @override
+  String get cityNote =>
+      'Время указано в часовом поясе телефона. Планета считается видимой, если она хотя бы на 5° над горизонтом в тёмном небе.';
+
+  @override
+  String illuminated(String percent) {
+    return 'Освещено $percent%';
+  }
+
+  @override
+  String get moonrise => 'Восход Луны';
+
+  @override
+  String get moonset => 'Заход Луны';
+
+  @override
+  String get sunset => 'Закат';
+
+  @override
+  String get sunrise => 'Восход';
+
+  @override
+  String get nextFull => 'Ближайшее полнолуние';
+
+  @override
+  String get nextNew => 'Ближайшее новолуние';
+
+  @override
+  String get phaseNew => 'Новолуние';
+
+  @override
+  String get phaseWaxingCrescent => 'Растущий серп';
+
+  @override
+  String get phaseFirstQuarter => 'Первая четверть';
+
+  @override
+  String get phaseWaxingGibbous => 'Растущая Луна';
+
+  @override
+  String get phaseFull => 'Полнолуние';
+
+  @override
+  String get phaseWaningGibbous => 'Убывающая Луна';
+
+  @override
+  String get phaseLastQuarter => 'Последняя четверть';
+
+  @override
+  String get phaseWaningCrescent => 'Убывающий серп';
+
+  @override
+  String get planetsTonight => 'Планеты сегодня ночью';
+
+  @override
+  String get statusVisible => 'Видна сегодня ночью';
+
+  @override
+  String get statusEvening => 'Вечером, после заката';
+
+  @override
+  String get statusMorning => 'Утром, перед восходом';
+
+  @override
+  String get statusNotVisible => 'Сегодня не видна';
+
+  @override
+  String bestAt(String time) {
+    return 'Лучше всего в $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction, высота $degrees°';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'Восход $rise · Заход $set';
+  }
+
+  @override
+  String get needsTelescope => 'Нужен бинокль или телескоп';
+
+  @override
+  String get dirN => 'Север';
+
+  @override
+  String get dirNE => 'Северо-восток';
+
+  @override
+  String get dirE => 'Восток';
+
+  @override
+  String get dirSE => 'Юго-восток';
+
+  @override
+  String get dirS => 'Юг';
+
+  @override
+  String get dirSW => 'Юго-запад';
+
+  @override
+  String get dirW => 'Запад';
+
+  @override
+  String get dirNW => 'Северо-запад';
 }

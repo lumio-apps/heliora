@@ -568,4 +568,131 @@ class AppLocalizationsHy extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a-ը և $b-ը գրեթե նույն չափի են։';
   }
+
+  @override
+  String get navSky => 'Երկինք';
+
+  @override
+  String get skyTitle => 'Այս գիշերվա երկինքը';
+
+  @override
+  String get chooseCity => 'Ընտրեք ձեր քաղաքը';
+
+  @override
+  String get chooseCityHint =>
+      'Ընտրեք մոտակա քաղաքը՝ տեսնելու Լուսինը և այս գիշեր տեսանելի մոլորակները։ Տեղորոշման թույլտվություն պետք չէ, և ընտրությունը մնում է հեռախոսում։';
+
+  @override
+  String get searchCity => 'Որոնել քաղաք';
+
+  @override
+  String get noCityFound => 'Քաղաք չի գտնվել';
+
+  @override
+  String get cityNote =>
+      'Ժամերը հեռախոսի ժամային գոտով են։ Մոլորակը համարվում է տեսանելի, եթե մութ երկնքում հորիզոնից առնվազն 5° բարձր է։';
+
+  @override
+  String illuminated(String percent) {
+    return 'Լուսավորված է $percent%';
+  }
+
+  @override
+  String get moonrise => 'Լուսնածագ';
+
+  @override
+  String get moonset => 'Լուսնամուտ';
+
+  @override
+  String get sunset => 'Մայրամուտ';
+
+  @override
+  String get sunrise => 'Արևածագ';
+
+  @override
+  String get nextFull => 'Հաջորդ լիալուսինը';
+
+  @override
+  String get nextNew => 'Հաջորդ նորալուսինը';
+
+  @override
+  String get phaseNew => 'Նորալուսին';
+
+  @override
+  String get phaseWaxingCrescent => 'Աճող մահիկ';
+
+  @override
+  String get phaseFirstQuarter => 'Առաջին քառորդ';
+
+  @override
+  String get phaseWaxingGibbous => 'Աճող լուսին';
+
+  @override
+  String get phaseFull => 'Լիալուսին';
+
+  @override
+  String get phaseWaningGibbous => 'Նվազող լուսին';
+
+  @override
+  String get phaseLastQuarter => 'Վերջին քառորդ';
+
+  @override
+  String get phaseWaningCrescent => 'Նվազող մահիկ';
+
+  @override
+  String get planetsTonight => 'Այս գիշերվա մոլորակները';
+
+  @override
+  String get statusVisible => 'Տեսանելի է այս գիշեր';
+
+  @override
+  String get statusEvening => 'Երեկոյան, մայրամուտից հետո';
+
+  @override
+  String get statusMorning => 'Առավոտյան, արևածագից առաջ';
+
+  @override
+  String get statusNotVisible => 'Այս գիշեր տեսանելի չէ';
+
+  @override
+  String bestAt(String time) {
+    return 'Լավագույնը՝ $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction, $degrees° բարձրության վրա';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'Ծագում $rise · Մայրամուտ $set';
+  }
+
+  @override
+  String get needsTelescope => 'Պետք է հեռադիտակ կամ աստղադիտակ';
+
+  @override
+  String get dirN => 'Հյուսիս';
+
+  @override
+  String get dirNE => 'Հյուսիս-արևելք';
+
+  @override
+  String get dirE => 'Արևելք';
+
+  @override
+  String get dirSE => 'Հարավ-արևելք';
+
+  @override
+  String get dirS => 'Հարավ';
+
+  @override
+  String get dirSW => 'Հարավ-արևմուտք';
+
+  @override
+  String get dirW => 'Արևմուտք';
+
+  @override
+  String get dirNW => 'Հյուսիս-արևմուտք';
 }

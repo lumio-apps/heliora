@@ -567,4 +567,131 @@ class AppLocalizationsId extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a dan $b hampir sama besar.';
   }
+
+  @override
+  String get navSky => 'Langit';
+
+  @override
+  String get skyTitle => 'Langit malam ini';
+
+  @override
+  String get chooseCity => 'Pilih kota Anda';
+
+  @override
+  String get chooseCityHint =>
+      'Pilih kota terdekat untuk melihat Bulan dan planet yang tampak malam ini. Tidak perlu izin lokasi, dan pilihan hanya disimpan di ponsel.';
+
+  @override
+  String get searchCity => 'Cari kota';
+
+  @override
+  String get noCityFound => 'Kota tidak ditemukan';
+
+  @override
+  String get cityNote =>
+      'Waktu memakai zona waktu ponsel. Planet dianggap tampak bila setidaknya 5° di atas cakrawala saat langit gelap.';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% terang';
+  }
+
+  @override
+  String get moonrise => 'Bulan terbit';
+
+  @override
+  String get moonset => 'Bulan terbenam';
+
+  @override
+  String get sunset => 'Matahari terbenam';
+
+  @override
+  String get sunrise => 'Matahari terbit';
+
+  @override
+  String get nextFull => 'Purnama berikutnya';
+
+  @override
+  String get nextNew => 'Bulan baru berikutnya';
+
+  @override
+  String get phaseNew => 'Bulan baru';
+
+  @override
+  String get phaseWaxingCrescent => 'Sabit awal';
+
+  @override
+  String get phaseFirstQuarter => 'Kuartal pertama';
+
+  @override
+  String get phaseWaxingGibbous => 'Cembung awal';
+
+  @override
+  String get phaseFull => 'Purnama';
+
+  @override
+  String get phaseWaningGibbous => 'Cembung akhir';
+
+  @override
+  String get phaseLastQuarter => 'Kuartal terakhir';
+
+  @override
+  String get phaseWaningCrescent => 'Sabit akhir';
+
+  @override
+  String get planetsTonight => 'Planet malam ini';
+
+  @override
+  String get statusVisible => 'Tampak malam ini';
+
+  @override
+  String get statusEvening => 'Petang, setelah matahari terbenam';
+
+  @override
+  String get statusMorning => 'Pagi, sebelum matahari terbit';
+
+  @override
+  String get statusNotVisible => 'Tidak tampak malam ini';
+
+  @override
+  String bestAt(String time) {
+    return 'Terbaik pukul $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction, setinggi $degrees°';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'Terbit $rise · Terbenam $set';
+  }
+
+  @override
+  String get needsTelescope => 'Perlu teropong atau teleskop';
+
+  @override
+  String get dirN => 'Utara';
+
+  @override
+  String get dirNE => 'Timur laut';
+
+  @override
+  String get dirE => 'Timur';
+
+  @override
+  String get dirSE => 'Tenggara';
+
+  @override
+  String get dirS => 'Selatan';
+
+  @override
+  String get dirSW => 'Barat daya';
+
+  @override
+  String get dirW => 'Barat';
+
+  @override
+  String get dirNW => 'Barat laut';
 }

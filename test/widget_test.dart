@@ -5,6 +5,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:heliora/core/format.dart';
 import 'package:heliora/core/habitability.dart';
 import 'package:heliora/core/orbits.dart';
+import 'package:heliora/core/sky.dart';
+import 'package:heliora/data/cities.dart';
 import 'package:heliora/core/quiz.dart';
 import 'package:heliora/core/version.dart';
 import 'package:heliora/data/planets.dart';
@@ -162,6 +164,58 @@ void main() {
     });
   });
 
+  group('tonight sky', () {
+    Matcher near(DateTime expected, int minutes) => predicate<DateTime>(
+        (t) => t.difference(expected).inMinutes.abs() <= minutes,
+        'within $minutes minutes of $expected');
+
+    test('London sunrise and sunset on 21 June 2025', () {
+      final s = sunRiseSet(DateTime.utc(2025, 6, 21), 51.5074, -0.1278);
+      expect(s.rise, near(DateTime.utc(2025, 6, 21, 3, 43), 3));
+      expect(s.set, near(DateTime.utc(2025, 6, 21, 20, 21), 3));
+    });
+
+    test('full and new moon dates', () {
+      expect(nextPhase(DateTime.utc(2025, 10, 1), 180),
+          near(DateTime.utc(2025, 10, 7, 3, 47), 30));
+      expect(nextPhase(DateTime.utc(2025, 10, 10), 0),
+          near(DateTime.utc(2025, 10, 21, 12, 25), 30));
+      expect(nextPhase(DateTime.utc(2025, 12, 25), 180),
+          near(DateTime.utc(2026, 1, 3, 10, 3), 30));
+    });
+
+    test('phase names and lit part', () {
+      final full = moonPhase(DateTime.utc(2025, 10, 7, 3, 47));
+      expect(phaseIndex(full.age), 4);
+      expect(full.lit, greaterThan(0.98));
+      final fresh = moonPhase(DateTime.utc(2025, 10, 21, 12, 25));
+      expect(phaseIndex(fresh.age), 0);
+      expect(fresh.lit, lessThan(0.02));
+    });
+
+    test('compass directions', () {
+      expect(compassIndex(0), 0);
+      expect(compassIndex(90), 2);
+      expect(compassIndex(181), 4);
+      expect(compassIndex(350), 0);
+      expect(compassIndex(300), 7);
+    });
+
+    test('a night in Yerevan gives every planet', () {
+      final city = cityById('yerevan')!;
+      final sky = skyTonight(DateTime(2026, 1, 10), city.lat, city.lon);
+      expect(sky.planets.length, 7);
+      expect(sky.sunset, isNotNull);
+      final jupiter = sky.planets.firstWhere((n) => n.id == 'jupiter');
+      // Jupiter was opposite the Sun that night, up all night.
+      expect(jupiter.visibility, SkyVisibility.allNight);
+    });
+
+    test('city ids are unique', () {
+      expect(cities.map((c) => c.id).toSet().length, cities.length);
+    });
+  });
+
   group('versions', () {
     test('newer and older', () {
       expect(isNewerVersion('v1.0.1', '1.0.0'), isTrue);
@@ -211,6 +265,7 @@ void main() {
         lastUpdateCheckMs: 42,
         bestQuizScore: 7,
         birthDateMs: 946728000000,
+        cityId: 'yerevan',
       );
       final back = HelioraSettings.fromJson(s.toJson());
       expect(back.themeMode, ThemeMode.dark);
@@ -220,6 +275,7 @@ void main() {
       expect(back.lastUpdateCheckMs, 42);
       expect(back.bestQuizScore, 7);
       expect(back.birthDateMs, 946728000000);
+      expect(back.cityId, 'yerevan');
       expect(back.birthDate, isNotNull);
     });
 

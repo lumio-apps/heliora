@@ -1147,6 +1147,240 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{a} and {b} are about the same size.'**
   String sizeSimilar(String a, String b);
+
+  /// No description provided for @navSky.
+  ///
+  /// In en, this message translates to:
+  /// **'Sky'**
+  String get navSky;
+
+  /// No description provided for @skyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tonight\'s sky'**
+  String get skyTitle;
+
+  /// No description provided for @chooseCity.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your city'**
+  String get chooseCity;
+
+  /// No description provided for @chooseCityHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick the city nearest to you to see the Moon and which planets you can spot tonight. No location permission is needed, and it stays on your phone.'**
+  String get chooseCityHint;
+
+  /// No description provided for @searchCity.
+  ///
+  /// In en, this message translates to:
+  /// **'Search city'**
+  String get searchCity;
+
+  /// No description provided for @noCityFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No city found'**
+  String get noCityFound;
+
+  /// No description provided for @cityNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Times are in your phone\'s time zone. A planet counts as visible when it is at least 5° above the horizon in a dark sky.'**
+  String get cityNote;
+
+  /// No description provided for @illuminated.
+  ///
+  /// In en, this message translates to:
+  /// **'{percent}% lit'**
+  String illuminated(String percent);
+
+  /// No description provided for @moonrise.
+  ///
+  /// In en, this message translates to:
+  /// **'Moonrise'**
+  String get moonrise;
+
+  /// No description provided for @moonset.
+  ///
+  /// In en, this message translates to:
+  /// **'Moonset'**
+  String get moonset;
+
+  /// No description provided for @sunset.
+  ///
+  /// In en, this message translates to:
+  /// **'Sunset'**
+  String get sunset;
+
+  /// No description provided for @sunrise.
+  ///
+  /// In en, this message translates to:
+  /// **'Sunrise'**
+  String get sunrise;
+
+  /// No description provided for @nextFull.
+  ///
+  /// In en, this message translates to:
+  /// **'Next full moon'**
+  String get nextFull;
+
+  /// No description provided for @nextNew.
+  ///
+  /// In en, this message translates to:
+  /// **'Next new moon'**
+  String get nextNew;
+
+  /// No description provided for @phaseNew.
+  ///
+  /// In en, this message translates to:
+  /// **'New moon'**
+  String get phaseNew;
+
+  /// No description provided for @phaseWaxingCrescent.
+  ///
+  /// In en, this message translates to:
+  /// **'Waxing crescent'**
+  String get phaseWaxingCrescent;
+
+  /// No description provided for @phaseFirstQuarter.
+  ///
+  /// In en, this message translates to:
+  /// **'First quarter'**
+  String get phaseFirstQuarter;
+
+  /// No description provided for @phaseWaxingGibbous.
+  ///
+  /// In en, this message translates to:
+  /// **'Waxing gibbous'**
+  String get phaseWaxingGibbous;
+
+  /// No description provided for @phaseFull.
+  ///
+  /// In en, this message translates to:
+  /// **'Full moon'**
+  String get phaseFull;
+
+  /// No description provided for @phaseWaningGibbous.
+  ///
+  /// In en, this message translates to:
+  /// **'Waning gibbous'**
+  String get phaseWaningGibbous;
+
+  /// No description provided for @phaseLastQuarter.
+  ///
+  /// In en, this message translates to:
+  /// **'Last quarter'**
+  String get phaseLastQuarter;
+
+  /// No description provided for @phaseWaningCrescent.
+  ///
+  /// In en, this message translates to:
+  /// **'Waning crescent'**
+  String get phaseWaningCrescent;
+
+  /// No description provided for @planetsTonight.
+  ///
+  /// In en, this message translates to:
+  /// **'Planets tonight'**
+  String get planetsTonight;
+
+  /// No description provided for @statusVisible.
+  ///
+  /// In en, this message translates to:
+  /// **'Visible tonight'**
+  String get statusVisible;
+
+  /// No description provided for @statusEvening.
+  ///
+  /// In en, this message translates to:
+  /// **'In the evening, after sunset'**
+  String get statusEvening;
+
+  /// No description provided for @statusMorning.
+  ///
+  /// In en, this message translates to:
+  /// **'In the morning, before sunrise'**
+  String get statusMorning;
+
+  /// No description provided for @statusNotVisible.
+  ///
+  /// In en, this message translates to:
+  /// **'Not visible tonight'**
+  String get statusNotVisible;
+
+  /// No description provided for @bestAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Best at {time}'**
+  String bestAt(String time);
+
+  /// No description provided for @altitudeDir.
+  ///
+  /// In en, this message translates to:
+  /// **'{direction}, {degrees}° high'**
+  String altitudeDir(String direction, String degrees);
+
+  /// No description provided for @riseSet.
+  ///
+  /// In en, this message translates to:
+  /// **'Rises {rise} · Sets {set}'**
+  String riseSet(String rise, String set);
+
+  /// No description provided for @needsTelescope.
+  ///
+  /// In en, this message translates to:
+  /// **'Needs binoculars or a telescope'**
+  String get needsTelescope;
+
+  /// No description provided for @dirN.
+  ///
+  /// In en, this message translates to:
+  /// **'North'**
+  String get dirN;
+
+  /// No description provided for @dirNE.
+  ///
+  /// In en, this message translates to:
+  /// **'North-east'**
+  String get dirNE;
+
+  /// No description provided for @dirE.
+  ///
+  /// In en, this message translates to:
+  /// **'East'**
+  String get dirE;
+
+  /// No description provided for @dirSE.
+  ///
+  /// In en, this message translates to:
+  /// **'South-east'**
+  String get dirSE;
+
+  /// No description provided for @dirS.
+  ///
+  /// In en, this message translates to:
+  /// **'South'**
+  String get dirS;
+
+  /// No description provided for @dirSW.
+  ///
+  /// In en, this message translates to:
+  /// **'South-west'**
+  String get dirSW;
+
+  /// No description provided for @dirW.
+  ///
+  /// In en, this message translates to:
+  /// **'West'**
+  String get dirW;
+
+  /// No description provided for @dirNW.
+  ///
+  /// In en, this message translates to:
+  /// **'North-west'**
+  String get dirNW;
 }
 
 class _AppLocalizationsDelegate

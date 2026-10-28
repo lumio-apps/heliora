@@ -337,5 +337,78 @@
         "type": "String"
       }
     }
+  },
+  "navSky": "Sky",
+  "skyTitle": "Tonight's sky",
+  "chooseCity": "Choose your city",
+  "chooseCityHint": "Pick the city nearest to you to see the Moon and which planets you can spot tonight. No location permission is needed, and it stays on your phone.",
+  "searchCity": "Search city",
+  "noCityFound": "No city found",
+  "cityNote": "Times are in your phone's time zone. A planet counts as visible when it is at least 5° above the horizon in a dark sky.",
+  "illuminated": "{percent}% lit",
+  "moonrise": "Moonrise",
+  "moonset": "Moonset",
+  "sunset": "Sunset",
+  "sunrise": "Sunrise",
+  "nextFull": "Next full moon",
+  "nextNew": "Next new moon",
+  "phaseNew": "New moon",
+  "phaseWaxingCrescent": "Waxing crescent",
+  "phaseFirstQuarter": "First quarter",
+  "phaseWaxingGibbous": "Waxing gibbous",
+  "phaseFull": "Full moon",
+  "phaseWaningGibbous": "Waning gibbous",
+  "phaseLastQuarter": "Last quarter",
+  "phaseWaningCrescent": "Waning crescent",
+  "planetsTonight": "Planets tonight",
+  "statusVisible": "Visible tonight",
+  "statusEvening": "In the evening, after sunset",
+  "statusMorning": "In the morning, before sunrise",
+  "statusNotVisible": "Not visible tonight",
+  "bestAt": "Best at {time}",
+  "altitudeDir": "{direction}, {degrees}° high",
+  "riseSet": "Rises {rise} · Sets {set}",
+  "needsTelescope": "Needs binoculars or a telescope",
+  "dirN": "North",
+  "dirNE": "North-east",
+  "dirE": "East",
+  "dirSE": "South-east",
+  "dirS": "South",
+  "dirSW": "South-west",
+  "dirW": "West",
+  "dirNW": "North-west",
+  "@illuminated": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "@bestAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "@altitudeDir": {
+    "placeholders": {
+      "direction": {
+        "type": "String"
+      },
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "@riseSet": {
+    "placeholders": {
+      "rise": {
+        "type": "String"
+      },
+      "set": {
+        "type": "String"
+      }
+    }
   }
 }

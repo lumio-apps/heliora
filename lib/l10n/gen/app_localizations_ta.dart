@@ -571,4 +571,131 @@ class AppLocalizationsTa extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a மற்றும் $b ஏறக்குறைய ஒரே அளவு.';
   }
+
+  @override
+  String get navSky => 'வானம்';
+
+  @override
+  String get skyTitle => 'இன்றிரவு வானம்';
+
+  @override
+  String get chooseCity => 'உங்கள் நகரத்தைத் தேர்ந்தெடு';
+
+  @override
+  String get chooseCityHint =>
+      'நிலவையும் இன்றிரவு தெரியும் கிரகங்களையும் காண அருகிலுள்ள நகரத்தைத் தேர்ந்தெடுக்கவும். இருப்பிட அனுமதி தேவையில்லை, இது ஃபோனிலேயே இருக்கும்.';
+
+  @override
+  String get searchCity => 'நகரத்தைத் தேடு';
+
+  @override
+  String get noCityFound => 'நகரம் கிடைக்கவில்லை';
+
+  @override
+  String get cityNote =>
+      'நேரம் உங்கள் ஃபோனின் நேர மண்டலத்தில் உள்ளது. இருண்ட வானில் அடிவானத்திலிருந்து குறைந்தது 5° மேலே இருந்தால் கிரகம் தெரியும் என்று கொள்ளப்படும்.';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% ஒளிர்வு';
+  }
+
+  @override
+  String get moonrise => 'நிலவு உதயம்';
+
+  @override
+  String get moonset => 'நிலவு மறைவு';
+
+  @override
+  String get sunset => 'சூரிய மறைவு';
+
+  @override
+  String get sunrise => 'சூரிய உதயம்';
+
+  @override
+  String get nextFull => 'அடுத்த பௌர்ணமி';
+
+  @override
+  String get nextNew => 'அடுத்த அமாவாசை';
+
+  @override
+  String get phaseNew => 'அமாவாசை';
+
+  @override
+  String get phaseWaxingCrescent => 'வளர்பிறைப் பிறை';
+
+  @override
+  String get phaseFirstQuarter => 'வளர்பிறை அஷ்டமி';
+
+  @override
+  String get phaseWaxingGibbous => 'வளர்பிறை நிலவு';
+
+  @override
+  String get phaseFull => 'பௌர்ணமி';
+
+  @override
+  String get phaseWaningGibbous => 'தேய்பிறை நிலவு';
+
+  @override
+  String get phaseLastQuarter => 'தேய்பிறை அஷ்டமி';
+
+  @override
+  String get phaseWaningCrescent => 'தேய்பிறைப் பிறை';
+
+  @override
+  String get planetsTonight => 'இன்றிரவு கிரகங்கள்';
+
+  @override
+  String get statusVisible => 'இன்றிரவு தெரியும்';
+
+  @override
+  String get statusEvening => 'மாலையில், சூரிய மறைவுக்குப் பின்';
+
+  @override
+  String get statusMorning => 'காலையில், சூரிய உதயத்துக்கு முன்';
+
+  @override
+  String get statusNotVisible => 'இன்றிரவு தெரியாது';
+
+  @override
+  String bestAt(String time) {
+    return 'சிறந்த நேரம் $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction, $degrees° உயரத்தில்';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'உதயம் $rise · மறைவு $set';
+  }
+
+  @override
+  String get needsTelescope => 'தொலைநோக்கி தேவை';
+
+  @override
+  String get dirN => 'வடக்கு';
+
+  @override
+  String get dirNE => 'வடகிழக்கு';
+
+  @override
+  String get dirE => 'கிழக்கு';
+
+  @override
+  String get dirSE => 'தென்கிழக்கு';
+
+  @override
+  String get dirS => 'தெற்கு';
+
+  @override
+  String get dirSW => 'தென்மேற்கு';
+
+  @override
+  String get dirW => 'மேற்கு';
+
+  @override
+  String get dirNW => 'வடமேற்கு';
 }

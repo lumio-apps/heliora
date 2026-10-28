@@ -559,4 +559,130 @@ class AppLocalizationsJa extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$aと$bはほぼ同じ大きさです。';
   }
+
+  @override
+  String get navSky => '星空';
+
+  @override
+  String get skyTitle => '今夜の空';
+
+  @override
+  String get chooseCity => '都市を選ぶ';
+
+  @override
+  String get chooseCityHint =>
+      'いちばん近い都市を選ぶと、月と今夜見える惑星がわかります。位置情報の許可は不要で、スマホの中だけに保存されます。';
+
+  @override
+  String get searchCity => '都市を検索';
+
+  @override
+  String get noCityFound => '都市が見つかりません';
+
+  @override
+  String get cityNote => '時刻はスマホのタイムゾーンです。暗い空で地平線から 5° 以上の高さにあれば見えるとしています。';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% 輝面';
+  }
+
+  @override
+  String get moonrise => '月の出';
+
+  @override
+  String get moonset => '月の入り';
+
+  @override
+  String get sunset => '日の入り';
+
+  @override
+  String get sunrise => '日の出';
+
+  @override
+  String get nextFull => '次の満月';
+
+  @override
+  String get nextNew => '次の新月';
+
+  @override
+  String get phaseNew => '新月';
+
+  @override
+  String get phaseWaxingCrescent => '三日月';
+
+  @override
+  String get phaseFirstQuarter => '上弦の月';
+
+  @override
+  String get phaseWaxingGibbous => '十三夜';
+
+  @override
+  String get phaseFull => '満月';
+
+  @override
+  String get phaseWaningGibbous => '寝待月';
+
+  @override
+  String get phaseLastQuarter => '下弦の月';
+
+  @override
+  String get phaseWaningCrescent => '有明月';
+
+  @override
+  String get planetsTonight => '今夜の惑星';
+
+  @override
+  String get statusVisible => '今夜見える';
+
+  @override
+  String get statusEvening => '夕方、日没後';
+
+  @override
+  String get statusMorning => '明け方、日の出前';
+
+  @override
+  String get statusNotVisible => '今夜は見えない';
+
+  @override
+  String bestAt(String time) {
+    return '見ごろ $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction、高さ $degrees°';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return '出 $rise · 入り $set';
+  }
+
+  @override
+  String get needsTelescope => '双眼鏡か望遠鏡が必要';
+
+  @override
+  String get dirN => '北';
+
+  @override
+  String get dirNE => '北東';
+
+  @override
+  String get dirE => '東';
+
+  @override
+  String get dirSE => '南東';
+
+  @override
+  String get dirS => '南';
+
+  @override
+  String get dirSW => '南西';
+
+  @override
+  String get dirW => '西';
+
+  @override
+  String get dirNW => '北西';
 }

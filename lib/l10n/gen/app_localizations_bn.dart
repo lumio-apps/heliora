@@ -565,4 +565,131 @@ class AppLocalizationsBn extends AppLocalizations {
   String sizeSimilar(String a, String b) {
     return '$a আর $b প্রায় একই আকারের।';
   }
+
+  @override
+  String get navSky => 'আকাশ';
+
+  @override
+  String get skyTitle => 'আজ রাতের আকাশ';
+
+  @override
+  String get chooseCity => 'আপনার শহর বাছুন';
+
+  @override
+  String get chooseCityHint =>
+      'চাঁদ আর আজ রাতে কোন গ্রহ দেখা যাবে জানতে কাছের শহর বাছুন। লোকেশনের অনুমতি লাগে না, আর এটি ফোনেই থাকে।';
+
+  @override
+  String get searchCity => 'শহর খুঁজুন';
+
+  @override
+  String get noCityFound => 'কোনো শহর পাওয়া যায়নি';
+
+  @override
+  String get cityNote =>
+      'সময় আপনার ফোনের টাইম জোনে। অন্ধকার আকাশে দিগন্ত থেকে অন্তত 5° উপরে থাকলে গ্রহ দৃশ্যমান ধরা হয়।';
+
+  @override
+  String illuminated(String percent) {
+    return '$percent% আলোকিত';
+  }
+
+  @override
+  String get moonrise => 'চন্দ্রোদয়';
+
+  @override
+  String get moonset => 'চন্দ্রাস্ত';
+
+  @override
+  String get sunset => 'সূর্যাস্ত';
+
+  @override
+  String get sunrise => 'সূর্যোদয়';
+
+  @override
+  String get nextFull => 'পরের পূর্ণিমা';
+
+  @override
+  String get nextNew => 'পরের অমাবস্যা';
+
+  @override
+  String get phaseNew => 'অমাবস্যা';
+
+  @override
+  String get phaseWaxingCrescent => 'বর্ধমান বাঁকা চাঁদ';
+
+  @override
+  String get phaseFirstQuarter => 'প্রথম পাদ';
+
+  @override
+  String get phaseWaxingGibbous => 'বর্ধমান কুঁজো চাঁদ';
+
+  @override
+  String get phaseFull => 'পূর্ণিমা';
+
+  @override
+  String get phaseWaningGibbous => 'ক্ষীয়মাণ কুঁজো চাঁদ';
+
+  @override
+  String get phaseLastQuarter => 'শেষ পাদ';
+
+  @override
+  String get phaseWaningCrescent => 'ক্ষীয়মাণ বাঁকা চাঁদ';
+
+  @override
+  String get planetsTonight => 'আজ রাতের গ্রহ';
+
+  @override
+  String get statusVisible => 'আজ রাতে দেখা যাবে';
+
+  @override
+  String get statusEvening => 'সন্ধ্যায়, সূর্যাস্তের পরে';
+
+  @override
+  String get statusMorning => 'ভোরে, সূর্যোদয়ের আগে';
+
+  @override
+  String get statusNotVisible => 'আজ রাতে দেখা যাবে না';
+
+  @override
+  String bestAt(String time) {
+    return 'সবচেয়ে ভালো $time';
+  }
+
+  @override
+  String altitudeDir(String direction, String degrees) {
+    return '$direction, $degrees° উঁচুতে';
+  }
+
+  @override
+  String riseSet(String rise, String set) {
+    return 'ওঠে $rise · অস্ত $set';
+  }
+
+  @override
+  String get needsTelescope => 'দূরবীন বা টেলিস্কোপ লাগবে';
+
+  @override
+  String get dirN => 'উত্তর';
+
+  @override
+  String get dirNE => 'উত্তর-পূর্ব';
+
+  @override
+  String get dirE => 'পূর্ব';
+
+  @override
+  String get dirSE => 'দক্ষিণ-পূর্ব';
+
+  @override
+  String get dirS => 'দক্ষিণ';
+
+  @override
+  String get dirSW => 'দক্ষিণ-পশ্চিম';
+
+  @override
+  String get dirW => 'পশ্চিম';
+
+  @override
+  String get dirNW => 'উত্তর-পশ্চিম';
 }

@@ -20,6 +20,7 @@ class HelioraSettings {
     this.lastUpdateCheckMs = 0,
     this.bestQuizScore = 0,
     this.birthDateMs = 0,
+    this.cityId = '',
   });
 
   final ThemeMode themeMode;
@@ -35,6 +36,9 @@ class HelioraSettings {
   /// set. It never leaves the phone.
   final int birthDateMs;
 
+  /// The city for "Tonight's sky", or empty when not chosen.
+  final String cityId;
+
   DateTime? get birthDate => birthDateMs == 0
       ? null
       : DateTime.fromMillisecondsSinceEpoch(birthDateMs);
@@ -47,6 +51,7 @@ class HelioraSettings {
     int? lastUpdateCheckMs,
     int? bestQuizScore,
     int? birthDateMs,
+    String? cityId,
   }) {
     return HelioraSettings(
       themeMode: themeMode ?? this.themeMode,
@@ -56,6 +61,7 @@ class HelioraSettings {
       lastUpdateCheckMs: lastUpdateCheckMs ?? this.lastUpdateCheckMs,
       bestQuizScore: bestQuizScore ?? this.bestQuizScore,
       birthDateMs: birthDateMs ?? this.birthDateMs,
+      cityId: cityId ?? this.cityId,
     );
   }
 
@@ -69,6 +75,7 @@ class HelioraSettings {
       'lastUpdateCheckMs': lastUpdateCheckMs,
       'bestQuizScore': bestQuizScore,
       'birthDateMs': birthDateMs,
+      'cityId': cityId,
     };
   }
 
@@ -93,6 +100,7 @@ class HelioraSettings {
     final last = json['lastUpdateCheckMs'];
     final best = json['bestQuizScore'];
     final birth = json['birthDateMs'];
+    final city = json['cityId'];
     return HelioraSettings(
       themeMode: theme,
       localeCode: locale is String ? locale : d.localeCode,
@@ -101,6 +109,7 @@ class HelioraSettings {
       lastUpdateCheckMs: last is int ? last : d.lastUpdateCheckMs,
       bestQuizScore: best is int ? best : d.bestQuizScore,
       birthDateMs: birth is int ? birth : d.birthDateMs,
+      cityId: city is String ? city : d.cityId,
     );
   }
 }
