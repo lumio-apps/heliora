@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../core/version.dart';
 import '../data/native_bridge.dart';
+import '../data/online_service.dart';
+import 'online_state.dart';
 import '../data/settings.dart';
 import '../data/update_service.dart';
 
@@ -40,9 +42,14 @@ class AppState extends ChangeNotifier {
 
   NativeBridge get bridge => _bridge;
 
+  /// Orbit data and launches for the optional online features.
+  final OnlineState online = OnlineState();
+
   Future<void> load() async {
     _settings = await _store.load();
     _appVersion = await _bridge.appVersion();
+    online.useStore(OnlineStore(folder: _bridge.filesDir));
+    await online.loadCache();
     notifyListeners();
   }
 
@@ -83,11 +90,17 @@ class AppState extends ChangeNotifier {
     return _update(_settings.copyWith(reminders: list));
   }
 
-  /// Forgets reminders for events that are over.
-  Future<void> keepReminders(Set<String> valid) {
+  /// Allows or stops the optional online features.
+  Future<void> setOnlineFeatures(bool value) =>
+      _update(_settings.copyWith(onlineFeatures: value));
+
+  /// Forgets reminders that are over. Only reminders for which [inScope] is
+  /// true are looked at; those not in [valid] are dropped.
+  Future<void> pruneReminders(
+      bool Function(String id) inScope, Set<String> valid) {
     final list = <String>[
       for (final r in _settings.reminders)
-        if (valid.contains(r)) r,
+        if (!inScope(r) || valid.contains(r)) r,
     ];
     if (list.length == _settings.reminders.length) {
       return Future<void>.value();

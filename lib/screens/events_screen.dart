@@ -1,19 +1,37 @@
 import 'package:flutter/material.dart';
 
 import '../core/events.dart';
+import '../data/online_service.dart';
 import '../data/planets.dart';
 import '../l10n/event_text.dart';
 import '../l10n/names.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/event_tile.dart';
+import 'reminder_actions.dart';
 
 /// Space events for the next 12 months, each with an optional reminder.
+/// With online features on, upcoming rocket launches are listed too.
 class EventsScreen extends StatefulWidget {
   const EventsScreen({super.key});
 
   @override
   State<EventsScreen> createState() => _EventsScreenState();
+}
+
+/// When to remind about a launch: an hour before when the time is known,
+/// otherwise like other events. Null when too late.
+DateTime? launchReminderTime(Launch launch, DateTime now) {
+  final soon = now.add(const Duration(minutes: 1));
+  if (launch.timeKnown) {
+    final at = launch.net.toLocal().subtract(const Duration(hours: 1));
+    return at.isAfter(soon) ? at : null;
+  }
+  return reminderTime(
+    SpaceEvent(kind: SpaceEventKind.fullMoon, time: launch.net),
+    now,
+  );
 }
 
 class _EventsScreenState extends State<EventsScreen> {
@@ -22,62 +40,90 @@ class _EventsScreenState extends State<EventsScreen> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted) {
-        AppScope.read(context)
-            .keepReminders(<String>{for (final e in _events) e.id});
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      if (!mounted) {
+        return;
+      }
+      final state = AppScope.read(context);
+      await state.pruneReminders(
+          isEventReminder, <String>{for (final e in _events) e.id});
+      if (state.settings.onlineFeatures) {
+        await state.online.refreshLaunches();
+        if (mounted) {
+          await _resyncLaunchReminders();
+        }
       }
     });
   }
 
-  Future<void> _toggle(SpaceEvent event) async {
+  /// A launch can move. Sets the reminders of launches again for their
+  /// newest time, and forgets those whose launch left the list.
+  Future<void> _resyncLaunchReminders() async {
     final state = AppScope.read(context);
     final l = context.l10n;
-    final loc = MaterialLocalizations.of(context);
-    final messenger = ScaffoldMessenger.of(context);
-    void say(String text) {
-      messenger
-        ..hideCurrentSnackBar()
-        ..showSnackBar(SnackBar(content: Text(text)));
+    final launches = state.online.launches;
+    final now = DateTime.now();
+    await state.pruneReminders(
+      (id) => id.startsWith('launch:'),
+      <String>{for (final launch in launches) launch.reminderId},
+    );
+    for (final launch in launches) {
+      if (!state.hasReminder(launch.reminderId)) {
+        continue;
+      }
+      final at = launchReminderTime(launch, now);
+      if (at == null) {
+        await state.bridge.cancelReminder(launch.reminderId);
+        await state.setReminder(launch.reminderId, false);
+        continue;
+      }
+      await state.bridge.scheduleReminder(
+        id: launch.reminderId,
+        at: at,
+        title: launch.name,
+        body: launch.timeKnown ? l.launchReminderBody : l.reminderTomorrow,
+        channel: l.eventsTitle,
+      );
     }
+  }
 
-    if (state.hasReminder(event.id)) {
-      await state.bridge.cancelReminder(event.id);
-      await state.setReminder(event.id, false);
-      say(l.reminderOff);
-      return;
-    }
-
+  Future<void> _toggleEvent(SpaceEvent event) {
+    final l = context.l10n;
     final at = reminderTime(event, DateTime.now());
-    if (at == null) {
-      say(l.reminderTooLate);
-      return;
-    }
     final day = event.localDay;
-    final sameDay = at.year == day.year && at.month == day.month && at.day == day.day;
-    final title = eventTitle(l, event);
-    final body = sameDay ? l.reminderToday : l.reminderTomorrow;
-    final channel = l.eventsTitle;
-    final date = loc.formatMediumDate(at);
-
-    final allowed = await state.bridge.requestNotifications();
-    if (!allowed) {
-      say(l.notificationsOff);
-      return;
-    }
-    final ok = await state.bridge.scheduleReminder(
+    final sameDay = at != null &&
+        at.year == day.year &&
+        at.month == day.month &&
+        at.day == day.day;
+    return toggleReminder(
+      context,
       id: event.id,
       at: at,
-      title: title,
-      body: body,
-      channel: channel,
+      title: eventTitle(l, event),
+      body: sameDay ? l.reminderToday : l.reminderTomorrow,
     );
-    if (!ok) {
-      say(l.reminderTooLate);
-      return;
+  }
+
+  Future<void> _toggleLaunch(Launch launch) {
+    final l = context.l10n;
+    final now = DateTime.now();
+    final at = launchReminderTime(launch, now);
+    return toggleReminder(
+      context,
+      id: launch.reminderId,
+      at: at,
+      title: launch.name,
+      body: launch.timeKnown ? l.launchReminderBody : l.reminderTomorrow,
+    );
+  }
+
+  Future<void> _turnOnOnline() async {
+    final state = AppScope.read(context);
+    await state.setOnlineFeatures(true);
+    await state.online.refreshLaunches(force: true);
+    if (mounted) {
+      await _resyncLaunchReminders();
     }
-    await state.setReminder(event.id, true);
-    say(l.reminderSet(date));
   }
 
   @override
@@ -86,76 +132,142 @@ class _EventsScreenState extends State<EventsScreen> {
     final p = Palette.of(context);
     final loc = MaterialLocalizations.of(context);
     final state = AppScope.of(context);
+    final online = state.online;
     final now = DateTime.now();
 
-    final children = <Widget>[
-      Text(l.eventsSubtitle,
-          style: TextStyle(fontSize: 14, color: p.muted, height: 1.4)),
-      const SizedBox(height: 16),
-    ];
-    var month = '';
-    for (final event in _events) {
-      final label = loc.formatMonthYear(event.localDay);
-      if (label != month) {
-        month = label;
-        children.add(Padding(
-          padding: EdgeInsets.only(top: children.length > 2 ? 12 : 0),
-          child: SectionLabel(label),
-        ));
-      }
-      final on = state.hasReminder(event.id);
-      children
-        ..add(_EventCard(
-          event: event,
-          title: eventTitle(l, event),
-          when:
-              '${loc.formatMediumDate(event.localDay)} · ${eventWhen(context, l, daysUntil(event, now))}',
-          description: eventDescription(context, l, event),
-          reminderOn: on,
-          tooltip: l.remindMe,
-          onToggle: () => _toggle(event),
-        ))
-        ..add(const SizedBox(height: 8));
-    }
-    children
-      ..add(const SizedBox(height: 8))
-      ..add(Text(l.eventsNote,
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 12, color: p.muted)));
+    return ListenableBuilder(
+      listenable: online,
+      builder: (context, _) {
+        final showLaunches = state.settings.onlineFeatures;
+        final items = <(DateTime, Object)>[
+          for (final e in _events) (e.time, e),
+          if (showLaunches)
+            for (final launch in online.launches)
+              if (launch.net.isAfter(now.subtract(const Duration(hours: 3))) &&
+                  launch.net.isBefore(now.add(const Duration(days: 366))))
+                (launch.net, launch),
+        ]..sort((a, b) => a.$1.compareTo(b.$1));
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(l.eventsTitle,
-            style: const TextStyle(fontWeight: FontWeight.w700)),
-      ),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
-        children: children,
-      ),
+        final children = <Widget>[
+          Text(l.eventsSubtitle,
+              style: TextStyle(fontSize: 14, color: p.muted, height: 1.4)),
+          const SizedBox(height: 16),
+        ];
+
+        if (!showLaunches) {
+          children
+            ..add(SurfaceCard(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Icon(Icons.rocket_launch_outlined, color: p.accentText),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Text(l.launchesNeedOnline,
+                            style: TextStyle(
+                                fontSize: 14, color: p.text, height: 1.4)),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  FilledButton(
+                    onPressed: _turnOnOnline,
+                    child: Text(l.turnOnOnline),
+                  ),
+                ],
+              ),
+            ))
+            ..add(const SizedBox(height: 16));
+        } else if (online.loadingLaunches) {
+          children
+            ..add(const LinearProgressIndicator())
+            ..add(const SizedBox(height: 12));
+        } else if (online.launchesFailed) {
+          children
+            ..add(Text(l.launchesFailed,
+                style: TextStyle(fontSize: 13, color: p.bad)))
+            ..add(const SizedBox(height: 12));
+        }
+
+        var month = '';
+        for (final (time, item) in items) {
+          final day = time.toLocal();
+          final label = loc.formatMonthYear(day);
+          if (label != month) {
+            month = label;
+            children.add(Padding(
+              padding: EdgeInsets.only(top: children.length > 3 ? 12 : 0),
+              child: SectionLabel(label),
+            ));
+          }
+          if (item is SpaceEvent) {
+            children.add(EventTile(
+              icon: _eventIcon(item, p),
+              title: eventTitle(l, item),
+              when:
+                  '${loc.formatMediumDate(item.localDay)} · ${eventWhen(context, l, daysUntil(item, now))}',
+              description: eventDescription(context, l, item),
+              reminderOn: state.hasReminder(item.id),
+              tooltip: l.remindMe,
+              onToggle: () => _toggleEvent(item),
+            ));
+          } else if (item is Launch) {
+            final local = item.net.toLocal();
+            final date = DateTime(local.year, local.month, local.day);
+            final days = DateTime.utc(date.year, date.month, date.day)
+                .difference(DateTime.utc(now.year, now.month, now.day))
+                .inDays;
+            final clock = item.timeKnown
+                ? ' ${loc.formatTimeOfDay(TimeOfDay.fromDateTime(local))}'
+                : '';
+            children.add(EventTile(
+              icon: Icon(Icons.rocket_launch_outlined,
+                  size: 28, color: p.bad),
+              title: item.name,
+              when:
+                  '${loc.formatMediumDate(date)}$clock · ${eventWhen(context, l, days)}',
+              description: <String>[
+                if (!item.timeKnown) l.launchTimeTbd,
+                if (item.details.isNotEmpty) item.details,
+              ].join('\n'),
+              reminderOn: state.hasReminder(item.reminderId),
+              tooltip: l.remindMe,
+              onToggle: () => _toggleLaunch(item),
+            ));
+          }
+          children.add(const SizedBox(height: 8));
+        }
+
+        children
+          ..add(const SizedBox(height: 8))
+          ..add(Text(l.eventsNote,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 12, color: p.muted)));
+        if (showLaunches) {
+          children
+            ..add(const SizedBox(height: 6))
+            ..add(Text(l.launchesNote,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 12, color: p.muted)));
+        }
+
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(l.eventsTitle,
+                style: const TextStyle(fontWeight: FontWeight.w700)),
+          ),
+          body: ListView(
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
+            children: children,
+          ),
+        );
+      },
     );
   }
-}
 
-class _EventCard extends StatelessWidget {
-  const _EventCard({
-    required this.event,
-    required this.title,
-    required this.when,
-    required this.description,
-    required this.reminderOn,
-    required this.tooltip,
-    required this.onToggle,
-  });
-
-  final SpaceEvent event;
-  final String title;
-  final String when;
-  final String description;
-  final bool reminderOn;
-  final String tooltip;
-  final VoidCallback onToggle;
-
-  Widget _leading(Palette p) {
+  Widget _eventIcon(SpaceEvent event, Palette p) {
     switch (event.kind) {
       case SpaceEventKind.fullMoon:
         return Icon(Icons.circle, size: 28, color: p.text);
@@ -174,55 +286,5 @@ class _EventCard extends StatelessWidget {
       case SpaceEventKind.conjunction:
         return PlanetBall(planet: planetById(event.bodies[0]), size: 26);
     }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final p = Palette.of(context);
-    return SurfaceCard(
-      padding: const EdgeInsets.fromLTRB(16, 12, 4, 12),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          SizedBox(
-            width: 40,
-            height: 40,
-            child: Center(child: _leading(p)),
-          ),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(title,
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: p.text)),
-                const SizedBox(height: 2),
-                Text(when,
-                    style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w600,
-                        color: p.accentText)),
-                const SizedBox(height: 4),
-                Text(description,
-                    style: TextStyle(fontSize: 13, color: p.muted, height: 1.35)),
-              ],
-            ),
-          ),
-          IconButton(
-            tooltip: tooltip,
-            onPressed: onToggle,
-            icon: Icon(
-              reminderOn
-                  ? Icons.notifications_active
-                  : Icons.notifications_none,
-              color: reminderOn ? p.accentText : p.muted,
-            ),
-          ),
-        ],
-      ),
-    );
   }
 }

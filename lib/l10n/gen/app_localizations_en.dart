@@ -918,4 +918,113 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reminderToday => 'Happening today';
+
+  @override
+  String get onlineTitle => 'Online features';
+
+  @override
+  String get onlineSubtitle =>
+      'Show the space station and rocket launches. Heliora then contacts only wheretheiss.at, Celestrak and Launch Library 2, which can see your phone\'s internet address. Nothing else is sent. Off by default.';
+
+  @override
+  String get turnOnOnline => 'Turn on online features';
+
+  @override
+  String get issTitle => 'Space station';
+
+  @override
+  String get issCardHint => 'Where it is now and when it passes over you';
+
+  @override
+  String get issNeedsOnline =>
+      'To show the station, Heliora needs its orbit data from the internet. It is downloaded once and then works offline for days.';
+
+  @override
+  String get issLoading => 'Getting the orbit data…';
+
+  @override
+  String get issFailed =>
+      'Could not get the orbit data. Check your internet and try again.';
+
+  @override
+  String issStale(String days) {
+    return 'The orbit data is $days days old, so positions may be off. Connect to the internet to refresh it.';
+  }
+
+  @override
+  String get issHeight => 'Height';
+
+  @override
+  String get issSpeed => 'Speed';
+
+  @override
+  String get issFromYou => 'Distance from you';
+
+  @override
+  String valueKmh(String value) {
+    return '$value km/h';
+  }
+
+  @override
+  String issAboveHorizon(String direction, String degrees) {
+    return 'Above your horizon now! Look $direction, $degrees° high.';
+  }
+
+  @override
+  String get issBelowHorizon => 'Below your horizon right now.';
+
+  @override
+  String issPassesTitle(String city) {
+    return 'Next passes over $city';
+  }
+
+  @override
+  String get issNoPasses => 'No good passes in the next 5 days.';
+
+  @override
+  String issMaxHigh(String degrees) {
+    return 'Up to $degrees° high';
+  }
+
+  @override
+  String issFromTo(String start, String end) {
+    return '$start to $end';
+  }
+
+  @override
+  String get issVisible => 'Easy to see';
+
+  @override
+  String get issHidden => 'Hard to see';
+
+  @override
+  String get issPassTitle => 'Space station passing over you';
+
+  @override
+  String issPassBody(String degrees, String direction) {
+    return 'Rises in 10 minutes, up to $degrees° high. Look $direction.';
+  }
+
+  @override
+  String get issNote =>
+      'Positions are worked out on your phone from the station\'s orbit data. A pass is easy to see when the sky is dark and the station is lit by the Sun: it looks like a bright, fast star.';
+
+  @override
+  String get launchesNeedOnline =>
+      'Turn on online features to see upcoming rocket launches here.';
+
+  @override
+  String get launchesFailed =>
+      'Could not update the launch list. Showing the saved one.';
+
+  @override
+  String get launchesNote =>
+      'Launch times come from Launch Library 2 and often change. Names and places are in English.';
+
+  @override
+  String get launchReminderBody =>
+      'Lifts off in about an hour. Times can change.';
+
+  @override
+  String get launchTimeTbd => 'Time not set yet';
 }

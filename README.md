@@ -4,7 +4,7 @@
 
 # Heliora
 
-**Explore the Solar System, fully offline.**
+**Explore the Solar System, offline first.**
 
 Real planet positions, rotating 3D worlds, atmospheres and oxygen,<br>
 and an honest answer to "could humans live here?"
@@ -49,6 +49,7 @@ and an honest answer to "could humans live here?"
 - **The Moon tonight.** Phase, how much of it is lit, moonrise and moonset, and the dates of the next full and new moon.
 - **Sunset and sunrise** for your city.
 - **Space events.** The next 12 months of full and new moons, planet oppositions, the best evenings and mornings to see Mercury and Venus, close meetings of planets, equinoxes and solstices, and the yearly meteor showers (with how bright the Moon will be). Tap the bell on an event and Heliora reminds you the evening before. Reminders are made on your phone and need no internet.
+- **Space station and rocket launches (optional, needs internet).** Turn on **Online features** in Settings and Heliora shows where the International Space Station is right now on a map, when it passes over your city (and whether you can see it), and the list of upcoming rocket launches inside the events calendar. All of it has bells for reminders. It is off until you switch it on.
 - **Find it with your compass.** Tap the compass button next to the Moon or a planet, hold your phone up, and Heliora shows which way to turn and tilt until you are pointing right at it. It uses your phone's motion sensors only: no camera, no location.
 
 ### 🌍 Learn
@@ -81,8 +82,9 @@ After that, Heliora updates itself: go to **Settings → Check for updates**, or
 
 Heliora is made by [Lumio Apps](https://github.com/lumio-apps): **no ads, no account, no tracking.**
 
-- Everything works without internet. Planet data, positions and 3D surfaces are all calculated on your phone.
-- The internet is used only for updates. The app asks GitHub for the latest release and, when you tap **Download and install**, downloads the signed APK from that release. Nothing about you is sent.
+- Everything works without internet, except the two optional online features below. Planet data, positions and 3D surfaces are all calculated on your phone.
+- **Online features are off by default.** If you switch them on in Settings, Heliora contacts `api.wheretheiss.at` (or `celestrak.org`) for the station's orbit data and `ll.thespacedevs.com` (Launch Library 2) for the launch list. Nothing about you is sent; those services can only see your phone's internet address. The orbit data is saved on the phone, so the station keeps working offline for days. Switch the setting off and Heliora never contacts them.
+- Besides that, the internet is used only for updates. The app asks GitHub for the latest release and, when you tap **Download and install**, downloads the signed APK from that release. Nothing about you is sent.
 - Your birth date and settings are saved only on your phone.
 - The daily update check can be turned off in Settings.
 
@@ -95,6 +97,8 @@ Heliora is made by [Lumio Apps](https://github.com/lumio-apps): **no ads, no acc
 | 3D globes | A single fragment shader (`shaders/planet.frag`) draws every surface from noise, so the app ships with no image files. |
 | Tonight's sky | Rise, set and best viewing time from the same orbits plus the Moon from Paul Schlyter's method, all on the phone. Checked against London's sunrise on 21 June 2025 and the full and new moons of October 2025 and January 2026. |
 | Space events | The same orbits and Moon maths find each event on the phone: oppositions where a planet is opposite the Sun in longitude, greatest elongations, planet pairs closer than 2°, and equinoxes and solstices. Checked against 2025–2026: Mars (16 Jan 2025), Saturn (21 Sep 2025) and Jupiter (10 Jan 2026) oppositions, Venus at 47° on 10 Jan 2025 and 15 Aug 2026, and the 2026 equinoxes and solstices within 15 minutes. Meteor shower peaks are typical yearly dates. |
+| Space station | The station's orbit data (a TLE) is downloaded once and the position is computed on the phone with SGP4 (`lib/core/sgp4.dart`), checked against Vallado's published test vectors. A pass counts as easy to see when the Sun is more than 6° below the horizon and the station is still lit by the Sun. |
+| Rocket launches | The list comes from [Launch Library 2](https://thespacedevs.com/llapi). Times are "no earlier than" and change often, so the list is refreshed at most every 3 hours. |
 | Compass finder | The phone's rotation sensor gives where the back of the phone points; Android's magnetic-declination model turns magnetic north into true north. The target comes from the same orbit maths as Tonight's sky. |
 | Life score | Six simple rules in `lib/core/habitability.dart`. A teaching aid, not science. |
 
@@ -118,6 +122,7 @@ All texts live in `lib/l10n/app_<language>.arb`. Found a wrong word in your lang
 
 | Version | What's new |
 |---|---|
+| **1.8.0** | Online features (off by default): live International Space Station map and passes over your city, upcoming rocket launches in the events calendar, reminders for both |
 | **1.7.0** | Space events calendar for the next 12 months with reminders: Moon phases, oppositions, planet meetings, equinoxes, solstices and meteor showers |
 | **1.6.0** | Find the Moon and planets in the real sky with your phone's compass: turn and tilt guidance, 20 languages |
 | **1.5.0** | New Sky tab: planets visible tonight from your city, Moon phase, moonrise, next full and new moon, sunset and sunrise |

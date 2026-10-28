@@ -919,4 +919,113 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get reminderToday => 'Տեղի է ունենում այսօր';
+
+  @override
+  String get onlineTitle => 'Առցանց գործառույթներ';
+
+  @override
+  String get onlineSubtitle =>
+      'Ցույց տալ տիեզերակայանը և հրթիռների արձակումները։ Այդ դեպքում Heliora-ն կապվում է միայն wheretheiss.at-ի, Celestrak-ի և Launch Library 2-ի հետ, որոնք կարող են տեսնել ձեր հեռախոսի ինտերնետ հասցեն։ Ուրիշ ոչինչ չի ուղարկվում։ Լռելյայն անջատված է։';
+
+  @override
+  String get turnOnOnline => 'Միացնել առցանց գործառույթները';
+
+  @override
+  String get issTitle => 'Տիեզերակայան';
+
+  @override
+  String get issCardHint => 'Որտեղ է հիմա և երբ կանցնի ձեր վերևով';
+
+  @override
+  String get issNeedsOnline =>
+      'Կայանը ցույց տալու համար Heliora-ին պետք է նրա ուղեծրի տվյալները ինտերնետից։ Դրանք ներբեռնվում են մեկ անգամ և հետո մի քանի օր աշխատում են անցանց։';
+
+  @override
+  String get issLoading => 'Ուղեծրի տվյալները բեռնվում են…';
+
+  @override
+  String get issFailed =>
+      'Չհաջողվեց ստանալ ուղեծրի տվյալները։ Ստուգեք ինտերնետը և նորից փորձեք։';
+
+  @override
+  String issStale(String days) {
+    return 'Ուղեծրի տվյալները $days օրվա հին են, ուստի դիրքը կարող է թեթևակի սխալ լինել։ Թարմացնելու համար միացեք ինտերնետին։';
+  }
+
+  @override
+  String get issHeight => 'Բարձրություն';
+
+  @override
+  String get issSpeed => 'Արագություն';
+
+  @override
+  String get issFromYou => 'Հեռավորությունը ձեզանից';
+
+  @override
+  String valueKmh(String value) {
+    return '$value կմ/ժ';
+  }
+
+  @override
+  String issAboveHorizon(String direction, String degrees) {
+    return 'Հիմա ձեր հորիզոնից վերև է։ Նայեք՝ $direction, $degrees° բարձրության վրա։';
+  }
+
+  @override
+  String get issBelowHorizon => 'Հիմա ձեր հորիզոնից ցածր է։';
+
+  @override
+  String issPassesTitle(String city) {
+    return 'Հաջորդ անցումները $city-ի վերևով';
+  }
+
+  @override
+  String get issNoPasses => 'Հաջորդ 5 օրում լավ անցումներ չկան։';
+
+  @override
+  String issMaxHigh(String degrees) {
+    return 'Մինչև $degrees° բարձրություն';
+  }
+
+  @override
+  String issFromTo(String start, String end) {
+    return '$start-ից $end';
+  }
+
+  @override
+  String get issVisible => 'Հեշտ երևում է';
+
+  @override
+  String get issHidden => 'Դժվար է երևում';
+
+  @override
+  String get issPassTitle => 'Տիեզերակայանը անցնում է ձեր վերևով';
+
+  @override
+  String issPassBody(String degrees, String direction) {
+    return '10 րոպեից կծագի, մինչև $degrees° բարձրության վրա։ Նայեք՝ $direction։';
+  }
+
+  @override
+  String get issNote =>
+      'Դիրքերը հաշվարկվում են ձեր հեռախոսում՝ կայանի ուղեծրի տվյալներից։ Անցումը հեշտ երևում է, երբ երկինքը մութ է, իսկ կայանը լուսավորված է Արևով. այն նման է պայծառ, արագ աստղի։';
+
+  @override
+  String get launchesNeedOnline =>
+      'Միացրեք առցանց գործառույթները՝ այստեղ հաջորդ հրթիռային արձակումները տեսնելու համար։';
+
+  @override
+  String get launchesFailed =>
+      'Չհաջողվեց թարմացնել արձակումների ցանկը։ Ցուցադրվում է պահպանվածը։';
+
+  @override
+  String get launchesNote =>
+      'Արձակման ժամերը գալիս են Launch Library 2-ից և հաճախ փոխվում են։ Անունները և վայրերը անգլերեն են։';
+
+  @override
+  String get launchReminderBody =>
+      'Արձակվում է մոտ մեկ ժամից։ Ժամը կարող է փոխվել։';
+
+  @override
+  String get launchTimeTbd => 'Ժամը դեռ որոշված չէ';
 }

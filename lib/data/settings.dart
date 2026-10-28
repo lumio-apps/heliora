@@ -22,6 +22,7 @@ class HelioraSettings {
     this.birthDateMs = 0,
     this.cityId = '',
     this.reminders = const <String>[],
+    this.onlineFeatures = false,
   });
 
   final ThemeMode themeMode;
@@ -43,6 +44,10 @@ class HelioraSettings {
   /// Ids of the space events the user asked to be reminded about.
   final List<String> reminders;
 
+  /// True when the user allowed the optional online features (space station
+  /// and rocket launches). Off by default.
+  final bool onlineFeatures;
+
   DateTime? get birthDate => birthDateMs == 0
       ? null
       : DateTime.fromMillisecondsSinceEpoch(birthDateMs);
@@ -57,6 +62,7 @@ class HelioraSettings {
     int? birthDateMs,
     String? cityId,
     List<String>? reminders,
+    bool? onlineFeatures,
   }) {
     return HelioraSettings(
       themeMode: themeMode ?? this.themeMode,
@@ -68,6 +74,7 @@ class HelioraSettings {
       birthDateMs: birthDateMs ?? this.birthDateMs,
       cityId: cityId ?? this.cityId,
       reminders: reminders ?? this.reminders,
+      onlineFeatures: onlineFeatures ?? this.onlineFeatures,
     );
   }
 
@@ -83,6 +90,7 @@ class HelioraSettings {
       'birthDateMs': birthDateMs,
       'cityId': cityId,
       'reminders': reminders,
+      'onlineFeatures': onlineFeatures,
     };
   }
 
@@ -109,6 +117,7 @@ class HelioraSettings {
     final birth = json['birthDateMs'];
     final city = json['cityId'];
     final reminders = json['reminders'];
+    final online = json['onlineFeatures'];
     return HelioraSettings(
       themeMode: theme,
       localeCode: locale is String ? locale : d.localeCode,
@@ -121,6 +130,7 @@ class HelioraSettings {
       reminders: reminders is List
           ? <String>[for (final r in reminders) if (r is String) r]
           : d.reminders,
+      onlineFeatures: online is bool ? online : d.onlineFeatures,
     );
   }
 }

@@ -1723,6 +1723,180 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Happening today'**
   String get reminderToday;
+
+  /// No description provided for @onlineTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Online features'**
+  String get onlineTitle;
+
+  /// No description provided for @onlineSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Show the space station and rocket launches. Heliora then contacts only wheretheiss.at, Celestrak and Launch Library 2, which can see your phone\'s internet address. Nothing else is sent. Off by default.'**
+  String get onlineSubtitle;
+
+  /// No description provided for @turnOnOnline.
+  ///
+  /// In en, this message translates to:
+  /// **'Turn on online features'**
+  String get turnOnOnline;
+
+  /// No description provided for @issTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Space station'**
+  String get issTitle;
+
+  /// No description provided for @issCardHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Where it is now and when it passes over you'**
+  String get issCardHint;
+
+  /// No description provided for @issNeedsOnline.
+  ///
+  /// In en, this message translates to:
+  /// **'To show the station, Heliora needs its orbit data from the internet. It is downloaded once and then works offline for days.'**
+  String get issNeedsOnline;
+
+  /// No description provided for @issLoading.
+  ///
+  /// In en, this message translates to:
+  /// **'Getting the orbit data…'**
+  String get issLoading;
+
+  /// No description provided for @issFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not get the orbit data. Check your internet and try again.'**
+  String get issFailed;
+
+  /// No description provided for @issStale.
+  ///
+  /// In en, this message translates to:
+  /// **'The orbit data is {days} days old, so positions may be off. Connect to the internet to refresh it.'**
+  String issStale(String days);
+
+  /// No description provided for @issHeight.
+  ///
+  /// In en, this message translates to:
+  /// **'Height'**
+  String get issHeight;
+
+  /// No description provided for @issSpeed.
+  ///
+  /// In en, this message translates to:
+  /// **'Speed'**
+  String get issSpeed;
+
+  /// No description provided for @issFromYou.
+  ///
+  /// In en, this message translates to:
+  /// **'Distance from you'**
+  String get issFromYou;
+
+  /// No description provided for @valueKmh.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} km/h'**
+  String valueKmh(String value);
+
+  /// No description provided for @issAboveHorizon.
+  ///
+  /// In en, this message translates to:
+  /// **'Above your horizon now! Look {direction}, {degrees}° high.'**
+  String issAboveHorizon(String direction, String degrees);
+
+  /// No description provided for @issBelowHorizon.
+  ///
+  /// In en, this message translates to:
+  /// **'Below your horizon right now.'**
+  String get issBelowHorizon;
+
+  /// No description provided for @issPassesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Next passes over {city}'**
+  String issPassesTitle(String city);
+
+  /// No description provided for @issNoPasses.
+  ///
+  /// In en, this message translates to:
+  /// **'No good passes in the next 5 days.'**
+  String get issNoPasses;
+
+  /// No description provided for @issMaxHigh.
+  ///
+  /// In en, this message translates to:
+  /// **'Up to {degrees}° high'**
+  String issMaxHigh(String degrees);
+
+  /// No description provided for @issFromTo.
+  ///
+  /// In en, this message translates to:
+  /// **'{start} to {end}'**
+  String issFromTo(String start, String end);
+
+  /// No description provided for @issVisible.
+  ///
+  /// In en, this message translates to:
+  /// **'Easy to see'**
+  String get issVisible;
+
+  /// No description provided for @issHidden.
+  ///
+  /// In en, this message translates to:
+  /// **'Hard to see'**
+  String get issHidden;
+
+  /// No description provided for @issPassTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Space station passing over you'**
+  String get issPassTitle;
+
+  /// No description provided for @issPassBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Rises in 10 minutes, up to {degrees}° high. Look {direction}.'**
+  String issPassBody(String degrees, String direction);
+
+  /// No description provided for @issNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Positions are worked out on your phone from the station\'s orbit data. A pass is easy to see when the sky is dark and the station is lit by the Sun: it looks like a bright, fast star.'**
+  String get issNote;
+
+  /// No description provided for @launchesNeedOnline.
+  ///
+  /// In en, this message translates to:
+  /// **'Turn on online features to see upcoming rocket launches here.'**
+  String get launchesNeedOnline;
+
+  /// No description provided for @launchesFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not update the launch list. Showing the saved one.'**
+  String get launchesFailed;
+
+  /// No description provided for @launchesNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Launch times come from Launch Library 2 and often change. Names and places are in English.'**
+  String get launchesNote;
+
+  /// No description provided for @launchReminderBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Lifts off in about an hour. Times can change.'**
+  String get launchReminderBody;
+
+  /// No description provided for @launchTimeTbd.
+  ///
+  /// In en, this message translates to:
+  /// **'Time not set yet'**
+  String get launchTimeTbd;
 }
 
 class _AppLocalizationsDelegate

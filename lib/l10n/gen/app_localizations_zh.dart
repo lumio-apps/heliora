@@ -897,4 +897,107 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get reminderToday => '今天发生';
+
+  @override
+  String get onlineTitle => '在线功能';
+
+  @override
+  String get onlineSubtitle =>
+      '显示空间站和火箭发射。开启后，Heliora 只会连接 wheretheiss.at、Celestrak 和 Launch Library 2，它们能看到你手机的网络地址，不会发送其他任何内容。默认关闭。';
+
+  @override
+  String get turnOnOnline => '开启在线功能';
+
+  @override
+  String get issTitle => '空间站';
+
+  @override
+  String get issCardHint => '它现在在哪里，何时飞过你的上空';
+
+  @override
+  String get issNeedsOnline => '要显示空间站，Heliora 需要从网上获取它的轨道数据。下载一次后可离线使用数天。';
+
+  @override
+  String get issLoading => '正在获取轨道数据…';
+
+  @override
+  String get issFailed => '无法获取轨道数据。请检查网络后重试。';
+
+  @override
+  String issStale(String days) {
+    return '轨道数据已有 $days 天，位置可能有偏差。请联网刷新。';
+  }
+
+  @override
+  String get issHeight => '高度';
+
+  @override
+  String get issSpeed => '速度';
+
+  @override
+  String get issFromYou => '离你的距离';
+
+  @override
+  String valueKmh(String value) {
+    return '$value 公里/小时';
+  }
+
+  @override
+  String issAboveHorizon(String direction, String degrees) {
+    return '现在就在你的地平线上方！请看$direction，高度 $degrees°。';
+  }
+
+  @override
+  String get issBelowHorizon => '现在在你的地平线以下。';
+
+  @override
+  String issPassesTitle(String city) {
+    return '$city上空的下几次飞越';
+  }
+
+  @override
+  String get issNoPasses => '未来 5 天没有合适的飞越。';
+
+  @override
+  String issMaxHigh(String degrees) {
+    return '最高 $degrees°';
+  }
+
+  @override
+  String issFromTo(String start, String end) {
+    return '$start到$end';
+  }
+
+  @override
+  String get issVisible => '容易看到';
+
+  @override
+  String get issHidden => '不易看到';
+
+  @override
+  String get issPassTitle => '空间站正从你上空飞过';
+
+  @override
+  String issPassBody(String degrees, String direction) {
+    return '10 分钟后升起，最高 $degrees°。请看$direction。';
+  }
+
+  @override
+  String get issNote =>
+      '位置由你的手机根据空间站的轨道数据计算。天空够暗且空间站被阳光照亮时最容易看到，它像一颗明亮快速移动的星星。';
+
+  @override
+  String get launchesNeedOnline => '开启在线功能，即可在这里查看即将进行的火箭发射。';
+
+  @override
+  String get launchesFailed => '无法更新发射列表，显示已保存的列表。';
+
+  @override
+  String get launchesNote => '发射时间来自 Launch Library 2，经常变动。名称和地点为英文。';
+
+  @override
+  String get launchReminderBody => '约一小时后发射。时间可能变动。';
+
+  @override
+  String get launchTimeTbd => '时间尚未确定';
 }

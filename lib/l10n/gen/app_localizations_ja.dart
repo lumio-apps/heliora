@@ -899,4 +899,109 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get reminderToday => '今日です';
+
+  @override
+  String get onlineTitle => 'オンライン機能';
+
+  @override
+  String get onlineSubtitle =>
+      '宇宙ステーションとロケット打ち上げを表示します。オンにすると、Heliora は wheretheiss.at、Celestrak、Launch Library 2 とだけ通信し、これらはスマホのインターネットアドレスを見られます。ほかには何も送りません。初期設定はオフです。';
+
+  @override
+  String get turnOnOnline => 'オンライン機能をオンにする';
+
+  @override
+  String get issTitle => '宇宙ステーション';
+
+  @override
+  String get issCardHint => '今どこにいるか、いつ上空を通るか';
+
+  @override
+  String get issNeedsOnline =>
+      'ステーションを表示するには、インターネットから軌道データを取得する必要があります。一度ダウンロードすれば数日間オフラインで使えます。';
+
+  @override
+  String get issLoading => '軌道データを取得中…';
+
+  @override
+  String get issFailed => '軌道データを取得できませんでした。通信を確認してもう一度お試しください。';
+
+  @override
+  String issStale(String days) {
+    return '軌道データは $days 日前のものなので、位置がずれることがあります。インターネットに接続して更新してください。';
+  }
+
+  @override
+  String get issHeight => '高度';
+
+  @override
+  String get issSpeed => '速度';
+
+  @override
+  String get issFromYou => 'あなたからの距離';
+
+  @override
+  String valueKmh(String value) {
+    return '$value km/h';
+  }
+
+  @override
+  String issAboveHorizon(String direction, String degrees) {
+    return '今、地平線の上にいます！$directionを見てください、高さ $degrees°。';
+  }
+
+  @override
+  String get issBelowHorizon => '今は地平線の下です。';
+
+  @override
+  String issPassesTitle(String city) {
+    return '$cityの上空を通る次の日時';
+  }
+
+  @override
+  String get issNoPasses => '今後5日間に見ごろの通過はありません。';
+
+  @override
+  String issMaxHigh(String degrees) {
+    return '最高 $degrees°';
+  }
+
+  @override
+  String issFromTo(String start, String end) {
+    return '$startから$endへ';
+  }
+
+  @override
+  String get issVisible => '見つけやすい';
+
+  @override
+  String get issHidden => '見つけにくい';
+
+  @override
+  String get issPassTitle => '宇宙ステーションがあなたの上空を通ります';
+
+  @override
+  String issPassBody(String degrees, String direction) {
+    return '10分後に昇ります、最高 $degrees°。$directionを見てください。';
+  }
+
+  @override
+  String get issNote =>
+      '位置はスマホの中でステーションの軌道データから計算します。空が暗く、ステーションに太陽光が当たっているときは見つけやすく、明るく速く動く星のように見えます。';
+
+  @override
+  String get launchesNeedOnline => 'これからのロケット打ち上げをここで見るには、オンライン機能をオンにしてください。';
+
+  @override
+  String get launchesFailed => '打ち上げリストを更新できませんでした。保存済みのリストを表示しています。';
+
+  @override
+  String get launchesNote =>
+      '打ち上げ時刻は Launch Library 2 から取得され、よく変わります。名称と場所は英語です。';
+
+  @override
+  String get launchReminderBody => '約1時間後に打ち上げ。時刻は変わることがあります。';
+
+  @override
+  String get launchTimeTbd => '時刻は未定';
 }

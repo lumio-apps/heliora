@@ -6,14 +6,18 @@ import 'package:heliora/core/events.dart';
 import 'package:heliora/core/finder.dart';
 import 'package:heliora/core/format.dart';
 import 'package:heliora/core/habitability.dart';
+import 'package:heliora/core/iss.dart';
 import 'package:heliora/core/orbits.dart';
+import 'package:heliora/core/sgp4.dart';
 import 'package:heliora/core/sky.dart';
 import 'package:heliora/data/cities.dart';
 import 'package:heliora/core/quiz.dart';
 import 'package:heliora/core/version.dart';
+import 'package:heliora/data/online_service.dart';
 import 'package:heliora/data/planets.dart';
 import 'package:heliora/data/settings.dart';
 import 'package:heliora/data/update_service.dart';
+import 'package:heliora/screens/events_screen.dart' show launchReminderTime;
 
 void main() {
   group('planet data', () {
@@ -372,6 +376,225 @@ void main() {
     });
   });
 
+  group('space station', () {
+    // Test orbit 00005 from Vallado's published SGP4 test set.
+    const vallado1 =
+        '1 00005U 58002B   00179.78495062  .00000023  00000-0  28098-4 0  4753';
+    const vallado2 =
+        '2 00005  34.2682 348.7242 1859667 331.7664  19.3264 10.82419157413667';
+    const iss1 =
+        '1 25544U 98067A   26300.50000000  .00016717  00000-0  10270-3 0  9991';
+    const iss2 =
+        '2 25544  51.6400 120.0000 0005000  90.0000 270.0000 15.50000000400009';
+
+    test('SGP4 matches the published test vectors', () {
+      final sat = Sgp4.fromTle(vallado1, vallado2);
+      final p0 = sat.propagate(0)!;
+      expect(p0.x, closeTo(7022.46529266, 1e-3));
+      expect(p0.y, closeTo(-1400.08296755, 1e-3));
+      expect(p0.z, closeTo(0.03995155, 1e-3));
+      expect(p0.vx, closeTo(1.893841015, 1e-5));
+      expect(p0.vy, closeTo(6.405893759, 1e-5));
+      expect(p0.vz, closeTo(4.534807250, 1e-5));
+      final p6 = sat.propagate(360)!;
+      expect(p6.x, closeTo(-7154.03120202, 1e-2));
+      expect(p6.y, closeTo(-3783.17682504, 1e-2));
+      expect(p6.z, closeTo(-3536.19412294, 1e-2));
+      final p12 = sat.propagate(720)!;
+      expect(p12.x, closeTo(-7134.5934, 1e-1));
+      expect(p12.y, closeTo(6531.6864, 1e-1));
+      expect(p12.z, closeTo(3260.2719, 1e-1));
+    });
+
+    test('broken orbit lines are refused', () {
+      expect(() => Sgp4.fromTle('1 x', '2 y'), throwsFormatException);
+      expect(() => Sgp4.fromTle('hello', 'world'), throwsFormatException);
+    });
+
+    test('the station stays at a sensible height, speed and latitude', () {
+      final sat = Sgp4.fromTle(iss1, iss2);
+      var maxLat = 0.0;
+      for (var m = 0; m < 200; m += 1) {
+        final pos = issPosition(sat, sat.epoch.add(Duration(minutes: m)))!;
+        expect(pos.altitudeKm, inInclusiveRange(380, 450));
+        expect(pos.speedKmh, inInclusiveRange(27400, 27800));
+        expect(pos.lon, inInclusiveRange(-180, 180));
+        maxLat = maxLat < pos.lat.abs() ? pos.lat.abs() : maxLat;
+      }
+      expect(maxLat, inInclusiveRange(51.3, 52.1));
+    });
+
+    test('look angle is straight up when the station is overhead', () {
+      final sat = Sgp4.fromTle(iss1, iss2);
+      final pos = issPosition(sat, sat.epoch)!;
+      final look = lookAngle(pos.ecef, pos.lat, pos.lon);
+      expect(look.elevation, closeTo(90, 0.5));
+      expect(look.rangeKm, closeTo(pos.altitudeKm, 1));
+      final far = lookAngle(pos.ecef, -pos.lat, pos.lon + 180);
+      expect(far.elevation, lessThan(0));
+    });
+
+    test('distances over the ground', () {
+      expect(greatCircleKm(0, 0, 0, 0), closeTo(0, 1e-9));
+      expect(greatCircleKm(0, 0, 0, 90), closeTo(10007.5, 5));
+      expect(greatCircleKm(90, 0, -90, 0), closeTo(20015, 10));
+    });
+
+    test('passes over a city make sense', () {
+      final sat = Sgp4.fromTle(iss1, iss2);
+      final passes = findIssPasses(sat, sat.epoch, 40.18, 44.51);
+      expect(passes, isNotEmpty);
+      var last = sat.epoch;
+      for (final pass in passes) {
+        expect(pass.rise.isBefore(pass.peak), isTrue);
+        expect(pass.peak.isBefore(pass.set), isTrue);
+        expect(pass.rise.isBefore(last), isFalse);
+        last = pass.rise;
+        expect(pass.maxElevation, inInclusiveRange(10, 90));
+        expect(pass.duration.inMinutes, inInclusiveRange(1, 15));
+        expect(pass.riseAzimuth, inInclusiveRange(0, 360));
+        expect(pass.setAzimuth, inInclusiveRange(0, 360));
+        expect(pass.id, startsWith('iss:'));
+      }
+      expect(passes.map((e) => e.id).toSet().length, passes.length);
+      final again = findIssPasses(sat, sat.epoch, 40.18, 44.51);
+      expect(again.first.id, passes.first.id);
+    });
+
+    test('the ground track has a point a minute', () {
+      final sat = Sgp4.fromTle(iss1, iss2);
+      final track = groundTrack(sat, sat.epoch);
+      expect(track.length, 146);
+    });
+  });
+
+  group('online data', () {
+    const line1 =
+        '1 25544U 98067A   26300.50000000  .00016717  00000-0  10270-3 0  9991';
+    const line2 =
+        '2 25544  51.6400 120.0000 0005000  90.0000 270.0000 15.50000000400009';
+
+    test('wheretheiss.at answer is read', () {
+      final body =
+          '{"name":"iss","id":25544,"header":"ISS (ZARYA)","line1":"$line1","line2":"$line2"}';
+      final tle = OnlineService.parseWhereTheIss(body, 5);
+      expect(tle.name, 'ISS (ZARYA)');
+      expect(tle.line1, line1);
+      expect(tle.fetchedAtMs, 5);
+      expect(tle.toSgp4(), isNotNull);
+    });
+
+    test('Celestrak answer is read', () {
+      final body = 'ISS (ZARYA)             \r\n$line1\r\n$line2\r\n';
+      final tle = OnlineService.parseCelestrak(body, 9);
+      expect(tle.name, 'ISS (ZARYA)');
+      expect(tle.line2, line2);
+    });
+
+    test('wrong or broken orbit answers are refused', () {
+      expect(() => OnlineService.parseWhereTheIss('[]', 0), throwsFormatException);
+      expect(() => OnlineService.parseWhereTheIss('{"line1":"a"}', 0),
+          throwsFormatException);
+      expect(() => OnlineService.parseCelestrak('nothing here', 0),
+          throwsFormatException);
+      final other = line1.replaceFirst('25544', '25545');
+      expect(() => OnlineService.parseCelestrak('X\n$other\n$line2', 0),
+          throwsFormatException);
+    });
+
+    test('launch list is read and sorted', () {
+      const body = r"""
+{"count":3,"results":[
+ {"id":"b-2","name":"Falcon 9 Block 5 | Starlink","net":"2026-11-10T04:30:00Z",
+  "net_precision":{"abbrev":"MIN"},"status":{"abbrev":"Go","name":"Go for Launch"},
+  "launch_service_provider":{"name":"SpaceX"},
+  "rocket":{"configuration":{"name":"Falcon 9","full_name":"Falcon 9 Block 5"}},
+  "pad":{"name":"SLC-40","location":{"name":"Cape Canaveral, FL, USA"}}},
+ {"id":"a-1","name":"Test | Early","net":"2026-11-02T00:00:00Z",
+  "net_precision":{"abbrev":"DAY"},"status":{"name":"To Be Determined"}},
+ {"id":"c-3","net":"2026-12-01T00:00:00Z"},
+ {"id":"d-4","name":"No time","net":"oops"},
+ "junk"
+]}""";
+      final list = OnlineService.parseLaunches(body);
+      expect(list.map((e) => e.id), <String>['a-1', 'b-2']);
+      expect(list[0].timeKnown, isFalse);
+      expect(list[0].status, 'To Be Determined');
+      expect(list[1].timeKnown, isTrue);
+      expect(list[1].rocket, 'Falcon 9 Block 5');
+      expect(list[1].provider, 'SpaceX');
+      expect(list[1].pad, 'SLC-40');
+      expect(list[1].location, 'Cape Canaveral, FL, USA');
+      expect(list[1].net, DateTime.utc(2026, 11, 10, 4, 30));
+      expect(list[1].reminderId, 'launch:b-2');
+      expect(list[1].details, contains('SpaceX'));
+      expect(list[1].details, contains('SLC-40, Cape Canaveral'));
+    });
+
+    test('a launch answer of the wrong shape is refused', () {
+      expect(() => OnlineService.parseLaunches('{"detail":"Throttled"}'),
+          throwsFormatException);
+      expect(() => OnlineService.parseLaunches('[]'), throwsFormatException);
+    });
+
+    test('saved data survives a round trip', () {
+      const tle = IssTle(name: 'ISS', line1: line1, line2: line2, fetchedAtMs: 7);
+      final back = IssTle.fromJson(tle.toJson())!;
+      expect(back.line1, line1);
+      expect(back.fetchedAtMs, 7);
+      expect(IssTle.fromJson(<String, dynamic>{'name': 3}), isNull);
+      expect(IssTle.fromJson('x'), isNull);
+
+      final launch = Launch(
+        id: 'x',
+        name: 'Rocket | Payload',
+        netMs: DateTime.utc(2026, 11, 3, 12).millisecondsSinceEpoch,
+        timeKnown: false,
+        provider: 'P',
+      );
+      final l2 = Launch.fromJson(launch.toJson())!;
+      expect(l2.id, 'x');
+      expect(l2.timeKnown, isFalse);
+      expect(l2.provider, 'P');
+      expect(Launch.fromJson(<String, dynamic>{'id': 1}), isNull);
+    });
+
+    test('launch reminders', () {
+      final now = DateTime(2026, 10, 28, 12);
+      final known = Launch(
+        id: 'k',
+        name: 'K',
+        netMs: now.add(const Duration(days: 3)).toUtc().millisecondsSinceEpoch,
+        timeKnown: true,
+      );
+      expect(launchReminderTime(known, now),
+          now.add(const Duration(days: 3)).subtract(const Duration(hours: 1)));
+
+      final unknown = Launch(
+        id: 'u',
+        name: 'U',
+        netMs: DateTime(2026, 11, 5, 14).toUtc().millisecondsSinceEpoch,
+        timeKnown: false,
+      );
+      expect(launchReminderTime(unknown, now), DateTime(2026, 11, 4, 18));
+
+      final past = Launch(
+        id: 'p',
+        name: 'P',
+        netMs: now.subtract(const Duration(hours: 2)).toUtc().millisecondsSinceEpoch,
+        timeKnown: true,
+      );
+      expect(launchReminderTime(past, now), isNull);
+      final tooSoon = Launch(
+        id: 't',
+        name: 'T',
+        netMs: now.add(const Duration(minutes: 30)).toUtc().millisecondsSinceEpoch,
+        timeKnown: true,
+      );
+      expect(launchReminderTime(tooSoon, now), isNull);
+    });
+  });
+
   group('versions', () {
     test('newer and older', () {
       expect(isNewerVersion('v1.0.1', '1.0.0'), isTrue);
@@ -433,6 +656,17 @@ void main() {
       expect(back.birthDateMs, 946728000000);
       expect(back.cityId, 'yerevan');
       expect(back.birthDate, isNotNull);
+    });
+
+    test('online features are off by default and saved', () {
+      expect(const HelioraSettings().onlineFeatures, isFalse);
+      expect(HelioraSettings.fromJson(<String, dynamic>{}).onlineFeatures, isFalse);
+      const on = HelioraSettings(onlineFeatures: true);
+      expect(HelioraSettings.fromJson(on.toJson()).onlineFeatures, isTrue);
+      expect(
+          HelioraSettings.fromJson(<String, dynamic>{'onlineFeatures': 'yes'})
+              .onlineFeatures,
+          isFalse);
     });
 
     test('reminders are saved and broken ones ignored', () {

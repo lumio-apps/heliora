@@ -919,4 +919,113 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get reminderToday => 'Terjadi hari ini';
+
+  @override
+  String get onlineTitle => 'Fitur online';
+
+  @override
+  String get onlineSubtitle =>
+      'Tampilkan stasiun luar angkasa dan peluncuran roket. Heliora lalu hanya menghubungi wheretheiss.at, Celestrak, dan Launch Library 2, yang dapat melihat alamat internet ponsel Anda. Tidak ada hal lain yang dikirim. Mati secara default.';
+
+  @override
+  String get turnOnOnline => 'Aktifkan fitur online';
+
+  @override
+  String get issTitle => 'Stasiun luar angkasa';
+
+  @override
+  String get issCardHint => 'Di mana sekarang dan kapan melintas di atas Anda';
+
+  @override
+  String get issNeedsOnline =>
+      'Untuk menampilkan stasiun, Heliora memerlukan data orbitnya dari internet. Data diunduh sekali lalu berfungsi offline selama beberapa hari.';
+
+  @override
+  String get issLoading => 'Mengambil data orbit…';
+
+  @override
+  String get issFailed =>
+      'Data orbit tidak bisa diambil. Periksa internet lalu coba lagi.';
+
+  @override
+  String issStale(String days) {
+    return 'Data orbit sudah $days hari, jadi posisi mungkin meleset. Sambungkan ke internet untuk memperbaruinya.';
+  }
+
+  @override
+  String get issHeight => 'Ketinggian';
+
+  @override
+  String get issSpeed => 'Kecepatan';
+
+  @override
+  String get issFromYou => 'Jarak dari Anda';
+
+  @override
+  String valueKmh(String value) {
+    return '$value km/jam';
+  }
+
+  @override
+  String issAboveHorizon(String direction, String degrees) {
+    return 'Di atas cakrawala Anda sekarang! Lihat ke $direction, setinggi $degrees°.';
+  }
+
+  @override
+  String get issBelowHorizon => 'Di bawah cakrawala Anda saat ini.';
+
+  @override
+  String issPassesTitle(String city) {
+    return 'Lintasan berikutnya di atas $city';
+  }
+
+  @override
+  String get issNoPasses => 'Tidak ada lintasan bagus dalam 5 hari ke depan.';
+
+  @override
+  String issMaxHigh(String degrees) {
+    return 'Setinggi hingga $degrees°';
+  }
+
+  @override
+  String issFromTo(String start, String end) {
+    return 'Dari $start ke $end';
+  }
+
+  @override
+  String get issVisible => 'Mudah dilihat';
+
+  @override
+  String get issHidden => 'Sulit dilihat';
+
+  @override
+  String get issPassTitle => 'Stasiun luar angkasa melintas di atas Anda';
+
+  @override
+  String issPassBody(String degrees, String direction) {
+    return 'Terbit dalam 10 menit, setinggi hingga $degrees°. Lihat ke $direction.';
+  }
+
+  @override
+  String get issNote =>
+      'Posisi dihitung di ponsel Anda dari data orbit stasiun. Lintasan mudah dilihat saat langit gelap dan stasiun disinari Matahari: tampak seperti bintang terang yang bergerak cepat.';
+
+  @override
+  String get launchesNeedOnline =>
+      'Aktifkan fitur online untuk melihat peluncuran roket mendatang di sini.';
+
+  @override
+  String get launchesFailed =>
+      'Daftar peluncuran tidak bisa diperbarui. Menampilkan daftar tersimpan.';
+
+  @override
+  String get launchesNote =>
+      'Waktu peluncuran berasal dari Launch Library 2 dan sering berubah. Nama dan tempat dalam bahasa Inggris.';
+
+  @override
+  String get launchReminderBody =>
+      'Meluncur sekitar satu jam lagi. Waktu bisa berubah.';
+
+  @override
+  String get launchTimeTbd => 'Waktu belum ditentukan';
 }

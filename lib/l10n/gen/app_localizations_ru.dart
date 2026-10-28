@@ -918,4 +918,113 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get reminderToday => 'Происходит сегодня';
+
+  @override
+  String get onlineTitle => 'Онлайн-функции';
+
+  @override
+  String get onlineSubtitle =>
+      'Показывать космическую станцию и запуски ракет. Тогда Heliora обращается только к wheretheiss.at, Celestrak и Launch Library 2, которые видят интернет-адрес вашего телефона. Больше ничего не отправляется. По умолчанию выключено.';
+
+  @override
+  String get turnOnOnline => 'Включить онлайн-функции';
+
+  @override
+  String get issTitle => 'Космическая станция';
+
+  @override
+  String get issCardHint => 'Где она сейчас и когда пролетит над вами';
+
+  @override
+  String get issNeedsOnline =>
+      'Чтобы показать станцию, Heliora нужны данные её орбиты из интернета. Они скачиваются один раз и потом работают офлайн несколько дней.';
+
+  @override
+  String get issLoading => 'Загрузка данных орбиты…';
+
+  @override
+  String get issFailed =>
+      'Не удалось получить данные орбиты. Проверьте интернет и попробуйте снова.';
+
+  @override
+  String issStale(String days) {
+    return 'Данным орбиты $days дн., поэтому положение может быть неточным. Подключитесь к интернету, чтобы обновить.';
+  }
+
+  @override
+  String get issHeight => 'Высота';
+
+  @override
+  String get issSpeed => 'Скорость';
+
+  @override
+  String get issFromYou => 'Расстояние до вас';
+
+  @override
+  String valueKmh(String value) {
+    return '$value км/ч';
+  }
+
+  @override
+  String issAboveHorizon(String direction, String degrees) {
+    return 'Сейчас над вашим горизонтом! Смотрите на $direction, высота $degrees°.';
+  }
+
+  @override
+  String get issBelowHorizon => 'Сейчас под вашим горизонтом.';
+
+  @override
+  String issPassesTitle(String city) {
+    return 'Ближайшие пролёты над: $city';
+  }
+
+  @override
+  String get issNoPasses => 'В ближайшие 5 дней хороших пролётов нет.';
+
+  @override
+  String issMaxHigh(String degrees) {
+    return 'До $degrees° над горизонтом';
+  }
+
+  @override
+  String issFromTo(String start, String end) {
+    return 'От $start до $end';
+  }
+
+  @override
+  String get issVisible => 'Хорошо видна';
+
+  @override
+  String get issHidden => 'Плохо видна';
+
+  @override
+  String get issPassTitle => 'Космическая станция пролетает над вами';
+
+  @override
+  String issPassBody(String degrees, String direction) {
+    return 'Появится через 10 минут, до $degrees° над горизонтом. Смотрите на $direction.';
+  }
+
+  @override
+  String get issNote =>
+      'Положение считается на вашем телефоне по данным орбиты станции. Пролёт хорошо виден, когда небо тёмное, а станцию освещает Солнце: она похожа на яркую быструю звезду.';
+
+  @override
+  String get launchesNeedOnline =>
+      'Включите онлайн-функции, чтобы видеть здесь ближайшие запуски ракет.';
+
+  @override
+  String get launchesFailed =>
+      'Не удалось обновить список запусков. Показан сохранённый список.';
+
+  @override
+  String get launchesNote =>
+      'Время запусков берётся из Launch Library 2 и часто меняется. Названия и места указаны по-английски.';
+
+  @override
+  String get launchReminderBody =>
+      'Старт примерно через час. Время может измениться.';
+
+  @override
+  String get launchTimeTbd => 'Время ещё не назначено';
 }

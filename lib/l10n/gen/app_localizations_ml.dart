@@ -922,4 +922,115 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get reminderToday => 'ഇന്ന് നടക്കുന്നു';
+
+  @override
+  String get onlineTitle => 'ഓൺലൈൻ സൗകര്യങ്ങൾ';
+
+  @override
+  String get onlineSubtitle =>
+      'ബഹിരാകാശ നിലയവും റോക്കറ്റ് വിക്ഷേപണങ്ങളും കാണിക്കുക. അപ്പോൾ Heliora wheretheiss.at, Celestrak, Launch Library 2 എന്നിവയുമായി മാത്രമേ ബന്ധപ്പെടൂ; അവയ്ക്ക് നിങ്ങളുടെ ഫോണിന്റെ ഇന്റർനെറ്റ് വിലാസം കാണാം. മറ്റൊന്നും അയയ്ക്കില്ല. തുടക്കത്തിൽ ഓഫ് ആണ്.';
+
+  @override
+  String get turnOnOnline => 'ഓൺലൈൻ സൗകര്യങ്ങൾ ഓണാക്കുക';
+
+  @override
+  String get issTitle => 'ബഹിരാകാശ നിലയം';
+
+  @override
+  String get issCardHint =>
+      'ഇപ്പോൾ എവിടെയാണ്, നിങ്ങളുടെ മുകളിലൂടെ എപ്പോൾ പോകും';
+
+  @override
+  String get issNeedsOnline =>
+      'നിലയം കാണിക്കാൻ Heliora-യ്ക്ക് ഇന്റർനെറ്റിൽ നിന്ന് അതിന്റെ ഭ്രമണപഥ വിവരം വേണം. ഒരിക്കൽ ഡൗൺലോഡ് ചെയ്താൽ ദിവസങ്ങളോളം ഓഫ്‌ലൈനായി പ്രവർത്തിക്കും.';
+
+  @override
+  String get issLoading => 'ഭ്രമണപഥ വിവരം എടുക്കുന്നു…';
+
+  @override
+  String get issFailed =>
+      'ഭ്രമണപഥ വിവരം കിട്ടിയില്ല. ഇന്റർനെറ്റ് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.';
+
+  @override
+  String issStale(String days) {
+    return 'ഭ്രമണപഥ വിവരത്തിന് $days ദിവസം പഴക്കമുണ്ട്, അതിനാൽ സ്ഥാനം അല്പം തെറ്റാം. പുതുക്കാൻ ഇന്റർനെറ്റിൽ ബന്ധിപ്പിക്കുക.';
+  }
+
+  @override
+  String get issHeight => 'ഉയരം';
+
+  @override
+  String get issSpeed => 'വേഗം';
+
+  @override
+  String get issFromYou => 'നിങ്ങളിൽ നിന്നുള്ള ദൂരം';
+
+  @override
+  String valueKmh(String value) {
+    return '$value കിമീ/മണിക്കൂർ';
+  }
+
+  @override
+  String issAboveHorizon(String direction, String degrees) {
+    return 'ഇപ്പോൾ നിങ്ങളുടെ ചക്രവാളത്തിന് മുകളിലാണ്! $direction ഭാഗത്തേക്ക് നോക്കൂ, $degrees° ഉയരത്തിൽ.';
+  }
+
+  @override
+  String get issBelowHorizon => 'ഇപ്പോൾ നിങ്ങളുടെ ചക്രവാളത്തിന് താഴെയാണ്.';
+
+  @override
+  String issPassesTitle(String city) {
+    return '$city-ന് മുകളിലൂടെ അടുത്ത യാത്രകൾ';
+  }
+
+  @override
+  String get issNoPasses => 'അടുത്ത 5 ദിവസത്തിൽ നല്ല യാത്രകളില്ല.';
+
+  @override
+  String issMaxHigh(String degrees) {
+    return '$degrees° വരെ ഉയരത്തിൽ';
+  }
+
+  @override
+  String issFromTo(String start, String end) {
+    return '$start മുതൽ $end വരെ';
+  }
+
+  @override
+  String get issVisible => 'എളുപ്പത്തിൽ കാണാം';
+
+  @override
+  String get issHidden => 'കാണാൻ ബുദ്ധിമുട്ട്';
+
+  @override
+  String get issPassTitle =>
+      'ബഹിരാകാശ നിലയം നിങ്ങളുടെ മുകളിലൂടെ കടന്നുപോകുന്നു';
+
+  @override
+  String issPassBody(String degrees, String direction) {
+    return '10 മിനിറ്റിൽ ഉദിക്കും, $degrees° വരെ ഉയരത്തിൽ. $direction ഭാഗത്തേക്ക് നോക്കൂ.';
+  }
+
+  @override
+  String get issNote =>
+      'സ്ഥാനങ്ങൾ നിങ്ങളുടെ ഫോണിൽത്തന്നെ നിലയത്തിന്റെ ഭ്രമണപഥ വിവരത്തിൽ നിന്ന് കണക്കാക്കുന്നു. ആകാശം ഇരുണ്ടതും നിലയത്തിൽ സൂര്യപ്രകാശം പതിക്കുന്നതുമാകുമ്പോൾ എളുപ്പത്തിൽ കാണാം: തിളങ്ങുന്ന വേഗമേറിയ നക്ഷത്രം പോലെ.';
+
+  @override
+  String get launchesNeedOnline =>
+      'വരാനിരിക്കുന്ന റോക്കറ്റ് വിക്ഷേപണങ്ങൾ ഇവിടെ കാണാൻ ഓൺലൈൻ സൗകര്യങ്ങൾ ഓണാക്കുക.';
+
+  @override
+  String get launchesFailed =>
+      'വിക്ഷേപണ പട്ടിക പുതുക്കാനായില്ല. സേവ് ചെയ്ത പട്ടിക കാണിക്കുന്നു.';
+
+  @override
+  String get launchesNote =>
+      'വിക്ഷേപണ സമയം Launch Library 2-ൽ നിന്നാണ്, അത് പലപ്പോഴും മാറും. പേരുകളും സ്ഥലങ്ങളും ഇംഗ്ലീഷിലാണ്.';
+
+  @override
+  String get launchReminderBody =>
+      'ഏകദേശം ഒരു മണിക്കൂറിൽ വിക്ഷേപിക്കും. സമയം മാറാം.';
+
+  @override
+  String get launchTimeTbd => 'സമയം ഇതുവരെ നിശ്ചയിച്ചിട്ടില്ല';
 }

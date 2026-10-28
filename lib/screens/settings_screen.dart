@@ -153,6 +153,25 @@ class SettingsScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
+          SectionLabel(l.onlineTitle),
+          SurfaceCard(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SwitchListTile(
+                  contentPadding: EdgeInsets.zero,
+                  title: Text(l.onlineTitle,
+                      style: TextStyle(fontSize: 15, color: p.text)),
+                  value: settings.onlineFeatures,
+                  onChanged: state.setOnlineFeatures,
+                ),
+                Text(l.onlineSubtitle,
+                    style:
+                        TextStyle(fontSize: 12, color: p.muted, height: 1.4)),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
           SectionLabel(l.updates),
           SurfaceCard(
             child: Column(

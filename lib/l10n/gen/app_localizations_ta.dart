@@ -921,4 +921,113 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get reminderToday => 'இன்று நடக்கிறது';
+
+  @override
+  String get onlineTitle => 'ஆன்லைன் வசதிகள்';
+
+  @override
+  String get onlineSubtitle =>
+      'விண்வெளி நிலையத்தையும் ராக்கெட் ஏவுதல்களையும் காட்டு. அப்போது Heliora, wheretheiss.at, Celestrak, Launch Library 2 ஆகியவற்றுடன் மட்டுமே தொடர்பு கொள்ளும்; அவை உங்கள் ஃபோனின் இணைய முகவரியைப் பார்க்கலாம். வேறு எதுவும் அனுப்பப்படாது. தொடக்கத்தில் அணைந்திருக்கும்.';
+
+  @override
+  String get turnOnOnline => 'ஆன்லைன் வசதிகளை இயக்கு';
+
+  @override
+  String get issTitle => 'விண்வெளி நிலையம்';
+
+  @override
+  String get issCardHint => 'இப்போது எங்கே, உங்கள் மேல் எப்போது கடக்கும்';
+
+  @override
+  String get issNeedsOnline =>
+      'நிலையத்தைக் காட்ட Heliora-வுக்கு இணையத்திலிருந்து அதன் சுற்றுப்பாதைத் தரவு தேவை. ஒருமுறை பதிவிறக்கினால் சில நாட்கள் ஆஃப்லைனில் வேலை செய்யும்.';
+
+  @override
+  String get issLoading => 'சுற்றுப்பாதைத் தரவைப் பெறுகிறது…';
+
+  @override
+  String get issFailed =>
+      'சுற்றுப்பாதைத் தரவு கிடைக்கவில்லை. இணையத்தைச் சரிபார்த்து மீண்டும் முயலவும்.';
+
+  @override
+  String issStale(String days) {
+    return 'சுற்றுப்பாதைத் தரவு $days நாட்கள் பழையது, எனவே இடம் சற்று தவறாக இருக்கலாம். புதுப்பிக்க இணையத்துடன் இணையவும்.';
+  }
+
+  @override
+  String get issHeight => 'உயரம்';
+
+  @override
+  String get issSpeed => 'வேகம்';
+
+  @override
+  String get issFromYou => 'உங்களிடமிருந்து தூரம்';
+
+  @override
+  String valueKmh(String value) {
+    return '$value கிமீ/மணி';
+  }
+
+  @override
+  String issAboveHorizon(String direction, String degrees) {
+    return 'இப்போது உங்கள் அடிவானத்துக்கு மேலே உள்ளது! $direction பக்கம் பாருங்கள், $degrees° உயரத்தில்.';
+  }
+
+  @override
+  String get issBelowHorizon => 'இப்போது உங்கள் அடிவானத்துக்குக் கீழே உள்ளது.';
+
+  @override
+  String issPassesTitle(String city) {
+    return '$city மேல் அடுத்த பயணங்கள்';
+  }
+
+  @override
+  String get issNoPasses => 'அடுத்த 5 நாட்களில் நல்ல பயணங்கள் இல்லை.';
+
+  @override
+  String issMaxHigh(String degrees) {
+    return '$degrees° வரை உயரம்';
+  }
+
+  @override
+  String issFromTo(String start, String end) {
+    return '$start இலிருந்து $end வரை';
+  }
+
+  @override
+  String get issVisible => 'எளிதில் தெரியும்';
+
+  @override
+  String get issHidden => 'பார்க்க கடினம்';
+
+  @override
+  String get issPassTitle => 'விண்வெளி நிலையம் உங்கள் மேல் கடக்கிறது';
+
+  @override
+  String issPassBody(String degrees, String direction) {
+    return '10 நிமிடத்தில் உதிக்கும், $degrees° வரை உயரம். $direction பக்கம் பாருங்கள்.';
+  }
+
+  @override
+  String get issNote =>
+      'இடங்கள் உங்கள் ஃபோனிலேயே நிலையத்தின் சுற்றுப்பாதைத் தரவிலிருந்து கணக்கிடப்படுகின்றன. வானம் இருண்டும் நிலையத்தின் மீது சூரிய ஒளி படும்போதும் எளிதில் தெரியும்: பிரகாசமான, வேகமான விண்மீன் போல.';
+
+  @override
+  String get launchesNeedOnline =>
+      'வரவிருக்கும் ராக்கெட் ஏவுதல்களை இங்கே காண ஆன்லைன் வசதிகளை இயக்கவும்.';
+
+  @override
+  String get launchesFailed =>
+      'ஏவுதல் பட்டியலைப் புதுப்பிக்க முடியவில்லை. சேமித்த பட்டியலைக் காட்டுகிறது.';
+
+  @override
+  String get launchesNote =>
+      'ஏவுதல் நேரம் Launch Library 2-இலிருந்து வருகிறது, அடிக்கடி மாறும். பெயர்களும் இடங்களும் ஆங்கிலத்தில் உள்ளன.';
+
+  @override
+  String get launchReminderBody =>
+      'ஏறத்தாழ ஒரு மணி நேரத்தில் ஏவப்படும். நேரம் மாறலாம்.';
+
+  @override
+  String get launchTimeTbd => 'நேரம் இன்னும் முடிவாகவில்லை';
 }

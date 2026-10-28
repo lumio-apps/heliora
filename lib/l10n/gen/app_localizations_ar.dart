@@ -916,4 +916,112 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get reminderToday => 'يحدث اليوم';
+
+  @override
+  String get onlineTitle => 'الميزات عبر الإنترنت';
+
+  @override
+  String get onlineSubtitle =>
+      'عرض محطة الفضاء وعمليات إطلاق الصواريخ. عندها يتصل Heliora فقط بـ wheretheiss.at وCelestrak وLaunch Library 2، ويمكنها رؤية عنوان الإنترنت لهاتفك. لا يُرسل شيء آخر. متوقفة افتراضيًا.';
+
+  @override
+  String get turnOnOnline => 'تفعيل الميزات عبر الإنترنت';
+
+  @override
+  String get issTitle => 'محطة الفضاء';
+
+  @override
+  String get issCardHint => 'أين هي الآن ومتى تمر فوقك';
+
+  @override
+  String get issNeedsOnline =>
+      'لعرض المحطة يحتاج Heliora إلى بيانات مدارها من الإنترنت. تُنزَّل مرة واحدة ثم تعمل دون اتصال لأيام.';
+
+  @override
+  String get issLoading => 'جارٍ جلب بيانات المدار…';
+
+  @override
+  String get issFailed =>
+      'تعذر الحصول على بيانات المدار. تحقق من الإنترنت وحاول مجددًا.';
+
+  @override
+  String issStale(String days) {
+    return 'بيانات المدار عمرها $days أيام، لذا قد تكون المواقع غير دقيقة. اتصل بالإنترنت لتحديثها.';
+  }
+
+  @override
+  String get issHeight => 'الارتفاع';
+
+  @override
+  String get issSpeed => 'السرعة';
+
+  @override
+  String get issFromYou => 'المسافة منك';
+
+  @override
+  String valueKmh(String value) {
+    return '$value كم/س';
+  }
+
+  @override
+  String issAboveHorizon(String direction, String degrees) {
+    return 'فوق أفقك الآن! انظر نحو $direction، بارتفاع $degrees°.';
+  }
+
+  @override
+  String get issBelowHorizon => 'تحت أفقك الآن.';
+
+  @override
+  String issPassesTitle(String city) {
+    return 'العبورات القادمة فوق $city';
+  }
+
+  @override
+  String get issNoPasses => 'لا توجد عبورات جيدة في الأيام الخمسة القادمة.';
+
+  @override
+  String issMaxHigh(String degrees) {
+    return 'حتى $degrees° ارتفاعًا';
+  }
+
+  @override
+  String issFromTo(String start, String end) {
+    return 'من $start إلى $end';
+  }
+
+  @override
+  String get issVisible => 'سهلة الرؤية';
+
+  @override
+  String get issHidden => 'صعبة الرؤية';
+
+  @override
+  String get issPassTitle => 'محطة الفضاء تمر فوقك';
+
+  @override
+  String issPassBody(String degrees, String direction) {
+    return 'تشرق بعد 10 دقائق، بارتفاع حتى $degrees°. انظر نحو $direction.';
+  }
+
+  @override
+  String get issNote =>
+      'تُحسب المواقع على هاتفك من بيانات مدار المحطة. يسهل رؤية العبور عندما تكون السماء مظلمة وتضيء الشمس المحطة: تبدو كنجمة ساطعة سريعة.';
+
+  @override
+  String get launchesNeedOnline =>
+      'فعّل الميزات عبر الإنترنت لرؤية عمليات إطلاق الصواريخ القادمة هنا.';
+
+  @override
+  String get launchesFailed =>
+      'تعذر تحديث قائمة الإطلاق. تُعرض القائمة المحفوظة.';
+
+  @override
+  String get launchesNote =>
+      'تأتي أوقات الإطلاق من Launch Library 2 وتتغير كثيرًا. الأسماء والأماكن بالإنجليزية.';
+
+  @override
+  String get launchReminderBody => 'ينطلق خلال نحو ساعة. قد تتغير الأوقات.';
+
+  @override
+  String get launchTimeTbd => 'الوقت لم يُحدد بعد';
 }
