@@ -1465,6 +1465,264 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hold the phone with its back towards the sky and keep it away from magnets and metal. Never look at the Sun.'**
   String get finderNote;
+
+  /// No description provided for @eventsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Space events'**
+  String get eventsTitle;
+
+  /// No description provided for @eventsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'What to look for in the sky over the next 12 months.'**
+  String get eventsSubtitle;
+
+  /// No description provided for @eventsNext.
+  ///
+  /// In en, this message translates to:
+  /// **'Next: {event} · {when}'**
+  String eventsNext(String event, String when);
+
+  /// No description provided for @eventFullMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Full Moon'**
+  String get eventFullMoon;
+
+  /// No description provided for @eventNewMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'New Moon'**
+  String get eventNewMoon;
+
+  /// No description provided for @eventOpposition.
+  ///
+  /// In en, this message translates to:
+  /// **'{planet} at opposition'**
+  String eventOpposition(String planet);
+
+  /// No description provided for @eventEveningElongation.
+  ///
+  /// In en, this message translates to:
+  /// **'{planet}: best evening view'**
+  String eventEveningElongation(String planet);
+
+  /// No description provided for @eventMorningElongation.
+  ///
+  /// In en, this message translates to:
+  /// **'{planet}: best morning view'**
+  String eventMorningElongation(String planet);
+
+  /// No description provided for @eventConjunction.
+  ///
+  /// In en, this message translates to:
+  /// **'{a} and {b} meet'**
+  String eventConjunction(String a, String b);
+
+  /// No description provided for @eventMarchEquinox.
+  ///
+  /// In en, this message translates to:
+  /// **'March equinox'**
+  String get eventMarchEquinox;
+
+  /// No description provided for @eventJuneSolstice.
+  ///
+  /// In en, this message translates to:
+  /// **'June solstice'**
+  String get eventJuneSolstice;
+
+  /// No description provided for @eventSeptemberEquinox.
+  ///
+  /// In en, this message translates to:
+  /// **'September equinox'**
+  String get eventSeptemberEquinox;
+
+  /// No description provided for @eventDecemberSolstice.
+  ///
+  /// In en, this message translates to:
+  /// **'December solstice'**
+  String get eventDecemberSolstice;
+
+  /// No description provided for @eventFullMoonDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'The Moon\'s whole face is lit. It rises around sunset.'**
+  String get eventFullMoonDesc;
+
+  /// No description provided for @eventNewMoonDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'The Moon is hidden. The darkest skies of the month for stars and planets.'**
+  String get eventNewMoonDesc;
+
+  /// No description provided for @eventOppositionDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'{planet} is opposite the Sun. It is at its brightest this year and up all night.'**
+  String eventOppositionDesc(String planet);
+
+  /// No description provided for @eventEveningDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'{planet} is {degrees}° from the Sun, as far as it gets. Look low in the west after sunset.'**
+  String eventEveningDesc(String planet, String degrees);
+
+  /// No description provided for @eventMorningDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'{planet} is {degrees}° from the Sun, as far as it gets. Look low in the east before sunrise.'**
+  String eventMorningDesc(String planet, String degrees);
+
+  /// No description provided for @eventConjunctionDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'They pass only {degrees}° apart in the sky.'**
+  String eventConjunctionDesc(String degrees);
+
+  /// No description provided for @eventEquinoxDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Day and night are almost equal everywhere on Earth.'**
+  String get eventEquinoxDesc;
+
+  /// No description provided for @eventJuneSolsticeDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Longest day in the north, shortest day in the south.'**
+  String get eventJuneSolsticeDesc;
+
+  /// No description provided for @eventDecemberSolsticeDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Shortest day in the north, longest day in the south.'**
+  String get eventDecemberSolsticeDesc;
+
+  /// No description provided for @eventMeteorShower.
+  ///
+  /// In en, this message translates to:
+  /// **'{shower} meteor shower'**
+  String eventMeteorShower(String shower);
+
+  /// No description provided for @eventMeteorDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Up to about {rate} meteors an hour under a dark sky. The Moon will be {percent}% lit.'**
+  String eventMeteorDesc(String rate, String percent);
+
+  /// No description provided for @showerQuadrantids.
+  ///
+  /// In en, this message translates to:
+  /// **'Quadrantids'**
+  String get showerQuadrantids;
+
+  /// No description provided for @showerLyrids.
+  ///
+  /// In en, this message translates to:
+  /// **'Lyrids'**
+  String get showerLyrids;
+
+  /// No description provided for @showerEtaAquariids.
+  ///
+  /// In en, this message translates to:
+  /// **'Eta Aquariids'**
+  String get showerEtaAquariids;
+
+  /// No description provided for @showerPerseids.
+  ///
+  /// In en, this message translates to:
+  /// **'Perseids'**
+  String get showerPerseids;
+
+  /// No description provided for @showerOrionids.
+  ///
+  /// In en, this message translates to:
+  /// **'Orionids'**
+  String get showerOrionids;
+
+  /// No description provided for @showerLeonids.
+  ///
+  /// In en, this message translates to:
+  /// **'Leonids'**
+  String get showerLeonids;
+
+  /// No description provided for @showerGeminids.
+  ///
+  /// In en, this message translates to:
+  /// **'Geminids'**
+  String get showerGeminids;
+
+  /// No description provided for @showerUrsids.
+  ///
+  /// In en, this message translates to:
+  /// **'Ursids'**
+  String get showerUrsids;
+
+  /// No description provided for @eventToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get eventToday;
+
+  /// No description provided for @eventTomorrow.
+  ///
+  /// In en, this message translates to:
+  /// **'Tomorrow'**
+  String get eventTomorrow;
+
+  /// No description provided for @eventInDays.
+  ///
+  /// In en, this message translates to:
+  /// **'In {days} days'**
+  String eventInDays(String days);
+
+  /// No description provided for @eventsNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Dates are worked out on your phone and shown in its time zone. Meteor shower peaks are typical yearly dates and can shift by a day. Reminders stay on your phone.'**
+  String get eventsNote;
+
+  /// No description provided for @remindMe.
+  ///
+  /// In en, this message translates to:
+  /// **'Remind me'**
+  String get remindMe;
+
+  /// No description provided for @reminderSet.
+  ///
+  /// In en, this message translates to:
+  /// **'Okay, I will remind you on {date}.'**
+  String reminderSet(String date);
+
+  /// No description provided for @reminderOff.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminder removed.'**
+  String get reminderOff;
+
+  /// No description provided for @reminderTooLate.
+  ///
+  /// In en, this message translates to:
+  /// **'This event is too close to set a reminder.'**
+  String get reminderTooLate;
+
+  /// No description provided for @notificationsOff.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications are off for Heliora. Turn them on in Android settings.'**
+  String get notificationsOff;
+
+  /// No description provided for @reminderTomorrow.
+  ///
+  /// In en, this message translates to:
+  /// **'Coming up tomorrow'**
+  String get reminderTomorrow;
+
+  /// No description provided for @reminderToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Happening today'**
+  String get reminderToday;
 }
 
 class _AppLocalizationsDelegate

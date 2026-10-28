@@ -48,6 +48,7 @@ and an honest answer to "could humans live here?"
 - **Which planets can I see tonight?** Pick your city (no location permission) and Heliora tells you which planets are up after dark, the best time to look, the direction and how high, plus rise and set times.
 - **The Moon tonight.** Phase, how much of it is lit, moonrise and moonset, and the dates of the next full and new moon.
 - **Sunset and sunrise** for your city.
+- **Space events.** The next 12 months of full and new moons, planet oppositions, the best evenings and mornings to see Mercury and Venus, close meetings of planets, equinoxes and solstices, and the yearly meteor showers (with how bright the Moon will be). Tap the bell on an event and Heliora reminds you the evening before. Reminders are made on your phone and need no internet.
 - **Find it with your compass.** Tap the compass button next to the Moon or a planet, hold your phone up, and Heliora shows which way to turn and tilt until you are pointing right at it. It uses your phone's motion sensors only: no camera, no location.
 
 ### 🌍 Learn
@@ -93,6 +94,7 @@ Heliora is made by [Lumio Apps](https://github.com/lumio-apps): **no ads, no acc
 | Real positions and distances | Keplerian orbital elements from JPL ([Standish](https://ssd.jpl.nasa.gov/planets/approx_pos.html)), valid 1800–2050, solved on the phone. Checked against the 2025 Mars and Saturn and the 2026 Jupiter oppositions. |
 | 3D globes | A single fragment shader (`shaders/planet.frag`) draws every surface from noise, so the app ships with no image files. |
 | Tonight's sky | Rise, set and best viewing time from the same orbits plus the Moon from Paul Schlyter's method, all on the phone. Checked against London's sunrise on 21 June 2025 and the full and new moons of October 2025 and January 2026. |
+| Space events | The same orbits and Moon maths find each event on the phone: oppositions where a planet is opposite the Sun in longitude, greatest elongations, planet pairs closer than 2°, and equinoxes and solstices. Checked against 2025–2026: Mars (16 Jan 2025), Saturn (21 Sep 2025) and Jupiter (10 Jan 2026) oppositions, Venus at 47° on 10 Jan 2025 and 15 Aug 2026, and the 2026 equinoxes and solstices within 15 minutes. Meteor shower peaks are typical yearly dates. |
 | Compass finder | The phone's rotation sensor gives where the back of the phone points; Android's magnetic-declination model turns magnetic north into true north. The target comes from the same orbit maths as Tonight's sky. |
 | Life score | Six simple rules in `lib/core/habitability.dart`. A teaching aid, not science. |
 
@@ -116,6 +118,7 @@ All texts live in `lib/l10n/app_<language>.arb`. Found a wrong word in your lang
 
 | Version | What's new |
 |---|---|
+| **1.7.0** | Space events calendar for the next 12 months with reminders: Moon phases, oppositions, planet meetings, equinoxes, solstices and meteor showers |
 | **1.6.0** | Find the Moon and planets in the real sky with your phone's compass: turn and tilt guidance, 20 languages |
 | **1.5.0** | New Sky tab: planets visible tonight from your city, Moon phase, moonrise, next full and new moon, sunset and sunrise |
 | **1.4.0** | Distance from Earth today with travel times, true-scale size compare, share a planet card as a picture |

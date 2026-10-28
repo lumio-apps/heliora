@@ -743,4 +743,160 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get finderNote => 'スマホの背面を空に向け、磁石や金属から離してください。太陽は絶対に見ないでください。';
+
+  @override
+  String get eventsTitle => '宇宙イベント';
+
+  @override
+  String get eventsSubtitle => 'これから12か月の空の見どころ。';
+
+  @override
+  String eventsNext(String event, String when) {
+    return '次: $event · $when';
+  }
+
+  @override
+  String get eventFullMoon => '満月';
+
+  @override
+  String get eventNewMoon => '新月';
+
+  @override
+  String eventOpposition(String planet) {
+    return '$planetが衝';
+  }
+
+  @override
+  String eventEveningElongation(String planet) {
+    return '$planet：夕方の見ごろ';
+  }
+
+  @override
+  String eventMorningElongation(String planet) {
+    return '$planet：明け方の見ごろ';
+  }
+
+  @override
+  String eventConjunction(String a, String b) {
+    return '$aと$bが接近';
+  }
+
+  @override
+  String get eventMarchEquinox => '3月の春分';
+
+  @override
+  String get eventJuneSolstice => '6月の夏至';
+
+  @override
+  String get eventSeptemberEquinox => '9月の秋分';
+
+  @override
+  String get eventDecemberSolstice => '12月の冬至';
+
+  @override
+  String get eventFullMoonDesc => '月の全面が明るく輝きます。日没ごろに昇ります。';
+
+  @override
+  String get eventNewMoonDesc => '月は見えません。星や惑星を見るのに月で最も暗い空です。';
+
+  @override
+  String eventOppositionDesc(String planet) {
+    return '$planetは太陽の反対側にあります。今年いちばん明るく、一晩中見えます。';
+  }
+
+  @override
+  String eventEveningDesc(String planet, String degrees) {
+    return '$planetは太陽から $degrees° 離れ、最も遠い位置です。日没後、西の低い空を見てください。';
+  }
+
+  @override
+  String eventMorningDesc(String planet, String degrees) {
+    return '$planetは太陽から $degrees° 離れ、最も遠い位置です。日の出前、東の低い空を見てください。';
+  }
+
+  @override
+  String eventConjunctionDesc(String degrees) {
+    return '空でわずか $degrees° の距離まで近づきます。';
+  }
+
+  @override
+  String get eventEquinoxDesc => '地球のどこでも昼と夜がほぼ同じ長さになります。';
+
+  @override
+  String get eventJuneSolsticeDesc => '北半球で昼が最も長く、南半球で最も短い日。';
+
+  @override
+  String get eventDecemberSolsticeDesc => '北半球で昼が最も短く、南半球で最も長い日。';
+
+  @override
+  String eventMeteorShower(String shower) {
+    return '$shower流星群';
+  }
+
+  @override
+  String eventMeteorDesc(String rate, String percent) {
+    return '暗い空で1時間に最大約 $rate 個の流星。月の明るさは $percent% です。';
+  }
+
+  @override
+  String get showerQuadrantids => 'しぶんぎ座';
+
+  @override
+  String get showerLyrids => 'こと座';
+
+  @override
+  String get showerEtaAquariids => 'みずがめ座η';
+
+  @override
+  String get showerPerseids => 'ペルセウス座';
+
+  @override
+  String get showerOrionids => 'オリオン座';
+
+  @override
+  String get showerLeonids => 'しし座';
+
+  @override
+  String get showerGeminids => 'ふたご座';
+
+  @override
+  String get showerUrsids => 'こぐま座';
+
+  @override
+  String get eventToday => '今日';
+
+  @override
+  String get eventTomorrow => '明日';
+
+  @override
+  String eventInDays(String days) {
+    return '$days 日後';
+  }
+
+  @override
+  String get eventsNote =>
+      '日付はスマホの中で計算し、スマホのタイムゾーンで表示します。流星群の極大日は毎年の目安で、1日ずれることがあります。リマインダーはスマホの中だけに保存されます。';
+
+  @override
+  String get remindMe => '通知する';
+
+  @override
+  String reminderSet(String date) {
+    return 'わかりました。$date にお知らせします。';
+  }
+
+  @override
+  String get reminderOff => 'リマインダーを削除しました。';
+
+  @override
+  String get reminderTooLate => 'イベントが近すぎてリマインダーを設定できません。';
+
+  @override
+  String get notificationsOff => 'Heliora の通知がオフです。Android の設定でオンにしてください。';
+
+  @override
+  String get reminderTomorrow => '明日です';
+
+  @override
+  String get reminderToday => '今日です';
 }

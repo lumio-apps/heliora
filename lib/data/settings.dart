@@ -21,6 +21,7 @@ class HelioraSettings {
     this.bestQuizScore = 0,
     this.birthDateMs = 0,
     this.cityId = '',
+    this.reminders = const <String>[],
   });
 
   final ThemeMode themeMode;
@@ -39,6 +40,9 @@ class HelioraSettings {
   /// The city for "Tonight's sky", or empty when not chosen.
   final String cityId;
 
+  /// Ids of the space events the user asked to be reminded about.
+  final List<String> reminders;
+
   DateTime? get birthDate => birthDateMs == 0
       ? null
       : DateTime.fromMillisecondsSinceEpoch(birthDateMs);
@@ -52,6 +56,7 @@ class HelioraSettings {
     int? bestQuizScore,
     int? birthDateMs,
     String? cityId,
+    List<String>? reminders,
   }) {
     return HelioraSettings(
       themeMode: themeMode ?? this.themeMode,
@@ -62,6 +67,7 @@ class HelioraSettings {
       bestQuizScore: bestQuizScore ?? this.bestQuizScore,
       birthDateMs: birthDateMs ?? this.birthDateMs,
       cityId: cityId ?? this.cityId,
+      reminders: reminders ?? this.reminders,
     );
   }
 
@@ -76,6 +82,7 @@ class HelioraSettings {
       'bestQuizScore': bestQuizScore,
       'birthDateMs': birthDateMs,
       'cityId': cityId,
+      'reminders': reminders,
     };
   }
 
@@ -101,6 +108,7 @@ class HelioraSettings {
     final best = json['bestQuizScore'];
     final birth = json['birthDateMs'];
     final city = json['cityId'];
+    final reminders = json['reminders'];
     return HelioraSettings(
       themeMode: theme,
       localeCode: locale is String ? locale : d.localeCode,
@@ -110,6 +118,9 @@ class HelioraSettings {
       bestQuizScore: best is int ? best : d.bestQuizScore,
       birthDateMs: birth is int ? birth : d.birthDateMs,
       cityId: city is String ? city : d.cityId,
+      reminders: reminders is List
+          ? <String>[for (final r in reminders) if (r is String) r]
+          : d.reminders,
     );
   }
 }

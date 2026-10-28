@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
+import '../core/events.dart';
 import '../core/format.dart';
 import '../core/sky.dart';
 import '../data/cities.dart';
 import '../data/planets.dart';
 import '../l10n/gen/app_localizations.dart';
+import '../l10n/event_text.dart';
 import '../l10n/names.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 import '../widgets/moon_view.dart';
+import 'events_screen.dart';
 import 'finder_screen.dart';
 
 /// "Tonight's sky": the Moon's phase and which planets can be seen tonight
@@ -103,6 +106,8 @@ class _SkyScreenState extends State<SkyScreen> {
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
         children: <Widget>[
           header,
+          const _EventsCard(),
+          const SizedBox(height: 12),
           SurfaceCard(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -135,6 +140,8 @@ class _SkyScreenState extends State<SkyScreen> {
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
       children: <Widget>[
         header,
+        const _EventsCard(),
+        const SizedBox(height: 12),
         // The Moon tonight.
         SurfaceCard(
           child: Column(
@@ -357,6 +364,62 @@ class _PlanetNightCard extends StatelessWidget {
           ),
           _FindButton(city: city, targetId: night.id),
         ],
+      ),
+    );
+  }
+}
+
+/// Opens the list of space events, with the next one as a teaser.
+class _EventsCard extends StatelessWidget {
+  const _EventsCard();
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final p = Palette.of(context);
+    final events = upcomingEvents();
+    final next = events.isEmpty ? null : events.first;
+    final subtitle = next == null
+        ? l.eventsSubtitle
+        : l.eventsNext(
+            eventTitle(l, next),
+            eventWhen(context, l, daysUntil(next, DateTime.now())),
+          );
+    return Semantics(
+      button: true,
+      label: l.eventsTitle,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute<void>(
+            builder: (_) => const EventsScreen(),
+          ));
+        },
+        child: SurfaceCard(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          child: Row(
+            children: <Widget>[
+              Icon(Icons.event_outlined, color: p.accentText),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(l.eventsTitle,
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: p.text)),
+                    const SizedBox(height: 2),
+                    Text(subtitle,
+                        style: TextStyle(fontSize: 13, color: p.muted)),
+                  ],
+                ),
+              ),
+              Icon(Icons.chevron_right, color: p.muted),
+            ],
+          ),
+        ),
       ),
     );
   }

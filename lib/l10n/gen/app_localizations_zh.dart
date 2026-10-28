@@ -741,4 +741,160 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get finderNote => '让手机背面朝向天空，并远离磁铁和金属。千万不要直视太阳。';
+
+  @override
+  String get eventsTitle => '太空事件';
+
+  @override
+  String get eventsSubtitle => '未来 12 个月的天象预告。';
+
+  @override
+  String eventsNext(String event, String when) {
+    return '下一个：$event · $when';
+  }
+
+  @override
+  String get eventFullMoon => '满月';
+
+  @override
+  String get eventNewMoon => '新月';
+
+  @override
+  String eventOpposition(String planet) {
+    return '$planet冲日';
+  }
+
+  @override
+  String eventEveningElongation(String planet) {
+    return '$planet：最佳傍晚观测时间';
+  }
+
+  @override
+  String eventMorningElongation(String planet) {
+    return '$planet：最佳清晨观测时间';
+  }
+
+  @override
+  String eventConjunction(String a, String b) {
+    return '$a与$b相会';
+  }
+
+  @override
+  String get eventMarchEquinox => '三月春分';
+
+  @override
+  String get eventJuneSolstice => '六月夏至';
+
+  @override
+  String get eventSeptemberEquinox => '九月秋分';
+
+  @override
+  String get eventDecemberSolstice => '十二月冬至';
+
+  @override
+  String get eventFullMoonDesc => '月面完全被照亮，大约在日落时升起。';
+
+  @override
+  String get eventNewMoonDesc => '月亮看不见。这是一个月中观星和看行星最黑暗的夜空。';
+
+  @override
+  String eventOppositionDesc(String planet) {
+    return '$planet正好与太阳相对。它是今年最亮的时候，整夜可见。';
+  }
+
+  @override
+  String eventEveningDesc(String planet, String degrees) {
+    return '$planet与太阳相距 $degrees°，是最远的时候。日落后请看西方低空。';
+  }
+
+  @override
+  String eventMorningDesc(String planet, String degrees) {
+    return '$planet与太阳相距 $degrees°，是最远的时候。日出前请看东方低空。';
+  }
+
+  @override
+  String eventConjunctionDesc(String degrees) {
+    return '它们在天空中只相距 $degrees°。';
+  }
+
+  @override
+  String get eventEquinoxDesc => '地球上各处昼夜几乎等长。';
+
+  @override
+  String get eventJuneSolsticeDesc => '北半球白昼最长，南半球白昼最短。';
+
+  @override
+  String get eventDecemberSolsticeDesc => '北半球白昼最短，南半球白昼最长。';
+
+  @override
+  String eventMeteorShower(String shower) {
+    return '$shower流星雨';
+  }
+
+  @override
+  String eventMeteorDesc(String rate, String percent) {
+    return '在黑暗的天空下，每小时最多约 $rate 颗流星。届时月亮被照亮 $percent%。';
+  }
+
+  @override
+  String get showerQuadrantids => '象限仪座流星雨';
+
+  @override
+  String get showerLyrids => '天琴座流星雨';
+
+  @override
+  String get showerEtaAquariids => '宝瓶座η流星雨';
+
+  @override
+  String get showerPerseids => '英仙座流星雨';
+
+  @override
+  String get showerOrionids => '猎户座流星雨';
+
+  @override
+  String get showerLeonids => '狮子座流星雨';
+
+  @override
+  String get showerGeminids => '双子座流星雨';
+
+  @override
+  String get showerUrsids => '小熊座流星雨';
+
+  @override
+  String get eventToday => '今天';
+
+  @override
+  String get eventTomorrow => '明天';
+
+  @override
+  String eventInDays(String days) {
+    return '$days 天后';
+  }
+
+  @override
+  String get eventsNote =>
+      '日期在你的手机上计算，并按手机时区显示。流星雨极大日是每年的常见日期，可能相差一天。提醒只保存在你的手机上。';
+
+  @override
+  String get remindMe => '提醒我';
+
+  @override
+  String reminderSet(String date) {
+    return '好的，我会在 $date 提醒你。';
+  }
+
+  @override
+  String get reminderOff => '已取消提醒。';
+
+  @override
+  String get reminderTooLate => '这个事件太近了，无法设置提醒。';
+
+  @override
+  String get notificationsOff => 'Heliora 的通知已关闭。请在 Android 设置中打开。';
+
+  @override
+  String get reminderTomorrow => '明天发生';
+
+  @override
+  String get reminderToday => '今天发生';
 }

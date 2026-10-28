@@ -1,10 +1,13 @@
 package online.lumioapps.heliora
 
+import android.Manifest
 import android.content.ClipData
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.provider.Settings
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.FileProvider
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
@@ -40,8 +43,56 @@ class MainActivity : FlutterActivity() {
                 )
                 "appVersion" -> result.success(appVersion())
                 "openUrl" -> result.success(openUrl(call.argument<String>("url")))
+                "requestNotifications" -> requestNotifications(result)
+                "scheduleReminder" -> result.success(
+                    Reminders.schedule(
+                        this,
+                        call.argument<String>("id") ?: "",
+                        (call.argument<Number>("at") ?: 0).toLong(),
+                        call.argument<String>("title") ?: "",
+                        call.argument<String>("body") ?: "",
+                        call.argument<String>("channel") ?: "Space events"
+                    )
+                )
+                "cancelReminder" -> {
+                    Reminders.cancel(this, call.argument<String>("id") ?: "")
+                    result.success(true)
+                }
                 else -> result.notImplemented()
             }
+        }
+    }
+
+    private var pendingNotificationResult: MethodChannel.Result? = null
+
+    /** Asks for the notification permission on Android 13 and newer. */
+    private fun requestNotifications(result: MethodChannel.Result) {
+        if (Build.VERSION.SDK_INT < 33 ||
+            checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) ==
+            PackageManager.PERMISSION_GRANTED
+        ) {
+            result.success(NotificationManagerCompat.from(this).areNotificationsEnabled())
+            return
+        }
+        if (pendingNotificationResult != null) {
+            result.success(false)
+            return
+        }
+        pendingNotificationResult = result
+        requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 4711)
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == 4711) {
+            pendingNotificationResult?.success(
+                grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
+            )
+            pendingNotificationResult = null
         }
     }
 

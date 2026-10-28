@@ -756,4 +756,167 @@ class AppLocalizationsHy extends AppLocalizations {
   @override
   String get finderNote =>
       'Պահեք հեռախոսի հետևի մասը երկնքին դեմ և հեռու մագնիսներից ու մետաղից։ Երբեք մի նայեք Արեգակին։';
+
+  @override
+  String get eventsTitle => 'Տիեզերական իրադարձություններ';
+
+  @override
+  String get eventsSubtitle => 'Ինչ դիտել երկնքում առաջիկա 12 ամիսներին։';
+
+  @override
+  String eventsNext(String event, String when) {
+    return 'Հաջորդը՝ $event · $when';
+  }
+
+  @override
+  String get eventFullMoon => 'Լիալուսին';
+
+  @override
+  String get eventNewMoon => 'Նորալուսին';
+
+  @override
+  String eventOpposition(String planet) {
+    return '$planet՝ հակադրության մեջ';
+  }
+
+  @override
+  String eventEveningElongation(String planet) {
+    return '$planet՝ երեկոյան դիտման լավագույն ժամանակ';
+  }
+
+  @override
+  String eventMorningElongation(String planet) {
+    return '$planet՝ առավոտյան դիտման լավագույն ժամանակ';
+  }
+
+  @override
+  String eventConjunction(String a, String b) {
+    return '$a-ը և $b-ը մոտենում են';
+  }
+
+  @override
+  String get eventMarchEquinox => 'Մարտյան գիշերահավասար';
+
+  @override
+  String get eventJuneSolstice => 'Հունիսյան արևադարձ';
+
+  @override
+  String get eventSeptemberEquinox => 'Սեպտեմբերյան գիշերահավասար';
+
+  @override
+  String get eventDecemberSolstice => 'Դեկտեմբերյան արևադարձ';
+
+  @override
+  String get eventFullMoonDesc =>
+      'Լուսնի ամբողջ դեմքը լուսավորված է։ Այն ծագում է մայրամուտի շուրջ։';
+
+  @override
+  String get eventNewMoonDesc =>
+      'Լուսինը չի երևում։ Ամսվա ամենամութ երկինքը աստղեր և մոլորակներ դիտելու համար։';
+
+  @override
+  String eventOppositionDesc(String planet) {
+    return '$planet-ը Արեգակի հակառակ կողմում է։ Այն այս տարվա ամենապայծառն է և երևում է ամբողջ գիշեր։';
+  }
+
+  @override
+  String eventEveningDesc(String planet, String degrees) {
+    return '$planet-ը Արեգակից $degrees° հեռու է՝ առավելագույն հեռավորության վրա։ Նայեք արևմուտքի ցածր մասին մայրամուտից հետո։';
+  }
+
+  @override
+  String eventMorningDesc(String planet, String degrees) {
+    return '$planet-ը Արեգակից $degrees° հեռու է՝ առավելագույն հեռավորության վրա։ Նայեք արևելքի ցածր մասին արևածագից առաջ։';
+  }
+
+  @override
+  String eventConjunctionDesc(String degrees) {
+    return 'Երկնքում դրանք անցնում են ընդամենը $degrees° հեռավորությամբ։';
+  }
+
+  @override
+  String get eventEquinoxDesc =>
+      'Երկրի վրա ամենուր ցերեկն ու գիշերը գրեթե հավասար են։';
+
+  @override
+  String get eventJuneSolsticeDesc =>
+      'Ամենաերկար օրը հյուսիսում, ամենակարճը՝ հարավում։';
+
+  @override
+  String get eventDecemberSolsticeDesc =>
+      'Ամենակարճ օրը հյուսիսում, ամենաերկարը՝ հարավում։';
+
+  @override
+  String eventMeteorShower(String shower) {
+    return '$shower երկնաքարային հոսք';
+  }
+
+  @override
+  String eventMeteorDesc(String rate, String percent) {
+    return 'Մութ երկնքի տակ մինչև ժամում մոտ $rate ընկնող աստղ։ Լուսինը $percent% լուսավորված կլինի։';
+  }
+
+  @override
+  String get showerQuadrantids => 'Քվադրանտիդներ';
+
+  @override
+  String get showerLyrids => 'Լիրիդներ';
+
+  @override
+  String get showerEtaAquariids => 'Էտա Ջրհոսիդներ';
+
+  @override
+  String get showerPerseids => 'Պերսեիդներ';
+
+  @override
+  String get showerOrionids => 'Օրիոնիդներ';
+
+  @override
+  String get showerLeonids => 'Լեոնիդներ';
+
+  @override
+  String get showerGeminids => 'Երկվորյակիդներ';
+
+  @override
+  String get showerUrsids => 'Ուրսիդներ';
+
+  @override
+  String get eventToday => 'Այսօր';
+
+  @override
+  String get eventTomorrow => 'Վաղը';
+
+  @override
+  String eventInDays(String days) {
+    return '$days օրից';
+  }
+
+  @override
+  String get eventsNote =>
+      'Ամսաթվերը հաշվարկվում են ձեր հեռախոսում և ցուցադրվում նրա ժամային գոտով։ Երկնաքարային հոսքերի գագաթնակետերը տարեկան սովորական օրեր են և կարող են շեղվել մեկ օրով։ Հիշեցումները մնում են միայն ձեր հեռախոսում։';
+
+  @override
+  String get remindMe => 'Հիշեցնել';
+
+  @override
+  String reminderSet(String date) {
+    return 'Լավ, կհիշեցնեմ $date-ին։';
+  }
+
+  @override
+  String get reminderOff => 'Հիշեցումը հեռացվեց։';
+
+  @override
+  String get reminderTooLate =>
+      'Իրադարձությունը շատ մոտ է, հիշեցում դնել հնարավոր չէ։';
+
+  @override
+  String get notificationsOff =>
+      'Heliora-ի ծանուցումները անջատված են։ Միացրեք Android-ի կարգավորումներում։';
+
+  @override
+  String get reminderTomorrow => 'Վաղը';
+
+  @override
+  String get reminderToday => 'Տեղի է ունենում այսօր';
 }

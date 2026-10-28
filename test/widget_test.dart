@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:heliora/core/events.dart';
 import 'package:heliora/core/finder.dart';
 import 'package:heliora/core/format.dart';
 import 'package:heliora/core/habitability.dart';
@@ -281,6 +282,96 @@ void main() {
     });
   });
 
+  group('space events', () {
+    final events = computeSpaceEvents(DateTime(2025, 1, 1), days: 731);
+
+    SpaceEvent find(SpaceEventKind kind, [String? body]) => events.firstWhere(
+          (e) =>
+              e.kind == kind && (body == null || e.bodies.join('+') == body),
+        );
+
+    bool near(SpaceEvent e, DateTime utc, {int hours = 30}) =>
+        e.time.difference(utc).inHours.abs() <= hours;
+
+    test('events are in order and have their own ids', () {
+      for (var i = 1; i < events.length; i++) {
+        expect(events[i].time.isBefore(events[i - 1].time), isFalse);
+      }
+      final ids = events.map((e) => e.id).toSet();
+      expect(ids.length, events.length);
+    });
+
+    test('oppositions match real dates', () {
+      final mars = find(SpaceEventKind.opposition, 'mars');
+      expect(near(mars, DateTime.utc(2025, 1, 16, 3)), isTrue);
+      final saturn = find(SpaceEventKind.opposition, 'saturn');
+      expect(near(saturn, DateTime.utc(2025, 9, 21, 8)), isTrue);
+      final jupiter = events.firstWhere((e) =>
+          e.kind == SpaceEventKind.opposition &&
+          e.bodies.first == 'jupiter' &&
+          e.time.year == 2026);
+      expect(near(jupiter, DateTime.utc(2026, 1, 10, 8)), isTrue);
+    });
+
+    test('Venus is farthest from the Sun in the evening of 15 Aug 2026', () {
+      final venus = events.firstWhere((e) =>
+          e.kind == SpaceEventKind.eveningElongation &&
+          e.bodies.first == 'venus' &&
+          e.time.year == 2026);
+      expect(near(venus, DateTime.utc(2026, 8, 15, 6)), isTrue);
+      expect(venus.value, closeTo(45.9, 0.4));
+    });
+
+    test('Venus and Jupiter meet on 12 Aug 2025', () {
+      final meet = find(SpaceEventKind.conjunction, 'venus+jupiter');
+      expect(near(meet, DateTime.utc(2025, 8, 12, 6)), isTrue);
+      expect(meet.value, lessThan(1.2));
+    });
+
+    test('seasons match the real minute within half an hour', () {
+      final march = events.firstWhere((e) =>
+          e.kind == SpaceEventKind.marchEquinox && e.time.year == 2026);
+      expect(
+          march.time.difference(DateTime.utc(2026, 3, 20, 14, 46)).inMinutes.abs(),
+          lessThan(30));
+      final december = events.firstWhere((e) =>
+          e.kind == SpaceEventKind.decemberSolstice && e.time.year == 2026);
+      expect(
+          december.time
+              .difference(DateTime.utc(2026, 12, 21, 20, 50))
+              .inMinutes
+              .abs(),
+          lessThan(30));
+    });
+
+    test('a year has 12 or 13 full moons and meteor showers', () {
+      final year = computeSpaceEvents(DateTime(2026, 1, 1));
+      final full = year.where((e) => e.kind == SpaceEventKind.fullMoon).length;
+      expect(full, inInclusiveRange(12, 13));
+      final showers =
+          year.where((e) => e.kind == SpaceEventKind.meteorShower).toList();
+      expect(showers.length, 8);
+      final perseids = showers.firstWhere((e) => e.bodies.first == 'perseids');
+      expect(perseids.localDay, DateTime(2026, 8, 12));
+      expect(perseids.value, 100);
+      expect(perseids.extra, inInclusiveRange(0, 1));
+    });
+
+    test('reminders are set for the evening before, then the morning', () {
+      final event = SpaceEvent(
+        kind: SpaceEventKind.fullMoon,
+        time: DateTime(2026, 5, 10, 12).toUtc(),
+      );
+      expect(reminderTime(event, DateTime(2026, 5, 8, 10)),
+          DateTime(2026, 5, 9, 18));
+      expect(reminderTime(event, DateTime(2026, 5, 9, 19)),
+          DateTime(2026, 5, 10, 8));
+      expect(reminderTime(event, DateTime(2026, 5, 10, 9)), isNull);
+      expect(daysUntil(event, DateTime(2026, 5, 7, 23)), 3);
+      expect(daysUntil(event, DateTime(2026, 5, 10, 1)), 0);
+    });
+  });
+
   group('versions', () {
     test('newer and older', () {
       expect(isNewerVersion('v1.0.1', '1.0.0'), isTrue);
@@ -342,6 +433,18 @@ void main() {
       expect(back.birthDateMs, 946728000000);
       expect(back.cityId, 'yerevan');
       expect(back.birthDate, isNotNull);
+    });
+
+    test('reminders are saved and broken ones ignored', () {
+      const s = HelioraSettings(reminders: <String>['a:b:20260101']);
+      final back = HelioraSettings.fromJson(s.toJson());
+      expect(back.reminders, <String>['a:b:20260101']);
+      final bad = HelioraSettings.fromJson(<String, dynamic>{
+        'reminders': <Object?>['x', 5, null],
+      });
+      expect(bad.reminders, <String>['x']);
+      expect(HelioraSettings.fromJson(<String, dynamic>{'reminders': 3}).reminders,
+          isEmpty);
     });
 
     test('broken values fall back to defaults', () {

@@ -70,6 +70,31 @@ class AppState extends ChangeNotifier {
   Future<void> setBirthDate(DateTime date) => _update(
       _settings.copyWith(birthDateMs: date.millisecondsSinceEpoch));
 
+  /// Whether a reminder is set for the space event [id].
+  bool hasReminder(String id) => _settings.reminders.contains(id);
+
+  /// Remembers that a reminder is set (or not) for the space event [id].
+  Future<void> setReminder(String id, bool on) {
+    final list = <String>[
+      for (final r in _settings.reminders)
+        if (r != id) r,
+      if (on) id,
+    ];
+    return _update(_settings.copyWith(reminders: list));
+  }
+
+  /// Forgets reminders for events that are over.
+  Future<void> keepReminders(Set<String> valid) {
+    final list = <String>[
+      for (final r in _settings.reminders)
+        if (valid.contains(r)) r,
+    ];
+    if (list.length == _settings.reminders.length) {
+      return Future<void>.value();
+    }
+    return _update(_settings.copyWith(reminders: list));
+  }
+
   /// Keeps the best quiz score. Returns true when [score] is a new best.
   Future<bool> recordQuizScore(int score) async {
     if (score <= _settings.bestQuizScore) {

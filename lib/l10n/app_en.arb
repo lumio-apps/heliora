@@ -480,5 +480,154 @@
         "type": "String"
       }
     }
+  },
+  "eventsTitle": "Space events",
+  "eventsSubtitle": "What to look for in the sky over the next 12 months.",
+  "eventsNext": "Next: {event} · {when}",
+  "eventFullMoon": "Full Moon",
+  "eventNewMoon": "New Moon",
+  "eventOpposition": "{planet} at opposition",
+  "eventEveningElongation": "{planet}: best evening view",
+  "eventMorningElongation": "{planet}: best morning view",
+  "eventConjunction": "{a} and {b} meet",
+  "eventMarchEquinox": "March equinox",
+  "eventJuneSolstice": "June solstice",
+  "eventSeptemberEquinox": "September equinox",
+  "eventDecemberSolstice": "December solstice",
+  "eventFullMoonDesc": "The Moon's whole face is lit. It rises around sunset.",
+  "eventNewMoonDesc": "The Moon is hidden. The darkest skies of the month for stars and planets.",
+  "eventOppositionDesc": "{planet} is opposite the Sun. It is at its brightest this year and up all night.",
+  "eventEveningDesc": "{planet} is {degrees}° from the Sun, as far as it gets. Look low in the west after sunset.",
+  "eventMorningDesc": "{planet} is {degrees}° from the Sun, as far as it gets. Look low in the east before sunrise.",
+  "eventConjunctionDesc": "They pass only {degrees}° apart in the sky.",
+  "eventEquinoxDesc": "Day and night are almost equal everywhere on Earth.",
+  "eventJuneSolsticeDesc": "Longest day in the north, shortest day in the south.",
+  "eventDecemberSolsticeDesc": "Shortest day in the north, longest day in the south.",
+  "eventMeteorShower": "{shower} meteor shower",
+  "eventMeteorDesc": "Up to about {rate} meteors an hour under a dark sky. The Moon will be {percent}% lit.",
+  "showerQuadrantids": "Quadrantids",
+  "showerLyrids": "Lyrids",
+  "showerEtaAquariids": "Eta Aquariids",
+  "showerPerseids": "Perseids",
+  "showerOrionids": "Orionids",
+  "showerLeonids": "Leonids",
+  "showerGeminids": "Geminids",
+  "showerUrsids": "Ursids",
+  "eventToday": "Today",
+  "eventTomorrow": "Tomorrow",
+  "eventInDays": "In {days} days",
+  "eventsNote": "Dates are worked out on your phone and shown in its time zone. Meteor shower peaks are typical yearly dates and can shift by a day. Reminders stay on your phone.",
+  "remindMe": "Remind me",
+  "reminderSet": "Okay, I will remind you on {date}.",
+  "reminderOff": "Reminder removed.",
+  "reminderTooLate": "This event is too close to set a reminder.",
+  "notificationsOff": "Notifications are off for Heliora. Turn them on in Android settings.",
+  "reminderTomorrow": "Coming up tomorrow",
+  "reminderToday": "Happening today",
+  "@eventsNext": {
+    "placeholders": {
+      "event": {
+        "type": "String"
+      },
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventOpposition": {
+    "placeholders": {
+      "planet": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventEveningElongation": {
+    "placeholders": {
+      "planet": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventMorningElongation": {
+    "placeholders": {
+      "planet": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventConjunction": {
+    "placeholders": {
+      "a": {
+        "type": "String"
+      },
+      "b": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventOppositionDesc": {
+    "placeholders": {
+      "planet": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventEveningDesc": {
+    "placeholders": {
+      "planet": {
+        "type": "String"
+      },
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventMorningDesc": {
+    "placeholders": {
+      "planet": {
+        "type": "String"
+      },
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventConjunctionDesc": {
+    "placeholders": {
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventMeteorShower": {
+    "placeholders": {
+      "shower": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventMeteorDesc": {
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventInDays": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "@reminderSet": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
   }
 }

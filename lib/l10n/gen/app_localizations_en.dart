@@ -755,4 +755,167 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get finderNote =>
       'Hold the phone with its back towards the sky and keep it away from magnets and metal. Never look at the Sun.';
+
+  @override
+  String get eventsTitle => 'Space events';
+
+  @override
+  String get eventsSubtitle =>
+      'What to look for in the sky over the next 12 months.';
+
+  @override
+  String eventsNext(String event, String when) {
+    return 'Next: $event · $when';
+  }
+
+  @override
+  String get eventFullMoon => 'Full Moon';
+
+  @override
+  String get eventNewMoon => 'New Moon';
+
+  @override
+  String eventOpposition(String planet) {
+    return '$planet at opposition';
+  }
+
+  @override
+  String eventEveningElongation(String planet) {
+    return '$planet: best evening view';
+  }
+
+  @override
+  String eventMorningElongation(String planet) {
+    return '$planet: best morning view';
+  }
+
+  @override
+  String eventConjunction(String a, String b) {
+    return '$a and $b meet';
+  }
+
+  @override
+  String get eventMarchEquinox => 'March equinox';
+
+  @override
+  String get eventJuneSolstice => 'June solstice';
+
+  @override
+  String get eventSeptemberEquinox => 'September equinox';
+
+  @override
+  String get eventDecemberSolstice => 'December solstice';
+
+  @override
+  String get eventFullMoonDesc =>
+      'The Moon\'s whole face is lit. It rises around sunset.';
+
+  @override
+  String get eventNewMoonDesc =>
+      'The Moon is hidden. The darkest skies of the month for stars and planets.';
+
+  @override
+  String eventOppositionDesc(String planet) {
+    return '$planet is opposite the Sun. It is at its brightest this year and up all night.';
+  }
+
+  @override
+  String eventEveningDesc(String planet, String degrees) {
+    return '$planet is $degrees° from the Sun, as far as it gets. Look low in the west after sunset.';
+  }
+
+  @override
+  String eventMorningDesc(String planet, String degrees) {
+    return '$planet is $degrees° from the Sun, as far as it gets. Look low in the east before sunrise.';
+  }
+
+  @override
+  String eventConjunctionDesc(String degrees) {
+    return 'They pass only $degrees° apart in the sky.';
+  }
+
+  @override
+  String get eventEquinoxDesc =>
+      'Day and night are almost equal everywhere on Earth.';
+
+  @override
+  String get eventJuneSolsticeDesc =>
+      'Longest day in the north, shortest day in the south.';
+
+  @override
+  String get eventDecemberSolsticeDesc =>
+      'Shortest day in the north, longest day in the south.';
+
+  @override
+  String eventMeteorShower(String shower) {
+    return '$shower meteor shower';
+  }
+
+  @override
+  String eventMeteorDesc(String rate, String percent) {
+    return 'Up to about $rate meteors an hour under a dark sky. The Moon will be $percent% lit.';
+  }
+
+  @override
+  String get showerQuadrantids => 'Quadrantids';
+
+  @override
+  String get showerLyrids => 'Lyrids';
+
+  @override
+  String get showerEtaAquariids => 'Eta Aquariids';
+
+  @override
+  String get showerPerseids => 'Perseids';
+
+  @override
+  String get showerOrionids => 'Orionids';
+
+  @override
+  String get showerLeonids => 'Leonids';
+
+  @override
+  String get showerGeminids => 'Geminids';
+
+  @override
+  String get showerUrsids => 'Ursids';
+
+  @override
+  String get eventToday => 'Today';
+
+  @override
+  String get eventTomorrow => 'Tomorrow';
+
+  @override
+  String eventInDays(String days) {
+    return 'In $days days';
+  }
+
+  @override
+  String get eventsNote =>
+      'Dates are worked out on your phone and shown in its time zone. Meteor shower peaks are typical yearly dates and can shift by a day. Reminders stay on your phone.';
+
+  @override
+  String get remindMe => 'Remind me';
+
+  @override
+  String reminderSet(String date) {
+    return 'Okay, I will remind you on $date.';
+  }
+
+  @override
+  String get reminderOff => 'Reminder removed.';
+
+  @override
+  String get reminderTooLate => 'This event is too close to set a reminder.';
+
+  @override
+  String get notificationsOff =>
+      'Notifications are off for Heliora. Turn them on in Android settings.';
+
+  @override
+  String get reminderTomorrow => 'Coming up tomorrow';
+
+  @override
+  String get reminderToday => 'Happening today';
 }

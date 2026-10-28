@@ -760,4 +760,168 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get finderNote =>
       'Tenez le téléphone avec l’arrière vers le ciel, loin des aimants et du métal. Ne regardez jamais le Soleil.';
+
+  @override
+  String get eventsTitle => 'Événements spatiaux';
+
+  @override
+  String get eventsSubtitle =>
+      'À observer dans le ciel durant les 12 prochains mois.';
+
+  @override
+  String eventsNext(String event, String when) {
+    return 'Prochain : $event · $when';
+  }
+
+  @override
+  String get eventFullMoon => 'Pleine Lune';
+
+  @override
+  String get eventNewMoon => 'Nouvelle Lune';
+
+  @override
+  String eventOpposition(String planet) {
+    return '$planet à l’opposition';
+  }
+
+  @override
+  String eventEveningElongation(String planet) {
+    return '$planet : meilleure visibilité le soir';
+  }
+
+  @override
+  String eventMorningElongation(String planet) {
+    return '$planet : meilleure visibilité le matin';
+  }
+
+  @override
+  String eventConjunction(String a, String b) {
+    return '$a et $b se rapprochent';
+  }
+
+  @override
+  String get eventMarchEquinox => 'Équinoxe de mars';
+
+  @override
+  String get eventJuneSolstice => 'Solstice de juin';
+
+  @override
+  String get eventSeptemberEquinox => 'Équinoxe de septembre';
+
+  @override
+  String get eventDecemberSolstice => 'Solstice de décembre';
+
+  @override
+  String get eventFullMoonDesc =>
+      'Toute la face de la Lune est éclairée. Elle se lève vers le coucher du Soleil.';
+
+  @override
+  String get eventNewMoonDesc =>
+      'La Lune est invisible. Le ciel le plus sombre du mois pour voir les étoiles et les planètes.';
+
+  @override
+  String eventOppositionDesc(String planet) {
+    return '$planet est à l’opposé du Soleil. Elle est à son plus brillant de l’année et visible toute la nuit.';
+  }
+
+  @override
+  String eventEveningDesc(String planet, String degrees) {
+    return '$planet est à $degrees° du Soleil, son écart maximal. Regardez bas à l’ouest après le coucher du Soleil.';
+  }
+
+  @override
+  String eventMorningDesc(String planet, String degrees) {
+    return '$planet est à $degrees° du Soleil, son écart maximal. Regardez bas à l’est avant le lever du Soleil.';
+  }
+
+  @override
+  String eventConjunctionDesc(String degrees) {
+    return 'Elles ne passent qu’à $degrees° l’une de l’autre dans le ciel.';
+  }
+
+  @override
+  String get eventEquinoxDesc =>
+      'Le jour et la nuit ont presque la même durée partout sur Terre.';
+
+  @override
+  String get eventJuneSolsticeDesc =>
+      'Jour le plus long au nord, le plus court au sud.';
+
+  @override
+  String get eventDecemberSolsticeDesc =>
+      'Jour le plus court au nord, le plus long au sud.';
+
+  @override
+  String eventMeteorShower(String shower) {
+    return 'Pluie d’étoiles filantes : $shower';
+  }
+
+  @override
+  String eventMeteorDesc(String rate, String percent) {
+    return 'Jusqu’à environ $rate météores par heure sous un ciel sombre. La Lune sera éclairée à $percent %.';
+  }
+
+  @override
+  String get showerQuadrantids => 'Quadrantides';
+
+  @override
+  String get showerLyrids => 'Lyrides';
+
+  @override
+  String get showerEtaAquariids => 'Êta Aquarides';
+
+  @override
+  String get showerPerseids => 'Perséides';
+
+  @override
+  String get showerOrionids => 'Orionides';
+
+  @override
+  String get showerLeonids => 'Léonides';
+
+  @override
+  String get showerGeminids => 'Géminides';
+
+  @override
+  String get showerUrsids => 'Ursides';
+
+  @override
+  String get eventToday => 'Aujourd’hui';
+
+  @override
+  String get eventTomorrow => 'Demain';
+
+  @override
+  String eventInDays(String days) {
+    return 'Dans $days jours';
+  }
+
+  @override
+  String get eventsNote =>
+      'Les dates sont calculées sur votre téléphone et affichées dans son fuseau horaire. Les pics des pluies d’étoiles filantes sont des dates habituelles et peuvent varier d’un jour. Les rappels restent sur votre téléphone.';
+
+  @override
+  String get remindMe => 'Me le rappeler';
+
+  @override
+  String reminderSet(String date) {
+    return 'D’accord, je vous le rappellerai le $date.';
+  }
+
+  @override
+  String get reminderOff => 'Rappel supprimé.';
+
+  @override
+  String get reminderTooLate =>
+      'Cet événement est trop proche pour régler un rappel.';
+
+  @override
+  String get notificationsOff =>
+      'Les notifications de Heliora sont désactivées. Activez-les dans les réglages d’Android.';
+
+  @override
+  String get reminderTomorrow => 'C’est demain';
+
+  @override
+  String get reminderToday => 'Cela se passe aujourd’hui';
 }

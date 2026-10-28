@@ -753,4 +753,167 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get finderNote =>
       'وجّه الجزء الخلفي من الهاتف نحو السماء وأبعده عن المغناطيس والمعادن. لا تنظر إلى الشمس أبدًا.';
+
+  @override
+  String get eventsTitle => 'أحداث فلكية';
+
+  @override
+  String get eventsSubtitle =>
+      'ماذا تراقب في السماء خلال الأشهر الـ 12 القادمة.';
+
+  @override
+  String eventsNext(String event, String when) {
+    return 'التالي: $event · $when';
+  }
+
+  @override
+  String get eventFullMoon => 'البدر';
+
+  @override
+  String get eventNewMoon => 'المحاق';
+
+  @override
+  String eventOpposition(String planet) {
+    return '$planet في المقابلة';
+  }
+
+  @override
+  String eventEveningElongation(String planet) {
+    return '$planet: أفضل رؤية مساءً';
+  }
+
+  @override
+  String eventMorningElongation(String planet) {
+    return '$planet: أفضل رؤية صباحًا';
+  }
+
+  @override
+  String eventConjunction(String a, String b) {
+    return '$a و$b يقتربان';
+  }
+
+  @override
+  String get eventMarchEquinox => 'اعتدال مارس';
+
+  @override
+  String get eventJuneSolstice => 'انقلاب يونيو';
+
+  @override
+  String get eventSeptemberEquinox => 'اعتدال سبتمبر';
+
+  @override
+  String get eventDecemberSolstice => 'انقلاب ديسمبر';
+
+  @override
+  String get eventFullMoonDesc =>
+      'يكون وجه القمر كله مضاءً، ويشرق قرابة الغروب.';
+
+  @override
+  String get eventNewMoonDesc =>
+      'القمر مخفي. أكثر سماء مظلمة في الشهر لرؤية النجوم والكواكب.';
+
+  @override
+  String eventOppositionDesc(String planet) {
+    return '$planet في مقابل الشمس. يبلغ أقصى لمعانه هذا العام ويظهر طوال الليل.';
+  }
+
+  @override
+  String eventEveningDesc(String planet, String degrees) {
+    return '$planet يبعد $degrees° عن الشمس، وهو أقصى بُعد له. انظر قرب الأفق الغربي بعد الغروب.';
+  }
+
+  @override
+  String eventMorningDesc(String planet, String degrees) {
+    return '$planet يبعد $degrees° عن الشمس، وهو أقصى بُعد له. انظر قرب الأفق الشرقي قبل الشروق.';
+  }
+
+  @override
+  String eventConjunctionDesc(String degrees) {
+    return 'يمران على بعد $degrees° فقط في السماء.';
+  }
+
+  @override
+  String get eventEquinoxDesc =>
+      'يتساوى الليل والنهار تقريبًا في كل مكان على الأرض.';
+
+  @override
+  String get eventJuneSolsticeDesc =>
+      'أطول نهار في الشمال وأقصر نهار في الجنوب.';
+
+  @override
+  String get eventDecemberSolsticeDesc =>
+      'أقصر نهار في الشمال وأطول نهار في الجنوب.';
+
+  @override
+  String eventMeteorShower(String shower) {
+    return 'زخة شهب $shower';
+  }
+
+  @override
+  String eventMeteorDesc(String rate, String percent) {
+    return 'حتى نحو $rate شهابًا في الساعة تحت سماء مظلمة. سيكون القمر مضاءً بنسبة $percent%.';
+  }
+
+  @override
+  String get showerQuadrantids => 'الرباعيات';
+
+  @override
+  String get showerLyrids => 'القيثارات';
+
+  @override
+  String get showerEtaAquariids => 'إيتا الدلويات';
+
+  @override
+  String get showerPerseids => 'البرشاويات';
+
+  @override
+  String get showerOrionids => 'الجباريات';
+
+  @override
+  String get showerLeonids => 'الأسديات';
+
+  @override
+  String get showerGeminids => 'التوأميات';
+
+  @override
+  String get showerUrsids => 'الدبيات الصغرى';
+
+  @override
+  String get eventToday => 'اليوم';
+
+  @override
+  String get eventTomorrow => 'غدًا';
+
+  @override
+  String eventInDays(String days) {
+    return 'بعد $days أيام';
+  }
+
+  @override
+  String get eventsNote =>
+      'تُحسب التواريخ على هاتفك وتُعرض بتوقيته. ذروات زخات الشهب تواريخ سنوية معتادة وقد تتغير بيوم. تبقى التذكيرات على هاتفك.';
+
+  @override
+  String get remindMe => 'ذكّرني';
+
+  @override
+  String reminderSet(String date) {
+    return 'حسنًا، سأذكّرك في $date.';
+  }
+
+  @override
+  String get reminderOff => 'تمت إزالة التذكير.';
+
+  @override
+  String get reminderTooLate => 'هذا الحدث قريب جدًا لضبط تذكير.';
+
+  @override
+  String get notificationsOff =>
+      'إشعارات Heliora متوقفة. فعّلها من إعدادات Android.';
+
+  @override
+  String get reminderTomorrow => 'غدًا';
+
+  @override
+  String get reminderToday => 'يحدث اليوم';
 }

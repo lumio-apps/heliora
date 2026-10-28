@@ -755,4 +755,168 @@ class AppLocalizationsId extends AppLocalizations {
   @override
   String get finderNote =>
       'Pegang ponsel dengan bagian belakang menghadap langit, jauh dari magnet dan logam. Jangan pernah menatap Matahari.';
+
+  @override
+  String get eventsTitle => 'Peristiwa antariksa';
+
+  @override
+  String get eventsSubtitle =>
+      'Apa yang bisa dilihat di langit dalam 12 bulan ke depan.';
+
+  @override
+  String eventsNext(String event, String when) {
+    return 'Berikutnya: $event · $when';
+  }
+
+  @override
+  String get eventFullMoon => 'Bulan purnama';
+
+  @override
+  String get eventNewMoon => 'Bulan baru';
+
+  @override
+  String eventOpposition(String planet) {
+    return '$planet beroposisi';
+  }
+
+  @override
+  String eventEveningElongation(String planet) {
+    return '$planet: waktu terbaik di sore hari';
+  }
+
+  @override
+  String eventMorningElongation(String planet) {
+    return '$planet: waktu terbaik di pagi hari';
+  }
+
+  @override
+  String eventConjunction(String a, String b) {
+    return '$a dan $b berdekatan';
+  }
+
+  @override
+  String get eventMarchEquinox => 'Ekuinoks Maret';
+
+  @override
+  String get eventJuneSolstice => 'Solstis Juni';
+
+  @override
+  String get eventSeptemberEquinox => 'Ekuinoks September';
+
+  @override
+  String get eventDecemberSolstice => 'Solstis Desember';
+
+  @override
+  String get eventFullMoonDesc =>
+      'Seluruh wajah Bulan terang. Terbit sekitar matahari terbenam.';
+
+  @override
+  String get eventNewMoonDesc =>
+      'Bulan tidak terlihat. Langit paling gelap bulan ini untuk melihat bintang dan planet.';
+
+  @override
+  String eventOppositionDesc(String planet) {
+    return '$planet berseberangan dengan Matahari. Ia paling terang tahun ini dan terlihat sepanjang malam.';
+  }
+
+  @override
+  String eventEveningDesc(String planet, String degrees) {
+    return '$planet berjarak $degrees° dari Matahari, jarak terjauhnya. Lihat rendah di barat setelah matahari terbenam.';
+  }
+
+  @override
+  String eventMorningDesc(String planet, String degrees) {
+    return '$planet berjarak $degrees° dari Matahari, jarak terjauhnya. Lihat rendah di timur sebelum matahari terbit.';
+  }
+
+  @override
+  String eventConjunctionDesc(String degrees) {
+    return 'Keduanya hanya terpisah $degrees° di langit.';
+  }
+
+  @override
+  String get eventEquinoxDesc =>
+      'Siang dan malam hampir sama panjang di seluruh Bumi.';
+
+  @override
+  String get eventJuneSolsticeDesc =>
+      'Hari terpanjang di utara, hari terpendek di selatan.';
+
+  @override
+  String get eventDecemberSolsticeDesc =>
+      'Hari terpendek di utara, hari terpanjang di selatan.';
+
+  @override
+  String eventMeteorShower(String shower) {
+    return 'Hujan meteor $shower';
+  }
+
+  @override
+  String eventMeteorDesc(String rate, String percent) {
+    return 'Hingga sekitar $rate meteor per jam di langit gelap. Bulan akan terang $percent%.';
+  }
+
+  @override
+  String get showerQuadrantids => 'Kuadrantid';
+
+  @override
+  String get showerLyrids => 'Lirid';
+
+  @override
+  String get showerEtaAquariids => 'Eta Akuarid';
+
+  @override
+  String get showerPerseids => 'Perseid';
+
+  @override
+  String get showerOrionids => 'Orionid';
+
+  @override
+  String get showerLeonids => 'Leonid';
+
+  @override
+  String get showerGeminids => 'Geminid';
+
+  @override
+  String get showerUrsids => 'Ursid';
+
+  @override
+  String get eventToday => 'Hari ini';
+
+  @override
+  String get eventTomorrow => 'Besok';
+
+  @override
+  String eventInDays(String days) {
+    return '$days hari lagi';
+  }
+
+  @override
+  String get eventsNote =>
+      'Tanggal dihitung di ponsel Anda dan ditampilkan dalam zona waktunya. Puncak hujan meteor adalah tanggal umum tiap tahun dan bisa bergeser sehari. Pengingat hanya tersimpan di ponsel Anda.';
+
+  @override
+  String get remindMe => 'Ingatkan saya';
+
+  @override
+  String reminderSet(String date) {
+    return 'Baik, saya akan mengingatkan Anda pada $date.';
+  }
+
+  @override
+  String get reminderOff => 'Pengingat dihapus.';
+
+  @override
+  String get reminderTooLate =>
+      'Peristiwa ini terlalu dekat untuk membuat pengingat.';
+
+  @override
+  String get notificationsOff =>
+      'Notifikasi Heliora mati. Nyalakan di pengaturan Android.';
+
+  @override
+  String get reminderTomorrow => 'Besok';
+
+  @override
+  String get reminderToday => 'Terjadi hari ini';
 }

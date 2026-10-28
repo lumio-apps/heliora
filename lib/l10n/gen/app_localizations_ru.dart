@@ -756,4 +756,166 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get finderNote =>
       'Держите телефон задней стороной к небу, вдали от магнитов и металла. Никогда не смотрите на Солнце.';
+
+  @override
+  String get eventsTitle => 'Космические события';
+
+  @override
+  String get eventsSubtitle => 'Что смотреть в небе в ближайшие 12 месяцев.';
+
+  @override
+  String eventsNext(String event, String when) {
+    return 'Далее: $event · $when';
+  }
+
+  @override
+  String get eventFullMoon => 'Полнолуние';
+
+  @override
+  String get eventNewMoon => 'Новолуние';
+
+  @override
+  String eventOpposition(String planet) {
+    return '$planet в противостоянии';
+  }
+
+  @override
+  String eventEveningElongation(String planet) {
+    return '$planet: лучшее время вечером';
+  }
+
+  @override
+  String eventMorningElongation(String planet) {
+    return '$planet: лучшее время утром';
+  }
+
+  @override
+  String eventConjunction(String a, String b) {
+    return '$a и $b сближаются';
+  }
+
+  @override
+  String get eventMarchEquinox => 'Мартовское равноденствие';
+
+  @override
+  String get eventJuneSolstice => 'Июньское солнцестояние';
+
+  @override
+  String get eventSeptemberEquinox => 'Сентябрьское равноденствие';
+
+  @override
+  String get eventDecemberSolstice => 'Декабрьское солнцестояние';
+
+  @override
+  String get eventFullMoonDesc =>
+      'Луна освещена целиком. Она восходит около заката.';
+
+  @override
+  String get eventNewMoonDesc =>
+      'Луны не видно. Самое тёмное небо месяца для звёзд и планет.';
+
+  @override
+  String eventOppositionDesc(String planet) {
+    return '$planet находится напротив Солнца. Это самый яркий момент года, планета видна всю ночь.';
+  }
+
+  @override
+  String eventEveningDesc(String planet, String degrees) {
+    return '$planet в $degrees° от Солнца, это максимальное удаление. Смотрите низко на западе после заката.';
+  }
+
+  @override
+  String eventMorningDesc(String planet, String degrees) {
+    return '$planet в $degrees° от Солнца, это максимальное удаление. Смотрите низко на востоке перед рассветом.';
+  }
+
+  @override
+  String eventConjunctionDesc(String degrees) {
+    return 'Они пройдут всего в $degrees° друг от друга.';
+  }
+
+  @override
+  String get eventEquinoxDesc => 'Во всём мире день и ночь почти равны.';
+
+  @override
+  String get eventJuneSolsticeDesc =>
+      'Самый длинный день на севере, самый короткий на юге.';
+
+  @override
+  String get eventDecemberSolsticeDesc =>
+      'Самый короткий день на севере, самый длинный на юге.';
+
+  @override
+  String eventMeteorShower(String shower) {
+    return 'Метеорный поток $shower';
+  }
+
+  @override
+  String eventMeteorDesc(String rate, String percent) {
+    return 'До $rate метеоров в час под тёмным небом. Луна будет освещена на $percent%.';
+  }
+
+  @override
+  String get showerQuadrantids => 'Квадрантиды';
+
+  @override
+  String get showerLyrids => 'Лириды';
+
+  @override
+  String get showerEtaAquariids => 'Эта-Акварииды';
+
+  @override
+  String get showerPerseids => 'Персеиды';
+
+  @override
+  String get showerOrionids => 'Ориониды';
+
+  @override
+  String get showerLeonids => 'Леониды';
+
+  @override
+  String get showerGeminids => 'Геминиды';
+
+  @override
+  String get showerUrsids => 'Урсиды';
+
+  @override
+  String get eventToday => 'Сегодня';
+
+  @override
+  String get eventTomorrow => 'Завтра';
+
+  @override
+  String eventInDays(String days) {
+    return 'Через $days дн.';
+  }
+
+  @override
+  String get eventsNote =>
+      'Даты рассчитываются на вашем телефоне и показываются в его часовом поясе. Максимумы метеорных потоков — обычные даты каждого года, возможен сдвиг на день. Напоминания хранятся только на телефоне.';
+
+  @override
+  String get remindMe => 'Напомнить';
+
+  @override
+  String reminderSet(String date) {
+    return 'Хорошо, напомню $date.';
+  }
+
+  @override
+  String get reminderOff => 'Напоминание удалено.';
+
+  @override
+  String get reminderTooLate =>
+      'Событие слишком близко, чтобы поставить напоминание.';
+
+  @override
+  String get notificationsOff =>
+      'Уведомления Heliora отключены. Включите их в настройках Android.';
+
+  @override
+  String get reminderTomorrow => 'Будет завтра';
+
+  @override
+  String get reminderToday => 'Происходит сегодня';
 }

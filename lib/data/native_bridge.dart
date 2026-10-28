@@ -82,4 +82,52 @@ class NativeBridge {
       return false;
     }
   }
+
+  /// Asks for the notification permission when Android needs it. True when
+  /// reminders can be shown.
+  Future<bool> requestNotifications() async {
+    try {
+      final result = await _channel.invokeMethod<bool>('requestNotifications');
+      return result ?? false;
+    } on Exception {
+      return false;
+    }
+  }
+
+  /// Sets a reminder that shows [title] and [body] at [at]. [id] names it so
+  /// it can be removed again. [channel] is the name Android shows for this
+  /// kind of notification.
+  Future<bool> scheduleReminder({
+    required String id,
+    required DateTime at,
+    required String title,
+    required String body,
+    required String channel,
+  }) async {
+    try {
+      final result = await _channel.invokeMethod<bool>(
+        'scheduleReminder',
+        <String, Object>{
+          'id': id,
+          'at': at.millisecondsSinceEpoch,
+          'title': title,
+          'body': body,
+          'channel': channel,
+        },
+      );
+      return result ?? false;
+    } on Exception {
+      return false;
+    }
+  }
+
+  /// Removes the reminder named [id].
+  Future<void> cancelReminder(String id) async {
+    try {
+      await _channel
+          .invokeMethod<bool>('cancelReminder', <String, String>{'id': id});
+    } on Exception {
+      // Nothing to remove.
+    }
+  }
 }

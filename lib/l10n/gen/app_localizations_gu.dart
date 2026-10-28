@@ -753,4 +753,166 @@ class AppLocalizationsGu extends AppLocalizations {
   @override
   String get finderNote =>
       'ફોનનો પાછળનો ભાગ આકાશ તરફ રાખો અને ચુંબક તથા ધાતુથી દૂર રાખો. સૂર્ય તરફ ક્યારેય ન જુઓ.';
+
+  @override
+  String get eventsTitle => 'અવકાશની ઘટનાઓ';
+
+  @override
+  String get eventsSubtitle => 'આગામી 12 મહિનામાં આકાશમાં શું જોવું.';
+
+  @override
+  String eventsNext(String event, String when) {
+    return 'હવે પછી: $event · $when';
+  }
+
+  @override
+  String get eventFullMoon => 'પૂનમ';
+
+  @override
+  String get eventNewMoon => 'અમાસ';
+
+  @override
+  String eventOpposition(String planet) {
+    return '$planet પ્રતિયુતિમાં';
+  }
+
+  @override
+  String eventEveningElongation(String planet) {
+    return '$planet: સાંજે જોવાનો શ્રેષ્ઠ સમય';
+  }
+
+  @override
+  String eventMorningElongation(String planet) {
+    return '$planet: સવારે જોવાનો શ્રેષ્ઠ સમય';
+  }
+
+  @override
+  String eventConjunction(String a, String b) {
+    return '$a અને $b નજીક આવે છે';
+  }
+
+  @override
+  String get eventMarchEquinox => 'માર્ચ વિષુવ';
+
+  @override
+  String get eventJuneSolstice => 'જૂન અયનાંત';
+
+  @override
+  String get eventSeptemberEquinox => 'સપ્ટેમ્બર વિષુવ';
+
+  @override
+  String get eventDecemberSolstice => 'ડિસેમ્બર અયનાંત';
+
+  @override
+  String get eventFullMoonDesc =>
+      'ચંદ્રનો આખો ચહેરો પ્રકાશિત હોય છે. તે સૂર્યાસ્ત આસપાસ ઊગે છે.';
+
+  @override
+  String get eventNewMoonDesc =>
+      'ચંદ્ર દેખાતો નથી. તારા અને ગ્રહો જોવા માટે મહિનાનું સૌથી અંધારું આકાશ.';
+
+  @override
+  String eventOppositionDesc(String planet) {
+    return '$planet સૂર્યની બરાબર સામે છે. આ વર્ષે તે સૌથી તેજસ્વી છે અને આખી રાત દેખાય છે.';
+  }
+
+  @override
+  String eventEveningDesc(String planet, String degrees) {
+    return '$planet સૂર્યથી $degrees° દૂર છે, સૌથી વધુ દૂર. સૂર્યાસ્ત પછી પશ્ચિમમાં નીચે જુઓ.';
+  }
+
+  @override
+  String eventMorningDesc(String planet, String degrees) {
+    return '$planet સૂર્યથી $degrees° દૂર છે, સૌથી વધુ દૂર. સૂર્યોદય પહેલાં પૂર્વમાં નીચે જુઓ.';
+  }
+
+  @override
+  String eventConjunctionDesc(String degrees) {
+    return 'આકાશમાં તેઓ માત્ર $degrees°ના અંતરે પસાર થાય છે.';
+  }
+
+  @override
+  String get eventEquinoxDesc => 'પૃથ્વી પર બધે દિવસ અને રાત લગભગ સરખા હોય છે.';
+
+  @override
+  String get eventJuneSolsticeDesc =>
+      'ઉત્તરમાં સૌથી લાંબો દિવસ, દક્ષિણમાં સૌથી ટૂંકો.';
+
+  @override
+  String get eventDecemberSolsticeDesc =>
+      'ઉત્તરમાં સૌથી ટૂંકો દિવસ, દક્ષિણમાં સૌથી લાંબો.';
+
+  @override
+  String eventMeteorShower(String shower) {
+    return '$shower ઉલ્કાવર્ષા';
+  }
+
+  @override
+  String eventMeteorDesc(String rate, String percent) {
+    return 'અંધારા આકાશમાં કલાકે લગભગ $rate સુધી ઉલ્કાઓ. ચંદ્ર $percent% પ્રકાશિત હશે.';
+  }
+
+  @override
+  String get showerQuadrantids => 'ક્વાડ્રેન્ટિડ્સ';
+
+  @override
+  String get showerLyrids => 'લાયરિડ્સ';
+
+  @override
+  String get showerEtaAquariids => 'ઇટા એક્વેરિડ્સ';
+
+  @override
+  String get showerPerseids => 'પર્સિડ્સ';
+
+  @override
+  String get showerOrionids => 'ઓરાયોનિડ્સ';
+
+  @override
+  String get showerLeonids => 'લિયોનિડ્સ';
+
+  @override
+  String get showerGeminids => 'જેમિનિડ્સ';
+
+  @override
+  String get showerUrsids => 'અર્સિડ્સ';
+
+  @override
+  String get eventToday => 'આજે';
+
+  @override
+  String get eventTomorrow => 'કાલે';
+
+  @override
+  String eventInDays(String days) {
+    return '$days દિવસમાં';
+  }
+
+  @override
+  String get eventsNote =>
+      'તારીખો તમારા ફોનમાં જ ગણાય છે અને તેના ટાઇમ ઝોનમાં દેખાય છે. ઉલ્કાવર્ષાના શિખરના દિવસો દર વર્ષના સામાન્ય દિવસો છે, એક દિવસનો ફેર પડી શકે. રિમાઇન્ડર તમારા ફોનમાં જ રહે છે.';
+
+  @override
+  String get remindMe => 'મને યાદ અપાવો';
+
+  @override
+  String reminderSet(String date) {
+    return 'ઠીક છે, હું તમને $date એ યાદ અપાવીશ.';
+  }
+
+  @override
+  String get reminderOff => 'રિમાઇન્ડર દૂર કર્યું.';
+
+  @override
+  String get reminderTooLate =>
+      'આ ઘટના બહુ નજીક છે, રિમાઇન્ડર સેટ થઈ શકે નહીં.';
+
+  @override
+  String get notificationsOff =>
+      'Heliora ના નોટિફિકેશન બંધ છે. Android સેટિંગમાં ચાલુ કરો.';
+
+  @override
+  String get reminderTomorrow => 'કાલે થવાનું છે';
+
+  @override
+  String get reminderToday => 'આજે થઈ રહ્યું છે';
 }
