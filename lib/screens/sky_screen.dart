@@ -10,6 +10,7 @@ import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 import '../widgets/moon_view.dart';
+import 'finder_screen.dart';
 
 /// "Tonight's sky": the Moon's phase and which planets can be seen tonight
 /// from the chosen city, with rise and set times.
@@ -166,6 +167,7 @@ class _SkyScreenState extends State<SkyScreen> {
                       ],
                     ),
                   ),
+                  _FindButton(city: city, targetId: 'moon'),
                 ],
               ),
               const SizedBox(height: 12),
@@ -210,7 +212,7 @@ class _SkyScreenState extends State<SkyScreen> {
                 fontSize: 18, fontWeight: FontWeight.w700, color: p.text)),
         const SizedBox(height: 12),
         for (final night in sky.planets) ...<Widget>[
-          _PlanetNightCard(night: night, time: _time),
+          _PlanetNightCard(night: night, city: city, time: _time),
           const SizedBox(height: 8),
         ],
         const SizedBox(height: 8),
@@ -240,27 +242,6 @@ String _phaseName(AppLocalizations l, int index) {
       return l.phaseLastQuarter;
     default:
       return l.phaseWaningCrescent;
-  }
-}
-
-String _direction(AppLocalizations l, int index) {
-  switch (index) {
-    case 0:
-      return l.dirN;
-    case 1:
-      return l.dirNE;
-    case 2:
-      return l.dirE;
-    case 3:
-      return l.dirSE;
-    case 4:
-      return l.dirS;
-    case 5:
-      return l.dirSW;
-    case 6:
-      return l.dirW;
-    default:
-      return l.dirNW;
   }
 }
 
@@ -298,9 +279,11 @@ class _InfoRow extends StatelessWidget {
 }
 
 class _PlanetNightCard extends StatelessWidget {
-  const _PlanetNightCard({required this.night, required this.time});
+  const _PlanetNightCard(
+      {required this.night, required this.city, required this.time});
 
   final BodyNight night;
+  final City city;
   final String Function(DateTime? t) time;
 
   @override
@@ -357,7 +340,7 @@ class _PlanetNightCard extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     '${l.bestAt(time(best))} · '
-                    '${l.altitudeDir(_direction(l, compassIndex(night.bestAzimuth)), formatNumber(context, night.bestAltitude.round()))}',
+                    '${l.altitudeDir(directionName(l, compassIndex(night.bestAzimuth)), formatNumber(context, night.bestAltitude.round()))}',
                     style: TextStyle(fontSize: 13, color: p.text),
                   ),
                 ],
@@ -372,8 +355,32 @@ class _PlanetNightCard extends StatelessWidget {
               ],
             ),
           ),
+          _FindButton(city: city, targetId: night.id),
         ],
       ),
+    );
+  }
+}
+
+/// Opens the compass finder for one body.
+class _FindButton extends StatelessWidget {
+  const _FindButton({required this.city, required this.targetId});
+
+  final City city;
+  final String targetId;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final p = Palette.of(context);
+    return IconButton(
+      tooltip: l.findPlanet,
+      icon: Icon(Icons.explore_outlined, color: p.accentText),
+      onPressed: () {
+        Navigator.of(context).push(MaterialPageRoute<void>(
+          builder: (_) => FinderScreen(city: city, targetId: targetId),
+        ));
+      },
     );
   }
 }

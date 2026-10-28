@@ -685,4 +685,62 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get dirNW => '北西';
+
+  @override
+  String get findPlanet => '空で探す';
+
+  @override
+  String finderTitle(String name) {
+    return '$nameを探す';
+  }
+
+  @override
+  String get pointPhone => 'スマホを持ち上げて、ゆっくり動かしてください。';
+
+  @override
+  String turnRight(String degrees) {
+    return '右へ $degrees° 回る';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '左へ $degrees° 回る';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '$degrees° 上へ傾ける';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '$degrees° 下へ傾ける';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$nameはすぐそこです！';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$nameは今、地平線の下にあります。';
+  }
+
+  @override
+  String risesAt(String time) {
+    return '$time に昇ります。';
+  }
+
+  @override
+  String get noSensor => 'このスマホにはコンパスセンサーがないため、探す機能は使えません。';
+
+  @override
+  String get calibrate => 'コンパスの調整が必要です。スマホで数回、8の字を描くように動かしてください。';
+
+  @override
+  String get phoneNow => 'スマホが向いている方向';
+
+  @override
+  String get finderNote => 'スマホの背面を空に向け、磁石や金属から離してください。太陽は絶対に見ないでください。';
 }

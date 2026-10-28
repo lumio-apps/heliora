@@ -694,4 +694,65 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get dirNW => 'Barat laut';
+
+  @override
+  String get findPlanet => 'Cari di langit';
+
+  @override
+  String finderTitle(String name) {
+    return 'Cari $name';
+  }
+
+  @override
+  String get pointPhone => 'Angkat ponsel dan gerakkan perlahan.';
+
+  @override
+  String turnRight(String degrees) {
+    return 'Belok kanan $degrees°';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return 'Belok kiri $degrees°';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return 'Miringkan ke atas $degrees°';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return 'Miringkan ke bawah $degrees°';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name ada di sana!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name sedang berada di bawah cakrawala.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'Terbit pukul $time.';
+  }
+
+  @override
+  String get noSensor =>
+      'Ponsel ini tidak punya sensor kompas, jadi pencari tidak bisa bekerja.';
+
+  @override
+  String get calibrate =>
+      'Kompas perlu dikalibrasi: gerakkan ponsel membentuk angka 8 beberapa kali.';
+
+  @override
+  String get phoneNow => 'Ponsel Anda mengarah ke';
+
+  @override
+  String get finderNote =>
+      'Pegang ponsel dengan bagian belakang menghadap langit, jauh dari magnet dan logam. Jangan pernah menatap Matahari.';
 }

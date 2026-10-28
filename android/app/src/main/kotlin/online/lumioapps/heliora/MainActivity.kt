@@ -8,11 +8,16 @@ import android.provider.Settings
 import androidx.core.content.FileProvider
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodChannel
 
 class MainActivity : FlutterActivity() {
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        EventChannel(
+            flutterEngine.dartExecutor.binaryMessenger,
+            "online.lumioapps.heliora/orientation"
+        ).setStreamHandler(OrientationStream(this))
         MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
             "online.lumioapps.heliora/native"

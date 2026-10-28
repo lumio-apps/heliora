@@ -207,5 +207,19 @@
   "dirS": "南",
   "dirSW": "西南",
   "dirW": "西",
-  "dirNW": "西北"
+  "dirNW": "西北",
+  "findPlanet": "在天空中寻找",
+  "finderTitle": "寻找{name}",
+  "pointPhone": "举起手机，慢慢移动。",
+  "turnRight": "向右转 {degrees}°",
+  "turnLeft": "向左转 {degrees}°",
+  "tiltUp": "向上抬 {degrees}°",
+  "tiltDown": "向下压 {degrees}°",
+  "onTarget": "{name}就在那里！",
+  "belowHorizon": "{name}现在在地平线以下。",
+  "risesAt": "它将在 {time} 升起。",
+  "noSensor": "这部手机没有指南针传感器，无法使用寻星功能。",
+  "calibrate": "指南针需要校准：请用手机在空中画几次“8”字。",
+  "phoneNow": "手机指向",
+  "finderNote": "让手机背面朝向天空，并远离磁铁和金属。千万不要直视太阳。"
 }

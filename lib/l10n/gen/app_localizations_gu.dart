@@ -692,4 +692,65 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get dirNW => 'વાયવ્ય';
+
+  @override
+  String get findPlanet => 'આકાશમાં શોધો';
+
+  @override
+  String finderTitle(String name) {
+    return '$name શોધો';
+  }
+
+  @override
+  String get pointPhone => 'ફોન ઊંચો કરીને ધીમે ધીમે ફેરવો.';
+
+  @override
+  String turnRight(String degrees) {
+    return '$degrees° જમણે વળો';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '$degrees° ડાબે વળો';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '$degrees° ઉપર કરો';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '$degrees° નીચે કરો';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name બરાબર ત્યાં જ છે!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name અત્યારે ક્ષિતિજની નીચે છે.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'તે $time વાગ્યે ઊગશે.';
+  }
+
+  @override
+  String get noSensor =>
+      'આ ફોનમાં હોકાયંત્ર સેન્સર નથી, તેથી શોધક કામ નહીં કરે.';
+
+  @override
+  String get calibrate =>
+      'હોકાયંત્ર કેલિબ્રેટ કરવું પડશે: ફોનને થોડી વાર 8 ના આકારમાં ફેરવો.';
+
+  @override
+  String get phoneNow => 'તમારો ફોન આ તરફ છે';
+
+  @override
+  String get finderNote =>
+      'ફોનનો પાછળનો ભાગ આકાશ તરફ રાખો અને ચુંબક તથા ધાતુથી દૂર રાખો. સૂર્ય તરફ ક્યારેય ન જુઓ.';
 }

@@ -694,4 +694,65 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get dirNW => 'ವಾಯವ್ಯ';
+
+  @override
+  String get findPlanet => 'ಆಕಾಶದಲ್ಲಿ ಹುಡುಕಿ';
+
+  @override
+  String finderTitle(String name) {
+    return '$name ಹುಡುಕಿ';
+  }
+
+  @override
+  String get pointPhone => 'ಫೋನ್ ಮೇಲೆತ್ತಿ ನಿಧಾನವಾಗಿ ತಿರುಗಿಸಿ.';
+
+  @override
+  String turnRight(String degrees) {
+    return '$degrees° ಬಲಕ್ಕೆ ತಿರುಗಿ';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '$degrees° ಎಡಕ್ಕೆ ತಿರುಗಿ';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '$degrees° ಮೇಲಕ್ಕೆ ಎತ್ತಿ';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '$degrees° ಕೆಳಗೆ ಇಳಿಸಿ';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name ಅಲ್ಲೇ ಇದೆ!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name ಈಗ ದಿಗಂತದ ಕೆಳಗಿದೆ.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'ಇದು $timeಕ್ಕೆ ಉದಯಿಸುತ್ತದೆ.';
+  }
+
+  @override
+  String get noSensor =>
+      'ಈ ಫೋನ್‌ನಲ್ಲಿ ದಿಕ್ಸೂಚಿ ಸೆನ್ಸರ್ ಇಲ್ಲ, ಆದ್ದರಿಂದ ಹುಡುಕುವ ಸೌಲಭ್ಯ ಕೆಲಸ ಮಾಡುವುದಿಲ್ಲ.';
+
+  @override
+  String get calibrate =>
+      'ದಿಕ್ಸೂಚಿಯನ್ನು ಕ್ಯಾಲಿಬ್ರೇಟ್ ಮಾಡಬೇಕು: ಫೋನ್ ಅನ್ನು ಕೆಲವು ಬಾರಿ 8 ಆಕಾರದಲ್ಲಿ ತಿರುಗಿಸಿ.';
+
+  @override
+  String get phoneNow => 'ನಿಮ್ಮ ಫೋನ್ ಈ ಕಡೆ ತೋರಿಸುತ್ತಿದೆ';
+
+  @override
+  String get finderNote =>
+      'ಫೋನ್‌ನ ಹಿಂಭಾಗವನ್ನು ಆಕಾಶದ ಕಡೆಗೆ ಇರಿಸಿ ಮತ್ತು ಆಯಸ್ಕಾಂತ ಹಾಗೂ ಲೋಹದಿಂದ ದೂರವಿಡಿ. ಸೂರ್ಯನನ್ನು ಎಂದೂ ನೋಡಬೇಡಿ.';
 }

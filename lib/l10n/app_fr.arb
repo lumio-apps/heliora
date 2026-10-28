@@ -207,5 +207,19 @@
   "dirS": "Sud",
   "dirSW": "Sud-ouest",
   "dirW": "Ouest",
-  "dirNW": "Nord-ouest"
+  "dirNW": "Nord-ouest",
+  "findPlanet": "Trouver dans le ciel",
+  "finderTitle": "Trouver {name}",
+  "pointPhone": "Levez votre téléphone et déplacez-le lentement.",
+  "turnRight": "Tournez à droite de {degrees}°",
+  "turnLeft": "Tournez à gauche de {degrees}°",
+  "tiltUp": "Inclinez vers le haut de {degrees}°",
+  "tiltDown": "Inclinez vers le bas de {degrees}°",
+  "onTarget": "{name} est juste là !",
+  "belowHorizon": "{name} est actuellement sous l’horizon.",
+  "risesAt": "Il se lève à {time}.",
+  "noSensor": "Ce téléphone n’a pas de capteur de boussole, la recherche ne peut donc pas fonctionner.",
+  "calibrate": "La boussole doit être étalonnée : dessinez quelques 8 avec votre téléphone.",
+  "phoneNow": "Votre téléphone pointe vers",
+  "finderNote": "Tenez le téléphone avec l’arrière vers le ciel, loin des aimants et du métal. Ne regardez jamais le Soleil."
 }

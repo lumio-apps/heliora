@@ -699,4 +699,65 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get dirNW => 'Nord-ouest';
+
+  @override
+  String get findPlanet => 'Trouver dans le ciel';
+
+  @override
+  String finderTitle(String name) {
+    return 'Trouver $name';
+  }
+
+  @override
+  String get pointPhone => 'Levez votre téléphone et déplacez-le lentement.';
+
+  @override
+  String turnRight(String degrees) {
+    return 'Tournez à droite de $degrees°';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return 'Tournez à gauche de $degrees°';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return 'Inclinez vers le haut de $degrees°';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return 'Inclinez vers le bas de $degrees°';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name est juste là !';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name est actuellement sous l’horizon.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'Il se lève à $time.';
+  }
+
+  @override
+  String get noSensor =>
+      'Ce téléphone n’a pas de capteur de boussole, la recherche ne peut donc pas fonctionner.';
+
+  @override
+  String get calibrate =>
+      'La boussole doit être étalonnée : dessinez quelques 8 avec votre téléphone.';
+
+  @override
+  String get phoneNow => 'Votre téléphone pointe vers';
+
+  @override
+  String get finderNote =>
+      'Tenez le téléphone avec l’arrière vers le ciel, loin des aimants et du métal. Ne regardez jamais le Soleil.';
 }

@@ -207,5 +207,19 @@
   "dirS": "Sul",
   "dirSW": "Sudoeste",
   "dirW": "Oeste",
-  "dirNW": "Noroeste"
+  "dirNW": "Noroeste",
+  "findPlanet": "Encontrar no céu",
+  "finderTitle": "Encontrar {name}",
+  "pointPhone": "Levante o celular e mova-o devagar.",
+  "turnRight": "Vire à direita {degrees}°",
+  "turnLeft": "Vire à esquerda {degrees}°",
+  "tiltUp": "Incline para cima {degrees}°",
+  "tiltDown": "Incline para baixo {degrees}°",
+  "onTarget": "{name} está bem ali!",
+  "belowHorizon": "{name} está abaixo do horizonte agora.",
+  "risesAt": "Nasce às {time}.",
+  "noSensor": "Este celular não tem sensor de bússola, então o localizador não funciona.",
+  "calibrate": "A bússola precisa ser calibrada: mova o celular em forma de 8 algumas vezes.",
+  "phoneNow": "Seu celular aponta para",
+  "finderNote": "Segure o celular com a parte de trás voltada para o céu e longe de ímãs e metais. Nunca olhe para o Sol."
 }

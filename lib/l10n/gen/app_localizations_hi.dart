@@ -692,4 +692,65 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get dirNW => 'उत्तर-पश्चिम';
+
+  @override
+  String get findPlanet => 'आकाश में खोजें';
+
+  @override
+  String finderTitle(String name) {
+    return '$name खोजें';
+  }
+
+  @override
+  String get pointPhone => 'फ़ोन ऊपर उठाकर धीरे-धीरे घुमाएँ।';
+
+  @override
+  String turnRight(String degrees) {
+    return '$degrees° दाएँ मुड़ें';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '$degrees° बाएँ मुड़ें';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '$degrees° ऊपर करें';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '$degrees° नीचे करें';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name ठीक वहीं है!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name अभी क्षितिज के नीचे है।';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'यह $time पर उगेगा।';
+  }
+
+  @override
+  String get noSensor =>
+      'इस फ़ोन में कंपास सेंसर नहीं है, इसलिए खोजक काम नहीं करेगा।';
+
+  @override
+  String get calibrate =>
+      'कंपास को कैलिब्रेट करना है: फ़ोन को कुछ बार 8 के आकार में घुमाएँ।';
+
+  @override
+  String get phoneNow => 'आपका फ़ोन इस ओर है';
+
+  @override
+  String get finderNote =>
+      'फ़ोन का पिछला हिस्सा आकाश की ओर रखें और चुंबक व धातु से दूर रखें। सूरज को कभी न देखें।';
 }

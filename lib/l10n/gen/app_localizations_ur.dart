@@ -694,4 +694,65 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get dirNW => 'شمال مغرب';
+
+  @override
+  String get findPlanet => 'آسمان میں تلاش کریں';
+
+  @override
+  String finderTitle(String name) {
+    return '$name تلاش کریں';
+  }
+
+  @override
+  String get pointPhone => 'فون اوپر اٹھا کر آہستہ آہستہ گھمائیں۔';
+
+  @override
+  String turnRight(String degrees) {
+    return '$degrees° دائیں مڑیں';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '$degrees° بائیں مڑیں';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '$degrees° اوپر کریں';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '$degrees° نیچے کریں';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name بالکل وہیں ہے!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name اس وقت افق کے نیچے ہے۔';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'یہ $time پر طلوع ہوگا۔';
+  }
+
+  @override
+  String get noSensor =>
+      'اس فون میں قطب نما سینسر نہیں ہے، اس لیے تلاش کی سہولت کام نہیں کرے گی۔';
+
+  @override
+  String get calibrate =>
+      'قطب نما کو کیلیبریٹ کرنا ہے: فون کو چند بار 8 کی شکل میں گھمائیں۔';
+
+  @override
+  String get phoneNow => 'آپ کا فون اس طرف ہے';
+
+  @override
+  String get finderNote =>
+      'فون کا پچھلا حصہ آسمان کی طرف رکھیں اور مقناطیس و دھات سے دور رکھیں۔ سورج کی طرف کبھی نہ دیکھیں۔';
 }

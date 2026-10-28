@@ -695,4 +695,65 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get dirNW => 'Северо-запад';
+
+  @override
+  String get findPlanet => 'Найти в небе';
+
+  @override
+  String finderTitle(String name) {
+    return 'Найти: $name';
+  }
+
+  @override
+  String get pointPhone => 'Поднимите телефон и медленно водите им.';
+
+  @override
+  String turnRight(String degrees) {
+    return 'Повернитесь вправо на $degrees°';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return 'Повернитесь влево на $degrees°';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return 'Наклоните вверх на $degrees°';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return 'Наклоните вниз на $degrees°';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name прямо там!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name сейчас под горизонтом.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'Восход в $time.';
+  }
+
+  @override
+  String get noSensor =>
+      'В этом телефоне нет датчика компаса, поэтому поиск не работает.';
+
+  @override
+  String get calibrate =>
+      'Компас нужно откалибровать: несколько раз нарисуйте телефоном восьмёрку.';
+
+  @override
+  String get phoneNow => 'Телефон направлен на';
+
+  @override
+  String get finderNote =>
+      'Держите телефон задней стороной к небу, вдали от магнитов и металла. Никогда не смотрите на Солнце.';
 }

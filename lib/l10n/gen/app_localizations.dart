@@ -1381,6 +1381,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'North-west'**
   String get dirNW;
+
+  /// No description provided for @findPlanet.
+  ///
+  /// In en, this message translates to:
+  /// **'Find in the sky'**
+  String get findPlanet;
+
+  /// No description provided for @finderTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Find {name}'**
+  String finderTitle(String name);
+
+  /// No description provided for @pointPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Hold your phone up and move it slowly around.'**
+  String get pointPhone;
+
+  /// No description provided for @turnRight.
+  ///
+  /// In en, this message translates to:
+  /// **'Turn right {degrees}°'**
+  String turnRight(String degrees);
+
+  /// No description provided for @turnLeft.
+  ///
+  /// In en, this message translates to:
+  /// **'Turn left {degrees}°'**
+  String turnLeft(String degrees);
+
+  /// No description provided for @tiltUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Tilt up {degrees}°'**
+  String tiltUp(String degrees);
+
+  /// No description provided for @tiltDown.
+  ///
+  /// In en, this message translates to:
+  /// **'Tilt down {degrees}°'**
+  String tiltDown(String degrees);
+
+  /// No description provided for @onTarget.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} is right there!'**
+  String onTarget(String name);
+
+  /// No description provided for @belowHorizon.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} is below the horizon right now.'**
+  String belowHorizon(String name);
+
+  /// No description provided for @risesAt.
+  ///
+  /// In en, this message translates to:
+  /// **'It rises at {time}.'**
+  String risesAt(String time);
+
+  /// No description provided for @noSensor.
+  ///
+  /// In en, this message translates to:
+  /// **'This phone has no compass sensor, so the finder cannot work.'**
+  String get noSensor;
+
+  /// No description provided for @calibrate.
+  ///
+  /// In en, this message translates to:
+  /// **'The compass needs calibrating: move your phone in a figure 8 a few times.'**
+  String get calibrate;
+
+  /// No description provided for @phoneNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Your phone points to'**
+  String get phoneNow;
+
+  /// No description provided for @finderNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Hold the phone with its back towards the sky and keep it away from magnets and metal. Never look at the Sun.'**
+  String get finderNote;
 }
 
 class _AppLocalizationsDelegate

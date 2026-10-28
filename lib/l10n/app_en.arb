@@ -410,5 +410,75 @@
         "type": "String"
       }
     }
+  },
+  "findPlanet": "Find in the sky",
+  "finderTitle": "Find {name}",
+  "pointPhone": "Hold your phone up and move it slowly around.",
+  "turnRight": "Turn right {degrees}°",
+  "turnLeft": "Turn left {degrees}°",
+  "tiltUp": "Tilt up {degrees}°",
+  "tiltDown": "Tilt down {degrees}°",
+  "onTarget": "{name} is right there!",
+  "belowHorizon": "{name} is below the horizon right now.",
+  "risesAt": "It rises at {time}.",
+  "noSensor": "This phone has no compass sensor, so the finder cannot work.",
+  "calibrate": "The compass needs calibrating: move your phone in a figure 8 a few times.",
+  "phoneNow": "Your phone points to",
+  "finderNote": "Hold the phone with its back towards the sky and keep it away from magnets and metal. Never look at the Sun.",
+  "@finderTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "@turnRight": {
+    "placeholders": {
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "@turnLeft": {
+    "placeholders": {
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "@tiltUp": {
+    "placeholders": {
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "@tiltDown": {
+    "placeholders": {
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "@onTarget": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "@belowHorizon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "@risesAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
   }
 }

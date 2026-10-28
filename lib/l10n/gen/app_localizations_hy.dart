@@ -695,4 +695,65 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get dirNW => 'Հյուսիս-արևմուտք';
+
+  @override
+  String get findPlanet => 'Գտնել երկնքում';
+
+  @override
+  String finderTitle(String name) {
+    return 'Գտնել՝ $name';
+  }
+
+  @override
+  String get pointPhone => 'Բարձրացրեք հեռախոսը և դանդաղ շարժեք։';
+
+  @override
+  String turnRight(String degrees) {
+    return 'Թեքվեք աջ $degrees°';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return 'Թեքվեք ձախ $degrees°';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return 'Բարձրացրեք $degrees°';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return 'Իջեցրեք $degrees°';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name-ը հենց այնտեղ է։';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name-ը հիմա հորիզոնից ցածր է։';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'Ծագում է $time-ին։';
+  }
+
+  @override
+  String get noSensor =>
+      'Այս հեռախոսը կողմնացույցի սենսոր չունի, ուստի որոնումը չի աշխատի։';
+
+  @override
+  String get calibrate =>
+      'Կողմնացույցը պետք է չափաբերել՝ հեռախոսով մի քանի անգամ 8 գծեք։';
+
+  @override
+  String get phoneNow => 'Հեռախոսը ուղղված է';
+
+  @override
+  String get finderNote =>
+      'Պահեք հեռախոսի հետևի մասը երկնքին դեմ և հեռու մագնիսներից ու մետաղից։ Երբեք մի նայեք Արեգակին։';
 }

@@ -207,5 +207,19 @@
   "dirS": "Selatan",
   "dirSW": "Barat daya",
   "dirW": "Barat",
-  "dirNW": "Barat laut"
+  "dirNW": "Barat laut",
+  "findPlanet": "Cari di langit",
+  "finderTitle": "Cari {name}",
+  "pointPhone": "Angkat ponsel dan gerakkan perlahan.",
+  "turnRight": "Belok kanan {degrees}°",
+  "turnLeft": "Belok kiri {degrees}°",
+  "tiltUp": "Miringkan ke atas {degrees}°",
+  "tiltDown": "Miringkan ke bawah {degrees}°",
+  "onTarget": "{name} ada di sana!",
+  "belowHorizon": "{name} sedang berada di bawah cakrawala.",
+  "risesAt": "Terbit pukul {time}.",
+  "noSensor": "Ponsel ini tidak punya sensor kompas, jadi pencari tidak bisa bekerja.",
+  "calibrate": "Kompas perlu dikalibrasi: gerakkan ponsel membentuk angka 8 beberapa kali.",
+  "phoneNow": "Ponsel Anda mengarah ke",
+  "finderNote": "Pegang ponsel dengan bagian belakang menghadap langit, jauh dari magnet dan logam. Jangan pernah menatap Matahari."
 }

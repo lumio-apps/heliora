@@ -172,3 +172,25 @@ String quizQuestionText(AppLocalizations l, QuizKind kind) {
       return l.qLongestDay;
   }
 }
+
+/// Compass name for a [compassIndex] (0 = north, clockwise).
+String directionName(AppLocalizations l, int index) {
+  switch (index) {
+    case 0:
+      return l.dirN;
+    case 1:
+      return l.dirNE;
+    case 2:
+      return l.dirE;
+    case 3:
+      return l.dirSE;
+    case 4:
+      return l.dirS;
+    case 5:
+      return l.dirSW;
+    case 6:
+      return l.dirW;
+    default:
+      return l.dirNW;
+  }
+}

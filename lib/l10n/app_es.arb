@@ -207,5 +207,19 @@
   "dirS": "Sur",
   "dirSW": "Suroeste",
   "dirW": "Oeste",
-  "dirNW": "Noroeste"
+  "dirNW": "Noroeste",
+  "findPlanet": "Buscar en el cielo",
+  "finderTitle": "Buscar {name}",
+  "pointPhone": "Levanta el móvil y muévelo despacio.",
+  "turnRight": "Gira a la derecha {degrees}°",
+  "turnLeft": "Gira a la izquierda {degrees}°",
+  "tiltUp": "Inclina hacia arriba {degrees}°",
+  "tiltDown": "Inclina hacia abajo {degrees}°",
+  "onTarget": "¡{name} está justo ahí!",
+  "belowHorizon": "{name} está ahora bajo el horizonte.",
+  "risesAt": "Sale a las {time}.",
+  "noSensor": "Este móvil no tiene sensor de brújula, así que el buscador no puede funcionar.",
+  "calibrate": "La brújula necesita calibrarse: mueve el móvil en forma de 8 unas cuantas veces.",
+  "phoneNow": "Tu móvil apunta a",
+  "finderNote": "Sujeta el móvil con la parte trasera hacia el cielo y aléjalo de imanes y metal. Nunca mires al Sol."
 }

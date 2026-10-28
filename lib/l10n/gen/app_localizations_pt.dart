@@ -694,4 +694,65 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get dirNW => 'Noroeste';
+
+  @override
+  String get findPlanet => 'Encontrar no céu';
+
+  @override
+  String finderTitle(String name) {
+    return 'Encontrar $name';
+  }
+
+  @override
+  String get pointPhone => 'Levante o celular e mova-o devagar.';
+
+  @override
+  String turnRight(String degrees) {
+    return 'Vire à direita $degrees°';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return 'Vire à esquerda $degrees°';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return 'Incline para cima $degrees°';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return 'Incline para baixo $degrees°';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name está bem ali!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name está abaixo do horizonte agora.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'Nasce às $time.';
+  }
+
+  @override
+  String get noSensor =>
+      'Este celular não tem sensor de bússola, então o localizador não funciona.';
+
+  @override
+  String get calibrate =>
+      'A bússola precisa ser calibrada: mova o celular em forma de 8 algumas vezes.';
+
+  @override
+  String get phoneNow => 'Seu celular aponta para';
+
+  @override
+  String get finderNote =>
+      'Segure o celular com a parte de trás voltada para o céu e longe de ímãs e metais. Nunca olhe para o Sol.';
 }

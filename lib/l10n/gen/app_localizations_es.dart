@@ -696,4 +696,65 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get dirNW => 'Noroeste';
+
+  @override
+  String get findPlanet => 'Buscar en el cielo';
+
+  @override
+  String finderTitle(String name) {
+    return 'Buscar $name';
+  }
+
+  @override
+  String get pointPhone => 'Levanta el móvil y muévelo despacio.';
+
+  @override
+  String turnRight(String degrees) {
+    return 'Gira a la derecha $degrees°';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return 'Gira a la izquierda $degrees°';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return 'Inclina hacia arriba $degrees°';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return 'Inclina hacia abajo $degrees°';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '¡$name está justo ahí!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name está ahora bajo el horizonte.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'Sale a las $time.';
+  }
+
+  @override
+  String get noSensor =>
+      'Este móvil no tiene sensor de brújula, así que el buscador no puede funcionar.';
+
+  @override
+  String get calibrate =>
+      'La brújula necesita calibrarse: mueve el móvil en forma de 8 unas cuantas veces.';
+
+  @override
+  String get phoneNow => 'Tu móvil apunta a';
+
+  @override
+  String get finderNote =>
+      'Sujeta el móvil con la parte trasera hacia el cielo y aléjalo de imanes y metal. Nunca mires al Sol.';
 }

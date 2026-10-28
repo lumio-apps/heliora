@@ -698,4 +698,65 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get dirNW => 'വടക്കുപടിഞ്ഞാറ്';
+
+  @override
+  String get findPlanet => 'ആകാശത്ത് കണ്ടെത്തുക';
+
+  @override
+  String finderTitle(String name) {
+    return '$name കണ്ടെത്തുക';
+  }
+
+  @override
+  String get pointPhone => 'ഫോൺ ഉയർത്തി പതുക്കെ ചുറ്റും നീക്കുക.';
+
+  @override
+  String turnRight(String degrees) {
+    return '$degrees° വലത്തേക്ക് തിരിയുക';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '$degrees° ഇടത്തേക്ക് തിരിയുക';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '$degrees° മുകളിലേക്ക് ഉയർത്തുക';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '$degrees° താഴേക്ക് താഴ്ത്തുക';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name അവിടെത്തന്നെയുണ്ട്!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name ഇപ്പോൾ ചക്രവാളത്തിന് താഴെയാണ്.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'ഇത് $time-ന് ഉദിക്കും.';
+  }
+
+  @override
+  String get noSensor =>
+      'ഈ ഫോണിൽ കോമ്പസ് സെൻസർ ഇല്ല, അതിനാൽ ഫൈൻഡർ പ്രവർത്തിക്കില്ല.';
+
+  @override
+  String get calibrate =>
+      'കോമ്പസ് കാലിബ്രേറ്റ് ചെയ്യണം: ഫോൺ കുറച്ചുതവണ 8 ആകൃതിയിൽ ചലിപ്പിക്കുക.';
+
+  @override
+  String get phoneNow => 'നിങ്ങളുടെ ഫോൺ ചൂണ്ടുന്നത്';
+
+  @override
+  String get finderNote =>
+      'ഫോണിന്റെ പിൻഭാഗം ആകാശത്തേക്ക് പിടിക്കുക, കാന്തത്തിൽനിന്നും ലോഹത്തിൽനിന്നും അകറ്റി വയ്ക്കുക. ഒരിക്കലും സൂര്യനെ നോക്കരുത്.';
 }

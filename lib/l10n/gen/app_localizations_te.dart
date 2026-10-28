@@ -693,4 +693,65 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get dirNW => 'వాయువ్యం';
+
+  @override
+  String get findPlanet => 'ఆకాశంలో వెతకండి';
+
+  @override
+  String finderTitle(String name) {
+    return '$name వెతకండి';
+  }
+
+  @override
+  String get pointPhone => 'ఫోన్‌ను పైకెత్తి నెమ్మదిగా తిప్పండి.';
+
+  @override
+  String turnRight(String degrees) {
+    return '$degrees° కుడివైపు తిరగండి';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '$degrees° ఎడమవైపు తిరగండి';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '$degrees° పైకి ఎత్తండి';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '$degrees° కిందకు దించండి';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name సరిగ్గా అక్కడే ఉంది!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name ఇప్పుడు క్షితిజం కింద ఉంది.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'ఇది $timeకి ఉదయిస్తుంది.';
+  }
+
+  @override
+  String get noSensor =>
+      'ఈ ఫోన్‌లో దిక్సూచి సెన్సర్ లేదు, కాబట్టి ఫైండర్ పనిచేయదు.';
+
+  @override
+  String get calibrate =>
+      'దిక్సూచిని క్యాలిబ్రేట్ చేయాలి: ఫోన్‌ను కొన్నిసార్లు 8 ఆకారంలో తిప్పండి.';
+
+  @override
+  String get phoneNow => 'మీ ఫోన్ చూపుతున్న దిశ';
+
+  @override
+  String get finderNote =>
+      'ఫోన్ వెనుక భాగాన్ని ఆకాశం వైపు ఉంచి, అయస్కాంతాలకు, లోహానికి దూరంగా ఉంచండి. సూర్యుడిని ఎప్పుడూ చూడకండి.';
 }

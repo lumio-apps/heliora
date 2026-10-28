@@ -692,4 +692,64 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get dirNW => 'উত্তর-পশ্চিম';
+
+  @override
+  String get findPlanet => 'আকাশে খুঁজুন';
+
+  @override
+  String finderTitle(String name) {
+    return '$name খুঁজুন';
+  }
+
+  @override
+  String get pointPhone => 'ফোন উঁচু করে ধীরে ধীরে ঘোরান।';
+
+  @override
+  String turnRight(String degrees) {
+    return '$degrees° ডানে ঘুরুন';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '$degrees° বাঁয়ে ঘুরুন';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '$degrees° উপরে তুলুন';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '$degrees° নিচে নামান';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name ঠিক ওখানেই!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name এখন দিগন্তের নিচে।';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'এটি $time-এ উঠবে।';
+  }
+
+  @override
+  String get noSensor => 'এই ফোনে কম্পাস সেন্সর নেই, তাই খোঁজক কাজ করবে না।';
+
+  @override
+  String get calibrate =>
+      'কম্পাস ক্যালিব্রেট করতে হবে: ফোনটি কয়েকবার 8-এর আকারে ঘোরান।';
+
+  @override
+  String get phoneNow => 'আপনার ফোন এদিকে তাক করা';
+
+  @override
+  String get finderNote =>
+      'ফোনের পেছন দিক আকাশের দিকে রাখুন এবং চুম্বক ও ধাতু থেকে দূরে রাখুন। কখনও সূর্যের দিকে তাকাবেন না।';
 }

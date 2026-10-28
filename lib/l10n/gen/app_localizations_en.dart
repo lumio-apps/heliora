@@ -694,4 +694,65 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dirNW => 'North-west';
+
+  @override
+  String get findPlanet => 'Find in the sky';
+
+  @override
+  String finderTitle(String name) {
+    return 'Find $name';
+  }
+
+  @override
+  String get pointPhone => 'Hold your phone up and move it slowly around.';
+
+  @override
+  String turnRight(String degrees) {
+    return 'Turn right $degrees°';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return 'Turn left $degrees°';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return 'Tilt up $degrees°';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return 'Tilt down $degrees°';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name is right there!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name is below the horizon right now.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'It rises at $time.';
+  }
+
+  @override
+  String get noSensor =>
+      'This phone has no compass sensor, so the finder cannot work.';
+
+  @override
+  String get calibrate =>
+      'The compass needs calibrating: move your phone in a figure 8 a few times.';
+
+  @override
+  String get phoneNow => 'Your phone points to';
+
+  @override
+  String get finderNote =>
+      'Hold the phone with its back towards the sky and keep it away from magnets and metal. Never look at the Sun.';
 }

@@ -683,4 +683,62 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get dirNW => '西北';
+
+  @override
+  String get findPlanet => '在天空中寻找';
+
+  @override
+  String finderTitle(String name) {
+    return '寻找$name';
+  }
+
+  @override
+  String get pointPhone => '举起手机，慢慢移动。';
+
+  @override
+  String turnRight(String degrees) {
+    return '向右转 $degrees°';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '向左转 $degrees°';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '向上抬 $degrees°';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '向下压 $degrees°';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name就在那里！';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name现在在地平线以下。';
+  }
+
+  @override
+  String risesAt(String time) {
+    return '它将在 $time 升起。';
+  }
+
+  @override
+  String get noSensor => '这部手机没有指南针传感器，无法使用寻星功能。';
+
+  @override
+  String get calibrate => '指南针需要校准：请用手机在空中画几次“8”字。';
+
+  @override
+  String get phoneNow => '手机指向';
+
+  @override
+  String get finderNote => '让手机背面朝向天空，并远离磁铁和金属。千万不要直视太阳。';
 }

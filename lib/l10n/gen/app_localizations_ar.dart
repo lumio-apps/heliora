@@ -692,4 +692,65 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get dirNW => 'الشمال الغربي';
+
+  @override
+  String get findPlanet => 'ابحث عنه في السماء';
+
+  @override
+  String finderTitle(String name) {
+    return 'ابحث عن $name';
+  }
+
+  @override
+  String get pointPhone => 'ارفع هاتفك وحرّكه ببطء.';
+
+  @override
+  String turnRight(String degrees) {
+    return 'استدر يمينًا $degrees°';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return 'استدر يسارًا $degrees°';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return 'ارفع الهاتف $degrees°';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return 'اخفض الهاتف $degrees°';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name هناك تمامًا!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name تحت الأفق الآن.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'يشرق عند $time.';
+  }
+
+  @override
+  String get noSensor =>
+      'هذا الهاتف لا يحتوي على مستشعر بوصلة، لذلك لا يعمل الباحث.';
+
+  @override
+  String get calibrate =>
+      'تحتاج البوصلة إلى معايرة: حرّك هاتفك على شكل رقم 8 عدة مرات.';
+
+  @override
+  String get phoneNow => 'هاتفك يشير إلى';
+
+  @override
+  String get finderNote =>
+      'وجّه الجزء الخلفي من الهاتف نحو السماء وأبعده عن المغناطيس والمعادن. لا تنظر إلى الشمس أبدًا.';
 }

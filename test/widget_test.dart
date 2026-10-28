@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:heliora/core/finder.dart';
 import 'package:heliora/core/format.dart';
 import 'package:heliora/core/habitability.dart';
 import 'package:heliora/core/orbits.dart';
@@ -213,6 +214,70 @@ void main() {
 
     test('city ids are unique', () {
       expect(cities.map((c) => c.id).toSet().length, cities.length);
+    });
+  });
+
+  group('compass finder', () {
+    test('turn angle takes the short way round', () {
+      expect(turnAngle(350, 10), closeTo(20, 1e-9));
+      expect(turnAngle(10, 350), closeTo(-20, 1e-9));
+      expect(turnAngle(90, 90), 0);
+      expect(turnAngle(0, 180).abs(), closeTo(180, 1e-9));
+    });
+
+    test('guidance says which way to move', () {
+      final g = guide(
+        phoneAzimuth: 100,
+        phoneAltitude: 10,
+        targetAzimuth: 130,
+        targetAltitude: 40,
+      );
+      expect(g.turn, greaterThan(0));
+      expect(g.tilt, closeTo(30, 1e-9));
+      expect(g.onTarget, isFalse);
+      final back = guide(
+        phoneAzimuth: 130,
+        phoneAltitude: 60,
+        targetAzimuth: 100,
+        targetAltitude: 40,
+      );
+      expect(back.turn, lessThan(0));
+      expect(back.tilt, closeTo(-20, 1e-9));
+    });
+
+    test('pointing at the target counts as found', () {
+      final g = guide(
+        phoneAzimuth: 200,
+        phoneAltitude: 30,
+        targetAzimuth: 203,
+        targetAltitude: 32,
+      );
+      expect(g.onTarget, isTrue);
+    });
+
+    test('turns shrink near the zenith', () {
+      final low = guide(
+        phoneAzimuth: 0,
+        phoneAltitude: 0,
+        targetAzimuth: 40,
+        targetAltitude: 0,
+      );
+      final high = guide(
+        phoneAzimuth: 0,
+        phoneAltitude: 80,
+        targetAzimuth: 40,
+        targetAltitude: 80,
+      );
+      expect(high.turn.abs(), lessThan(low.turn.abs() / 4));
+    });
+
+    test('smoother averages 359 and 1 degrees to north', () {
+      final sm = DirectionSmoother(factor: 0.5);
+      sm.add(359, 20);
+      final r = sm.add(1, 20);
+      final az = r.azimuth > 180 ? r.azimuth - 360 : r.azimuth;
+      expect(az.abs(), lessThan(1));
+      expect(r.altitude, closeTo(20, 1e-9));
     });
   });
 

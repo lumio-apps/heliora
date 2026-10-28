@@ -207,5 +207,19 @@
   "dirS": "南",
   "dirSW": "南西",
   "dirW": "西",
-  "dirNW": "北西"
+  "dirNW": "北西",
+  "findPlanet": "空で探す",
+  "finderTitle": "{name}を探す",
+  "pointPhone": "スマホを持ち上げて、ゆっくり動かしてください。",
+  "turnRight": "右へ {degrees}° 回る",
+  "turnLeft": "左へ {degrees}° 回る",
+  "tiltUp": "{degrees}° 上へ傾ける",
+  "tiltDown": "{degrees}° 下へ傾ける",
+  "onTarget": "{name}はすぐそこです！",
+  "belowHorizon": "{name}は今、地平線の下にあります。",
+  "risesAt": "{time} に昇ります。",
+  "noSensor": "このスマホにはコンパスセンサーがないため、探す機能は使えません。",
+  "calibrate": "コンパスの調整が必要です。スマホで数回、8の字を描くように動かしてください。",
+  "phoneNow": "スマホが向いている方向",
+  "finderNote": "スマホの背面を空に向け、磁石や金属から離してください。太陽は絶対に見ないでください。"
 }

@@ -692,4 +692,65 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get dirNW => 'वायव्य';
+
+  @override
+  String get findPlanet => 'आकाशात शोधा';
+
+  @override
+  String finderTitle(String name) {
+    return '$name शोधा';
+  }
+
+  @override
+  String get pointPhone => 'फोन वर धरा आणि हळूहळू फिरवा.';
+
+  @override
+  String turnRight(String degrees) {
+    return '$degrees° उजवीकडे वळा';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '$degrees° डावीकडे वळा';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '$degrees° वर उचला';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '$degrees° खाली करा';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name अगदी तिथेच आहे!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name आत्ता क्षितिजाखाली आहे.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'तो $time वाजता उगवेल.';
+  }
+
+  @override
+  String get noSensor =>
+      'या फोनमध्ये होकायंत्र सेन्सर नाही, त्यामुळे शोधक काम करणार नाही.';
+
+  @override
+  String get calibrate =>
+      'होकायंत्र कॅलिब्रेट करायचे आहे: फोन काही वेळा 8 च्या आकारात फिरवा.';
+
+  @override
+  String get phoneNow => 'तुमचा फोन या दिशेला आहे';
+
+  @override
+  String get finderNote =>
+      'फोनची मागची बाजू आकाशाकडे ठेवा आणि चुंबक व धातूपासून दूर ठेवा. सूर्याकडे कधीही पाहू नका.';
 }

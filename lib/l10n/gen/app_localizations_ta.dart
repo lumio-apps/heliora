@@ -698,4 +698,65 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get dirNW => 'வடமேற்கு';
+
+  @override
+  String get findPlanet => 'வானில் கண்டுபிடி';
+
+  @override
+  String finderTitle(String name) {
+    return '$name கண்டுபிடி';
+  }
+
+  @override
+  String get pointPhone => 'ஃபோனை உயர்த்தி மெதுவாகச் சுற்றவும்.';
+
+  @override
+  String turnRight(String degrees) {
+    return '$degrees° வலப்புறம் திரும்பு';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '$degrees° இடப்புறம் திரும்பு';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '$degrees° மேலே உயர்த்து';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '$degrees° கீழே இறக்கு';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name அங்கேயே இருக்கிறது!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name இப்போது அடிவானத்துக்குக் கீழே உள்ளது.';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'இது $time மணிக்கு உதிக்கும்.';
+  }
+
+  @override
+  String get noSensor =>
+      'இந்த ஃபோனில் திசைகாட்டி சென்சார் இல்லை, எனவே கண்டுபிடிப்பான் வேலை செய்யாது.';
+
+  @override
+  String get calibrate =>
+      'திசைகாட்டியை அளவீடு செய்ய வேண்டும்: ஃபோனை சில முறை 8 வடிவில் அசைக்கவும்.';
+
+  @override
+  String get phoneNow => 'உங்கள் ஃபோன் காட்டும் திசை';
+
+  @override
+  String get finderNote =>
+      'ஃபோனின் பின்புறத்தை வானை நோக்கிப் பிடித்து, காந்தம், உலோகத்திலிருந்து விலக்கி வைக்கவும். சூரியனை ஒருபோதும் பார்க்காதீர்கள்.';
 }

@@ -692,4 +692,65 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get dirNW => 'ਉੱਤਰ-ਪੱਛਮ';
+
+  @override
+  String get findPlanet => 'ਅਸਮਾਨ ਵਿੱਚ ਲੱਭੋ';
+
+  @override
+  String finderTitle(String name) {
+    return '$name ਲੱਭੋ';
+  }
+
+  @override
+  String get pointPhone => 'ਫ਼ੋਨ ਉੱਪਰ ਚੁੱਕ ਕੇ ਹੌਲੀ-ਹੌਲੀ ਘੁਮਾਓ।';
+
+  @override
+  String turnRight(String degrees) {
+    return '$degrees° ਸੱਜੇ ਮੁੜੋ';
+  }
+
+  @override
+  String turnLeft(String degrees) {
+    return '$degrees° ਖੱਬੇ ਮੁੜੋ';
+  }
+
+  @override
+  String tiltUp(String degrees) {
+    return '$degrees° ਉੱਪਰ ਕਰੋ';
+  }
+
+  @override
+  String tiltDown(String degrees) {
+    return '$degrees° ਹੇਠਾਂ ਕਰੋ';
+  }
+
+  @override
+  String onTarget(String name) {
+    return '$name ਬਿਲਕੁਲ ਉੱਥੇ ਹੀ ਹੈ!';
+  }
+
+  @override
+  String belowHorizon(String name) {
+    return '$name ਇਸ ਵੇਲੇ ਦਿਸਹੱਦੇ ਤੋਂ ਹੇਠਾਂ ਹੈ।';
+  }
+
+  @override
+  String risesAt(String time) {
+    return 'ਇਹ $time ਵਜੇ ਚੜ੍ਹੇਗਾ।';
+  }
+
+  @override
+  String get noSensor =>
+      'ਇਸ ਫ਼ੋਨ ਵਿੱਚ ਕੰਪਾਸ ਸੈਂਸਰ ਨਹੀਂ ਹੈ, ਇਸ ਲਈ ਖੋਜਕ ਕੰਮ ਨਹੀਂ ਕਰੇਗਾ।';
+
+  @override
+  String get calibrate =>
+      'ਕੰਪਾਸ ਨੂੰ ਕੈਲੀਬ੍ਰੇਟ ਕਰਨਾ ਹੈ: ਫ਼ੋਨ ਨੂੰ ਕੁਝ ਵਾਰ 8 ਦੀ ਸ਼ਕਲ ਵਿੱਚ ਘੁਮਾਓ।';
+
+  @override
+  String get phoneNow => 'ਤੁਹਾਡਾ ਫ਼ੋਨ ਇਸ ਪਾਸੇ ਹੈ';
+
+  @override
+  String get finderNote =>
+      'ਫ਼ੋਨ ਦਾ ਪਿਛਲਾ ਹਿੱਸਾ ਅਸਮਾਨ ਵੱਲ ਰੱਖੋ ਅਤੇ ਚੁੰਬਕ ਤੇ ਧਾਤ ਤੋਂ ਦੂਰ ਰੱਖੋ। ਸੂਰਜ ਵੱਲ ਕਦੇ ਨਾ ਦੇਖੋ।';
 }
