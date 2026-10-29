@@ -491,7 +491,7 @@ abstract class AppLocalizations {
   /// No description provided for @quizIntro.
   ///
   /// In en, this message translates to:
-  /// **'10 questions about the planets. How many can you get right?'**
+  /// **'10 questions about the planets and moons. How many can you get right?'**
   String get quizIntro;
 
   /// No description provided for @quizStart.
@@ -1897,6 +1897,444 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Time not set yet'**
   String get launchTimeTbd;
+
+  /// No description provided for @quizChoose.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a level'**
+  String get quizChoose;
+
+  /// No description provided for @levelEasy.
+  ///
+  /// In en, this message translates to:
+  /// **'Easy'**
+  String get levelEasy;
+
+  /// No description provided for @levelMedium.
+  ///
+  /// In en, this message translates to:
+  /// **'Medium'**
+  String get levelMedium;
+
+  /// No description provided for @levelHard.
+  ///
+  /// In en, this message translates to:
+  /// **'Hard'**
+  String get levelHard;
+
+  /// No description provided for @levelEasyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'The basics about the planets'**
+  String get levelEasyHint;
+
+  /// No description provided for @levelMediumHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Planets and moons'**
+  String get levelMediumHint;
+
+  /// No description provided for @levelHardHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Tricky comparisons and rankings'**
+  String get levelHardHint;
+
+  /// No description provided for @qStar.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of these is a star, not a planet?'**
+  String get qStar;
+
+  /// No description provided for @qDwarf.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of these is a dwarf planet?'**
+  String get qDwarf;
+
+  /// No description provided for @qMoonVisited.
+  ///
+  /// In en, this message translates to:
+  /// **'Which moon have people walked on?'**
+  String get qMoonVisited;
+
+  /// No description provided for @qLargestMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of these moons is the largest?'**
+  String get qLargestMoon;
+
+  /// No description provided for @qSmallestMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of these moons is the smallest?'**
+  String get qSmallestMoon;
+
+  /// No description provided for @qThickAirMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of these moons has a thick atmosphere?'**
+  String get qThickAirMoon;
+
+  /// No description provided for @qGeyserMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Which moon shoots geysers of water into space?'**
+  String get qGeyserMoon;
+
+  /// No description provided for @qVolcanicMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Which moon has the most active volcanoes?'**
+  String get qVolcanicMoon;
+
+  /// No description provided for @qBackwardsMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Which moon goes around its planet backwards?'**
+  String get qBackwardsMoon;
+
+  /// No description provided for @qBiggestRocky.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of the four rocky planets is the biggest?'**
+  String get qBiggestRocky;
+
+  /// No description provided for @qColdestRocky.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of the four rocky planets is the coldest?'**
+  String get qColdestRocky;
+
+  /// No description provided for @qHighestPressure.
+  ///
+  /// In en, this message translates to:
+  /// **'Which planet has the heaviest air pressure at its surface?'**
+  String get qHighestPressure;
+
+  /// No description provided for @qSecondLargest.
+  ///
+  /// In en, this message translates to:
+  /// **'Which planet is the second largest?'**
+  String get qSecondLargest;
+
+  /// No description provided for @qLongestYear.
+  ///
+  /// In en, this message translates to:
+  /// **'Which planet has the longest year?'**
+  String get qLongestYear;
+
+  /// No description provided for @qShortestYear.
+  ///
+  /// In en, this message translates to:
+  /// **'Which planet has the shortest year?'**
+  String get qShortestYear;
+
+  /// No description provided for @qSmallestGiant.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of the four giant planets is the smallest?'**
+  String get qSmallestGiant;
+
+  /// No description provided for @qRockyLongestYear.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of the four rocky planets has the longest year?'**
+  String get qRockyLongestYear;
+
+  /// No description provided for @qFastestMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of these moons goes around its planet the fastest?'**
+  String get qFastestMoon;
+
+  /// No description provided for @qSlowestMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of these moons takes the longest to go around its planet?'**
+  String get qSlowestMoon;
+
+  /// No description provided for @qStrongestMoonGravity.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of these moons has the strongest gravity?'**
+  String get qStrongestMoonGravity;
+
+  /// No description provided for @qColdestMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of these moons is the coldest?'**
+  String get qColdestMoon;
+
+  /// No description provided for @qSecondLargestMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Which of these moons is the second largest?'**
+  String get qSecondLargestMoon;
+
+  /// No description provided for @factTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Did you know?'**
+  String get factTitle;
+
+  /// No description provided for @factTap.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap for another fact'**
+  String get factTap;
+
+  /// No description provided for @factSun1.
+  ///
+  /// In en, this message translates to:
+  /// **'The Sun holds 99.8% of all the mass in the solar system.'**
+  String get factSun1;
+
+  /// No description provided for @factSun2.
+  ///
+  /// In en, this message translates to:
+  /// **'Sunlight takes about 8 minutes and 20 seconds to reach Earth.'**
+  String get factSun2;
+
+  /// No description provided for @factMercury1.
+  ///
+  /// In en, this message translates to:
+  /// **'One day on Mercury, from sunrise to the next sunrise, lasts about 176 Earth days. That is twice as long as its year.'**
+  String get factMercury1;
+
+  /// No description provided for @factMercury2.
+  ///
+  /// In en, this message translates to:
+  /// **'Mercury has almost no air, so its sky is black even by day, and its nights are freezing cold.'**
+  String get factMercury2;
+
+  /// No description provided for @factVenus1.
+  ///
+  /// In en, this message translates to:
+  /// **'Venus spins backwards, so on Venus the Sun rises in the west.'**
+  String get factVenus1;
+
+  /// No description provided for @factVenus2.
+  ///
+  /// In en, this message translates to:
+  /// **'Venus is hotter than Mercury, even though it is farther from the Sun, because its thick air traps the heat.'**
+  String get factVenus2;
+
+  /// No description provided for @factEarth1.
+  ///
+  /// In en, this message translates to:
+  /// **'Earth is the only place we know with life, and about 71% of its surface is covered by water.'**
+  String get factEarth1;
+
+  /// No description provided for @factEarth2.
+  ///
+  /// In en, this message translates to:
+  /// **'Earth is not a perfect ball. It bulges a little at the equator because it spins.'**
+  String get factEarth2;
+
+  /// No description provided for @factMars1.
+  ///
+  /// In en, this message translates to:
+  /// **'Olympus Mons on Mars is the tallest volcano in the solar system, about two and a half times as tall as Mount Everest.'**
+  String get factMars1;
+
+  /// No description provided for @factMars2.
+  ///
+  /// In en, this message translates to:
+  /// **'Sunsets on Mars look blue.'**
+  String get factMars2;
+
+  /// No description provided for @factJupiter1.
+  ///
+  /// In en, this message translates to:
+  /// **'Jupiter has more than twice the mass of all the other planets put together.'**
+  String get factJupiter1;
+
+  /// No description provided for @factJupiter2.
+  ///
+  /// In en, this message translates to:
+  /// **'The Great Red Spot is a storm bigger than Earth, and people have watched it for more than 150 years.'**
+  String get factJupiter2;
+
+  /// No description provided for @factSaturn1.
+  ///
+  /// In en, this message translates to:
+  /// **'Saturn is so light for its size that it would float in water, if you could find a bathtub big enough.'**
+  String get factSaturn1;
+
+  /// No description provided for @factSaturn2.
+  ///
+  /// In en, this message translates to:
+  /// **'Saturn\'s rings are very wide but very thin: in places only about ten metres thick.'**
+  String get factSaturn2;
+
+  /// No description provided for @factUranus1.
+  ///
+  /// In en, this message translates to:
+  /// **'Uranus rolls around the Sun on its side, tilted by about 98 degrees.'**
+  String get factUranus1;
+
+  /// No description provided for @factUranus2.
+  ///
+  /// In en, this message translates to:
+  /// **'Uranus was the first planet found with a telescope. William Herschel spotted it in 1781.'**
+  String get factUranus2;
+
+  /// No description provided for @factNeptune1.
+  ///
+  /// In en, this message translates to:
+  /// **'Neptune has the fastest winds of any planet, more than 2,000 km/h.'**
+  String get factNeptune1;
+
+  /// No description provided for @factNeptune2.
+  ///
+  /// In en, this message translates to:
+  /// **'Neptune was found with maths before anyone saw it: in 1846 astronomers worked out where it had to be.'**
+  String get factNeptune2;
+
+  /// No description provided for @factMoon1.
+  ///
+  /// In en, this message translates to:
+  /// **'The Moon moves about 3.8 centimetres farther from Earth every year.'**
+  String get factMoon1;
+
+  /// No description provided for @factMoon2.
+  ///
+  /// In en, this message translates to:
+  /// **'We always see the same side of the Moon, because it turns exactly once for each trip around Earth.'**
+  String get factMoon2;
+
+  /// No description provided for @factPluto1.
+  ///
+  /// In en, this message translates to:
+  /// **'A year on Pluto lasts about 248 Earth years.'**
+  String get factPluto1;
+
+  /// No description provided for @factPluto2.
+  ///
+  /// In en, this message translates to:
+  /// **'Pluto has a huge heart-shaped plain of frozen nitrogen.'**
+  String get factPluto2;
+
+  /// No description provided for @factIo1.
+  ///
+  /// In en, this message translates to:
+  /// **'Io is the most volcanic world we know, with hundreds of active volcanoes.'**
+  String get factIo1;
+
+  /// No description provided for @factIo2.
+  ///
+  /// In en, this message translates to:
+  /// **'Jupiter\'s gravity squeezes and stretches Io, and the heat from this powers its volcanoes.'**
+  String get factIo2;
+
+  /// No description provided for @factEuropa1.
+  ///
+  /// In en, this message translates to:
+  /// **'Under its icy shell, Europa probably holds about twice as much water as all of Earth\'s oceans.'**
+  String get factEuropa1;
+
+  /// No description provided for @factEuropa2.
+  ///
+  /// In en, this message translates to:
+  /// **'Europa is one of the best places to look for life beyond Earth. The Europa Clipper spacecraft is on its way there.'**
+  String get factEuropa2;
+
+  /// No description provided for @factGanymede1.
+  ///
+  /// In en, this message translates to:
+  /// **'Ganymede is the largest moon in the solar system. It is even bigger than Mercury.'**
+  String get factGanymede1;
+
+  /// No description provided for @factGanymede2.
+  ///
+  /// In en, this message translates to:
+  /// **'Ganymede is the only moon known to have a magnetic field of its own.'**
+  String get factGanymede2;
+
+  /// No description provided for @factCallisto1.
+  ///
+  /// In en, this message translates to:
+  /// **'Callisto is one of the most heavily cratered places in the solar system, and its surface is very old.'**
+  String get factCallisto1;
+
+  /// No description provided for @factCallisto2.
+  ///
+  /// In en, this message translates to:
+  /// **'Callisto is far enough from Jupiter to get less of its harsh radiation, so scientists have suggested it for a future base.'**
+  String get factCallisto2;
+
+  /// No description provided for @factTitan1.
+  ///
+  /// In en, this message translates to:
+  /// **'Titan is the only moon with a thick atmosphere. Its air pressure at the surface is higher than on Earth.'**
+  String get factTitan1;
+
+  /// No description provided for @factTitan2.
+  ///
+  /// In en, this message translates to:
+  /// **'Titan has rivers and lakes, but they hold liquid methane and ethane, not water.'**
+  String get factTitan2;
+
+  /// No description provided for @factEnceladus1.
+  ///
+  /// In en, this message translates to:
+  /// **'Enceladus shoots jets of ice and water vapour into space through cracks near its south pole.'**
+  String get factEnceladus1;
+
+  /// No description provided for @factEnceladus2.
+  ///
+  /// In en, this message translates to:
+  /// **'The jets of Enceladus feed Saturn\'s E ring.'**
+  String get factEnceladus2;
+
+  /// No description provided for @factTriton1.
+  ///
+  /// In en, this message translates to:
+  /// **'Triton goes around Neptune backwards, so it was probably a dwarf planet that Neptune captured.'**
+  String get factTriton1;
+
+  /// No description provided for @factTriton2.
+  ///
+  /// In en, this message translates to:
+  /// **'At about −235 °C, Triton is one of the coldest places anyone has measured in the solar system.'**
+  String get factTriton2;
+
+  /// No description provided for @jumpInput.
+  ///
+  /// In en, this message translates to:
+  /// **'Your jump height on Earth (cm)'**
+  String get jumpInput;
+
+  /// No description provided for @jumpHigh.
+  ///
+  /// In en, this message translates to:
+  /// **'Jump: {height}'**
+  String jumpHigh(String height);
+
+  /// No description provided for @jumpFeelsLike.
+  ///
+  /// In en, this message translates to:
+  /// **'A {height} jump on Earth becomes'**
+  String jumpFeelsLike(String height);
+
+  /// No description provided for @jumpNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Same push-off as on Earth. On the Sun and the gas giants there is no ground to stand on, so this is only a thought game.'**
+  String get jumpNote;
+
+  /// No description provided for @valueCm.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} cm'**
+  String valueCm(String value);
+
+  /// No description provided for @valueM.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} m'**
+  String valueM(String value);
 }
 
 class _AppLocalizationsDelegate

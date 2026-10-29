@@ -60,9 +60,10 @@ and an honest answer to "could humans live here?"
 - **Compare.** Any two worlds side by side, with their true sizes drawn next to each other.
 
 ### 🙋 You
-- **Your weight** on every world, from the Moon to the Sun.
+- **Your weight and your jump** on every world, from the Moon to the Sun. Type how high you jump on Earth and see how high you would jump on each world.
+- **Did you know?** Two short facts about every world, on its page, and a fact of the day on the quiz page. Tap the card for the next one.
 - **Your age on other planets** and the date of your next birthday there.
-- **Quiz.** 10 questions built from the planet data, with your best score saved.
+- **Quiz.** Three levels, 10 questions each: Easy (basics about planets), Medium (planets and moons) and Hard (tricky rankings). Answers are worked out from the data, and your best score for each level is saved.
 - **Share.** Turn a planet's card into a picture and send it to your friends.
 
 ### ⚙️ Made for everyone
@@ -92,6 +93,7 @@ Heliora is made by [Lumio Apps](https://github.com/lumio-apps): **no ads, no acc
 
 | Part | How |
 |---|---|
+| Quiz and facts | Most answers are worked out from the same data as the planet pages, so they stay right when the data changes. A few (the moon with water geysers, the most volcanic moon, the moon that orbits backwards) are well known facts about one world. The "Did you know?" facts are written by hand from NASA sources. |
 | Planet facts | [NASA Planetary Fact Sheet](https://nssdc.gsfc.nasa.gov/planetary/factsheet/). Moon counts are NASA's known moons as of mid 2026. |
 | Real positions and distances | Keplerian orbital elements from JPL ([Standish](https://ssd.jpl.nasa.gov/planets/approx_pos.html)), valid 1800–2050, solved on the phone. Checked against the 2025 Mars and Saturn and the 2026 Jupiter oppositions. |
 | 3D globes | A single fragment shader (`shaders/planet.frag`) draws every surface from noise, so the app ships with no image files. |
@@ -122,6 +124,7 @@ All texts live in `lib/l10n/app_<language>.arb`. Found a wrong word in your lang
 
 | Version | What's new |
 |---|---|
+| **1.9.0** | Quiz with Easy, Medium and Hard levels (now with moon questions), "Did you know?" facts for every world in 20 languages, jump height on every world |
 | **1.8.0** | Online features (off by default): live International Space Station map and passes over your city, upcoming rocket launches in the events calendar, reminders for both |
 | **1.7.0** | Space events calendar for the next 12 months with reminders: Moon phases, oppositions, planet meetings, equinoxes, solstices and meteor showers |
 | **1.6.0** | Find the Moon and planets in the real sky with your phone's compass: turn and tilt guidance, 20 languages |

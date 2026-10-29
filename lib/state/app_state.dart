@@ -108,12 +108,14 @@ class AppState extends ChangeNotifier {
     return _update(_settings.copyWith(reminders: list));
   }
 
-  /// Keeps the best quiz score. Returns true when [score] is a new best.
-  Future<bool> recordQuizScore(int score) async {
-    if (score <= _settings.bestQuizScore) {
+  /// Keeps the best quiz score of a level ('easy', 'medium' or 'hard').
+  /// Returns true when [score] is a new best.
+  Future<bool> recordQuizScore(String level, int score) async {
+    if (score <= _settings.bestFor(level)) {
       return false;
     }
-    await _update(_settings.copyWith(bestQuizScore: score));
+    final bests = Map<String, int>.of(_settings.quizBests)..[level] = score;
+    await _update(_settings.copyWith(quizBests: bests));
     return true;
   }
 

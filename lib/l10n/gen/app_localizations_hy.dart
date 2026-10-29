@@ -206,7 +206,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get quizIntro =>
-      '10 հարց մոլորակների մասին։ Քանի՞սին կպատասխանեք ճիշտ։';
+      '10 հարց մոլորակների և արբանյակների մասին։ Քանի՞սին կպատասխանեք ճիշտ։';
 
   @override
   String get quizStart => 'Սկսել վիկտորինան';
@@ -1028,4 +1028,274 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get launchTimeTbd => 'Ժամը դեռ որոշված չէ';
+
+  @override
+  String get quizChoose => 'Ընտրեք մակարդակը';
+
+  @override
+  String get levelEasy => 'Հեշտ';
+
+  @override
+  String get levelMedium => 'Միջին';
+
+  @override
+  String get levelHard => 'Դժվար';
+
+  @override
+  String get levelEasyHint => 'Հիմնական տեղեկություններ մոլորակների մասին';
+
+  @override
+  String get levelMediumHint => 'Մոլորակներ և արբանյակներ';
+
+  @override
+  String get levelHardHint => 'Բարդ համեմատություններ և դասակարգումներ';
+
+  @override
+  String get qStar => 'Սրանցից ո՞րն է աստղ, ոչ թե մոլորակ։';
+
+  @override
+  String get qDwarf => 'Սրանցից ո՞րն է թզուկ մոլորակ։';
+
+  @override
+  String get qMoonVisited => 'Ո՞ր արբանյակի վրա են մարդիկ քայլել։';
+
+  @override
+  String get qLargestMoon => 'Այս արբանյակներից ո՞րն է ամենամեծը։';
+
+  @override
+  String get qSmallestMoon => 'Այս արբանյակներից ո՞րն է ամենափոքրը։';
+
+  @override
+  String get qThickAirMoon => 'Այս արբանյակներից ո՞րն ունի խիտ մթնոլորտ։';
+
+  @override
+  String get qGeyserMoon => 'Ո՞ր արբանյակն է ջրի գեյզերներ արձակում տիեզերք։';
+
+  @override
+  String get qVolcanicMoon =>
+      'Ո՞ր արբանյակի վրա կան ամենաշատ գործող հրաբուխները։';
+
+  @override
+  String get qBackwardsMoon =>
+      'Ո՞ր արբանյակն է իր մոլորակի շուրջ պտտվում հակառակ ուղղությամբ։';
+
+  @override
+  String get qBiggestRocky => 'Չորս քարքարոտ մոլորակներից ո՞րն է ամենամեծը։';
+
+  @override
+  String get qColdestRocky => 'Չորս քարքարոտ մոլորակներից ո՞րն է ամենացուրտը։';
+
+  @override
+  String get qHighestPressure =>
+      'Ո՞ր մոլորակի մակերևույթին է օդի ճնշումը ամենաբարձրը։';
+
+  @override
+  String get qSecondLargest => 'Ո՞ր մոլորակն է երկրորդ ամենամեծը։';
+
+  @override
+  String get qLongestYear => 'Ո՞ր մոլորակն ունի ամենաերկար տարին։';
+
+  @override
+  String get qShortestYear => 'Ո՞ր մոլորակն ունի ամենակարճ տարին։';
+
+  @override
+  String get qSmallestGiant => 'Չորս հսկա մոլորակներից ո՞րն է ամենափոքրը։';
+
+  @override
+  String get qRockyLongestYear =>
+      'Չորս քարքարոտ մոլորակներից ո՞րն ունի ամենաերկար տարին։';
+
+  @override
+  String get qFastestMoon =>
+      'Այս արբանյակներից ո՞րն է իր մոլորակի շուրջ ամենաարագ պտտվում։';
+
+  @override
+  String get qSlowestMoon =>
+      'Այս արբանյակներից ո՞ր մեկին է ամենաշատ ժամանակ պետք իր մոլորակի շուրջը պտտվելու համար։';
+
+  @override
+  String get qStrongestMoonGravity =>
+      'Այս արբանյակներից ո՞րն ունի ամենաուժեղ ձգողությունը։';
+
+  @override
+  String get qColdestMoon => 'Այս արբանյակներից ո՞րն է ամենացուրտը։';
+
+  @override
+  String get qSecondLargestMoon =>
+      'Այս արբանյակներից ո՞րն է երկրորդ ամենամեծը։';
+
+  @override
+  String get factTitle => 'Գիտե՞ք, որ…';
+
+  @override
+  String get factTap => 'Հպեք՝ ևս մեկ փաստ տեսնելու համար';
+
+  @override
+  String get factSun1 =>
+      'Արեգակը պարունակում է Արեգակնային համակարգի ամբողջ զանգվածի 99,8%-ը։';
+
+  @override
+  String get factSun2 =>
+      'Արեգակի լույսը Երկիր հասնելու համար մոտ 8 րոպե 20 վայրկյան է ծախսում։';
+
+  @override
+  String get factMercury1 =>
+      'Մերկուրիի վրա մեկ օրը՝ մի արևածագից մինչև հաջորդը, տևում է մոտ 176 երկրային օր։ Դա նրա տարվա երկու անգամն է։';
+
+  @override
+  String get factMercury2 =>
+      'Մերկուրիի վրա օդ գրեթե չկա, ուստի նրա երկինքը սև է նույնիսկ ցերեկը, իսկ գիշերները սառցային են։';
+
+  @override
+  String get factVenus1 =>
+      'Վեներան պտտվում է հակառակ ուղղությամբ, ուստի այնտեղ Արեգակը ծագում է արևմուտքից։';
+
+  @override
+  String get factVenus2 =>
+      'Վեներան ավելի շոգ է, քան Մերկուրին, թեև Արեգակից ավելի հեռու է, որովհետև նրա խիտ օդը ջերմությունը պահում է։';
+
+  @override
+  String get factEarth1 =>
+      'Երկիրը միակ վայրն է, որտեղ մենք գիտենք կյանքի մասին, և նրա մակերևույթի մոտ 71%-ը ծածկված է ջրով։';
+
+  @override
+  String get factEarth2 =>
+      'Երկիրը կատարյալ գնդակ չէ։ Պտտվելու պատճառով հասարակածի մոտ մի փոքր ուռած է։';
+
+  @override
+  String get factMars1 =>
+      'Մարսի Օլիմպոս լեռը Արեգակնային համակարգի ամենաբարձր հրաբուխն է՝ Էվերեստից մոտ երկուսուկես անգամ բարձր։';
+
+  @override
+  String get factMars2 => 'Մարսի վրա մայրամուտները կապույտ են երևում։';
+
+  @override
+  String get factJupiter1 =>
+      'Յուպիտերի զանգվածը երկու անգամից ավելի մեծ է մնացած բոլոր մոլորակների միասին վերցրած զանգվածից։';
+
+  @override
+  String get factJupiter2 =>
+      'Մեծ կարմիր բիծը Երկրից մեծ մրրիկ է, որին մարդիկ հետևում են ավելի քան 150 տարի։';
+
+  @override
+  String get factSaturn1 =>
+      'Սատուրնը իր չափի համար այնքան թեթև է, որ ջրի վրա կլողար, եթե բավականաչափ մեծ լոգարան գտնվեր։';
+
+  @override
+  String get factSaturn2 =>
+      'Սատուրնի օղակները շատ լայն են, բայց շատ բարակ՝ որոշ տեղերում ընդամենը մոտ տաս մետր հաստությամբ։';
+
+  @override
+  String get factUranus1 =>
+      'Ուրանը Արեգակի շուրջ պտտվում է կողքի վրա գլորվելով՝ մոտ 98 աստիճանով թեքված։';
+
+  @override
+  String get factUranus2 =>
+      'Ուրանը առաջին մոլորակն էր, որ հայտնաբերվեց աստղադիտակով։ Ուիլյամ Հերշելը նկատեց այն 1781 թվականին։';
+
+  @override
+  String get factNeptune1 =>
+      'Նեպտունի վրա ամենաարագ քամիներն են բոլոր մոլորակների մեջ՝ ժամում ավելի քան 2000 կմ։';
+
+  @override
+  String get factNeptune2 =>
+      'Նեպտունը գտնվեց մաթեմատիկայով, նախքան որևէ մեկը տեսներ այն․ 1846 թվականին աստղագետները հաշվեցին, թե որտեղ պետք է լինի։';
+
+  @override
+  String get factMoon1 =>
+      'Լուսինը ամեն տարի Երկրից հեռանում է մոտ 3,8 սանտիմետրով։';
+
+  @override
+  String get factMoon2 =>
+      'Մենք միշտ տեսնում ենք Լուսնի նույն կողմը, որովհետև Երկրի շուրջ ամեն պտույտի ընթացքում այն ճիշտ մեկ անգամ է պտտվում իր առանցքի շուրջ։';
+
+  @override
+  String get factPluto1 =>
+      'Պլուտոնի վրա մեկ տարին տևում է մոտ 248 երկրային տարի։';
+
+  @override
+  String get factPluto2 =>
+      'Պլուտոնի վրա կա սառած ազոտից կազմված սրտաձև հսկայական դաշտավայր։';
+
+  @override
+  String get factIo1 =>
+      'Իոն մեր ճանաչած ամենահրաբխային աշխարհն է՝ հարյուրավոր գործող հրաբուխներով։';
+
+  @override
+  String get factIo2 =>
+      'Յուպիտերի ձգողությունը սեղմում և ձգում է Իոյին, և դրանից առաջացած ջերմությունը սնում է նրա հրաբուխները։';
+
+  @override
+  String get factEuropa1 =>
+      'Սառցե ընդերքի տակ Եվրոպան հավանաբար պարունակում է Երկրի բոլոր օվկիանոսների ջրի մոտ կրկնակին։';
+
+  @override
+  String get factEuropa2 =>
+      'Եվրոպան Երկրից դուրս կյանք փնտրելու լավագույն վայրերից է։ «Եվրոպա Կլիպեր» սարքը դեպի այնտեղ է թռչում։';
+
+  @override
+  String get factGanymede1 =>
+      'Գանիմեդը Արեգակնային համակարգի ամենամեծ արբանյակն է։ Այն նույնիսկ Մերկուրիից մեծ է։';
+
+  @override
+  String get factGanymede2 =>
+      'Գանիմեդը միակ արբանյակն է, որի մասին հայտնի է, որ ունի սեփական մագնիսական դաշտ։';
+
+  @override
+  String get factCallisto1 =>
+      'Կալիստոն Արեգակնային համակարգի ամենաշատ խառնարաններ ունեցող վայրերից է, և նրա մակերևույթը շատ հին է։';
+
+  @override
+  String get factCallisto2 =>
+      'Կալիստոն Յուպիտերից բավականաչափ հեռու է, որ նրա ուժեղ ճառագայթումից քիչ է ստանում, ուստի գիտնականները այն առաջարկել են ապագա բազայի համար։';
+
+  @override
+  String get factTitan1 =>
+      'Տիտանը միակ արբանյակն է խիտ մթնոլորտով։ Նրա մակերևույթին օդի ճնշումը Երկրի վրայից բարձր է։';
+
+  @override
+  String get factTitan2 =>
+      'Տիտանի վրա կան գետեր և լճեր, բայց դրանցում ջուր չէ, այլ հեղուկ մեթան և էթան։';
+
+  @override
+  String get factEnceladus1 =>
+      'Էնցելադը հարավային բևեռի մոտ գտնվող ճեղքերից սառույցի և ջրային գոլորշու շիթեր է արձակում տիեզերք։';
+
+  @override
+  String get factEnceladus2 => 'Էնցելադի շիթերը սնում են Սատուրնի E օղակը։';
+
+  @override
+  String get factTriton1 =>
+      'Տրիտոնը Նեպտունի շուրջ պտտվում է հակառակ ուղղությամբ, ուստի հավանաբար թզուկ մոլորակ էր, որին Նեպտունը գրավել է։';
+
+  @override
+  String get factTriton2 =>
+      'Մոտ −235 °C-ով Տրիտոնը Արեգակնային համակարգի ամենացուրտ վայրերից է, որտեղ ջերմաստիճան է չափվել։';
+
+  @override
+  String get jumpInput => 'Ձեր թռիչքի բարձրությունը Երկրի վրա (սմ)';
+
+  @override
+  String jumpHigh(String height) {
+    return 'Թռիչք՝ $height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return 'Երկրի վրա $height թռիչքն այստեղ դառնում է';
+  }
+
+  @override
+  String get jumpNote =>
+      'Հրումը նույնն է, ինչ Երկրի վրա։ Արեգակի և գազային հսկաների վրա կանգնելու համար գետին չկա, ուստի սա պարզապես երևակայության խաղ է։';
+
+  @override
+  String valueCm(String value) {
+    return '$value սմ';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value մ';
+  }
 }

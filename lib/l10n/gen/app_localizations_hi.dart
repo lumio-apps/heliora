@@ -203,7 +203,8 @@ class AppLocalizationsHi extends AppLocalizations {
   String get quizTitle => 'ग्रह क्विज़';
 
   @override
-  String get quizIntro => 'ग्रहों के बारे में 10 सवाल। आप कितने सही कर पाएँगे?';
+  String get quizIntro =>
+      'ग्रहों और चंद्रमाओं के बारे में 10 सवाल। आप कितने सही कर पाएँगे?';
 
   @override
   String get quizStart => 'क्विज़ शुरू करें';
@@ -1023,4 +1024,276 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get launchTimeTbd => 'समय अभी तय नहीं';
+
+  @override
+  String get quizChoose => 'स्तर चुनें';
+
+  @override
+  String get levelEasy => 'आसान';
+
+  @override
+  String get levelMedium => 'मध्यम';
+
+  @override
+  String get levelHard => 'कठिन';
+
+  @override
+  String get levelEasyHint => 'ग्रहों की बुनियादी बातें';
+
+  @override
+  String get levelMediumHint => 'ग्रह और चंद्रमा';
+
+  @override
+  String get levelHardHint => 'मुश्किल तुलनाएँ और क्रम';
+
+  @override
+  String get qStar => 'इनमें से कौन सा तारा है, ग्रह नहीं?';
+
+  @override
+  String get qDwarf => 'इनमें से कौन सा बौना ग्रह है?';
+
+  @override
+  String get qMoonVisited => 'किस चंद्रमा पर इंसान चल चुके हैं?';
+
+  @override
+  String get qLargestMoon => 'इन चंद्रमाओं में सबसे बड़ा कौन सा है?';
+
+  @override
+  String get qSmallestMoon => 'इन चंद्रमाओं में सबसे छोटा कौन सा है?';
+
+  @override
+  String get qThickAirMoon => 'इन चंद्रमाओं में किसका वायुमंडल घना है?';
+
+  @override
+  String get qGeyserMoon =>
+      'कौन सा चंद्रमा पानी के फ़व्वारे अंतरिक्ष में छोड़ता है?';
+
+  @override
+  String get qVolcanicMoon =>
+      'किस चंद्रमा पर सबसे ज़्यादा सक्रिय ज्वालामुखी हैं?';
+
+  @override
+  String get qBackwardsMoon =>
+      'कौन सा चंद्रमा अपने ग्रह का चक्कर उल्टी दिशा में लगाता है?';
+
+  @override
+  String get qBiggestRocky => 'चार चट्टानी ग्रहों में सबसे बड़ा कौन सा है?';
+
+  @override
+  String get qColdestRocky => 'चार चट्टानी ग्रहों में सबसे ठंडा कौन सा है?';
+
+  @override
+  String get qHighestPressure =>
+      'किस ग्रह की सतह पर हवा का दबाव सबसे ज़्यादा है?';
+
+  @override
+  String get qSecondLargest => 'कौन सा ग्रह दूसरा सबसे बड़ा है?';
+
+  @override
+  String get qLongestYear => 'किस ग्रह का साल सबसे लंबा है?';
+
+  @override
+  String get qShortestYear => 'किस ग्रह का साल सबसे छोटा है?';
+
+  @override
+  String get qSmallestGiant => 'चार विशाल ग्रहों में सबसे छोटा कौन सा है?';
+
+  @override
+  String get qRockyLongestYear =>
+      'चार चट्टानी ग्रहों में किसका साल सबसे लंबा है?';
+
+  @override
+  String get qFastestMoon =>
+      'इन चंद्रमाओं में कौन अपने ग्रह का चक्कर सबसे तेज़ लगाता है?';
+
+  @override
+  String get qSlowestMoon =>
+      'इन चंद्रमाओं में कौन अपने ग्रह का चक्कर लगाने में सबसे ज़्यादा समय लेता है?';
+
+  @override
+  String get qStrongestMoonGravity =>
+      'इन चंद्रमाओं में किसका गुरुत्वाकर्षण सबसे ज़्यादा है?';
+
+  @override
+  String get qColdestMoon => 'इन चंद्रमाओं में सबसे ठंडा कौन सा है?';
+
+  @override
+  String get qSecondLargestMoon =>
+      'इन चंद्रमाओं में दूसरा सबसे बड़ा कौन सा है?';
+
+  @override
+  String get factTitle => 'क्या आप जानते हैं?';
+
+  @override
+  String get factTap => 'दूसरा तथ्य देखने के लिए टैप करें';
+
+  @override
+  String get factSun1 =>
+      'सौरमंडल के कुल द्रव्यमान का 99.8% हिस्सा सूर्य में है।';
+
+  @override
+  String get factSun2 =>
+      'सूर्य की रोशनी को पृथ्वी तक पहुँचने में करीब 8 मिनट 20 सेकंड लगते हैं।';
+
+  @override
+  String get factMercury1 =>
+      'बुध पर एक दिन, यानी एक सूर्योदय से अगले सूर्योदय तक, करीब 176 पृथ्वी-दिनों का होता है। यह उसके साल से दोगुना लंबा है।';
+
+  @override
+  String get factMercury2 =>
+      'बुध पर हवा लगभग नहीं है, इसलिए दिन में भी उसका आसमान काला रहता है और रातें बर्फ़ जैसी ठंडी होती हैं।';
+
+  @override
+  String get factVenus1 =>
+      'शुक्र उल्टी दिशा में घूमता है, इसलिए वहाँ सूरज पश्चिम में उगता है।';
+
+  @override
+  String get factVenus2 =>
+      'सूर्य से ज़्यादा दूर होने पर भी शुक्र बुध से ज़्यादा गर्म है, क्योंकि उसकी घनी हवा गर्मी को रोक लेती है।';
+
+  @override
+  String get factEarth1 =>
+      'पृथ्वी अकेली ऐसी जगह है जहाँ हम जीवन जानते हैं, और उसकी सतह का करीब 71% हिस्सा पानी से ढका है।';
+
+  @override
+  String get factEarth2 =>
+      'पृथ्वी पूरी तरह गोल नहीं है। घूमने की वजह से वह भूमध्य रेखा पर थोड़ी उभरी हुई है।';
+
+  @override
+  String get factMars1 =>
+      'मंगल का ओलंपस मॉन्स सौरमंडल का सबसे ऊँचा ज्वालामुखी है, माउंट एवरेस्ट से करीब ढाई गुना ऊँचा।';
+
+  @override
+  String get factMars2 => 'मंगल पर सूर्यास्त नीले दिखते हैं।';
+
+  @override
+  String get factJupiter1 =>
+      'बृहस्पति का द्रव्यमान बाकी सभी ग्रहों के कुल द्रव्यमान से दोगुने से भी ज़्यादा है।';
+
+  @override
+  String get factJupiter2 =>
+      'ग्रेट रेड स्पॉट पृथ्वी से बड़ा एक तूफ़ान है, जिसे लोग 150 साल से भी ज़्यादा समय से देख रहे हैं।';
+
+  @override
+  String get factSaturn1 =>
+      'शनि अपने आकार के हिसाब से इतना हल्का है कि पानी में तैर जाएगा, अगर इतना बड़ा टब मिल जाए।';
+
+  @override
+  String get factSaturn2 =>
+      'शनि के छल्ले बहुत चौड़े पर बहुत पतले हैं: कई जगह सिर्फ़ करीब दस मीटर मोटे।';
+
+  @override
+  String get factUranus1 =>
+      'अरुण अपनी बगल के बल लुढ़कते हुए सूर्य का चक्कर लगाता है, उसकी धुरी करीब 98 डिग्री झुकी है।';
+
+  @override
+  String get factUranus2 =>
+      'अरुण दूरबीन से खोजा गया पहला ग्रह था। विलियम हर्शल ने उसे 1781 में देखा।';
+
+  @override
+  String get factNeptune1 =>
+      'वरुण पर किसी भी ग्रह से तेज़ हवाएँ चलती हैं, 2,000 किमी/घंटा से भी ज़्यादा।';
+
+  @override
+  String get factNeptune2 =>
+      'वरुण को किसी के देखने से पहले गणित से खोजा गया: 1846 में खगोलविदों ने हिसाब लगाया कि वह कहाँ होना चाहिए।';
+
+  @override
+  String get factMoon1 =>
+      'चंद्रमा हर साल पृथ्वी से करीब 3.8 सेंटीमीटर और दूर चला जाता है।';
+
+  @override
+  String get factMoon2 =>
+      'हमें चंद्रमा का हमेशा एक ही हिस्सा दिखता है, क्योंकि वह पृथ्वी के हर चक्कर में ठीक एक बार घूमता है।';
+
+  @override
+  String get factPluto1 =>
+      'प्लूटो पर एक साल करीब 248 पृथ्वी-वर्षों का होता है।';
+
+  @override
+  String get factPluto2 =>
+      'प्लूटो पर जमी हुई नाइट्रोजन का दिल के आकार का एक विशाल मैदान है।';
+
+  @override
+  String get factIo1 =>
+      'आयो हमारी जानकारी की सबसे ज़्यादा ज्वालामुखी वाली दुनिया है, जहाँ सैकड़ों सक्रिय ज्वालामुखी हैं।';
+
+  @override
+  String get factIo2 =>
+      'बृहस्पति का गुरुत्वाकर्षण आयो को दबाता और खींचता है, और इससे पैदा गर्मी उसके ज्वालामुखियों को चलाती है।';
+
+  @override
+  String get factEuropa1 =>
+      'अपनी बर्फ़ीली परत के नीचे यूरोपा में शायद पृथ्वी के सभी महासागरों से करीब दोगुना पानी है।';
+
+  @override
+  String get factEuropa2 =>
+      'यूरोपा पृथ्वी से परे जीवन खोजने की सबसे अच्छी जगहों में से एक है। यूरोपा क्लिपर यान वहाँ जा रहा है।';
+
+  @override
+  String get factGanymede1 =>
+      'गैनिमीड सौरमंडल का सबसे बड़ा चंद्रमा है। वह बुध से भी बड़ा है।';
+
+  @override
+  String get factGanymede2 =>
+      'गैनिमीड अकेला चंद्रमा है जिसका अपना चुंबकीय क्षेत्र पाया गया है।';
+
+  @override
+  String get factCallisto1 =>
+      'कैलिस्टो सौरमंडल की सबसे ज़्यादा गड्ढों वाली जगहों में से एक है, और उसकी सतह बहुत पुरानी है।';
+
+  @override
+  String get factCallisto2 =>
+      'कैलिस्टो बृहस्पति से इतनी दूर है कि उसे उसका कठोर विकिरण कम मिलता है, इसलिए वैज्ञानिकों ने भविष्य के अड्डे के लिए उसका सुझाव दिया है।';
+
+  @override
+  String get factTitan1 =>
+      'टाइटन अकेला चंद्रमा है जिसका वायुमंडल घना है। उसकी सतह पर हवा का दबाव पृथ्वी से ज़्यादा है।';
+
+  @override
+  String get factTitan2 =>
+      'टाइटन पर नदियाँ और झीलें हैं, पर उनमें पानी नहीं, तरल मीथेन और ईथेन है।';
+
+  @override
+  String get factEnceladus1 =>
+      'एन्सेलेडस अपने दक्षिणी ध्रुव के पास की दरारों से बर्फ़ और जलवाष्प की धाराएँ अंतरिक्ष में छोड़ता है।';
+
+  @override
+  String get factEnceladus2 =>
+      'एन्सेलेडस की ये धाराएँ शनि के E छल्ले को भरती हैं।';
+
+  @override
+  String get factTriton1 =>
+      'ट्राइटन वरुण का चक्कर उल्टी दिशा में लगाता है, इसलिए शायद वह एक बौना ग्रह था जिसे वरुण ने पकड़ लिया।';
+
+  @override
+  String get factTriton2 =>
+      'करीब −235 °C पर ट्राइटन सौरमंडल की उन सबसे ठंडी जगहों में है जहाँ कभी तापमान नापा गया है।';
+
+  @override
+  String get jumpInput => 'पृथ्वी पर आपकी कूद की ऊँचाई (सेमी)';
+
+  @override
+  String jumpHigh(String height) {
+    return 'कूद: $height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return 'पृथ्वी पर $height की कूद यहाँ बन जाती है';
+  }
+
+  @override
+  String get jumpNote =>
+      'धक्का वही रहता है जो पृथ्वी पर होता है। सूर्य और गैस वाले विशाल ग्रहों पर खड़े होने की ज़मीन नहीं है, इसलिए यह सिर्फ़ कल्पना का खेल है।';
+
+  @override
+  String valueCm(String value) {
+    return '$value सेमी';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value मी';
+  }
 }

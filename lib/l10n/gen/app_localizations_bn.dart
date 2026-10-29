@@ -203,7 +203,8 @@ class AppLocalizationsBn extends AppLocalizations {
   String get quizTitle => 'গ্রহ কুইজ';
 
   @override
-  String get quizIntro => 'গ্রহ নিয়ে ১০টি প্রশ্ন। কয়টি ঠিক করতে পারবেন?';
+  String get quizIntro =>
+      'গ্রহ ও উপগ্রহ নিয়ে ১০টি প্রশ্ন। কয়টি ঠিক করতে পারবেন?';
 
   @override
   String get quizStart => 'কুইজ শুরু করুন';
@@ -1022,4 +1023,271 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get launchTimeTbd => 'সময় এখনও ঠিক হয়নি';
+
+  @override
+  String get quizChoose => 'একটি স্তর বেছে নিন';
+
+  @override
+  String get levelEasy => 'সহজ';
+
+  @override
+  String get levelMedium => 'মাঝারি';
+
+  @override
+  String get levelHard => 'কঠিন';
+
+  @override
+  String get levelEasyHint => 'গ্রহ সম্পর্কে মৌলিক কথা';
+
+  @override
+  String get levelMediumHint => 'গ্রহ ও উপগ্রহ';
+
+  @override
+  String get levelHardHint => 'কঠিন তুলনা ও ক্রম';
+
+  @override
+  String get qStar => 'এগুলোর মধ্যে কোনটি তারা, গ্রহ নয়?';
+
+  @override
+  String get qDwarf => 'এগুলোর মধ্যে কোনটি বামন গ্রহ?';
+
+  @override
+  String get qMoonVisited => 'কোন উপগ্রহে মানুষ হেঁটেছে?';
+
+  @override
+  String get qLargestMoon => 'এই উপগ্রহগুলোর মধ্যে সবচেয়ে বড় কোনটি?';
+
+  @override
+  String get qSmallestMoon => 'এই উপগ্রহগুলোর মধ্যে সবচেয়ে ছোট কোনটি?';
+
+  @override
+  String get qThickAirMoon => 'এই উপগ্রহগুলোর মধ্যে কোনটির বায়ুমণ্ডল ঘন?';
+
+  @override
+  String get qGeyserMoon => 'কোন উপগ্রহ মহাকাশে জলের ফোয়ারা ছোড়ে?';
+
+  @override
+  String get qVolcanicMoon =>
+      'কোন উপগ্রহে সবচেয়ে বেশি সক্রিয় আগ্নেয়গিরি আছে?';
+
+  @override
+  String get qBackwardsMoon => 'কোন উপগ্রহ তার গ্রহকে উল্টো দিকে ঘোরে?';
+
+  @override
+  String get qBiggestRocky => 'চারটি পাথুরে গ্রহের মধ্যে সবচেয়ে বড় কোনটি?';
+
+  @override
+  String get qColdestRocky => 'চারটি পাথুরে গ্রহের মধ্যে সবচেয়ে ঠান্ডা কোনটি?';
+
+  @override
+  String get qHighestPressure => 'কোন গ্রহের পৃষ্ঠে বাতাসের চাপ সবচেয়ে বেশি?';
+
+  @override
+  String get qSecondLargest => 'কোন গ্রহ দ্বিতীয় সবচেয়ে বড়?';
+
+  @override
+  String get qLongestYear => 'কোন গ্রহের বছর সবচেয়ে লম্বা?';
+
+  @override
+  String get qShortestYear => 'কোন গ্রহের বছর সবচেয়ে ছোট?';
+
+  @override
+  String get qSmallestGiant => 'চারটি বিশাল গ্রহের মধ্যে সবচেয়ে ছোট কোনটি?';
+
+  @override
+  String get qRockyLongestYear =>
+      'চারটি পাথুরে গ্রহের মধ্যে কোনটির বছর সবচেয়ে লম্বা?';
+
+  @override
+  String get qFastestMoon =>
+      'এই উপগ্রহগুলোর মধ্যে কোনটি তার গ্রহকে সবচেয়ে দ্রুত ঘোরে?';
+
+  @override
+  String get qSlowestMoon =>
+      'এই উপগ্রহগুলোর মধ্যে কোনটি তার গ্রহকে ঘুরতে সবচেয়ে বেশি সময় নেয়?';
+
+  @override
+  String get qStrongestMoonGravity =>
+      'এই উপগ্রহগুলোর মধ্যে কোনটির মহাকর্ষ সবচেয়ে বেশি?';
+
+  @override
+  String get qColdestMoon => 'এই উপগ্রহগুলোর মধ্যে সবচেয়ে ঠান্ডা কোনটি?';
+
+  @override
+  String get qSecondLargestMoon =>
+      'এই উপগ্রহগুলোর মধ্যে দ্বিতীয় সবচেয়ে বড় কোনটি?';
+
+  @override
+  String get factTitle => 'আপনি কি জানেন?';
+
+  @override
+  String get factTap => 'আরেকটি তথ্য দেখতে ট্যাপ করুন';
+
+  @override
+  String get factSun1 => 'সৌরজগতের মোট ভরের ৯৯.৮% সূর্যের মধ্যে আছে।';
+
+  @override
+  String get factSun2 =>
+      'সূর্যের আলো পৃথিবীতে পৌঁছাতে প্রায় ৮ মিনিট ২০ সেকেন্ড লাগে।';
+
+  @override
+  String get factMercury1 =>
+      'বুধে এক দিন, মানে এক সূর্যোদয় থেকে পরের সূর্যোদয় পর্যন্ত, প্রায় ১৭৬ পৃথিবী-দিনের সমান। এটা তার বছরের দ্বিগুণ লম্বা।';
+
+  @override
+  String get factMercury2 =>
+      'বুধে প্রায় কোনো বাতাস নেই, তাই দিনেও তার আকাশ কালো থাকে আর রাতগুলো হিমশীতল।';
+
+  @override
+  String get factVenus1 =>
+      'শুক্র উল্টো দিকে ঘোরে, তাই সেখানে সূর্য পশ্চিমে ওঠে।';
+
+  @override
+  String get factVenus2 =>
+      'সূর্য থেকে বেশি দূরে হলেও শুক্র বুধের চেয়ে গরম, কারণ তার ঘন বাতাস তাপ আটকে রাখে।';
+
+  @override
+  String get factEarth1 =>
+      'পৃথিবীই একমাত্র জায়গা যেখানে প্রাণের কথা আমরা জানি, আর তার পৃষ্ঠের প্রায় ৭১% জলে ঢাকা।';
+
+  @override
+  String get factEarth2 =>
+      'পৃথিবী নিখুঁত গোলক নয়। ঘোরার কারণে বিষুবরেখার কাছে সে একটু ফুলে আছে।';
+
+  @override
+  String get factMars1 =>
+      'মঙ্গলের অলিম্পাস মনস সৌরজগতের সবচেয়ে উঁচু আগ্নেয়গিরি, মাউন্ট এভারেস্টের প্রায় আড়াই গুণ উঁচু।';
+
+  @override
+  String get factMars2 => 'মঙ্গলে সূর্যাস্ত নীল দেখায়।';
+
+  @override
+  String get factJupiter1 =>
+      'বৃহস্পতির ভর বাকি সব গ্রহের মোট ভরের দ্বিগুণেরও বেশি।';
+
+  @override
+  String get factJupiter2 =>
+      'গ্রেট রেড স্পট পৃথিবীর চেয়ে বড় একটি ঝড়, যা মানুষ ১৫০ বছরেরও বেশি সময় ধরে দেখছে।';
+
+  @override
+  String get factSaturn1 =>
+      'শনি তার আকারের তুলনায় এত হালকা যে জলে ভেসে থাকবে, যদি এত বড় বাথটাব পাওয়া যেত।';
+
+  @override
+  String get factSaturn2 =>
+      'শনির বলয় খুব চওড়া কিন্তু খুব পাতলা: কোথাও কোথাও মাত্র প্রায় দশ মিটার পুরু।';
+
+  @override
+  String get factUranus1 =>
+      'ইউরেনাস কাত হয়ে গড়িয়ে গড়িয়ে সূর্যকে প্রদক্ষিণ করে, তার অক্ষ প্রায় ৯৮ ডিগ্রি হেলানো।';
+
+  @override
+  String get factUranus2 =>
+      'ইউরেনাস দূরবীন দিয়ে আবিষ্কৃত প্রথম গ্রহ। উইলিয়াম হার্শেল ১৭৮১ সালে এটি দেখতে পান।';
+
+  @override
+  String get factNeptune1 =>
+      'নেপচুনে যেকোনো গ্রহের চেয়ে দ্রুত হাওয়া বয়, ঘণ্টায় ২,০০০ কিমির বেশি।';
+
+  @override
+  String get factNeptune2 =>
+      'কেউ দেখার আগেই নেপচুনকে অঙ্ক কষে পাওয়া গিয়েছিল: ১৮৪৬ সালে জ্যোতির্বিদরা হিসাব করে বের করেন সেটা কোথায় থাকার কথা।';
+
+  @override
+  String get factMoon1 =>
+      'চাঁদ প্রতি বছর পৃথিবী থেকে প্রায় ৩.৮ সেন্টিমিটার আরও দূরে সরে যায়।';
+
+  @override
+  String get factMoon2 =>
+      'আমরা চাঁদের সবসময় একই পাশ দেখি, কারণ পৃথিবীকে প্রতিবার ঘোরার সময় সে ঠিক একবার নিজের চারপাশে ঘোরে।';
+
+  @override
+  String get factPluto1 => 'প্লুটোতে এক বছর প্রায় ২৪৮ পৃথিবী-বছরের সমান।';
+
+  @override
+  String get factPluto2 =>
+      'প্লুটোতে জমাট নাইট্রোজেনের একটি বিশাল হৃদয়ের আকারের সমভূমি আছে।';
+
+  @override
+  String get factIo1 =>
+      'আইও আমাদের জানা সবচেয়ে আগ্নেয় জগৎ, সেখানে শত শত সক্রিয় আগ্নেয়গিরি আছে।';
+
+  @override
+  String get factIo2 =>
+      'বৃহস্পতির মহাকর্ষ আইওকে চেপে ও টেনে ধরে, আর তা থেকে তৈরি তাপ তার আগ্নেয়গিরিগুলোকে চালায়।';
+
+  @override
+  String get factEuropa1 =>
+      'বরফের খোলের নিচে ইউরোপায় সম্ভবত পৃথিবীর সব মহাসাগরের প্রায় দ্বিগুণ জল আছে।';
+
+  @override
+  String get factEuropa2 =>
+      'পৃথিবীর বাইরে প্রাণ খোঁজার সেরা জায়গাগুলোর একটি ইউরোপা। ইউরোপা ক্লিপার মহাকাশযান সেখানে যাচ্ছে।';
+
+  @override
+  String get factGanymede1 =>
+      'গ্যানিমিড সৌরজগতের সবচেয়ে বড় উপগ্রহ। এটি বুধের চেয়েও বড়।';
+
+  @override
+  String get factGanymede2 =>
+      'গ্যানিমিডই একমাত্র উপগ্রহ যার নিজস্ব চৌম্বক ক্ষেত্র আছে বলে জানা গেছে।';
+
+  @override
+  String get factCallisto1 =>
+      'ক্যালিস্টো সৌরজগতের সবচেয়ে বেশি গর্তওয়ালা জায়গাগুলোর একটি, আর তার পৃষ্ঠ খুব পুরনো।';
+
+  @override
+  String get factCallisto2 =>
+      'ক্যালিস্টো বৃহস্পতি থেকে এত দূরে যে তার কড়া বিকিরণ কম পায়, তাই বিজ্ঞানীরা ভবিষ্যতের ঘাঁটির জন্য এর কথা বলেছেন।';
+
+  @override
+  String get factTitan1 =>
+      'টাইটানই একমাত্র উপগ্রহ যার বায়ুমণ্ডল ঘন। তার পৃষ্ঠে বাতাসের চাপ পৃথিবীর চেয়ে বেশি।';
+
+  @override
+  String get factTitan2 =>
+      'টাইটানে নদী ও হ্রদ আছে, কিন্তু সেগুলোতে জল নয়, তরল মিথেন আর ইথেন আছে।';
+
+  @override
+  String get factEnceladus1 =>
+      'এনসেলাডাস তার দক্ষিণ মেরুর কাছের ফাটল দিয়ে বরফ আর জলীয় বাষ্পের ফোয়ারা মহাকাশে ছোড়ে।';
+
+  @override
+  String get factEnceladus2 =>
+      'এনসেলাডাসের এই ফোয়ারা শনির E বলয়কে ভরিয়ে রাখে।';
+
+  @override
+  String get factTriton1 =>
+      'ট্রাইটন নেপচুনকে উল্টো দিকে ঘোরে, তাই সম্ভবত সে একটি বামন গ্রহ ছিল যাকে নেপচুন ধরে ফেলেছে।';
+
+  @override
+  String get factTriton2 =>
+      'প্রায় −২৩৫ °C তাপমাত্রায় ট্রাইটন সৌরজগতের সবচেয়ে ঠান্ডা জায়গাগুলোর একটি, যেখানে তাপমাত্রা মাপা হয়েছে।';
+
+  @override
+  String get jumpInput => 'পৃথিবীতে আপনার লাফের উচ্চতা (সেমি)';
+
+  @override
+  String jumpHigh(String height) {
+    return 'লাফ: $height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return 'পৃথিবীতে $height লাফ এখানে হয়ে যায়';
+  }
+
+  @override
+  String get jumpNote =>
+      'ধাক্কা পৃথিবীর মতোই থাকে। সূর্য আর গ্যাসের বিশাল গ্রহগুলোতে দাঁড়ানোর মাটি নেই, তাই এটা শুধুই কল্পনার খেলা।';
+
+  @override
+  String valueCm(String value) {
+    return '$value সেমি';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value মি';
+  }
 }

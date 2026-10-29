@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+import '../core/facts.dart';
 import '../core/format.dart';
 import '../core/habitability.dart';
 import '../core/orbits.dart';
@@ -12,6 +13,7 @@ import '../l10n/names.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/fact_card.dart';
 import '../widgets/share_card.dart';
 
 /// Text helpers shared by the planet and compare screens.
@@ -118,6 +120,9 @@ class PlanetScreen extends StatefulWidget {
 }
 
 class _PlanetScreenState extends State<PlanetScreen> {
+  /// A typical standing jump, used for the jump comparison.
+  static const double _earthJumpCm = 40;
+
   /// The part of the page that becomes the shared image.
   final GlobalKey _cardKey = GlobalKey();
   bool _sharing = false;
@@ -301,6 +306,8 @@ class _PlanetScreenState extends State<PlanetScreen> {
             const SizedBox(height: 12),
             _TravelCard(planet: planet),
           ],
+          const SizedBox(height: 12),
+          FactCard.of(planet.id, key: ValueKey<String>('fact-${planet.id}')),
           const SizedBox(height: 16),
           SurfaceCard(
             child: Column(
@@ -349,20 +356,44 @@ class _PlanetScreenState extends State<PlanetScreen> {
           const SizedBox(height: 12),
           SurfaceCard(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-            child: Row(
+            child: Column(
               children: <Widget>[
-                Expanded(
-                  child: Text(l.weightFeelsLike(formatNumber(context, 70)),
-                      style: TextStyle(fontSize: 14, color: p.muted)),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Text(l.weightFeelsLike(formatNumber(context, 70)),
+                          style: TextStyle(fontSize: 14, color: p.muted)),
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      '${formatNumber(context, planet.weightFor(70), decimals: 1)} kg',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                        color: p.accentText,
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(width: 8),
-                Text(
-                  '${formatNumber(context, planet.weightFor(70), decimals: 1)} kg',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                    color: p.accentText,
-                  ),
+                const SizedBox(height: 10),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Text(
+                          l.jumpFeelsLike(jumpText(context, l, _earthJumpCm)),
+                          style: TextStyle(fontSize: 14, color: p.muted)),
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      jumpText(context, l,
+                          jumpHeightCm(_earthJumpCm, planet.relativeGravity)),
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                        color: p.accentText,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

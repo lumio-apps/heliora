@@ -204,7 +204,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get quizIntro =>
-      'గ్రహాల గురించి 10 ప్రశ్నలు. మీరు ఎన్ని సరిగ్గా చెప్పగలరు?';
+      'గ్రహాలు, చంద్రుల గురించి 10 ప్రశ్నలు. మీరు ఎన్ని సరిగ్గా చెప్పగలరు?';
 
   @override
   String get quizStart => 'క్విజ్ ప్రారంభించండి';
@@ -1025,4 +1025,271 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get launchTimeTbd => 'సమయం ఇంకా నిర్ణయం కాలేదు';
+
+  @override
+  String get quizChoose => 'స్థాయిని ఎంచుకోండి';
+
+  @override
+  String get levelEasy => 'సులభం';
+
+  @override
+  String get levelMedium => 'మధ్యస్థం';
+
+  @override
+  String get levelHard => 'కఠినం';
+
+  @override
+  String get levelEasyHint => 'గ్రహాల గురించి ప్రాథమిక విషయాలు';
+
+  @override
+  String get levelMediumHint => 'గ్రహాలు మరియు చంద్రులు';
+
+  @override
+  String get levelHardHint => 'కష్టమైన పోలికలు మరియు వరుస';
+
+  @override
+  String get qStar => 'వీటిలో ఏది నక్షత్రం, గ్రహం కాదు?';
+
+  @override
+  String get qDwarf => 'వీటిలో ఏది మరుగుజ్జు గ్రహం?';
+
+  @override
+  String get qMoonVisited => 'ఏ చంద్రుడిపై మనుషులు నడిచారు?';
+
+  @override
+  String get qLargestMoon => 'ఈ చంద్రులలో అతి పెద్దది ఏది?';
+
+  @override
+  String get qSmallestMoon => 'ఈ చంద్రులలో అతి చిన్నది ఏది?';
+
+  @override
+  String get qThickAirMoon => 'ఈ చంద్రులలో దేనికి దట్టమైన వాతావరణం ఉంది?';
+
+  @override
+  String get qGeyserMoon =>
+      'ఏ చంద్రుడు నీటి ఫౌంటెన్లను అంతరిక్షంలోకి చిమ్ముతాడు?';
+
+  @override
+  String get qVolcanicMoon =>
+      'ఏ చంద్రుడిపై అత్యధిక చురుకైన అగ్నిపర్వతాలు ఉన్నాయి?';
+
+  @override
+  String get qBackwardsMoon => 'ఏ చంద్రుడు తన గ్రహం చుట్టూ వెనుకకు తిరుగుతాడు?';
+
+  @override
+  String get qBiggestRocky => 'నాలుగు రాతి గ్రహాలలో అతి పెద్దది ఏది?';
+
+  @override
+  String get qColdestRocky => 'నాలుగు రాతి గ్రహాలలో అతి చల్లనిది ఏది?';
+
+  @override
+  String get qHighestPressure => 'ఏ గ్రహం ఉపరితలంపై గాలి పీడనం అత్యధికం?';
+
+  @override
+  String get qSecondLargest => 'ఏ గ్రహం రెండో అతి పెద్దది?';
+
+  @override
+  String get qLongestYear => 'ఏ గ్రహానికి అతి పొడవైన సంవత్సరం ఉంది?';
+
+  @override
+  String get qShortestYear => 'ఏ గ్రహానికి అతి చిన్న సంవత్సరం ఉంది?';
+
+  @override
+  String get qSmallestGiant => 'నాలుగు భారీ గ్రహాలలో అతి చిన్నది ఏది?';
+
+  @override
+  String get qRockyLongestYear =>
+      'నాలుగు రాతి గ్రహాలలో దేనికి అతి పొడవైన సంవత్సరం ఉంది?';
+
+  @override
+  String get qFastestMoon =>
+      'ఈ చంద్రులలో ఏది తన గ్రహం చుట్టూ అతి వేగంగా తిరుగుతుంది?';
+
+  @override
+  String get qSlowestMoon =>
+      'ఈ చంద్రులలో ఏది తన గ్రహం చుట్టూ తిరగడానికి అతి ఎక్కువ సమయం తీసుకుంటుంది?';
+
+  @override
+  String get qStrongestMoonGravity =>
+      'ఈ చంద్రులలో దేని గురుత్వాకర్షణ అత్యధికం?';
+
+  @override
+  String get qColdestMoon => 'ఈ చంద్రులలో అతి చల్లనిది ఏది?';
+
+  @override
+  String get qSecondLargestMoon => 'ఈ చంద్రులలో రెండో అతి పెద్దది ఏది?';
+
+  @override
+  String get factTitle => 'మీకు తెలుసా?';
+
+  @override
+  String get factTap => 'మరో విషయం చూడటానికి తాకండి';
+
+  @override
+  String get factSun1 =>
+      'సౌరకుటుంబం మొత్తం ద్రవ్యరాశిలో 99.8% సూర్యుడిలోనే ఉంది.';
+
+  @override
+  String get factSun2 =>
+      'సూర్యకాంతి భూమిని చేరడానికి సుమారు 8 నిమిషాల 20 సెకన్లు పడుతుంది.';
+
+  @override
+  String get factMercury1 =>
+      'బుధుడిపై ఒక రోజు, అంటే ఒక సూర్యోదయం నుండి మరో సూర్యోదయం వరకు, సుమారు 176 భూమి రోజులు. అది దాని సంవత్సరం కంటే రెట్టింపు పొడవు.';
+
+  @override
+  String get factMercury2 =>
+      'బుధుడిపై గాలి దాదాపు లేదు, అందుకే పగటిపూట కూడా దాని ఆకాశం నల్లగా ఉంటుంది, రాత్రులు గడ్డకట్టేంత చల్లగా ఉంటాయి.';
+
+  @override
+  String get factVenus1 =>
+      'శుక్రుడు వెనుకకు తిరుగుతాడు, అందుకే అక్కడ సూర్యుడు పడమర ఉదయిస్తాడు.';
+
+  @override
+  String get factVenus2 =>
+      'సూర్యుడికి ఎక్కువ దూరంగా ఉన్నా శుక్రుడు బుధుడి కంటే వేడిగా ఉంటాడు, ఎందుకంటే దాని దట్టమైన గాలి వేడిని బంధిస్తుంది.';
+
+  @override
+  String get factEarth1 =>
+      'జీవం ఉందని మనకు తెలిసిన ఏకైక చోటు భూమి, దాని ఉపరితలంలో సుమారు 71% నీటితో కప్పబడి ఉంది.';
+
+  @override
+  String get factEarth2 =>
+      'భూమి పరిపూర్ణమైన బంతి కాదు. తిరగడం వల్ల భూమధ్యరేఖ వద్ద కొంచెం ఉబ్బి ఉంటుంది.';
+
+  @override
+  String get factMars1 =>
+      'అంగారకుడిపై ఒలింపస్ మాన్స్ సౌరకుటుంబంలోనే అతి ఎత్తైన అగ్నిపర్వతం, ఎవరెస్ట్ శిఖరం కంటే సుమారు రెండున్నర రెట్లు ఎత్తు.';
+
+  @override
+  String get factMars2 => 'అంగారకుడిపై సూర్యాస్తమయాలు నీలంగా కనిపిస్తాయి.';
+
+  @override
+  String get factJupiter1 =>
+      'బృహస్పతి ద్రవ్యరాశి మిగతా అన్ని గ్రహాల మొత్తం ద్రవ్యరాశి కంటే రెట్టింపుకు మించి ఉంది.';
+
+  @override
+  String get factJupiter2 =>
+      'గ్రేట్ రెడ్ స్పాట్ భూమి కంటే పెద్ద తుఫాను, దీనిని ప్రజలు 150 ఏళ్లకు పైగా గమనిస్తున్నారు.';
+
+  @override
+  String get factSaturn1 =>
+      'శని తన పరిమాణానికి చాలా తేలికైనది; తగినంత పెద్ద స్నానపు తొట్టి దొరికితే అది నీటిపై తేలుతుంది.';
+
+  @override
+  String get factSaturn2 =>
+      'శని వలయాలు చాలా వెడల్పైనవి కానీ చాలా పలుచనివి: కొన్ని చోట్ల సుమారు పది మీటర్ల మందం మాత్రమే.';
+
+  @override
+  String get factUranus1 =>
+      'యురేనస్ పక్కకు దొర్లుతూ సూర్యుడి చుట్టూ తిరుగుతుంది, దాని అక్షం సుమారు 98 డిగ్రీలు వంగి ఉంది.';
+
+  @override
+  String get factUranus2 =>
+      'దూరదర్శినితో కనుగొన్న మొదటి గ్రహం యురేనస్. విలియం హర్షెల్ దానిని 1781లో గుర్తించారు.';
+
+  @override
+  String get factNeptune1 =>
+      'ఏ గ్రహంలోనైనా కంటే నెప్ట్యూన్‌పై గాలులు వేగవంతమైనవి, గంటకు 2,000 కి.మీ.కు పైగా.';
+
+  @override
+  String get factNeptune2 =>
+      'ఎవరైనా చూడకముందే నెప్ట్యూన్ గణితంతో కనుగొనబడింది: 1846లో ఖగోళశాస్త్రజ్ఞులు అది ఎక్కడ ఉండాలో లెక్కించారు.';
+
+  @override
+  String get factMoon1 =>
+      'చంద్రుడు ప్రతి సంవత్సరం భూమి నుండి సుమారు 3.8 సెంటీమీటర్లు మరింత దూరం జరుగుతున్నాడు.';
+
+  @override
+  String get factMoon2 =>
+      'మనకు చంద్రుడి ఒకే వైపు ఎప్పుడూ కనిపిస్తుంది, ఎందుకంటే భూమిని ఒకసారి చుట్టి రావడంలో అతను సరిగ్గా ఒకసారి తనచుట్టూ తిరుగుతాడు.';
+
+  @override
+  String get factPluto1 => 'ప్లూటోపై ఒక సంవత్సరం సుమారు 248 భూమి సంవత్సరాలు.';
+
+  @override
+  String get factPluto2 =>
+      'ప్లూటోపై గడ్డకట్టిన నైట్రోజన్‌తో ఏర్పడిన గుండె ఆకారపు పెద్ద మైదానం ఉంది.';
+
+  @override
+  String get factIo1 =>
+      'మనకు తెలిసిన అత్యధిక అగ్నిపర్వతాలున్న లోకం అయో, అక్కడ వందలాది చురుకైన అగ్నిపర్వతాలు ఉన్నాయి.';
+
+  @override
+  String get factIo2 =>
+      'బృహస్పతి గురుత్వాకర్షణ అయోను నొక్కి లాగుతుంది, దాని వల్ల పుట్టే వేడి దాని అగ్నిపర్వతాలకు శక్తినిస్తుంది.';
+
+  @override
+  String get factEuropa1 =>
+      'మంచు పొర కింద యూరోపాలో బహుశా భూమిలోని అన్ని మహాసముద్రాల కంటే సుమారు రెట్టింపు నీరు ఉంది.';
+
+  @override
+  String get factEuropa2 =>
+      'భూమికి ఆవల జీవాన్ని వెతకడానికి అత్యుత్తమ చోట్లలో యూరోపా ఒకటి. యూరోపా క్లిప్పర్ వ్యోమనౌక అక్కడికి వెళ్తోంది.';
+
+  @override
+  String get factGanymede1 =>
+      'గానిమీడ్ సౌరకుటుంబంలో అతి పెద్ద చంద్రుడు. అది బుధుడి కంటే కూడా పెద్దది.';
+
+  @override
+  String get factGanymede2 =>
+      'సొంత అయస్కాంత క్షేత్రం ఉన్నట్లు తెలిసిన ఏకైక చంద్రుడు గానిమీడ్.';
+
+  @override
+  String get factCallisto1 =>
+      'కాలిస్టో సౌరకుటుంబంలో అత్యధిక బిలాలున్న చోట్లలో ఒకటి, దాని ఉపరితలం చాలా పురాతనమైనది.';
+
+  @override
+  String get factCallisto2 =>
+      'కాలిస్టో బృహస్పతికి తగినంత దూరంలో ఉండటం వల్ల దాని తీవ్ర వికిరణం తక్కువగా తగులుతుంది, అందుకే శాస్త్రవేత్తలు భవిష్యత్ స్థావరానికి దీన్ని సూచించారు.';
+
+  @override
+  String get factTitan1 =>
+      'దట్టమైన వాతావరణం ఉన్న ఏకైక చంద్రుడు టైటాన్. దాని ఉపరితలంపై గాలి పీడనం భూమి కంటే ఎక్కువ.';
+
+  @override
+  String get factTitan2 =>
+      'టైటాన్‌పై నదులు, సరస్సులు ఉన్నాయి, కానీ వాటిలో నీరు కాదు, ద్రవ మీథేన్, ఈథేన్ ఉన్నాయి.';
+
+  @override
+  String get factEnceladus1 =>
+      'ఎన్సెలాడస్ తన దక్షిణ ధ్రువం దగ్గరి పగుళ్ల నుండి మంచు, నీటి ఆవిరి ధారలను అంతరిక్షంలోకి చిమ్ముతుంది.';
+
+  @override
+  String get factEnceladus2 => 'ఎన్సెలాడస్ ఈ ధారలు శని E వలయాన్ని నింపుతాయి.';
+
+  @override
+  String get factTriton1 =>
+      'ట్రైటాన్ నెప్ట్యూన్ చుట్టూ వెనుకకు తిరుగుతుంది, కాబట్టి అది నెప్ట్యూన్ పట్టుకున్న మరుగుజ్జు గ్రహం అయి ఉండవచ్చు.';
+
+  @override
+  String get factTriton2 =>
+      'సుమారు −235 °C వద్ద, సౌరకుటుంబంలో ఉష్ణోగ్రత కొలిచిన అత్యంత చల్లని చోట్లలో ట్రైటాన్ ఒకటి.';
+
+  @override
+  String get jumpInput => 'భూమిపై మీ దూకు ఎత్తు (సెం.మీ)';
+
+  @override
+  String jumpHigh(String height) {
+    return 'దూకు: $height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return 'భూమిపై $height దూకు ఇక్కడ అవుతుంది';
+  }
+
+  @override
+  String get jumpNote =>
+      'నెట్టే బలం భూమిపై ఉన్నంతే. సూర్యుడిపై, వాయు భారీ గ్రహాలపై నిలబడటానికి నేలే లేదు, కాబట్టి ఇది కేవలం ఊహల ఆట.';
+
+  @override
+  String valueCm(String value) {
+    return '$value సెం.మీ';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value మీ';
+  }
 }

@@ -205,7 +205,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get quizIntro =>
-      'سیاروں کے بارے میں 10 سوال۔ آپ کتنے درست کر سکتے ہیں؟';
+      'سیاروں اور چاندوں کے بارے میں 10 سوال۔ آپ کتنے درست کر سکتے ہیں؟';
 
   @override
   String get quizStart => 'کوئز شروع کریں';
@@ -1026,4 +1026,272 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get launchTimeTbd => 'وقت ابھی طے نہیں';
+
+  @override
+  String get quizChoose => 'سطح چنیں';
+
+  @override
+  String get levelEasy => 'آسان';
+
+  @override
+  String get levelMedium => 'درمیانہ';
+
+  @override
+  String get levelHard => 'مشکل';
+
+  @override
+  String get levelEasyHint => 'سیاروں کے بارے میں بنیادی باتیں';
+
+  @override
+  String get levelMediumHint => 'سیارے اور چاند';
+
+  @override
+  String get levelHardHint => 'مشکل موازنے اور ترتیب';
+
+  @override
+  String get qStar => 'ان میں سے کون سا ستارہ ہے، سیارہ نہیں؟';
+
+  @override
+  String get qDwarf => 'ان میں سے کون سا بونا سیارہ ہے؟';
+
+  @override
+  String get qMoonVisited => 'کس چاند پر انسان چل چکے ہیں؟';
+
+  @override
+  String get qLargestMoon => 'ان چاندوں میں سب سے بڑا کون سا ہے؟';
+
+  @override
+  String get qSmallestMoon => 'ان چاندوں میں سب سے چھوٹا کون سا ہے؟';
+
+  @override
+  String get qThickAirMoon => 'ان چاندوں میں سے کس کی فضا گھنی ہے؟';
+
+  @override
+  String get qGeyserMoon => 'کون سا چاند پانی کے فوارے خلا میں پھینکتا ہے؟';
+
+  @override
+  String get qVolcanicMoon => 'کس چاند پر سب سے زیادہ فعال آتش فشاں ہیں؟';
+
+  @override
+  String get qBackwardsMoon =>
+      'کون سا چاند اپنے سیارے کے گرد الٹی سمت میں گھومتا ہے؟';
+
+  @override
+  String get qBiggestRocky => 'چار چٹانی سیاروں میں سب سے بڑا کون سا ہے؟';
+
+  @override
+  String get qColdestRocky => 'چار چٹانی سیاروں میں سب سے ٹھنڈا کون سا ہے؟';
+
+  @override
+  String get qHighestPressure =>
+      'کس سیارے کی سطح پر ہوا کا دباؤ سب سے زیادہ ہے؟';
+
+  @override
+  String get qSecondLargest => 'کون سا سیارہ دوسرا سب سے بڑا ہے؟';
+
+  @override
+  String get qLongestYear => 'کس سیارے کا سال سب سے لمبا ہے؟';
+
+  @override
+  String get qShortestYear => 'کس سیارے کا سال سب سے چھوٹا ہے؟';
+
+  @override
+  String get qSmallestGiant => 'چار دیو قامت سیاروں میں سب سے چھوٹا کون سا ہے؟';
+
+  @override
+  String get qRockyLongestYear =>
+      'چار چٹانی سیاروں میں کس کا سال سب سے لمبا ہے؟';
+
+  @override
+  String get qFastestMoon =>
+      'ان چاندوں میں سے کون اپنے سیارے کے گرد سب سے تیز گھومتا ہے؟';
+
+  @override
+  String get qSlowestMoon =>
+      'ان چاندوں میں سے کسے اپنے سیارے کا چکر لگانے میں سب سے زیادہ وقت لگتا ہے؟';
+
+  @override
+  String get qStrongestMoonGravity =>
+      'ان چاندوں میں سے کس کی کششِ ثقل سب سے زیادہ ہے؟';
+
+  @override
+  String get qColdestMoon => 'ان چاندوں میں سب سے ٹھنڈا کون سا ہے؟';
+
+  @override
+  String get qSecondLargestMoon => 'ان چاندوں میں دوسرا سب سے بڑا کون سا ہے؟';
+
+  @override
+  String get factTitle => 'کیا آپ جانتے ہیں؟';
+
+  @override
+  String get factTap => 'ایک اور بات دیکھنے کے لیے ٹیپ کریں';
+
+  @override
+  String get factSun1 => 'نظامِ شمسی کی کل کمیت کا 99.8% حصہ سورج میں ہے۔';
+
+  @override
+  String get factSun2 =>
+      'سورج کی روشنی کو زمین تک پہنچنے میں تقریباً 8 منٹ 20 سیکنڈ لگتے ہیں۔';
+
+  @override
+  String get factMercury1 =>
+      'عطارد پر ایک دن، یعنی ایک طلوعِ آفتاب سے اگلے طلوع تک، تقریباً 176 زمینی دنوں کا ہوتا ہے۔ یہ اس کے سال سے دگنا لمبا ہے۔';
+
+  @override
+  String get factMercury2 =>
+      'عطارد پر ہوا تقریباً نہیں ہے، اس لیے دن میں بھی اس کا آسمان کالا رہتا ہے اور راتیں جما دینے والی ٹھنڈی ہوتی ہیں۔';
+
+  @override
+  String get factVenus1 =>
+      'زہرہ الٹی سمت میں گھومتا ہے، اس لیے وہاں سورج مغرب سے نکلتا ہے۔';
+
+  @override
+  String get factVenus2 =>
+      'سورج سے زیادہ دور ہونے کے باوجود زہرہ عطارد سے زیادہ گرم ہے، کیونکہ اس کی گھنی ہوا گرمی کو روک لیتی ہے۔';
+
+  @override
+  String get factEarth1 =>
+      'زمین واحد جگہ ہے جہاں زندگی کا ہمیں علم ہے، اور اس کی سطح کا تقریباً 71% حصہ پانی سے ڈھکا ہوا ہے۔';
+
+  @override
+  String get factEarth2 =>
+      'زمین بالکل گول گیند نہیں ہے۔ گھومنے کی وجہ سے وہ خطِ استوا کے پاس تھوڑی سی ابھری ہوئی ہے۔';
+
+  @override
+  String get factMars1 =>
+      'مریخ کا اولمپس مونز نظامِ شمسی کا سب سے اونچا آتش فشاں ہے، ماؤنٹ ایورسٹ سے تقریباً اڑھائی گنا اونچا۔';
+
+  @override
+  String get factMars2 => 'مریخ پر غروبِ آفتاب نیلے دکھائی دیتے ہیں۔';
+
+  @override
+  String get factJupiter1 =>
+      'مشتری کی کمیت باقی تمام سیاروں کی کل کمیت سے دگنی سے بھی زیادہ ہے۔';
+
+  @override
+  String get factJupiter2 =>
+      'گریٹ ریڈ اسپاٹ زمین سے بڑا ایک طوفان ہے، جسے لوگ 150 سال سے زیادہ عرصے سے دیکھ رہے ہیں۔';
+
+  @override
+  String get factSaturn1 =>
+      'زحل اپنے حجم کے لحاظ سے اتنا ہلکا ہے کہ پانی پر تیرنے لگے، اگر اتنا بڑا ٹب مل جائے۔';
+
+  @override
+  String get factSaturn2 =>
+      'زحل کے چھلے بہت چوڑے مگر بہت پتلے ہیں: کئی جگہ صرف تقریباً دس میٹر موٹے۔';
+
+  @override
+  String get factUranus1 =>
+      'یورینس پہلو کے بل لڑھکتے ہوئے سورج کے گرد گھومتا ہے، اس کا محور تقریباً 98 درجے جھکا ہوا ہے۔';
+
+  @override
+  String get factUranus2 =>
+      'یورینس دوربین سے دریافت ہونے والا پہلا سیارہ تھا۔ ولیم ہرشل نے اسے 1781 میں دیکھا۔';
+
+  @override
+  String get factNeptune1 =>
+      'نیپچون پر کسی بھی سیارے سے تیز ہوائیں چلتی ہیں، 2,000 کلومیٹر فی گھنٹہ سے بھی زیادہ۔';
+
+  @override
+  String get factNeptune2 =>
+      'نیپچون کو کسی کے دیکھنے سے پہلے ریاضی سے دریافت کیا گیا: 1846 میں ماہرینِ فلکیات نے حساب لگایا کہ وہ کہاں ہونا چاہیے۔';
+
+  @override
+  String get factMoon1 =>
+      'چاند ہر سال زمین سے تقریباً 3.8 سینٹی میٹر مزید دور ہو جاتا ہے۔';
+
+  @override
+  String get factMoon2 =>
+      'ہمیں چاند کا ہمیشہ ایک ہی رخ نظر آتا ہے، کیونکہ زمین کے ہر چکر میں وہ ٹھیک ایک بار اپنے گرد گھومتا ہے۔';
+
+  @override
+  String get factPluto1 =>
+      'پلوٹو پر ایک سال تقریباً 248 زمینی سالوں کے برابر ہوتا ہے۔';
+
+  @override
+  String get factPluto2 =>
+      'پلوٹو پر جمی ہوئی نائٹروجن کا دل کی شکل کا ایک وسیع میدان ہے۔';
+
+  @override
+  String get factIo1 =>
+      'آئیو ہماری معلوم دنیاؤں میں سب سے زیادہ آتش فشانی دنیا ہے، جہاں سینکڑوں فعال آتش فشاں ہیں۔';
+
+  @override
+  String get factIo2 =>
+      'مشتری کی کششِ ثقل آئیو کو دباتی اور کھینچتی ہے، اور اس سے پیدا ہونے والی حرارت اس کے آتش فشانوں کو چلاتی ہے۔';
+
+  @override
+  String get factEuropa1 =>
+      'برفیلی تہ کے نیچے یوروپا میں غالباً زمین کے تمام سمندروں سے تقریباً دگنا پانی ہے۔';
+
+  @override
+  String get factEuropa2 =>
+      'زمین سے باہر زندگی تلاش کرنے کی بہترین جگہوں میں سے ایک یوروپا ہے۔ یوروپا کلپر خلائی جہاز وہاں جا رہا ہے۔';
+
+  @override
+  String get factGanymede1 =>
+      'گینیمیڈ نظامِ شمسی کا سب سے بڑا چاند ہے۔ یہ عطارد سے بھی بڑا ہے۔';
+
+  @override
+  String get factGanymede2 =>
+      'گینیمیڈ واحد چاند ہے جس کا اپنا مقناطیسی میدان معلوم ہوا ہے۔';
+
+  @override
+  String get factCallisto1 =>
+      'کیلسٹو نظامِ شمسی کی سب سے زیادہ گڑھوں والی جگہوں میں سے ایک ہے، اور اس کی سطح بہت پرانی ہے۔';
+
+  @override
+  String get factCallisto2 =>
+      'کیلسٹو مشتری سے اتنا دور ہے کہ اسے اس کی شدید تابکاری کم ملتی ہے، اس لیے سائنس دانوں نے مستقبل کے اڈے کے لیے اس کی تجویز دی ہے۔';
+
+  @override
+  String get factTitan1 =>
+      'ٹائٹن واحد چاند ہے جس کی فضا گھنی ہے۔ اس کی سطح پر ہوا کا دباؤ زمین سے زیادہ ہے۔';
+
+  @override
+  String get factTitan2 =>
+      'ٹائٹن پر دریا اور جھیلیں ہیں، مگر ان میں پانی نہیں، مائع میتھین اور ایتھین ہے۔';
+
+  @override
+  String get factEnceladus1 =>
+      'اینسیلاڈس اپنے جنوبی قطب کے پاس کی دراڑوں سے برف اور آبی بخارات کی دھاریں خلا میں چھوڑتا ہے۔';
+
+  @override
+  String get factEnceladus2 =>
+      'اینسیلاڈس کی یہ دھاریں زحل کے E چھلے کو بھرتی ہیں۔';
+
+  @override
+  String get factTriton1 =>
+      'ٹرائٹن نیپچون کے گرد الٹی سمت میں گھومتا ہے، اس لیے غالباً وہ ایک بونا سیارہ تھا جسے نیپچون نے پکڑ لیا۔';
+
+  @override
+  String get factTriton2 =>
+      'تقریباً −235 °C پر ٹرائٹن نظامِ شمسی کی ان سب سے ٹھنڈی جگہوں میں سے ہے جہاں درجۂ حرارت ناپا گیا ہے۔';
+
+  @override
+  String get jumpInput => 'زمین پر آپ کی چھلانگ کی اونچائی (سینٹی میٹر)';
+
+  @override
+  String jumpHigh(String height) {
+    return 'چھلانگ: $height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return 'زمین پر $height کی چھلانگ یہاں بن جاتی ہے';
+  }
+
+  @override
+  String get jumpNote =>
+      'دھکا وہی رہتا ہے جو زمین پر ہوتا ہے۔ سورج اور گیس والے دیو قامت سیاروں پر کھڑے ہونے کے لیے زمین ہی نہیں، اس لیے یہ صرف خیالی کھیل ہے۔';
+
+  @override
+  String valueCm(String value) {
+    return '$value سینٹی میٹر';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value میٹر';
+  }
 }

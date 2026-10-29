@@ -202,7 +202,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get quizTitle => '惑星クイズ';
 
   @override
-  String get quizIntro => '惑星についての 10 問。何問正解できるかな？';
+  String get quizIntro => '惑星と衛星についての 10 問。何問正解できるかな？';
 
   @override
   String get quizStart => 'クイズを始める';
@@ -1004,4 +1004,234 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get launchTimeTbd => '時刻は未定';
+
+  @override
+  String get quizChoose => 'レベルを選ぶ';
+
+  @override
+  String get levelEasy => 'かんたん';
+
+  @override
+  String get levelMedium => 'ふつう';
+
+  @override
+  String get levelHard => 'むずかしい';
+
+  @override
+  String get levelEasyHint => '惑星の基本';
+
+  @override
+  String get levelMediumHint => '惑星と衛星';
+
+  @override
+  String get levelHardHint => 'ひねった比較とランキング';
+
+  @override
+  String get qStar => '次のうち、惑星ではなく恒星はどれ？';
+
+  @override
+  String get qDwarf => '次のうち、準惑星はどれ？';
+
+  @override
+  String get qMoonVisited => '人が歩いたことのある衛星はどれ？';
+
+  @override
+  String get qLargestMoon => 'これらの衛星のうち、いちばん大きいのはどれ？';
+
+  @override
+  String get qSmallestMoon => 'これらの衛星のうち、いちばん小さいのはどれ？';
+
+  @override
+  String get qThickAirMoon => 'これらの衛星のうち、厚い大気を持つのはどれ？';
+
+  @override
+  String get qGeyserMoon => '水の噴水を宇宙へ噴き出している衛星はどれ？';
+
+  @override
+  String get qVolcanicMoon => '活火山がいちばん多い衛星はどれ？';
+
+  @override
+  String get qBackwardsMoon => '惑星のまわりを逆向きに回っている衛星はどれ？';
+
+  @override
+  String get qBiggestRocky => '4つの岩石惑星のうち、いちばん大きいのはどれ？';
+
+  @override
+  String get qColdestRocky => '4つの岩石惑星のうち、いちばん寒いのはどれ？';
+
+  @override
+  String get qHighestPressure => '地表の気圧がいちばん高い惑星はどれ？';
+
+  @override
+  String get qSecondLargest => '2番目に大きい惑星はどれ？';
+
+  @override
+  String get qLongestYear => '1年がいちばん長い惑星はどれ？';
+
+  @override
+  String get qShortestYear => '1年がいちばん短い惑星はどれ？';
+
+  @override
+  String get qSmallestGiant => '4つの巨大惑星のうち、いちばん小さいのはどれ？';
+
+  @override
+  String get qRockyLongestYear => '4つの岩石惑星のうち、1年がいちばん長いのはどれ？';
+
+  @override
+  String get qFastestMoon => 'これらの衛星のうち、惑星のまわりをいちばん速く回るのはどれ？';
+
+  @override
+  String get qSlowestMoon => 'これらの衛星のうち、惑星を1周するのにいちばん時間がかかるのはどれ？';
+
+  @override
+  String get qStrongestMoonGravity => 'これらの衛星のうち、重力がいちばん強いのはどれ？';
+
+  @override
+  String get qColdestMoon => 'これらの衛星のうち、いちばん寒いのはどれ？';
+
+  @override
+  String get qSecondLargestMoon => 'これらの衛星のうち、2番目に大きいのはどれ？';
+
+  @override
+  String get factTitle => '知ってた？';
+
+  @override
+  String get factTap => 'タップで次の豆知識';
+
+  @override
+  String get factSun1 => '太陽は、太陽系全体の質量の99.8%を占めています。';
+
+  @override
+  String get factSun2 => '太陽の光が地球に届くまで、約8分20秒かかります。';
+
+  @override
+  String get factMercury1 => '水星の1日は、日の出から次の日の出まで約176地球日。1年のちょうど2倍の長さです。';
+
+  @override
+  String get factMercury2 => '水星にはほとんど空気がないので、昼でも空は真っ暗で、夜は凍えるほど寒くなります。';
+
+  @override
+  String get factVenus1 => '金星は逆向きに自転しているので、太陽は西から昇ります。';
+
+  @override
+  String get factVenus2 => '金星は太陽から遠いのに水星より熱いのは、厚い大気が熱を閉じ込めているからです。';
+
+  @override
+  String get factEarth1 => '生命が知られているのは地球だけで、表面の約71%は水でおおわれています。';
+
+  @override
+  String get factEarth2 => '地球は完全な球ではありません。自転のせいで、赤道あたりが少しふくらんでいます。';
+
+  @override
+  String get factMars1 => '火星のオリンポス山は太陽系で一番高い火山で、エベレストの約2.5倍の高さです。';
+
+  @override
+  String get factMars2 => '火星の夕焼けは青く見えます。';
+
+  @override
+  String get factJupiter1 => '木星の質量は、ほかのすべての惑星をあわせたものの2倍以上あります。';
+
+  @override
+  String get factJupiter2 => '大赤斑は地球より大きな嵐で、150年以上前から観測されています。';
+
+  @override
+  String get factSaturn1 => '土星は大きさのわりにとても軽く、じゅうぶん大きな浴槽があれば水に浮かびます。';
+
+  @override
+  String get factSaturn2 => '土星の環はとても幅広いのに、とても薄く、場所によっては厚さがたった10メートルほどです。';
+
+  @override
+  String get factUranus1 => '天王星は横倒しになって太陽のまわりを転がるように回っていて、軸が約98度かたむいています。';
+
+  @override
+  String get factUranus2 => '天王星は望遠鏡で初めて見つかった惑星です。1781年にウィリアム・ハーシェルが発見しました。';
+
+  @override
+  String get factNeptune1 => '海王星には惑星で最速の風が吹き、時速2,000kmを超えます。';
+
+  @override
+  String get factNeptune2 =>
+      '海王星は、誰かが見るより先に計算で見つかりました。1846年に天文学者が、あるはずの位置を割り出したのです。';
+
+  @override
+  String get factMoon1 => '月は毎年、地球から約3.8センチずつ遠ざかっています。';
+
+  @override
+  String get factMoon2 => '月は地球を1周する間にちょうど1回自転するので、いつも同じ面が見えます。';
+
+  @override
+  String get factPluto1 => '冥王星の1年は、地球の約248年にあたります。';
+
+  @override
+  String get factPluto2 => '冥王星には、凍った窒素でできたハート形の大きな平原があります。';
+
+  @override
+  String get factIo1 => 'イオは、数百もの活火山がある、知られているなかで最も火山活動が激しい天体です。';
+
+  @override
+  String get factIo2 => '木星の重力がイオをぎゅっと押したり引っぱったりし、そこで生まれる熱が火山を動かしています。';
+
+  @override
+  String get factEuropa1 => 'エウロパの氷の殻の下には、地球の海全部の約2倍の水がありそうです。';
+
+  @override
+  String get factEuropa2 => 'エウロパは地球外生命を探す最有力の場所のひとつで、探査機エウロパ・クリッパーが向かっています。';
+
+  @override
+  String get factGanymede1 => 'ガニメデは太陽系で一番大きな衛星で、水星よりも大きいです。';
+
+  @override
+  String get factGanymede2 => 'ガニメデは、自分の磁場を持つことが知られている唯一の衛星です。';
+
+  @override
+  String get factCallisto1 => 'カリストは太陽系でもとくにクレーターが多い天体で、表面はとても古いです。';
+
+  @override
+  String get factCallisto2 =>
+      'カリストは木星から十分に遠く、強い放射線をあまり受けないので、将来の基地の候補として提案されています。';
+
+  @override
+  String get factTitan1 => 'タイタンは、厚い大気を持つ唯一の衛星です。地表の気圧は地球より高いです。';
+
+  @override
+  String get factTitan2 => 'タイタンには川や湖がありますが、満たしているのは水ではなく、液体のメタンとエタンです。';
+
+  @override
+  String get factEnceladus1 => 'エンケラドゥスは、南極近くの割れ目から氷と水蒸気のジェットを宇宙へ噴き出しています。';
+
+  @override
+  String get factEnceladus2 => 'エンケラドゥスのジェットは、土星のE環をつくっています。';
+
+  @override
+  String get factTriton1 =>
+      'トリトンは海王星のまわりを逆向きに回っているので、海王星にとらえられた準惑星だったのかもしれません。';
+
+  @override
+  String get factTriton2 => '約−235 °Cのトリトンは、太陽系で温度が測られたなかでも特に寒い場所のひとつです。';
+
+  @override
+  String get jumpInput => '地球でのジャンプの高さ（cm）';
+
+  @override
+  String jumpHigh(String height) {
+    return 'ジャンプ：$height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return '地球で $height のジャンプは、ここでは';
+  }
+
+  @override
+  String get jumpNote => '地面をける力は地球と同じです。太陽やガス惑星には立てる地面がないので、これは空想の遊びです。';
+
+  @override
+  String valueCm(String value) {
+    return '$value cm';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value m';
+  }
 }

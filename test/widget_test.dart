@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:heliora/core/events.dart';
+import 'package:heliora/core/facts.dart';
 import 'package:heliora/core/finder.dart';
 import 'package:heliora/core/format.dart';
 import 'package:heliora/core/habitability.dart';
@@ -116,6 +117,119 @@ void main() {
         expect(q.options.map((p) => p.id).toSet().length, 4);
         expect(q.options.any((p) => p.id == q.answer.id), isTrue);
       }
+    });
+
+    test('moon and ranking answers come from the data', () {
+      const expected = <QuizKind, String>{
+        QuizKind.star: 'sun',
+        QuizKind.dwarf: 'pluto',
+        QuizKind.moonVisited: 'moon',
+        QuizKind.largestMoon: 'ganymede',
+        QuizKind.smallestMoon: 'enceladus',
+        QuizKind.thickAirMoon: 'titan',
+        QuizKind.geyserMoon: 'enceladus',
+        QuizKind.volcanicMoon: 'io',
+        QuizKind.backwardsMoon: 'triton',
+        QuizKind.biggestRocky: 'earth',
+        QuizKind.coldestRocky: 'mars',
+        QuizKind.highestPressure: 'venus',
+        QuizKind.secondLargest: 'saturn',
+        QuizKind.longestYear: 'neptune',
+        QuizKind.shortestYear: 'mercury',
+        QuizKind.smallestGiant: 'neptune',
+        QuizKind.rockyLongestYear: 'mars',
+        QuizKind.fastestMoon: 'enceladus',
+        QuizKind.slowestMoon: 'moon',
+        QuizKind.strongestMoonGravity: 'io',
+        QuizKind.coldestMoon: 'triton',
+        QuizKind.secondLargestMoon: 'titan',
+      };
+      for (final entry in expected.entries) {
+        expect(answerFor(entry.key).id, entry.value, reason: '${entry.key}');
+      }
+    });
+
+    test('every question has an answer and a level', () {
+      final seen = <QuizKind>{};
+      for (final level in QuizLevel.values) {
+        seen.addAll(kindsOf(level));
+        expect(kindsOf(level).length, greaterThanOrEqualTo(10));
+      }
+      expect(seen.length, QuizKind.values.length);
+      expect(levelOf(QuizKind.largest), QuizLevel.easy);
+      expect(levelOf(QuizKind.longestDay), QuizLevel.medium);
+      expect(levelOf(QuizKind.secondLargestMoon), QuizLevel.hard);
+    });
+
+    test('each level gives ten fair questions', () {
+      for (final level in QuizLevel.values) {
+        for (var seed = 0; seed < 20; seed++) {
+          final quiz = buildQuiz(level: level, random: Random(seed));
+          expect(quiz.length, 10);
+          expect(quiz.map((q) => q.kind).toSet().length, 10);
+          for (final q in quiz) {
+            expect(levelOf(q.kind), level);
+            expect(q.options.length, 4);
+            expect(q.options.map((b) => b.id).toSet().length, 4);
+            expect(q.options.any((b) => b.id == q.answer.id), isTrue);
+            expect(q.answer.id, answerFor(q.kind).id);
+            switch (q.kind) {
+              case QuizKind.biggestRocky:
+              case QuizKind.coldestRocky:
+              case QuizKind.rockyLongestYear:
+                expect(q.options.every((b) => b.order <= 4 && !b.isMoon), isTrue);
+              case QuizKind.smallestGiant:
+                expect(q.options.every((b) => b.order >= 5 && !b.isMoon), isTrue);
+              case QuizKind.geyserMoon:
+                expect(q.options.every((b) => b.isMoon && b.id != 'europa'),
+                    isTrue);
+              case QuizKind.largestMoon:
+              case QuizKind.smallestMoon:
+              case QuizKind.thickAirMoon:
+              case QuizKind.volcanicMoon:
+              case QuizKind.backwardsMoon:
+              case QuizKind.moonVisited:
+              case QuizKind.fastestMoon:
+              case QuizKind.slowestMoon:
+              case QuizKind.strongestMoonGravity:
+              case QuizKind.coldestMoon:
+              case QuizKind.secondLargestMoon:
+                expect(q.options.every((b) => b.isMoon), isTrue);
+              default:
+                break;
+            }
+          }
+        }
+      }
+    });
+  });
+
+  group('facts and jumps', () {
+    test('every world has facts and every day has one', () {
+      expect(factBodyIds.toSet(), allBodies.map((b) => b.id).toSet());
+      for (final id in factBodyIds) {
+        expect(planetById(id).id, id);
+      }
+      final seen = <String>{};
+      final start = DateTime(2026, 10, 29);
+      for (var i = 0; i < factBodyIds.length * factsPerBody; i++) {
+        final f = factOfTheDay(start.add(Duration(days: i)));
+        expect(f.index, inInclusiveRange(0, factsPerBody - 1));
+        seen.add('${f.bodyId}:${f.index}');
+      }
+      expect(seen.length, factBodyIds.length * factsPerBody);
+      expect(factOfTheDay(DateTime(2026, 10, 29, 3)),
+          factOfTheDay(DateTime(2026, 10, 29, 23)));
+      expect(factOfTheDay(DateTime(2010, 5, 5)).bodyId, isNotEmpty);
+    });
+
+    test('jump height follows gravity', () {
+      expect(jumpHeightCm(40, 1), 40);
+      expect(jumpHeightCm(40, planetById('moon').relativeGravity),
+          closeTo(242, 1));
+      expect(jumpHeightCm(40, planetById('jupiter').relativeGravity),
+          lessThan(40));
+      expect(jumpHeightCm(40, 0), 0);
     });
   });
 
@@ -656,6 +770,28 @@ void main() {
       expect(back.birthDateMs, 946728000000);
       expect(back.cityId, 'yerevan');
       expect(back.birthDate, isNotNull);
+    });
+
+    test('quiz scores are kept for each level', () {
+      const s = HelioraSettings(
+        bestQuizScore: 7,
+        quizBests: <String, int>{'easy': 9, 'hard': 3},
+      );
+      final back = HelioraSettings.fromJson(s.toJson());
+      expect(back.bestFor('easy'), 9);
+      expect(back.bestFor('hard'), 3);
+      // The older single score counts as the medium score.
+      expect(back.bestFor('medium'), 7);
+      expect(const HelioraSettings().bestFor('easy'), 0);
+      final more = HelioraSettings.fromJson(<String, dynamic>{
+        'bestQuizScore': 7,
+        'quizBests': <String, dynamic>{'medium': 10, 'easy': 'x', 'hard': 4},
+      });
+      expect(more.bestFor('medium'), 10);
+      expect(more.bestFor('easy'), 0);
+      expect(more.bestFor('hard'), 4);
+      expect(HelioraSettings.fromJson(<String, dynamic>{'quizBests': 3})
+          .quizBests, isEmpty);
     });
 
     test('online features are off by default and saved', () {

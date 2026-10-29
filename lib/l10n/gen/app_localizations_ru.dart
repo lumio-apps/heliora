@@ -206,7 +206,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get quizIntro =>
-      '10 вопросов о планетах. Сколько правильных ответов вы дадите?';
+      '10 вопросов о планетах и спутниках. Сколько правильных ответов вы дадите?';
 
   @override
   String get quizStart => 'Начать викторину';
@@ -1027,4 +1027,274 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get launchTimeTbd => 'Время ещё не назначено';
+
+  @override
+  String get quizChoose => 'Выберите уровень';
+
+  @override
+  String get levelEasy => 'Лёгкий';
+
+  @override
+  String get levelMedium => 'Средний';
+
+  @override
+  String get levelHard => 'Сложный';
+
+  @override
+  String get levelEasyHint => 'Основы о планетах';
+
+  @override
+  String get levelMediumHint => 'Планеты и спутники';
+
+  @override
+  String get levelHardHint => 'Хитрые сравнения и рейтинги';
+
+  @override
+  String get qStar => 'Что из этого звезда, а не планета?';
+
+  @override
+  String get qDwarf => 'Что из этого карликовая планета?';
+
+  @override
+  String get qMoonVisited => 'По какому спутнику ходили люди?';
+
+  @override
+  String get qLargestMoon => 'Какой из этих спутников самый большой?';
+
+  @override
+  String get qSmallestMoon => 'Какой из этих спутников самый маленький?';
+
+  @override
+  String get qThickAirMoon => 'У какого из этих спутников плотная атмосфера?';
+
+  @override
+  String get qGeyserMoon => 'Какой спутник выбрасывает в космос гейзеры воды?';
+
+  @override
+  String get qVolcanicMoon =>
+      'На каком спутнике больше всего действующих вулканов?';
+
+  @override
+  String get qBackwardsMoon =>
+      'Какой спутник обращается вокруг своей планеты в обратную сторону?';
+
+  @override
+  String get qBiggestRocky => 'Какая из четырёх каменных планет самая большая?';
+
+  @override
+  String get qColdestRocky =>
+      'Какая из четырёх каменных планет самая холодная?';
+
+  @override
+  String get qHighestPressure =>
+      'У какой планеты самое высокое давление воздуха на поверхности?';
+
+  @override
+  String get qSecondLargest => 'Какая планета вторая по размеру?';
+
+  @override
+  String get qLongestYear => 'У какой планеты самый длинный год?';
+
+  @override
+  String get qShortestYear => 'У какой планеты самый короткий год?';
+
+  @override
+  String get qSmallestGiant =>
+      'Какая из четырёх планет-гигантов самая маленькая?';
+
+  @override
+  String get qRockyLongestYear =>
+      'У какой из четырёх каменных планет самый длинный год?';
+
+  @override
+  String get qFastestMoon =>
+      'Какой из этих спутников быстрее всех обращается вокруг своей планеты?';
+
+  @override
+  String get qSlowestMoon =>
+      'Какому из этих спутников нужно больше всего времени, чтобы обойти свою планету?';
+
+  @override
+  String get qStrongestMoonGravity =>
+      'У какого из этих спутников самая сильная гравитация?';
+
+  @override
+  String get qColdestMoon => 'Какой из этих спутников самый холодный?';
+
+  @override
+  String get qSecondLargestMoon => 'Какой из этих спутников второй по размеру?';
+
+  @override
+  String get factTitle => 'Знаете ли вы?';
+
+  @override
+  String get factTap => 'Нажмите, чтобы увидеть другой факт';
+
+  @override
+  String get factSun1 =>
+      'В Солнце сосредоточено 99,8% всей массы Солнечной системы.';
+
+  @override
+  String get factSun2 =>
+      'Свету от Солнца нужно около 8 минут 20 секунд, чтобы дойти до Земли.';
+
+  @override
+  String get factMercury1 =>
+      'Сутки на Меркурии, от одного восхода до следующего, длятся около 176 земных суток. Это вдвое дольше его года.';
+
+  @override
+  String get factMercury2 =>
+      'На Меркурии почти нет воздуха, поэтому небо там чёрное даже днём, а ночи ледяные.';
+
+  @override
+  String get factVenus1 =>
+      'Венера вращается в обратную сторону, поэтому на Венере Солнце встаёт на западе.';
+
+  @override
+  String get factVenus2 =>
+      'Венера горячее Меркурия, хотя дальше от Солнца, потому что её плотная атмосфера удерживает тепло.';
+
+  @override
+  String get factEarth1 =>
+      'Земля — единственное известное нам место с жизнью, и около 71% её поверхности покрыто водой.';
+
+  @override
+  String get factEarth2 =>
+      'Земля не идеальный шар. Из-за вращения она немного вздута у экватора.';
+
+  @override
+  String get factMars1 =>
+      'Гора Олимп на Марсе — самый высокий вулкан Солнечной системы, примерно в два с половиной раза выше Эвереста.';
+
+  @override
+  String get factMars2 => 'Закаты на Марсе выглядят голубыми.';
+
+  @override
+  String get factJupiter1 =>
+      'Масса Юпитера больше чем вдвое превышает массу всех остальных планет вместе взятых.';
+
+  @override
+  String get factJupiter2 =>
+      'Большое красное пятно — буря больше Земли, за которой люди наблюдают более 150 лет.';
+
+  @override
+  String get factSaturn1 =>
+      'Сатурн для своего размера так лёгок, что плавал бы в воде, найдись достаточно большая ванна.';
+
+  @override
+  String get factSaturn2 =>
+      'Кольца Сатурна очень широкие, но очень тонкие: местами всего около десяти метров толщиной.';
+
+  @override
+  String get factUranus1 =>
+      'Уран катится вокруг Солнца на боку, его ось наклонена примерно на 98 градусов.';
+
+  @override
+  String get factUranus2 =>
+      'Уран — первая планета, открытая с помощью телескопа. Уильям Гершель обнаружил её в 1781 году.';
+
+  @override
+  String get factNeptune1 =>
+      'На Нептуне самые быстрые ветры среди планет: более 2000 км/ч.';
+
+  @override
+  String get factNeptune2 =>
+      'Нептун нашли с помощью математики ещё до того, как его увидели: в 1846 году астрономы вычислили, где он должен быть.';
+
+  @override
+  String get factMoon1 =>
+      'Луна удаляется от Земли примерно на 3,8 сантиметра каждый год.';
+
+  @override
+  String get factMoon2 =>
+      'Мы всегда видим одну и ту же сторону Луны, потому что она делает ровно один оборот вокруг оси за каждый оборот вокруг Земли.';
+
+  @override
+  String get factPluto1 => 'Год на Плутоне длится около 248 земных лет.';
+
+  @override
+  String get factPluto2 =>
+      'На Плутоне есть огромная равнина в форме сердца из замёрзшего азота.';
+
+  @override
+  String get factIo1 =>
+      'Ио — самый вулканический из известных нам миров, на нём сотни действующих вулканов.';
+
+  @override
+  String get factIo2 =>
+      'Гравитация Юпитера то сжимает, то растягивает Ио, и выделяющееся тепло питает его вулканы.';
+
+  @override
+  String get factEuropa1 =>
+      'Под ледяной коркой на Европе, вероятно, примерно вдвое больше воды, чем во всех океанах Земли.';
+
+  @override
+  String get factEuropa2 =>
+      'Европа — одно из лучших мест для поиска жизни за пределами Земли. К ней летит аппарат «Европа Клипер».';
+
+  @override
+  String get factGanymede1 =>
+      'Ганимед — самый большой спутник в Солнечной системе. Он даже больше Меркурия.';
+
+  @override
+  String get factGanymede2 =>
+      'Ганимед — единственный известный спутник с собственным магнитным полем.';
+
+  @override
+  String get factCallisto1 =>
+      'Каллисто — одно из самых изрытых кратерами мест Солнечной системы, а её поверхность очень древняя.';
+
+  @override
+  String get factCallisto2 =>
+      'Каллисто достаточно далеко от Юпитера, чтобы получать меньше его жёсткого излучения, поэтому учёные предлагали разместить на ней будущую базу.';
+
+  @override
+  String get factTitan1 =>
+      'Титан — единственный спутник с плотной атмосферой. Давление воздуха на его поверхности выше, чем на Земле.';
+
+  @override
+  String get factTitan2 =>
+      'На Титане есть реки и озёра, но в них жидкие метан и этан, а не вода.';
+
+  @override
+  String get factEnceladus1 =>
+      'Энцелад выбрасывает в космос струи льда и водяного пара через трещины возле южного полюса.';
+
+  @override
+  String get factEnceladus2 => 'Струи Энцелада пополняют кольцо E Сатурна.';
+
+  @override
+  String get factTriton1 =>
+      'Тритон обращается вокруг Нептуна в обратную сторону, так что, вероятно, это карликовая планета, захваченная Нептуном.';
+
+  @override
+  String get factTriton2 =>
+      'При температуре около −235 °C Тритон — одно из самых холодных мест Солнечной системы, где измеряли температуру.';
+
+  @override
+  String get jumpInput => 'Высота вашего прыжка на Земле (см)';
+
+  @override
+  String jumpHigh(String height) {
+    return 'Прыжок: $height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return 'Прыжок на $height на Земле превращается в';
+  }
+
+  @override
+  String get jumpNote =>
+      'Толчок такой же, как на Земле. На Солнце и газовых гигантах нет твёрдой поверхности, чтобы встать, так что это просто игра воображения.';
+
+  @override
+  String valueCm(String value) {
+    return '$value см';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value м';
+  }
 }

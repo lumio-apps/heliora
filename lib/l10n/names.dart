@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 
+import '../core/format.dart';
 import '../core/quiz.dart';
 import '../data/planets.dart';
 import 'gen/app_localizations.dart';
@@ -170,7 +171,125 @@ String quizQuestionText(AppLocalizations l, QuizKind kind) {
       return l.qShortestDay;
     case QuizKind.longestDay:
       return l.qLongestDay;
+    case QuizKind.star:
+      return l.qStar;
+    case QuizKind.dwarf:
+      return l.qDwarf;
+    case QuizKind.moonVisited:
+      return l.qMoonVisited;
+    case QuizKind.largestMoon:
+      return l.qLargestMoon;
+    case QuizKind.smallestMoon:
+      return l.qSmallestMoon;
+    case QuizKind.thickAirMoon:
+      return l.qThickAirMoon;
+    case QuizKind.geyserMoon:
+      return l.qGeyserMoon;
+    case QuizKind.volcanicMoon:
+      return l.qVolcanicMoon;
+    case QuizKind.backwardsMoon:
+      return l.qBackwardsMoon;
+    case QuizKind.biggestRocky:
+      return l.qBiggestRocky;
+    case QuizKind.coldestRocky:
+      return l.qColdestRocky;
+    case QuizKind.highestPressure:
+      return l.qHighestPressure;
+    case QuizKind.secondLargest:
+      return l.qSecondLargest;
+    case QuizKind.longestYear:
+      return l.qLongestYear;
+    case QuizKind.shortestYear:
+      return l.qShortestYear;
+    case QuizKind.smallestGiant:
+      return l.qSmallestGiant;
+    case QuizKind.rockyLongestYear:
+      return l.qRockyLongestYear;
+    case QuizKind.fastestMoon:
+      return l.qFastestMoon;
+    case QuizKind.slowestMoon:
+      return l.qSlowestMoon;
+    case QuizKind.strongestMoonGravity:
+      return l.qStrongestMoonGravity;
+    case QuizKind.coldestMoon:
+      return l.qColdestMoon;
+    case QuizKind.secondLargestMoon:
+      return l.qSecondLargestMoon;
   }
+}
+
+String quizLevelName(AppLocalizations l, QuizLevel level) {
+  switch (level) {
+    case QuizLevel.easy:
+      return l.levelEasy;
+    case QuizLevel.medium:
+      return l.levelMedium;
+    case QuizLevel.hard:
+      return l.levelHard;
+  }
+}
+
+String quizLevelHint(AppLocalizations l, QuizLevel level) {
+  switch (level) {
+    case QuizLevel.easy:
+      return l.levelEasyHint;
+    case QuizLevel.medium:
+      return l.levelMediumHint;
+    case QuizLevel.hard:
+      return l.levelHardHint;
+  }
+}
+
+/// The two "Did you know?" facts of a body, in the app language.
+List<String> bodyFacts(AppLocalizations l, String id) {
+  switch (id) {
+    case 'sun':
+      return <String>[l.factSun1, l.factSun2];
+    case 'mercury':
+      return <String>[l.factMercury1, l.factMercury2];
+    case 'venus':
+      return <String>[l.factVenus1, l.factVenus2];
+    case 'earth':
+      return <String>[l.factEarth1, l.factEarth2];
+    case 'mars':
+      return <String>[l.factMars1, l.factMars2];
+    case 'jupiter':
+      return <String>[l.factJupiter1, l.factJupiter2];
+    case 'saturn':
+      return <String>[l.factSaturn1, l.factSaturn2];
+    case 'uranus':
+      return <String>[l.factUranus1, l.factUranus2];
+    case 'neptune':
+      return <String>[l.factNeptune1, l.factNeptune2];
+    case 'moon':
+      return <String>[l.factMoon1, l.factMoon2];
+    case 'pluto':
+      return <String>[l.factPluto1, l.factPluto2];
+    case 'io':
+      return <String>[l.factIo1, l.factIo2];
+    case 'europa':
+      return <String>[l.factEuropa1, l.factEuropa2];
+    case 'ganymede':
+      return <String>[l.factGanymede1, l.factGanymede2];
+    case 'callisto':
+      return <String>[l.factCallisto1, l.factCallisto2];
+    case 'titan':
+      return <String>[l.factTitan1, l.factTitan2];
+    case 'enceladus':
+      return <String>[l.factEnceladus1, l.factEnceladus2];
+    case 'triton':
+      return <String>[l.factTriton1, l.factTriton2];
+    default:
+      return const <String>[];
+  }
+}
+
+/// A jump height as text: centimetres below one metre, metres above.
+String jumpText(BuildContext context, AppLocalizations l, double cm) {
+  if (cm < 100) {
+    return l.valueCm(formatNumber(context, cm, decimals: cm < 10 ? 1 : 0));
+  }
+  return l.valueM(formatNumber(context, cm / 100, decimals: 1));
 }
 
 /// Compass name for a [compassIndex] (0 = north, clockwise).

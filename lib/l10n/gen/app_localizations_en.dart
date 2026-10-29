@@ -204,7 +204,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get quizIntro =>
-      '10 questions about the planets. How many can you get right?';
+      '10 questions about the planets and moons. How many can you get right?';
 
   @override
   String get quizStart => 'Start quiz';
@@ -1027,4 +1027,272 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get launchTimeTbd => 'Time not set yet';
+
+  @override
+  String get quizChoose => 'Choose a level';
+
+  @override
+  String get levelEasy => 'Easy';
+
+  @override
+  String get levelMedium => 'Medium';
+
+  @override
+  String get levelHard => 'Hard';
+
+  @override
+  String get levelEasyHint => 'The basics about the planets';
+
+  @override
+  String get levelMediumHint => 'Planets and moons';
+
+  @override
+  String get levelHardHint => 'Tricky comparisons and rankings';
+
+  @override
+  String get qStar => 'Which of these is a star, not a planet?';
+
+  @override
+  String get qDwarf => 'Which of these is a dwarf planet?';
+
+  @override
+  String get qMoonVisited => 'Which moon have people walked on?';
+
+  @override
+  String get qLargestMoon => 'Which of these moons is the largest?';
+
+  @override
+  String get qSmallestMoon => 'Which of these moons is the smallest?';
+
+  @override
+  String get qThickAirMoon => 'Which of these moons has a thick atmosphere?';
+
+  @override
+  String get qGeyserMoon => 'Which moon shoots geysers of water into space?';
+
+  @override
+  String get qVolcanicMoon => 'Which moon has the most active volcanoes?';
+
+  @override
+  String get qBackwardsMoon => 'Which moon goes around its planet backwards?';
+
+  @override
+  String get qBiggestRocky => 'Which of the four rocky planets is the biggest?';
+
+  @override
+  String get qColdestRocky => 'Which of the four rocky planets is the coldest?';
+
+  @override
+  String get qHighestPressure =>
+      'Which planet has the heaviest air pressure at its surface?';
+
+  @override
+  String get qSecondLargest => 'Which planet is the second largest?';
+
+  @override
+  String get qLongestYear => 'Which planet has the longest year?';
+
+  @override
+  String get qShortestYear => 'Which planet has the shortest year?';
+
+  @override
+  String get qSmallestGiant =>
+      'Which of the four giant planets is the smallest?';
+
+  @override
+  String get qRockyLongestYear =>
+      'Which of the four rocky planets has the longest year?';
+
+  @override
+  String get qFastestMoon =>
+      'Which of these moons goes around its planet the fastest?';
+
+  @override
+  String get qSlowestMoon =>
+      'Which of these moons takes the longest to go around its planet?';
+
+  @override
+  String get qStrongestMoonGravity =>
+      'Which of these moons has the strongest gravity?';
+
+  @override
+  String get qColdestMoon => 'Which of these moons is the coldest?';
+
+  @override
+  String get qSecondLargestMoon =>
+      'Which of these moons is the second largest?';
+
+  @override
+  String get factTitle => 'Did you know?';
+
+  @override
+  String get factTap => 'Tap for another fact';
+
+  @override
+  String get factSun1 =>
+      'The Sun holds 99.8% of all the mass in the solar system.';
+
+  @override
+  String get factSun2 =>
+      'Sunlight takes about 8 minutes and 20 seconds to reach Earth.';
+
+  @override
+  String get factMercury1 =>
+      'One day on Mercury, from sunrise to the next sunrise, lasts about 176 Earth days. That is twice as long as its year.';
+
+  @override
+  String get factMercury2 =>
+      'Mercury has almost no air, so its sky is black even by day, and its nights are freezing cold.';
+
+  @override
+  String get factVenus1 =>
+      'Venus spins backwards, so on Venus the Sun rises in the west.';
+
+  @override
+  String get factVenus2 =>
+      'Venus is hotter than Mercury, even though it is farther from the Sun, because its thick air traps the heat.';
+
+  @override
+  String get factEarth1 =>
+      'Earth is the only place we know with life, and about 71% of its surface is covered by water.';
+
+  @override
+  String get factEarth2 =>
+      'Earth is not a perfect ball. It bulges a little at the equator because it spins.';
+
+  @override
+  String get factMars1 =>
+      'Olympus Mons on Mars is the tallest volcano in the solar system, about two and a half times as tall as Mount Everest.';
+
+  @override
+  String get factMars2 => 'Sunsets on Mars look blue.';
+
+  @override
+  String get factJupiter1 =>
+      'Jupiter has more than twice the mass of all the other planets put together.';
+
+  @override
+  String get factJupiter2 =>
+      'The Great Red Spot is a storm bigger than Earth, and people have watched it for more than 150 years.';
+
+  @override
+  String get factSaturn1 =>
+      'Saturn is so light for its size that it would float in water, if you could find a bathtub big enough.';
+
+  @override
+  String get factSaturn2 =>
+      'Saturn\'s rings are very wide but very thin: in places only about ten metres thick.';
+
+  @override
+  String get factUranus1 =>
+      'Uranus rolls around the Sun on its side, tilted by about 98 degrees.';
+
+  @override
+  String get factUranus2 =>
+      'Uranus was the first planet found with a telescope. William Herschel spotted it in 1781.';
+
+  @override
+  String get factNeptune1 =>
+      'Neptune has the fastest winds of any planet, more than 2,000 km/h.';
+
+  @override
+  String get factNeptune2 =>
+      'Neptune was found with maths before anyone saw it: in 1846 astronomers worked out where it had to be.';
+
+  @override
+  String get factMoon1 =>
+      'The Moon moves about 3.8 centimetres farther from Earth every year.';
+
+  @override
+  String get factMoon2 =>
+      'We always see the same side of the Moon, because it turns exactly once for each trip around Earth.';
+
+  @override
+  String get factPluto1 => 'A year on Pluto lasts about 248 Earth years.';
+
+  @override
+  String get factPluto2 =>
+      'Pluto has a huge heart-shaped plain of frozen nitrogen.';
+
+  @override
+  String get factIo1 =>
+      'Io is the most volcanic world we know, with hundreds of active volcanoes.';
+
+  @override
+  String get factIo2 =>
+      'Jupiter\'s gravity squeezes and stretches Io, and the heat from this powers its volcanoes.';
+
+  @override
+  String get factEuropa1 =>
+      'Under its icy shell, Europa probably holds about twice as much water as all of Earth\'s oceans.';
+
+  @override
+  String get factEuropa2 =>
+      'Europa is one of the best places to look for life beyond Earth. The Europa Clipper spacecraft is on its way there.';
+
+  @override
+  String get factGanymede1 =>
+      'Ganymede is the largest moon in the solar system. It is even bigger than Mercury.';
+
+  @override
+  String get factGanymede2 =>
+      'Ganymede is the only moon known to have a magnetic field of its own.';
+
+  @override
+  String get factCallisto1 =>
+      'Callisto is one of the most heavily cratered places in the solar system, and its surface is very old.';
+
+  @override
+  String get factCallisto2 =>
+      'Callisto is far enough from Jupiter to get less of its harsh radiation, so scientists have suggested it for a future base.';
+
+  @override
+  String get factTitan1 =>
+      'Titan is the only moon with a thick atmosphere. Its air pressure at the surface is higher than on Earth.';
+
+  @override
+  String get factTitan2 =>
+      'Titan has rivers and lakes, but they hold liquid methane and ethane, not water.';
+
+  @override
+  String get factEnceladus1 =>
+      'Enceladus shoots jets of ice and water vapour into space through cracks near its south pole.';
+
+  @override
+  String get factEnceladus2 => 'The jets of Enceladus feed Saturn\'s E ring.';
+
+  @override
+  String get factTriton1 =>
+      'Triton goes around Neptune backwards, so it was probably a dwarf planet that Neptune captured.';
+
+  @override
+  String get factTriton2 =>
+      'At about −235 °C, Triton is one of the coldest places anyone has measured in the solar system.';
+
+  @override
+  String get jumpInput => 'Your jump height on Earth (cm)';
+
+  @override
+  String jumpHigh(String height) {
+    return 'Jump: $height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return 'A $height jump on Earth becomes';
+  }
+
+  @override
+  String get jumpNote =>
+      'Same push-off as on Earth. On the Sun and the gas giants there is no ground to stand on, so this is only a thought game.';
+
+  @override
+  String valueCm(String value) {
+    return '$value cm';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value m';
+  }
 }

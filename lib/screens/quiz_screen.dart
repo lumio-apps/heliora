@@ -6,8 +6,9 @@ import '../l10n/names.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/fact_card.dart';
 
-/// Ten questions built from the planet data.
+/// Ten questions built from the planet and moon data, in three levels.
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
 
@@ -16,6 +17,7 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
+  QuizLevel _level = QuizLevel.medium;
   List<QuizQuestion>? _questions;
   int _index = 0;
   int _score = 0;
@@ -23,9 +25,10 @@ class _QuizScreenState extends State<QuizScreen> {
   bool _finished = false;
   bool _newBest = false;
 
-  void _start() {
+  void _start(QuizLevel level) {
     setState(() {
-      _questions = buildQuiz();
+      _level = level;
+      _questions = buildQuiz(level: level);
       _index = 0;
       _score = 0;
       _picked = null;
@@ -56,7 +59,7 @@ class _QuizScreenState extends State<QuizScreen> {
       });
       return;
     }
-    final best = await AppScope.read(context).recordQuizScore(_score);
+    final best = await AppScope.read(context).recordQuizScore(_level.name, _score);
     if (!mounted) {
       return;
     }
@@ -81,31 +84,34 @@ class _QuizScreenState extends State<QuizScreen> {
   Widget _intro(BuildContext context) {
     final l = context.l10n;
     final p = Palette.of(context);
-    final best = AppScope.of(context).settings.bestQuizScore;
+    final settings = AppScope.of(context).settings;
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
       children: <Widget>[
         Text(l.quizTitle,
             style: TextStyle(
                 fontSize: 26, fontWeight: FontWeight.w700, color: p.text)),
-        const SizedBox(height: 40),
-        const Center(child: HelioraLogo(size: 120)),
-        const SizedBox(height: 32),
+        const SizedBox(height: 20),
+        const Center(child: HelioraLogo(size: 88)),
+        const SizedBox(height: 20),
         Text(l.quizIntro,
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 16, color: p.text, height: 1.4)),
-        if (best > 0) ...<Widget>[
-          const SizedBox(height: 12),
-          Text(l.quizBest(best),
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 14, color: p.muted)),
+        const SizedBox(height: 20),
+        Text(l.quizChoose,
+            style: TextStyle(
+                fontSize: 14, fontWeight: FontWeight.w600, color: p.muted)),
+        const SizedBox(height: 8),
+        for (final level in QuizLevel.values) ...<Widget>[
+          _LevelCard(
+            level: level,
+            best: settings.bestFor(level.name),
+            onTap: () => _start(level),
+          ),
+          const SizedBox(height: 10),
         ],
-        const SizedBox(height: 28),
-        FilledButton(
-          style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
-          onPressed: _start,
-          child: Text(l.quizStart),
-        ),
+        const SizedBox(height: 10),
+        FactCard.daily(DateTime.now()),
       ],
     );
   }
@@ -182,14 +188,18 @@ class _QuizScreenState extends State<QuizScreen> {
   Widget _result(BuildContext context, int total) {
     final l = context.l10n;
     final p = Palette.of(context);
-    final best = AppScope.of(context).settings.bestQuizScore;
+    final best = AppScope.of(context).settings.bestFor(_level.name);
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
       children: <Widget>[
         Text(l.quizTitle,
             style: TextStyle(
                 fontSize: 26, fontWeight: FontWeight.w700, color: p.text)),
-        const SizedBox(height: 48),
+        const SizedBox(height: 8),
+        Text(quizLevelName(l, _level),
+            style: TextStyle(
+                fontSize: 14, fontWeight: FontWeight.w600, color: p.muted)),
+        const SizedBox(height: 40),
         Text(
           '$_score / $total',
           textAlign: TextAlign.center,
@@ -208,8 +218,15 @@ class _QuizScreenState extends State<QuizScreen> {
         const SizedBox(height: 32),
         FilledButton(
           style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
-          onPressed: _start,
+          onPressed: () => _start(_level),
           child: Text(l.quizAgain),
+        ),
+        const SizedBox(height: 10),
+        OutlinedButton(
+          style:
+              OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(52)),
+          onPressed: () => setState(() => _questions = null),
+          child: Text(l.quizChoose),
         ),
       ],
     );
@@ -282,6 +299,62 @@ class _OptionButton extends StatelessWidget {
               ),
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+/// One of the three level buttons on the quiz start page.
+class _LevelCard extends StatelessWidget {
+  const _LevelCard({
+    required this.level,
+    required this.best,
+    required this.onTap,
+  });
+
+  final QuizLevel level;
+  final int best;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final p = Palette.of(context);
+    final icon = switch (level) {
+      QuizLevel.easy => Icons.looks_one_outlined,
+      QuizLevel.medium => Icons.looks_two_outlined,
+      QuizLevel.hard => Icons.looks_3_outlined,
+    };
+    return InkWell(
+      borderRadius: BorderRadius.circular(20),
+      onTap: onTap,
+      child: SurfaceCard(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        child: Row(
+          children: <Widget>[
+            Icon(icon, color: p.accentText, size: 30),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(quizLevelName(l, level),
+                      style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w700,
+                          color: p.text)),
+                  const SizedBox(height: 2),
+                  Text(quizLevelHint(l, level),
+                      style: TextStyle(fontSize: 13, color: p.muted)),
+                  if (best > 0)
+                    Text(l.quizBest(best),
+                        style: TextStyle(fontSize: 12, color: p.muted)),
+                ],
+              ),
+            ),
+            Icon(Icons.chevron_right, color: p.muted),
+          ],
         ),
       ),
     );

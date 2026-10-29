@@ -202,7 +202,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get quizTitle => '行星测验';
 
   @override
-  String get quizIntro => '10 道关于行星的题目。你能答对几道？';
+  String get quizIntro => '10 道关于行星和卫星的题目。你能答对几道？';
 
   @override
   String get quizStart => '开始测验';
@@ -1000,4 +1000,231 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get launchTimeTbd => '时间尚未确定';
+
+  @override
+  String get quizChoose => '选择难度';
+
+  @override
+  String get levelEasy => '简单';
+
+  @override
+  String get levelMedium => '中等';
+
+  @override
+  String get levelHard => '困难';
+
+  @override
+  String get levelEasyHint => '关于行星的基础知识';
+
+  @override
+  String get levelMediumHint => '行星和卫星';
+
+  @override
+  String get levelHardHint => '有难度的比较和排名';
+
+  @override
+  String get qStar => '下面哪一个是恒星，不是行星？';
+
+  @override
+  String get qDwarf => '下面哪一个是矮行星？';
+
+  @override
+  String get qMoonVisited => '人类走上过哪颗卫星？';
+
+  @override
+  String get qLargestMoon => '这些卫星中哪一颗最大？';
+
+  @override
+  String get qSmallestMoon => '这些卫星中哪一颗最小？';
+
+  @override
+  String get qThickAirMoon => '这些卫星中哪一颗有浓厚的大气？';
+
+  @override
+  String get qGeyserMoon => '哪颗卫星会向太空喷出水的喷泉？';
+
+  @override
+  String get qVolcanicMoon => '哪颗卫星上活火山最多？';
+
+  @override
+  String get qBackwardsMoon => '哪颗卫星绕它的行星逆向运行？';
+
+  @override
+  String get qBiggestRocky => '四颗岩质行星中哪一颗最大？';
+
+  @override
+  String get qColdestRocky => '四颗岩质行星中哪一颗最冷？';
+
+  @override
+  String get qHighestPressure => '哪颗行星表面的气压最高？';
+
+  @override
+  String get qSecondLargest => '哪颗行星是第二大的？';
+
+  @override
+  String get qLongestYear => '哪颗行星的一年最长？';
+
+  @override
+  String get qShortestYear => '哪颗行星的一年最短？';
+
+  @override
+  String get qSmallestGiant => '四颗巨行星中哪一颗最小？';
+
+  @override
+  String get qRockyLongestYear => '四颗岩质行星中哪一颗的一年最长？';
+
+  @override
+  String get qFastestMoon => '这些卫星中哪一颗绕行星转得最快？';
+
+  @override
+  String get qSlowestMoon => '这些卫星中哪一颗绕行星一圈用的时间最长？';
+
+  @override
+  String get qStrongestMoonGravity => '这些卫星中哪一颗的引力最强？';
+
+  @override
+  String get qColdestMoon => '这些卫星中哪一颗最冷？';
+
+  @override
+  String get qSecondLargestMoon => '这些卫星中哪一颗是第二大的？';
+
+  @override
+  String get factTitle => '你知道吗？';
+
+  @override
+  String get factTap => '点按查看另一条';
+
+  @override
+  String get factSun1 => '太阳集中了太阳系 99.8% 的质量。';
+
+  @override
+  String get factSun2 => '阳光大约要 8 分 20 秒才能到达地球。';
+
+  @override
+  String get factMercury1 => '水星上的一天，也就是从一次日出到下一次日出，大约是 176 个地球日，是它一年长度的两倍。';
+
+  @override
+  String get factMercury2 => '水星几乎没有空气，所以白天天空也是黑的，夜晚冷得刺骨。';
+
+  @override
+  String get factVenus1 => '金星自转方向相反，所以在金星上太阳从西边升起。';
+
+  @override
+  String get factVenus2 => '金星虽然离太阳更远，却比水星更热，因为它浓厚的大气把热量留住了。';
+
+  @override
+  String get factEarth1 => '地球是我们所知唯一有生命的地方，约 71% 的表面被水覆盖。';
+
+  @override
+  String get factEarth2 => '地球不是完美的球体。因为自转，赤道附近略微鼓起。';
+
+  @override
+  String get factMars1 => '火星上的奥林帕斯山是太阳系最高的火山，大约是珠穆朗玛峰的两倍半高。';
+
+  @override
+  String get factMars2 => '火星上的日落看起来是蓝色的。';
+
+  @override
+  String get factJupiter1 => '木星的质量是其他所有行星加起来的两倍多。';
+
+  @override
+  String get factJupiter2 => '大红斑是一场比地球还大的风暴，人们已经观测了 150 多年。';
+
+  @override
+  String get factSaturn1 => '土星相对于体积非常轻，如果有足够大的浴缸，它能浮在水上。';
+
+  @override
+  String get factSaturn2 => '土星环非常宽，却非常薄：有些地方只有大约十米厚。';
+
+  @override
+  String get factUranus1 => '天王星侧着身子绕太阳滚动，自转轴倾斜约 98 度。';
+
+  @override
+  String get factUranus2 => '天王星是第一颗用望远镜发现的行星，威廉·赫歇尔在 1781 年发现了它。';
+
+  @override
+  String get factNeptune1 => '海王星上的风是所有行星中最快的，超过每小时 2000 公里。';
+
+  @override
+  String get factNeptune2 => '海王星是先靠数学算出来、后才被人看到的：1846 年天文学家算出了它应该在哪里。';
+
+  @override
+  String get factMoon1 => '月球每年离地球远去约 3.8 厘米。';
+
+  @override
+  String get factMoon2 => '我们总是看到月球的同一面，因为它绕地球转一圈时恰好自转一圈。';
+
+  @override
+  String get factPluto1 => '冥王星上的一年约等于 248 个地球年。';
+
+  @override
+  String get factPluto2 => '冥王星上有一大片心形的冻氮平原。';
+
+  @override
+  String get factIo1 => '木卫一是我们所知火山活动最剧烈的天体，有数百座活火山。';
+
+  @override
+  String get factIo2 => '木星的引力不断挤压和拉伸木卫一，由此产生的热量驱动着它的火山。';
+
+  @override
+  String get factEuropa1 => '在冰壳之下，木卫二可能拥有大约相当于地球所有海洋两倍的水。';
+
+  @override
+  String get factEuropa2 => '木卫二是寻找地外生命的最佳地点之一，“欧罗巴快船”探测器正在前往那里。';
+
+  @override
+  String get factGanymede1 => '木卫三是太阳系中最大的卫星，甚至比水星还大。';
+
+  @override
+  String get factGanymede2 => '木卫三是已知唯一拥有自身磁场的卫星。';
+
+  @override
+  String get factCallisto1 => '木卫四是太阳系中陨击坑最密集的地方之一，表面非常古老。';
+
+  @override
+  String get factCallisto2 => '木卫四离木星足够远，受到的强辐射较少，所以科学家建议把它作为未来的基地。';
+
+  @override
+  String get factTitan1 => '土卫六是唯一拥有浓厚大气的卫星，表面气压比地球还高。';
+
+  @override
+  String get factTitan2 => '土卫六上有河流和湖泊，但里面是液态甲烷和乙烷，不是水。';
+
+  @override
+  String get factEnceladus1 => '土卫二通过南极附近的裂缝向太空喷出冰和水蒸气的喷流。';
+
+  @override
+  String get factEnceladus2 => '土卫二的喷流补充着土星的 E 环。';
+
+  @override
+  String get factTriton1 => '海卫一绕海王星逆向运行，所以它很可能原本是被海王星俘获的矮行星。';
+
+  @override
+  String get factTriton2 => '海卫一的温度约为 −235 °C，是太阳系中测得的最冷的地方之一。';
+
+  @override
+  String get jumpInput => '你在地球上的跳跃高度（厘米）';
+
+  @override
+  String jumpHigh(String height) {
+    return '跳跃：$height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return '在地球上跳 $height，在这里会变成';
+  }
+
+  @override
+  String get jumpNote => '起跳的力和在地球上一样。太阳和气态巨行星上没有可以站立的地面，所以这只是一个想象游戏。';
+
+  @override
+  String valueCm(String value) {
+    return '$value 厘米';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value 米';
+  }
 }

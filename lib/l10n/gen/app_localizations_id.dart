@@ -204,7 +204,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get quizIntro =>
-      '10 pertanyaan tentang planet. Berapa yang bisa Anda jawab benar?';
+      '10 pertanyaan tentang planet dan bulan. Berapa yang bisa kamu jawab benar?';
 
   @override
   String get quizStart => 'Mulai kuis';
@@ -1028,4 +1028,279 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get launchTimeTbd => 'Waktu belum ditentukan';
+
+  @override
+  String get quizChoose => 'Pilih tingkat';
+
+  @override
+  String get levelEasy => 'Mudah';
+
+  @override
+  String get levelMedium => 'Sedang';
+
+  @override
+  String get levelHard => 'Sulit';
+
+  @override
+  String get levelEasyHint => 'Dasar-dasar tentang planet';
+
+  @override
+  String get levelMediumHint => 'Planet dan bulan';
+
+  @override
+  String get levelHardHint => 'Perbandingan dan peringkat yang menjebak';
+
+  @override
+  String get qStar => 'Manakah dari ini yang bintang, bukan planet?';
+
+  @override
+  String get qDwarf => 'Manakah dari ini yang planet kerdil?';
+
+  @override
+  String get qMoonVisited => 'Di bulan mana manusia pernah berjalan?';
+
+  @override
+  String get qLargestMoon => 'Manakah dari bulan-bulan ini yang paling besar?';
+
+  @override
+  String get qSmallestMoon => 'Manakah dari bulan-bulan ini yang paling kecil?';
+
+  @override
+  String get qThickAirMoon =>
+      'Manakah dari bulan-bulan ini yang punya atmosfer tebal?';
+
+  @override
+  String get qGeyserMoon =>
+      'Bulan mana yang menyemburkan geiser air ke luar angkasa?';
+
+  @override
+  String get qVolcanicMoon =>
+      'Bulan mana yang punya gunung berapi paling aktif?';
+
+  @override
+  String get qBackwardsMoon =>
+      'Bulan mana yang mengelilingi planetnya dengan arah terbalik?';
+
+  @override
+  String get qBiggestRocky =>
+      'Manakah yang terbesar dari empat planet berbatu?';
+
+  @override
+  String get qColdestRocky =>
+      'Manakah yang terdingin dari empat planet berbatu?';
+
+  @override
+  String get qHighestPressure =>
+      'Planet mana yang tekanan udara di permukaannya paling tinggi?';
+
+  @override
+  String get qSecondLargest => 'Planet mana yang terbesar kedua?';
+
+  @override
+  String get qLongestYear => 'Planet mana yang tahunnya paling panjang?';
+
+  @override
+  String get qShortestYear => 'Planet mana yang tahunnya paling pendek?';
+
+  @override
+  String get qSmallestGiant =>
+      'Manakah yang terkecil dari empat planet raksasa?';
+
+  @override
+  String get qRockyLongestYear =>
+      'Manakah dari empat planet berbatu yang tahunnya paling panjang?';
+
+  @override
+  String get qFastestMoon =>
+      'Manakah dari bulan-bulan ini yang mengelilingi planetnya paling cepat?';
+
+  @override
+  String get qSlowestMoon =>
+      'Manakah dari bulan-bulan ini yang butuh waktu paling lama mengelilingi planetnya?';
+
+  @override
+  String get qStrongestMoonGravity =>
+      'Manakah dari bulan-bulan ini yang gravitasinya paling kuat?';
+
+  @override
+  String get qColdestMoon => 'Manakah dari bulan-bulan ini yang paling dingin?';
+
+  @override
+  String get qSecondLargestMoon =>
+      'Manakah dari bulan-bulan ini yang terbesar kedua?';
+
+  @override
+  String get factTitle => 'Tahukah kamu?';
+
+  @override
+  String get factTap => 'Ketuk untuk fakta lain';
+
+  @override
+  String get factSun1 =>
+      'Matahari menyimpan 99,8% dari seluruh massa tata surya.';
+
+  @override
+  String get factSun2 =>
+      'Cahaya Matahari butuh sekitar 8 menit 20 detik untuk sampai ke Bumi.';
+
+  @override
+  String get factMercury1 =>
+      'Satu hari di Merkurius, dari matahari terbit sampai terbit berikutnya, berlangsung sekitar 176 hari Bumi. Itu dua kali lebih panjang dari tahunnya.';
+
+  @override
+  String get factMercury2 =>
+      'Merkurius hampir tidak punya udara, jadi langitnya hitam bahkan di siang hari, dan malamnya sangat dingin.';
+
+  @override
+  String get factVenus1 =>
+      'Venus berputar terbalik, jadi di Venus Matahari terbit dari barat.';
+
+  @override
+  String get factVenus2 =>
+      'Venus lebih panas daripada Merkurius, padahal lebih jauh dari Matahari, karena udaranya yang tebal memerangkap panas.';
+
+  @override
+  String get factEarth1 =>
+      'Bumi adalah satu-satunya tempat yang kita tahu punya kehidupan, dan sekitar 71% permukaannya tertutup air.';
+
+  @override
+  String get factEarth2 =>
+      'Bumi bukan bola yang sempurna. Bagian khatulistiwanya sedikit menggembung karena Bumi berputar.';
+
+  @override
+  String get factMars1 =>
+      'Olympus Mons di Mars adalah gunung berapi tertinggi di tata surya, sekitar dua setengah kali setinggi Gunung Everest.';
+
+  @override
+  String get factMars2 => 'Matahari terbenam di Mars tampak biru.';
+
+  @override
+  String get factJupiter1 =>
+      'Massa Jupiter lebih dari dua kali massa semua planet lain digabungkan.';
+
+  @override
+  String get factJupiter2 =>
+      'Bintik Merah Besar adalah badai yang lebih besar dari Bumi, dan sudah diamati selama lebih dari 150 tahun.';
+
+  @override
+  String get factSaturn1 =>
+      'Saturnus begitu ringan untuk ukurannya sehingga akan mengapung di air, kalau ada bak mandi yang cukup besar.';
+
+  @override
+  String get factSaturn2 =>
+      'Cincin Saturnus sangat lebar tetapi sangat tipis: di beberapa tempat tebalnya hanya sekitar sepuluh meter.';
+
+  @override
+  String get factUranus1 =>
+      'Uranus mengelilingi Matahari sambil berguling miring, dengan kemiringan sekitar 98 derajat.';
+
+  @override
+  String get factUranus2 =>
+      'Uranus adalah planet pertama yang ditemukan dengan teleskop. William Herschel melihatnya pada 1781.';
+
+  @override
+  String get factNeptune1 =>
+      'Neptunus punya angin tercepat di antara semua planet, lebih dari 2.000 km/jam.';
+
+  @override
+  String get factNeptune2 =>
+      'Neptunus ditemukan lewat matematika sebelum ada yang melihatnya: pada 1846 para astronom menghitung di mana letaknya.';
+
+  @override
+  String get factMoon1 =>
+      'Bulan menjauh dari Bumi sekitar 3,8 sentimeter setiap tahun.';
+
+  @override
+  String get factMoon2 =>
+      'Kita selalu melihat sisi Bulan yang sama, karena Bulan berputar tepat sekali setiap mengelilingi Bumi sekali.';
+
+  @override
+  String get factPluto1 =>
+      'Satu tahun di Pluto berlangsung sekitar 248 tahun Bumi.';
+
+  @override
+  String get factPluto2 =>
+      'Pluto punya dataran besar berbentuk hati yang terbuat dari nitrogen beku.';
+
+  @override
+  String get factIo1 =>
+      'Io adalah dunia paling vulkanik yang kita kenal, dengan ratusan gunung berapi aktif.';
+
+  @override
+  String get factIo2 =>
+      'Gravitasi Jupiter menekan dan menarik Io, dan panas dari situ menggerakkan gunung-gunung berapinya.';
+
+  @override
+  String get factEuropa1 =>
+      'Di bawah kerak esnya, Europa mungkin menyimpan air sekitar dua kali lipat dari seluruh samudra Bumi.';
+
+  @override
+  String get factEuropa2 =>
+      'Europa adalah salah satu tempat terbaik untuk mencari kehidupan di luar Bumi. Wahana Europa Clipper sedang menuju ke sana.';
+
+  @override
+  String get factGanymede1 =>
+      'Ganymede adalah bulan terbesar di tata surya. Bahkan lebih besar dari Merkurius.';
+
+  @override
+  String get factGanymede2 =>
+      'Ganymede adalah satu-satunya bulan yang diketahui punya medan magnet sendiri.';
+
+  @override
+  String get factCallisto1 =>
+      'Callisto adalah salah satu tempat dengan kawah terbanyak di tata surya, dan permukaannya sangat tua.';
+
+  @override
+  String get factCallisto2 =>
+      'Callisto cukup jauh dari Jupiter sehingga menerima lebih sedikit radiasi kerasnya, jadi para ilmuwan mengusulkannya untuk pangkalan masa depan.';
+
+  @override
+  String get factTitan1 =>
+      'Titan adalah satu-satunya bulan dengan atmosfer tebal. Tekanan udara di permukaannya lebih tinggi daripada di Bumi.';
+
+  @override
+  String get factTitan2 =>
+      'Titan punya sungai dan danau, tetapi isinya metana dan etana cair, bukan air.';
+
+  @override
+  String get factEnceladus1 =>
+      'Enceladus menyemburkan pancaran es dan uap air ke luar angkasa lewat retakan di dekat kutub selatannya.';
+
+  @override
+  String get factEnceladus2 => 'Pancaran Enceladus mengisi cincin E Saturnus.';
+
+  @override
+  String get factTriton1 =>
+      'Triton mengelilingi Neptunus dengan arah terbalik, jadi kemungkinan dulunya planet kerdil yang ditangkap Neptunus.';
+
+  @override
+  String get factTriton2 =>
+      'Pada sekitar −235 °C, Triton adalah salah satu tempat terdingin yang pernah diukur di tata surya.';
+
+  @override
+  String get jumpInput => 'Tinggi lompatanmu di Bumi (cm)';
+
+  @override
+  String jumpHigh(String height) {
+    return 'Lompatan: $height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return 'Lompatan $height di Bumi menjadi';
+  }
+
+  @override
+  String get jumpNote =>
+      'Dengan tolakan yang sama seperti di Bumi. Di Matahari dan planet gas raksasa tidak ada tanah untuk berpijak, jadi ini hanya permainan khayalan.';
+
+  @override
+  String valueCm(String value) {
+    return '$value cm';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value m';
+  }
 }

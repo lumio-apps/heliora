@@ -203,7 +203,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get quizTitle => 'اختبار الكواكب';
 
   @override
-  String get quizIntro => '10 أسئلة عن الكواكب. كم إجابة صحيحة ستحصل عليها؟';
+  String get quizIntro =>
+      '10 أسئلة عن الكواكب والأقمار. كم إجابة صحيحة ستحصل عليها؟';
 
   @override
   String get quizStart => 'ابدأ الاختبار';
@@ -1024,4 +1025,264 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get launchTimeTbd => 'الوقت لم يُحدد بعد';
+
+  @override
+  String get quizChoose => 'اختر المستوى';
+
+  @override
+  String get levelEasy => 'سهل';
+
+  @override
+  String get levelMedium => 'متوسط';
+
+  @override
+  String get levelHard => 'صعب';
+
+  @override
+  String get levelEasyHint => 'أساسيات الكواكب';
+
+  @override
+  String get levelMediumHint => 'الكواكب والأقمار';
+
+  @override
+  String get levelHardHint => 'مقارنات وترتيبات صعبة';
+
+  @override
+  String get qStar => 'أيٌّ من هذه نجم وليس كوكبًا؟';
+
+  @override
+  String get qDwarf => 'أيٌّ من هذه كوكب قزم؟';
+
+  @override
+  String get qMoonVisited => 'على أي قمر مشى البشر؟';
+
+  @override
+  String get qLargestMoon => 'أي هذه الأقمار هو الأكبر؟';
+
+  @override
+  String get qSmallestMoon => 'أي هذه الأقمار هو الأصغر؟';
+
+  @override
+  String get qThickAirMoon => 'أي هذه الأقمار له غلاف جوي كثيف؟';
+
+  @override
+  String get qGeyserMoon => 'أي قمر يقذف نوافير من الماء إلى الفضاء؟';
+
+  @override
+  String get qVolcanicMoon => 'أي قمر فيه أكثر البراكين نشاطًا؟';
+
+  @override
+  String get qBackwardsMoon => 'أي قمر يدور حول كوكبه بالاتجاه المعاكس؟';
+
+  @override
+  String get qBiggestRocky => 'ما أكبر الكواكب الصخرية الأربعة؟';
+
+  @override
+  String get qColdestRocky => 'ما أبرد الكواكب الصخرية الأربعة؟';
+
+  @override
+  String get qHighestPressure => 'أي كوكب له أعلى ضغط هواء عند سطحه؟';
+
+  @override
+  String get qSecondLargest => 'أي كوكب هو ثاني أكبر الكواكب؟';
+
+  @override
+  String get qLongestYear => 'أي كوكب له أطول سنة؟';
+
+  @override
+  String get qShortestYear => 'أي كوكب له أقصر سنة؟';
+
+  @override
+  String get qSmallestGiant => 'ما أصغر الكواكب العملاقة الأربعة؟';
+
+  @override
+  String get qRockyLongestYear => 'أي الكواكب الصخرية الأربعة له أطول سنة؟';
+
+  @override
+  String get qFastestMoon => 'أي هذه الأقمار يدور حول كوكبه بأسرع ما يكون؟';
+
+  @override
+  String get qSlowestMoon =>
+      'أي هذه الأقمار يستغرق أطول وقت للدوران حول كوكبه؟';
+
+  @override
+  String get qStrongestMoonGravity => 'أي هذه الأقمار له أقوى جاذبية؟';
+
+  @override
+  String get qColdestMoon => 'أي هذه الأقمار هو الأبرد؟';
+
+  @override
+  String get qSecondLargestMoon => 'أي هذه الأقمار هو ثاني أكبرها؟';
+
+  @override
+  String get factTitle => 'هل تعلم؟';
+
+  @override
+  String get factTap => 'اضغط لمعلومة أخرى';
+
+  @override
+  String get factSun1 => 'تحتوي الشمس على 99.8% من كتلة المجموعة الشمسية كلها.';
+
+  @override
+  String get factSun2 =>
+      'يستغرق ضوء الشمس نحو 8 دقائق و20 ثانية ليصل إلى الأرض.';
+
+  @override
+  String get factMercury1 =>
+      'اليوم على عطارد، من شروق الشمس إلى الشروق التالي، يستمر نحو 176 يومًا أرضيًا. وهذا ضعف طول سنته.';
+
+  @override
+  String get factMercury2 =>
+      'لا هواء تقريبًا على عطارد، لذا تبقى سماؤه سوداء حتى في النهار، وتكون لياليه شديدة البرودة.';
+
+  @override
+  String get factVenus1 =>
+      'تدور الزهرة بالاتجاه المعاكس، لذلك تشرق الشمس هناك من الغرب.';
+
+  @override
+  String get factVenus2 =>
+      'الزهرة أسخن من عطارد رغم أنها أبعد عن الشمس، لأن هواءها الكثيف يحبس الحرارة.';
+
+  @override
+  String get factEarth1 =>
+      'الأرض هي المكان الوحيد الذي نعرف فيه الحياة، ونحو 71% من سطحها مغطى بالماء.';
+
+  @override
+  String get factEarth2 =>
+      'الأرض ليست كرة مثالية. فهي منتفخة قليلًا عند خط الاستواء بسبب دورانها.';
+
+  @override
+  String get factMars1 =>
+      'أوليمبوس مونس على المريخ هو أعلى بركان في المجموعة الشمسية، ويبلغ ارتفاعه نحو مرتين ونصف ارتفاع جبل إيفرست.';
+
+  @override
+  String get factMars2 => 'غروب الشمس على المريخ يبدو أزرق.';
+
+  @override
+  String get factJupiter1 =>
+      'كتلة المشتري أكثر من ضعف كتلة جميع الكواكب الأخرى مجتمعة.';
+
+  @override
+  String get factJupiter2 =>
+      'البقعة الحمراء العظيمة عاصفة أكبر من الأرض، ويراقبها الناس منذ أكثر من 150 عامًا.';
+
+  @override
+  String get factSaturn1 =>
+      'زحل خفيف جدًا بالنسبة لحجمه حتى إنه سيطفو على الماء، لو وجدنا حوض استحمام يكفيه.';
+
+  @override
+  String get factSaturn2 =>
+      'حلقات زحل عريضة جدًا لكنها رقيقة جدًا: سمكها في بعض المواضع نحو عشرة أمتار فقط.';
+
+  @override
+  String get factUranus1 =>
+      'يدور أورانوس حول الشمس وهو مائل على جنبه، بميل نحو 98 درجة.';
+
+  @override
+  String get factUranus2 =>
+      'كان أورانوس أول كوكب يُكتشف بالتلسكوب. رصده ويليام هيرشل عام 1781.';
+
+  @override
+  String get factNeptune1 =>
+      'في نبتون أسرع رياح بين الكواكب، أكثر من 2000 كم/س.';
+
+  @override
+  String get factNeptune2 =>
+      'اكتُشف نبتون بالحساب قبل أن يراه أحد: ففي عام 1846 حسب علماء الفلك أين يجب أن يكون.';
+
+  @override
+  String get factMoon1 => 'يبتعد القمر عن الأرض نحو 3.8 سنتيمتر كل عام.';
+
+  @override
+  String get factMoon2 =>
+      'نرى دائمًا الوجه نفسه من القمر، لأنه يدور حول نفسه مرة واحدة بالضبط مع كل دورة حول الأرض.';
+
+  @override
+  String get factPluto1 => 'السنة على بلوتو تعادل نحو 248 سنة أرضية.';
+
+  @override
+  String get factPluto2 =>
+      'على بلوتو سهل ضخم على شكل قلب من النيتروجين المتجمد.';
+
+  @override
+  String get factIo1 =>
+      'آيو هو أكثر العوالم التي نعرفها نشاطًا بركانيًا، وفيه مئات البراكين النشطة.';
+
+  @override
+  String get factIo2 =>
+      'تضغط جاذبية المشتري على آيو وتشدّه، والحرارة الناتجة عن ذلك تغذي براكينه.';
+
+  @override
+  String get factEuropa1 =>
+      'تحت قشرتها الجليدية، تحتوي يوروبا على الأرجح على ضعف ماء محيطات الأرض كلها تقريبًا.';
+
+  @override
+  String get factEuropa2 =>
+      'يوروبا من أفضل الأماكن للبحث عن حياة خارج الأرض. والمركبة «يوروبا كليبر» في طريقها إليها.';
+
+  @override
+  String get factGanymede1 =>
+      'غانيميد هو أكبر قمر في المجموعة الشمسية. بل إنه أكبر من عطارد.';
+
+  @override
+  String get factGanymede2 =>
+      'غانيميد هو القمر الوحيد المعروف بأن له مجالًا مغناطيسيًا خاصًا به.';
+
+  @override
+  String get factCallisto1 =>
+      'كاليستو من أكثر الأماكن حفرًا في المجموعة الشمسية، وسطحه قديم جدًا.';
+
+  @override
+  String get factCallisto2 =>
+      'كاليستو بعيد عن المشتري بما يكفي ليتعرض لإشعاعه القاسي بدرجة أقل، لذلك اقترحه العلماء لقاعدة مستقبلية.';
+
+  @override
+  String get factTitan1 =>
+      'تيتان هو القمر الوحيد ذو الغلاف الجوي الكثيف. وضغط هوائه عند السطح أعلى منه على الأرض.';
+
+  @override
+  String get factTitan2 =>
+      'في تيتان أنهار وبحيرات، لكنها تحتوي على الميثان والإيثان السائلين لا على الماء.';
+
+  @override
+  String get factEnceladus1 =>
+      'يقذف إنسيلادوس نفاثات من الجليد وبخار الماء إلى الفضاء عبر شقوق قرب قطبه الجنوبي.';
+
+  @override
+  String get factEnceladus2 => 'نفاثات إنسيلادوس تغذي حلقة E لزحل.';
+
+  @override
+  String get factTriton1 =>
+      'يدور تريتون حول نبتون بالاتجاه المعاكس، لذلك ربما كان كوكبًا قزمًا أسره نبتون.';
+
+  @override
+  String get factTriton2 =>
+      'عند نحو −235 °م، يُعدّ تريتون من أبرد الأماكن التي قيست حرارتها في المجموعة الشمسية.';
+
+  @override
+  String get jumpInput => 'ارتفاع قفزتك على الأرض (سم)';
+
+  @override
+  String jumpHigh(String height) {
+    return 'القفزة: $height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return 'قفزة $height على الأرض تصبح';
+  }
+
+  @override
+  String get jumpNote =>
+      'الدفعة نفسها كما على الأرض. لا توجد أرض تقف عليها فوق الشمس والكواكب الغازية العملاقة، لذا هذه مجرد لعبة تخيّل.';
+
+  @override
+  String valueCm(String value) {
+    return '$value سم';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value م';
+  }
 }

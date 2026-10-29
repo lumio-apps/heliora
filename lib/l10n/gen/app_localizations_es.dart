@@ -204,7 +204,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get quizIntro =>
-      '10 preguntas sobre los planetas. ¿Cuántas puedes acertar?';
+      '10 preguntas sobre los planetas y las lunas. ¿Cuántas aciertas?';
 
   @override
   String get quizStart => 'Empezar quiz';
@@ -1030,4 +1030,276 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get launchTimeTbd => 'Hora aún sin fijar';
+
+  @override
+  String get quizChoose => 'Elige un nivel';
+
+  @override
+  String get levelEasy => 'Fácil';
+
+  @override
+  String get levelMedium => 'Medio';
+
+  @override
+  String get levelHard => 'Difícil';
+
+  @override
+  String get levelEasyHint => 'Lo básico de los planetas';
+
+  @override
+  String get levelMediumHint => 'Planetas y lunas';
+
+  @override
+  String get levelHardHint => 'Comparaciones y rankings difíciles';
+
+  @override
+  String get qStar => '¿Cuál de estos es una estrella, no un planeta?';
+
+  @override
+  String get qDwarf => '¿Cuál de estos es un planeta enano?';
+
+  @override
+  String get qMoonVisited => '¿En qué luna han caminado personas?';
+
+  @override
+  String get qLargestMoon => '¿Cuál de estas lunas es la más grande?';
+
+  @override
+  String get qSmallestMoon => '¿Cuál de estas lunas es la más pequeña?';
+
+  @override
+  String get qThickAirMoon => '¿Cuál de estas lunas tiene una atmósfera densa?';
+
+  @override
+  String get qGeyserMoon => '¿Qué luna lanza géiseres de agua al espacio?';
+
+  @override
+  String get qVolcanicMoon => '¿Qué luna tiene los volcanes más activos?';
+
+  @override
+  String get qBackwardsMoon =>
+      '¿Qué luna gira alrededor de su planeta al revés?';
+
+  @override
+  String get qBiggestRocky =>
+      '¿Cuál es el más grande de los cuatro planetas rocosos?';
+
+  @override
+  String get qColdestRocky =>
+      '¿Cuál es el más frío de los cuatro planetas rocosos?';
+
+  @override
+  String get qHighestPressure =>
+      '¿Qué planeta tiene la presión del aire más alta en su superficie?';
+
+  @override
+  String get qSecondLargest => '¿Qué planeta es el segundo más grande?';
+
+  @override
+  String get qLongestYear => '¿Qué planeta tiene el año más largo?';
+
+  @override
+  String get qShortestYear => '¿Qué planeta tiene el año más corto?';
+
+  @override
+  String get qSmallestGiant =>
+      '¿Cuál es el más pequeño de los cuatro planetas gigantes?';
+
+  @override
+  String get qRockyLongestYear =>
+      '¿Cuál de los cuatro planetas rocosos tiene el año más largo?';
+
+  @override
+  String get qFastestMoon =>
+      '¿Cuál de estas lunas da la vuelta a su planeta más rápido?';
+
+  @override
+  String get qSlowestMoon =>
+      '¿Cuál de estas lunas tarda más en dar la vuelta a su planeta?';
+
+  @override
+  String get qStrongestMoonGravity =>
+      '¿Cuál de estas lunas tiene la gravedad más fuerte?';
+
+  @override
+  String get qColdestMoon => '¿Cuál de estas lunas es la más fría?';
+
+  @override
+  String get qSecondLargestMoon =>
+      '¿Cuál de estas lunas es la segunda más grande?';
+
+  @override
+  String get factTitle => '¿Sabías que…?';
+
+  @override
+  String get factTap => 'Toca para ver otro dato';
+
+  @override
+  String get factSun1 =>
+      'El Sol contiene el 99,8 % de toda la masa del sistema solar.';
+
+  @override
+  String get factSun2 =>
+      'La luz del Sol tarda unos 8 minutos y 20 segundos en llegar a la Tierra.';
+
+  @override
+  String get factMercury1 =>
+      'Un día en Mercurio, de un amanecer al siguiente, dura unos 176 días terrestres. Es el doble de largo que su año.';
+
+  @override
+  String get factMercury2 =>
+      'Mercurio casi no tiene aire, así que su cielo es negro incluso de día y sus noches son gélidas.';
+
+  @override
+  String get factVenus1 =>
+      'Venus gira al revés, así que en Venus el Sol sale por el oeste.';
+
+  @override
+  String get factVenus2 =>
+      'Venus es más caliente que Mercurio, aunque está más lejos del Sol, porque su aire denso atrapa el calor.';
+
+  @override
+  String get factEarth1 =>
+      'La Tierra es el único lugar con vida que conocemos, y cerca del 71 % de su superficie está cubierta de agua.';
+
+  @override
+  String get factEarth2 =>
+      'La Tierra no es una bola perfecta. Se abulta un poco en el ecuador porque gira.';
+
+  @override
+  String get factMars1 =>
+      'El Monte Olimpo de Marte es el volcán más alto del sistema solar, unas dos veces y media más alto que el Everest.';
+
+  @override
+  String get factMars2 => 'Los atardeceres en Marte se ven azules.';
+
+  @override
+  String get factJupiter1 =>
+      'Júpiter tiene más del doble de masa que todos los demás planetas juntos.';
+
+  @override
+  String get factJupiter2 =>
+      'La Gran Mancha Roja es una tormenta más grande que la Tierra, y la observamos desde hace más de 150 años.';
+
+  @override
+  String get factSaturn1 =>
+      'Saturno es tan ligero para su tamaño que flotaría en el agua, si hubiera una bañera lo bastante grande.';
+
+  @override
+  String get factSaturn2 =>
+      'Los anillos de Saturno son muy anchos pero muy delgados: en algunos puntos solo tienen unos diez metros de grosor.';
+
+  @override
+  String get factUranus1 =>
+      'Urano gira alrededor del Sol rodando de lado, inclinado unos 98 grados.';
+
+  @override
+  String get factUranus2 =>
+      'Urano fue el primer planeta descubierto con un telescopio. William Herschel lo vio en 1781.';
+
+  @override
+  String get factNeptune1 =>
+      'Neptuno tiene los vientos más rápidos de cualquier planeta, de más de 2000 km/h.';
+
+  @override
+  String get factNeptune2 =>
+      'Neptuno se encontró con matemáticas antes de que nadie lo viera: en 1846 los astrónomos calcularon dónde tenía que estar.';
+
+  @override
+  String get factMoon1 =>
+      'La Luna se aleja de la Tierra unos 3,8 centímetros cada año.';
+
+  @override
+  String get factMoon2 =>
+      'Siempre vemos la misma cara de la Luna, porque gira exactamente una vez por cada vuelta alrededor de la Tierra.';
+
+  @override
+  String get factPluto1 => 'Un año en Plutón dura unos 248 años terrestres.';
+
+  @override
+  String get factPluto2 =>
+      'Plutón tiene una enorme llanura con forma de corazón hecha de nitrógeno helado.';
+
+  @override
+  String get factIo1 =>
+      'Ío es el mundo más volcánico que conocemos, con cientos de volcanes activos.';
+
+  @override
+  String get factIo2 =>
+      'La gravedad de Júpiter aprieta y estira a Ío, y el calor que eso produce alimenta sus volcanes.';
+
+  @override
+  String get factEuropa1 =>
+      'Bajo su corteza de hielo, Europa probablemente guarda el doble de agua que todos los océanos de la Tierra.';
+
+  @override
+  String get factEuropa2 =>
+      'Europa es uno de los mejores lugares para buscar vida fuera de la Tierra. La nave Europa Clipper va camino de allí.';
+
+  @override
+  String get factGanymede1 =>
+      'Ganímedes es la luna más grande del sistema solar. Es incluso más grande que Mercurio.';
+
+  @override
+  String get factGanymede2 =>
+      'Ganímedes es la única luna que se sabe que tiene campo magnético propio.';
+
+  @override
+  String get factCallisto1 =>
+      'Calisto es uno de los lugares con más cráteres del sistema solar, y su superficie es muy antigua.';
+
+  @override
+  String get factCallisto2 =>
+      'Calisto está lo bastante lejos de Júpiter como para recibir menos de su dura radiación, por eso los científicos lo han propuesto para una futura base.';
+
+  @override
+  String get factTitan1 =>
+      'Titán es la única luna con una atmósfera densa. Su presión del aire en la superficie es mayor que en la Tierra.';
+
+  @override
+  String get factTitan2 =>
+      'Titán tiene ríos y lagos, pero son de metano y etano líquidos, no de agua.';
+
+  @override
+  String get factEnceladus1 =>
+      'Encélado lanza chorros de hielo y vapor de agua al espacio por grietas cerca de su polo sur.';
+
+  @override
+  String get factEnceladus2 =>
+      'Los chorros de Encélado alimentan el anillo E de Saturno.';
+
+  @override
+  String get factTriton1 =>
+      'Tritón gira alrededor de Neptuno al revés, así que probablemente era un planeta enano capturado por Neptuno.';
+
+  @override
+  String get factTriton2 =>
+      'A unos −235 °C, Tritón es uno de los lugares más fríos que se han medido en el sistema solar.';
+
+  @override
+  String get jumpInput => 'Tu altura de salto en la Tierra (cm)';
+
+  @override
+  String jumpHigh(String height) {
+    return 'Salto: $height';
+  }
+
+  @override
+  String jumpFeelsLike(String height) {
+    return 'Un salto de $height en la Tierra se convierte en';
+  }
+
+  @override
+  String get jumpNote =>
+      'Con el mismo impulso que en la Tierra. En el Sol y en los gigantes gaseosos no hay suelo donde pararse, así que esto es solo un juego de imaginación.';
+
+  @override
+  String valueCm(String value) {
+    return '$value cm';
+  }
+
+  @override
+  String valueM(String value) {
+    return '$value m';
+  }
 }

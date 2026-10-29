@@ -23,6 +23,7 @@ class HelioraSettings {
     this.cityId = '',
     this.reminders = const <String>[],
     this.onlineFeatures = false,
+    this.quizBests = const <String, int>{},
   });
 
   final ThemeMode themeMode;
@@ -48,6 +49,19 @@ class HelioraSettings {
   /// and rocket launches). Off by default.
   final bool onlineFeatures;
 
+  /// Best quiz score for each level, keyed by the level name (easy, medium,
+  /// hard). The older single [bestQuizScore] counts as the medium score.
+  final Map<String, int> quizBests;
+
+  /// The best score of a quiz level, 0 when not played yet.
+  int bestFor(String level) {
+    final saved = quizBests[level];
+    if (saved != null) {
+      return saved;
+    }
+    return level == 'medium' ? bestQuizScore : 0;
+  }
+
   DateTime? get birthDate => birthDateMs == 0
       ? null
       : DateTime.fromMillisecondsSinceEpoch(birthDateMs);
@@ -63,6 +77,7 @@ class HelioraSettings {
     String? cityId,
     List<String>? reminders,
     bool? onlineFeatures,
+    Map<String, int>? quizBests,
   }) {
     return HelioraSettings(
       themeMode: themeMode ?? this.themeMode,
@@ -75,6 +90,7 @@ class HelioraSettings {
       cityId: cityId ?? this.cityId,
       reminders: reminders ?? this.reminders,
       onlineFeatures: onlineFeatures ?? this.onlineFeatures,
+      quizBests: quizBests ?? this.quizBests,
     );
   }
 
@@ -91,6 +107,7 @@ class HelioraSettings {
       'cityId': cityId,
       'reminders': reminders,
       'onlineFeatures': onlineFeatures,
+      'quizBests': quizBests,
     };
   }
 
@@ -118,6 +135,7 @@ class HelioraSettings {
     final city = json['cityId'];
     final reminders = json['reminders'];
     final online = json['onlineFeatures'];
+    final bests = json['quizBests'];
     return HelioraSettings(
       themeMode: theme,
       localeCode: locale is String ? locale : d.localeCode,
@@ -131,6 +149,12 @@ class HelioraSettings {
           ? <String>[for (final r in reminders) if (r is String) r]
           : d.reminders,
       onlineFeatures: online is bool ? online : d.onlineFeatures,
+      quizBests: bests is Map
+          ? <String, int>{
+              for (final e in bests.entries)
+                if (e.key is String && e.value is int) e.key as String: e.value as int,
+            }
+          : d.quizBests,
     );
   }
 }

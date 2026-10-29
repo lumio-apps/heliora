@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../core/facts.dart';
 import '../core/format.dart';
 import '../core/orbits.dart';
 import '../data/planets.dart';
@@ -20,16 +21,42 @@ class WeightScreen extends StatefulWidget {
 class _WeightScreenState extends State<WeightScreen> {
   final TextEditingController _controller = TextEditingController(text: '70');
   double _kg = 70;
+  final TextEditingController _jumpController =
+      TextEditingController(text: '40');
+  double _jumpCm = 40;
 
   @override
   void dispose() {
     _controller.dispose();
+    _jumpController.dispose();
     super.dispose();
   }
 
   void _changed(String text) {
     final value = double.tryParse(text.replaceAll(',', '.'));
     setState(() => _kg = (value == null || value < 0) ? 0 : value);
+  }
+
+  void _jumpChanged(String text) {
+    final value = double.tryParse(text.replaceAll(',', '.'));
+    setState(() => _jumpCm = (value == null || value < 0) ? 0 : value);
+  }
+
+  InputDecoration _decoration(Palette p, String label, String suffix) {
+    OutlineInputBorder border(Color color, [double width = 1]) =>
+        OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(color: color, width: width),
+        );
+    return InputDecoration(
+      labelText: label,
+      suffixText: suffix,
+      filled: true,
+      fillColor: p.surface,
+      border: border(p.border),
+      enabledBorder: border(p.border),
+      focusedBorder: border(p.accentText, 1.5),
+    );
   }
 
   @override
@@ -53,25 +80,23 @@ class _WeightScreenState extends State<WeightScreen> {
           ],
           style: TextStyle(
               fontSize: 20, fontWeight: FontWeight.w600, color: p.text),
-          decoration: InputDecoration(
-            labelText: l.weightInput,
-            suffixText: 'kg',
-            filled: true,
-            fillColor: p.surface,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
-              borderSide: BorderSide(color: p.border),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
-              borderSide: BorderSide(color: p.border),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
-              borderSide: BorderSide(color: p.accentText, width: 1.5),
-            ),
-          ),
+          decoration: _decoration(p, l.weightInput, 'kg'),
         ),
+        const SizedBox(height: 12),
+        TextField(
+          controller: _jumpController,
+          onChanged: _jumpChanged,
+          keyboardType: const TextInputType.numberWithOptions(decimal: true),
+          inputFormatters: <TextInputFormatter>[
+            FilteringTextInputFormatter.allow(RegExp(r'[0-9.,]')),
+            LengthLimitingTextInputFormatter(5),
+          ],
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.w600, color: p.text),
+          decoration: _decoration(p, l.jumpInput, 'cm'),
+        ),
+        const SizedBox(height: 6),
+        Text(l.jumpNote, style: TextStyle(fontSize: 12, color: p.muted)),
         const SizedBox(height: 16),
         for (final planet in allBodies) ...<Widget>[
           SurfaceCard(
@@ -91,9 +116,8 @@ class _WeightScreenState extends State<WeightScreen> {
                               fontWeight: FontWeight.w600,
                               color: p.text)),
                       Text(
-                        l.gravityTimes(formatNumber(
-                            context, planet.relativeGravity,
-                            decimals: 2)),
+                        '${l.gravityTimes(formatNumber(context, planet.relativeGravity, decimals: 2))}'
+                        ' · ${l.jumpHigh(jumpText(context, l, jumpHeightCm(_jumpCm, planet.relativeGravity)))}',
                         style: TextStyle(fontSize: 12, color: p.muted),
                       ),
                     ],
