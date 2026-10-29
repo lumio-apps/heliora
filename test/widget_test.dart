@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:heliora/core/birthday.dart';
+import 'package:heliora/core/eclipses.dart';
 import 'package:heliora/core/events.dart';
 import 'package:heliora/core/facts.dart';
 import 'package:heliora/core/finder.dart';
@@ -12,6 +14,9 @@ import 'package:heliora/core/orbits.dart';
 import 'package:heliora/core/sgp4.dart';
 import 'package:heliora/core/sky.dart';
 import 'package:heliora/data/cities.dart';
+import 'package:heliora/data/missions.dart';
+import 'package:heliora/data/tonight_alerts.dart';
+import 'package:heliora/l10n/gen/app_localizations.dart';
 import 'package:heliora/core/quiz.dart';
 import 'package:heliora/core/version.dart';
 import 'package:heliora/data/online_service.dart';
@@ -706,6 +711,241 @@ void main() {
         timeKnown: true,
       );
       expect(launchReminderTime(tooSoon, now), isNull);
+    });
+  });
+
+  group('eclipses', () {
+    final all = computeEclipses(DateTime.utc(2025), DateTime.utc(2030));
+
+    bool has(bool lunar, EclipseType type, DateTime utc) => all.any((e) =>
+        e.lunar == lunar &&
+        e.type == type &&
+        e.time.difference(utc).inMinutes.abs() <= 60);
+
+    test('match the official lists for 2025 to 2029', () {
+      expect(has(true, EclipseType.total, DateTime.utc(2025, 3, 14, 7)), isTrue);
+      expect(has(false, EclipseType.partial, DateTime.utc(2025, 3, 29, 10, 48)),
+          isTrue);
+      expect(has(true, EclipseType.total, DateTime.utc(2025, 9, 7, 18, 11)),
+          isTrue);
+      expect(has(false, EclipseType.annular, DateTime.utc(2026, 2, 17, 12, 13)),
+          isTrue);
+      expect(has(true, EclipseType.total, DateTime.utc(2026, 3, 3, 11, 33)),
+          isTrue);
+      expect(has(false, EclipseType.total, DateTime.utc(2026, 8, 12, 17, 46)),
+          isTrue);
+      expect(has(true, EclipseType.partial, DateTime.utc(2026, 8, 28, 4, 13)),
+          isTrue);
+      expect(has(false, EclipseType.annular, DateTime.utc(2027, 2, 6, 16)),
+          isTrue);
+      expect(has(false, EclipseType.total, DateTime.utc(2027, 8, 2, 10, 7)),
+          isTrue);
+      expect(has(true, EclipseType.partial, DateTime.utc(2028, 1, 12, 4, 13)),
+          isTrue);
+      expect(has(false, EclipseType.total, DateTime.utc(2028, 7, 22, 2, 56)),
+          isTrue);
+      expect(has(true, EclipseType.total, DateTime.utc(2028, 12, 31, 16, 52)),
+          isTrue);
+    });
+
+    test('there are twelve solar eclipses in 2025 to 2029', () {
+      expect(all.where((e) => !e.lunar).length, 12);
+    });
+
+    test('are in order and magnitudes look right', () {
+      for (var i = 1; i < all.length; i++) {
+        expect(all[i].time.isBefore(all[i - 1].time), isFalse);
+      }
+      final march2026 = all.firstWhere(
+          (e) => e.lunar && e.time.year == 2026 && e.time.month == 3);
+      expect(march2026.magnitude, closeTo(1.15, 0.1));
+      final august2026 = all.firstWhere(
+          (e) => !e.lunar && e.time.year == 2026 && e.time.month == 8);
+      expect(august2026.magnitude, closeTo(0.9, 0.06));
+    });
+
+    test('they show up in the space events with their type', () {
+      final events = computeSpaceEvents(DateTime(2026, 1, 1));
+      final solar =
+          events.where((e) => e.kind == SpaceEventKind.solarEclipse).toList();
+      expect(solar.length, 2);
+      final total = solar.firstWhere((e) => e.eclipse!.type == EclipseType.total);
+      expect(total.time.month, 8);
+      expect(total.id, startsWith('solarEclipse:total:202608'));
+      expect(events.where((e) => e.kind == SpaceEventKind.lunarEclipse).length,
+          greaterThanOrEqualTo(2));
+      expect(
+          events.firstWhere((e) => e.kind == SpaceEventKind.fullMoon).eclipse,
+          isNull);
+    });
+
+    test('the Moon is about 56 to 64 Earth radii away', () {
+      for (var day = 0; day < 40; day++) {
+        final d = moonDistance(DateTime.utc(2026, 1, 1 + day));
+        expect(d, inInclusiveRange(55.5, 64.5));
+      }
+    });
+
+    test('a lunar eclipse is seen where the Moon is up', () {
+      final eclipse = all.firstWhere(
+          (e) => e.lunar && e.time.year == 2026 && e.time.month == 3);
+      expect(lunarView(eclipse, 34.05, -118.24), LunarView.up);
+      expect(lunarView(eclipse, 40.4, -3.7), LunarView.down);
+      expect(lunarView(eclipse, 28.6, 77.2), LunarView.partly);
+    });
+
+    test('a solar eclipse is rated by place', () {
+      final aug2026 = all.firstWhere(
+          (e) => !e.lunar && e.time.year == 2026 && e.time.month == 8);
+      final madrid = solarLocalMagnitude(aug2026, 40.4, -3.7);
+      expect(madrid, isNotNull);
+      expect(madrid!, greaterThan(0.9));
+      final yerevan = solarLocalMagnitude(aug2026, 40.18, 44.51);
+      expect(yerevan == null || yerevan < 0, isTrue);
+      final mar2025 = all.firstWhere(
+          (e) => !e.lunar && e.time.year == 2025 && e.time.month == 3);
+      final london = solarLocalMagnitude(mar2025, 51.5, -0.12);
+      expect(london!, inInclusiveRange(0.2, 0.5));
+      final delhi = solarLocalMagnitude(mar2025, 28.6, 77.2);
+      expect(delhi == null || delhi < 0, isTrue);
+    });
+  });
+
+  group('tonight alerts', () {
+    final l = lookupAppLocalizations(const Locale('en'));
+    final yerevan = cityById('yerevan');
+
+    test('a fortnight of notes with their own ids', () {
+      final alerts = buildTonightAlerts(
+        l: l,
+        locale: const Locale('en'),
+        city: yerevan,
+        minutes: 20 * 60,
+        now: DateTime(2026, 3, 1, 10),
+      );
+      expect(alerts.length, tonightAlertDays);
+      expect(alerts.first.id, 'tonight:0');
+      expect(alerts.first.at, DateTime(2026, 3, 1, 20));
+      expect(alerts.last.id, 'tonight:${tonightAlertDays - 1}');
+      expect(alerts.first.title, l.tonightNotifTitle);
+      expect(alerts.first.body, contains('Moon:'));
+      expect(alerts.first.body, contains('% lit.'));
+    });
+
+    test('an evening that has passed is left out', () {
+      final alerts = buildTonightAlerts(
+        l: l,
+        locale: const Locale('en'),
+        city: yerevan,
+        minutes: 20 * 60,
+        now: DateTime(2026, 3, 1, 21),
+      );
+      expect(alerts.first.id, 'tonight:1');
+      expect(alerts.length, tonightAlertDays - 1);
+    });
+
+    test('without a city the note is about the Moon only', () {
+      final alerts = buildTonightAlerts(
+        l: l,
+        locale: const Locale('en'),
+        city: null,
+        minutes: 19 * 60 + 30,
+        now: DateTime(2026, 3, 1, 10),
+        days: 3,
+      );
+      expect(alerts.length, 3);
+      expect(alerts.first.at, DateTime(2026, 3, 1, 19, 30));
+      expect(alerts.first.body, contains(l.tonightNoCity));
+    });
+
+    test('with a city the note names planets or says there are none', () {
+      final alerts = buildTonightAlerts(
+        l: l,
+        locale: const Locale('en'),
+        city: yerevan,
+        minutes: 20 * 60,
+        now: DateTime(2026, 3, 1, 10),
+        days: 5,
+      );
+      for (final a in alerts) {
+        expect(
+            a.body.contains('Look for:') || a.body.contains(l.tonightNoPlanets),
+            isTrue);
+      }
+    });
+
+    test('planet lists use the separator of the language', () {
+      expect(listSeparator('en'), ', ');
+      expect(listSeparator('ar'), '، ');
+      expect(listSeparator('ja'), '、');
+    });
+
+    test('the daily note is a setting', () {
+      const on = HelioraSettings(tonightAlert: true, tonightMinutes: 21 * 60);
+      final back = HelioraSettings.fromJson(on.toJson());
+      expect(back.tonightAlert, isTrue);
+      expect(back.tonightMinutes, 21 * 60);
+      const d = HelioraSettings();
+      expect(d.tonightAlert, isFalse);
+      expect(d.tonightMinutes, 20 * 60);
+      expect(
+          HelioraSettings.fromJson(<String, dynamic>{'tonightMinutes': 5000})
+              .tonightMinutes,
+          20 * 60);
+      expect(
+          HelioraSettings.fromJson(<String, dynamic>{'tonightAlert': 'yes'})
+              .tonightAlert,
+          isFalse);
+    });
+  });
+
+  group('birthday sky', () {
+    final birth = DateTime(2000, 1, 1, 12);
+
+    test('days old count the birth day as day 0', () {
+      expect(daysOld(birth, DateTime(2000, 1, 1, 23)), 0);
+      expect(daysOld(birth, DateTime(2000, 1, 2)), 1);
+      expect(daysOld(birth, DateTime(2001, 1, 1)), 366);
+    });
+
+    test('milestones fall on the right days', () {
+      final list = lifeMilestones(birth);
+      expect(list.length, milestoneDays.length + 1);
+      for (var i = 1; i < list.length; i++) {
+        expect(list[i].date.isBefore(list[i - 1].date), isFalse);
+      }
+      DateTime day(int n) =>
+          list.firstWhere((m) => m.days == n).date;
+      expect(day(1000), DateTime(2002, 9, 27));
+      expect(day(10000), DateTime(2027, 5, 19));
+      expect(day(20000), DateTime(2054, 10, 4));
+      final billion = list.firstWhere((m) => m.days == null);
+      expect(billion.date, DateTime(2031, 9, 9));
+    });
+
+    test('the Moon on 1 January 2000 was a thin waning crescent', () {
+      final moon = moonOnBirthday(birth);
+      expect(phaseIndex(moon.age), 7);
+      expect(moon.lit, inInclusiveRange(0.15, 0.3));
+    });
+
+    test('the Moon on 20 July 1969 was a waxing crescent', () {
+      final moon = moonOnBirthday(DateTime(1969, 7, 20, 12));
+      expect(phaseIndex(moon.age), 1);
+    });
+  });
+
+  group('missions', () {
+    test('are in date order with their own ids', () {
+      expect(missions.length, 15);
+      for (var i = 1; i < missions.length; i++) {
+        expect(missions[i].date.isBefore(missions[i - 1].date), isFalse);
+      }
+      expect(missions.map((m) => m.id).toSet().length, missions.length);
+      for (final m in missions) {
+        expect(m.name, isNotEmpty);
+        expect(m.agency, isNotEmpty);
+      }
     });
   });
 

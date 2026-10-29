@@ -1290,4 +1290,241 @@ class AppLocalizationsBn extends AppLocalizations {
   String valueM(String value) {
     return '$value মি';
   }
+
+  @override
+  String get eclipseTotalLunar => 'পূর্ণ চন্দ্রগ্রহণ';
+
+  @override
+  String get eclipsePartialLunar => 'আংশিক চন্দ্রগ্রহণ';
+
+  @override
+  String get eclipsePenumbralLunar => 'উপচ্ছায়া চন্দ্রগ্রহণ';
+
+  @override
+  String get eclipseTotalSolar => 'পূর্ণ সূর্যগ্রহণ';
+
+  @override
+  String get eclipseAnnularSolar => 'বলয় সূর্যগ্রহণ';
+
+  @override
+  String get eclipseHybridSolar => 'সংকর সূর্যগ্রহণ';
+
+  @override
+  String get eclipsePartialSolar => 'আংশিক সূর্যগ্রহণ';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'চাঁদ পুরোপুরি পৃথিবীর ছায়ায় ঢুকে পড়ে এবং প্রায়ই ম্লান লাল দেখায়। পৃথিবীর রাতের দিকের সবাই এটি দেখতে পায়, আর খালি চোখে দেখা নিরাপদ।';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'চাঁদের একটি অংশ (প্রস্থের $percent%) পৃথিবীর গাঢ় ছায়ায় ঢুকে পড়ে। খালি চোখে দেখা নিরাপদ।';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'চাঁদ পৃথিবীর হালকা বাইরের ছায়ার ভেতর দিয়ে যায়। শুধু একটু ম্লান হয়, তাই চোখে পড়া কঠিন।';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'পৃথিবীর ওপর একটি সরু পথ ধরে চাঁদ সূর্যকে পুরোপুরি ঢেকে দেয়। সেই পথের বাইরে আংশিক গ্রহণ দেখা যায়।';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'চাঁদ একটু বেশি দূরে থাকায় সূর্যকে পুরো ঢাকতে পারে না, ফলে একটি উজ্জ্বল বলয় থেকে যায়। বলয়টি একটি সরু পথে দেখা যায়; তার বাইরে গ্রহণ আংশিক।';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'নিজের পথে এই গ্রহণ কোথাও পূর্ণ আর কোথাও বলয়ের মতো দেখায়। পথের বাইরে এটি আংশিক।';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'চাঁদ সূর্যের শুধু একটি অংশ ঢাকে, আর পৃথিবীর কোথাও সূর্য পুরো ঢাকে না।';
+
+  @override
+  String get eclipseNoCity =>
+      'Heliora-য় একটি শহর বেছে নিন, তাহলে দেখা যাবে সেখান থেকে এটি দেখা যাবে কি না।';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'গ্রহণের মাঝামাঝি সময়ে $city-তে চাঁদ দিগন্তের ওপরে থাকে।';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return '$city-তে গ্রহণের শুধু একটি অংশে চাঁদ দিগন্তের ওপরে থাকে।';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return '$city-তে চাঁদ দিগন্তের নিচেই থাকে, তাই সেখান থেকে দেখা যাবে না।';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return '$city থেকে দেখা যাবে না: চাঁদের ছায়া সেখানে পৌঁছায় না, অথবা সূর্য দিগন্তের নিচে থাকে।';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return '$city থেকে বড়জোর খুব সামান্য আংশিক গ্রহণ দেখা যাবে, যা চোখে পড়া কঠিন।';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return '$city-এর জন্য মোটামুটি আন্দাজ: চাঁদ সর্বোচ্চ সূর্যের প্রস্থের প্রায় $percent% ঢাকে।';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city সেই পথের কাছে যেখানে সূর্য প্রায় বা পুরোপুরি ঢাকা পড়ে। গ্রহণের মানচিত্র দেখে নিন; এই আন্দাজ মোটামুটি।';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'সঠিক গ্রহণ-চশমা ছাড়া কখনও সূর্যের দিকে তাকাবেন না।';
+
+  @override
+  String get alertsTitle => 'অ্যালার্ট';
+
+  @override
+  String get tonightAlertSwitch => 'প্রতি সন্ধ্যায় আজ রাতের আকাশ';
+
+  @override
+  String get tonightAlertTime => 'সময়';
+
+  @override
+  String get tonightAlertNote =>
+      'আপনার বেছে নেওয়া সময়ে চাঁদ আর দেখা যাবে এমন গ্রহদের নিয়ে একটি ছোট বার্তা। এটি আপনার ফোনেই তৈরি হয়, ইন্টারনেট লাগে না। Android Heliora-কে আগে থেকে শুধু প্রায় দুই সপ্তাহের বার্তা তৈরি রাখতে দেয়, তাই মাঝে মাঝে অ্যাপটি খুলুন।';
+
+  @override
+  String get tonightNotifTitle => 'আজ রাতের আকাশ';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'চাঁদ: $phase, $percent% আলোকিত।';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'খুঁজে দেখুন: $planets।';
+  }
+
+  @override
+  String get tonightNoPlanets => 'সন্ধ্যার আকাশে কোনো উজ্জ্বল গ্রহ নেই।';
+
+  @override
+  String get tonightNoCity => 'গ্রহ দেখতে Heliora-য় একটি শহর বেছে নিন।';
+
+  @override
+  String get birthdayTitle => 'আমার জন্মদিনের আকাশ';
+
+  @override
+  String get birthdaySubtitle =>
+      'আপনি যেদিন জন্মেছিলেন সেদিন চাঁদ আর গ্রহরা কোথায় ছিল, এবং আপনার জীবনের বিশেষ দিনগুলো।';
+
+  @override
+  String get birthdayCardHint => 'চাঁদের কলা, গ্রহ আর মাইলফলক';
+
+  @override
+  String get birthdayNeedDate => 'আপনার জন্মতারিখ দিন';
+
+  @override
+  String get birthdayMoon => 'আপনার জন্মদিনে চাঁদ';
+
+  @override
+  String get birthdayPlanets => 'সেদিন গ্রহরা';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'আজ আপনার বয়স $count দিন।';
+  }
+
+  @override
+  String get birthdayMilestones => 'মাইলফলক';
+
+  @override
+  String birthdayDayN(String count) {
+    return '$count তম দিন';
+  }
+
+  @override
+  String get birthdayBillion => '১০০ কোটি সেকেন্ড বয়স';
+
+  @override
+  String get birthdayPassed => 'হয়ে গেছে';
+
+  @override
+  String get birthdayNote =>
+      'Heliora-র বাকি অংশের মতো একই কক্ষপথ থেকে আপনার ফোনেই হিসাব করা হয়। আপনার জন্মতারিখ ফোনের বাইরে যায় না।';
+
+  @override
+  String get missionsTitle => 'মহাকাশ অভিযান';
+
+  @override
+  String get missionsSubtitle =>
+      'মহাকাশ অভিযানের বিখ্যাত মুহূর্ত, সবচেয়ে পুরোনোটি আগে।';
+
+  @override
+  String get missionsCardHint => 'সময়ের পথে বিখ্যাত অভিযান';
+
+  @override
+  String get missionSputnik1 =>
+      'প্রথম কৃত্রিম উপগ্রহ। সৈকতে খেলার বলের মতো এই ধাতব গোলকটি প্রায় তিন মাস পৃথিবীকে ঘুরেছিল। এর বিপ বিপ শব্দ রেডিওতে শোনা যেত, আর এখান থেকেই মহাকাশ যুগ শুরু হয়।';
+
+  @override
+  String get missionVostok1 =>
+      'ইউরি গাগারিন মহাকাশে যাওয়া প্রথম মানুষ হলেন। তিনি প্রায় ১০৮ মিনিটে পৃথিবীকে একবার ঘুরে এসেছিলেন।';
+
+  @override
+  String get missionApollo11 =>
+      'নিল আর্মস্ট্রং আর বাজ অলড্রিন শান্তির সাগরে নামলেন এবং চাঁদে হাঁটা প্রথম মানুষ হলেন। মাইকেল কলিন্স কক্ষপথে তাঁদের জন্য অপেক্ষা করছিলেন।';
+
+  @override
+  String get missionVenera7 =>
+      'অন্য গ্রহে নেমে সংকেত পাঠানো প্রথম মহাকাশযান। প্রচণ্ড গরমে শুক্র থেকে এটি প্রায় ২৩ মিনিট তথ্য পাঠিয়েছিল।';
+
+  @override
+  String get missionViking1 =>
+      'এটি মঙ্গলে নেমে ছয় বছরের বেশি কাজ করেছিল, এবং অন্য গ্রহের মাটি থেকে ছবি আর আবহাওয়ার খবরের প্রথম দীর্ঘ ধারা পাঠিয়েছিল।';
+
+  @override
+  String get missionVoyager1 =>
+      '১৯৭৭ সালে ছাড়া হয়, বৃহস্পতি আর শনির পাশ দিয়ে গিয়ে ২০১২ সালে নক্ষত্রদের মাঝের মহাকাশে ঢোকে। পৃথিবী থেকে এটিই মানুষের তৈরি সবচেয়ে দূরের বস্তু।';
+
+  @override
+  String get missionHubble =>
+      '১৯৯০ সালে ছাড়া হয়, পৃথিবীর বাতাসের ওপর থেকে মহাবিশ্বকে দেখে। এর স্পষ্ট ছবি মহাবিশ্বের বয়স মাপতে সাহায্য করেছে এবং হাজার হাজার দূরের ছায়াপথ দেখিয়েছে।';
+
+  @override
+  String get missionHuygens =>
+      'ক্যাসিনির সঙ্গে যাওয়া যন্ত্র হাইগেনস প্যারাশুটে শনির চাঁদ টাইটানে নামে। বাইরের সৌরজগতে এটিই প্রথম অবতরণ, আর এটি সেখানকার মাটি থেকে ছবি পাঠিয়েছিল।';
+
+  @override
+  String get missionCuriosity =>
+      'গাড়ির মতো বড় এই রোভার রকেটচালিত ’স্কাই ক্রেন’-এর সাহায্যে গেইল গহ্বরে নামে। এটি জানিয়েছে, মঙ্গলে একসময় প্রাণের উপযোগী পরিস্থিতি ছিল।';
+
+  @override
+  String get missionMangalyaan =>
+      'ভারতের মঙ্গল অরবিটার মিশন প্রথম চেষ্টাতেই মঙ্গলের কক্ষপথে পৌঁছায়। কোনো দেশের জন্য এটি প্রথম, এবং খরচও ছিল খুব কম।';
+
+  @override
+  String get missionRosetta =>
+      'রোসেটার ল্যান্ডার ফিলে ধূমকেতু 67P/চুরিউমভ–গেরাসিমেঙ্কোয় নামে, ধূমকেতুতে এটিই প্রথম অবতরণ। রোসেটা নিজে দুই বছর ধূমকেতুটিকে ঘুরেছিল।';
+
+  @override
+  String get missionNewhorizons =>
+      'নয় বছরের যাত্রার পর এটি প্লুটোর পাশ দিয়ে যায় এবং প্রথমবার আমাদের বরফের পাহাড় আর হৃদয়ের আকারের বিশাল সমভূমি দেখায়।';
+
+  @override
+  String get missionPerseverance =>
+      'পারসিভারেন্স রোভার প্রাচীন প্রাণের চিহ্ন খুঁজতে আর পাথরের নমুনা জমাতে জেজেরো গহ্বরে নামে। এর হেলিকপ্টার ইনজেনুইটি অন্য গ্রহে প্রথম চালিত উড়ান দেয়।';
+
+  @override
+  String get missionJwst =>
+      'সবচেয়ে বড় মহাকাশ দুরবিনের আয়না ৬.৫ মিটারের, সোনালি, আর এটি ১৫ লক্ষ কিমি দূর থেকে ইনফ্রারেড আলোয় আকাশ দেখে। এটি একেবারে প্রথম দিকের কিছু ছায়াপথ দেখতে পায়।';
+
+  @override
+  String get missionChandrayaan3 =>
+      'ভারত চাঁদে নিরাপদে নামা চতুর্থ দেশ হলো, এবং দক্ষিণ মেরুর কাছে নামা প্রথম। বিক্রম ল্যান্ডার সঙ্গে নিয়ে গিয়েছিল প্রজ্ঞান রোভার।';
 }

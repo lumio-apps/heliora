@@ -1295,4 +1295,241 @@ class AppLocalizationsEn extends AppLocalizations {
   String valueM(String value) {
     return '$value m';
   }
+
+  @override
+  String get eclipseTotalLunar => 'Total lunar eclipse';
+
+  @override
+  String get eclipsePartialLunar => 'Partial lunar eclipse';
+
+  @override
+  String get eclipsePenumbralLunar => 'Penumbral lunar eclipse';
+
+  @override
+  String get eclipseTotalSolar => 'Total solar eclipse';
+
+  @override
+  String get eclipseAnnularSolar => 'Annular solar eclipse';
+
+  @override
+  String get eclipseHybridSolar => 'Hybrid solar eclipse';
+
+  @override
+  String get eclipsePartialSolar => 'Partial solar eclipse';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'The Moon moves fully into Earth\'s shadow and often turns a dim red. Everyone on the night side of Earth can see it, and it is safe to watch with your eyes.';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'Part of the Moon ($percent% of its width) moves into Earth\'s dark shadow. It is safe to watch with your eyes.';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'The Moon passes through the faint outer shadow of Earth. It only dims a little, so it is hard to notice.';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'The Moon completely covers the Sun along a narrow path across Earth. Outside that path you see a partial eclipse.';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'The Moon is a little too far away to cover the Sun fully, so a bright ring is left. The ring shows along a narrow path; outside it the eclipse is partial.';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'Along its path this eclipse is total in some places and ring-shaped in others. Outside the path it is partial.';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'The Moon covers only a part of the Sun, and nowhere on Earth is the Sun fully covered.';
+
+  @override
+  String get eclipseNoCity =>
+      'Choose a city in Heliora to see if you can watch it from there.';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'The Moon is above the horizon in $city at the middle of the eclipse.';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return 'In $city the Moon is above the horizon for only part of the eclipse.';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return 'In $city the Moon stays below the horizon, so you cannot see it from there.';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return 'Not visible from $city: the Moon\'s shadow misses it, or the Sun is below the horizon.';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return 'From $city at most a very slight partial eclipse, hard to notice.';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return 'Rough estimate for $city: the Moon covers about $percent% of the Sun\'s width at best.';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city is close to the path where the Sun is almost or fully covered. Check an eclipse map; this estimate is rough.';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'Never look at the Sun without proper eclipse glasses.';
+
+  @override
+  String get alertsTitle => 'Alerts';
+
+  @override
+  String get tonightAlertSwitch => 'Tonight in the sky, every evening';
+
+  @override
+  String get tonightAlertTime => 'Time';
+
+  @override
+  String get tonightAlertNote =>
+      'A short note about the Moon and the planets you can see, at the time you choose. It is worked out on your phone, with no internet. Android only lets Heliora prepare about two weeks of notes ahead, so open the app now and then.';
+
+  @override
+  String get tonightNotifTitle => 'Tonight in the sky';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'Moon: $phase, $percent% lit.';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'Look for: $planets.';
+  }
+
+  @override
+  String get tonightNoPlanets => 'No bright planets in the evening sky.';
+
+  @override
+  String get tonightNoCity => 'Choose a city in Heliora to see the planets.';
+
+  @override
+  String get birthdayTitle => 'My birthday sky';
+
+  @override
+  String get birthdaySubtitle =>
+      'The Moon and the planets on the day you were born, and the big days of your life.';
+
+  @override
+  String get birthdayCardHint => 'Moon phase, planets and milestones';
+
+  @override
+  String get birthdayNeedDate => 'Set your birth date';
+
+  @override
+  String get birthdayMoon => 'Moon on your birthday';
+
+  @override
+  String get birthdayPlanets => 'Planets on that day';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'You are $count days old today.';
+  }
+
+  @override
+  String get birthdayMilestones => 'Milestones';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'Day $count';
+  }
+
+  @override
+  String get birthdayBillion => '1 billion seconds old';
+
+  @override
+  String get birthdayPassed => 'Done';
+
+  @override
+  String get birthdayNote =>
+      'Worked out on your phone from the same orbits as the rest of Heliora. Your birth date never leaves it.';
+
+  @override
+  String get missionsTitle => 'Space missions';
+
+  @override
+  String get missionsSubtitle =>
+      'Famous moments in the exploration of space, oldest first.';
+
+  @override
+  String get missionsCardHint => 'Famous missions through time';
+
+  @override
+  String get missionSputnik1 =>
+      'The first artificial satellite. This metal ball, about the size of a beach ball, circled Earth for about three months. Its beeping could be heard on radios and it started the space age.';
+
+  @override
+  String get missionVostok1 =>
+      'Yuri Gagarin became the first person in space. He circled Earth once, in about 108 minutes.';
+
+  @override
+  String get missionApollo11 =>
+      'Neil Armstrong and Buzz Aldrin landed in the Sea of Tranquility and became the first people to walk on the Moon. Michael Collins waited for them in orbit.';
+
+  @override
+  String get missionVenera7 =>
+      'The first spacecraft to land on another planet and send a signal back. It sent data from Venus for about 23 minutes in the crushing heat.';
+
+  @override
+  String get missionViking1 =>
+      'It landed on Mars and worked there for more than six years, sending the first long series of photos and weather reports from the surface of another planet.';
+
+  @override
+  String get missionVoyager1 =>
+      'Launched in 1977, it flew past Jupiter and Saturn and entered interstellar space in 2012. It is the farthest human-made object from Earth.';
+
+  @override
+  String get missionHubble =>
+      'Launched in 1990, it looks at the universe from above Earth\'s air. Its sharp pictures helped measure the age of the universe and showed thousands of faraway galaxies.';
+
+  @override
+  String get missionHuygens =>
+      'Huygens, a probe carried by Cassini, parachuted down to Saturn\'s moon Titan. It was the first landing in the outer solar system, and it sent pictures from the surface.';
+
+  @override
+  String get missionCuriosity =>
+      'This car-sized rover landed in Gale Crater using a rocket-powered sky crane. It found that Mars once had the right conditions for life.';
+
+  @override
+  String get missionMangalyaan =>
+      'India\'s Mars Orbiter Mission reached Mars orbit on its first try, a first for any country, and at a very low cost.';
+
+  @override
+  String get missionRosetta =>
+      'Rosetta\'s lander Philae touched down on comet 67P/Churyumov–Gerasimenko, the first landing on a comet. Rosetta itself circled the comet for two years.';
+
+  @override
+  String get missionNewhorizons =>
+      'After a nine-year trip, it flew past Pluto and showed us icy mountains and a huge heart-shaped plain for the first time.';
+
+  @override
+  String get missionPerseverance =>
+      'The Perseverance rover landed in Jezero Crater to look for signs of old life and collect rock samples. Its helicopter Ingenuity made the first powered flight on another planet.';
+
+  @override
+  String get missionJwst =>
+      'The largest space telescope has a 6.5-metre gold mirror and watches the sky in infrared light from 1.5 million km away. It sees some of the first galaxies.';
+
+  @override
+  String get missionChandrayaan3 =>
+      'India became the fourth country to land softly on the Moon, and the first near its south pole. The Vikram lander carried the Pragyan rover.';
 }

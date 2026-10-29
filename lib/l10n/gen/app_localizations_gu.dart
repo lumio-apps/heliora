@@ -1290,4 +1290,240 @@ class AppLocalizationsGu extends AppLocalizations {
   String valueM(String value) {
     return '$value મી';
   }
+
+  @override
+  String get eclipseTotalLunar => 'પૂર્ણ ચંદ્રગ્રહણ';
+
+  @override
+  String get eclipsePartialLunar => 'આંશિક ચંદ્રગ્રહણ';
+
+  @override
+  String get eclipsePenumbralLunar => 'ઉપચ્છાયા ચંદ્રગ્રહણ';
+
+  @override
+  String get eclipseTotalSolar => 'પૂર્ણ સૂર્યગ્રહણ';
+
+  @override
+  String get eclipseAnnularSolar => 'કંકણાકાર સૂર્યગ્રહણ';
+
+  @override
+  String get eclipseHybridSolar => 'સંકર સૂર્યગ્રહણ';
+
+  @override
+  String get eclipsePartialSolar => 'આંશિક સૂર્યગ્રહણ';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'ચંદ્ર પૂરેપૂરો પૃથ્વીના પડછાયામાં જતો રહે છે અને ઘણી વાર આછો લાલ દેખાય છે. પૃથ્વીની રાતની બાજુએ બધા તેને જોઈ શકે છે, અને આંખોથી જોવું સુરક્ષિત છે.';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'ચંદ્રનો એક ભાગ (પહોળાઈના $percent%) પૃથ્વીના ઘેરા પડછાયામાં જાય છે. આંખોથી જોવું સુરક્ષિત છે.';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'ચંદ્ર પૃથ્વીના આછા બહારના પડછાયામાંથી પસાર થાય છે. તે થોડો જ ઝાંખો પડે છે, એટલે ખ્યાલ આવવો મુશ્કેલ છે.';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'પૃથ્વી પર એક સાંકડી પટ્ટીમાં ચંદ્ર સૂર્યને પૂરેપૂરો ઢાંકી દે છે. એ પટ્ટીની બહાર આંશિક ગ્રહણ દેખાય છે.';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'ચંદ્ર થોડો વધારે દૂર હોવાથી સૂર્યને પૂરો ઢાંકી શકતો નથી, અને એક ચમકતી વીંટી રહી જાય છે. વીંટી એક સાંકડી પટ્ટીમાં દેખાય છે; તેની બહાર ગ્રહણ આંશિક હોય છે.';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'પોતાની પટ્ટીમાં આ ગ્રહણ કેટલીક જગ્યાએ પૂર્ણ અને કેટલીક જગ્યાએ વીંટી જેવું દેખાય છે. પટ્ટીની બહાર તે આંશિક હોય છે.';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'ચંદ્ર સૂર્યના માત્ર એક ભાગને ઢાંકે છે, અને પૃથ્વી પર ક્યાંય સૂર્ય પૂરો ઢંકાતો નથી.';
+
+  @override
+  String get eclipseNoCity =>
+      'Heliora માં એક શહેર પસંદ કરો, જેથી ખબર પડે કે ત્યાંથી તે જોઈ શકાશે કે નહીં.';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'ગ્રહણની વચ્ચે $city માં ચંદ્ર ક્ષિતિજની ઉપર હોય છે.';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return '$city માં ચંદ્ર ગ્રહણના માત્ર થોડા ભાગમાં ક્ષિતિજની ઉપર હોય છે.';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return '$city માં ચંદ્ર ક્ષિતિજની નીચે રહે છે, એટલે ત્યાંથી દેખાશે નહીં.';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return '$city થી દેખાશે નહીં: ચંદ્રનો પડછાયો ત્યાં પહોંચતો નથી, અથવા સૂર્ય ક્ષિતિજની નીચે હોય છે.';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return '$city થી વધુમાં વધુ ખૂબ હળવું આંશિક ગ્રહણ દેખાશે, જે ઓળખવું મુશ્કેલ છે.';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return '$city માટે અંદાજે: ચંદ્ર વધુમાં વધુ સૂર્યની પહોળાઈના લગભગ $percent% ઢાંકે છે.';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city એ પટ્ટીની નજીક છે જ્યાં સૂર્ય લગભગ અથવા પૂરેપૂરો ઢંકાય છે. ગ્રહણનો નકશો જુઓ; આ અંદાજ આશરે છે.';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'યોગ્ય ગ્રહણ-ચશ્મા વિના ક્યારેય સૂર્ય સામે ન જુઓ.';
+
+  @override
+  String get alertsTitle => 'એલર્ટ';
+
+  @override
+  String get tonightAlertSwitch => 'દરરોજ સાંજે આજની રાતનું આકાશ';
+
+  @override
+  String get tonightAlertTime => 'સમય';
+
+  @override
+  String get tonightAlertNote =>
+      'તમે પસંદ કરેલા સમયે ચંદ્ર અને દેખાતા ગ્રહો વિશે એક નાનો સંદેશ. તે તમારા ફોનમાં જ બને છે, ઇન્ટરનેટ જોઈતું નથી. Android Heliora ને અગાઉથી માત્ર લગભગ બે અઠવાડિયાના સંદેશ તૈયાર કરવા દે છે, એટલે એપ વચ્ચે વચ્ચે ખોલતા રહો.';
+
+  @override
+  String get tonightNotifTitle => 'આજની રાતનું આકાશ';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'ચંદ્ર: $phase, $percent% પ્રકાશિત.';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'શોધો: $planets.';
+  }
+
+  @override
+  String get tonightNoPlanets => 'સાંજના આકાશમાં કોઈ તેજસ્વી ગ્રહ નથી.';
+
+  @override
+  String get tonightNoCity => 'ગ્રહો જોવા માટે Heliora માં શહેર પસંદ કરો.';
+
+  @override
+  String get birthdayTitle => 'મારા જન્મદિવસનું આકાશ';
+
+  @override
+  String get birthdaySubtitle =>
+      'તમે જન્મ્યા તે દિવસે ચંદ્ર અને ગ્રહો ક્યાં હતા, અને તમારા જીવનના ખાસ દિવસો.';
+
+  @override
+  String get birthdayCardHint => 'ચંદ્રની કળા, ગ્રહો અને સીમાચિહ્નો';
+
+  @override
+  String get birthdayNeedDate => 'તમારી જન્મતારીખ નાખો';
+
+  @override
+  String get birthdayMoon => 'તમારા જન્મદિવસે ચંદ્ર';
+
+  @override
+  String get birthdayPlanets => 'તે દિવસે ગ્રહો';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'આજે તમે $count દિવસના છો.';
+  }
+
+  @override
+  String get birthdayMilestones => 'સીમાચિહ્નો';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'દિવસ $count';
+  }
+
+  @override
+  String get birthdayBillion => '100 કરોડ સેકન્ડના';
+
+  @override
+  String get birthdayPassed => 'થઈ ગયું';
+
+  @override
+  String get birthdayNote =>
+      'Heliora ની બાકીની બાબતોની જેમ જ કક્ષાઓ પરથી તમારા ફોનમાં ગણતરી થાય છે. તમારી જન્મતારીખ ફોનની બહાર જતી નથી.';
+
+  @override
+  String get missionsTitle => 'અવકાશ મિશન';
+
+  @override
+  String get missionsSubtitle => 'અવકાશની શોધના જાણીતા પળો, સૌથી જૂના પહેલા.';
+
+  @override
+  String get missionsCardHint => 'સમય સાથે જાણીતા મિશન';
+
+  @override
+  String get missionSputnik1 =>
+      'પહેલો કૃત્રિમ ઉપગ્રહ. બીચ બોલ જેવડો આ ધાતુનો ગોળો લગભગ ત્રણ મહિના પૃથ્વીની આસપાસ ફરતો રહ્યો. તેના બીપ રેડિયો પર સંભળાતા હતા, અને અહીંથી અવકાશ યુગ શરૂ થયો.';
+
+  @override
+  String get missionVostok1 =>
+      'યુરી ગાગારિન અવકાશમાં જનારા પહેલા માણસ બન્યા. તેમણે લગભગ 108 મિનિટમાં પૃથ્વીનો એક ચક્કર લગાવ્યો.';
+
+  @override
+  String get missionApollo11 =>
+      'નીલ આર્મસ્ટ્રોંગ અને બઝ ઓલ્ડ્રિન શાંતિના સમુદ્રમાં ઉતર્યા અને ચંદ્ર પર ચાલનારા પહેલા માણસો બન્યા. માઇકલ કૉલિન્સ ભ્રમણકક્ષામાં તેમની રાહ જોતા રહ્યા.';
+
+  @override
+  String get missionVenera7 =>
+      'બીજા ગ્રહ પર ઉતરીને સંકેત મોકલનાર પહેલું યાન. તેણે શુક્રની કચડી નાખે એવી ગરમીમાં લગભગ 23 મિનિટ સુધી માહિતી મોકલી.';
+
+  @override
+  String get missionViking1 =>
+      'તે મંગળ પર ઉતર્યું અને છ વર્ષથી વધુ કામ કરતું રહ્યું. તેણે બીજા ગ્રહની સપાટી પરથી ફોટા અને હવામાનના અહેવાલોની પહેલી લાંબી શ્રેણી મોકલી.';
+
+  @override
+  String get missionVoyager1 =>
+      '1977 માં છોડાયેલું, તે ગુરુ અને શનિ પાસેથી પસાર થયું અને 2012 માં તારાઓ વચ્ચેની જગ્યામાં પહોંચ્યું. પૃથ્વીથી સૌથી દૂર માણસે બનાવેલી વસ્તુ આ જ છે.';
+
+  @override
+  String get missionHubble =>
+      '1990 માં છોડાયેલી, તે પૃથ્વીની હવાની ઉપરથી બ્રહ્માંડને જુએ છે. તેના સ્પષ્ટ ચિત્રોથી બ્રહ્માંડની ઉંમર માપવામાં મદદ મળી અને હજારો દૂરની આકાશગંગાઓ દેખાઈ.';
+
+  @override
+  String get missionHuygens =>
+      'કેસિની સાથે ગયેલું યાન હ્યુજન્સ પેરાશૂટથી શનિના ચંદ્ર ટાઇટન પર ઉતર્યું. બાહ્ય સૌરમંડળમાં આ પહેલું ઉતરાણ હતું, અને તેણે સપાટી પરથી ચિત્રો મોકલ્યા.';
+
+  @override
+  String get missionCuriosity =>
+      'કાર જેવડું આ રોવર રોકેટથી ચાલતી ’સ્કાય ક્રેન’ની મદદથી ગેલ ક્રેટરમાં ઉતર્યું. તેણે શોધ્યું કે મંગળ પર એક સમયે જીવન માટે યોગ્ય સ્થિતિ હતી.';
+
+  @override
+  String get missionMangalyaan =>
+      'ભારતનું માર્સ ઓર્બિટર મિશન પહેલા જ પ્રયત્ને મંગળની ભ્રમણકક્ષામાં પહોંચ્યું. કોઈ પણ દેશ માટે આ પહેલી વાર હતું, અને ખર્ચ પણ ખૂબ ઓછો.';
+
+  @override
+  String get missionRosetta =>
+      'રોસેટાના લેન્ડર ફાઇલીએ ધૂમકેતુ 67P/ચુર્યુમોવ–ગેરાસિમેન્કો પર ઉતરીને ધૂમકેતુ પર પહેલું ઉતરાણ કર્યું. રોસેટા પોતે બે વર્ષ ધૂમકેતુની આસપાસ ફરતું રહ્યું.';
+
+  @override
+  String get missionNewhorizons =>
+      'નવ વર્ષની સફર પછી તે પ્લૂટો પાસેથી પસાર થયું અને પહેલી વાર આપણને બરફીલા પર્વતો અને હૃદય આકારનું વિશાળ મેદાન બતાવ્યું.';
+
+  @override
+  String get missionPerseverance =>
+      'પર્સિવરન્સ રોવર જૂના જીવનના નિશાન શોધવા અને ખડકોના નમૂના એકઠા કરવા જેઝેરો ક્રેટરમાં ઉતર્યું. તેના હેલિકૉપ્ટર ઇન્જેન્યુઇટીએ બીજા ગ્રહ પર પહેલી સંચાલિત ઉડાન ભરી.';
+
+  @override
+  String get missionJwst =>
+      'સૌથી મોટા અવકાશ દૂરબીનમાં 6.5 મીટરનો સોનેરી અરીસો છે, અને તે 15 લાખ કિમી દૂરથી ઇન્ફ્રારેડ પ્રકાશમાં આકાશ જુએ છે. તે સૌથી પહેલી આકાશગંગાઓમાંની કેટલીક જોઈ શકે છે.';
+
+  @override
+  String get missionChandrayaan3 =>
+      'ભારત ચંદ્ર પર સલામત રીતે ઉતરનાર ચોથો દેશ બન્યો, અને દક્ષિણ ધ્રુવ પાસે ઉતરનાર પહેલો. વિક્રમ લેન્ડર પોતાની સાથે પ્રજ્ઞાન રોવર લઈ ગયું હતું.';
 }

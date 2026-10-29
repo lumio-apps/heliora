@@ -118,6 +118,7 @@ object Reminders {
                 .setSmallIcon(if (icon != 0) icon else android.R.drawable.star_on)
                 .setContentTitle(record.getString("title"))
                 .setContentText(record.getString("body"))
+                .setStyle(NotificationCompat.BigTextStyle().bigText(record.getString("body")))
                 .setContentIntent(tap)
                 .setAutoCancel(true)
                 .build()

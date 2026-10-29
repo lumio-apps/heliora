@@ -24,6 +24,8 @@ class HelioraSettings {
     this.reminders = const <String>[],
     this.onlineFeatures = false,
     this.quizBests = const <String, int>{},
+    this.tonightAlert = false,
+    this.tonightMinutes = 1200,
   });
 
   final ThemeMode themeMode;
@@ -53,6 +55,12 @@ class HelioraSettings {
   /// hard). The older single [bestQuizScore] counts as the medium score.
   final Map<String, int> quizBests;
 
+  /// True when a note about tonight's sky should be shown every evening.
+  final bool tonightAlert;
+
+  /// When that note is shown, in minutes after midnight (1200 = 20:00).
+  final int tonightMinutes;
+
   /// The best score of a quiz level, 0 when not played yet.
   int bestFor(String level) {
     final saved = quizBests[level];
@@ -78,6 +86,8 @@ class HelioraSettings {
     List<String>? reminders,
     bool? onlineFeatures,
     Map<String, int>? quizBests,
+    bool? tonightAlert,
+    int? tonightMinutes,
   }) {
     return HelioraSettings(
       themeMode: themeMode ?? this.themeMode,
@@ -91,6 +101,8 @@ class HelioraSettings {
       reminders: reminders ?? this.reminders,
       onlineFeatures: onlineFeatures ?? this.onlineFeatures,
       quizBests: quizBests ?? this.quizBests,
+      tonightAlert: tonightAlert ?? this.tonightAlert,
+      tonightMinutes: tonightMinutes ?? this.tonightMinutes,
     );
   }
 
@@ -108,6 +120,8 @@ class HelioraSettings {
       'reminders': reminders,
       'onlineFeatures': onlineFeatures,
       'quizBests': quizBests,
+      'tonightAlert': tonightAlert,
+      'tonightMinutes': tonightMinutes,
     };
   }
 
@@ -136,6 +150,8 @@ class HelioraSettings {
     final reminders = json['reminders'];
     final online = json['onlineFeatures'];
     final bests = json['quizBests'];
+    final alert = json['tonightAlert'];
+    final minutes = json['tonightMinutes'];
     return HelioraSettings(
       themeMode: theme,
       localeCode: locale is String ? locale : d.localeCode,
@@ -155,6 +171,10 @@ class HelioraSettings {
                 if (e.key is String && e.value is int) e.key as String: e.value as int,
             }
           : d.quizBests,
+      tonightAlert: alert is bool ? alert : d.tonightAlert,
+      tonightMinutes: minutes is int && minutes >= 0 && minutes < 1440
+          ? minutes
+          : d.tonightMinutes,
     );
   }
 }

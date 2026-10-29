@@ -1296,4 +1296,241 @@ class AppLocalizationsKn extends AppLocalizations {
   String valueM(String value) {
     return '$value ಮೀ';
   }
+
+  @override
+  String get eclipseTotalLunar => 'ಪೂರ್ಣ ಚಂದ್ರಗ್ರಹಣ';
+
+  @override
+  String get eclipsePartialLunar => 'ಭಾಗಶಃ ಚಂದ್ರಗ್ರಹಣ';
+
+  @override
+  String get eclipsePenumbralLunar => 'ಉಪಛಾಯಾ ಚಂದ್ರಗ್ರಹಣ';
+
+  @override
+  String get eclipseTotalSolar => 'ಪೂರ್ಣ ಸೂರ್ಯಗ್ರಹಣ';
+
+  @override
+  String get eclipseAnnularSolar => 'ಕಂಕಣ ಸೂರ್ಯಗ್ರಹಣ';
+
+  @override
+  String get eclipseHybridSolar => 'ಮಿಶ್ರ ಸೂರ್ಯಗ್ರಹಣ';
+
+  @override
+  String get eclipsePartialSolar => 'ಭಾಗಶಃ ಸೂರ್ಯಗ್ರಹಣ';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'ಚಂದ್ರ ಸಂಪೂರ್ಣವಾಗಿ ಭೂಮಿಯ ನೆರಳಿನೊಳಗೆ ಹೋಗಿ ಹೆಚ್ಚಾಗಿ ಮಂದ ಕೆಂಪಾಗಿ ಕಾಣುತ್ತದೆ. ಭೂಮಿಯ ರಾತ್ರಿಯ ಬದಿಯಲ್ಲಿರುವ ಎಲ್ಲರೂ ಇದನ್ನು ನೋಡಬಹುದು, ಮತ್ತು ಕಣ್ಣಿನಿಂದ ನೋಡುವುದು ಸುರಕ್ಷಿತ.';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'ಚಂದ್ರನ ಒಂದು ಭಾಗ (ಅಗಲದ $percent%) ಭೂಮಿಯ ಗಾಢ ನೆರಳಿನೊಳಗೆ ಹೋಗುತ್ತದೆ. ಕಣ್ಣಿನಿಂದ ನೋಡುವುದು ಸುರಕ್ಷಿತ.';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'ಚಂದ್ರ ಭೂಮಿಯ ಮಸುಕಾದ ಹೊರ ನೆರಳಿನ ಮೂಲಕ ಹಾದುಹೋಗುತ್ತದೆ. ಸ್ವಲ್ಪ ಮಾತ್ರ ಮಂದವಾಗುವುದರಿಂದ ಗಮನಿಸುವುದು ಕಷ್ಟ.';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'ಭೂಮಿಯ ಮೇಲೆ ಒಂದು ಕಿರಿದಾದ ಪಟ್ಟಿಯಲ್ಲಿ ಚಂದ್ರ ಸೂರ್ಯನನ್ನು ಸಂಪೂರ್ಣವಾಗಿ ಮುಚ್ಚುತ್ತಾನೆ. ಆ ಪಟ್ಟಿಯ ಹೊರಗೆ ಭಾಗಶಃ ಗ್ರಹಣ ಕಾಣುತ್ತದೆ.';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'ಚಂದ್ರ ಸ್ವಲ್ಪ ಹೆಚ್ಚು ದೂರದಲ್ಲಿರುವುದರಿಂದ ಸೂರ್ಯನನ್ನು ಪೂರ್ಣ ಮುಚ್ಚಲಾರ, ಹೊಳೆಯುವ ಉಂಗುರ ಉಳಿಯುತ್ತದೆ. ಉಂಗುರ ಕಿರಿದಾದ ಪಟ್ಟಿಯಲ್ಲಿ ಕಾಣುತ್ತದೆ; ಅದರ ಹೊರಗೆ ಗ್ರಹಣ ಭಾಗಶಃ.';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'ತನ್ನ ಪಟ್ಟಿಯಲ್ಲಿ ಈ ಗ್ರಹಣ ಕೆಲವೆಡೆ ಪೂರ್ಣವಾಗಿಯೂ ಕೆಲವೆಡೆ ಉಂಗುರದಂತೆಯೂ ಕಾಣುತ್ತದೆ. ಪಟ್ಟಿಯ ಹೊರಗೆ ಇದು ಭಾಗಶಃ.';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'ಚಂದ್ರ ಸೂರ್ಯನ ಒಂದು ಭಾಗವನ್ನು ಮಾತ್ರ ಮುಚ್ಚುತ್ತಾನೆ, ಮತ್ತು ಭೂಮಿಯ ಮೇಲೆ ಎಲ್ಲಿಯೂ ಸೂರ್ಯ ಪೂರ್ಣ ಮುಚ್ಚುವುದಿಲ್ಲ.';
+
+  @override
+  String get eclipseNoCity =>
+      'Heliora ದಲ್ಲಿ ಒಂದು ನಗರವನ್ನು ಆರಿಸಿ, ಅಲ್ಲಿಂದ ಇದನ್ನು ನೋಡಬಹುದೇ ಎಂದು ತಿಳಿಯಲು.';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'ಗ್ರಹಣದ ಮಧ್ಯದಲ್ಲಿ $city ನಲ್ಲಿ ಚಂದ್ರ ದಿಗಂತದ ಮೇಲಿರುತ್ತಾನೆ.';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return '$city ನಲ್ಲಿ ಚಂದ್ರ ಗ್ರಹಣದ ಸ್ವಲ್ಪ ಭಾಗದಲ್ಲಿ ಮಾತ್ರ ದಿಗಂತದ ಮೇಲಿರುತ್ತಾನೆ.';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return '$city ನಲ್ಲಿ ಚಂದ್ರ ದಿಗಂತದ ಕೆಳಗೇ ಇರುತ್ತಾನೆ, ಹಾಗಾಗಿ ಅಲ್ಲಿಂದ ಕಾಣುವುದಿಲ್ಲ.';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return '$city ನಿಂದ ಕಾಣುವುದಿಲ್ಲ: ಚಂದ್ರನ ನೆರಳು ಅಲ್ಲಿಗೆ ತಲುಪುವುದಿಲ್ಲ, ಅಥವಾ ಸೂರ್ಯ ದಿಗಂತದ ಕೆಳಗಿರುತ್ತಾನೆ.';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return '$city ನಿಂದ ಹೆಚ್ಚೆಂದರೆ ಬಹಳ ಸಣ್ಣ ಭಾಗಶಃ ಗ್ರಹಣ ಕಾಣುತ್ತದೆ, ಗಮನಿಸುವುದು ಕಷ್ಟ.';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return '$city ಗಾಗಿ ಸ್ಥೂಲ ಅಂದಾಜು: ಚಂದ್ರ ಹೆಚ್ಚೆಂದರೆ ಸೂರ್ಯನ ಅಗಲದ ಸುಮಾರು $percent% ಮುಚ್ಚುತ್ತಾನೆ.';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city ಸೂರ್ಯ ಬಹುತೇಕ ಅಥವಾ ಪೂರ್ತಿ ಮುಚ್ಚುವ ಪಟ್ಟಿಯ ಹತ್ತಿರವಿದೆ. ಗ್ರಹಣದ ನಕ್ಷೆ ನೋಡಿ; ಈ ಅಂದಾಜು ಸ್ಥೂಲವಾದದ್ದು.';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'ಸರಿಯಾದ ಗ್ರಹಣ ಕನ್ನಡಕವಿಲ್ಲದೆ ಎಂದಿಗೂ ಸೂರ್ಯನನ್ನು ನೋಡಬೇಡಿ.';
+
+  @override
+  String get alertsTitle => 'ಎಚ್ಚರಿಕೆಗಳು';
+
+  @override
+  String get tonightAlertSwitch => 'ಪ್ರತಿ ಸಂಜೆ ಇಂದು ರಾತ್ರಿಯ ಆಕಾಶ';
+
+  @override
+  String get tonightAlertTime => 'ಸಮಯ';
+
+  @override
+  String get tonightAlertNote =>
+      'ನೀವು ಆರಿಸಿದ ಸಮಯದಲ್ಲಿ ಚಂದ್ರ ಮತ್ತು ಕಾಣುವ ಗ್ರಹಗಳ ಬಗ್ಗೆ ಒಂದು ಚಿಕ್ಕ ಸಂದೇಶ. ಇದು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲೇ ಲೆಕ್ಕ ಹಾಕಲ್ಪಡುತ್ತದೆ, ಇಂಟರ್ನೆಟ್ ಬೇಡ. Android Heliora ಗೆ ಮುಂಚಿತವಾಗಿ ಸುಮಾರು ಎರಡು ವಾರಗಳ ಸಂದೇಶಗಳನ್ನು ಮಾತ್ರ ತಯಾರಿಸಲು ಬಿಡುತ್ತದೆ, ಹಾಗಾಗಿ ಆಗಾಗ ಆ್ಯಪ್ ತೆರೆಯಿರಿ.';
+
+  @override
+  String get tonightNotifTitle => 'ಇಂದು ರಾತ್ರಿಯ ಆಕಾಶ';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'ಚಂದ್ರ: $phase, $percent% ಬೆಳಕು.';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'ಹುಡುಕಿ: $planets.';
+  }
+
+  @override
+  String get tonightNoPlanets => 'ಸಂಜೆಯ ಆಕಾಶದಲ್ಲಿ ಪ್ರಕಾಶಮಾನ ಗ್ರಹಗಳಿಲ್ಲ.';
+
+  @override
+  String get tonightNoCity => 'ಗ್ರಹಗಳನ್ನು ನೋಡಲು Heliora ದಲ್ಲಿ ನಗರ ಆರಿಸಿ.';
+
+  @override
+  String get birthdayTitle => 'ನನ್ನ ಹುಟ್ಟುಹಬ್ಬದ ಆಕಾಶ';
+
+  @override
+  String get birthdaySubtitle =>
+      'ನೀವು ಹುಟ್ಟಿದ ದಿನ ಚಂದ್ರ ಮತ್ತು ಗ್ರಹಗಳು ಎಲ್ಲಿದ್ದವು, ಮತ್ತು ನಿಮ್ಮ ಜೀವನದ ವಿಶೇಷ ದಿನಗಳು.';
+
+  @override
+  String get birthdayCardHint => 'ಚಂದ್ರನ ಕಲೆ, ಗ್ರಹಗಳು ಮತ್ತು ಮೈಲಿಗಲ್ಲುಗಳು';
+
+  @override
+  String get birthdayNeedDate => 'ನಿಮ್ಮ ಜನ್ಮದಿನಾಂಕ ಹಾಕಿ';
+
+  @override
+  String get birthdayMoon => 'ನಿಮ್ಮ ಹುಟ್ಟುಹಬ್ಬದಂದು ಚಂದ್ರ';
+
+  @override
+  String get birthdayPlanets => 'ಆ ದಿನ ಗ್ರಹಗಳು';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'ಇಂದು ನಿಮಗೆ $count ದಿನಗಳಾಗಿವೆ.';
+  }
+
+  @override
+  String get birthdayMilestones => 'ಮೈಲಿಗಲ್ಲುಗಳು';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'ದಿನ $count';
+  }
+
+  @override
+  String get birthdayBillion => '100 ಕೋಟಿ ಸೆಕೆಂಡುಗಳ ವಯಸ್ಸು';
+
+  @override
+  String get birthdayPassed => 'ಆಯಿತು';
+
+  @override
+  String get birthdayNote =>
+      'Heliora ದ ಉಳಿದ ಭಾಗದಂತೆಯೇ ಅದೇ ಕಕ್ಷೆಗಳಿಂದ ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲೇ ಲೆಕ್ಕ ಹಾಕಲಾಗುತ್ತದೆ. ನಿಮ್ಮ ಜನ್ಮದಿನಾಂಕ ಫೋನ್‌ನಿಂದ ಹೊರಗೆ ಹೋಗುವುದಿಲ್ಲ.';
+
+  @override
+  String get missionsTitle => 'ಬಾಹ್ಯಾಕಾಶ ಯಾನಗಳು';
+
+  @override
+  String get missionsSubtitle =>
+      'ಬಾಹ್ಯಾಕಾಶ ಅನ್ವೇಷಣೆಯ ಪ್ರಸಿದ್ಧ ಕ್ಷಣಗಳು, ಹಳೆಯದು ಮೊದಲು.';
+
+  @override
+  String get missionsCardHint => 'ಕಾಲದಲ್ಲಿ ಪ್ರಸಿದ್ಧ ಯಾನಗಳು';
+
+  @override
+  String get missionSputnik1 =>
+      'ಮೊದಲ ಕೃತಕ ಉಪಗ್ರಹ. ಬೀಚ್ ಬಾಲ್ ಗಾತ್ರದ ಈ ಲೋಹದ ಚೆಂಡು ಸುಮಾರು ಮೂರು ತಿಂಗಳು ಭೂಮಿಯನ್ನು ಸುತ್ತಿತು. ಅದರ ಬೀಪ್ ಶಬ್ದ ರೇಡಿಯೊದಲ್ಲಿ ಕೇಳಿಸುತ್ತಿತ್ತು, ಮತ್ತು ಇಲ್ಲಿಂದ ಬಾಹ್ಯಾಕಾಶ ಯುಗ ಶುರುವಾಯಿತು.';
+
+  @override
+  String get missionVostok1 =>
+      'ಯೂರಿ ಗಗಾರಿನ್ ಬಾಹ್ಯಾಕಾಶಕ್ಕೆ ಹೋದ ಮೊದಲ ವ್ಯಕ್ತಿಯಾದರು. ಅವರು ಸುಮಾರು 108 ನಿಮಿಷಗಳಲ್ಲಿ ಭೂಮಿಯನ್ನು ಒಮ್ಮೆ ಸುತ್ತಿದರು.';
+
+  @override
+  String get missionApollo11 =>
+      'ನೀಲ್ ಆರ್ಮ್‌ಸ್ಟ್ರಾಂಗ್ ಮತ್ತು ಬಜ್ ಆಲ್ಡ್ರಿನ್ ಶಾಂತಿ ಸಾಗರದಲ್ಲಿ ಇಳಿದು ಚಂದ್ರನ ಮೇಲೆ ನಡೆದ ಮೊದಲ ಮನುಷ್ಯರಾದರು. ಮೈಕೇಲ್ ಕಾಲಿನ್ಸ್ ಕಕ್ಷೆಯಲ್ಲಿ ಅವರಿಗಾಗಿ ಕಾದರು.';
+
+  @override
+  String get missionVenera7 =>
+      'ಬೇರೊಂದು ಗ್ರಹದಲ್ಲಿ ಇಳಿದು ಸಂಕೇತ ಕಳುಹಿಸಿದ ಮೊದಲ ನೌಕೆ. ಶುಕ್ರನ ಜಜ್ಜುವ ಬಿಸಿಯಲ್ಲಿ ಅದು ಸುಮಾರು 23 ನಿಮಿಷ ಮಾಹಿತಿ ಕಳುಹಿಸಿತು.';
+
+  @override
+  String get missionViking1 =>
+      'ಇದು ಮಂಗಳದಲ್ಲಿ ಇಳಿದು ಆರು ವರ್ಷಗಳಿಗಿಂತ ಹೆಚ್ಚು ಕೆಲಸ ಮಾಡಿತು, ಮತ್ತು ಬೇರೊಂದು ಗ್ರಹದ ನೆಲದಿಂದ ಫೋಟೋ ಹಾಗೂ ಹವಾಮಾನ ವರದಿಗಳ ಮೊದಲ ದೀರ್ಘ ಸರಣಿಯನ್ನು ಕಳುಹಿಸಿತು.';
+
+  @override
+  String get missionVoyager1 =>
+      '1977 ರಲ್ಲಿ ಉಡಾಯಿಸಲಾಯಿತು, ಗುರು ಮತ್ತು ಶನಿಯ ಬಳಿ ಹಾದು 2012 ರಲ್ಲಿ ನಕ್ಷತ್ರಗಳ ನಡುವಿನ ಬಾಹ್ಯಾಕಾಶ ಪ್ರವೇಶಿಸಿತು. ಭೂಮಿಯಿಂದ ಅತಿ ದೂರದಲ್ಲಿರುವ ಮಾನವ ನಿರ್ಮಿತ ವಸ್ತು ಇದು.';
+
+  @override
+  String get missionHubble =>
+      '1990 ರಲ್ಲಿ ಉಡಾಯಿಸಲಾಯಿತು, ಭೂಮಿಯ ಗಾಳಿಯ ಮೇಲಿನಿಂದ ವಿಶ್ವವನ್ನು ನೋಡುತ್ತದೆ. ಇದರ ಸ್ಪಷ್ಟ ಚಿತ್ರಗಳು ವಿಶ್ವದ ವಯಸ್ಸನ್ನು ಅಳೆಯಲು ಸಹಾಯ ಮಾಡಿದವು ಮತ್ತು ಸಾವಿರಾರು ದೂರದ ಗ್ಯಾಲಕ್ಸಿಗಳನ್ನು ತೋರಿಸಿದವು.';
+
+  @override
+  String get missionHuygens =>
+      'ಕ್ಯಾಸಿನಿ ಜೊತೆ ಹೋದ ನೌಕೆ ಹೈಜೆನ್ಸ್ ಪ್ಯಾರಾಚೂಟ್‌ನಿಂದ ಶನಿಯ ಚಂದ್ರ ಟೈಟಾನ್‌ನಲ್ಲಿ ಇಳಿಯಿತು. ಹೊರ ಸೌರವ್ಯೂಹದಲ್ಲಿ ಇದು ಮೊದಲ ಇಳಿಯುವಿಕೆ, ಮತ್ತು ಅದು ನೆಲದಿಂದ ಚಿತ್ರಗಳನ್ನು ಕಳುಹಿಸಿತು.';
+
+  @override
+  String get missionCuriosity =>
+      'ಕಾರಿನ ಗಾತ್ರದ ಈ ರೋವರ್ ರಾಕೆಟ್ ಚಾಲಿತ ’ಸ್ಕೈ ಕ್ರೇನ್’ ಬಳಸಿ ಗೇಲ್ ಕುಳಿಯಲ್ಲಿ ಇಳಿಯಿತು. ಮಂಗಳದಲ್ಲಿ ಒಮ್ಮೆ ಜೀವಕ್ಕೆ ಸೂಕ್ತ ಪರಿಸ್ಥಿತಿ ಇತ್ತು ಎಂದು ಅದು ಕಂಡುಹಿಡಿಯಿತು.';
+
+  @override
+  String get missionMangalyaan =>
+      'ಭಾರತದ ಮಾರ್ಸ್ ಆರ್ಬಿಟರ್ ಮಿಷನ್ ಮೊದಲ ಪ್ರಯತ್ನದಲ್ಲೇ ಮಂಗಳದ ಕಕ್ಷೆ ತಲುಪಿತು. ಯಾವುದೇ ದೇಶಕ್ಕೆ ಇದು ಮೊದಲ ಬಾರಿ, ಮತ್ತು ವೆಚ್ಚವೂ ಬಹಳ ಕಡಿಮೆ.';
+
+  @override
+  String get missionRosetta =>
+      'ರೊಸೆಟ್ಟಾದ ಲ್ಯಾಂಡರ್ ಫೈಲಿ ಧೂಮಕೇತು 67P/ಚುರ್ಯುಮೋವ್–ಗೆರಾಸಿಮೆಂಕೊ ಮೇಲೆ ಇಳಿಯಿತು, ಧೂಮಕೇತುವಿನ ಮೇಲೆ ಮೊದಲ ಇಳಿಯುವಿಕೆ. ರೊಸೆಟ್ಟಾ ಎರಡು ವರ್ಷ ಧೂಮಕೇತುವನ್ನು ಸುತ್ತಿತು.';
+
+  @override
+  String get missionNewhorizons =>
+      'ಒಂಬತ್ತು ವರ್ಷಗಳ ಪ್ರಯಾಣದ ನಂತರ ಅದು ಪ್ಲೂಟೋ ಬಳಿ ಹಾದು, ಮೊದಲ ಬಾರಿಗೆ ಹಿಮದ ಪರ್ವತಗಳನ್ನು ಮತ್ತು ಹೃದಯಾಕಾರದ ದೊಡ್ಡ ಬಯಲನ್ನು ತೋರಿಸಿತು.';
+
+  @override
+  String get missionPerseverance =>
+      'ಪರ್ಸಿವರೆನ್ಸ್ ರೋವರ್ ಹಳೆಯ ಜೀವದ ಕುರುಹುಗಳನ್ನು ಹುಡುಕಲು ಮತ್ತು ಬಂಡೆಗಳ ಮಾದರಿ ಸಂಗ್ರಹಿಸಲು ಜೆಜೆರೊ ಕುಳಿಯಲ್ಲಿ ಇಳಿಯಿತು. ಅದರ ಹೆಲಿಕಾಪ್ಟರ್ ಇಂಜೆನ್ಯುಯಿಟಿ ಬೇರೊಂದು ಗ್ರಹದಲ್ಲಿ ಮೊದಲ ಚಾಲಿತ ಹಾರಾಟ ಮಾಡಿತು.';
+
+  @override
+  String get missionJwst =>
+      'ಅತಿ ದೊಡ್ಡ ಬಾಹ್ಯಾಕಾಶ ದೂರದರ್ಶಕಕ್ಕೆ 6.5 ಮೀಟರ್‌ನ ಚಿನ್ನದ ಕನ್ನಡಿ ಇದೆ, ಮತ್ತು ಅದು 15 ಲಕ್ಷ ಕಿಮೀ ದೂರದಿಂದ ಅತಿಗೆಂಪು ಬೆಳಕಿನಲ್ಲಿ ಆಕಾಶ ನೋಡುತ್ತದೆ. ಅದು ಮೊದಲ ಗ್ಯಾಲಕ್ಸಿಗಳಲ್ಲಿ ಕೆಲವನ್ನು ಕಾಣುತ್ತದೆ.';
+
+  @override
+  String get missionChandrayaan3 =>
+      'ಭಾರತ ಚಂದ್ರನ ಮೇಲೆ ಸುರಕ್ಷಿತವಾಗಿ ಇಳಿದ ನಾಲ್ಕನೇ ದೇಶವಾಯಿತು, ಮತ್ತು ದಕ್ಷಿಣ ಧ್ರುವದ ಬಳಿ ಇಳಿದ ಮೊದಲ ದೇಶ. ವಿಕ್ರಮ್ ಲ್ಯಾಂಡರ್ ಪ್ರಜ್ಞಾನ್ ರೋವರ್ ಅನ್ನು ಹೊತ್ತೊಯ್ದಿತ್ತು.';
 }

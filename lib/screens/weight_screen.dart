@@ -9,6 +9,7 @@ import '../l10n/names.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import 'birthday_screen.dart';
 
 /// What the user would weigh, and how old they would be, on other worlds.
 class WeightScreen extends StatefulWidget {
@@ -212,6 +213,26 @@ class _AgeSection extends StatelessWidget {
         const SizedBox(height: 6),
         Text(l.ageNote, style: TextStyle(fontSize: 12, color: p.muted)),
         if (birth != null) ...<Widget>[
+          const SizedBox(height: 12),
+          SurfaceCard(
+            padding: EdgeInsets.zero,
+            child: ListTile(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              leading: Icon(Icons.nights_stay_outlined, color: p.accentText),
+              title: Text(l.birthdayTitle,
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: p.text)),
+              subtitle: Text(l.birthdayCardHint,
+                  style: TextStyle(fontSize: 13, color: p.muted)),
+              trailing: Icon(Icons.chevron_right, color: p.muted),
+              onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(
+                builder: (_) => const BirthdayScreen(),
+              )),
+            ),
+          ),
           const SizedBox(height: 12),
           for (final body in _bodies) ...<Widget>[
             SurfaceCard(

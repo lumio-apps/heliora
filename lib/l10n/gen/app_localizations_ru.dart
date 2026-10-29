@@ -1297,4 +1297,242 @@ class AppLocalizationsRu extends AppLocalizations {
   String valueM(String value) {
     return '$value м';
   }
+
+  @override
+  String get eclipseTotalLunar => 'Полное лунное затмение';
+
+  @override
+  String get eclipsePartialLunar => 'Частное лунное затмение';
+
+  @override
+  String get eclipsePenumbralLunar => 'Полутеневое лунное затмение';
+
+  @override
+  String get eclipseTotalSolar => 'Полное солнечное затмение';
+
+  @override
+  String get eclipseAnnularSolar => 'Кольцеобразное солнечное затмение';
+
+  @override
+  String get eclipseHybridSolar => 'Гибридное солнечное затмение';
+
+  @override
+  String get eclipsePartialSolar => 'Частное солнечное затмение';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'Луна целиком уходит в тень Земли и часто становится тускло-красной. Её видят все на ночной стороне Земли, и смотреть на неё невооружённым глазом безопасно.';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'Часть Луны ($percent% её ширины) заходит в тёмную тень Земли. Смотреть невооружённым глазом безопасно.';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'Луна проходит через слабую внешнюю тень Земли. Она лишь слегка тускнеет, поэтому заметить это трудно.';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'Луна полностью закрывает Солнце вдоль узкой полосы на Земле. Вне этой полосы видно частное затмение.';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'Луна чуть дальше, чем нужно, чтобы закрыть Солнце целиком, поэтому остаётся яркое кольцо. Кольцо видно вдоль узкой полосы; вне её затмение частное.';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'Вдоль своей полосы это затмение в одних местах полное, а в других кольцеобразное. Вне полосы оно частное.';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'Луна закрывает только часть Солнца, и нигде на Земле Солнце не закрыто полностью.';
+
+  @override
+  String get eclipseNoCity =>
+      'Выберите город в Heliora, чтобы узнать, можно ли наблюдать затмение оттуда.';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'В середине затмения Луна над горизонтом в городе $city.';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return 'В городе $city Луна над горизонтом лишь часть затмения.';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return 'В городе $city Луна остаётся под горизонтом, поэтому оттуда затмение не видно.';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return 'Из города $city не видно: тень Луны туда не попадает или Солнце под горизонтом.';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return 'Из города $city в лучшем случае очень слабое частное затмение, его трудно заметить.';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return 'Грубая оценка для города $city: Луна закрывает в лучшем случае около $percent% ширины Солнца.';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return 'Город $city рядом с полосой, где Солнце закрыто почти или полностью. Посмотрите карту затмения; эта оценка грубая.';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'Никогда не смотрите на Солнце без специальных очков для затмений.';
+
+  @override
+  String get alertsTitle => 'Уведомления';
+
+  @override
+  String get tonightAlertSwitch => 'Небо сегодня вечером, каждый день';
+
+  @override
+  String get tonightAlertTime => 'Время';
+
+  @override
+  String get tonightAlertNote =>
+      'Короткая заметка о Луне и планетах, которые можно увидеть, в выбранное вами время. Она считается на телефоне, интернет не нужен. Android позволяет Heliora подготовить заметки только примерно на две недели вперёд, поэтому время от времени открывайте приложение.';
+
+  @override
+  String get tonightNotifTitle => 'Небо сегодня вечером';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'Луна: $phase, освещено $percent%.';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'Поищите: $planets.';
+  }
+
+  @override
+  String get tonightNoPlanets => 'В вечернем небе нет ярких планет.';
+
+  @override
+  String get tonightNoCity =>
+      'Выберите город в Heliora, чтобы увидеть планеты.';
+
+  @override
+  String get birthdayTitle => 'Небо в мой день рождения';
+
+  @override
+  String get birthdaySubtitle =>
+      'Луна и планеты в день вашего рождения и важные дни вашей жизни.';
+
+  @override
+  String get birthdayCardHint => 'Фаза Луны, планеты и вехи';
+
+  @override
+  String get birthdayNeedDate => 'Укажите дату рождения';
+
+  @override
+  String get birthdayMoon => 'Луна в ваш день рождения';
+
+  @override
+  String get birthdayPlanets => 'Планеты в тот день';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'Сегодня вам $count дн.';
+  }
+
+  @override
+  String get birthdayMilestones => 'Вехи';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'День $count';
+  }
+
+  @override
+  String get birthdayBillion => '1 миллиард секунд';
+
+  @override
+  String get birthdayPassed => 'Прошло';
+
+  @override
+  String get birthdayNote =>
+      'Считается на вашем телефоне по тем же орбитам, что и всё остальное в Heliora. Дата рождения не покидает телефон.';
+
+  @override
+  String get missionsTitle => 'Космические миссии';
+
+  @override
+  String get missionsSubtitle =>
+      'Знаменитые моменты освоения космоса, от самых давних к недавним.';
+
+  @override
+  String get missionsCardHint => 'Знаменитые миссии разных лет';
+
+  @override
+  String get missionSputnik1 =>
+      'Первый искусственный спутник. Этот металлический шар размером с пляжный мяч около трёх месяцев летал вокруг Земли. Его писк можно было услышать по радио, и с него началась космическая эра.';
+
+  @override
+  String get missionVostok1 =>
+      'Юрий Гагарин стал первым человеком в космосе. Он облетел Землю один раз примерно за 108 минут.';
+
+  @override
+  String get missionApollo11 =>
+      'Нил Армстронг и Базз Олдрин сели в Море Спокойствия и стали первыми людьми, прошедшими по Луне. Майкл Коллинз ждал их на орбите.';
+
+  @override
+  String get missionVenera7 =>
+      'Первый аппарат, севший на другую планету и передавший сигнал. Он присылал данные с Венеры около 23 минут в сокрушительной жаре.';
+
+  @override
+  String get missionViking1 =>
+      'Он сел на Марс и проработал там больше шести лет, передав первую длинную серию снимков и сводок погоды с поверхности другой планеты.';
+
+  @override
+  String get missionVoyager1 =>
+      'Запущенный в 1977 году, он пролетел мимо Юпитера и Сатурна и в 2012 году вошёл в межзвёздное пространство. Это самый далёкий от Земли рукотворный объект.';
+
+  @override
+  String get missionHubble =>
+      'Запущенный в 1990 году, он смотрит на Вселенную из-за пределов земной атмосферы. Его чёткие снимки помогли измерить возраст Вселенной и показали тысячи далёких галактик.';
+
+  @override
+  String get missionHuygens =>
+      'Зонд «Гюйгенс», доставленный «Кассини», спустился на парашюте на Титан, спутник Сатурна. Это была первая посадка во внешней части Солнечной системы, и он передал снимки с поверхности.';
+
+  @override
+  String get missionCuriosity =>
+      'Этот ровер размером с автомобиль сел в кратере Гейла с помощью ракетного «небесного крана». Он выяснил, что на Марсе когда-то были условия, подходящие для жизни.';
+
+  @override
+  String get missionMangalyaan =>
+      'Индийская миссия «Мангальян» вышла на орбиту Марса с первой попытки, что не удавалось ни одной стране, и при очень малых затратах.';
+
+  @override
+  String get missionRosetta =>
+      'Посадочный модуль «Филы» миссии «Розетта» сел на комету 67P/Чурюмова — Герасименко: первая посадка на комету. Сама «Розетта» два года летала вокруг кометы.';
+
+  @override
+  String get missionNewhorizons =>
+      'После девятилетнего пути он пролетел мимо Плутона и впервые показал нам ледяные горы и огромную равнину в форме сердца.';
+
+  @override
+  String get missionPerseverance =>
+      'Ровер «Персеверанс» сел в кратере Езеро, чтобы искать следы древней жизни и собирать образцы пород. Его вертолёт «Индженьюити» совершил первый управляемый полёт на другой планете.';
+
+  @override
+  String get missionJwst =>
+      'Самый большой космический телескоп с золотым зеркалом в 6,5 метра смотрит на небо в инфракрасном свете с расстояния 1,5 миллиона км. Он видит некоторые из первых галактик.';
+
+  @override
+  String get missionChandrayaan3 =>
+      'Индия стала четвёртой страной, мягко севшей на Луну, и первой у её южного полюса. Посадочный модуль «Викрам» нёс ровер «Прагъян».';
 }

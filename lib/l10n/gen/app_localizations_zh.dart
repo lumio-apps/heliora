@@ -1227,4 +1227,226 @@ class AppLocalizationsZh extends AppLocalizations {
   String valueM(String value) {
     return '$value 米';
   }
+
+  @override
+  String get eclipseTotalLunar => '月全食';
+
+  @override
+  String get eclipsePartialLunar => '月偏食';
+
+  @override
+  String get eclipsePenumbralLunar => '半影月食';
+
+  @override
+  String get eclipseTotalSolar => '日全食';
+
+  @override
+  String get eclipseAnnularSolar => '日环食';
+
+  @override
+  String get eclipseHybridSolar => '日全环食';
+
+  @override
+  String get eclipsePartialSolar => '日偏食';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      '月亮完全进入地球的影子，常常变成暗红色。地球夜晚一侧的人都能看到，肉眼观看是安全的。';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return '月亮的一部分（宽度的 $percent%）进入地球的本影。肉眼观看是安全的。';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc => '月亮穿过地球淡淡的外层影子，只是稍微变暗，很难察觉。';
+
+  @override
+  String get eclipseTotalSolarDesc => '月亮沿着地球上一条狭窄的路径把太阳完全遮住。路径之外只能看到日偏食。';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      '月亮离地球稍远，无法完全遮住太阳，会留下一圈明亮的光环。光环只在一条狭窄的路径上可见，路径之外是日偏食。';
+
+  @override
+  String get eclipseHybridSolarDesc => '沿着它的路径，这次日食在有些地方是全食，在另一些地方是环食。路径之外是偏食。';
+
+  @override
+  String get eclipsePartialSolarDesc => '月亮只遮住太阳的一部分，地球上任何地方都看不到太阳被完全遮住。';
+
+  @override
+  String get eclipseNoCity => '在 Heliora 中选择一个城市，看看能否在那里观看。';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return '食甚时，$city 的月亮在地平线以上。';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return '在 $city，月亮只在月食的一部分时间里位于地平线以上。';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return '在 $city，月亮一直在地平线以下，所以那里看不到。';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return '在 $city 看不到：月影到不了那里，或者太阳在地平线以下。';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return '在 $city 最多只有很轻微的偏食，很难察觉。';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return '$city 的粗略估计：月亮最多遮住太阳宽度的约 $percent%。';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city 靠近太阳几乎或完全被遮住的路径。请查看日食地图；这个估计比较粗略。';
+  }
+
+  @override
+  String get eclipseSolarSafety => '没有合格的日食眼镜，千万不要直视太阳。';
+
+  @override
+  String get alertsTitle => '提醒';
+
+  @override
+  String get tonightAlertSwitch => '每晚推送今晚的星空';
+
+  @override
+  String get tonightAlertTime => '时间';
+
+  @override
+  String get tonightAlertNote =>
+      '在你选定的时间，推送一条关于月亮和可见行星的简短提示。内容在手机上计算，不需要网络。Android 只允许 Heliora 提前准备大约两周的提示，所以请时不时打开应用。';
+
+  @override
+  String get tonightNotifTitle => '今晚的星空';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return '月亮：$phase，$percent% 被照亮。';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return '可以找找：$planets。';
+  }
+
+  @override
+  String get tonightNoPlanets => '傍晚的天空中没有明亮的行星。';
+
+  @override
+  String get tonightNoCity => '在 Heliora 中选择城市即可查看行星。';
+
+  @override
+  String get birthdayTitle => '我的生日星空';
+
+  @override
+  String get birthdaySubtitle => '你出生那天的月亮和行星，以及你人生中的重要日子。';
+
+  @override
+  String get birthdayCardHint => '月相、行星和里程碑';
+
+  @override
+  String get birthdayNeedDate => '设置你的生日';
+
+  @override
+  String get birthdayMoon => '你生日那天的月亮';
+
+  @override
+  String get birthdayPlanets => '那天的行星';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return '你今天出生 $count 天了。';
+  }
+
+  @override
+  String get birthdayMilestones => '里程碑';
+
+  @override
+  String birthdayDayN(String count) {
+    return '第 $count 天';
+  }
+
+  @override
+  String get birthdayBillion => '10 亿秒';
+
+  @override
+  String get birthdayPassed => '已过';
+
+  @override
+  String get birthdayNote => '在你的手机上用 Heliora 其他部分相同的轨道计算。你的生日不会离开手机。';
+
+  @override
+  String get missionsTitle => '太空任务';
+
+  @override
+  String get missionsSubtitle => '太空探索中的著名时刻，从最早的开始。';
+
+  @override
+  String get missionsCardHint => '历史上的著名任务';
+
+  @override
+  String get missionSputnik1 =>
+      '第一颗人造卫星。这个大小约如沙滩球的金属球绕地球运行了大约三个月，它的哔哔声可以用收音机收听到，太空时代由此开始。';
+
+  @override
+  String get missionVostok1 => '尤里·加加林成为第一个进入太空的人。他用约 108 分钟绕地球飞行了一圈。';
+
+  @override
+  String get missionApollo11 =>
+      '尼尔·阿姆斯特朗和巴兹·奥尔德林降落在静海，成为第一批在月球上行走的人。迈克尔·柯林斯在轨道上等着他们。';
+
+  @override
+  String get missionVenera7 => '第一个降落在另一颗行星上并发回信号的探测器。它在金星的酷热中传回了约 23 分钟的数据。';
+
+  @override
+  String get missionViking1 => '它降落在火星上，工作了六年多，发回了另一颗行星表面的第一批长期照片和天气报告。';
+
+  @override
+  String get missionVoyager1 => '1977 年发射，飞掠木星和土星，2012 年进入星际空间。它是离地球最远的人造物体。';
+
+  @override
+  String get missionHubble =>
+      '1990 年发射，在地球大气之上观察宇宙。它拍摄的清晰图像帮助测定了宇宙的年龄，还发现了成千上万个遥远的星系。';
+
+  @override
+  String get missionHuygens =>
+      '惠更斯号探测器由卡西尼号携带，乘降落伞降落在土星的卫星土卫六上。这是外太阳系的第一次着陆，它还从表面发回了照片。';
+
+  @override
+  String get missionCuriosity =>
+      '这辆汽车大小的火星车借助火箭驱动的“空中吊车”降落在盖尔陨石坑。它发现火星曾经具备适合生命的条件。';
+
+  @override
+  String get missionMangalyaan => '印度的火星轨道器任务一次就进入了火星轨道，这是任何国家的第一次，而且成本很低。';
+
+  @override
+  String get missionRosetta =>
+      '罗塞塔号的着陆器菲莱降落在 67P/丘留莫夫–格拉西缅科彗星上，这是人类第一次在彗星上着陆。罗塞塔号本身绕这颗彗星飞行了两年。';
+
+  @override
+  String get missionNewhorizons => '经过九年的旅程，它飞掠冥王星，第一次让我们看到冰山和一大片心形平原。';
+
+  @override
+  String get missionPerseverance =>
+      '毅力号火星车降落在耶泽罗陨石坑，寻找远古生命的迹象并收集岩石样本。它的直升机“机智号”完成了在另一颗行星上的首次动力飞行。';
+
+  @override
+  String get missionJwst =>
+      '这台最大的太空望远镜有一面 6.5 米的金色镜面，在 150 万公里外用红外光观测天空。它能看到最早期的一些星系。';
+
+  @override
+  String get missionChandrayaan3 =>
+      '印度成为第四个在月球上软着陆的国家，也是第一个在月球南极附近着陆的国家。“维克拉姆”着陆器带着“智慧”月球车。';
 }

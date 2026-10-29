@@ -15,6 +15,7 @@ import '../widgets/moon_view.dart';
 import 'events_screen.dart';
 import 'finder_screen.dart';
 import 'iss_screen.dart';
+import 'missions_screen.dart';
 
 /// "Tonight's sky": the Moon's phase and which planets can be seen tonight
 /// from the chosen city, with rise and set times.
@@ -109,6 +110,8 @@ class _SkyScreenState extends State<SkyScreen> {
           header,
           const _EventsCard(),
           const SizedBox(height: 12),
+          const _MissionsCard(),
+          const SizedBox(height: 12),
           SurfaceCard(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -144,6 +147,8 @@ class _SkyScreenState extends State<SkyScreen> {
         const _EventsCard(),
         const SizedBox(height: 12),
         _IssCard(city: city),
+        const SizedBox(height: 12),
+        const _MissionsCard(),
         const SizedBox(height: 12),
         // The Moon tonight.
         SurfaceCard(
@@ -415,6 +420,54 @@ class _EventsCard extends StatelessWidget {
                             color: p.text)),
                     const SizedBox(height: 2),
                     Text(subtitle,
+                        style: TextStyle(fontSize: 13, color: p.muted)),
+                  ],
+                ),
+              ),
+              Icon(Icons.chevron_right, color: p.muted),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Opens the missions timeline.
+class _MissionsCard extends StatelessWidget {
+  const _MissionsCard();
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    final p = Palette.of(context);
+    return Semantics(
+      button: true,
+      label: l.missionsTitle,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute<void>(
+            builder: (_) => const MissionsScreen(),
+          ));
+        },
+        child: SurfaceCard(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          child: Row(
+            children: <Widget>[
+              Icon(Icons.timeline, color: p.accentText),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(l.missionsTitle,
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: p.text)),
+                    const SizedBox(height: 2),
+                    Text(l.missionsCardHint,
                         style: TextStyle(fontSize: 13, color: p.muted)),
                   ],
                 ),

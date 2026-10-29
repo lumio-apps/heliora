@@ -1294,4 +1294,240 @@ class AppLocalizationsUr extends AppLocalizations {
   String valueM(String value) {
     return '$value میٹر';
   }
+
+  @override
+  String get eclipseTotalLunar => 'مکمل چاند گرہن';
+
+  @override
+  String get eclipsePartialLunar => 'جزوی چاند گرہن';
+
+  @override
+  String get eclipsePenumbralLunar => 'نیم سایہ چاند گرہن';
+
+  @override
+  String get eclipseTotalSolar => 'مکمل سورج گرہن';
+
+  @override
+  String get eclipseAnnularSolar => 'حلقہ نما سورج گرہن';
+
+  @override
+  String get eclipseHybridSolar => 'ملا جلا سورج گرہن';
+
+  @override
+  String get eclipsePartialSolar => 'جزوی سورج گرہن';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'چاند پوری طرح زمین کے سائے میں چلا جاتا ہے اور اکثر مدھم سرخ نظر آتا ہے۔ زمین کے رات والے حصے میں سب لوگ اسے دیکھ سکتے ہیں، اور آنکھوں سے دیکھنا محفوظ ہے۔';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'چاند کا ایک حصہ (چوڑائی کا $percent%) زمین کے گہرے سائے میں جاتا ہے۔ آنکھوں سے دیکھنا محفوظ ہے۔';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'چاند زمین کے ہلکے بیرونی سائے سے گزرتا ہے۔ وہ بس ذرا سا مدھم ہوتا ہے، اس لیے محسوس کرنا مشکل ہے۔';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'زمین پر ایک تنگ پٹی میں چاند سورج کو پوری طرح ڈھانپ لیتا ہے۔ اس پٹی سے باہر جزوی گرہن نظر آتا ہے۔';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'چاند ذرا زیادہ دور ہوتا ہے، اس لیے سورج کو پوری طرح نہیں ڈھانپ پاتا اور ایک چمکدار حلقہ بچ جاتا ہے۔ حلقہ ایک تنگ پٹی میں نظر آتا ہے؛ اس سے باہر گرہن جزوی ہوتا ہے۔';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'اپنی پٹی میں یہ گرہن کہیں مکمل اور کہیں حلقے جیسا نظر آتا ہے۔ پٹی سے باہر یہ جزوی ہوتا ہے۔';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'چاند سورج کے صرف ایک حصے کو ڈھانپتا ہے، اور زمین پر کہیں بھی سورج پورا نہیں ڈھکتا۔';
+
+  @override
+  String get eclipseNoCity =>
+      'Heliora میں کوئی شہر منتخب کریں تاکہ پتا چلے کہ وہاں سے یہ نظر آئے گا یا نہیں۔';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'گرہن کے بیچ میں $city میں چاند افق کے اوپر ہوتا ہے۔';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return '$city میں چاند گرہن کے صرف کچھ حصے میں افق کے اوپر ہوتا ہے۔';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return '$city میں چاند افق کے نیچے ہی رہتا ہے، اس لیے وہاں سے نظر نہیں آئے گا۔';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return '$city سے نظر نہیں آئے گا: چاند کا سایہ وہاں نہیں پہنچتا، یا سورج افق کے نیچے ہوتا ہے۔';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return '$city سے زیادہ سے زیادہ بہت ہلکا جزوی گرہن نظر آئے گا، جسے پہچاننا مشکل ہے۔';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return '$city کے لیے موٹا اندازہ: چاند زیادہ سے زیادہ سورج کی چوڑائی کا تقریباً $percent% ڈھانپتا ہے۔';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city اس پٹی کے قریب ہے جہاں سورج تقریباً یا پوری طرح ڈھک جاتا ہے۔ گرہن کا نقشہ دیکھیں؛ یہ اندازہ موٹا ہے۔';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'مناسب گرہن والے چشمے کے بغیر کبھی سورج کی طرف نہ دیکھیں۔';
+
+  @override
+  String get alertsTitle => 'الرٹس';
+
+  @override
+  String get tonightAlertSwitch => 'ہر شام آج رات کا آسمان';
+
+  @override
+  String get tonightAlertTime => 'وقت';
+
+  @override
+  String get tonightAlertNote =>
+      'آپ کے چنے ہوئے وقت پر چاند اور نظر آنے والے سیاروں کے بارے میں ایک مختصر پیغام۔ یہ آپ کے فون پر ہی بنتا ہے، انٹرنیٹ کی ضرورت نہیں۔ Android Heliora کو پہلے سے صرف تقریباً دو ہفتوں کے پیغام تیار کرنے دیتا ہے، اس لیے ایپ کبھی کبھار کھولتے رہیں۔';
+
+  @override
+  String get tonightNotifTitle => 'آج رات کا آسمان';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'چاند: $phase، $percent% روشن۔';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'تلاش کریں: $planets۔';
+  }
+
+  @override
+  String get tonightNoPlanets => 'شام کے آسمان میں کوئی روشن سیارہ نہیں۔';
+
+  @override
+  String get tonightNoCity => 'سیارے دیکھنے کے لیے Heliora میں شہر منتخب کریں۔';
+
+  @override
+  String get birthdayTitle => 'میری سالگرہ کا آسمان';
+
+  @override
+  String get birthdaySubtitle =>
+      'جس دن آپ پیدا ہوئے اس دن چاند اور سیارے کہاں تھے، اور آپ کی زندگی کے خاص دن۔';
+
+  @override
+  String get birthdayCardHint => 'چاند کی شکل، سیارے اور سنگِ میل';
+
+  @override
+  String get birthdayNeedDate => 'اپنی تاریخِ پیدائش درج کریں';
+
+  @override
+  String get birthdayMoon => 'آپ کی سالگرہ پر چاند';
+
+  @override
+  String get birthdayPlanets => 'اس دن سیارے';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'آج آپ $count دن کے ہیں۔';
+  }
+
+  @override
+  String get birthdayMilestones => 'سنگِ میل';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'دن $count';
+  }
+
+  @override
+  String get birthdayBillion => '100 کروڑ سیکنڈ کے';
+
+  @override
+  String get birthdayPassed => 'ہو چکا';
+
+  @override
+  String get birthdayNote =>
+      'Heliora کی باقی چیزوں جیسے ہی مداروں سے آپ کے فون پر ہی حساب لگایا جاتا ہے۔ آپ کی تاریخِ پیدائش فون سے باہر نہیں جاتی۔';
+
+  @override
+  String get missionsTitle => 'خلائی مشن';
+
+  @override
+  String get missionsSubtitle => 'خلا کی کھوج کے مشہور لمحے، سب سے پرانا پہلے۔';
+
+  @override
+  String get missionsCardHint => 'وقت کے ساتھ مشہور مشن';
+
+  @override
+  String get missionSputnik1 =>
+      'پہلا مصنوعی سیارہ۔ بیچ بال جتنا یہ دھات کا گولہ تقریباً تین مہینے زمین کے گرد گھومتا رہا۔ اس کی بیپ ریڈیو پر سنی جا سکتی تھی، اور یہیں سے خلائی دور شروع ہوا۔';
+
+  @override
+  String get missionVostok1 =>
+      'یوری گاگارین خلا میں جانے والے پہلے انسان بنے۔ انہوں نے تقریباً 108 منٹ میں زمین کا ایک چکر لگایا۔';
+
+  @override
+  String get missionApollo11 =>
+      'نیل آرمسٹرانگ اور بز ایلڈرن سکون کے سمندر میں اترے اور چاند پر چلنے والے پہلے انسان بنے۔ مائیکل کولنز مدار میں ان کا انتظار کرتے رہے۔';
+
+  @override
+  String get missionVenera7 =>
+      'دوسرے سیارے پر اتر کر اشارہ بھیجنے والی پہلی خلائی گاڑی۔ اس نے زہرہ کی کچل دینے والی گرمی میں تقریباً 23 منٹ تک ڈیٹا بھیجا۔';
+
+  @override
+  String get missionViking1 =>
+      'یہ مریخ پر اترا اور چھ سال سے زیادہ کام کرتا رہا۔ اس نے کسی دوسرے سیارے کی سطح سے تصویروں اور موسم کی رپورٹوں کا پہلا طویل سلسلہ بھیجا۔';
+
+  @override
+  String get missionVoyager1 =>
+      '1977 میں چھوڑا گیا، یہ مشتری اور زحل کے پاس سے گزرا اور 2012 میں ستاروں کے درمیان کی خلا میں داخل ہوا۔ زمین سے سب سے دور انسان کی بنائی ہوئی چیز یہی ہے۔';
+
+  @override
+  String get missionHubble =>
+      '1990 میں چھوڑی گئی، یہ زمین کی ہوا کے اوپر سے کائنات کو دیکھتی ہے۔ اس کی صاف تصویروں نے کائنات کی عمر ناپنے میں مدد دی اور ہزاروں دور کی کہکشائیں دکھائیں۔';
+
+  @override
+  String get missionHuygens =>
+      'کیسینی کے ساتھ گئی گاڑی ہائگنز پیراشوٹ سے زحل کے چاند ٹائٹن پر اتری۔ بیرونی نظامِ شمسی میں یہ پہلی لینڈنگ تھی، اور اس نے سطح سے تصویریں بھیجیں۔';
+
+  @override
+  String get missionCuriosity =>
+      'کار جتنا یہ روور راکٹ سے چلنے والی ’اسکائی کرین’ کی مدد سے گیل کریٹر میں اترا۔ اس نے پتا لگایا کہ مریخ پر کبھی زندگی کے لیے مناسب حالات تھے۔';
+
+  @override
+  String get missionMangalyaan =>
+      'بھارت کا مارس آربیٹر مشن پہلی ہی کوشش میں مریخ کے مدار میں پہنچ گیا۔ کسی بھی ملک کے لیے یہ پہلی بار تھا، اور وہ بھی بہت کم خرچ میں۔';
+
+  @override
+  String get missionRosetta =>
+      'روزیٹا کے لینڈر فیلے نے دم دار ستارے 67P/چوریوموف–گیراسیمینکو پر اتر کر کسی دم دار ستارے پر پہلی لینڈنگ کی۔ روزیٹا خود دو سال تک اس دم دار ستارے کے گرد گھومتا رہا۔';
+
+  @override
+  String get missionNewhorizons =>
+      'نو سال کے سفر کے بعد یہ پلوٹو کے پاس سے گزرا اور پہلی بار ہمیں برفیلے پہاڑ اور دل کی شکل کا بڑا میدان دکھایا۔';
+
+  @override
+  String get missionPerseverance =>
+      'پرسیویرنس روور پرانی زندگی کے نشان ڈھونڈنے اور چٹانوں کے نمونے جمع کرنے کے لیے جیزیرو کریٹر میں اترا۔ اس کے ہیلی کاپٹر انجینیوٹی نے کسی دوسرے سیارے پر پہلی کنٹرول شدہ پرواز کی۔';
+
+  @override
+  String get missionJwst =>
+      'سب سے بڑی خلائی دوربین میں 6.5 میٹر کا سنہری شیشہ ہے، اور یہ 15 لاکھ کلومیٹر دور سے زیریں سرخ روشنی میں آسمان دیکھتی ہے۔ یہ سب سے پہلی کہکشاؤں میں سے کچھ دیکھ لیتی ہے۔';
+
+  @override
+  String get missionChandrayaan3 =>
+      'بھارت چاند پر آرام سے اترنے والا چوتھا ملک بنا، اور جنوبی قطب کے قریب اترنے والا پہلا۔ وکرم لینڈر اپنے ساتھ پرگیان روور لے گیا تھا۔';
 }

@@ -280,6 +280,10 @@ class _EventsScreenState extends State<EventsScreen> {
         return Icon(Icons.wb_sunny_outlined, size: 28, color: p.accentText);
       case SpaceEventKind.meteorShower:
         return Icon(Icons.auto_awesome, size: 28, color: p.orbit);
+      case SpaceEventKind.lunarEclipse:
+        return Icon(Icons.nightlight_round, size: 28, color: p.bad);
+      case SpaceEventKind.solarEclipse:
+        return Icon(Icons.brightness_medium, size: 28, color: p.bad);
       case SpaceEventKind.opposition:
       case SpaceEventKind.eveningElongation:
       case SpaceEventKind.morningElongation:

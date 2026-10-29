@@ -1296,4 +1296,241 @@ class AppLocalizationsHi extends AppLocalizations {
   String valueM(String value) {
     return '$value मी';
   }
+
+  @override
+  String get eclipseTotalLunar => 'पूर्ण चंद्र ग्रहण';
+
+  @override
+  String get eclipsePartialLunar => 'आंशिक चंद्र ग्रहण';
+
+  @override
+  String get eclipsePenumbralLunar => 'उपछाया चंद्र ग्रहण';
+
+  @override
+  String get eclipseTotalSolar => 'पूर्ण सूर्य ग्रहण';
+
+  @override
+  String get eclipseAnnularSolar => 'वलयाकार सूर्य ग्रहण';
+
+  @override
+  String get eclipseHybridSolar => 'संकर सूर्य ग्रहण';
+
+  @override
+  String get eclipsePartialSolar => 'आंशिक सूर्य ग्रहण';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'चंद्रमा पूरी तरह पृथ्वी की छाया में चला जाता है और अक्सर हल्का लाल दिखता है। पृथ्वी के रात वाले हिस्से में सभी इसे देख सकते हैं, और इसे आँखों से देखना सुरक्षित है।';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'चंद्रमा का एक हिस्सा (चौड़ाई का $percent%) पृथ्वी की गहरी छाया में चला जाता है। इसे आँखों से देखना सुरक्षित है।';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'चंद्रमा पृथ्वी की हल्की बाहरी छाया से गुज़रता है। वह बस थोड़ा मद्धम होता है, इसलिए पहचानना मुश्किल है।';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'चंद्रमा पृथ्वी पर एक पतली पट्टी में सूरज को पूरी तरह ढक लेता है। उस पट्टी के बाहर आंशिक ग्रहण दिखता है।';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'चंद्रमा थोड़ा ज़्यादा दूर होता है, इसलिए सूरज को पूरा नहीं ढक पाता और चमकदार छल्ला बच जाता है। छल्ला एक पतली पट्टी में दिखता है; उसके बाहर ग्रहण आंशिक होता है।';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'अपनी पट्टी में यह ग्रहण कुछ जगह पूर्ण और कुछ जगह छल्लेनुमा दिखता है। पट्टी के बाहर यह आंशिक होता है।';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'चंद्रमा सूरज के सिर्फ़ एक हिस्से को ढकता है, और पृथ्वी पर कहीं भी सूरज पूरा नहीं ढकता।';
+
+  @override
+  String get eclipseNoCity =>
+      'Heliora में कोई शहर चुनें, ताकि पता चले कि वहाँ से यह दिखेगा या नहीं।';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'ग्रहण के बीच में $city में चंद्रमा क्षितिज के ऊपर रहता है।';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return '$city में चंद्रमा ग्रहण के सिर्फ़ कुछ हिस्से में क्षितिज के ऊपर रहता है।';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return '$city में चंद्रमा क्षितिज के नीचे रहता है, इसलिए वहाँ से यह नहीं दिखेगा।';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return '$city से नहीं दिखेगा: चंद्रमा की छाया वहाँ नहीं पहुँचती, या सूरज क्षितिज के नीचे होता है।';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return '$city से ज़्यादा से ज़्यादा बहुत हल्का आंशिक ग्रहण दिखेगा, जिसे पहचानना मुश्किल है।';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return '$city के लिए मोटा अंदाज़ा: चंद्रमा ज़्यादा से ज़्यादा सूरज की चौड़ाई का लगभग $percent% ढकता है।';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city उस पट्टी के पास है जहाँ सूरज लगभग या पूरी तरह ढक जाता है। ग्रहण का नक्शा देखें; यह अंदाज़ा मोटा है।';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'सूरज को कभी भी सही ग्रहण-चश्मे के बिना न देखें।';
+
+  @override
+  String get alertsTitle => 'अलर्ट';
+
+  @override
+  String get tonightAlertSwitch => 'हर शाम आज रात का आसमान';
+
+  @override
+  String get tonightAlertTime => 'समय';
+
+  @override
+  String get tonightAlertNote =>
+      'आपके चुने समय पर चंद्रमा और दिखने वाले ग्रहों के बारे में एक छोटा सा संदेश। यह आपके फ़ोन पर ही बनता है, इंटरनेट नहीं चाहिए। Android Heliora को सिर्फ़ करीब दो हफ़्ते के संदेश पहले से तैयार करने देता है, इसलिए ऐप बीच-बीच में खोलते रहें।';
+
+  @override
+  String get tonightNotifTitle => 'आज रात का आसमान';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'चंद्रमा: $phase, $percent% रोशन।';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'देखिए: $planets।';
+  }
+
+  @override
+  String get tonightNoPlanets => 'शाम के आसमान में कोई चमकीला ग्रह नहीं है।';
+
+  @override
+  String get tonightNoCity => 'ग्रह देखने के लिए Heliora में शहर चुनें।';
+
+  @override
+  String get birthdayTitle => 'मेरे जन्मदिन का आसमान';
+
+  @override
+  String get birthdaySubtitle =>
+      'जिस दिन आप पैदा हुए, उस दिन चंद्रमा और ग्रह कहाँ थे, और आपकी ज़िंदगी के खास दिन।';
+
+  @override
+  String get birthdayCardHint => 'चंद्रमा की कला, ग्रह और खास पड़ाव';
+
+  @override
+  String get birthdayNeedDate => 'अपनी जन्मतिथि डालें';
+
+  @override
+  String get birthdayMoon => 'आपके जन्मदिन पर चंद्रमा';
+
+  @override
+  String get birthdayPlanets => 'उस दिन ग्रह';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'आज आप $count दिन के हैं।';
+  }
+
+  @override
+  String get birthdayMilestones => 'खास पड़ाव';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'दिन $count';
+  }
+
+  @override
+  String get birthdayBillion => '1 अरब सेकंड के';
+
+  @override
+  String get birthdayPassed => 'हो चुका';
+
+  @override
+  String get birthdayNote =>
+      'यह आपके फ़ोन पर ही Heliora की बाकी चीज़ों जैसी कक्षाओं से निकाला जाता है। आपकी जन्मतिथि फ़ोन से बाहर नहीं जाती।';
+
+  @override
+  String get missionsTitle => 'अंतरिक्ष मिशन';
+
+  @override
+  String get missionsSubtitle =>
+      'अंतरिक्ष की खोज के मशहूर पल, सबसे पुराने से शुरू।';
+
+  @override
+  String get missionsCardHint => 'समय के साथ मशहूर मिशन';
+
+  @override
+  String get missionSputnik1 =>
+      'पहला कृत्रिम उपग्रह। बीच-बॉल जितनी यह धातु की गेंद करीब तीन महीने पृथ्वी का चक्कर लगाती रही। इसकी बीप रेडियो पर सुनी जा सकती थी, और इसी से अंतरिक्ष युग शुरू हुआ।';
+
+  @override
+  String get missionVostok1 =>
+      'यूरी गागरिन अंतरिक्ष में जाने वाले पहले इंसान बने। उन्होंने करीब 108 मिनट में पृथ्वी का एक चक्कर लगाया।';
+
+  @override
+  String get missionApollo11 =>
+      'नील आर्मस्ट्रांग और बज़ एल्ड्रिन शांति सागर में उतरे और चाँद पर चलने वाले पहले इंसान बने। माइकल कॉलिन्स कक्षा में उनका इंतज़ार करते रहे।';
+
+  @override
+  String get missionVenera7 =>
+      'दूसरे ग्रह पर उतरकर संकेत भेजने वाला पहला यान। उसने शुक्र की कुचल देने वाली गर्मी में करीब 23 मिनट तक डेटा भेजा।';
+
+  @override
+  String get missionViking1 =>
+      'यह मंगल पर उतरा और छह साल से ज़्यादा काम करता रहा। इसने किसी दूसरे ग्रह की सतह से तस्वीरों और मौसम की रिपोर्टों की पहली लंबी श्रृंखला भेजी।';
+
+  @override
+  String get missionVoyager1 =>
+      '1977 में छोड़ा गया, यह बृहस्पति और शनि के पास से गुज़रा और 2012 में तारों के बीच की जगह में पहुँचा। यह पृथ्वी से सबसे दूर इंसान की बनाई चीज़ है।';
+
+  @override
+  String get missionHubble =>
+      '1990 में छोड़ा गया, यह पृथ्वी की हवा के ऊपर से ब्रह्मांड को देखता है। इसकी साफ़ तस्वीरों से ब्रह्मांड की उम्र नापने में मदद मिली और हज़ारों दूर की आकाशगंगाएँ दिखीं।';
+
+  @override
+  String get missionHuygens =>
+      'कैसिनी के साथ गया यान ह्यूजेन्स पैराशूट से शनि के चंद्रमा टाइटन पर उतरा। बाहरी सौरमंडल में यह पहली लैंडिंग थी, और उसने सतह से तस्वीरें भेजीं।';
+
+  @override
+  String get missionCuriosity =>
+      'कार जितना बड़ा यह रोवर रॉकेट से चलने वाली ’स्काई क्रेन’ की मदद से गेल क्रेटर में उतरा। इसने पाया कि मंगल पर कभी जीवन के लायक हालात थे।';
+
+  @override
+  String get missionMangalyaan =>
+      'भारत का मंगल ऑर्बिटर मिशन पहली ही कोशिश में मंगल की कक्षा में पहुँच गया। किसी भी देश के लिए यह पहली बार था, और वह भी बहुत कम खर्च में।';
+
+  @override
+  String get missionRosetta =>
+      'रोसेटा के लैंडर फ़ाइली ने धूमकेतु 67P/चुर्यूमोव–गेरासिमेंको पर उतरकर धूमकेतु पर पहली लैंडिंग की। रोसेटा खुद दो साल तक धूमकेतु का चक्कर लगाता रहा।';
+
+  @override
+  String get missionNewhorizons =>
+      'नौ साल के सफ़र के बाद यह प्लूटो के पास से गुज़रा और पहली बार हमें बर्फ़ीले पहाड़ और दिल के आकार का विशाल मैदान दिखाया।';
+
+  @override
+  String get missionPerseverance =>
+      'पर्सिवियरेंस रोवर पुराने जीवन के निशान खोजने और चट्टानों के नमूने जमा करने के लिए जेज़ेरो क्रेटर में उतरा। उसके हेलिकॉप्टर इंजेन्युइटी ने किसी दूसरे ग्रह पर पहली संचालित उड़ान भरी।';
+
+  @override
+  String get missionJwst =>
+      'सबसे बड़ी अंतरिक्ष दूरबीन में 6.5 मीटर का सुनहरा शीशा है, और वह 15 लाख किमी दूर से इन्फ्रारेड रोशनी में आसमान देखती है। वह कुछ सबसे पहली आकाशगंगाएँ देख पाती है।';
+
+  @override
+  String get missionChandrayaan3 =>
+      'भारत चाँद पर आराम से उतरने वाला चौथा देश बना, और दक्षिणी ध्रुव के पास उतरने वाला पहला। विक्रम लैंडर अपने साथ प्रज्ञान रोवर लेकर गया था।';
 }

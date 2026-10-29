@@ -118,6 +118,30 @@ double sunLongitude(DateTime date) {
   return (lon: _norm360(lon), lat: lat);
 }
 
+/// Distance from Earth's centre to the Moon on [date], in Earth radii
+/// (about 56 to 64). Same Schlyter elements as [moonEcliptic], with the two
+/// biggest distance corrections.
+double moonDistance(DateTime date) {
+  final d = julianDay(date) - 2451543.5;
+  final n = _norm360(125.1228 - 0.0529538083 * d);
+  final w = _norm360(318.0634 + 0.1643573223 * d);
+  final m = _norm360(115.3654 + 13.0649929509 * d);
+  const e = 0.054900;
+  final mr = _rad(m);
+  var ecc = mr + e * math.sin(mr) * (1 + e * math.cos(mr));
+  for (var k = 0; k < 8; k++) {
+    ecc -= (ecc - e * math.sin(ecc) - mr) / (1 - e * math.cos(ecc));
+  }
+  final ms = _rad(356.0470 + 0.9856002585 * d);
+  final ws = 282.9404 + 4.70935e-5 * d;
+  final ls = _deg(ms) + ws;
+  final lm = m + w + n;
+  final dd = _rad(lm - ls);
+  return 60.2666 * (1 - e * math.cos(ecc)) -
+      0.58 * math.cos(mr - 2 * dd) -
+      0.46 * math.cos(2 * dd);
+}
+
 /// Right ascension and declination of 'sun', 'moon' or a planet on [date].
 Equatorial equatorialOf(String id, DateTime date) {
   final jd = julianDay(date);

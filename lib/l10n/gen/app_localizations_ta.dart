@@ -1303,4 +1303,242 @@ class AppLocalizationsTa extends AppLocalizations {
   String valueM(String value) {
     return '$value மீ';
   }
+
+  @override
+  String get eclipseTotalLunar => 'முழு சந்திர கிரகணம்';
+
+  @override
+  String get eclipsePartialLunar => 'பகுதி சந்திர கிரகணம்';
+
+  @override
+  String get eclipsePenumbralLunar => 'புறநிழல் சந்திர கிரகணம்';
+
+  @override
+  String get eclipseTotalSolar => 'முழு சூரிய கிரகணம்';
+
+  @override
+  String get eclipseAnnularSolar => 'வளைய சூரிய கிரகணம்';
+
+  @override
+  String get eclipseHybridSolar => 'கலப்பு சூரிய கிரகணம்';
+
+  @override
+  String get eclipsePartialSolar => 'பகுதி சூரிய கிரகணம்';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'நிலா முழுவதும் பூமியின் நிழலுக்குள் செல்கிறது, அடிக்கடி மங்கிய சிவப்பாகத் தெரியும். பூமியின் இரவுப் பக்கத்தில் உள்ள அனைவரும் இதைப் பார்க்கலாம்; கண்ணால் பார்ப்பது பாதுகாப்பானது.';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'நிலாவின் ஒரு பகுதி (அகலத்தின் $percent%) பூமியின் அடர் நிழலுக்குள் செல்கிறது. கண்ணால் பார்ப்பது பாதுகாப்பானது.';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'நிலா பூமியின் மங்கலான வெளிப்புற நிழல் வழியாகச் செல்கிறது. சிறிதளவு மட்டுமே மங்குவதால் கவனிப்பது கடினம்.';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'பூமியின் மீது ஒரு குறுகிய பாதையில் நிலா சூரியனை முழுவதுமாக மறைக்கிறது. அந்தப் பாதைக்கு வெளியே பகுதி கிரகணம் தெரியும்.';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'நிலா சற்றுத் தொலைவில் இருப்பதால் சூரியனை முழுவதும் மறைக்க முடியாது; ஒளிரும் வளையம் மிஞ்சும். வளையம் ஒரு குறுகிய பாதையில் தெரியும்; அதற்கு வெளியே கிரகணம் பகுதியாக இருக்கும்.';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'தன் பாதையில் இந்த கிரகணம் சில இடங்களில் முழுமையாகவும் சில இடங்களில் வளையமாகவும் தெரியும். பாதைக்கு வெளியே அது பகுதியாக இருக்கும்.';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'நிலா சூரியனின் ஒரு பகுதியை மட்டுமே மறைக்கிறது; பூமியில் எங்கும் சூரியன் முழுவதும் மறையாது.';
+
+  @override
+  String get eclipseNoCity =>
+      'அங்கிருந்து பார்க்க முடியுமா என்று அறிய Heliora-வில் ஒரு நகரத்தைத் தேர்ந்தெடுக்கவும்.';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'கிரகணத்தின் நடுவில் $city-ல் நிலா அடிவானத்துக்கு மேலே இருக்கும்.';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return '$city-ல் கிரகணத்தின் ஒரு பகுதியில் மட்டுமே நிலா அடிவானத்துக்கு மேலே இருக்கும்.';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return '$city-ல் நிலா அடிவானத்துக்குக் கீழேயே இருக்கும், அதனால் அங்கிருந்து தெரியாது.';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return '$city-ல் இருந்து தெரியாது: நிலாவின் நிழல் அங்கே விழாது, அல்லது சூரியன் அடிவானத்துக்குக் கீழே இருக்கும்.';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return '$city-ல் இருந்து அதிகபட்சம் மிகச் சிறிய பகுதி கிரகணம் மட்டுமே, கவனிப்பது கடினம்.';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return '$city-க்கான தோராய மதிப்பீடு: நிலா அதிகபட்சம் சூரியனின் அகலத்தில் சுமார் $percent% மறைக்கிறது.';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return 'சூரியன் கிட்டத்தட்ட அல்லது முழுவதும் மறையும் பாதைக்கு $city அருகில் உள்ளது. கிரகண வரைபடத்தைப் பாருங்கள்; இந்த மதிப்பீடு தோராயமானது.';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'சரியான கிரகணக் கண்ணாடி இல்லாமல் சூரியனை ஒருபோதும் பார்க்காதீர்கள்.';
+
+  @override
+  String get alertsTitle => 'எச்சரிக்கைகள்';
+
+  @override
+  String get tonightAlertSwitch => 'ஒவ்வொரு மாலையும் இன்றிரவு வானம்';
+
+  @override
+  String get tonightAlertTime => 'நேரம்';
+
+  @override
+  String get tonightAlertNote =>
+      'நீங்கள் தேர்ந்தெடுத்த நேரத்தில் நிலா மற்றும் தெரியும் கோள்கள் பற்றிய ஒரு சிறு செய்தி. இது உங்கள் தொலைபேசியிலேயே கணக்கிடப்படும், இணையம் தேவையில்லை. Android, Heliora-வை முன்கூட்டியே சுமார் இரண்டு வாரச் செய்திகளை மட்டுமே தயாரிக்க அனுமதிக்கிறது, எனவே ஆப்பை அவ்வப்போது திறங்கள்.';
+
+  @override
+  String get tonightNotifTitle => 'இன்றிரவு வானம்';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'நிலா: $phase, $percent% ஒளிர்வு.';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'தேடுங்கள்: $planets.';
+  }
+
+  @override
+  String get tonightNoPlanets => 'மாலை வானில் பிரகாசமான கோள்கள் இல்லை.';
+
+  @override
+  String get tonightNoCity =>
+      'கோள்களைப் பார்க்க Heliora-வில் ஒரு நகரத்தைத் தேர்ந்தெடுக்கவும்.';
+
+  @override
+  String get birthdayTitle => 'என் பிறந்தநாள் வானம்';
+
+  @override
+  String get birthdaySubtitle =>
+      'நீங்கள் பிறந்த நாளில் நிலாவும் கோள்களும் எங்கே இருந்தன, மேலும் உங்கள் வாழ்க்கையின் சிறப்பு நாட்கள்.';
+
+  @override
+  String get birthdayCardHint => 'நிலா நிலை, கோள்கள், மைல்கற்கள்';
+
+  @override
+  String get birthdayNeedDate => 'உங்கள் பிறந்த தேதியை அமை';
+
+  @override
+  String get birthdayMoon => 'உங்கள் பிறந்தநாளில் நிலா';
+
+  @override
+  String get birthdayPlanets => 'அந்த நாளில் கோள்கள்';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'இன்று உங்களுக்கு $count நாட்கள் ஆகின்றன.';
+  }
+
+  @override
+  String get birthdayMilestones => 'மைல்கற்கள்';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'நாள் $count';
+  }
+
+  @override
+  String get birthdayBillion => '100 கோடி வினாடிகள்';
+
+  @override
+  String get birthdayPassed => 'முடிந்தது';
+
+  @override
+  String get birthdayNote =>
+      'Heliora-வின் மற்ற பகுதிகளில் பயன்படுத்தும் அதே சுற்றுப்பாதைகளிலிருந்து உங்கள் தொலைபேசியிலேயே கணக்கிடப்படுகிறது. உங்கள் பிறந்த தேதி தொலைபேசியை விட்டு வெளியே செல்லாது.';
+
+  @override
+  String get missionsTitle => 'விண்வெளிப் பயணங்கள்';
+
+  @override
+  String get missionsSubtitle =>
+      'விண்வெளி ஆய்வின் புகழ்பெற்ற தருணங்கள், பழையது முதலில்.';
+
+  @override
+  String get missionsCardHint => 'காலம் முழுவதும் புகழ்பெற்ற பயணங்கள்';
+
+  @override
+  String get missionSputnik1 =>
+      'முதல் செயற்கைக்கோள். கடற்கரைப் பந்து அளவுள்ள இந்த உலோக உருண்டை சுமார் மூன்று மாதங்கள் பூமியைச் சுற்றியது. அதன் பீப் ஒலி வானொலியில் கேட்டது, விண்வெளி யுகம் இங்கிருந்தே தொடங்கியது.';
+
+  @override
+  String get missionVostok1 =>
+      'யூரி ககாரின் விண்வெளிக்குச் சென்ற முதல் மனிதர் ஆனார். அவர் சுமார் 108 நிமிடங்களில் பூமியை ஒருமுறை சுற்றினார்.';
+
+  @override
+  String get missionApollo11 =>
+      'நீல் ஆம்ஸ்ட்ராங்கும் பஸ் ஆல்ட்ரினும் அமைதிக் கடலில் இறங்கி நிலவில் நடந்த முதல் மனிதர்கள் ஆனார்கள். மைக்கேல் காலின்ஸ் சுற்றுப்பாதையில் அவர்களுக்காகக் காத்திருந்தார்.';
+
+  @override
+  String get missionVenera7 =>
+      'வேறொரு கோளில் இறங்கி சமிக்ஞை அனுப்பிய முதல் விண்கலம். வெள்ளியின் நசுக்கும் வெப்பத்தில் அது சுமார் 23 நிமிடங்கள் தரவு அனுப்பியது.';
+
+  @override
+  String get missionViking1 =>
+      'இது செவ்வாயில் இறங்கி ஆறு ஆண்டுகளுக்கு மேல் செயல்பட்டது; வேறொரு கோளின் மேற்பரப்பிலிருந்து படங்கள் மற்றும் வானிலை அறிக்கைகளின் முதல் நீண்ட தொடரை அனுப்பியது.';
+
+  @override
+  String get missionVoyager1 =>
+      '1977-ல் ஏவப்பட்டு, வியாழன் மற்றும் சனி அருகே கடந்து 2012-ல் விண்மீன்களுக்கு இடையிலான விண்வெளியில் நுழைந்தது. பூமியிலிருந்து மிகத் தொலைவில் உள்ள மனிதன் உருவாக்கிய பொருள் இதுவே.';
+
+  @override
+  String get missionHubble =>
+      '1990-ல் ஏவப்பட்டது, பூமியின் காற்றுக்கு மேலிருந்து பிரபஞ்சத்தைப் பார்க்கிறது. அதன் தெளிவான படங்கள் பிரபஞ்சத்தின் வயதை அளக்க உதவின, ஆயிரக்கணக்கான தொலைதூர விண்மீன் திரள்களைக் காட்டின.';
+
+  @override
+  String get missionHuygens =>
+      'காசினியுடன் சென்ற விண்கலம் ஹைஜென்ஸ் பாராசூட்டில் சனியின் நிலவு டைட்டனில் இறங்கியது. வெளிப்புற சூரிய மண்டலத்தில் இதுவே முதல் தரையிறக்கம்; அது மேற்பரப்பிலிருந்து படங்கள் அனுப்பியது.';
+
+  @override
+  String get missionCuriosity =>
+      'கார் அளவுள்ள இந்த ரோவர் ராக்கெட்டால் இயங்கும் ’ஸ்கை கிரேன்’ மூலம் கேல் பள்ளத்தில் இறங்கியது. செவ்வாயில் ஒரு காலத்தில் உயிருக்கு ஏற்ற சூழல் இருந்ததாக அது கண்டறிந்தது.';
+
+  @override
+  String get missionMangalyaan =>
+      'இந்தியாவின் மார்ஸ் ஆர்பிட்டர் மிஷன் முதல் முயற்சியிலேயே செவ்வாயின் சுற்றுப்பாதையை அடைந்தது. எந்த நாட்டுக்கும் இது முதல் முறை, மிகக் குறைந்த செலவில்.';
+
+  @override
+  String get missionRosetta =>
+      'ரோசெட்டாவின் தரையிறங்கி பிலே, 67P/சுர்யுமோவ்–கெராசிமென்கோ வால்மீனில் இறங்கியது; வால்மீனில் முதல் தரையிறக்கம். ரோசெட்டா இரண்டு ஆண்டுகள் வால்மீனைச் சுற்றியது.';
+
+  @override
+  String get missionNewhorizons =>
+      'ஒன்பது ஆண்டுப் பயணத்துக்குப் பிறகு அது புளூட்டோவைக் கடந்து, முதல் முறையாக பனி மலைகளையும் இதய வடிவ பெரிய சமவெளியையும் காட்டியது.';
+
+  @override
+  String get missionPerseverance =>
+      'பழைய உயிரின் அடையாளங்களைத் தேடவும் பாறை மாதிரிகளைச் சேகரிக்கவும் பெர்சிவரன்ஸ் ரோவர் ஜெஸெரோ பள்ளத்தில் இறங்கியது. அதன் ஹெலிகாப்டர் இன்ஜெனுயிட்டி வேறொரு கோளில் முதல் இயக்கப்பட்ட பறப்பை நிகழ்த்தியது.';
+
+  @override
+  String get missionJwst =>
+      'மிகப்பெரிய விண்வெளித் தொலைநோக்கியில் 6.5 மீட்டர் தங்க நிறக் கண்ணாடி உள்ளது; 15 லட்சம் கி.மீ தொலைவிலிருந்து அகச்சிவப்பு ஒளியில் வானைப் பார்க்கிறது. முதல் விண்மீன் திரள்களில் சிலவற்றை அது காண்கிறது.';
+
+  @override
+  String get missionChandrayaan3 =>
+      'நிலவில் பாதுகாப்பாக இறங்கிய நான்காவது நாடாக இந்தியா ஆனது, தென் துருவம் அருகே இறங்கிய முதல் நாடும். விக்ரம் லேண்டர் பிரக்யான் ரோவரைச் சுமந்து சென்றது.';
 }

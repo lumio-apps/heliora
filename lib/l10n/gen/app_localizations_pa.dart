@@ -1296,4 +1296,241 @@ class AppLocalizationsPa extends AppLocalizations {
   String valueM(String value) {
     return '$value ਮੀ';
   }
+
+  @override
+  String get eclipseTotalLunar => 'ਪੂਰਨ ਚੰਦਰ ਗ੍ਰਹਿਣ';
+
+  @override
+  String get eclipsePartialLunar => 'ਅੰਸ਼ਕ ਚੰਦਰ ਗ੍ਰਹਿਣ';
+
+  @override
+  String get eclipsePenumbralLunar => 'ਉਪਛਾਇਆ ਚੰਦਰ ਗ੍ਰਹਿਣ';
+
+  @override
+  String get eclipseTotalSolar => 'ਪੂਰਨ ਸੂਰਜ ਗ੍ਰਹਿਣ';
+
+  @override
+  String get eclipseAnnularSolar => 'ਕੰਗਣਾਕਾਰ ਸੂਰਜ ਗ੍ਰਹਿਣ';
+
+  @override
+  String get eclipseHybridSolar => 'ਸੰਕਰ ਸੂਰਜ ਗ੍ਰਹਿਣ';
+
+  @override
+  String get eclipsePartialSolar => 'ਅੰਸ਼ਕ ਸੂਰਜ ਗ੍ਰਹਿਣ';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'ਚੰਨ ਪੂਰੀ ਤਰ੍ਹਾਂ ਧਰਤੀ ਦੇ ਪਰਛਾਵੇਂ ਵਿੱਚ ਚਲਾ ਜਾਂਦਾ ਹੈ ਅਤੇ ਅਕਸਰ ਫਿੱਕਾ ਲਾਲ ਦਿਸਦਾ ਹੈ। ਧਰਤੀ ਦੇ ਰਾਤ ਵਾਲੇ ਪਾਸੇ ਸਾਰੇ ਇਸਨੂੰ ਦੇਖ ਸਕਦੇ ਹਨ, ਅਤੇ ਅੱਖਾਂ ਨਾਲ ਦੇਖਣਾ ਸੁਰੱਖਿਅਤ ਹੈ।';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'ਚੰਨ ਦਾ ਇੱਕ ਹਿੱਸਾ (ਚੌੜਾਈ ਦਾ $percent%) ਧਰਤੀ ਦੇ ਗੂੜ੍ਹੇ ਪਰਛਾਵੇਂ ਵਿੱਚ ਜਾਂਦਾ ਹੈ। ਅੱਖਾਂ ਨਾਲ ਦੇਖਣਾ ਸੁਰੱਖਿਅਤ ਹੈ।';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'ਚੰਨ ਧਰਤੀ ਦੇ ਹਲਕੇ ਬਾਹਰੀ ਪਰਛਾਵੇਂ ਵਿੱਚੋਂ ਲੰਘਦਾ ਹੈ। ਉਹ ਸਿਰਫ਼ ਥੋੜ੍ਹਾ ਮੱਧਮ ਹੁੰਦਾ ਹੈ, ਇਸ ਲਈ ਪਛਾਣਨਾ ਔਖਾ ਹੈ।';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'ਧਰਤੀ ਉੱਤੇ ਇੱਕ ਤੰਗ ਪੱਟੀ ਵਿੱਚ ਚੰਨ ਸੂਰਜ ਨੂੰ ਪੂਰੀ ਤਰ੍ਹਾਂ ਢੱਕ ਲੈਂਦਾ ਹੈ। ਉਸ ਪੱਟੀ ਤੋਂ ਬਾਹਰ ਅੰਸ਼ਕ ਗ੍ਰਹਿਣ ਦਿਸਦਾ ਹੈ।';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'ਚੰਨ ਥੋੜ੍ਹਾ ਜ਼ਿਆਦਾ ਦੂਰ ਹੋਣ ਕਰਕੇ ਸੂਰਜ ਨੂੰ ਪੂਰਾ ਨਹੀਂ ਢੱਕ ਸਕਦਾ, ਤੇ ਇੱਕ ਚਮਕਦਾ ਛੱਲਾ ਬਚ ਜਾਂਦਾ ਹੈ। ਛੱਲਾ ਇੱਕ ਤੰਗ ਪੱਟੀ ਵਿੱਚ ਦਿਸਦਾ ਹੈ; ਉਸ ਤੋਂ ਬਾਹਰ ਗ੍ਰਹਿਣ ਅੰਸ਼ਕ ਹੁੰਦਾ ਹੈ।';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'ਆਪਣੀ ਪੱਟੀ ਵਿੱਚ ਇਹ ਗ੍ਰਹਿਣ ਕੁਝ ਥਾਵਾਂ ਉੱਤੇ ਪੂਰਨ ਅਤੇ ਕੁਝ ਥਾਵਾਂ ਉੱਤੇ ਛੱਲੇ ਵਰਗਾ ਦਿਸਦਾ ਹੈ। ਪੱਟੀ ਤੋਂ ਬਾਹਰ ਇਹ ਅੰਸ਼ਕ ਹੁੰਦਾ ਹੈ।';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'ਚੰਨ ਸੂਰਜ ਦੇ ਸਿਰਫ਼ ਇੱਕ ਹਿੱਸੇ ਨੂੰ ਢੱਕਦਾ ਹੈ, ਅਤੇ ਧਰਤੀ ਉੱਤੇ ਕਿਤੇ ਵੀ ਸੂਰਜ ਪੂਰਾ ਨਹੀਂ ਢੱਕਿਆ ਜਾਂਦਾ।';
+
+  @override
+  String get eclipseNoCity =>
+      'Heliora ਵਿੱਚ ਇੱਕ ਸ਼ਹਿਰ ਚੁਣੋ, ਤਾਂ ਜੋ ਪਤਾ ਲੱਗੇ ਕਿ ਉੱਥੋਂ ਇਹ ਦਿਸੇਗਾ ਜਾਂ ਨਹੀਂ।';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'ਗ੍ਰਹਿਣ ਦੇ ਵਿਚਕਾਰ $city ਵਿੱਚ ਚੰਨ ਦਿਸਹੱਦੇ ਤੋਂ ਉੱਪਰ ਹੁੰਦਾ ਹੈ।';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return '$city ਵਿੱਚ ਚੰਨ ਗ੍ਰਹਿਣ ਦੇ ਸਿਰਫ਼ ਕੁਝ ਹਿੱਸੇ ਵਿੱਚ ਦਿਸਹੱਦੇ ਤੋਂ ਉੱਪਰ ਹੁੰਦਾ ਹੈ।';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return '$city ਵਿੱਚ ਚੰਨ ਦਿਸਹੱਦੇ ਤੋਂ ਹੇਠਾਂ ਹੀ ਰਹਿੰਦਾ ਹੈ, ਇਸ ਲਈ ਉੱਥੋਂ ਨਹੀਂ ਦਿਸੇਗਾ।';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return '$city ਤੋਂ ਨਹੀਂ ਦਿਸੇਗਾ: ਚੰਨ ਦਾ ਪਰਛਾਵਾਂ ਉੱਥੇ ਨਹੀਂ ਪਹੁੰਚਦਾ, ਜਾਂ ਸੂਰਜ ਦਿਸਹੱਦੇ ਤੋਂ ਹੇਠਾਂ ਹੁੰਦਾ ਹੈ।';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return '$city ਤੋਂ ਵੱਧ ਤੋਂ ਵੱਧ ਬਹੁਤ ਹਲਕਾ ਅੰਸ਼ਕ ਗ੍ਰਹਿਣ ਦਿਸੇਗਾ, ਜਿਸਨੂੰ ਪਛਾਣਨਾ ਔਖਾ ਹੈ।';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return '$city ਲਈ ਮੋਟਾ ਅੰਦਾਜ਼ਾ: ਚੰਨ ਵੱਧ ਤੋਂ ਵੱਧ ਸੂਰਜ ਦੀ ਚੌੜਾਈ ਦਾ ਲਗਭਗ $percent% ਢੱਕਦਾ ਹੈ।';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city ਉਸ ਪੱਟੀ ਦੇ ਨੇੜੇ ਹੈ ਜਿੱਥੇ ਸੂਰਜ ਲਗਭਗ ਜਾਂ ਪੂਰਾ ਢੱਕਿਆ ਜਾਂਦਾ ਹੈ। ਗ੍ਰਹਿਣ ਦਾ ਨਕਸ਼ਾ ਦੇਖੋ; ਇਹ ਅੰਦਾਜ਼ਾ ਮੋਟਾ ਹੈ।';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'ਸਹੀ ਗ੍ਰਹਿਣ-ਐਨਕਾਂ ਤੋਂ ਬਿਨਾਂ ਕਦੇ ਵੀ ਸੂਰਜ ਵੱਲ ਨਾ ਦੇਖੋ।';
+
+  @override
+  String get alertsTitle => 'ਅਲਰਟ';
+
+  @override
+  String get tonightAlertSwitch => 'ਹਰ ਸ਼ਾਮ ਅੱਜ ਰਾਤ ਦਾ ਆਸਮਾਨ';
+
+  @override
+  String get tonightAlertTime => 'ਸਮਾਂ';
+
+  @override
+  String get tonightAlertNote =>
+      'ਤੁਹਾਡੇ ਚੁਣੇ ਸਮੇਂ ਉੱਤੇ ਚੰਨ ਅਤੇ ਦਿਸਣ ਵਾਲੇ ਗ੍ਰਹਿਆਂ ਬਾਰੇ ਇੱਕ ਛੋਟਾ ਸੁਨੇਹਾ। ਇਹ ਤੁਹਾਡੇ ਫ਼ੋਨ ਉੱਤੇ ਹੀ ਬਣਦਾ ਹੈ, ਇੰਟਰਨੈੱਟ ਨਹੀਂ ਚਾਹੀਦਾ। Android Heliora ਨੂੰ ਪਹਿਲਾਂ ਤੋਂ ਸਿਰਫ਼ ਲਗਭਗ ਦੋ ਹਫ਼ਤਿਆਂ ਦੇ ਸੁਨੇਹੇ ਤਿਆਰ ਕਰਨ ਦਿੰਦਾ ਹੈ, ਇਸ ਲਈ ਐਪ ਵਿਚ-ਵਿਚਾਲੇ ਖੋਲ੍ਹਦੇ ਰਹੋ।';
+
+  @override
+  String get tonightNotifTitle => 'ਅੱਜ ਰਾਤ ਦਾ ਆਸਮਾਨ';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'ਚੰਨ: $phase, $percent% ਰੌਸ਼ਨ।';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'ਲੱਭੋ: $planets।';
+  }
+
+  @override
+  String get tonightNoPlanets => 'ਸ਼ਾਮ ਦੇ ਆਸਮਾਨ ਵਿੱਚ ਕੋਈ ਚਮਕਦਾਰ ਗ੍ਰਹਿ ਨਹੀਂ।';
+
+  @override
+  String get tonightNoCity => 'ਗ੍ਰਹਿ ਦੇਖਣ ਲਈ Heliora ਵਿੱਚ ਸ਼ਹਿਰ ਚੁਣੋ।';
+
+  @override
+  String get birthdayTitle => 'ਮੇਰੇ ਜਨਮਦਿਨ ਦਾ ਆਸਮਾਨ';
+
+  @override
+  String get birthdaySubtitle =>
+      'ਜਿਸ ਦਿਨ ਤੁਸੀਂ ਜੰਮੇ, ਉਸ ਦਿਨ ਚੰਨ ਅਤੇ ਗ੍ਰਹਿ ਕਿੱਥੇ ਸਨ, ਅਤੇ ਤੁਹਾਡੀ ਜ਼ਿੰਦਗੀ ਦੇ ਖ਼ਾਸ ਦਿਨ।';
+
+  @override
+  String get birthdayCardHint => 'ਚੰਨ ਦੀ ਕਲਾ, ਗ੍ਰਹਿ ਅਤੇ ਪੜਾਅ';
+
+  @override
+  String get birthdayNeedDate => 'ਆਪਣੀ ਜਨਮ ਤਾਰੀਖ਼ ਪਾਓ';
+
+  @override
+  String get birthdayMoon => 'ਤੁਹਾਡੇ ਜਨਮਦਿਨ ਉੱਤੇ ਚੰਨ';
+
+  @override
+  String get birthdayPlanets => 'ਉਸ ਦਿਨ ਗ੍ਰਹਿ';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'ਅੱਜ ਤੁਸੀਂ $count ਦਿਨਾਂ ਦੇ ਹੋ।';
+  }
+
+  @override
+  String get birthdayMilestones => 'ਪੜਾਅ';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'ਦਿਨ $count';
+  }
+
+  @override
+  String get birthdayBillion => '100 ਕਰੋੜ ਸਕਿੰਟਾਂ ਦੇ';
+
+  @override
+  String get birthdayPassed => 'ਹੋ ਚੁੱਕਾ';
+
+  @override
+  String get birthdayNote =>
+      'Heliora ਦੀਆਂ ਬਾਕੀ ਚੀਜ਼ਾਂ ਵਾਂਗ ਉਹੀ ਪੰਧਾਂ ਤੋਂ ਤੁਹਾਡੇ ਫ਼ੋਨ ਉੱਤੇ ਹੀ ਹਿਸਾਬ ਲਾਇਆ ਜਾਂਦਾ ਹੈ। ਤੁਹਾਡੀ ਜਨਮ ਤਾਰੀਖ਼ ਫ਼ੋਨ ਤੋਂ ਬਾਹਰ ਨਹੀਂ ਜਾਂਦੀ।';
+
+  @override
+  String get missionsTitle => 'ਪੁਲਾੜ ਮਿਸ਼ਨ';
+
+  @override
+  String get missionsSubtitle =>
+      'ਪੁਲਾੜ ਦੀ ਖੋਜ ਦੇ ਮਸ਼ਹੂਰ ਪਲ, ਸਭ ਤੋਂ ਪੁਰਾਣਾ ਪਹਿਲਾਂ।';
+
+  @override
+  String get missionsCardHint => 'ਸਮੇਂ ਦੇ ਨਾਲ ਮਸ਼ਹੂਰ ਮਿਸ਼ਨ';
+
+  @override
+  String get missionSputnik1 =>
+      'ਪਹਿਲਾ ਨਕਲੀ ਉਪਗ੍ਰਹਿ। ਬੀਚ ਬਾਲ ਜਿੱਡਾ ਇਹ ਧਾਤ ਦਾ ਗੋਲਾ ਲਗਭਗ ਤਿੰਨ ਮਹੀਨੇ ਧਰਤੀ ਦੁਆਲੇ ਘੁੰਮਦਾ ਰਿਹਾ। ਇਸਦੀ ਬੀਪ ਰੇਡੀਓ ਉੱਤੇ ਸੁਣੀ ਜਾ ਸਕਦੀ ਸੀ, ਅਤੇ ਇੱਥੋਂ ਹੀ ਪੁਲਾੜ ਯੁੱਗ ਸ਼ੁਰੂ ਹੋਇਆ।';
+
+  @override
+  String get missionVostok1 =>
+      'ਯੂਰੀ ਗਾਗਾਰਿਨ ਪੁਲਾੜ ਵਿੱਚ ਜਾਣ ਵਾਲੇ ਪਹਿਲੇ ਇਨਸਾਨ ਬਣੇ। ਉਨ੍ਹਾਂ ਨੇ ਲਗਭਗ 108 ਮਿੰਟਾਂ ਵਿੱਚ ਧਰਤੀ ਦਾ ਇੱਕ ਚੱਕਰ ਲਾਇਆ।';
+
+  @override
+  String get missionApollo11 =>
+      'ਨੀਲ ਆਰਮਸਟ੍ਰਾਂਗ ਅਤੇ ਬਜ਼ ਓਲਡ੍ਰਿਨ ਸ਼ਾਂਤੀ ਦੇ ਸਾਗਰ ਵਿੱਚ ਉਤਰੇ ਅਤੇ ਚੰਨ ਉੱਤੇ ਤੁਰਨ ਵਾਲੇ ਪਹਿਲੇ ਇਨਸਾਨ ਬਣੇ। ਮਾਈਕਲ ਕਾਲਿਨਜ਼ ਪੰਧ ਵਿੱਚ ਉਨ੍ਹਾਂ ਦੀ ਉਡੀਕ ਕਰਦੇ ਰਹੇ।';
+
+  @override
+  String get missionVenera7 =>
+      'ਕਿਸੇ ਹੋਰ ਗ੍ਰਹਿ ਉੱਤੇ ਉਤਰ ਕੇ ਸੰਕੇਤ ਭੇਜਣ ਵਾਲਾ ਪਹਿਲਾ ਯਾਨ। ਇਸਨੇ ਸ਼ੁੱਕਰ ਦੀ ਕੁਚਲ ਦੇਣ ਵਾਲੀ ਗਰਮੀ ਵਿੱਚ ਲਗਭਗ 23 ਮਿੰਟ ਡਾਟਾ ਭੇਜਿਆ।';
+
+  @override
+  String get missionViking1 =>
+      'ਇਹ ਮੰਗਲ ਉੱਤੇ ਉਤਰਿਆ ਅਤੇ ਛੇ ਸਾਲ ਤੋਂ ਵੱਧ ਕੰਮ ਕਰਦਾ ਰਿਹਾ। ਇਸਨੇ ਕਿਸੇ ਹੋਰ ਗ੍ਰਹਿ ਦੀ ਸਤ੍ਹਾ ਤੋਂ ਤਸਵੀਰਾਂ ਅਤੇ ਮੌਸਮ ਦੀਆਂ ਰਿਪੋਰਟਾਂ ਦੀ ਪਹਿਲੀ ਲੰਮੀ ਲੜੀ ਭੇਜੀ।';
+
+  @override
+  String get missionVoyager1 =>
+      '1977 ਵਿੱਚ ਛੱਡਿਆ ਗਿਆ, ਇਹ ਬ੍ਰਹਿਸਪਤੀ ਅਤੇ ਸ਼ਨੀ ਕੋਲੋਂ ਲੰਘਿਆ ਅਤੇ 2012 ਵਿੱਚ ਤਾਰਿਆਂ ਵਿਚਕਾਰਲੇ ਪੁਲਾੜ ਵਿੱਚ ਪਹੁੰਚਿਆ। ਧਰਤੀ ਤੋਂ ਸਭ ਤੋਂ ਦੂਰ ਇਨਸਾਨ ਦੀ ਬਣਾਈ ਚੀਜ਼ ਇਹੀ ਹੈ।';
+
+  @override
+  String get missionHubble =>
+      '1990 ਵਿੱਚ ਛੱਡਿਆ ਗਿਆ, ਇਹ ਧਰਤੀ ਦੀ ਹਵਾ ਤੋਂ ਉੱਪਰੋਂ ਬ੍ਰਹਿਮੰਡ ਨੂੰ ਦੇਖਦਾ ਹੈ। ਇਸਦੀਆਂ ਸਾਫ਼ ਤਸਵੀਰਾਂ ਨੇ ਬ੍ਰਹਿਮੰਡ ਦੀ ਉਮਰ ਮਾਪਣ ਵਿੱਚ ਮਦਦ ਕੀਤੀ ਅਤੇ ਹਜ਼ਾਰਾਂ ਦੂਰ ਦੀਆਂ ਆਕਾਸ਼ਗੰਗਾਵਾਂ ਦਿਖਾਈਆਂ।';
+
+  @override
+  String get missionHuygens =>
+      'ਕੈਸੀਨੀ ਨਾਲ ਗਿਆ ਯਾਨ ਹਾਈਗਨਜ਼ ਪੈਰਾਸ਼ੂਟ ਨਾਲ ਸ਼ਨੀ ਦੇ ਚੰਨ ਟਾਈਟਨ ਉੱਤੇ ਉਤਰਿਆ। ਬਾਹਰੀ ਸੂਰਜ ਮੰਡਲ ਵਿੱਚ ਇਹ ਪਹਿਲਾ ਉਤਰਨਾ ਸੀ, ਅਤੇ ਇਸਨੇ ਸਤ੍ਹਾ ਤੋਂ ਤਸਵੀਰਾਂ ਭੇਜੀਆਂ।';
+
+  @override
+  String get missionCuriosity =>
+      'ਕਾਰ ਜਿੱਡਾ ਇਹ ਰੋਵਰ ਰਾਕੇਟ ਨਾਲ ਚੱਲਣ ਵਾਲੀ ’ਸਕਾਈ ਕਰੇਨ’ ਦੀ ਮਦਦ ਨਾਲ ਗੇਲ ਕ੍ਰੇਟਰ ਵਿੱਚ ਉਤਰਿਆ। ਇਸਨੇ ਪਤਾ ਲਾਇਆ ਕਿ ਮੰਗਲ ਉੱਤੇ ਕਦੇ ਜੀਵਨ ਲਈ ਠੀਕ ਹਾਲਾਤ ਸਨ।';
+
+  @override
+  String get missionMangalyaan =>
+      'ਭਾਰਤ ਦਾ ਮਾਰਸ ਆਰਬਿਟਰ ਮਿਸ਼ਨ ਪਹਿਲੀ ਹੀ ਕੋਸ਼ਿਸ਼ ਵਿੱਚ ਮੰਗਲ ਦੇ ਪੰਧ ਵਿੱਚ ਪਹੁੰਚ ਗਿਆ। ਕਿਸੇ ਵੀ ਦੇਸ਼ ਲਈ ਇਹ ਪਹਿਲੀ ਵਾਰ ਸੀ, ਅਤੇ ਖ਼ਰਚਾ ਵੀ ਬਹੁਤ ਘੱਟ।';
+
+  @override
+  String get missionRosetta =>
+      'ਰੋਜ਼ੇਟਾ ਦੇ ਲੈਂਡਰ ਫ਼ਾਈਲੀ ਨੇ ਧੂਮਕੇਤੂ 67P/ਚੁਰਯੂਮੋਵ–ਗੇਰਾਸਿਮੇਂਕੋ ਉੱਤੇ ਉਤਰ ਕੇ ਧੂਮਕੇਤੂ ਉੱਤੇ ਪਹਿਲਾ ਉਤਰਨਾ ਕੀਤਾ। ਰੋਜ਼ੇਟਾ ਆਪ ਦੋ ਸਾਲ ਧੂਮਕੇਤੂ ਦੁਆਲੇ ਘੁੰਮਦਾ ਰਿਹਾ।';
+
+  @override
+  String get missionNewhorizons =>
+      'ਨੌਂ ਸਾਲਾਂ ਦੇ ਸਫ਼ਰ ਮਗਰੋਂ ਇਹ ਪਲੂਟੋ ਕੋਲੋਂ ਲੰਘਿਆ ਅਤੇ ਪਹਿਲੀ ਵਾਰ ਸਾਨੂੰ ਬਰਫ਼ੀਲੇ ਪਹਾੜ ਅਤੇ ਦਿਲ ਦੀ ਸ਼ਕਲ ਦਾ ਵੱਡਾ ਮੈਦਾਨ ਦਿਖਾਇਆ।';
+
+  @override
+  String get missionPerseverance =>
+      'ਪਰਸੀਵਰੈਂਸ ਰੋਵਰ ਪੁਰਾਣੇ ਜੀਵਨ ਦੇ ਨਿਸ਼ਾਨ ਲੱਭਣ ਅਤੇ ਚੱਟਾਨਾਂ ਦੇ ਨਮੂਨੇ ਇਕੱਠੇ ਕਰਨ ਲਈ ਜੇਜ਼ੇਰੋ ਕ੍ਰੇਟਰ ਵਿੱਚ ਉਤਰਿਆ। ਇਸਦੇ ਹੈਲੀਕਾਪਟਰ ਇੰਜੀਨਿਊਟੀ ਨੇ ਕਿਸੇ ਹੋਰ ਗ੍ਰਹਿ ਉੱਤੇ ਪਹਿਲੀ ਚਲਾਈ ਹੋਈ ਉਡਾਣ ਭਰੀ।';
+
+  @override
+  String get missionJwst =>
+      'ਸਭ ਤੋਂ ਵੱਡੀ ਪੁਲਾੜ ਦੂਰਬੀਨ ਵਿੱਚ 6.5 ਮੀਟਰ ਦਾ ਸੁਨਹਿਰੀ ਸ਼ੀਸ਼ਾ ਹੈ, ਅਤੇ ਇਹ 15 ਲੱਖ ਕਿਲੋਮੀਟਰ ਦੂਰੋਂ ਇਨਫ਼ਰਾਰੈੱਡ ਰੌਸ਼ਨੀ ਵਿੱਚ ਆਸਮਾਨ ਦੇਖਦੀ ਹੈ। ਇਹ ਸਭ ਤੋਂ ਪਹਿਲੀਆਂ ਆਕਾਸ਼ਗੰਗਾਵਾਂ ਵਿੱਚੋਂ ਕੁਝ ਦੇਖ ਸਕਦੀ ਹੈ।';
+
+  @override
+  String get missionChandrayaan3 =>
+      'ਭਾਰਤ ਚੰਨ ਉੱਤੇ ਸੁਰੱਖਿਅਤ ਉਤਰਨ ਵਾਲਾ ਚੌਥਾ ਦੇਸ਼ ਬਣਿਆ, ਅਤੇ ਦੱਖਣੀ ਧਰੁਵ ਦੇ ਨੇੜੇ ਉਤਰਨ ਵਾਲਾ ਪਹਿਲਾ। ਵਿਕਰਮ ਲੈਂਡਰ ਆਪਣੇ ਨਾਲ ਪ੍ਰਗਿਆਨ ਰੋਵਰ ਲੈ ਗਿਆ ਸੀ।';
 }

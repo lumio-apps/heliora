@@ -817,5 +817,157 @@
         "type": "String"
       }
     }
-  }
+  },
+  "eclipseTotalLunar": "Total lunar eclipse",
+  "eclipsePartialLunar": "Partial lunar eclipse",
+  "eclipsePenumbralLunar": "Penumbral lunar eclipse",
+  "eclipseTotalSolar": "Total solar eclipse",
+  "eclipseAnnularSolar": "Annular solar eclipse",
+  "eclipseHybridSolar": "Hybrid solar eclipse",
+  "eclipsePartialSolar": "Partial solar eclipse",
+  "eclipseTotalLunarDesc": "The Moon moves fully into Earth's shadow and often turns a dim red. Everyone on the night side of Earth can see it, and it is safe to watch with your eyes.",
+  "eclipsePartialLunarDesc": "Part of the Moon ({percent}% of its width) moves into Earth's dark shadow. It is safe to watch with your eyes.",
+  "@eclipsePartialLunarDesc": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "eclipsePenumbralLunarDesc": "The Moon passes through the faint outer shadow of Earth. It only dims a little, so it is hard to notice.",
+  "eclipseTotalSolarDesc": "The Moon completely covers the Sun along a narrow path across Earth. Outside that path you see a partial eclipse.",
+  "eclipseAnnularSolarDesc": "The Moon is a little too far away to cover the Sun fully, so a bright ring is left. The ring shows along a narrow path; outside it the eclipse is partial.",
+  "eclipseHybridSolarDesc": "Along its path this eclipse is total in some places and ring-shaped in others. Outside the path it is partial.",
+  "eclipsePartialSolarDesc": "The Moon covers only a part of the Sun, and nowhere on Earth is the Sun fully covered.",
+  "eclipseNoCity": "Choose a city in Heliora to see if you can watch it from there.",
+  "eclipseLunarUp": "The Moon is above the horizon in {city} at the middle of the eclipse.",
+  "@eclipseLunarUp": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      }
+    }
+  },
+  "eclipseLunarPartly": "In {city} the Moon is above the horizon for only part of the eclipse.",
+  "@eclipseLunarPartly": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      }
+    }
+  },
+  "eclipseLunarDown": "In {city} the Moon stays below the horizon, so you cannot see it from there.",
+  "@eclipseLunarDown": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      }
+    }
+  },
+  "eclipseSolarNone": "Not visible from {city}: the Moon's shadow misses it, or the Sun is below the horizon.",
+  "@eclipseSolarNone": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      }
+    }
+  },
+  "eclipseSolarSlight": "From {city} at most a very slight partial eclipse, hard to notice.",
+  "@eclipseSolarSlight": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      }
+    }
+  },
+  "eclipseSolarPartial": "Rough estimate for {city}: the Moon covers about {percent}% of the Sun's width at best.",
+  "@eclipseSolarPartial": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "eclipseSolarNear": "{city} is close to the path where the Sun is almost or fully covered. Check an eclipse map; this estimate is rough.",
+  "@eclipseSolarNear": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      }
+    }
+  },
+  "eclipseSolarSafety": "Never look at the Sun without proper eclipse glasses.",
+  "alertsTitle": "Alerts",
+  "tonightAlertSwitch": "Tonight in the sky, every evening",
+  "tonightAlertTime": "Time",
+  "tonightAlertNote": "A short note about the Moon and the planets you can see, at the time you choose. It is worked out on your phone, with no internet. Android only lets Heliora prepare about two weeks of notes ahead, so open the app now and then.",
+  "tonightNotifTitle": "Tonight in the sky",
+  "tonightMoon": "Moon: {phase}, {percent}% lit.",
+  "@tonightMoon": {
+    "placeholders": {
+      "phase": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "tonightPlanets": "Look for: {planets}.",
+  "@tonightPlanets": {
+    "placeholders": {
+      "planets": {
+        "type": "String"
+      }
+    }
+  },
+  "tonightNoPlanets": "No bright planets in the evening sky.",
+  "tonightNoCity": "Choose a city in Heliora to see the planets.",
+  "birthdayTitle": "My birthday sky",
+  "birthdaySubtitle": "The Moon and the planets on the day you were born, and the big days of your life.",
+  "birthdayCardHint": "Moon phase, planets and milestones",
+  "birthdayNeedDate": "Set your birth date",
+  "birthdayMoon": "Moon on your birthday",
+  "birthdayPlanets": "Planets on that day",
+  "birthdayDaysOld": "You are {count} days old today.",
+  "@birthdayDaysOld": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "birthdayMilestones": "Milestones",
+  "birthdayDayN": "Day {count}",
+  "@birthdayDayN": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "birthdayBillion": "1 billion seconds old",
+  "birthdayPassed": "Done",
+  "birthdayNote": "Worked out on your phone from the same orbits as the rest of Heliora. Your birth date never leaves it.",
+  "missionsTitle": "Space missions",
+  "missionsSubtitle": "Famous moments in the exploration of space, oldest first.",
+  "missionsCardHint": "Famous missions through time",
+  "missionSputnik1": "The first artificial satellite. This metal ball, about the size of a beach ball, circled Earth for about three months. Its beeping could be heard on radios and it started the space age.",
+  "missionVostok1": "Yuri Gagarin became the first person in space. He circled Earth once, in about 108 minutes.",
+  "missionApollo11": "Neil Armstrong and Buzz Aldrin landed in the Sea of Tranquility and became the first people to walk on the Moon. Michael Collins waited for them in orbit.",
+  "missionVenera7": "The first spacecraft to land on another planet and send a signal back. It sent data from Venus for about 23 minutes in the crushing heat.",
+  "missionViking1": "It landed on Mars and worked there for more than six years, sending the first long series of photos and weather reports from the surface of another planet.",
+  "missionVoyager1": "Launched in 1977, it flew past Jupiter and Saturn and entered interstellar space in 2012. It is the farthest human-made object from Earth.",
+  "missionHubble": "Launched in 1990, it looks at the universe from above Earth's air. Its sharp pictures helped measure the age of the universe and showed thousands of faraway galaxies.",
+  "missionHuygens": "Huygens, a probe carried by Cassini, parachuted down to Saturn's moon Titan. It was the first landing in the outer solar system, and it sent pictures from the surface.",
+  "missionCuriosity": "This car-sized rover landed in Gale Crater using a rocket-powered sky crane. It found that Mars once had the right conditions for life.",
+  "missionMangalyaan": "India's Mars Orbiter Mission reached Mars orbit on its first try, a first for any country, and at a very low cost.",
+  "missionRosetta": "Rosetta's lander Philae touched down on comet 67P/Churyumov–Gerasimenko, the first landing on a comet. Rosetta itself circled the comet for two years.",
+  "missionNewhorizons": "After a nine-year trip, it flew past Pluto and showed us icy mountains and a huge heart-shaped plain for the first time.",
+  "missionPerseverance": "The Perseverance rover landed in Jezero Crater to look for signs of old life and collect rock samples. Its helicopter Ingenuity made the first powered flight on another planet.",
+  "missionJwst": "The largest space telescope has a 6.5-metre gold mirror and watches the sky in infrared light from 1.5 million km away. It sees some of the first galaxies.",
+  "missionChandrayaan3": "India became the fourth country to land softly on the Moon, and the first near its south pole. The Vikram lander carried the Pragyan rover."
 }

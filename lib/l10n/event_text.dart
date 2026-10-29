@@ -1,8 +1,11 @@
 import 'package:flutter/widgets.dart';
 
+import '../core/eclipses.dart';
 import '../core/events.dart';
 import '../core/format.dart';
+import '../data/cities.dart';
 import '../data/planets.dart';
+import '../state/app_state.dart';
 import 'gen/app_localizations.dart';
 import 'names.dart';
 
@@ -55,6 +58,26 @@ String eventTitle(AppLocalizations l, SpaceEvent e) {
       return l.eventDecemberSolstice;
     case SpaceEventKind.meteorShower:
       return l.eventMeteorShower(_showerName(l, e.bodies[0]));
+    case SpaceEventKind.lunarEclipse:
+      switch (e.eclipse!.type) {
+        case EclipseType.total:
+          return l.eclipseTotalLunar;
+        case EclipseType.penumbral:
+          return l.eclipsePenumbralLunar;
+        default:
+          return l.eclipsePartialLunar;
+      }
+    case SpaceEventKind.solarEclipse:
+      switch (e.eclipse!.type) {
+        case EclipseType.total:
+          return l.eclipseTotalSolar;
+        case EclipseType.annular:
+          return l.eclipseAnnularSolar;
+        case EclipseType.hybrid:
+          return l.eclipseHybridSolar;
+        default:
+          return l.eclipsePartialSolar;
+      }
   }
 }
 
@@ -86,7 +109,70 @@ String eventDescription(BuildContext context, AppLocalizations l, SpaceEvent e) 
     case SpaceEventKind.meteorShower:
       return l.eventMeteorDesc(formatNumber(context, e.value.round()),
           formatNumber(context, (e.extra * 100).round()));
+    case SpaceEventKind.lunarEclipse:
+    case SpaceEventKind.solarEclipse:
+      return _eclipseDescription(context, l, e.eclipse!);
   }
+}
+
+/// What the eclipse is, and a careful note on whether the chosen city can
+/// see it. The note is a rough guide, so it says "roughly" and "check a map".
+String _eclipseDescription(
+    BuildContext context, AppLocalizations l, Eclipse eclipse) {
+  final lines = <String>[];
+  final city = cityById(AppScope.read(context).settings.cityId);
+  if (eclipse.lunar) {
+    switch (eclipse.type) {
+      case EclipseType.total:
+        lines.add(l.eclipseTotalLunarDesc);
+      case EclipseType.penumbral:
+        lines.add(l.eclipsePenumbralLunarDesc);
+      default:
+        lines.add(l.eclipsePartialLunarDesc(
+            formatNumber(context, (eclipse.magnitude * 100).round())));
+    }
+    if (city == null) {
+      lines.add(l.eclipseNoCity);
+    } else {
+      switch (lunarView(eclipse, city.lat, city.lon)) {
+        case LunarView.up:
+          lines.add(l.eclipseLunarUp(city.name));
+        case LunarView.partly:
+          lines.add(l.eclipseLunarPartly(city.name));
+        case LunarView.down:
+          lines.add(l.eclipseLunarDown(city.name));
+      }
+    }
+    return lines.join('\n');
+  }
+  switch (eclipse.type) {
+    case EclipseType.total:
+      lines.add(l.eclipseTotalSolarDesc);
+    case EclipseType.annular:
+      lines.add(l.eclipseAnnularSolarDesc);
+    case EclipseType.hybrid:
+      lines.add(l.eclipseHybridSolarDesc);
+    default:
+      lines.add(l.eclipsePartialSolarDesc);
+  }
+  if (city == null) {
+    lines.add(l.eclipseNoCity);
+  } else {
+    final mag = solarLocalMagnitude(eclipse, city.lat, city.lon);
+    if (mag == null || mag < 0.02) {
+      lines.add(l.eclipseSolarNone(city.name));
+    } else if (mag < 0.12) {
+      lines.add(l.eclipseSolarSlight(city.name));
+    } else if (mag < 0.9) {
+      final percent = (mag * 10).round() * 10;
+      lines.add(l.eclipseSolarPartial(
+          city.name, formatNumber(context, percent)));
+    } else {
+      lines.add(l.eclipseSolarNear(city.name));
+    }
+  }
+  lines.add(l.eclipseSolarSafety);
+  return lines.join('\n');
 }
 
 /// "Today", "Tomorrow" or "In 5 days".

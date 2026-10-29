@@ -1285,4 +1285,241 @@ class AppLocalizationsAr extends AppLocalizations {
   String valueM(String value) {
     return '$value م';
   }
+
+  @override
+  String get eclipseTotalLunar => 'خسوف كلي للقمر';
+
+  @override
+  String get eclipsePartialLunar => 'خسوف جزئي للقمر';
+
+  @override
+  String get eclipsePenumbralLunar => 'خسوف شبه ظلي للقمر';
+
+  @override
+  String get eclipseTotalSolar => 'كسوف كلي للشمس';
+
+  @override
+  String get eclipseAnnularSolar => 'كسوف حلقي للشمس';
+
+  @override
+  String get eclipseHybridSolar => 'كسوف هجين للشمس';
+
+  @override
+  String get eclipsePartialSolar => 'كسوف جزئي للشمس';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'يدخل القمر بالكامل في ظل الأرض وكثيرًا ما يصبح أحمر خافتًا. يراه كل من هو في الجانب الليلي من الأرض، والنظر إليه بالعين المجردة آمن.';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'يدخل جزء من القمر ($percent% من عرضه) في ظل الأرض المظلم. النظر إليه بالعين المجردة آمن.';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'يمر القمر في ظل الأرض الخارجي الخافت. يخفت قليلًا فقط، لذلك يصعب ملاحظته.';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'يغطي القمر الشمس تمامًا على امتداد مسار ضيق فوق الأرض. خارج هذا المسار ترى كسوفًا جزئيًا.';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'يكون القمر أبعد قليلًا من أن يغطي الشمس كاملة، فتبقى حلقة مضيئة. تظهر الحلقة على امتداد مسار ضيق، وخارجه يكون الكسوف جزئيًا.';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'على امتداد مساره يكون هذا الكسوف كليًا في بعض الأماكن وحلقيًا في أخرى. وخارج المسار يكون جزئيًا.';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'يغطي القمر جزءًا من الشمس فقط، ولا تُغطّى الشمس بالكامل في أي مكان على الأرض.';
+
+  @override
+  String get eclipseNoCity =>
+      'اختر مدينة في Heliora لتعرف إن كان بإمكانك مشاهدته من هناك.';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'في منتصف الخسوف يكون القمر فوق الأفق في $city.';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return 'في $city يكون القمر فوق الأفق خلال جزء فقط من الخسوف.';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return 'في $city يبقى القمر تحت الأفق، لذلك لا يمكن رؤيته من هناك.';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return 'لا يُرى من $city: ظل القمر لا يصلها، أو الشمس تحت الأفق.';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return 'من $city على الأكثر كسوف جزئي طفيف جدًا يصعب ملاحظته.';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return 'تقدير تقريبي لـ $city: يغطي القمر نحو $percent% من عرض الشمس في أقصى حالاته.';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city قريبة من المسار الذي تُغطّى فيه الشمس تقريبًا أو كليًا. راجع خريطة الكسوف؛ هذا التقدير تقريبي.';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'لا تنظر إلى الشمس أبدًا من دون نظارات كسوف مناسبة.';
+
+  @override
+  String get alertsTitle => 'التنبيهات';
+
+  @override
+  String get tonightAlertSwitch => 'سماء الليلة، كل مساء';
+
+  @override
+  String get tonightAlertTime => 'الوقت';
+
+  @override
+  String get tonightAlertNote =>
+      'ملاحظة قصيرة عن القمر والكواكب التي يمكنك رؤيتها، في الوقت الذي تختاره. تُحسب على هاتفك دون إنترنت. يسمح Android لـ Heliora بتجهيز ملاحظات نحو أسبوعين مسبقًا فقط، لذلك افتح التطبيق من حين لآخر.';
+
+  @override
+  String get tonightNotifTitle => 'سماء الليلة';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'القمر: $phase، $percent% مضاء.';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'ابحث عن: $planets.';
+  }
+
+  @override
+  String get tonightNoPlanets => 'لا توجد كواكب ساطعة في سماء المساء.';
+
+  @override
+  String get tonightNoCity => 'اختر مدينة في Heliora لرؤية الكواكب.';
+
+  @override
+  String get birthdayTitle => 'سماء عيد ميلادي';
+
+  @override
+  String get birthdaySubtitle =>
+      'القمر والكواكب في يوم ولادتك، وأيام حياتك الكبيرة.';
+
+  @override
+  String get birthdayCardHint => 'طور القمر والكواكب والمحطات المهمة';
+
+  @override
+  String get birthdayNeedDate => 'أدخل تاريخ ميلادك';
+
+  @override
+  String get birthdayMoon => 'القمر في يوم ميلادك';
+
+  @override
+  String get birthdayPlanets => 'الكواكب في ذلك اليوم';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'عمرك اليوم $count يومًا.';
+  }
+
+  @override
+  String get birthdayMilestones => 'محطات مهمة';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'اليوم $count';
+  }
+
+  @override
+  String get birthdayBillion => 'مليار ثانية من العمر';
+
+  @override
+  String get birthdayPassed => 'تم';
+
+  @override
+  String get birthdayNote =>
+      'تُحسب على هاتفك من المدارات نفسها المستخدمة في باقي Heliora. تاريخ ميلادك لا يغادر هاتفك أبدًا.';
+
+  @override
+  String get missionsTitle => 'المهمات الفضائية';
+
+  @override
+  String get missionsSubtitle =>
+      'لحظات مشهورة في استكشاف الفضاء، الأقدم أولًا.';
+
+  @override
+  String get missionsCardHint => 'مهمات مشهورة عبر الزمن';
+
+  @override
+  String get missionSputnik1 =>
+      'أول قمر صناعي. دارت هذه الكرة المعدنية، بحجم كرة شاطئ تقريبًا، حول الأرض نحو ثلاثة أشهر. كان يُسمع صفيرها في أجهزة الراديو، وبها بدأ عصر الفضاء.';
+
+  @override
+  String get missionVostok1 =>
+      'أصبح يوري غاغارين أول إنسان في الفضاء. دار حول الأرض مرة واحدة في نحو 108 دقائق.';
+
+  @override
+  String get missionApollo11 =>
+      'هبط نيل أرمسترونغ وباز ألدرين في بحر الهدوء وأصبحا أول من مشى على القمر. وانتظرهما مايكل كولينز في المدار.';
+
+  @override
+  String get missionVenera7 =>
+      'أول مركبة تهبط على كوكب آخر وترسل إشارة. أرسلت بيانات من الزهرة لنحو 23 دقيقة في حرارة ساحقة.';
+
+  @override
+  String get missionViking1 =>
+      'هبطت على المريخ وعملت هناك أكثر من ست سنوات، وأرسلت أول سلسلة طويلة من الصور وتقارير الطقس من سطح كوكب آخر.';
+
+  @override
+  String get missionVoyager1 =>
+      'أُطلقت عام 1977، ومرت قرب المشتري وزحل ودخلت الفضاء بين النجوم عام 2012. وهي أبعد جسم صنعه الإنسان عن الأرض.';
+
+  @override
+  String get missionHubble =>
+      'أُطلق عام 1990، وينظر إلى الكون من فوق هواء الأرض. ساعدت صوره الحادة في قياس عمر الكون وكشفت آلاف المجرات البعيدة.';
+
+  @override
+  String get missionHuygens =>
+      'هبط المسبار هيغنز، الذي حملته كاسيني، بالمظلة على قمر زحل تيتان. كان أول هبوط في المجموعة الشمسية الخارجية، وأرسل صورًا من السطح.';
+
+  @override
+  String get missionCuriosity =>
+      'هبطت هذه المركبة الجوالة بحجم سيارة في فوهة غيل بمساعدة «رافعة سماوية» تعمل بالصواريخ. واكتشفت أن المريخ كان يومًا ما يملك ظروفًا مناسبة للحياة.';
+
+  @override
+  String get missionMangalyaan =>
+      'وصلت مهمة المدار المريخي الهندية إلى مدار المريخ من أول محاولة، وهذا أول إنجاز من نوعه لأي دولة، وبتكلفة منخفضة جدًا.';
+
+  @override
+  String get missionRosetta =>
+      'حطّ الهابط فيلة التابع لروزيتا على المذنب 67P/تشوريوموف–غيراسيمنكو، وهو أول هبوط على مذنب. ودار روزيتا نفسه حول المذنب لمدة عامين.';
+
+  @override
+  String get missionNewhorizons =>
+      'بعد رحلة دامت تسع سنوات مرّ بجانب بلوتو، وأرانا لأول مرة جبالًا جليدية وسهلًا ضخمًا على شكل قلب.';
+
+  @override
+  String get missionPerseverance =>
+      'هبطت المركبة بيرسيفيرانس في فوهة جيزيرو للبحث عن آثار حياة قديمة وجمع عينات من الصخور. وقامت مروحيتها إنجينيويتي بأول طيران مُتحكَّم به على كوكب آخر.';
+
+  @override
+  String get missionJwst =>
+      'أكبر تلسكوب فضائي، مرآته الذهبية بعرض 6.5 أمتار، ويراقب السماء بالضوء تحت الأحمر من مسافة 1.5 مليون كم. يرى بعضًا من أولى المجرات.';
+
+  @override
+  String get missionChandrayaan3 =>
+      'أصبحت الهند الدولة الرابعة التي تهبط بسلام على القمر، والأولى قرب قطبه الجنوبي. وحمل الهابط فيكرام المركبة الجوالة براغيان.';
 }

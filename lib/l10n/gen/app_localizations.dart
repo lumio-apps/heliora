@@ -2335,6 +2335,378 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{value} m'**
   String valueM(String value);
+
+  /// No description provided for @eclipseTotalLunar.
+  ///
+  /// In en, this message translates to:
+  /// **'Total lunar eclipse'**
+  String get eclipseTotalLunar;
+
+  /// No description provided for @eclipsePartialLunar.
+  ///
+  /// In en, this message translates to:
+  /// **'Partial lunar eclipse'**
+  String get eclipsePartialLunar;
+
+  /// No description provided for @eclipsePenumbralLunar.
+  ///
+  /// In en, this message translates to:
+  /// **'Penumbral lunar eclipse'**
+  String get eclipsePenumbralLunar;
+
+  /// No description provided for @eclipseTotalSolar.
+  ///
+  /// In en, this message translates to:
+  /// **'Total solar eclipse'**
+  String get eclipseTotalSolar;
+
+  /// No description provided for @eclipseAnnularSolar.
+  ///
+  /// In en, this message translates to:
+  /// **'Annular solar eclipse'**
+  String get eclipseAnnularSolar;
+
+  /// No description provided for @eclipseHybridSolar.
+  ///
+  /// In en, this message translates to:
+  /// **'Hybrid solar eclipse'**
+  String get eclipseHybridSolar;
+
+  /// No description provided for @eclipsePartialSolar.
+  ///
+  /// In en, this message translates to:
+  /// **'Partial solar eclipse'**
+  String get eclipsePartialSolar;
+
+  /// No description provided for @eclipseTotalLunarDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'The Moon moves fully into Earth\'s shadow and often turns a dim red. Everyone on the night side of Earth can see it, and it is safe to watch with your eyes.'**
+  String get eclipseTotalLunarDesc;
+
+  /// No description provided for @eclipsePartialLunarDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Part of the Moon ({percent}% of its width) moves into Earth\'s dark shadow. It is safe to watch with your eyes.'**
+  String eclipsePartialLunarDesc(String percent);
+
+  /// No description provided for @eclipsePenumbralLunarDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'The Moon passes through the faint outer shadow of Earth. It only dims a little, so it is hard to notice.'**
+  String get eclipsePenumbralLunarDesc;
+
+  /// No description provided for @eclipseTotalSolarDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'The Moon completely covers the Sun along a narrow path across Earth. Outside that path you see a partial eclipse.'**
+  String get eclipseTotalSolarDesc;
+
+  /// No description provided for @eclipseAnnularSolarDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'The Moon is a little too far away to cover the Sun fully, so a bright ring is left. The ring shows along a narrow path; outside it the eclipse is partial.'**
+  String get eclipseAnnularSolarDesc;
+
+  /// No description provided for @eclipseHybridSolarDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Along its path this eclipse is total in some places and ring-shaped in others. Outside the path it is partial.'**
+  String get eclipseHybridSolarDesc;
+
+  /// No description provided for @eclipsePartialSolarDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'The Moon covers only a part of the Sun, and nowhere on Earth is the Sun fully covered.'**
+  String get eclipsePartialSolarDesc;
+
+  /// No description provided for @eclipseNoCity.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a city in Heliora to see if you can watch it from there.'**
+  String get eclipseNoCity;
+
+  /// No description provided for @eclipseLunarUp.
+  ///
+  /// In en, this message translates to:
+  /// **'The Moon is above the horizon in {city} at the middle of the eclipse.'**
+  String eclipseLunarUp(String city);
+
+  /// No description provided for @eclipseLunarPartly.
+  ///
+  /// In en, this message translates to:
+  /// **'In {city} the Moon is above the horizon for only part of the eclipse.'**
+  String eclipseLunarPartly(String city);
+
+  /// No description provided for @eclipseLunarDown.
+  ///
+  /// In en, this message translates to:
+  /// **'In {city} the Moon stays below the horizon, so you cannot see it from there.'**
+  String eclipseLunarDown(String city);
+
+  /// No description provided for @eclipseSolarNone.
+  ///
+  /// In en, this message translates to:
+  /// **'Not visible from {city}: the Moon\'s shadow misses it, or the Sun is below the horizon.'**
+  String eclipseSolarNone(String city);
+
+  /// No description provided for @eclipseSolarSlight.
+  ///
+  /// In en, this message translates to:
+  /// **'From {city} at most a very slight partial eclipse, hard to notice.'**
+  String eclipseSolarSlight(String city);
+
+  /// No description provided for @eclipseSolarPartial.
+  ///
+  /// In en, this message translates to:
+  /// **'Rough estimate for {city}: the Moon covers about {percent}% of the Sun\'s width at best.'**
+  String eclipseSolarPartial(String city, String percent);
+
+  /// No description provided for @eclipseSolarNear.
+  ///
+  /// In en, this message translates to:
+  /// **'{city} is close to the path where the Sun is almost or fully covered. Check an eclipse map; this estimate is rough.'**
+  String eclipseSolarNear(String city);
+
+  /// No description provided for @eclipseSolarSafety.
+  ///
+  /// In en, this message translates to:
+  /// **'Never look at the Sun without proper eclipse glasses.'**
+  String get eclipseSolarSafety;
+
+  /// No description provided for @alertsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Alerts'**
+  String get alertsTitle;
+
+  /// No description provided for @tonightAlertSwitch.
+  ///
+  /// In en, this message translates to:
+  /// **'Tonight in the sky, every evening'**
+  String get tonightAlertSwitch;
+
+  /// No description provided for @tonightAlertTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Time'**
+  String get tonightAlertTime;
+
+  /// No description provided for @tonightAlertNote.
+  ///
+  /// In en, this message translates to:
+  /// **'A short note about the Moon and the planets you can see, at the time you choose. It is worked out on your phone, with no internet. Android only lets Heliora prepare about two weeks of notes ahead, so open the app now and then.'**
+  String get tonightAlertNote;
+
+  /// No description provided for @tonightNotifTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tonight in the sky'**
+  String get tonightNotifTitle;
+
+  /// No description provided for @tonightMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Moon: {phase}, {percent}% lit.'**
+  String tonightMoon(String phase, String percent);
+
+  /// No description provided for @tonightPlanets.
+  ///
+  /// In en, this message translates to:
+  /// **'Look for: {planets}.'**
+  String tonightPlanets(String planets);
+
+  /// No description provided for @tonightNoPlanets.
+  ///
+  /// In en, this message translates to:
+  /// **'No bright planets in the evening sky.'**
+  String get tonightNoPlanets;
+
+  /// No description provided for @tonightNoCity.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a city in Heliora to see the planets.'**
+  String get tonightNoCity;
+
+  /// No description provided for @birthdayTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'My birthday sky'**
+  String get birthdayTitle;
+
+  /// No description provided for @birthdaySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'The Moon and the planets on the day you were born, and the big days of your life.'**
+  String get birthdaySubtitle;
+
+  /// No description provided for @birthdayCardHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Moon phase, planets and milestones'**
+  String get birthdayCardHint;
+
+  /// No description provided for @birthdayNeedDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Set your birth date'**
+  String get birthdayNeedDate;
+
+  /// No description provided for @birthdayMoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Moon on your birthday'**
+  String get birthdayMoon;
+
+  /// No description provided for @birthdayPlanets.
+  ///
+  /// In en, this message translates to:
+  /// **'Planets on that day'**
+  String get birthdayPlanets;
+
+  /// No description provided for @birthdayDaysOld.
+  ///
+  /// In en, this message translates to:
+  /// **'You are {count} days old today.'**
+  String birthdayDaysOld(String count);
+
+  /// No description provided for @birthdayMilestones.
+  ///
+  /// In en, this message translates to:
+  /// **'Milestones'**
+  String get birthdayMilestones;
+
+  /// No description provided for @birthdayDayN.
+  ///
+  /// In en, this message translates to:
+  /// **'Day {count}'**
+  String birthdayDayN(String count);
+
+  /// No description provided for @birthdayBillion.
+  ///
+  /// In en, this message translates to:
+  /// **'1 billion seconds old'**
+  String get birthdayBillion;
+
+  /// No description provided for @birthdayPassed.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get birthdayPassed;
+
+  /// No description provided for @birthdayNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Worked out on your phone from the same orbits as the rest of Heliora. Your birth date never leaves it.'**
+  String get birthdayNote;
+
+  /// No description provided for @missionsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Space missions'**
+  String get missionsTitle;
+
+  /// No description provided for @missionsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Famous moments in the exploration of space, oldest first.'**
+  String get missionsSubtitle;
+
+  /// No description provided for @missionsCardHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Famous missions through time'**
+  String get missionsCardHint;
+
+  /// No description provided for @missionSputnik1.
+  ///
+  /// In en, this message translates to:
+  /// **'The first artificial satellite. This metal ball, about the size of a beach ball, circled Earth for about three months. Its beeping could be heard on radios and it started the space age.'**
+  String get missionSputnik1;
+
+  /// No description provided for @missionVostok1.
+  ///
+  /// In en, this message translates to:
+  /// **'Yuri Gagarin became the first person in space. He circled Earth once, in about 108 minutes.'**
+  String get missionVostok1;
+
+  /// No description provided for @missionApollo11.
+  ///
+  /// In en, this message translates to:
+  /// **'Neil Armstrong and Buzz Aldrin landed in the Sea of Tranquility and became the first people to walk on the Moon. Michael Collins waited for them in orbit.'**
+  String get missionApollo11;
+
+  /// No description provided for @missionVenera7.
+  ///
+  /// In en, this message translates to:
+  /// **'The first spacecraft to land on another planet and send a signal back. It sent data from Venus for about 23 minutes in the crushing heat.'**
+  String get missionVenera7;
+
+  /// No description provided for @missionViking1.
+  ///
+  /// In en, this message translates to:
+  /// **'It landed on Mars and worked there for more than six years, sending the first long series of photos and weather reports from the surface of another planet.'**
+  String get missionViking1;
+
+  /// No description provided for @missionVoyager1.
+  ///
+  /// In en, this message translates to:
+  /// **'Launched in 1977, it flew past Jupiter and Saturn and entered interstellar space in 2012. It is the farthest human-made object from Earth.'**
+  String get missionVoyager1;
+
+  /// No description provided for @missionHubble.
+  ///
+  /// In en, this message translates to:
+  /// **'Launched in 1990, it looks at the universe from above Earth\'s air. Its sharp pictures helped measure the age of the universe and showed thousands of faraway galaxies.'**
+  String get missionHubble;
+
+  /// No description provided for @missionHuygens.
+  ///
+  /// In en, this message translates to:
+  /// **'Huygens, a probe carried by Cassini, parachuted down to Saturn\'s moon Titan. It was the first landing in the outer solar system, and it sent pictures from the surface.'**
+  String get missionHuygens;
+
+  /// No description provided for @missionCuriosity.
+  ///
+  /// In en, this message translates to:
+  /// **'This car-sized rover landed in Gale Crater using a rocket-powered sky crane. It found that Mars once had the right conditions for life.'**
+  String get missionCuriosity;
+
+  /// No description provided for @missionMangalyaan.
+  ///
+  /// In en, this message translates to:
+  /// **'India\'s Mars Orbiter Mission reached Mars orbit on its first try, a first for any country, and at a very low cost.'**
+  String get missionMangalyaan;
+
+  /// No description provided for @missionRosetta.
+  ///
+  /// In en, this message translates to:
+  /// **'Rosetta\'s lander Philae touched down on comet 67P/Churyumov–Gerasimenko, the first landing on a comet. Rosetta itself circled the comet for two years.'**
+  String get missionRosetta;
+
+  /// No description provided for @missionNewhorizons.
+  ///
+  /// In en, this message translates to:
+  /// **'After a nine-year trip, it flew past Pluto and showed us icy mountains and a huge heart-shaped plain for the first time.'**
+  String get missionNewhorizons;
+
+  /// No description provided for @missionPerseverance.
+  ///
+  /// In en, this message translates to:
+  /// **'The Perseverance rover landed in Jezero Crater to look for signs of old life and collect rock samples. Its helicopter Ingenuity made the first powered flight on another planet.'**
+  String get missionPerseverance;
+
+  /// No description provided for @missionJwst.
+  ///
+  /// In en, this message translates to:
+  /// **'The largest space telescope has a 6.5-metre gold mirror and watches the sky in infrared light from 1.5 million km away. It sees some of the first galaxies.'**
+  String get missionJwst;
+
+  /// No description provided for @missionChandrayaan3.
+  ///
+  /// In en, this message translates to:
+  /// **'India became the fourth country to land softly on the Moon, and the first near its south pole. The Vikram lander carried the Pragyan rover.'**
+  String get missionChandrayaan3;
 }
 
 class _AppLocalizationsDelegate

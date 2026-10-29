@@ -1298,4 +1298,242 @@ class AppLocalizationsHy extends AppLocalizations {
   String valueM(String value) {
     return '$value մ';
   }
+
+  @override
+  String get eclipseTotalLunar => 'Լուսնի լրիվ խավարում';
+
+  @override
+  String get eclipsePartialLunar => 'Լուսնի մասնակի խավարում';
+
+  @override
+  String get eclipsePenumbralLunar => 'Լուսնի կիսաստվերային խավարում';
+
+  @override
+  String get eclipseTotalSolar => 'Արեգակի լրիվ խավարում';
+
+  @override
+  String get eclipseAnnularSolar => 'Արեգակի օղակաձև խավարում';
+
+  @override
+  String get eclipseHybridSolar => 'Արեգակի հիբրիդային խավարում';
+
+  @override
+  String get eclipsePartialSolar => 'Արեգակի մասնակի խավարում';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'Լուսինն ամբողջությամբ մտնում է Երկրի ստվերի մեջ և հաճախ դառնում է աղոտ կարմիր։ Այն տեսնում են Երկրի գիշերային կողմում գտնվող բոլորը, և անզեն աչքով նայելը անվտանգ է։';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'Լուսնի մի մասը (լայնության $percent%) մտնում է Երկրի մութ ստվերի մեջ։ Անզեն աչքով նայելը անվտանգ է։';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'Լուսինն անցնում է Երկրի թույլ արտաքին ստվերով։ Այն միայն մի փոքր աղոտանում է, ուստի դժվար է նկատել։';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'Երկրի վրա նեղ շերտով Լուսինն ամբողջությամբ ծածկում է Արեգակը։ Այդ շերտից դուրս երևում է մասնակի խավարում։';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'Լուսինը մի փոքր շատ հեռու է Արեգակն ամբողջությամբ ծածկելու համար, ուստի մնում է պայծառ օղակ։ Օղակը երևում է նեղ շերտով, դրանից դուրս խավարումը մասնակի է։';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'Իր շերտի երկայնքով այս խավարումը որոշ տեղերում լրիվ է, մյուսներում՝ օղակաձև։ Շերտից դուրս այն մասնակի է։';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'Լուսինը ծածկում է Արեգակի միայն մի մասը, և Երկրի վրա ոչ մի տեղ Արեգակն ամբողջությամբ չի ծածկվում։';
+
+  @override
+  String get eclipseNoCity =>
+      'Heliora-ում ընտրեք քաղաք՝ իմանալու համար՝ կարո՞ղ եք այնտեղից դիտել։';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'Խավարման կեսին $city-ում Լուսինը հորիզոնից վեր է։';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return '$city-ում Լուսինը հորիզոնից վեր է խավարման միայն մի մասի ընթացքում։';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return '$city-ում Լուսինը մնում է հորիզոնից ներքև, ուստի այնտեղից չի երևա։';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return '$city-ից չի երևա. Լուսնի ստվերը այնտեղ չի հասնում, կամ Արեգակը հորիզոնից ներքև է։';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return '$city-ից առավելագույնը շատ թույլ մասնակի խավարում, որը դժվար է նկատել։';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return 'Մոտավոր գնահատական $city-ի համար. Լուսինը ծածկում է Արեգակի լայնության առավելագույնը մոտ $percent%-ը։';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city-ը մոտ է այն շերտին, որտեղ Արեգակը գրեթե կամ լրիվ ծածկվում է։ Նայեք խավարման քարտեզին. այս գնահատականը մոտավոր է։';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'Երբեք մի նայեք Արեգակին՝ առանց խավարման համար նախատեսված ճիշտ ակնոցի։';
+
+  @override
+  String get alertsTitle => 'Ծանուցումներ';
+
+  @override
+  String get tonightAlertSwitch => 'Այս գիշերվա երկինքը՝ ամեն երեկո';
+
+  @override
+  String get tonightAlertTime => 'Ժամ';
+
+  @override
+  String get tonightAlertNote =>
+      'Կարճ նշում Լուսնի և տեսանելի մոլորակների մասին՝ ձեր ընտրած ժամին։ Հաշվարկվում է ձեր հեռախոսում, առանց համացանցի։ Android-ը թույլ է տալիս Heliora-ին նախապես պատրաստել միայն մոտ երկու շաբաթվա նշումներ, ուստի ժամանակ առ ժամանակ բացեք հավելվածը։';
+
+  @override
+  String get tonightNotifTitle => 'Այս գիշերվա երկինքը';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'Լուսին. $phase, լուսավորված է $percent%։';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'Փնտրեք. $planets։';
+  }
+
+  @override
+  String get tonightNoPlanets => 'Երեկոյան երկնքում պայծառ մոլորակներ չկան։';
+
+  @override
+  String get tonightNoCity =>
+      'Մոլորակները տեսնելու համար Heliora-ում ընտրեք քաղաք։';
+
+  @override
+  String get birthdayTitle => 'Իմ ծննդյան օրվա երկինքը';
+
+  @override
+  String get birthdaySubtitle =>
+      'Լուսինը և մոլորակները ձեր ծննդյան օրը, և ձեր կյանքի կարևոր օրերը։';
+
+  @override
+  String get birthdayCardHint => 'Լուսնի փուլ, մոլորակներ և հանգրվաններ';
+
+  @override
+  String get birthdayNeedDate => 'Նշեք ծննդյան ամսաթիվը';
+
+  @override
+  String get birthdayMoon => 'Լուսինը ձեր ծննդյան օրը';
+
+  @override
+  String get birthdayPlanets => 'Մոլորակները այդ օրը';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'Այսօր դուք $count օրական եք։';
+  }
+
+  @override
+  String get birthdayMilestones => 'Հանգրվաններ';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'Օր $count';
+  }
+
+  @override
+  String get birthdayBillion => '1 միլիարդ վայրկյան';
+
+  @override
+  String get birthdayPassed => 'Անցել է';
+
+  @override
+  String get birthdayNote =>
+      'Հաշվարկվում է ձեր հեռախոսում՝ Heliora-ի մնացած մասի նույն ուղեծրերով։ Ձեր ծննդյան ամսաթիվը երբեք չի հեռանում հեռախոսից։';
+
+  @override
+  String get missionsTitle => 'Տիեզերական առաքելություններ';
+
+  @override
+  String get missionsSubtitle =>
+      'Տիեզերքի ուսումնասիրության հայտնի պահեր՝ ամենահինից սկսած։';
+
+  @override
+  String get missionsCardHint => 'Հայտնի առաքելություններ ժամանակի ընթացքում';
+
+  @override
+  String get missionSputnik1 =>
+      'Առաջին արհեստական արբանյակը։ Լողափի գնդակի չափ այս մետաղական գունդը մոտ երեք ամիս պտտվեց Երկրի շուրջ։ Նրա ազդանշանը լսվում էր ռադիոյով, և սկսվեց տիեզերական դարաշրջանը։';
+
+  @override
+  String get missionVostok1 =>
+      'Յուրի Գագարինը դարձավ տիեզերք թռած առաջին մարդը։ Նա մոտ 108 րոպեում մեկ անգամ պտտվեց Երկրի շուրջ։';
+
+  @override
+  String get missionApollo11 =>
+      'Նիլ Արմսթրոնգն ու Բազ Օլդրինը վայրէջք կատարեցին Հանգստության ծովում և դարձան Լուսնի վրա քայլած առաջին մարդիկ։ Մայքլ Քոլինզը նրանց սպասում էր ուղեծրում։';
+
+  @override
+  String get missionVenera7 =>
+      'Առաջին սարքը, որը վայրէջք կատարեց մեկ այլ մոլորակի վրա և ազդանշան ուղարկեց։ Այն Վեներայից տվյալներ էր ուղարկում մոտ 23 րոպե՝ ջարդող շոգի մեջ։';
+
+  @override
+  String get missionViking1 =>
+      'Այն վայրէջք կատարեց Մարսի վրա և այնտեղ աշխատեց վեց տարուց ավելի՝ ուղարկելով մեկ այլ մոլորակի մակերևույթից լուսանկարների և եղանակի զեկույցների առաջին երկար շարքը։';
+
+  @override
+  String get missionVoyager1 =>
+      'Արձակվել է 1977 թվականին, անցել է Յուպիտերի և Սատուրնի մոտով և 2012 թվականին մտել աստղերի միջև տարածություն։ Սա Երկրից ամենահեռու մարդու ստեղծած օբյեկտն է։';
+
+  @override
+  String get missionHubble =>
+      'Արձակվել է 1990 թվականին, դիտում է Տիեզերքը Երկրի օդից վերև։ Նրա հստակ նկարները օգնեցին չափել Տիեզերքի տարիքը և ցույց տվեցին հազարավոր հեռավոր գալակտիկաներ։';
+
+  @override
+  String get missionHuygens =>
+      'Հյուգենսը՝ Կասինիի տարած զոնդը, պարաշյուտով իջավ Սատուրնի արբանյակ Տիտանի վրա։ Դա արտաքին Արեգակնային համակարգի առաջին վայրէջքն էր, և այն մակերևույթից նկարներ ուղարկեց։';
+
+  @override
+  String get missionCuriosity =>
+      'Մեքենայի չափ այս մարսագնացը վայրէջք կատարեց Գեյլի խառնարանում՝ հրթիռով աշխատող «երկնային կռունկի» օգնությամբ։ Այն պարզեց, որ Մարսը ժամանակին կյանքի համար հարմար պայմաններ է ունեցել։';
+
+  @override
+  String get missionMangalyaan =>
+      'Հնդկաստանի Mars Orbiter առաքելությունը Մարսի ուղեծիր հասավ առաջին փորձից, ինչը ոչ մի երկրի չէր հաջողվել, և շատ ցածր ծախսով։';
+
+  @override
+  String get missionRosetta =>
+      'Ռոզետայի վայրէջքային սարք Ֆիլեն վայրէջք կատարեց 67P/Չուրյումով–Գերասիմենկո գիսաստղի վրա՝ գիսաստղի վրա առաջին վայրէջքը։ Ռոզետան ինքը երկու տարի պտտվեց գիսաստղի շուրջ։';
+
+  @override
+  String get missionNewhorizons =>
+      'Ինը տարվա ճանապարհորդությունից հետո այն անցավ Պլուտոնի մոտով և առաջին անգամ մեզ ցույց տվեց սառցե լեռներ և սրտաձև հսկայական հարթավայր։';
+
+  @override
+  String get missionPerseverance =>
+      'Perseverance մարսագնացը վայրէջք կատարեց Ջեզերո խառնարանում՝ հին կյանքի հետքեր փնտրելու և ապարների նմուշներ հավաքելու համար։ Նրա Ingenuity ուղղաթիռը կատարեց մեկ այլ մոլորակի վրա առաջին ղեկավարվող թռիչքը։';
+
+  @override
+  String get missionJwst =>
+      'Ամենամեծ տիեզերական աստղադիտակն ունի 6,5 մետրանոց ոսկեգույն հայելի և դիտում է երկինքը ինֆրակարմիր լույսով 1,5 միլիոն կմ հեռավորությունից։ Այն տեսնում է առաջին գալակտիկաներից մի քանիսը։';
+
+  @override
+  String get missionChandrayaan3 =>
+      'Հնդկաստանը դարձավ Լուսնի վրա մեղմ վայրէջք կատարած չորրորդ երկիրը և առաջինը՝ նրա հարավային բևեռի մոտ։ Vikram վայրէջքային սարքը կրում էր Pragyan մարսագնացը։';
 }

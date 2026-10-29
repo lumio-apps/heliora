@@ -1303,4 +1303,241 @@ class AppLocalizationsId extends AppLocalizations {
   String valueM(String value) {
     return '$value m';
   }
+
+  @override
+  String get eclipseTotalLunar => 'Gerhana bulan total';
+
+  @override
+  String get eclipsePartialLunar => 'Gerhana bulan sebagian';
+
+  @override
+  String get eclipsePenumbralLunar => 'Gerhana bulan penumbra';
+
+  @override
+  String get eclipseTotalSolar => 'Gerhana matahari total';
+
+  @override
+  String get eclipseAnnularSolar => 'Gerhana matahari cincin';
+
+  @override
+  String get eclipseHybridSolar => 'Gerhana matahari hibrida';
+
+  @override
+  String get eclipsePartialSolar => 'Gerhana matahari sebagian';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'Bulan masuk sepenuhnya ke bayangan Bumi dan sering tampak merah redup. Semua orang di sisi malam Bumi bisa melihatnya, dan aman dilihat dengan mata telanjang.';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'Sebagian Bulan ($percent% dari lebarnya) masuk ke bayangan gelap Bumi. Aman dilihat dengan mata telanjang.';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'Bulan melewati bayangan luar Bumi yang samar. Bulan hanya meredup sedikit, jadi sulit disadari.';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'Bulan menutupi Matahari sepenuhnya di sepanjang jalur sempit di Bumi. Di luar jalur itu terlihat gerhana sebagian.';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'Bulan sedikit terlalu jauh untuk menutupi seluruh Matahari, sehingga tersisa cincin terang. Cincin terlihat di sepanjang jalur sempit; di luarnya gerhana hanya sebagian.';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'Di sepanjang jalurnya, gerhana ini total di beberapa tempat dan berbentuk cincin di tempat lain. Di luar jalur, gerhananya sebagian.';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'Bulan hanya menutupi sebagian Matahari, dan tidak ada tempat di Bumi yang melihat Matahari tertutup penuh.';
+
+  @override
+  String get eclipseNoCity =>
+      'Pilih kota di Heliora untuk tahu apakah bisa melihatnya dari sana.';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'Di puncak gerhana, Bulan berada di atas cakrawala di $city.';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return 'Di $city, Bulan hanya berada di atas cakrawala selama sebagian gerhana.';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return 'Di $city, Bulan tetap di bawah cakrawala, jadi tidak terlihat dari sana.';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return 'Tidak terlihat dari $city: bayangan Bulan tidak sampai ke sana, atau Matahari di bawah cakrawala.';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return 'Dari $city, paling banyak gerhana sebagian yang sangat tipis, sulit disadari.';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return 'Perkiraan kasar untuk $city: Bulan menutupi paling banyak sekitar $percent% lebar Matahari.';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city dekat dengan jalur tempat Matahari hampir atau sepenuhnya tertutup. Lihat peta gerhana; perkiraan ini kasar.';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'Jangan pernah menatap Matahari tanpa kacamata gerhana yang sesuai.';
+
+  @override
+  String get alertsTitle => 'Pengingat';
+
+  @override
+  String get tonightAlertSwitch => 'Langit malam ini, setiap sore';
+
+  @override
+  String get tonightAlertTime => 'Waktu';
+
+  @override
+  String get tonightAlertNote =>
+      'Catatan singkat tentang Bulan dan planet yang bisa kamu lihat, pada waktu yang kamu pilih. Dihitung di ponselmu, tanpa internet. Android hanya mengizinkan Heliora menyiapkan catatan sekitar dua minggu ke depan, jadi buka aplikasinya sesekali.';
+
+  @override
+  String get tonightNotifTitle => 'Langit malam ini';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'Bulan: $phase, $percent% terang.';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'Cari: $planets.';
+  }
+
+  @override
+  String get tonightNoPlanets => 'Tidak ada planet terang di langit petang.';
+
+  @override
+  String get tonightNoCity => 'Pilih kota di Heliora untuk melihat planet.';
+
+  @override
+  String get birthdayTitle => 'Langit hari ulang tahunku';
+
+  @override
+  String get birthdaySubtitle =>
+      'Bulan dan planet pada hari kamu lahir, serta hari-hari besar dalam hidupmu.';
+
+  @override
+  String get birthdayCardHint => 'Fase Bulan, planet, dan tonggak';
+
+  @override
+  String get birthdayNeedDate => 'Atur tanggal lahir';
+
+  @override
+  String get birthdayMoon => 'Bulan di hari ulang tahunmu';
+
+  @override
+  String get birthdayPlanets => 'Planet pada hari itu';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'Hari ini umurmu $count hari.';
+  }
+
+  @override
+  String get birthdayMilestones => 'Tonggak';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'Hari ke-$count';
+  }
+
+  @override
+  String get birthdayBillion => 'Berumur 1 miliar detik';
+
+  @override
+  String get birthdayPassed => 'Sudah';
+
+  @override
+  String get birthdayNote =>
+      'Dihitung di ponselmu dengan orbit yang sama seperti bagian Heliora lainnya. Tanggal lahirmu tidak pernah keluar dari ponsel.';
+
+  @override
+  String get missionsTitle => 'Misi antariksa';
+
+  @override
+  String get missionsSubtitle =>
+      'Momen terkenal dalam penjelajahan antariksa, dari yang paling lama.';
+
+  @override
+  String get missionsCardHint => 'Misi terkenal sepanjang waktu';
+
+  @override
+  String get missionSputnik1 =>
+      'Satelit buatan pertama. Bola logam seukuran bola pantai ini mengorbit Bumi sekitar tiga bulan. Bunyi bipnya bisa didengar lewat radio, dan dari sinilah era antariksa dimulai.';
+
+  @override
+  String get missionVostok1 =>
+      'Yuri Gagarin menjadi manusia pertama di antariksa. Ia mengelilingi Bumi sekali dalam sekitar 108 menit.';
+
+  @override
+  String get missionApollo11 =>
+      'Neil Armstrong dan Buzz Aldrin mendarat di Laut Ketenangan dan menjadi manusia pertama yang berjalan di Bulan. Michael Collins menunggu mereka di orbit.';
+
+  @override
+  String get missionVenera7 =>
+      'Pesawat pertama yang mendarat di planet lain dan mengirim sinyal. Ia mengirim data dari Venus selama sekitar 23 menit di tengah panas yang menghancurkan.';
+
+  @override
+  String get missionViking1 =>
+      'Mendarat di Mars dan bekerja di sana lebih dari enam tahun, mengirim rangkaian panjang pertama foto dan laporan cuaca dari permukaan planet lain.';
+
+  @override
+  String get missionVoyager1 =>
+      'Diluncurkan pada 1977, melewati Jupiter dan Saturnus, lalu memasuki ruang antarbintang pada 2012. Inilah benda buatan manusia terjauh dari Bumi.';
+
+  @override
+  String get missionHubble =>
+      'Diluncurkan pada 1990, teleskop ini memandang alam semesta dari atas udara Bumi. Gambar-gambarnya yang tajam membantu mengukur usia alam semesta dan memperlihatkan ribuan galaksi jauh.';
+
+  @override
+  String get missionHuygens =>
+      'Huygens, wahana yang dibawa Cassini, turun dengan parasut ke Titan, bulan Saturnus. Ini pendaratan pertama di tata surya bagian luar, dan ia mengirim foto dari permukaan.';
+
+  @override
+  String get missionCuriosity =>
+      'Rover seukuran mobil ini mendarat di Kawah Gale dengan «derek langit» bertenaga roket. Ia menemukan bahwa Mars dulu pernah punya kondisi yang cocok untuk kehidupan.';
+
+  @override
+  String get missionMangalyaan =>
+      'Misi Mars Orbiter milik India mencapai orbit Mars pada percobaan pertama, yang belum pernah dilakukan negara mana pun, dengan biaya sangat rendah.';
+
+  @override
+  String get missionRosetta =>
+      'Pendarat Philae milik Rosetta mendarat di komet 67P/Churyumov–Gerasimenko, pendaratan pertama di sebuah komet. Rosetta sendiri mengorbit komet itu selama dua tahun.';
+
+  @override
+  String get missionNewhorizons =>
+      'Setelah perjalanan sembilan tahun, wahana ini melintas dekat Pluto dan untuk pertama kalinya memperlihatkan gunung es dan dataran raksasa berbentuk hati.';
+
+  @override
+  String get missionPerseverance =>
+      'Rover Perseverance mendarat di Kawah Jezero untuk mencari tanda kehidupan kuno dan mengumpulkan sampel batuan. Helikopternya, Ingenuity, melakukan penerbangan bertenaga pertama di planet lain.';
+
+  @override
+  String get missionJwst =>
+      'Teleskop antariksa terbesar ini punya cermin emas 6,5 meter dan mengamati langit dalam cahaya inframerah dari jarak 1,5 juta km. Ia melihat beberapa galaksi pertama.';
+
+  @override
+  String get missionChandrayaan3 =>
+      'India menjadi negara keempat yang mendarat mulus di Bulan, dan yang pertama di dekat kutub selatannya. Pendarat Vikram membawa rover Pragyan.';
 }

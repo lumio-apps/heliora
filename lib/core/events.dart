@@ -1,11 +1,12 @@
 import 'dart:math' as math;
 
+import 'eclipses.dart';
 import 'orbits.dart';
 import 'sky.dart';
 
 /// Space events for the "Space events" screen: Moon phases, oppositions,
-/// greatest elongations, close meetings of planets, equinoxes, solstices and
-/// meteor shower peaks. All of it is worked out on the phone from the same
+/// greatest elongations, close meetings of planets, equinoxes, solstices,
+/// meteor shower peaks and eclipses. All of it is worked out on the phone from the same
 /// orbits as the rest of the app, with no internet.
 
 enum SpaceEventKind {
@@ -20,6 +21,8 @@ enum SpaceEventKind {
   septemberEquinox,
   decemberSolstice,
   meteorShower,
+  lunarEclipse,
+  solarEclipse,
 }
 
 class SpaceEvent {
@@ -52,6 +55,26 @@ class SpaceEvent {
     final m = t.month.toString().padLeft(2, '0');
     final d = t.day.toString().padLeft(2, '0');
     return '${kind.name}:${bodies.join('+')}:${t.year}$m$d';
+  }
+
+  /// The eclipse behind a lunar or solar eclipse event, null for others.
+  Eclipse? get eclipse {
+    if (kind != SpaceEventKind.lunarEclipse &&
+        kind != SpaceEventKind.solarEclipse) {
+      return null;
+    }
+    var type = EclipseType.partial;
+    for (final t in EclipseType.values) {
+      if (bodies.isNotEmpty && t.name == bodies[0]) {
+        type = t;
+      }
+    }
+    return Eclipse(
+      lunar: kind == SpaceEventKind.lunarEclipse,
+      time: time,
+      type: type,
+      magnitude: value,
+    );
   }
 
   /// The day of the event in the phone's time zone, without the time.
@@ -311,6 +334,16 @@ List<SpaceEvent> computeSpaceEvents(DateTime from, {int days = 366}) {
         extra: moonPhase(night.toUtc()).lit,
       ));
     }
+  }
+
+  // Eclipses: the type goes in bodies, the magnitude in value.
+  for (final e in computeEclipses(begin, end)) {
+    out.add(SpaceEvent(
+      kind: e.lunar ? SpaceEventKind.lunarEclipse : SpaceEventKind.solarEclipse,
+      time: e.time,
+      bodies: <String>[e.type.name],
+      value: e.magnitude,
+    ));
   }
 
   final result = <SpaceEvent>[

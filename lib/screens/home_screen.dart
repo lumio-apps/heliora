@@ -5,7 +5,9 @@ import '../core/format.dart';
 import '../core/habitability.dart';
 import '../core/orbits.dart';
 import '../data/planets.dart';
+import '../data/cities.dart';
 import '../data/settings.dart';
+import '../data/tonight_alerts.dart';
 import '../l10n/names.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
@@ -29,11 +31,44 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _tab = 0;
+  String _alertKey = '';
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) => _autoUpdate());
+  }
+
+  /// Prepares the next evenings' "tonight in the sky" notes. Done again when
+  /// the switch, the time, the city or the language changes, and once a day.
+  void _syncTonightAlerts(AppState state) {
+    final settings = state.settings;
+    if (!settings.tonightAlert) {
+      _alertKey = '';
+      return;
+    }
+    final now = DateTime.now();
+    final locale = Localizations.localeOf(context);
+    final key = '${settings.tonightMinutes}-${settings.cityId}-'
+        '${locale.languageCode}-${now.year}-${now.month}-${now.day}';
+    if (key == _alertKey) {
+      return;
+    }
+    _alertKey = key;
+    final l = context.l10n;
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      if (!mounted) {
+        return;
+      }
+      final alerts = buildTonightAlerts(
+        l: l,
+        locale: locale,
+        city: cityById(settings.cityId),
+        minutes: settings.tonightMinutes,
+        now: now,
+      );
+      await scheduleTonightAlerts(state.bridge, alerts, channel: l.eventsTitle);
+    });
   }
 
   Future<void> _autoUpdate() async {
@@ -49,6 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final l = context.l10n;
+    _syncTonightAlerts(AppScope.of(context));
     return Scaffold(
       body: SafeArea(
         bottom: false,

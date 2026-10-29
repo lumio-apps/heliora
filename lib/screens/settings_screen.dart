@@ -38,6 +38,29 @@ class SettingsScreen extends StatelessWidget {
     }
   }
 
+  Future<void> _toggleTonight(BuildContext context, bool value) async {
+    final l = context.l10n;
+    final state = AppScope.read(context);
+    final messenger = ScaffoldMessenger.of(context);
+    if (value && !await state.bridge.requestNotifications()) {
+      messenger.showSnackBar(SnackBar(content: Text(l.notificationsOff)));
+      return;
+    }
+    await state.setTonightAlert(value);
+  }
+
+  Future<void> _pickTonightTime(BuildContext context) async {
+    final state = AppScope.read(context);
+    final minutes = state.settings.tonightMinutes;
+    final picked = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay(hour: minutes ~/ 60, minute: minutes % 60),
+    );
+    if (picked != null) {
+      await state.setTonightMinutes(picked.hour * 60 + picked.minute);
+    }
+  }
+
   Future<void> _pickLanguage(BuildContext context) async {
     final l = context.l10n;
     final state = AppScope.read(context);
@@ -150,6 +173,42 @@ class SettingsScreen extends StatelessWidget {
                 ],
               ),
               onTap: () => _pickLanguage(context),
+            ),
+          ),
+          const SizedBox(height: 20),
+          SectionLabel(l.alertsTitle),
+          SurfaceCard(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SwitchListTile(
+                  contentPadding: EdgeInsets.zero,
+                  title: Text(l.tonightAlertSwitch,
+                      style: TextStyle(fontSize: 15, color: p.text)),
+                  value: settings.tonightAlert,
+                  onChanged: (value) => _toggleTonight(context, value),
+                ),
+                if (settings.tonightAlert)
+                  ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    title: Text(l.tonightAlertTime,
+                        style: TextStyle(fontSize: 15, color: p.text)),
+                    trailing: Text(
+                      MaterialLocalizations.of(context).formatTimeOfDay(
+                          TimeOfDay(
+                              hour: settings.tonightMinutes ~/ 60,
+                              minute: settings.tonightMinutes % 60)),
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: p.accentText),
+                    ),
+                    onTap: () => _pickTonightTime(context),
+                  ),
+                Text(l.tonightAlertNote,
+                    style:
+                        TextStyle(fontSize: 12, color: p.muted, height: 1.4)),
+              ],
             ),
           ),
           const SizedBox(height: 20),

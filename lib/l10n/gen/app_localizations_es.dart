@@ -1302,4 +1302,243 @@ class AppLocalizationsEs extends AppLocalizations {
   String valueM(String value) {
     return '$value m';
   }
+
+  @override
+  String get eclipseTotalLunar => 'Eclipse lunar total';
+
+  @override
+  String get eclipsePartialLunar => 'Eclipse lunar parcial';
+
+  @override
+  String get eclipsePenumbralLunar => 'Eclipse lunar penumbral';
+
+  @override
+  String get eclipseTotalSolar => 'Eclipse solar total';
+
+  @override
+  String get eclipseAnnularSolar => 'Eclipse solar anular';
+
+  @override
+  String get eclipseHybridSolar => 'Eclipse solar híbrido';
+
+  @override
+  String get eclipsePartialSolar => 'Eclipse solar parcial';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'La Luna entra por completo en la sombra de la Tierra y a menudo se vuelve de un rojo tenue. Lo ve todo el que esté en el lado nocturno de la Tierra, y es seguro mirarlo a simple vista.';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'Una parte de la Luna ($percent% de su ancho) entra en la sombra oscura de la Tierra. Es seguro mirarlo a simple vista.';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'La Luna pasa por la tenue sombra exterior de la Tierra. Solo se atenúa un poco, así que cuesta notarlo.';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'La Luna tapa por completo el Sol a lo largo de una franja estrecha de la Tierra. Fuera de esa franja se ve un eclipse parcial.';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'La Luna está algo lejos para tapar el Sol del todo, así que queda un anillo brillante. El anillo se ve a lo largo de una franja estrecha; fuera de ella el eclipse es parcial.';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'A lo largo de su franja, este eclipse es total en unos sitios y anular en otros. Fuera de la franja es parcial.';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'La Luna tapa solo una parte del Sol, y en ningún lugar de la Tierra el Sol queda totalmente cubierto.';
+
+  @override
+  String get eclipseNoCity =>
+      'Elige una ciudad en Heliora para saber si puedes verlo desde allí.';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'En el punto medio del eclipse, la Luna está sobre el horizonte en $city.';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return 'En $city, la Luna está sobre el horizonte solo durante una parte del eclipse.';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return 'En $city, la Luna se queda bajo el horizonte, así que no se ve desde allí.';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return 'No se ve desde $city: la sombra de la Luna no llega, o el Sol está bajo el horizonte.';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return 'Desde $city, como mucho un eclipse parcial muy leve, difícil de notar.';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return 'Cálculo aproximado para $city: la Luna cubre como mucho un $percent% del ancho del Sol.';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city está cerca de la franja donde el Sol queda casi o totalmente cubierto. Consulta un mapa del eclipse; este cálculo es aproximado.';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'Nunca mires al Sol sin gafas de eclipse adecuadas.';
+
+  @override
+  String get alertsTitle => 'Avisos';
+
+  @override
+  String get tonightAlertSwitch => 'El cielo de esta noche, cada tarde';
+
+  @override
+  String get tonightAlertTime => 'Hora';
+
+  @override
+  String get tonightAlertNote =>
+      'Una nota breve sobre la Luna y los planetas que puedes ver, a la hora que elijas. Se calcula en tu teléfono, sin internet. Android solo deja que Heliora prepare unas dos semanas de notas por adelantado, así que abre la app de vez en cuando.';
+
+  @override
+  String get tonightNotifTitle => 'El cielo de esta noche';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'Luna: $phase, $percent% iluminada.';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'Busca: $planets.';
+  }
+
+  @override
+  String get tonightNoPlanets =>
+      'No hay planetas brillantes en el cielo del anochecer.';
+
+  @override
+  String get tonightNoCity =>
+      'Elige una ciudad en Heliora para ver los planetas.';
+
+  @override
+  String get birthdayTitle => 'El cielo de mi cumpleaños';
+
+  @override
+  String get birthdaySubtitle =>
+      'La Luna y los planetas el día en que naciste, y los días grandes de tu vida.';
+
+  @override
+  String get birthdayCardHint => 'Fase lunar, planetas e hitos';
+
+  @override
+  String get birthdayNeedDate => 'Indica tu fecha de nacimiento';
+
+  @override
+  String get birthdayMoon => 'La Luna en tu cumpleaños';
+
+  @override
+  String get birthdayPlanets => 'Los planetas ese día';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'Hoy tienes $count días de vida.';
+  }
+
+  @override
+  String get birthdayMilestones => 'Hitos';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'Día $count';
+  }
+
+  @override
+  String get birthdayBillion => '1000 millones de segundos de vida';
+
+  @override
+  String get birthdayPassed => 'Cumplido';
+
+  @override
+  String get birthdayNote =>
+      'Se calcula en tu teléfono con las mismas órbitas que el resto de Heliora. Tu fecha de nacimiento nunca sale de él.';
+
+  @override
+  String get missionsTitle => 'Misiones espaciales';
+
+  @override
+  String get missionsSubtitle =>
+      'Momentos famosos de la exploración del espacio, de más antiguo a más reciente.';
+
+  @override
+  String get missionsCardHint => 'Misiones famosas a lo largo del tiempo';
+
+  @override
+  String get missionSputnik1 =>
+      'El primer satélite artificial. Esta bola de metal, del tamaño de un balón de playa, dio vueltas a la Tierra unos tres meses. Su pitido se oía por radio y con él empezó la era espacial.';
+
+  @override
+  String get missionVostok1 =>
+      'Yuri Gagarin fue la primera persona en el espacio. Dio una vuelta a la Tierra en unos 108 minutos.';
+
+  @override
+  String get missionApollo11 =>
+      'Neil Armstrong y Buzz Aldrin aterrizaron en el Mar de la Tranquilidad y fueron las primeras personas en caminar sobre la Luna. Michael Collins los esperó en órbita.';
+
+  @override
+  String get missionVenera7 =>
+      'La primera nave en aterrizar en otro planeta y enviar una señal. Mandó datos desde Venus durante unos 23 minutos, bajo un calor aplastante.';
+
+  @override
+  String get missionViking1 =>
+      'Aterrizó en Marte y funcionó allí más de seis años, enviando la primera larga serie de fotos e informes del tiempo desde la superficie de otro planeta.';
+
+  @override
+  String get missionVoyager1 =>
+      'Lanzada en 1977, pasó cerca de Júpiter y Saturno y entró en el espacio interestelar en 2012. Es el objeto hecho por humanos más lejano de la Tierra.';
+
+  @override
+  String get missionHubble =>
+      'Lanzado en 1990, mira el universo desde por encima del aire de la Tierra. Sus imágenes nítidas ayudaron a medir la edad del universo y mostraron miles de galaxias lejanas.';
+
+  @override
+  String get missionHuygens =>
+      'Huygens, una sonda llevada por Cassini, bajó en paracaídas hasta Titán, la luna de Saturno. Fue el primer aterrizaje en el sistema solar exterior y envió fotos desde la superficie.';
+
+  @override
+  String get missionCuriosity =>
+      'Este róver del tamaño de un coche aterrizó en el cráter Gale con una «grúa aérea» propulsada por cohetes. Descubrió que Marte tuvo en el pasado condiciones adecuadas para la vida.';
+
+  @override
+  String get missionMangalyaan =>
+      'La misión india Mars Orbiter llegó a la órbita de Marte al primer intento, algo inédito para cualquier país, y con un coste muy bajo.';
+
+  @override
+  String get missionRosetta =>
+      'Philae, el módulo de aterrizaje de Rosetta, se posó en el cometa 67P/Churiumov–Guerasimenko: el primer aterrizaje en un cometa. La propia Rosetta orbitó el cometa dos años.';
+
+  @override
+  String get missionNewhorizons =>
+      'Tras un viaje de nueve años, pasó junto a Plutón y nos mostró por primera vez montañas de hielo y una enorme llanura con forma de corazón.';
+
+  @override
+  String get missionPerseverance =>
+      'El róver Perseverance aterrizó en el cráter Jezero para buscar señales de vida antigua y recoger muestras de roca. Su helicóptero Ingenuity hizo el primer vuelo propulsado en otro planeta.';
+
+  @override
+  String get missionJwst =>
+      'El mayor telescopio espacial tiene un espejo dorado de 6,5 metros y observa el cielo en luz infrarroja desde 1,5 millones de km. Ve algunas de las primeras galaxias.';
+
+  @override
+  String get missionChandrayaan3 =>
+      'India se convirtió en el cuarto país en posarse suavemente en la Luna, y el primero cerca de su polo sur. El módulo Vikram llevaba al róver Pragyan.';
 }

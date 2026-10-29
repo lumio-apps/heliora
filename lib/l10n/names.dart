@@ -313,3 +313,39 @@ String directionName(AppLocalizations l, int index) {
       return l.dirNW;
   }
 }
+
+/// The short story of a mission from the missions timeline.
+String missionText(AppLocalizations l, String id) {
+  switch (id) {
+    case 'sputnik1':
+      return l.missionSputnik1;
+    case 'vostok1':
+      return l.missionVostok1;
+    case 'apollo11':
+      return l.missionApollo11;
+    case 'venera7':
+      return l.missionVenera7;
+    case 'viking1':
+      return l.missionViking1;
+    case 'voyager1':
+      return l.missionVoyager1;
+    case 'hubble':
+      return l.missionHubble;
+    case 'huygens':
+      return l.missionHuygens;
+    case 'curiosity':
+      return l.missionCuriosity;
+    case 'mangalyaan':
+      return l.missionMangalyaan;
+    case 'rosetta':
+      return l.missionRosetta;
+    case 'newhorizons':
+      return l.missionNewhorizons;
+    case 'perseverance':
+      return l.missionPerseverance;
+    case 'jwst':
+      return l.missionJwst;
+    default:
+      return l.missionChandrayaan3;
+  }
+}

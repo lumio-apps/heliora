@@ -1292,4 +1292,242 @@ class AppLocalizationsTe extends AppLocalizations {
   String valueM(String value) {
     return '$value మీ';
   }
+
+  @override
+  String get eclipseTotalLunar => 'సంపూర్ణ చంద్రగ్రహణం';
+
+  @override
+  String get eclipsePartialLunar => 'పాక్షిక చంద్రగ్రహణం';
+
+  @override
+  String get eclipsePenumbralLunar => 'ఉపఛాయా చంద్రగ్రహణం';
+
+  @override
+  String get eclipseTotalSolar => 'సంపూర్ణ సూర్యగ్రహణం';
+
+  @override
+  String get eclipseAnnularSolar => 'కంకణ సూర్యగ్రహణం';
+
+  @override
+  String get eclipseHybridSolar => 'సంకర సూర్యగ్రహణం';
+
+  @override
+  String get eclipsePartialSolar => 'పాక్షిక సూర్యగ్రహణం';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      'చంద్రుడు పూర్తిగా భూమి నీడలోకి వెళ్తాడు, తరచుగా మసక ఎరుపుగా కనిపిస్తాడు. భూమి రాత్రి వైపు ఉన్న అందరూ దీన్ని చూడవచ్చు, కళ్లతో చూడటం సురక్షితం.';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return 'చంద్రుడిలో ఒక భాగం (వెడల్పులో $percent%) భూమి చీకటి నీడలోకి వెళ్తుంది. కళ్లతో చూడటం సురక్షితం.';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      'చంద్రుడు భూమి మసక బయటి నీడ గుండా వెళ్తాడు. కొంచెం మాత్రమే మసకబారుతాడు, అందువల్ల గమనించడం కష్టం.';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      'భూమిపై ఒక ఇరుకైన మార్గంలో చంద్రుడు సూర్యుడిని పూర్తిగా కప్పేస్తాడు. ఆ మార్గం బయట పాక్షిక గ్రహణం కనిపిస్తుంది.';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      'చంద్రుడు కొంచెం దూరంగా ఉండటంతో సూర్యుడిని పూర్తిగా కప్పలేడు, మెరిసే ఉంగరం మిగులుతుంది. ఉంగరం ఇరుకైన మార్గంలో కనిపిస్తుంది; దాని బయట గ్రహణం పాక్షికం.';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'తన మార్గంలో ఈ గ్రహణం కొన్నిచోట్ల సంపూర్ణంగా, కొన్నిచోట్ల ఉంగరంలా కనిపిస్తుంది. మార్గం బయట ఇది పాక్షికం.';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      'చంద్రుడు సూర్యుడిలో ఒక భాగాన్ని మాత్రమే కప్పుతాడు, భూమిపై ఎక్కడా సూర్యుడు పూర్తిగా కప్పబడడు.';
+
+  @override
+  String get eclipseNoCity =>
+      'అక్కడినుంచి చూడగలరో లేదో తెలుసుకోవడానికి Heliora లో ఒక నగరాన్ని ఎంచుకోండి.';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return 'గ్రహణం మధ్యలో $city లో చంద్రుడు క్షితిజానికి పైన ఉంటాడు.';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return '$city లో గ్రహణంలో కొంత భాగంలో మాత్రమే చంద్రుడు క్షితిజానికి పైన ఉంటాడు.';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return '$city లో చంద్రుడు క్షితిజానికి కింద ఉండిపోతాడు, కాబట్టి అక్కడినుంచి కనిపించదు.';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return '$city నుంచి కనిపించదు: చంద్రుడి నీడ అక్కడ పడదు, లేదా సూర్యుడు క్షితిజానికి కింద ఉంటాడు.';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return '$city నుంచి గరిష్ఠంగా చాలా స్వల్ప పాక్షిక గ్రహణం మాత్రమే, గమనించడం కష్టం.';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return '$city కోసం ఉజ్జాయింపు అంచనా: చంద్రుడు గరిష్ఠంగా సూర్యుడి వెడల్పులో సుమారు $percent% కప్పుతాడు.';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return 'సూర్యుడు దాదాపు లేదా పూర్తిగా కప్పబడే మార్గానికి $city దగ్గరగా ఉంది. గ్రహణ పటం చూడండి; ఈ అంచనా ఉజ్జాయింపు మాత్రమే.';
+  }
+
+  @override
+  String get eclipseSolarSafety =>
+      'సరైన గ్రహణ కళ్లద్దాలు లేకుండా ఎప్పుడూ సూర్యుడిని చూడకండి.';
+
+  @override
+  String get alertsTitle => 'అలర్ట్‌లు';
+
+  @override
+  String get tonightAlertSwitch => 'ప్రతి సాయంత్రం ఈ రాత్రి ఆకాశం';
+
+  @override
+  String get tonightAlertTime => 'సమయం';
+
+  @override
+  String get tonightAlertNote =>
+      'మీరు ఎంచుకున్న సమయంలో చంద్రుడు, కనిపించే గ్రహాల గురించి ఒక చిన్న సందేశం. ఇది మీ ఫోన్‌లోనే లెక్కించబడుతుంది, ఇంటర్నెట్ అవసరం లేదు. Android, Heliora ను ముందుగా సుమారు రెండు వారాల సందేశాలను మాత్రమే సిద్ధం చేయనిస్తుంది, కాబట్టి అప్పుడప్పుడు యాప్ తెరవండి.';
+
+  @override
+  String get tonightNotifTitle => 'ఈ రాత్రి ఆకాశం';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return 'చంద్రుడు: $phase, $percent% వెలుగు.';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return 'వెతకండి: $planets.';
+  }
+
+  @override
+  String get tonightNoPlanets => 'సాయంత్రం ఆకాశంలో ప్రకాశవంతమైన గ్రహాలు లేవు.';
+
+  @override
+  String get tonightNoCity =>
+      'గ్రహాలను చూడటానికి Heliora లో ఒక నగరాన్ని ఎంచుకోండి.';
+
+  @override
+  String get birthdayTitle => 'నా పుట్టినరోజు ఆకాశం';
+
+  @override
+  String get birthdaySubtitle =>
+      'మీరు పుట్టిన రోజున చంద్రుడు, గ్రహాలు ఎక్కడ ఉన్నాయి, మరియు మీ జీవితంలోని ప్రత్యేక రోజులు.';
+
+  @override
+  String get birthdayCardHint => 'చంద్రకళ, గ్రహాలు, మైలురాళ్లు';
+
+  @override
+  String get birthdayNeedDate => 'మీ పుట్టిన తేదీ ఇవ్వండి';
+
+  @override
+  String get birthdayMoon => 'మీ పుట్టినరోజున చంద్రుడు';
+
+  @override
+  String get birthdayPlanets => 'ఆ రోజున గ్రహాలు';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return 'ఈ రోజు మీకు $count రోజులు.';
+  }
+
+  @override
+  String get birthdayMilestones => 'మైలురాళ్లు';
+
+  @override
+  String birthdayDayN(String count) {
+    return 'రోజు $count';
+  }
+
+  @override
+  String get birthdayBillion => '100 కోట్ల సెకన్ల వయసు';
+
+  @override
+  String get birthdayPassed => 'అయిపోయింది';
+
+  @override
+  String get birthdayNote =>
+      'Heliora లోని మిగతా వాటికి వాడే అవే కక్ష్యల నుంచి మీ ఫోన్‌లోనే లెక్కించబడుతుంది. మీ పుట్టిన తేదీ ఫోన్ దాటి వెళ్లదు.';
+
+  @override
+  String get missionsTitle => 'అంతరిక్ష యాత్రలు';
+
+  @override
+  String get missionsSubtitle =>
+      'అంతరిక్ష అన్వేషణలోని ప్రసిద్ధ క్షణాలు, పాతవి మొదట.';
+
+  @override
+  String get missionsCardHint => 'కాలంలో ప్రసిద్ధ యాత్రలు';
+
+  @override
+  String get missionSputnik1 =>
+      'మొదటి కృత్రిమ ఉపగ్రహం. బీచ్ బాల్ అంత పరిమాణం ఉన్న ఈ లోహపు గోళం సుమారు మూడు నెలలు భూమిని చుట్టింది. దాని బీప్ శబ్దం రేడియోలో వినిపించేది, అంతరిక్ష యుగం ఇక్కడే మొదలైంది.';
+
+  @override
+  String get missionVostok1 =>
+      'యూరీ గగారిన్ అంతరిక్షంలోకి వెళ్ళిన మొదటి మనిషి అయ్యారు. ఆయన సుమారు 108 నిమిషాల్లో భూమిని ఒకసారి చుట్టారు.';
+
+  @override
+  String get missionApollo11 =>
+      'నీల్ ఆర్మ్‌స్ట్రాంగ్, బజ్ ఆల్డ్రిన్ శాంతి సముద్రంలో దిగి చంద్రుడిపై నడిచిన మొదటి మనుషులు అయ్యారు. మైఖేల్ కాలిన్స్ కక్ష్యలో వారి కోసం వేచి ఉన్నారు.';
+
+  @override
+  String get missionVenera7 =>
+      'మరో గ్రహంపై దిగి సంకేతం పంపిన మొదటి వ్యోమనౌక. శుక్రుడి నలిపేసే వేడిలో అది సుమారు 23 నిమిషాలు సమాచారం పంపింది.';
+
+  @override
+  String get missionViking1 =>
+      'ఇది అంగారకుడిపై దిగి ఆరేళ్లకు పైగా పనిచేసింది, మరో గ్రహం ఉపరితలం నుంచి ఫోటోలు, వాతావరణ నివేదికల మొదటి పొడవైన వరుసను పంపింది.';
+
+  @override
+  String get missionVoyager1 =>
+      '1977 లో ప్రయోగించబడి, గురుడు, శని దగ్గర నుంచి వెళ్లి 2012 లో నక్షత్రాల మధ్య అంతరిక్షంలోకి ప్రవేశించింది. భూమి నుంచి అత్యంత దూరంలో ఉన్న మానవ నిర్మిత వస్తువు ఇదే.';
+
+  @override
+  String get missionHubble =>
+      '1990 లో ప్రయోగించబడింది, భూమి గాలికి పైనుంచి విశ్వాన్ని చూస్తుంది. దాని స్పష్టమైన చిత్రాలు విశ్వం వయసును కొలవడానికి సహాయపడ్డాయి, వేలాది దూరపు గెలాక్సీలను చూపించాయి.';
+
+  @override
+  String get missionHuygens =>
+      'కాసిని మోసుకెళ్లిన వ్యోమనౌక హైజెన్స్ పారాచూట్‌తో శని చంద్రుడు టైటాన్‌పై దిగింది. బయటి సౌర కుటుంబంలో ఇదే మొదటి ల్యాండింగ్, అది ఉపరితలం నుంచి చిత్రాలు పంపింది.';
+
+  @override
+  String get missionCuriosity =>
+      'కారు అంత పరిమాణం ఉన్న ఈ రోవర్ రాకెట్‌తో నడిచే ’స్కై క్రేన్’ సహాయంతో గేల్ బిలంలో దిగింది. అంగారకుడిపై ఒకప్పుడు జీవానికి తగిన పరిస్థితులు ఉండేవని అది కనుగొంది.';
+
+  @override
+  String get missionMangalyaan =>
+      'భారతదేశపు మార్స్ ఆర్బిటర్ మిషన్ మొదటి ప్రయత్నంలోనే అంగారకుడి కక్ష్యకు చేరింది. ఏ దేశానికైనా ఇది మొదటిసారి, అదీ చాలా తక్కువ ఖర్చుతో.';
+
+  @override
+  String get missionRosetta =>
+      'రోసెట్టా ల్యాండర్ ఫిలే తోకచుక్క 67P/చురియుమోవ్–గెరసిమెంకోపై దిగింది, తోకచుక్కపై మొదటి ల్యాండింగ్. రోసెట్టా రెండు సంవత్సరాలు ఆ తోకచుక్కను చుట్టింది.';
+
+  @override
+  String get missionNewhorizons =>
+      'తొమ్మిదేళ్ల ప్రయాణం తర్వాత అది ప్లూటో దగ్గర నుంచి వెళ్లి, మొదటిసారి మంచు పర్వతాలను, హృదయాకార పెద్ద మైదానాన్ని చూపించింది.';
+
+  @override
+  String get missionPerseverance =>
+      'పురాతన జీవ సూచనలు వెతకడానికి, రాతి నమూనాలు సేకరించడానికి పర్సెవరెన్స్ రోవర్ జెజెరో బిలంలో దిగింది. దాని హెలికాప్టర్ ఇన్‌జెన్యూటీ మరో గ్రహంపై మొదటి నియంత్రిత ఎగరడం చేసింది.';
+
+  @override
+  String get missionJwst =>
+      'అతిపెద్ద అంతరిక్ష టెలిస్కోప్‌కు 6.5 మీటర్ల బంగారు అద్దం ఉంది, ఇది 15 లక్షల కి.మీ దూరం నుంచి పరారుణ కాంతిలో ఆకాశాన్ని చూస్తుంది. తొలి గెలాక్సీలలో కొన్నింటిని అది చూడగలదు.';
+
+  @override
+  String get missionChandrayaan3 =>
+      'చంద్రుడిపై సురక్షితంగా దిగిన నాలుగో దేశంగా భారతదేశం నిలిచింది, దక్షిణ ధ్రువం దగ్గర దిగిన మొదటి దేశంగా కూడా. విక్రమ్ ల్యాండర్ ప్రజ్ఞాన్ రోవర్‌ను తీసుకెళ్లింది.';
 }

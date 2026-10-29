@@ -1234,4 +1234,236 @@ class AppLocalizationsJa extends AppLocalizations {
   String valueM(String value) {
     return '$value m';
   }
+
+  @override
+  String get eclipseTotalLunar => '皆既月食';
+
+  @override
+  String get eclipsePartialLunar => '部分月食';
+
+  @override
+  String get eclipsePenumbralLunar => '半影月食';
+
+  @override
+  String get eclipseTotalSolar => '皆既日食';
+
+  @override
+  String get eclipseAnnularSolar => '金環日食';
+
+  @override
+  String get eclipseHybridSolar => '金環皆既日食';
+
+  @override
+  String get eclipsePartialSolar => '部分日食';
+
+  @override
+  String get eclipseTotalLunarDesc =>
+      '月が完全に地球の影に入り、暗い赤色になることがよくあります。地球の夜側にいる人なら誰でも見られ、肉眼で見ても安全です。';
+
+  @override
+  String eclipsePartialLunarDesc(String percent) {
+    return '月の一部（幅の $percent%）が地球の濃い影に入ります。肉眼で見ても安全です。';
+  }
+
+  @override
+  String get eclipsePenumbralLunarDesc =>
+      '月が地球の薄い外側の影を通ります。少し暗くなるだけなので、気づきにくいです。';
+
+  @override
+  String get eclipseTotalSolarDesc =>
+      '地球上の細い帯の中で、月が太陽を完全に隠します。その帯の外では部分日食になります。';
+
+  @override
+  String get eclipseAnnularSolarDesc =>
+      '月が少し遠く、太陽を完全には隠せないため、明るいリングが残ります。リングは細い帯の中で見え、その外では部分日食です。';
+
+  @override
+  String get eclipseHybridSolarDesc =>
+      'この日食は、帯の中で場所によって皆既になったり金環になったりします。帯の外では部分日食です。';
+
+  @override
+  String get eclipsePartialSolarDesc =>
+      '月は太陽の一部だけを隠し、地球上のどこでも太陽が完全に隠れることはありません。';
+
+  @override
+  String get eclipseNoCity => 'Heliora で都市を選ぶと、そこから見られるかどうかが分かります。';
+
+  @override
+  String eclipseLunarUp(String city) {
+    return '食の最大のとき、$city では月が地平線の上にあります。';
+  }
+
+  @override
+  String eclipseLunarPartly(String city) {
+    return '$city では、月が地平線の上にあるのは食の一部の間だけです。';
+  }
+
+  @override
+  String eclipseLunarDown(String city) {
+    return '$city では月がずっと地平線の下にあるので、見られません。';
+  }
+
+  @override
+  String eclipseSolarNone(String city) {
+    return '$city からは見えません。月の影が届かないか、太陽が地平線の下にあります。';
+  }
+
+  @override
+  String eclipseSolarSlight(String city) {
+    return '$city からは、せいぜいごくわずかな部分日食で、気づきにくいです。';
+  }
+
+  @override
+  String eclipseSolarPartial(String city, String percent) {
+    return '$city のおおまかな目安：月が太陽の幅の最大で約 $percent% を隠します。';
+  }
+
+  @override
+  String eclipseSolarNear(String city) {
+    return '$city は、太陽がほぼ、または完全に隠れる帯に近い場所です。日食の地図で確認してください。この目安はおおまかです。';
+  }
+
+  @override
+  String get eclipseSolarSafety => '日食グラスなしで太陽を絶対に見ないでください。';
+
+  @override
+  String get alertsTitle => '通知';
+
+  @override
+  String get tonightAlertSwitch => '毎晩「今夜の空」をお知らせ';
+
+  @override
+  String get tonightAlertTime => '時刻';
+
+  @override
+  String get tonightAlertNote =>
+      '選んだ時刻に、月と見える惑星についての短いメモを表示します。計算はスマホの中で行い、インターネットは不要です。Android では約 2 週間先までしか Heliora が準備できないので、ときどきアプリを開いてください。';
+
+  @override
+  String get tonightNotifTitle => '今夜の空';
+
+  @override
+  String tonightMoon(String phase, String percent) {
+    return '月：$phase、$percent% 輝面。';
+  }
+
+  @override
+  String tonightPlanets(String planets) {
+    return '探してみよう：$planets。';
+  }
+
+  @override
+  String get tonightNoPlanets => '夕方の空に明るい惑星はありません。';
+
+  @override
+  String get tonightNoCity => '惑星を見るには Heliora で都市を選んでください。';
+
+  @override
+  String get birthdayTitle => '私の誕生日の空';
+
+  @override
+  String get birthdaySubtitle => 'あなたが生まれた日の月と惑星、そして人生の節目の日。';
+
+  @override
+  String get birthdayCardHint => '月の満ち欠け、惑星、節目';
+
+  @override
+  String get birthdayNeedDate => '誕生日を設定';
+
+  @override
+  String get birthdayMoon => '誕生日の月';
+
+  @override
+  String get birthdayPlanets => 'その日の惑星';
+
+  @override
+  String birthdayDaysOld(String count) {
+    return '今日で生まれてから $count 日です。';
+  }
+
+  @override
+  String get birthdayMilestones => '節目';
+
+  @override
+  String birthdayDayN(String count) {
+    return '$count 日目';
+  }
+
+  @override
+  String get birthdayBillion => '生後 10 億秒';
+
+  @override
+  String get birthdayPassed => '達成';
+
+  @override
+  String get birthdayNote =>
+      'Heliora の他の部分と同じ軌道から、スマホの中で計算します。誕生日がスマホの外に出ることはありません。';
+
+  @override
+  String get missionsTitle => '宇宙ミッション';
+
+  @override
+  String get missionsSubtitle => '宇宙探査の有名な出来事を、古い順に。';
+
+  @override
+  String get missionsCardHint => '時代を追う有名なミッション';
+
+  @override
+  String get missionSputnik1 =>
+      '最初の人工衛星。ビーチボールほどの金属の球が約 3 か月間地球を回りました。そのピーピーという音はラジオで聞こえ、宇宙時代が始まりました。';
+
+  @override
+  String get missionVostok1 => 'ユーリ・ガガーリンが人類初の宇宙飛行士になりました。約 108 分で地球を 1 周しました。';
+
+  @override
+  String get missionApollo11 =>
+      'ニール・アームストロングとバズ・オルドリンが静かの海に着陸し、月面を歩いた最初の人間になりました。マイケル・コリンズは軌道で待っていました。';
+
+  @override
+  String get missionVenera7 =>
+      '別の惑星に着陸して信号を送った最初の探査機。金星の猛烈な暑さの中で、約 23 分間データを送りました。';
+
+  @override
+  String get missionViking1 =>
+      '火星に着陸して 6 年以上動き続け、別の惑星の地表から最初の長い写真と天気報告のシリーズを送りました。';
+
+  @override
+  String get missionVoyager1 =>
+      '1977 年に打ち上げられ、木星と土星のそばを通り、2012 年に星間空間に入りました。地球から最も遠い人工物です。';
+
+  @override
+  String get missionHubble =>
+      '1990 年に打ち上げられ、地球の大気の上から宇宙を見ています。その鮮明な画像は宇宙の年齢を測る助けになり、何千もの遠い銀河を見せてくれました。';
+
+  @override
+  String get missionHuygens =>
+      'カッシーニに載せられていた探査機ホイヘンスが、パラシュートで土星の衛星タイタンに降りました。外惑星の世界への初めての着陸で、地表から写真を送りました。';
+
+  @override
+  String get missionCuriosity =>
+      '自動車ほどの大きさのこのローバーは、ロケット推進の「スカイクレーン」でゲール・クレーターに着陸しました。火星にはかつて生命に適した条件があったことを見つけました。';
+
+  @override
+  String get missionMangalyaan =>
+      'インドの火星探査機は、最初の挑戦で火星の軌道に入りました。どの国にとっても初めてで、しかも非常に低い費用でした。';
+
+  @override
+  String get missionRosetta =>
+      'ロゼッタの着陸機フィラエが、67P/チュリュモフ・ゲラシメンコ彗星に着陸しました。彗星への初めての着陸です。ロゼッタ本体は 2 年間彗星を回りました。';
+
+  @override
+  String get missionNewhorizons =>
+      '9 年の旅の末に冥王星のそばを通り、初めて氷の山と巨大なハート形の平原を見せてくれました。';
+
+  @override
+  String get missionPerseverance =>
+      'パーサビアランス・ローバーは、昔の生命の跡を探して岩石を集めるため、ジェゼロ・クレーターに着陸しました。搭載のヘリコプター、インジェニュイティは別の惑星で初めて動力飛行をしました。';
+
+  @override
+  String get missionJwst =>
+      '最大の宇宙望遠鏡で、6.5 メートルの金色の鏡を持ち、150 万 km 離れた場所から赤外線で空を見ています。最初期の銀河のいくつかを捉えます。';
+
+  @override
+  String get missionChandrayaan3 =>
+      'インドは月に軟着陸した 4 番目の国になり、月の南極付近に着陸した最初の国になりました。ビクラム着陸機は探査車プラギャンを載せていました。';
 }

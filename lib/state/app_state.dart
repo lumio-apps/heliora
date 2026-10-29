@@ -5,6 +5,7 @@ import '../data/native_bridge.dart';
 import '../data/online_service.dart';
 import 'online_state.dart';
 import '../data/settings.dart';
+import '../data/tonight_alerts.dart';
 import '../data/update_service.dart';
 
 /// Result of a manual "Check for updates".
@@ -93,6 +94,21 @@ class AppState extends ChangeNotifier {
   /// Allows or stops the optional online features.
   Future<void> setOnlineFeatures(bool value) =>
       _update(_settings.copyWith(onlineFeatures: value));
+
+  /// Turns the daily "tonight in the sky" note on or off. Turning it off
+  /// removes the notes that were already set.
+  Future<void> setTonightAlert(bool value) async {
+    await _update(_settings.copyWith(tonightAlert: value));
+    if (!value) {
+      for (var i = 0; i < tonightAlertDays; i++) {
+        await _bridge.cancelReminder('tonight:$i');
+      }
+    }
+  }
+
+  /// Sets when the daily note is shown, in minutes after midnight.
+  Future<void> setTonightMinutes(int minutes) =>
+      _update(_settings.copyWith(tonightMinutes: minutes));
 
   /// Forgets reminders that are over. Only reminders for which [inScope] is
   /// true are looked at; those not in [valid] are dropped.
