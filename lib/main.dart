@@ -13,6 +13,25 @@ Future<void> main() async {
   runApp(HelioraApp(state: state));
 }
 
+/// Makes the text at least [percent] of its normal size. The phone's own text
+/// size setting is respected: the larger of the two is used.
+Widget _withTextSize(BuildContext context, Widget? child, int percent) {
+  final content = child ?? const SizedBox.shrink();
+  if (percent <= 100) {
+    return content;
+  }
+  final media = MediaQuery.of(context);
+  final system = media.textScaler.scale(100) / 100;
+  final wanted = percent / 100;
+  if (system >= wanted) {
+    return content;
+  }
+  return MediaQuery(
+    data: media.copyWith(textScaler: TextScaler.linear(wanted)),
+    child: content,
+  );
+}
+
 class HelioraApp extends StatelessWidget {
   const HelioraApp({super.key, required this.state});
 
@@ -41,6 +60,8 @@ class HelioraApp extends StatelessWidget {
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
+            builder: (context, child) =>
+                _withTextSize(context, child, settings.textScalePercent),
             home: const HomeScreen(),
           );
         },

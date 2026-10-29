@@ -1536,4 +1536,128 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'A Índia se tornou o quarto país a pousar suavemente na Lua, e o primeiro perto do polo sul. O módulo Vikram levava o jipe-robô Pragyan.';
+
+  @override
+  String get spacecraftTitle => 'Naves espaciais agora';
+
+  @override
+  String get spacecraftSubtitle =>
+      'A que distância da Terra estão agora algumas naves espaciais famosas.';
+
+  @override
+  String get spacecraftCardHint => 'Voyager, JWST, rovers de Marte e mais';
+
+  @override
+  String get spacecraftDistance => 'Distância da Terra';
+
+  @override
+  String get spacecraftAltitude => 'Altura acima da Terra';
+
+  @override
+  String get spacecraftInAu => 'Em unidades astronômicas';
+
+  @override
+  String get spacecraftSpeed => 'Velocidade';
+
+  @override
+  String get spacecraftSignal => 'O sinal de rádio leva';
+
+  @override
+  String get spacecraftNote =>
+      'As distâncias são estimativas. Para as sondas distantes, elas são calculadas a partir da velocidade média e podem errar cerca de 1%, porque a Terra se move em torno do Sol. A distância de Marte é calculada para hoje. Uma UA (unidade astronômica) é a distância da Terra ao Sol.';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value bilhões de km';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value UA';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value km/s';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      'Lançada em 1977. Em 2012, tornou-se a primeira nave a entrar no espaço interestelar. Seu sinal de rádio já tem cerca de um dia quando chega até nós.';
+
+  @override
+  String get spacecraftVoyager2 =>
+      'Lançada em 1977. É a única nave que visitou Urano e Netuno, e entrou no espaço interestelar em 2018.';
+
+  @override
+  String get spacecraftNewHorizons =>
+      'Passou por Plutão em 2015 e pelo objeto do Cinturão de Kuiper Arrokoth em 2019. Ainda segue para longe e ainda envia dados.';
+
+  @override
+  String get spacecraftJwst =>
+      'O maior telescópio espacial, lançado em 2021. Fica perto de um ponto chamado L2, a cerca de 1,5 milhão de km da Terra, com o escudo solar sempre voltado para o Sol.';
+
+  @override
+  String get spacecraftIss =>
+      'Dá uma volta na Terra a cada 90 minutos, mais ou menos. Desde 2000 há pessoas vivendo a bordo sem interrupção.';
+
+  @override
+  String get spacecraftHubble =>
+      'Lançado em 1990 e ainda funcionando. Ele gira em torno da Terra acima do ar que borra as imagens, por isso suas fotos são muito nítidas.';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'Curiosity (pousou em 2012) e Perseverance (pousou em 2021) estão rodando em Marte. A distância até Marte varia de cerca de 55 milhões de km a mais de 400 milhões de km.';
+
+  @override
+  String get searchTooltip => 'Buscar';
+
+  @override
+  String get searchHint => 'Busque planetas, luas, missões…';
+
+  @override
+  String get searchClear => 'Limpar';
+
+  @override
+  String searchEmpty(String query) {
+    return 'Nada encontrado para “$query”.';
+  }
+
+  @override
+  String get searchBodies => 'Planetas e luas';
+
+  @override
+  String get searchMissions => 'Missões';
+
+  @override
+  String get searchSpacecraft => 'Naves espaciais';
+
+  @override
+  String get favoritesTitle => 'Favoritos';
+
+  @override
+  String get favoritesEmpty =>
+      'Toque na estrela de um planeta, missão ou nave para guardá-lo aqui.';
+
+  @override
+  String get favoriteAdd => 'Adicionar aos favoritos';
+
+  @override
+  String get favoriteRemove => 'Remover dos favoritos';
+
+  @override
+  String get textSize => 'Tamanho do texto';
+
+  @override
+  String get textSizeNormal => 'Normal';
+
+  @override
+  String get textSizeLarge => 'Grande';
+
+  @override
+  String get textSizeLarger => 'Maior';
+
+  @override
+  String get textSizeNote =>
+      'Aumenta o texto no Heliora. Ele nunca fica menor que o tamanho de texto do seu próprio celular.';
 }

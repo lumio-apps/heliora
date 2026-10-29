@@ -1549,4 +1549,128 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'L’Inde est devenue le quatrième pays à se poser en douceur sur la Lune, et le premier près de son pôle Sud. L’atterrisseur Vikram transportait le rover Pragyan.';
+
+  @override
+  String get spacecraftTitle => 'Engins spatiaux en ce moment';
+
+  @override
+  String get spacecraftSubtitle =>
+      'À quelle distance de la Terre se trouvent en ce moment quelques engins spatiaux célèbres.';
+
+  @override
+  String get spacecraftCardHint => 'Voyager, JWST, rovers martiens et plus';
+
+  @override
+  String get spacecraftDistance => 'Distance de la Terre';
+
+  @override
+  String get spacecraftAltitude => 'Altitude au-dessus de la Terre';
+
+  @override
+  String get spacecraftInAu => 'En unités astronomiques';
+
+  @override
+  String get spacecraftSpeed => 'Vitesse';
+
+  @override
+  String get spacecraftSignal => 'Le signal radio met';
+
+  @override
+  String get spacecraftNote =>
+      'Les distances sont des estimations. Pour les sondes lointaines, elles sont calculées à partir de la vitesse moyenne et peuvent se tromper d’environ 1 %, car la Terre tourne autour du Soleil. La distance de Mars est calculée pour aujourd’hui. Une UA (unité astronomique) est la distance de la Terre au Soleil.';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value milliards de km';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value UA';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value km/s';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      'Lancée en 1977. En 2012, elle est devenue le premier engin à entrer dans l’espace interstellaire. Son signal radio a déjà environ un jour quand il nous parvient.';
+
+  @override
+  String get spacecraftVoyager2 =>
+      'Lancée en 1977. C’est le seul engin à avoir visité Uranus et Neptune, et il est entré dans l’espace interstellaire en 2018.';
+
+  @override
+  String get spacecraftNewHorizons =>
+      'A survolé Pluton en 2015 et l’objet de la ceinture de Kuiper Arrokoth en 2019. Elle continue de s’éloigner et d’envoyer des données.';
+
+  @override
+  String get spacecraftJwst =>
+      'Le plus grand télescope spatial, lancé en 2021. Il se trouve près d’un point appelé L2, à environ 1,5 million de km de la Terre, son bouclier solaire toujours tourné vers le Soleil.';
+
+  @override
+  String get spacecraftIss =>
+      'Fait le tour de la Terre environ toutes les 90 minutes. Des personnes y vivent sans interruption depuis 2000.';
+
+  @override
+  String get spacecraftHubble =>
+      'Lancé en 1990 et toujours en service. Il tourne autour de la Terre au-dessus de l’air qui rend les images floues, donc ses photos sont très nettes.';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'Curiosity (posé en 2012) et Perseverance (posé en 2021) roulent sur Mars. La distance de Mars varie d’environ 55 millions de km à plus de 400 millions de km.';
+
+  @override
+  String get searchTooltip => 'Rechercher';
+
+  @override
+  String get searchHint => 'Cherchez planètes, lunes, missions…';
+
+  @override
+  String get searchClear => 'Effacer';
+
+  @override
+  String searchEmpty(String query) {
+    return 'Rien trouvé pour « $query ».';
+  }
+
+  @override
+  String get searchBodies => 'Planètes et lunes';
+
+  @override
+  String get searchMissions => 'Missions';
+
+  @override
+  String get searchSpacecraft => 'Engins spatiaux';
+
+  @override
+  String get favoritesTitle => 'Favoris';
+
+  @override
+  String get favoritesEmpty =>
+      'Touchez l’étoile d’une planète, d’une mission ou d’un engin pour le garder ici.';
+
+  @override
+  String get favoriteAdd => 'Ajouter aux favoris';
+
+  @override
+  String get favoriteRemove => 'Retirer des favoris';
+
+  @override
+  String get textSize => 'Taille du texte';
+
+  @override
+  String get textSizeNormal => 'Normale';
+
+  @override
+  String get textSizeLarge => 'Grande';
+
+  @override
+  String get textSizeLarger => 'Plus grande';
+
+  @override
+  String get textSizeNote =>
+      'Agrandit le texte dans Heliora. Il ne descend jamais sous la taille de texte de votre téléphone.';
 }

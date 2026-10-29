@@ -969,5 +969,68 @@
   "missionNewhorizons": "After a nine-year trip, it flew past Pluto and showed us icy mountains and a huge heart-shaped plain for the first time.",
   "missionPerseverance": "The Perseverance rover landed in Jezero Crater to look for signs of old life and collect rock samples. Its helicopter Ingenuity made the first powered flight on another planet.",
   "missionJwst": "The largest space telescope has a 6.5-metre gold mirror and watches the sky in infrared light from 1.5 million km away. It sees some of the first galaxies.",
-  "missionChandrayaan3": "India became the fourth country to land softly on the Moon, and the first near its south pole. The Vikram lander carried the Pragyan rover."
+  "missionChandrayaan3": "India became the fourth country to land softly on the Moon, and the first near its south pole. The Vikram lander carried the Pragyan rover.",
+  "spacecraftTitle": "Spacecraft now",
+  "spacecraftSubtitle": "How far some famous spacecraft are from Earth right now.",
+  "spacecraftCardHint": "Voyager, JWST, Mars rovers and more",
+  "spacecraftDistance": "Distance from Earth",
+  "spacecraftAltitude": "Height above Earth",
+  "spacecraftInAu": "In astronomical units",
+  "spacecraftSpeed": "Speed",
+  "spacecraftSignal": "Radio signal takes",
+  "spacecraftNote": "Distances are estimates. For the far probes they are worked out from average speed and can be off by about 1%, because Earth moves round the Sun. The Mars distance is calculated for today. One AU (astronomical unit) is the distance from Earth to the Sun.",
+  "valueBillionKm": "{value} billion km",
+  "@valueBillionKm": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "valueAu": "{value} AU",
+  "@valueAu": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "valueKmS": "{value} km/s",
+  "@valueKmS": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "spacecraftVoyager1": "Launched in 1977. In 2012 it became the first spacecraft to enter interstellar space. Its radio signal is already about a day old when it reaches us.",
+  "spacecraftVoyager2": "Launched in 1977. It is the only spacecraft that has visited Uranus and Neptune, and it entered interstellar space in 2018.",
+  "spacecraftNewHorizons": "Flew past Pluto in 2015 and the Kuiper Belt object Arrokoth in 2019. It is still travelling outward and still sending data.",
+  "spacecraftJwst": "The largest space telescope, launched in 2021. It sits near a point called L2, about 1.5 million km from Earth, with its sunshield always facing the Sun.",
+  "spacecraftIss": "Circles Earth about every 90 minutes. People have lived on board without a break since 2000.",
+  "spacecraftHubble": "Launched in 1990 and still working. It circles Earth above the blurring air, so its pictures are very sharp.",
+  "spacecraftMarsRovers": "Curiosity (landed 2012) and Perseverance (landed 2021) are driving on Mars. The distance to Mars changes from about 55 million km to over 400 million km.",
+  "searchTooltip": "Search",
+  "searchHint": "Search planets, moons, missions…",
+  "searchClear": "Clear",
+  "searchEmpty": "Nothing found for “{query}”.",
+  "@searchEmpty": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "searchBodies": "Planets and moons",
+  "searchMissions": "Missions",
+  "searchSpacecraft": "Spacecraft",
+  "favoritesTitle": "Favourites",
+  "favoritesEmpty": "Tap the star on a planet, mission or spacecraft to keep it here.",
+  "favoriteAdd": "Add to favourites",
+  "favoriteRemove": "Remove from favourites",
+  "textSize": "Text size",
+  "textSizeNormal": "Normal",
+  "textSizeLarge": "Large",
+  "textSizeLarger": "Larger",
+  "textSizeNote": "Makes the text in Heliora bigger. It never goes below your phone's own text size."
 }

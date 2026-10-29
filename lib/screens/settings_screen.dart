@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../data/settings.dart';
 import '../l10n/names.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
@@ -150,6 +151,38 @@ class SettingsScreen extends StatelessWidget {
                     side: BorderSide(color: p.border),
                   ),
                 ),
+                const SizedBox(height: 20),
+                Text(l.textSize,
+                    style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                        color: p.text)),
+                const SizedBox(height: 12),
+                SegmentedButton<int>(
+                  showSelectedIcon: false,
+                  segments: <ButtonSegment<int>>[
+                    ButtonSegment<int>(
+                        value: textScaleChoices[0],
+                        label: Text(l.textSizeNormal)),
+                    ButtonSegment<int>(
+                        value: textScaleChoices[1],
+                        label: Text(l.textSizeLarge)),
+                    ButtonSegment<int>(
+                        value: textScaleChoices[2],
+                        label: Text(l.textSizeLarger)),
+                  ],
+                  selected: <int>{settings.textScalePercent},
+                  onSelectionChanged: (set) => state.setTextScale(set.first),
+                  style: SegmentedButton.styleFrom(
+                    selectedBackgroundColor: p.accent,
+                    selectedForegroundColor: p.onAccent,
+                    foregroundColor: p.text,
+                    side: BorderSide(color: p.border),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(l.textSizeNote,
+                    style: TextStyle(fontSize: 12, color: p.muted, height: 1.4)),
               ],
             ),
           ),

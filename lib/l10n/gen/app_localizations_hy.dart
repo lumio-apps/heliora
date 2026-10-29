@@ -1536,4 +1536,128 @@ class AppLocalizationsHy extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'Հնդկաստանը դարձավ Լուսնի վրա մեղմ վայրէջք կատարած չորրորդ երկիրը և առաջինը՝ նրա հարավային բևեռի մոտ։ Vikram վայրէջքային սարքը կրում էր Pragyan մարսագնացը։';
+
+  @override
+  String get spacecraftTitle => 'Տիեզերանավերը հիմա';
+
+  @override
+  String get spacecraftSubtitle =>
+      'Որոշ հայտնի տիեզերանավեր հիմա որքան հեռու են Երկրից։';
+
+  @override
+  String get spacecraftCardHint => 'Վոյաջեր, JWST, մարսագնացներ և ավելին';
+
+  @override
+  String get spacecraftDistance => 'Հեռավորությունը Երկրից';
+
+  @override
+  String get spacecraftAltitude => 'Բարձրությունը Երկրից';
+
+  @override
+  String get spacecraftInAu => 'Աստղագիտական միավորով';
+
+  @override
+  String get spacecraftSpeed => 'Արագություն';
+
+  @override
+  String get spacecraftSignal => 'Ռադիոազդանշանը տևում է';
+
+  @override
+  String get spacecraftNote =>
+      'Հեռավորությունները մոտավոր են։ Հեռավոր զոնդերի համար դրանք հաշվարկված են միջին արագությամբ և կարող են սխալվել մոտ 1%-ով, քանի որ Երկիրը պտտվում է Արեգակի շուրջ։ Մարսի հեռավորությունը հաշվարկված է այսօրվա համար։ 1 AU-ն (աստղագիտական միավոր) Երկրից Արեգակ հեռավորությունն է։';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value միլիարդ կմ';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value կմ/վրկ';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      'Արձակվել է 1977 թվականին։ 2012-ին դարձավ միջաստղային տարածություն մտած առաջին տիեզերանավը։ Նրա ռադիոազդանշանը մեզ հասնելիս արդեն մոտ մեկ օր հին է լինում։';
+
+  @override
+  String get spacecraftVoyager2 =>
+      'Արձակվել է 1977 թվականին։ Միակ տիեզերանավն է, որ այցելել է Ուրան և Նեպտուն, իսկ 2018-ին մտել է միջաստղային տարածություն։';
+
+  @override
+  String get spacecraftNewHorizons =>
+      '2015-ին թռավ Պլուտոնի մոտով, իսկ 2019-ին՝ Կոյպերի գոտու Արոկոթ օբյեկտի մոտով։ Այն դեռ շարունակում է հեռանալ և դեռ տվյալներ է ուղարկում։';
+
+  @override
+  String get spacecraftJwst =>
+      'Ամենամեծ տիեզերական աստղադիտակը, արձակվել է 2021-ին։ Այն գտնվում է L2 կոչվող կետի մոտ՝ Երկրից մոտ 1,5 մլն կմ հեռավորության վրա, և նրա արևապաշտպան վահանը միշտ դեպի Արեգակն է։';
+
+  @override
+  String get spacecraftIss =>
+      'Երկրի շուրջը պտույտ է կատարում մոտ յուրաքանչյուր 90 րոպեն մեկ։ 2000 թվականից նրա վրա մարդիկ անընդմեջ ապրում են։';
+
+  @override
+  String get spacecraftHubble =>
+      'Արձակվել է 1990-ին և դեռ աշխատում է։ Այն պտտվում է Երկրի շուրջը պատկերը մշուշող օդից վեր, ուստի նրա լուսանկարները շատ պարզ են։';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'Քյուրիոսիթին (վայրէջք է կատարել 2012-ին) և Փերսիվիրենսը (վայրէջք է կատարել 2021-ին) շարժվում են Մարսի վրա։ Մարսի հեռավորությունը փոխվում է մոտ 55 մլն կմ-ից մինչև 400 մլն կմ-ից ավելի։';
+
+  @override
+  String get searchTooltip => 'Որոնել';
+
+  @override
+  String get searchHint => 'Որոնեք մոլորակներ, արբանյակներ, առաքելություններ…';
+
+  @override
+  String get searchClear => 'Մաքրել';
+
+  @override
+  String searchEmpty(String query) {
+    return '«$query»-ի համար ոչինչ չգտնվեց։';
+  }
+
+  @override
+  String get searchBodies => 'Մոլորակներ և արբանյակներ';
+
+  @override
+  String get searchMissions => 'Առաքելություններ';
+
+  @override
+  String get searchSpacecraft => 'Տիեզերանավեր';
+
+  @override
+  String get favoritesTitle => 'Ընտրյալներ';
+
+  @override
+  String get favoritesEmpty =>
+      'Սեղմեք մոլորակի, առաքելության կամ տիեզերանավի աստղին, և այն կմնա այստեղ։';
+
+  @override
+  String get favoriteAdd => 'Ավելացնել ընտրյալներում';
+
+  @override
+  String get favoriteRemove => 'Հեռացնել ընտրյալներից';
+
+  @override
+  String get textSize => 'Տեքստի չափը';
+
+  @override
+  String get textSizeNormal => 'Սովորական';
+
+  @override
+  String get textSizeLarge => 'Մեծ';
+
+  @override
+  String get textSizeLarger => 'Ավելի մեծ';
+
+  @override
+  String get textSizeNote =>
+      'Մեծացնում է Heliora-ի տեքստը։ Այն երբեք չի լինում ձեր հեռախոսի սեփական տեքստի չափից փոքր։';
 }

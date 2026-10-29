@@ -1449,4 +1449,123 @@ class AppLocalizationsZh extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       '印度成为第四个在月球上软着陆的国家，也是第一个在月球南极附近着陆的国家。“维克拉姆”着陆器带着“智慧”月球车。';
+
+  @override
+  String get spacecraftTitle => '航天器此刻';
+
+  @override
+  String get spacecraftSubtitle => '一些著名航天器此刻离地球有多远。';
+
+  @override
+  String get spacecraftCardHint => '旅行者号、JWST、火星车等';
+
+  @override
+  String get spacecraftDistance => '距地球';
+
+  @override
+  String get spacecraftAltitude => '距地面高度';
+
+  @override
+  String get spacecraftInAu => '以天文单位计';
+
+  @override
+  String get spacecraftSpeed => '速度';
+
+  @override
+  String get spacecraftSignal => '无线电信号需要';
+
+  @override
+  String get spacecraftNote =>
+      '距离均为估算值。远方探测器的距离按平均速度推算，由于地球绕太阳运动，可能有约 1% 的误差。火星的距离是按今天计算的。1 AU（天文单位）就是地球到太阳的距离。';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value 十亿公里';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value 公里/秒';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      '1977 年发射。2012 年成为第一个进入星际空间的航天器。它的无线电信号传到我们这里时，已经过去了大约一天。';
+
+  @override
+  String get spacecraftVoyager2 => '1977 年发射。它是唯一造访过天王星和海王星的航天器，2018 年进入星际空间。';
+
+  @override
+  String get spacecraftNewHorizons =>
+      '2015 年飞掠冥王星，2019 年飞掠柯伊伯带天体阿罗科斯。它仍在向外飞行，仍在传回数据。';
+
+  @override
+  String get spacecraftJwst =>
+      '最大的太空望远镜，2021 年发射。它位于名为 L2 的点附近，距地球约 150 万公里，遮阳板始终朝向太阳。';
+
+  @override
+  String get spacecraftIss => '大约每 90 分钟绕地球一圈。自 2000 年起，一直有人不间断地住在上面。';
+
+  @override
+  String get spacecraftHubble =>
+      '1990 年发射，至今仍在工作。它在会让图像模糊的大气层之上绕地球运行，所以拍出的照片非常清晰。';
+
+  @override
+  String get spacecraftMarsRovers =>
+      '好奇号（2012 年着陆）和毅力号（2021 年着陆）正在火星上行驶。火星的距离在约 5500 万公里到 4 亿多公里之间变化。';
+
+  @override
+  String get searchTooltip => '搜索';
+
+  @override
+  String get searchHint => '搜索行星、卫星、任务…';
+
+  @override
+  String get searchClear => '清除';
+
+  @override
+  String searchEmpty(String query) {
+    return '没有找到“$query”。';
+  }
+
+  @override
+  String get searchBodies => '行星和卫星';
+
+  @override
+  String get searchMissions => '任务';
+
+  @override
+  String get searchSpacecraft => '航天器';
+
+  @override
+  String get favoritesTitle => '收藏';
+
+  @override
+  String get favoritesEmpty => '点按行星、任务或航天器上的星标，就会收藏在这里。';
+
+  @override
+  String get favoriteAdd => '加入收藏';
+
+  @override
+  String get favoriteRemove => '取消收藏';
+
+  @override
+  String get textSize => '文字大小';
+
+  @override
+  String get textSizeNormal => '标准';
+
+  @override
+  String get textSizeLarge => '大';
+
+  @override
+  String get textSizeLarger => '特大';
+
+  @override
+  String get textSizeNote => '放大 Heliora 里的文字。永远不会小于手机自身的文字大小。';
 }

@@ -1542,4 +1542,129 @@ class AppLocalizationsMl extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'ചന്ദ്രനിൽ സുരക്ഷിതമായി ഇറങ്ങിയ നാലാമത്തെ രാജ്യമായി ഇന്ത്യ, ദക്ഷിണ ധ്രുവത്തിന് അടുത്ത് ഇറങ്ങിയ ആദ്യ രാജ്യവും. വിക്രം ലാൻഡർ പ്രജ്ഞാൻ റോവറിനെ വഹിച്ചിരുന്നു.';
+
+  @override
+  String get spacecraftTitle => 'ബഹിരാകാശ പേടകങ്ങൾ ഇപ്പോൾ';
+
+  @override
+  String get spacecraftSubtitle =>
+      'പ്രശസ്തമായ ചില ബഹിരാകാശ പേടകങ്ങൾ ഇപ്പോൾ ഭൂമിയിൽ നിന്ന് എത്ര ദൂരത്താണ്.';
+
+  @override
+  String get spacecraftCardHint =>
+      'വോയേജർ, JWST, ചൊവ്വയിലെ റോവറുകൾ തുടങ്ങി പലതും';
+
+  @override
+  String get spacecraftDistance => 'ഭൂമിയിൽ നിന്നുള്ള ദൂരം';
+
+  @override
+  String get spacecraftAltitude => 'ഭൂമിയിൽ നിന്നുള്ള ഉയരം';
+
+  @override
+  String get spacecraftInAu => 'ജ്യോതിശാസ്ത്ര യൂണിറ്റിൽ';
+
+  @override
+  String get spacecraftSpeed => 'വേഗം';
+
+  @override
+  String get spacecraftSignal => 'റേഡിയോ സിഗ്നലിന് വേണ്ട സമയം';
+
+  @override
+  String get spacecraftNote =>
+      'ദൂരങ്ങൾ ഏകദേശ കണക്കുകളാണ്. ദൂരെയുള്ള പേടകങ്ങൾക്ക് ഇവ ശരാശരി വേഗത്തിൽ നിന്ന് കണക്കാക്കിയതാണ്; ഭൂമി സൂര്യനെ ചുറ്റുന്നതിനാൽ ഏകദേശം 1% വരെ തെറ്റാകാം. ചൊവ്വയിലേക്കുള്ള ദൂരം ഇന്നത്തേക്ക് കണക്കാക്കിയതാണ്. ഒരു AU (ജ്യോതിശാസ്ത്ര യൂണിറ്റ്) എന്നത് ഭൂമിയിൽ നിന്ന് സൂര്യനിലേക്കുള്ള ദൂരമാണ്.';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value ശതകോടി കി.മീ';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value കി.മീ/സെക്കൻഡ്';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      '1977-ൽ വിക്ഷേപിച്ചു. 2012-ൽ നക്ഷത്രാന്തര ബഹിരാകാശത്തേക്ക് കടന്ന ആദ്യ പേടകമായി. ഇതിന്റെ റേഡിയോ സിഗ്നൽ നമ്മുടെ അടുത്തെത്തുമ്പോഴേക്കും ഏകദേശം ഒരു ദിവസം പഴക്കമുള്ളതാകും.';
+
+  @override
+  String get spacecraftVoyager2 =>
+      '1977-ൽ വിക്ഷേപിച്ചു. യുറാനസിലും നെപ്റ്റ്യൂണിലും എത്തിയ ഒരേയൊരു പേടകമാണിത്; 2018-ൽ നക്ഷത്രാന്തര ബഹിരാകാശത്തേക്ക് കടന്നു.';
+
+  @override
+  String get spacecraftNewHorizons =>
+      '2015-ൽ പ്ലൂട്ടോയുടെ അടുത്തുകൂടിയും 2019-ൽ കൈപ്പർ വലയത്തിലെ അരോക്കോത്തിന്റെ അടുത്തുകൂടിയും കടന്നുപോയി. ഇപ്പോഴും പുറത്തേക്ക് സഞ്ചരിക്കുകയും വിവരങ്ങൾ അയയ്ക്കുകയും ചെയ്യുന്നു.';
+
+  @override
+  String get spacecraftJwst =>
+      'ഏറ്റവും വലിയ ബഹിരാകാശ ടെലിസ്കോപ്പ്, 2021-ൽ വിക്ഷേപിച്ചു. ഇത് L2 എന്ന ബിന്ദുവിന് സമീപം, ഭൂമിയിൽ നിന്ന് ഏകദേശം 15 ലക്ഷം കി.മീ അകലെയാണ്; ഇതിന്റെ സൂര്യകവചം എപ്പോഴും സൂര്യന് നേരെയാണ്.';
+
+  @override
+  String get spacecraftIss =>
+      'ഏകദേശം ഓരോ 90 മിനിറ്റിലും ഭൂമിയെ ഒരു തവണ ചുറ്റുന്നു. 2000 മുതൽ ഇതിൽ ആളുകൾ ഇടവേളയില്ലാതെ താമസിക്കുന്നു.';
+
+  @override
+  String get spacecraftHubble =>
+      '1990-ൽ വിക്ഷേപിച്ചു, ഇപ്പോഴും പ്രവർത്തിക്കുന്നു. ചിത്രം മങ്ങിക്കുന്ന വായുവിന് മുകളിലൂടെ ഭൂമിയെ ചുറ്റുന്നതിനാൽ ഇതിന്റെ ചിത്രങ്ങൾ വളരെ വ്യക്തമാണ്.';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'ക്യൂരിയോസിറ്റിയും (2012-ൽ ഇറങ്ങി) പെർസെവറൻസും (2021-ൽ ഇറങ്ങി) ചൊവ്വയിൽ സഞ്ചരിക്കുന്നു. ചൊവ്വയിലേക്കുള്ള ദൂരം ഏകദേശം 5.5 കോടി കി.മീ മുതൽ 40 കോടി കി.മീറ്ററിലധികം വരെ മാറുന്നു.';
+
+  @override
+  String get searchTooltip => 'തിരയുക';
+
+  @override
+  String get searchHint => 'ഗ്രഹങ്ങൾ, ഉപഗ്രഹങ്ങൾ, ദൗത്യങ്ങൾ തിരയുക…';
+
+  @override
+  String get searchClear => 'മായ്ക്കുക';
+
+  @override
+  String searchEmpty(String query) {
+    return '“$query” എന്നതിന് ഒന്നും കണ്ടെത്തിയില്ല.';
+  }
+
+  @override
+  String get searchBodies => 'ഗ്രഹങ്ങളും ഉപഗ്രഹങ്ങളും';
+
+  @override
+  String get searchMissions => 'ദൗത്യങ്ങൾ';
+
+  @override
+  String get searchSpacecraft => 'ബഹിരാകാശ പേടകങ്ങൾ';
+
+  @override
+  String get favoritesTitle => 'പ്രിയപ്പെട്ടവ';
+
+  @override
+  String get favoritesEmpty =>
+      'ഒരു ഗ്രഹത്തിലോ ദൗത്യത്തിലോ പേടകത്തിലോ ഉള്ള നക്ഷത്രത്തിൽ തൊടുക, അത് ഇവിടെ സൂക്ഷിക്കും.';
+
+  @override
+  String get favoriteAdd => 'പ്രിയപ്പെട്ടവയിൽ ചേർക്കുക';
+
+  @override
+  String get favoriteRemove => 'പ്രിയപ്പെട്ടവയിൽ നിന്ന് നീക്കുക';
+
+  @override
+  String get textSize => 'അക്ഷര വലുപ്പം';
+
+  @override
+  String get textSizeNormal => 'സാധാരണ';
+
+  @override
+  String get textSizeLarge => 'വലുത്';
+
+  @override
+  String get textSizeLarger => 'കൂടുതൽ വലുത്';
+
+  @override
+  String get textSizeNote =>
+      'Heliora-യിലെ അക്ഷരങ്ങൾ വലുതാക്കുന്നു. നിങ്ങളുടെ ഫോണിന്റെ സ്വന്തം അക്ഷര വലുപ്പത്തിന് താഴെ ഇത് ഒരിക്കലും പോകില്ല.';
 }

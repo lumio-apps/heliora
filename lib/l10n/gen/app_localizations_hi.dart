@@ -1533,4 +1533,128 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'भारत चाँद पर आराम से उतरने वाला चौथा देश बना, और दक्षिणी ध्रुव के पास उतरने वाला पहला। विक्रम लैंडर अपने साथ प्रज्ञान रोवर लेकर गया था।';
+
+  @override
+  String get spacecraftTitle => 'अंतरिक्ष यान अभी';
+
+  @override
+  String get spacecraftSubtitle =>
+      'कुछ मशहूर अंतरिक्ष यान अभी पृथ्वी से कितनी दूर हैं।';
+
+  @override
+  String get spacecraftCardHint => 'वॉयेजर, JWST, मंगल रोवर और बहुत कुछ';
+
+  @override
+  String get spacecraftDistance => 'पृथ्वी से दूरी';
+
+  @override
+  String get spacecraftAltitude => 'पृथ्वी से ऊँचाई';
+
+  @override
+  String get spacecraftInAu => 'खगोलीय इकाई में';
+
+  @override
+  String get spacecraftSpeed => 'गति';
+
+  @override
+  String get spacecraftSignal => 'रेडियो संकेत को लगता है';
+
+  @override
+  String get spacecraftNote =>
+      'दूरियाँ अनुमान हैं। दूर के यानों के लिए ये औसत गति से निकाली गई हैं और पृथ्वी के सूर्य के चारों ओर घूमने के कारण लगभग 1% तक ग़लत हो सकती हैं। मंगल की दूरी आज के लिए गिनी गई है। एक AU (खगोलीय इकाई) पृथ्वी से सूर्य की दूरी है।';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value अरब किमी';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value किमी/सेकंड';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      '1977 में छोड़ा गया। 2012 में यह तारों के बीच के अंतरिक्ष में पहुँचने वाला पहला यान बना। इसका रेडियो संकेत हम तक पहुँचते-पहुँचते लगभग एक दिन पुराना हो चुका होता है।';
+
+  @override
+  String get spacecraftVoyager2 =>
+      '1977 में छोड़ा गया। यह अकेला यान है जो अरुण और वरुण तक गया, और 2018 में तारों के बीच के अंतरिक्ष में पहुँचा।';
+
+  @override
+  String get spacecraftNewHorizons =>
+      '2015 में प्लूटो के पास से और 2019 में कुइपर पट्टी की चट्टान अरोकोथ के पास से गुज़रा। यह अब भी बाहर की ओर बढ़ रहा है और अब भी डेटा भेज रहा है।';
+
+  @override
+  String get spacecraftJwst =>
+      'सबसे बड़ी अंतरिक्ष दूरबीन, 2021 में छोड़ी गई। यह L2 नाम के एक बिंदु के पास है, पृथ्वी से लगभग 15 लाख किमी दूर, और इसकी धूप-ढाल हमेशा सूर्य की ओर रहती है।';
+
+  @override
+  String get spacecraftIss =>
+      'लगभग हर 90 मिनट में पृथ्वी का एक चक्कर लगाता है। 2000 से इस पर लोग बिना रुके रह रहे हैं।';
+
+  @override
+  String get spacecraftHubble =>
+      '1990 में छोड़ा गया और आज भी काम कर रहा है। यह धुंधला करने वाली हवा के ऊपर से पृथ्वी की परिक्रमा करता है, इसलिए इसकी तस्वीरें बहुत साफ़ होती हैं।';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'क्यूरियोसिटी (2012 में उतरा) और पर्सिवरेंस (2021 में उतरा) मंगल पर चल रहे हैं। मंगल की दूरी लगभग 5.5 करोड़ किमी से बदलकर 40 करोड़ किमी से भी ज़्यादा तक पहुँच जाती है।';
+
+  @override
+  String get searchTooltip => 'खोजें';
+
+  @override
+  String get searchHint => 'ग्रह, चंद्रमा, मिशन खोजें…';
+
+  @override
+  String get searchClear => 'मिटाएँ';
+
+  @override
+  String searchEmpty(String query) {
+    return '“$query” के लिए कुछ नहीं मिला।';
+  }
+
+  @override
+  String get searchBodies => 'ग्रह और चंद्रमा';
+
+  @override
+  String get searchMissions => 'मिशन';
+
+  @override
+  String get searchSpacecraft => 'अंतरिक्ष यान';
+
+  @override
+  String get favoritesTitle => 'पसंदीदा';
+
+  @override
+  String get favoritesEmpty =>
+      'किसी ग्रह, मिशन या अंतरिक्ष यान पर तारे को दबाएँ, वह यहाँ रखा जाएगा।';
+
+  @override
+  String get favoriteAdd => 'पसंदीदा में जोड़ें';
+
+  @override
+  String get favoriteRemove => 'पसंदीदा से हटाएँ';
+
+  @override
+  String get textSize => 'अक्षरों का आकार';
+
+  @override
+  String get textSizeNormal => 'सामान्य';
+
+  @override
+  String get textSizeLarge => 'बड़ा';
+
+  @override
+  String get textSizeLarger => 'और बड़ा';
+
+  @override
+  String get textSizeNote =>
+      'Heliora के अक्षर बड़े कर देता है। यह आपके फ़ोन के अपने अक्षर-आकार से कभी छोटा नहीं होता।';
 }

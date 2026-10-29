@@ -1533,4 +1533,129 @@ class AppLocalizationsKn extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'ಭಾರತ ಚಂದ್ರನ ಮೇಲೆ ಸುರಕ್ಷಿತವಾಗಿ ಇಳಿದ ನಾಲ್ಕನೇ ದೇಶವಾಯಿತು, ಮತ್ತು ದಕ್ಷಿಣ ಧ್ರುವದ ಬಳಿ ಇಳಿದ ಮೊದಲ ದೇಶ. ವಿಕ್ರಮ್ ಲ್ಯಾಂಡರ್ ಪ್ರಜ್ಞಾನ್ ರೋವರ್ ಅನ್ನು ಹೊತ್ತೊಯ್ದಿತ್ತು.';
+
+  @override
+  String get spacecraftTitle => 'ಬಾಹ್ಯಾಕಾಶ ನೌಕೆಗಳು ಈಗ';
+
+  @override
+  String get spacecraftSubtitle =>
+      'ಕೆಲವು ಪ್ರಸಿದ್ಧ ಬಾಹ್ಯಾಕಾಶ ನೌಕೆಗಳು ಈಗ ಭೂಮಿಯಿಂದ ಎಷ್ಟು ದೂರದಲ್ಲಿವೆ.';
+
+  @override
+  String get spacecraftCardHint =>
+      'ವಾಯೇಜರ್, JWST, ಮಂಗಳದ ರೋವರ್‌ಗಳು ಮತ್ತು ಇನ್ನಷ್ಟು';
+
+  @override
+  String get spacecraftDistance => 'ಭೂಮಿಯಿಂದ ದೂರ';
+
+  @override
+  String get spacecraftAltitude => 'ಭೂಮಿಯಿಂದ ಎತ್ತರ';
+
+  @override
+  String get spacecraftInAu => 'ಖಗೋಳ ಏಕಮಾನದಲ್ಲಿ';
+
+  @override
+  String get spacecraftSpeed => 'ವೇಗ';
+
+  @override
+  String get spacecraftSignal => 'ರೇಡಿಯೊ ಸಂಕೇತಕ್ಕೆ ಬೇಕಾಗುವ ಸಮಯ';
+
+  @override
+  String get spacecraftNote =>
+      'ದೂರಗಳು ಅಂದಾಜು. ದೂರದ ನೌಕೆಗಳಿಗೆ ಇವನ್ನು ಸರಾಸರಿ ವೇಗದಿಂದ ಲೆಕ್ಕಿಸಲಾಗಿದೆ; ಭೂಮಿ ಸೂರ್ಯನ ಸುತ್ತ ಚಲಿಸುವುದರಿಂದ ಸುಮಾರು 1% ತಪ್ಪಾಗಬಹುದು. ಮಂಗಳದ ದೂರವನ್ನು ಇಂದಿನ ದಿನಕ್ಕೆ ಲೆಕ್ಕಿಸಲಾಗಿದೆ. ಒಂದು AU (ಖಗೋಳ ಏಕಮಾನ) ಎಂದರೆ ಭೂಮಿಯಿಂದ ಸೂರ್ಯನಿಗೆ ಇರುವ ದೂರ.';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value ಬಿಲಿಯನ್ ಕಿಮೀ';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value ಕಿಮೀ/ಸೆ';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      '1977ರಲ್ಲಿ ಉಡಾಯಿಸಲಾಯಿತು. 2012ರಲ್ಲಿ ನಕ್ಷತ್ರಗಳ ನಡುವಿನ ಬಾಹ್ಯಾಕಾಶ ಪ್ರವೇಶಿಸಿದ ಮೊದಲ ನೌಕೆ ಇದು. ಇದರ ರೇಡಿಯೊ ಸಂಕೇತ ನಮ್ಮನ್ನು ತಲುಪುವಾಗ ಸುಮಾರು ಒಂದು ದಿನದಷ್ಟು ಹಳೆಯದಾಗಿರುತ್ತದೆ.';
+
+  @override
+  String get spacecraftVoyager2 =>
+      '1977ರಲ್ಲಿ ಉಡಾಯಿಸಲಾಯಿತು. ಯುರೇನಸ್ ಮತ್ತು ನೆಪ್ಚೂನ್‌ಗೆ ಭೇಟಿ ನೀಡಿದ ಏಕೈಕ ನೌಕೆ ಇದು, ಮತ್ತು 2018ರಲ್ಲಿ ನಕ್ಷತ್ರಗಳ ನಡುವಿನ ಬಾಹ್ಯಾಕಾಶ ಪ್ರವೇಶಿಸಿತು.';
+
+  @override
+  String get spacecraftNewHorizons =>
+      '2015ರಲ್ಲಿ ಪ್ಲೂಟೊ ಬಳಿ ಮತ್ತು 2019ರಲ್ಲಿ ಕೈಪರ್ ಪಟ್ಟಿಯ ಕಾಯ ಅರೋಕೋತ್ ಬಳಿ ಹಾದುಹೋಯಿತು. ಇದು ಈಗಲೂ ಹೊರಗಡೆ ಸಾಗುತ್ತಿದೆ ಮತ್ತು ಈಗಲೂ ಮಾಹಿತಿ ಕಳುಹಿಸುತ್ತಿದೆ.';
+
+  @override
+  String get spacecraftJwst =>
+      'ಅತಿ ದೊಡ್ಡ ಬಾಹ್ಯಾಕಾಶ ದೂರದರ್ಶಕ, 2021ರಲ್ಲಿ ಉಡಾಯಿಸಲಾಯಿತು. ಇದು L2 ಎಂಬ ಬಿಂದುವಿನ ಬಳಿ, ಭೂಮಿಯಿಂದ ಸುಮಾರು 15 ಲಕ್ಷ ಕಿಮೀ ದೂರದಲ್ಲಿದೆ, ಮತ್ತು ಇದರ ಸೂರ್ಯ-ಕವಚ ಯಾವಾಗಲೂ ಸೂರ್ಯನ ಕಡೆಗೆ ಇರುತ್ತದೆ.';
+
+  @override
+  String get spacecraftIss =>
+      'ಸುಮಾರು ಪ್ರತಿ 90 ನಿಮಿಷಕ್ಕೆ ಭೂಮಿಯನ್ನು ಒಮ್ಮೆ ಸುತ್ತುತ್ತದೆ. 2000ರಿಂದ ಇದರಲ್ಲಿ ಜನರು ಅಡೆತಡೆಯಿಲ್ಲದೆ ವಾಸಿಸುತ್ತಿದ್ದಾರೆ.';
+
+  @override
+  String get spacecraftHubble =>
+      '1990ರಲ್ಲಿ ಉಡಾಯಿಸಲಾಯಿತು, ಈಗಲೂ ಕೆಲಸ ಮಾಡುತ್ತಿದೆ. ಚಿತ್ರವನ್ನು ಮಂಜುಗೊಳಿಸುವ ಗಾಳಿಯ ಮೇಲೆ ಭೂಮಿಯನ್ನು ಸುತ್ತುತ್ತದೆ, ಆದ್ದರಿಂದ ಇದರ ಚಿತ್ರಗಳು ತುಂಬಾ ಸ್ಪಷ್ಟ.';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'ಕ್ಯೂರಿಯಾಸಿಟಿ (2012ರಲ್ಲಿ ಇಳಿಯಿತು) ಮತ್ತು ಪರ್ಸೆವರೆನ್ಸ್ (2021ರಲ್ಲಿ ಇಳಿಯಿತು) ಮಂಗಳದಲ್ಲಿ ಚಲಿಸುತ್ತಿವೆ. ಮಂಗಳದ ದೂರ ಸುಮಾರು 5.5 ಕೋಟಿ ಕಿಮೀಯಿಂದ 40 ಕೋಟಿ ಕಿಮೀಗಿಂತ ಹೆಚ್ಚಿನವರೆಗೆ ಬದಲಾಗುತ್ತದೆ.';
+
+  @override
+  String get searchTooltip => 'ಹುಡುಕಿ';
+
+  @override
+  String get searchHint => 'ಗ್ರಹ, ಚಂದ್ರ, ಯಾನಗಳನ್ನು ಹುಡುಕಿ…';
+
+  @override
+  String get searchClear => 'ಅಳಿಸಿ';
+
+  @override
+  String searchEmpty(String query) {
+    return '“$query” ಗಾಗಿ ಏನೂ ಸಿಗಲಿಲ್ಲ.';
+  }
+
+  @override
+  String get searchBodies => 'ಗ್ರಹಗಳು ಮತ್ತು ಚಂದ್ರರು';
+
+  @override
+  String get searchMissions => 'ಯಾನಗಳು';
+
+  @override
+  String get searchSpacecraft => 'ಬಾಹ್ಯಾಕಾಶ ನೌಕೆಗಳು';
+
+  @override
+  String get favoritesTitle => 'ಮೆಚ್ಚಿನವುಗಳು';
+
+  @override
+  String get favoritesEmpty =>
+      'ಗ್ರಹ, ಯಾನ ಅಥವಾ ನೌಕೆಯ ಮೇಲಿರುವ ನಕ್ಷತ್ರವನ್ನು ಒತ್ತಿ, ಅದು ಇಲ್ಲಿ ಉಳಿಯುತ್ತದೆ.';
+
+  @override
+  String get favoriteAdd => 'ಮೆಚ್ಚಿನವುಗಳಿಗೆ ಸೇರಿಸಿ';
+
+  @override
+  String get favoriteRemove => 'ಮೆಚ್ಚಿನವುಗಳಿಂದ ತೆಗೆಯಿರಿ';
+
+  @override
+  String get textSize => 'ಅಕ್ಷರದ ಗಾತ್ರ';
+
+  @override
+  String get textSizeNormal => 'ಸಾಮಾನ್ಯ';
+
+  @override
+  String get textSizeLarge => 'ದೊಡ್ಡದು';
+
+  @override
+  String get textSizeLarger => 'ಇನ್ನೂ ದೊಡ್ಡದು';
+
+  @override
+  String get textSizeNote =>
+      'Heliora ದ ಅಕ್ಷರಗಳನ್ನು ದೊಡ್ಡದಾಗಿಸುತ್ತದೆ. ಇದು ನಿಮ್ಮ ಫೋನಿನ ಸ್ವಂತ ಅಕ್ಷರ ಗಾತ್ರಕ್ಕಿಂತ ಎಂದಿಗೂ ಚಿಕ್ಕದಾಗುವುದಿಲ್ಲ.';
 }

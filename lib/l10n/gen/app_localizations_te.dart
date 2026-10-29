@@ -1530,4 +1530,128 @@ class AppLocalizationsTe extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'చంద్రుడిపై సురక్షితంగా దిగిన నాలుగో దేశంగా భారతదేశం నిలిచింది, దక్షిణ ధ్రువం దగ్గర దిగిన మొదటి దేశంగా కూడా. విక్రమ్ ల్యాండర్ ప్రజ్ఞాన్ రోవర్‌ను తీసుకెళ్లింది.';
+
+  @override
+  String get spacecraftTitle => 'అంతరిక్ష నౌకలు ఇప్పుడు';
+
+  @override
+  String get spacecraftSubtitle =>
+      'కొన్ని ప్రసిద్ధ అంతరిక్ష నౌకలు ఇప్పుడు భూమి నుండి ఎంత దూరంలో ఉన్నాయి.';
+
+  @override
+  String get spacecraftCardHint => 'వాయేజర్, JWST, అంగారక రోవర్లు ఇంకా మరెన్నో';
+
+  @override
+  String get spacecraftDistance => 'భూమి నుండి దూరం';
+
+  @override
+  String get spacecraftAltitude => 'భూమి నుండి ఎత్తు';
+
+  @override
+  String get spacecraftInAu => 'ఖగోళ ప్రమాణాలలో';
+
+  @override
+  String get spacecraftSpeed => 'వేగం';
+
+  @override
+  String get spacecraftSignal => 'రేడియో సంకేతానికి పట్టే సమయం';
+
+  @override
+  String get spacecraftNote =>
+      'దూరాలు అంచనాలు. దూరపు నౌకలకు ఇవి సగటు వేగం నుండి లెక్కించినవి; భూమి సూర్యుని చుట్టూ తిరగడం వల్ల సుమారు 1% వరకు తేడా ఉండవచ్చు. అంగారకుడికి దూరం ఈ రోజుకు లెక్కించినది. ఒక AU (ఖగోళ ప్రమాణం) అంటే భూమి నుండి సూర్యునికి ఉన్న దూరం.';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value బిలియన్ కి.మీ';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value కి.మీ/సె';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      '1977లో ప్రయోగించారు. 2012లో నక్షత్రాల మధ్య అంతరిక్షంలోకి ప్రవేశించిన మొదటి నౌక ఇది. దీని రేడియో సంకేతం మనకు చేరేసరికి దాదాపు ఒక రోజు పాతదై ఉంటుంది.';
+
+  @override
+  String get spacecraftVoyager2 =>
+      '1977లో ప్రయోగించారు. యురేనస్, నెప్ట్యూన్ రెండింటినీ దర్శించిన ఏకైక నౌక ఇదే; 2018లో నక్షత్రాల మధ్య అంతరిక్షంలోకి ప్రవేశించింది.';
+
+  @override
+  String get spacecraftNewHorizons =>
+      '2015లో ప్లూటో దగ్గర, 2019లో కైపర్ పట్టీలోని అరోకోత్ దగ్గర దూసుకెళ్లింది. ఇది ఇంకా బయటికి ప్రయాణిస్తూ, ఇంకా డేటా పంపుతోంది.';
+
+  @override
+  String get spacecraftJwst =>
+      'అతి పెద్ద అంతరిక్ష టెలిస్కోప్, 2021లో ప్రయోగించారు. ఇది L2 అనే బిందువు దగ్గర, భూమి నుండి సుమారు 15 లక్షల కి.మీ దూరంలో ఉంది; దీని సూర్య కవచం ఎల్లప్పుడూ సూర్యుని వైపు ఉంటుంది.';
+
+  @override
+  String get spacecraftIss =>
+      'సుమారు ప్రతి 90 నిమిషాలకు భూమిని ఒకసారి చుట్టి వస్తుంది. 2000 నుండి ఇందులో ప్రజలు ఆగకుండా నివసిస్తున్నారు.';
+
+  @override
+  String get spacecraftHubble =>
+      '1990లో ప్రయోగించారు, ఇప్పటికీ పనిచేస్తోంది. చిత్రాలను మసకబార్చే గాలికి పైన భూమిని చుట్టి వస్తుంది, అందుకే దీని చిత్రాలు చాలా స్పష్టంగా ఉంటాయి.';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'క్యూరియాసిటీ (2012లో దిగింది), పెర్సివరెన్స్ (2021లో దిగింది) అంగారకుడిపై తిరుగుతున్నాయి. అంగారకుడికి దూరం సుమారు 5.5 కోట్ల కి.మీ నుండి 40 కోట్ల కి.మీ కంటే ఎక్కువ వరకు మారుతుంది.';
+
+  @override
+  String get searchTooltip => 'వెతకండి';
+
+  @override
+  String get searchHint => 'గ్రహాలు, చంద్రులు, యాత్రలు వెతకండి…';
+
+  @override
+  String get searchClear => 'తుడిచివేయి';
+
+  @override
+  String searchEmpty(String query) {
+    return '“$query” కోసం ఏమీ దొరకలేదు.';
+  }
+
+  @override
+  String get searchBodies => 'గ్రహాలు, చంద్రులు';
+
+  @override
+  String get searchMissions => 'యాత్రలు';
+
+  @override
+  String get searchSpacecraft => 'అంతరిక్ష నౌకలు';
+
+  @override
+  String get favoritesTitle => 'ఇష్టమైనవి';
+
+  @override
+  String get favoritesEmpty =>
+      'ఒక గ్రహం, యాత్ర లేదా నౌకపై ఉన్న నక్షత్రాన్ని నొక్కండి, అది ఇక్కడ ఉంటుంది.';
+
+  @override
+  String get favoriteAdd => 'ఇష్టమైనవిలో చేర్చండి';
+
+  @override
+  String get favoriteRemove => 'ఇష్టమైనవి నుండి తొలగించండి';
+
+  @override
+  String get textSize => 'అక్షరాల పరిమాణం';
+
+  @override
+  String get textSizeNormal => 'సాధారణం';
+
+  @override
+  String get textSizeLarge => 'పెద్దది';
+
+  @override
+  String get textSizeLarger => 'ఇంకా పెద్దది';
+
+  @override
+  String get textSizeNote =>
+      'Heliora లోని అక్షరాలను పెద్దవి చేస్తుంది. ఇది మీ ఫోన్ సొంత అక్షర పరిమాణం కంటే ఎప్పుడూ చిన్నది కాదు.';
 }

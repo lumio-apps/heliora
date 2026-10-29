@@ -1540,4 +1540,128 @@ class AppLocalizationsId extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'India menjadi negara keempat yang mendarat mulus di Bulan, dan yang pertama di dekat kutub selatannya. Pendarat Vikram membawa rover Pragyan.';
+
+  @override
+  String get spacecraftTitle => 'Wahana antariksa saat ini';
+
+  @override
+  String get spacecraftSubtitle =>
+      'Seberapa jauh beberapa wahana antariksa terkenal dari Bumi saat ini.';
+
+  @override
+  String get spacecraftCardHint => 'Voyager, JWST, rover Mars, dan lainnya';
+
+  @override
+  String get spacecraftDistance => 'Jarak dari Bumi';
+
+  @override
+  String get spacecraftAltitude => 'Ketinggian di atas Bumi';
+
+  @override
+  String get spacecraftInAu => 'Dalam satuan astronomi';
+
+  @override
+  String get spacecraftSpeed => 'Kecepatan';
+
+  @override
+  String get spacecraftSignal => 'Sinyal radio butuh';
+
+  @override
+  String get spacecraftNote =>
+      'Jarak adalah perkiraan. Untuk wahana yang jauh, jarak dihitung dari kecepatan rata-rata dan bisa meleset sekitar 1%, karena Bumi bergerak mengelilingi Matahari. Jarak ke Mars dihitung untuk hari ini. Satu SA (satuan astronomi) adalah jarak dari Bumi ke Matahari.';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value miliar km';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value SA';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value km/dtk';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      'Diluncurkan tahun 1977. Pada 2012 menjadi wahana pertama yang memasuki ruang antarbintang. Sinyal radionya sudah berumur sekitar sehari saat sampai ke kita.';
+
+  @override
+  String get spacecraftVoyager2 =>
+      'Diluncurkan tahun 1977. Satu-satunya wahana yang pernah mengunjungi Uranus dan Neptunus, dan memasuki ruang antarbintang pada 2018.';
+
+  @override
+  String get spacecraftNewHorizons =>
+      'Melintasi Pluto pada 2015 dan objek Sabuk Kuiper Arrokoth pada 2019. Masih terus melaju ke luar dan masih mengirim data.';
+
+  @override
+  String get spacecraftJwst =>
+      'Teleskop antariksa terbesar, diluncurkan tahun 2021. Letaknya dekat titik bernama L2, sekitar 1,5 juta km dari Bumi, dengan perisai suryanya selalu menghadap Matahari.';
+
+  @override
+  String get spacecraftIss =>
+      'Mengelilingi Bumi sekitar tiap 90 menit. Sejak 2000 selalu ada orang yang tinggal di dalamnya tanpa putus.';
+
+  @override
+  String get spacecraftHubble =>
+      'Diluncurkan tahun 1990 dan masih bekerja. Ia mengorbit Bumi di atas udara yang membuat gambar kabur, jadi fotonya sangat tajam.';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'Curiosity (mendarat 2012) dan Perseverance (mendarat 2021) sedang menjelajah Mars. Jarak ke Mars berubah dari sekitar 55 juta km hingga lebih dari 400 juta km.';
+
+  @override
+  String get searchTooltip => 'Cari';
+
+  @override
+  String get searchHint => 'Cari planet, bulan, misi…';
+
+  @override
+  String get searchClear => 'Hapus';
+
+  @override
+  String searchEmpty(String query) {
+    return 'Tidak ada hasil untuk “$query”.';
+  }
+
+  @override
+  String get searchBodies => 'Planet dan bulan';
+
+  @override
+  String get searchMissions => 'Misi';
+
+  @override
+  String get searchSpacecraft => 'Wahana antariksa';
+
+  @override
+  String get favoritesTitle => 'Favorit';
+
+  @override
+  String get favoritesEmpty =>
+      'Ketuk bintang pada planet, misi, atau wahana agar tersimpan di sini.';
+
+  @override
+  String get favoriteAdd => 'Tambah ke favorit';
+
+  @override
+  String get favoriteRemove => 'Hapus dari favorit';
+
+  @override
+  String get textSize => 'Ukuran teks';
+
+  @override
+  String get textSizeNormal => 'Normal';
+
+  @override
+  String get textSizeLarge => 'Besar';
+
+  @override
+  String get textSizeLarger => 'Lebih besar';
+
+  @override
+  String get textSizeNote =>
+      'Memperbesar teks di Heliora. Ukurannya tidak pernah lebih kecil dari ukuran teks bawaan ponselmu.';
 }

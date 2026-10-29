@@ -1541,4 +1541,128 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'India se convirtió en el cuarto país en posarse suavemente en la Luna, y el primero cerca de su polo sur. El módulo Vikram llevaba al róver Pragyan.';
+
+  @override
+  String get spacecraftTitle => 'Naves espaciales ahora';
+
+  @override
+  String get spacecraftSubtitle =>
+      'A qué distancia de la Tierra están ahora algunas naves espaciales famosas.';
+
+  @override
+  String get spacecraftCardHint => 'Voyager, JWST, róvers de Marte y más';
+
+  @override
+  String get spacecraftDistance => 'Distancia a la Tierra';
+
+  @override
+  String get spacecraftAltitude => 'Altura sobre la Tierra';
+
+  @override
+  String get spacecraftInAu => 'En unidades astronómicas';
+
+  @override
+  String get spacecraftSpeed => 'Velocidad';
+
+  @override
+  String get spacecraftSignal => 'La señal de radio tarda';
+
+  @override
+  String get spacecraftNote =>
+      'Las distancias son estimaciones. En las sondas lejanas se calculan a partir de la velocidad media y pueden fallar un 1 % aproximadamente, porque la Tierra se mueve alrededor del Sol. La distancia a Marte está calculada para hoy. Una UA (unidad astronómica) es la distancia de la Tierra al Sol.';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value mil millones de km';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value UA';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value km/s';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      'Lanzada en 1977. En 2012 fue la primera nave en entrar en el espacio interestelar. Su señal de radio ya tiene cerca de un día cuando nos llega.';
+
+  @override
+  String get spacecraftVoyager2 =>
+      'Lanzada en 1977. Es la única nave que ha visitado Urano y Neptuno, y entró en el espacio interestelar en 2018.';
+
+  @override
+  String get spacecraftNewHorizons =>
+      'Pasó junto a Plutón en 2015 y junto al objeto del cinturón de Kuiper Arrokoth en 2019. Sigue alejándose y sigue enviando datos.';
+
+  @override
+  String get spacecraftJwst =>
+      'El telescopio espacial más grande, lanzado en 2021. Está cerca de un punto llamado L2, a unos 1,5 millones de km de la Tierra, con su parasol siempre hacia el Sol.';
+
+  @override
+  String get spacecraftIss =>
+      'Da una vuelta a la Tierra cada 90 minutos más o menos. Desde 2000 hay personas viviendo a bordo sin interrupción.';
+
+  @override
+  String get spacecraftHubble =>
+      'Lanzado en 1990 y todavía en funcionamiento. Da vueltas a la Tierra por encima del aire que desenfoca las imágenes, así que sus fotos son muy nítidas.';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'Curiosity (aterrizó en 2012) y Perseverance (aterrizó en 2021) circulan por Marte. La distancia a Marte varía de unos 55 millones de km a más de 400 millones de km.';
+
+  @override
+  String get searchTooltip => 'Buscar';
+
+  @override
+  String get searchHint => 'Busca planetas, lunas, misiones…';
+
+  @override
+  String get searchClear => 'Borrar';
+
+  @override
+  String searchEmpty(String query) {
+    return 'No se encontró nada para «$query».';
+  }
+
+  @override
+  String get searchBodies => 'Planetas y lunas';
+
+  @override
+  String get searchMissions => 'Misiones';
+
+  @override
+  String get searchSpacecraft => 'Naves espaciales';
+
+  @override
+  String get favoritesTitle => 'Favoritos';
+
+  @override
+  String get favoritesEmpty =>
+      'Toca la estrella de un planeta, una misión o una nave para guardarlo aquí.';
+
+  @override
+  String get favoriteAdd => 'Añadir a favoritos';
+
+  @override
+  String get favoriteRemove => 'Quitar de favoritos';
+
+  @override
+  String get textSize => 'Tamaño del texto';
+
+  @override
+  String get textSizeNormal => 'Normal';
+
+  @override
+  String get textSizeLarge => 'Grande';
+
+  @override
+  String get textSizeLarger => 'Más grande';
+
+  @override
+  String get textSizeNote =>
+      'Agranda el texto de Heliora. Nunca baja del tamaño de texto de tu propio teléfono.';
 }

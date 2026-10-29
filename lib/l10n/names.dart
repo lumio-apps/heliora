@@ -349,3 +349,23 @@ String missionText(AppLocalizations l, String id) {
       return l.missionChandrayaan3;
   }
 }
+
+/// The short story of the spacecraft with [id].
+String spacecraftText(AppLocalizations l, String id) {
+  switch (id) {
+    case 'voyager1':
+      return l.spacecraftVoyager1;
+    case 'voyager2':
+      return l.spacecraftVoyager2;
+    case 'newhorizons':
+      return l.spacecraftNewHorizons;
+    case 'jwst':
+      return l.spacecraftJwst;
+    case 'iss':
+      return l.spacecraftIss;
+    case 'hubble':
+      return l.spacecraftHubble;
+    default:
+      return l.spacecraftMarsRovers;
+  }
+}

@@ -14,6 +14,7 @@ import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 import '../widgets/fact_card.dart';
+import '../widgets/favorite_button.dart';
 import '../widgets/share_card.dart';
 
 /// Text helpers shared by the planet and compare screens.
@@ -174,6 +175,7 @@ class _PlanetScreenState extends State<PlanetScreen> {
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
+          FavoriteButton(favoriteKey: widget.planet.id),
           IconButton(
             tooltip: l.share,
             onPressed: _sharing ? null : _share,

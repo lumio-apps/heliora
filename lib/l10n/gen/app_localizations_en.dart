@@ -1532,4 +1532,128 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'India became the fourth country to land softly on the Moon, and the first near its south pole. The Vikram lander carried the Pragyan rover.';
+
+  @override
+  String get spacecraftTitle => 'Spacecraft now';
+
+  @override
+  String get spacecraftSubtitle =>
+      'How far some famous spacecraft are from Earth right now.';
+
+  @override
+  String get spacecraftCardHint => 'Voyager, JWST, Mars rovers and more';
+
+  @override
+  String get spacecraftDistance => 'Distance from Earth';
+
+  @override
+  String get spacecraftAltitude => 'Height above Earth';
+
+  @override
+  String get spacecraftInAu => 'In astronomical units';
+
+  @override
+  String get spacecraftSpeed => 'Speed';
+
+  @override
+  String get spacecraftSignal => 'Radio signal takes';
+
+  @override
+  String get spacecraftNote =>
+      'Distances are estimates. For the far probes they are worked out from average speed and can be off by about 1%, because Earth moves round the Sun. The Mars distance is calculated for today. One AU (astronomical unit) is the distance from Earth to the Sun.';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value billion km';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value km/s';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      'Launched in 1977. In 2012 it became the first spacecraft to enter interstellar space. Its radio signal is already about a day old when it reaches us.';
+
+  @override
+  String get spacecraftVoyager2 =>
+      'Launched in 1977. It is the only spacecraft that has visited Uranus and Neptune, and it entered interstellar space in 2018.';
+
+  @override
+  String get spacecraftNewHorizons =>
+      'Flew past Pluto in 2015 and the Kuiper Belt object Arrokoth in 2019. It is still travelling outward and still sending data.';
+
+  @override
+  String get spacecraftJwst =>
+      'The largest space telescope, launched in 2021. It sits near a point called L2, about 1.5 million km from Earth, with its sunshield always facing the Sun.';
+
+  @override
+  String get spacecraftIss =>
+      'Circles Earth about every 90 minutes. People have lived on board without a break since 2000.';
+
+  @override
+  String get spacecraftHubble =>
+      'Launched in 1990 and still working. It circles Earth above the blurring air, so its pictures are very sharp.';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'Curiosity (landed 2012) and Perseverance (landed 2021) are driving on Mars. The distance to Mars changes from about 55 million km to over 400 million km.';
+
+  @override
+  String get searchTooltip => 'Search';
+
+  @override
+  String get searchHint => 'Search planets, moons, missions…';
+
+  @override
+  String get searchClear => 'Clear';
+
+  @override
+  String searchEmpty(String query) {
+    return 'Nothing found for “$query”.';
+  }
+
+  @override
+  String get searchBodies => 'Planets and moons';
+
+  @override
+  String get searchMissions => 'Missions';
+
+  @override
+  String get searchSpacecraft => 'Spacecraft';
+
+  @override
+  String get favoritesTitle => 'Favourites';
+
+  @override
+  String get favoritesEmpty =>
+      'Tap the star on a planet, mission or spacecraft to keep it here.';
+
+  @override
+  String get favoriteAdd => 'Add to favourites';
+
+  @override
+  String get favoriteRemove => 'Remove from favourites';
+
+  @override
+  String get textSize => 'Text size';
+
+  @override
+  String get textSizeNormal => 'Normal';
+
+  @override
+  String get textSizeLarge => 'Large';
+
+  @override
+  String get textSizeLarger => 'Larger';
+
+  @override
+  String get textSizeNote =>
+      'Makes the text in Heliora bigger. It never goes below your phone\'s own text size.';
 }

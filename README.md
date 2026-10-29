@@ -52,6 +52,7 @@ and an honest answer to "could humans live here?"
 - **Eclipses.** Total, annular, hybrid and partial solar eclipses and total, partial and penumbral lunar eclipses are in the events calendar for the next 12 months, with a bell for each. For your city, Heliora says whether the Moon is up during a lunar eclipse and gives a rough guess of how much of the Sun the Moon covers in a solar eclipse. It is only a guide: check an eclipse map before you travel, and never look at the Sun without eclipse glasses.
 - **Tonight in the sky, every evening (optional).** Switch it on in Settings and pick a time. Heliora shows a short note with the Moon's phase and the bright planets you can look for, using your chosen city. It is worked out on your phone. Android lets Heliora prepare about two weeks of notes ahead, so open the app now and then.
 - **Space station and rocket launches (optional, needs internet).** Turn on **Online features** in Settings and Heliora shows where the International Space Station is right now on a map, when it passes over your city (and whether you can see it), and the list of upcoming rocket launches inside the events calendar. All of it has bells for reminders. It is off until you switch it on.
+- **Spacecraft now.** How far Voyager 1, Voyager 2, New Horizons, the James Webb telescope, the space station, Hubble and the Mars rovers are from Earth right now, with how long a radio signal needs to reach them. The far probes are estimates (about 1%), the rest are fixed or calculated for today.
 - **Find it with your compass.** Tap the compass button next to the Moon or a planet, hold your phone up, and Heliora shows which way to turn and tilt until you are pointing right at it. It uses your phone's motion sensors only: no camera, no location.
 
 ### 🌍 Learn
@@ -67,11 +68,12 @@ and an honest answer to "could humans live here?"
 - **Your age on other planets** and the date of your next birthday there.
 - **My birthday sky.** The Moon's phase and where the planets were on the day you were born, how many days old you are, and the dates of your 10,000th day, your 1 billionth second and other round numbers.
 - **Space missions.** A timeline of 15 famous missions from Sputnik 1 to Chandrayaan-3, each with a short story.
+- **Search and favourites.** Tap the magnifier on the home screen to search planets, moons, missions and spacecraft, in your own language or in English. Tap the star on anything to keep it in your favourites, which show when the search box is empty.
 - **Quiz.** Three levels, 10 questions each: Easy (basics about planets), Medium (planets and moons) and Hard (tricky rankings). Answers are worked out from the data, and your best score for each level is saved.
 - **Share.** Turn a planet's card into a picture and send it to your friends.
 
 ### ⚙️ Made for everyone
-- **Light, dark or system theme.**
+- **Light, dark or system theme**, and a **text size** setting (Normal, Large, Larger) for easier reading.
 - **20 languages:** English, Hindi, Bengali, Gujarati, Kannada, Malayalam, Marathi, Punjabi, Tamil, Telugu, Urdu, Arabic, Chinese, Japanese, Spanish, French, Portuguese, Russian, Indonesian and Armenian. Planet names are translated too, and Arabic and Urdu read right to left.
 - **In-app updates.** New versions download inside the app with a progress bar, then the Android installer opens. Your settings are kept.
 
@@ -99,6 +101,7 @@ Heliora is made by [Lumio Apps](https://github.com/lumio-apps): **no ads, no acc
 |---|---|
 | Quiz and facts | Most answers are worked out from the same data as the planet pages, so they stay right when the data changes. A few (the moon with water geysers, the most volcanic moon, the moon that orbits backwards) are well known facts about one world. The "Did you know?" facts are written by hand from NASA sources. |
 | Eclipses | The Moon's position (Schlyter's method plus its distance) and the Sun's position decide when the Moon passes in front of the Sun or into Earth's shadow. Compared with the official eclipse lists for 2022 to 2029: all the main eclipses are found with the right type, times within a few minutes. Very faint penumbral eclipses are left out. The local estimate for a solar eclipse is rough (about 6% of the Sun's width). |
+| Spacecraft distances | Voyager 1 and 2 are placed from NASA's one-light-day dates (173.14 AU, 18 Nov 2026 and Nov 2035) and New Horizons from its 50 AU date (17 Apr 2021), then moved at their average speeds in a straight line. That is good to about 1%; the true distance from Earth wobbles by up to 1 AU over a year as Earth moves. The Mars rovers use the same orbit maths as the planet pages. The space station, Hubble and JWST use fixed typical values. |
 | Tonight alerts | Heliora sets up to 15 Android alarms ahead, one per evening, each with text worked out on the phone. They are set again each time the app is opened and after a restart or update. |
 | Planet facts | [NASA Planetary Fact Sheet](https://nssdc.gsfc.nasa.gov/planetary/factsheet/). Moon counts are NASA's known moons as of mid 2026. |
 | Real positions and distances | Keplerian orbital elements from JPL ([Standish](https://ssd.jpl.nasa.gov/planets/approx_pos.html)), valid 1800–2050, solved on the phone. Checked against the 2025 Mars and Saturn and the 2026 Jupiter oppositions. |
@@ -130,6 +133,7 @@ All texts live in `lib/l10n/app_<language>.arb`. Found a wrong word in your lang
 
 | Version | What's new |
 |---|---|
+| **1.11.0** | Spacecraft now (Voyager, New Horizons, JWST, ISS, Hubble, Mars rovers), search and favourites, and a text size setting |
 | **1.10.0** | Eclipse calendar (solar and lunar) with reminders and a rough local guide, a daily "tonight in the sky" notification, "My birthday sky" and a timeline of 15 space missions |
 | **1.9.0** | Quiz with Easy, Medium and Hard levels (now with moon questions), "Did you know?" facts for every world in 20 languages, jump height on every world |
 | **1.8.0** | Online features (off by default): live International Space Station map and passes over your city, upcoming rocket launches in the events calendar, reminders for both |

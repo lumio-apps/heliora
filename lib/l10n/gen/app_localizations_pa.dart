@@ -1533,4 +1533,128 @@ class AppLocalizationsPa extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'ਭਾਰਤ ਚੰਨ ਉੱਤੇ ਸੁਰੱਖਿਅਤ ਉਤਰਨ ਵਾਲਾ ਚੌਥਾ ਦੇਸ਼ ਬਣਿਆ, ਅਤੇ ਦੱਖਣੀ ਧਰੁਵ ਦੇ ਨੇੜੇ ਉਤਰਨ ਵਾਲਾ ਪਹਿਲਾ। ਵਿਕਰਮ ਲੈਂਡਰ ਆਪਣੇ ਨਾਲ ਪ੍ਰਗਿਆਨ ਰੋਵਰ ਲੈ ਗਿਆ ਸੀ।';
+
+  @override
+  String get spacecraftTitle => 'ਪੁਲਾੜ ਯਾਨ ਹੁਣ';
+
+  @override
+  String get spacecraftSubtitle =>
+      'ਕੁਝ ਮਸ਼ਹੂਰ ਪੁਲਾੜ ਯਾਨ ਇਸ ਵੇਲੇ ਧਰਤੀ ਤੋਂ ਕਿੰਨੇ ਦੂਰ ਹਨ।';
+
+  @override
+  String get spacecraftCardHint => 'ਵੋਇਜਰ, JWST, ਮੰਗਲ ਦੇ ਰੋਵਰ ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ';
+
+  @override
+  String get spacecraftDistance => 'ਧਰਤੀ ਤੋਂ ਦੂਰੀ';
+
+  @override
+  String get spacecraftAltitude => 'ਧਰਤੀ ਤੋਂ ਉਚਾਈ';
+
+  @override
+  String get spacecraftInAu => 'ਖਗੋਲੀ ਇਕਾਈ ਵਿੱਚ';
+
+  @override
+  String get spacecraftSpeed => 'ਰਫ਼ਤਾਰ';
+
+  @override
+  String get spacecraftSignal => 'ਰੇਡੀਓ ਸੰਕੇਤ ਨੂੰ ਲੱਗਦਾ ਹੈ';
+
+  @override
+  String get spacecraftNote =>
+      'ਦੂਰੀਆਂ ਅੰਦਾਜ਼ੇ ਹਨ। ਦੂਰ ਦੇ ਯਾਨਾਂ ਲਈ ਇਹ ਔਸਤ ਰਫ਼ਤਾਰ ਤੋਂ ਕੱਢੀਆਂ ਗਈਆਂ ਹਨ ਅਤੇ ਧਰਤੀ ਦੇ ਸੂਰਜ ਦੁਆਲੇ ਘੁੰਮਣ ਕਰਕੇ ਲਗਭਗ 1% ਤੱਕ ਗਲਤ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਮੰਗਲ ਦੀ ਦੂਰੀ ਅੱਜ ਲਈ ਗਿਣੀ ਗਈ ਹੈ। ਇੱਕ AU (ਖਗੋਲੀ ਇਕਾਈ) ਧਰਤੀ ਤੋਂ ਸੂਰਜ ਦੀ ਦੂਰੀ ਹੈ।';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value ਅਰਬ ਕਿਮੀ';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value ਕਿਮੀ/ਸਕਿੰਟ';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      '1977 ਵਿੱਚ ਛੱਡਿਆ ਗਿਆ। 2012 ਵਿੱਚ ਇਹ ਤਾਰਿਆਂ ਵਿਚਕਾਰਲੇ ਪੁਲਾੜ ਵਿੱਚ ਪਹੁੰਚਣ ਵਾਲਾ ਪਹਿਲਾ ਯਾਨ ਬਣਿਆ। ਇਸ ਦਾ ਰੇਡੀਓ ਸੰਕੇਤ ਸਾਡੇ ਤੱਕ ਪਹੁੰਚਦਿਆਂ ਲਗਭਗ ਇੱਕ ਦਿਨ ਪੁਰਾਣਾ ਹੋ ਚੁੱਕਾ ਹੁੰਦਾ ਹੈ।';
+
+  @override
+  String get spacecraftVoyager2 =>
+      '1977 ਵਿੱਚ ਛੱਡਿਆ ਗਿਆ। ਇਹ ਇਕੱਲਾ ਯਾਨ ਹੈ ਜੋ ਯੂਰੇਨਸ ਅਤੇ ਨੈਪਚਿਊਨ ਤੱਕ ਗਿਆ, ਅਤੇ 2018 ਵਿੱਚ ਤਾਰਿਆਂ ਵਿਚਕਾਰਲੇ ਪੁਲਾੜ ਵਿੱਚ ਪਹੁੰਚਿਆ।';
+
+  @override
+  String get spacecraftNewHorizons =>
+      '2015 ਵਿੱਚ ਪਲੂਟੋ ਕੋਲੋਂ ਅਤੇ 2019 ਵਿੱਚ ਕੁਇਪਰ ਪੱਟੀ ਦੀ ਵਸਤੂ ਅਰੋਕੋਥ ਕੋਲੋਂ ਲੰਘਿਆ। ਇਹ ਹਾਲੇ ਵੀ ਬਾਹਰ ਵੱਲ ਵਧ ਰਿਹਾ ਹੈ ਅਤੇ ਹਾਲੇ ਵੀ ਡੇਟਾ ਭੇਜ ਰਿਹਾ ਹੈ।';
+
+  @override
+  String get spacecraftJwst =>
+      'ਸਭ ਤੋਂ ਵੱਡੀ ਪੁਲਾੜ ਦੂਰਬੀਨ, 2021 ਵਿੱਚ ਛੱਡੀ ਗਈ। ਇਹ L2 ਨਾਂ ਦੇ ਬਿੰਦੂ ਕੋਲ, ਧਰਤੀ ਤੋਂ ਲਗਭਗ 15 ਲੱਖ ਕਿਮੀ ਦੂਰ ਹੈ, ਅਤੇ ਇਸ ਦੀ ਸੂਰਜ-ਢਾਲ ਹਮੇਸ਼ਾ ਸੂਰਜ ਵੱਲ ਰਹਿੰਦੀ ਹੈ।';
+
+  @override
+  String get spacecraftIss =>
+      'ਲਗਭਗ ਹਰ 90 ਮਿੰਟ ਵਿੱਚ ਧਰਤੀ ਦਾ ਇੱਕ ਚੱਕਰ ਲਾਉਂਦਾ ਹੈ। 2000 ਤੋਂ ਇਸ ਵਿੱਚ ਲੋਕ ਬਿਨਾਂ ਰੁਕੇ ਰਹਿ ਰਹੇ ਹਨ।';
+
+  @override
+  String get spacecraftHubble =>
+      '1990 ਵਿੱਚ ਛੱਡਿਆ ਗਿਆ ਅਤੇ ਹਾਲੇ ਵੀ ਕੰਮ ਕਰ ਰਿਹਾ ਹੈ। ਇਹ ਤਸਵੀਰਾਂ ਧੁੰਦਲੀਆਂ ਕਰਨ ਵਾਲੀ ਹਵਾ ਤੋਂ ਉੱਪਰ ਧਰਤੀ ਦੁਆਲੇ ਘੁੰਮਦਾ ਹੈ, ਇਸ ਲਈ ਇਸ ਦੀਆਂ ਤਸਵੀਰਾਂ ਬਹੁਤ ਸਾਫ਼ ਹੁੰਦੀਆਂ ਹਨ।';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'ਕਿਊਰੀਓਸਿਟੀ (2012 ਵਿੱਚ ਉਤਰਿਆ) ਅਤੇ ਪਰਸੀਵਰੈਂਸ (2021 ਵਿੱਚ ਉਤਰਿਆ) ਮੰਗਲ ਉੱਤੇ ਚੱਲ ਰਹੇ ਹਨ। ਮੰਗਲ ਦੀ ਦੂਰੀ ਲਗਭਗ 5.5 ਕਰੋੜ ਕਿਮੀ ਤੋਂ ਬਦਲ ਕੇ 40 ਕਰੋੜ ਕਿਮੀ ਤੋਂ ਵੀ ਵੱਧ ਹੋ ਜਾਂਦੀ ਹੈ।';
+
+  @override
+  String get searchTooltip => 'ਖੋਜੋ';
+
+  @override
+  String get searchHint => 'ਗ੍ਰਹਿ, ਚੰਦਰਮਾ, ਮਿਸ਼ਨ ਖੋਜੋ…';
+
+  @override
+  String get searchClear => 'ਮਿਟਾਓ';
+
+  @override
+  String searchEmpty(String query) {
+    return '“$query” ਲਈ ਕੁਝ ਨਹੀਂ ਮਿਲਿਆ।';
+  }
+
+  @override
+  String get searchBodies => 'ਗ੍ਰਹਿ ਅਤੇ ਚੰਦਰਮਾ';
+
+  @override
+  String get searchMissions => 'ਮਿਸ਼ਨ';
+
+  @override
+  String get searchSpacecraft => 'ਪੁਲਾੜ ਯਾਨ';
+
+  @override
+  String get favoritesTitle => 'ਪਸੰਦੀਦਾ';
+
+  @override
+  String get favoritesEmpty =>
+      'ਕਿਸੇ ਗ੍ਰਹਿ, ਮਿਸ਼ਨ ਜਾਂ ਪੁਲਾੜ ਯਾਨ ਉੱਤੇ ਤਾਰੇ ਨੂੰ ਦਬਾਓ, ਉਹ ਇੱਥੇ ਰਹੇਗਾ।';
+
+  @override
+  String get favoriteAdd => 'ਪਸੰਦੀਦਾ ਵਿੱਚ ਜੋੜੋ';
+
+  @override
+  String get favoriteRemove => 'ਪਸੰਦੀਦਾ ਵਿੱਚੋਂ ਹਟਾਓ';
+
+  @override
+  String get textSize => 'ਅੱਖਰਾਂ ਦਾ ਆਕਾਰ';
+
+  @override
+  String get textSizeNormal => 'ਆਮ';
+
+  @override
+  String get textSizeLarge => 'ਵੱਡਾ';
+
+  @override
+  String get textSizeLarger => 'ਹੋਰ ਵੱਡਾ';
+
+  @override
+  String get textSizeNote =>
+      'Heliora ਦੇ ਅੱਖਰ ਵੱਡੇ ਕਰਦਾ ਹੈ। ਇਹ ਤੁਹਾਡੇ ਫ਼ੋਨ ਦੇ ਆਪਣੇ ਅੱਖਰ-ਆਕਾਰ ਤੋਂ ਕਦੇ ਛੋਟਾ ਨਹੀਂ ਹੁੰਦਾ।';
 }

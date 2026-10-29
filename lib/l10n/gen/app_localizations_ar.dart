@@ -1522,4 +1522,128 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'أصبحت الهند الدولة الرابعة التي تهبط بسلام على القمر، والأولى قرب قطبه الجنوبي. وحمل الهابط فيكرام المركبة الجوالة براغيان.';
+
+  @override
+  String get spacecraftTitle => 'المركبات الفضائية الآن';
+
+  @override
+  String get spacecraftSubtitle =>
+      'كم تبعد بعض المركبات الفضائية المشهورة عن الأرض في هذه اللحظة.';
+
+  @override
+  String get spacecraftCardHint => 'فويجر وJWST ومركبات المريخ وغيرها';
+
+  @override
+  String get spacecraftDistance => 'البعد عن الأرض';
+
+  @override
+  String get spacecraftAltitude => 'الارتفاع عن الأرض';
+
+  @override
+  String get spacecraftInAu => 'بالوحدة الفلكية';
+
+  @override
+  String get spacecraftSpeed => 'السرعة';
+
+  @override
+  String get spacecraftSignal => 'تستغرق الإشارة اللاسلكية';
+
+  @override
+  String get spacecraftNote =>
+      'المسافات تقديرية. بالنسبة للمسابر البعيدة تُحسب من متوسط السرعة وقد تخطئ بنحو 1% لأن الأرض تدور حول الشمس. أما مسافة المريخ فمحسوبة لليوم. الوحدة الفلكية (AU) هي المسافة من الأرض إلى الشمس.';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value مليار كم';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value وحدة فلكية';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value كم/ث';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      'أُطلقت عام 1977. وفي عام 2012 صارت أول مركبة تدخل الفضاء بين النجوم. تصل إشارتها اللاسلكية إلينا وقد مرّ عليها نحو يوم.';
+
+  @override
+  String get spacecraftVoyager2 =>
+      'أُطلقت عام 1977. وهي المركبة الوحيدة التي زارت أورانوس ونبتون، ودخلت الفضاء بين النجوم عام 2018.';
+
+  @override
+  String get spacecraftNewHorizons =>
+      'مرّت قرب بلوتو عام 2015 وقرب جرم حزام كايبر أروكوث عام 2019. ما زالت تتجه إلى الخارج وما زالت ترسل البيانات.';
+
+  @override
+  String get spacecraftJwst =>
+      'أكبر تلسكوب فضائي، أُطلق عام 2021. يقع قرب نقطة تسمى L2 على بعد نحو 1.5 مليون كم من الأرض، ودرعه الواقي يواجه الشمس دائمًا.';
+
+  @override
+  String get spacecraftIss =>
+      'تدور حول الأرض مرة كل 90 دقيقة تقريبًا. ويعيش على متنها أشخاص دون انقطاع منذ عام 2000.';
+
+  @override
+  String get spacecraftHubble =>
+      'أُطلق عام 1990 وما زال يعمل. يدور حول الأرض فوق الهواء الذي يشوّش الصور، لذلك تأتي صوره شديدة الوضوح.';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'كيوريوسيتي (هبطت عام 2012) وبيرسيفيرنس (هبطت عام 2021) تتجولان على المريخ. تتغير المسافة إلى المريخ من نحو 55 مليون كم إلى أكثر من 400 مليون كم.';
+
+  @override
+  String get searchTooltip => 'بحث';
+
+  @override
+  String get searchHint => 'ابحث عن كوكب أو قمر أو مهمة…';
+
+  @override
+  String get searchClear => 'مسح';
+
+  @override
+  String searchEmpty(String query) {
+    return 'لا نتائج لـ “$query”.';
+  }
+
+  @override
+  String get searchBodies => 'الكواكب والأقمار';
+
+  @override
+  String get searchMissions => 'المهمات';
+
+  @override
+  String get searchSpacecraft => 'المركبات الفضائية';
+
+  @override
+  String get favoritesTitle => 'المفضلة';
+
+  @override
+  String get favoritesEmpty =>
+      'اضغط على النجمة في كوكب أو مهمة أو مركبة ليبقى هنا.';
+
+  @override
+  String get favoriteAdd => 'أضف إلى المفضلة';
+
+  @override
+  String get favoriteRemove => 'أزل من المفضلة';
+
+  @override
+  String get textSize => 'حجم النص';
+
+  @override
+  String get textSizeNormal => 'عادي';
+
+  @override
+  String get textSizeLarge => 'كبير';
+
+  @override
+  String get textSizeLarger => 'أكبر';
+
+  @override
+  String get textSizeNote =>
+      'يكبّر النص في Heliora. ولا يصغر أبدًا عن حجم النص الخاص بهاتفك.';
 }

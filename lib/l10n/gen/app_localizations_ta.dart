@@ -1541,4 +1541,129 @@ class AppLocalizationsTa extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'நிலவில் பாதுகாப்பாக இறங்கிய நான்காவது நாடாக இந்தியா ஆனது, தென் துருவம் அருகே இறங்கிய முதல் நாடும். விக்ரம் லேண்டர் பிரக்யான் ரோவரைச் சுமந்து சென்றது.';
+
+  @override
+  String get spacecraftTitle => 'விண்கலங்கள் இப்போது';
+
+  @override
+  String get spacecraftSubtitle =>
+      'சில புகழ்பெற்ற விண்கலங்கள் இப்போது பூமியிலிருந்து எவ்வளவு தொலைவில் உள்ளன.';
+
+  @override
+  String get spacecraftCardHint =>
+      'வாயேஜர், JWST, செவ்வாய் ரோவர்கள் மற்றும் பல';
+
+  @override
+  String get spacecraftDistance => 'பூமியிலிருந்து தொலைவு';
+
+  @override
+  String get spacecraftAltitude => 'பூமியிலிருந்து உயரம்';
+
+  @override
+  String get spacecraftInAu => 'வானியல் அலகில்';
+
+  @override
+  String get spacecraftSpeed => 'வேகம்';
+
+  @override
+  String get spacecraftSignal => 'ரேடியோ சமிக்ஞைக்கு ஆகும் நேரம்';
+
+  @override
+  String get spacecraftNote =>
+      'தொலைவுகள் மதிப்பீடுகள். தொலைதூர விண்கலங்களுக்கு இவை சராசரி வேகத்திலிருந்து கணக்கிடப்பட்டவை; பூமி சூரியனைச் சுற்றுவதால் சுமார் 1% வரை தவறாக இருக்கலாம். செவ்வாய்க்கான தொலைவு இன்றைக்குக் கணக்கிடப்பட்டது. ஒரு AU (வானியல் அலகு) என்பது பூமியிலிருந்து சூரியனுக்கான தொலைவு.';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value பில்லியன் கி.மீ';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value கி.மீ/வி';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      '1977-இல் ஏவப்பட்டது. 2012-இல் விண்மீன்களுக்கு இடையிலான விண்வெளிக்குள் நுழைந்த முதல் விண்கலமானது. இதன் ரேடியோ சமிக்ஞை நம்மை அடையும்போது ஏறக்குறைய ஒரு நாள் பழையதாகியிருக்கும்.';
+
+  @override
+  String get spacecraftVoyager2 =>
+      '1977-இல் ஏவப்பட்டது. யுரேனஸ், நெப்டியூன் இரண்டுக்கும் சென்ற ஒரே விண்கலம் இதுதான்; 2018-இல் விண்மீன்களுக்கு இடையிலான விண்வெளிக்குள் நுழைந்தது.';
+
+  @override
+  String get spacecraftNewHorizons =>
+      '2015-இல் புளூட்டோவையும் 2019-இல் கைப்பர் பட்டையிலுள்ள அரோகோத்தையும் கடந்து சென்றது. இன்னும் வெளிநோக்கிப் பயணித்து, இன்னும் தரவுகளை அனுப்புகிறது.';
+
+  @override
+  String get spacecraftJwst =>
+      'மிகப் பெரிய விண்வெளி தொலைநோக்கி, 2021-இல் ஏவப்பட்டது. இது L2 என்ற புள்ளிக்கு அருகில், பூமியிலிருந்து சுமார் 15 லட்சம் கி.மீ தொலைவில் உள்ளது; இதன் சூரியக் கவசம் எப்போதும் சூரியனை நோக்கியிருக்கும்.';
+
+  @override
+  String get spacecraftIss =>
+      'ஏறக்குறைய ஒவ்வொரு 90 நிமிடத்துக்கும் பூமியை ஒரு முறை சுற்றுகிறது. 2000 முதல் இதில் மனிதர்கள் இடைவிடாமல் வசித்து வருகிறார்கள்.';
+
+  @override
+  String get spacecraftHubble =>
+      '1990-இல் ஏவப்பட்டு இன்னும் செயல்படுகிறது. படத்தை மங்கச் செய்யும் காற்றுக்கு மேலே பூமியைச் சுற்றுவதால் இதன் படங்கள் மிகத் தெளிவானவை.';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'கியூரியாசிட்டி (2012-இல் இறங்கியது), பெர்சிவியரன்ஸ் (2021-இல் இறங்கியது) இரண்டும் செவ்வாயில் ஓடிக்கொண்டிருக்கின்றன. செவ்வாய்க்கான தொலைவு சுமார் 5.5 கோடி கி.மீ முதல் 40 கோடி கி.மீக்கும் மேல் வரை மாறுகிறது.';
+
+  @override
+  String get searchTooltip => 'தேடு';
+
+  @override
+  String get searchHint => 'கோள்கள், நிலவுகள், பயணங்களைத் தேடுங்கள்…';
+
+  @override
+  String get searchClear => 'அழி';
+
+  @override
+  String searchEmpty(String query) {
+    return '“$query” க்கு எதுவும் கிடைக்கவில்லை.';
+  }
+
+  @override
+  String get searchBodies => 'கோள்களும் நிலவுகளும்';
+
+  @override
+  String get searchMissions => 'பயணங்கள்';
+
+  @override
+  String get searchSpacecraft => 'விண்கலங்கள்';
+
+  @override
+  String get favoritesTitle => 'பிடித்தவை';
+
+  @override
+  String get favoritesEmpty =>
+      'ஒரு கோள், பயணம் அல்லது விண்கலத்தில் உள்ள நட்சத்திரத்தைத் தொடுங்கள்; அது இங்கே இருக்கும்.';
+
+  @override
+  String get favoriteAdd => 'பிடித்தவையில் சேர்';
+
+  @override
+  String get favoriteRemove => 'பிடித்தவையிலிருந்து நீக்கு';
+
+  @override
+  String get textSize => 'எழுத்து அளவு';
+
+  @override
+  String get textSizeNormal => 'இயல்பு';
+
+  @override
+  String get textSizeLarge => 'பெரியது';
+
+  @override
+  String get textSizeLarger => 'இன்னும் பெரியது';
+
+  @override
+  String get textSizeNote =>
+      'Heliora-வின் எழுத்துகளைப் பெரிதாக்குகிறது. உங்கள் தொலைபேசியின் சொந்த எழுத்து அளவுக்குக் கீழே இது ஒருபோதும் செல்லாது.';
 }

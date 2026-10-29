@@ -1530,4 +1530,128 @@ class AppLocalizationsUr extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'بھارت چاند پر آرام سے اترنے والا چوتھا ملک بنا، اور جنوبی قطب کے قریب اترنے والا پہلا۔ وکرم لینڈر اپنے ساتھ پرگیان روور لے گیا تھا۔';
+
+  @override
+  String get spacecraftTitle => 'خلائی جہاز ابھی';
+
+  @override
+  String get spacecraftSubtitle =>
+      'کچھ مشہور خلائی جہاز اس وقت زمین سے کتنی دور ہیں۔';
+
+  @override
+  String get spacecraftCardHint => 'وائجر، JWST، مریخ کے روور اور بہت کچھ';
+
+  @override
+  String get spacecraftDistance => 'زمین سے فاصلہ';
+
+  @override
+  String get spacecraftAltitude => 'زمین سے اونچائی';
+
+  @override
+  String get spacecraftInAu => 'فلکیاتی اکائی میں';
+
+  @override
+  String get spacecraftSpeed => 'رفتار';
+
+  @override
+  String get spacecraftSignal => 'ریڈیو سگنل کو لگتا ہے';
+
+  @override
+  String get spacecraftNote =>
+      'فاصلے اندازے ہیں۔ دور کے جہازوں کے لیے یہ اوسط رفتار سے نکالے گئے ہیں اور زمین کے سورج کے گرد گھومنے کی وجہ سے تقریباً 1% تک غلط ہو سکتے ہیں۔ مریخ کا فاصلہ آج کے لیے نکالا گیا ہے۔ ایک AU (فلکیاتی اکائی) زمین سے سورج کا فاصلہ ہے۔';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value ارب کلومیٹر';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value کلومیٹر/سیکنڈ';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      '1977 میں روانہ کیا گیا۔ 2012 میں یہ ستاروں کے درمیان کی خلا میں داخل ہونے والا پہلا جہاز بنا۔ اس کا ریڈیو سگنل ہم تک پہنچتے پہنچتے تقریباً ایک دن پرانا ہو چکا ہوتا ہے۔';
+
+  @override
+  String get spacecraftVoyager2 =>
+      '1977 میں روانہ کیا گیا۔ یہ واحد جہاز ہے جو یورینس اور نیپچون تک گیا، اور 2018 میں ستاروں کے درمیان کی خلا میں داخل ہوا۔';
+
+  @override
+  String get spacecraftNewHorizons =>
+      '2015 میں پلوٹو کے پاس سے اور 2019 میں کوئپر پٹی کے جسم اروکوتھ کے پاس سے گزرا۔ یہ اب بھی باہر کی طرف جا رہا ہے اور اب بھی ڈیٹا بھیج رہا ہے۔';
+
+  @override
+  String get spacecraftJwst =>
+      'سب سے بڑی خلائی دوربین، 2021 میں روانہ کی گئی۔ یہ L2 نامی مقام کے قریب، زمین سے تقریباً 15 لاکھ کلومیٹر دور ہے، اور اس کی دھوپ کی ڈھال ہمیشہ سورج کی طرف رہتی ہے۔';
+
+  @override
+  String get spacecraftIss =>
+      'تقریباً ہر 90 منٹ میں زمین کا ایک چکر لگاتا ہے۔ 2000 سے اس میں لوگ بغیر وقفے کے رہ رہے ہیں۔';
+
+  @override
+  String get spacecraftHubble =>
+      '1990 میں روانہ کیا گیا اور اب بھی کام کر رہا ہے۔ یہ تصویر دھندلی کرنے والی ہوا کے اوپر زمین کے گرد گھومتا ہے، اس لیے اس کی تصویریں بہت صاف ہوتی ہیں۔';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'کیوریوسٹی (2012 میں اترا) اور پرسیویرنس (2021 میں اترا) مریخ پر چل رہے ہیں۔ مریخ کا فاصلہ تقریباً 5.5 کروڑ کلومیٹر سے بدل کر 40 کروڑ کلومیٹر سے بھی زیادہ ہو جاتا ہے۔';
+
+  @override
+  String get searchTooltip => 'تلاش کریں';
+
+  @override
+  String get searchHint => 'سیارے، چاند، مشن تلاش کریں…';
+
+  @override
+  String get searchClear => 'صاف کریں';
+
+  @override
+  String searchEmpty(String query) {
+    return '“$query” کے لیے کچھ نہیں ملا۔';
+  }
+
+  @override
+  String get searchBodies => 'سیارے اور چاند';
+
+  @override
+  String get searchMissions => 'مشن';
+
+  @override
+  String get searchSpacecraft => 'خلائی جہاز';
+
+  @override
+  String get favoritesTitle => 'پسندیدہ';
+
+  @override
+  String get favoritesEmpty =>
+      'کسی سیارے، مشن یا خلائی جہاز پر ستارے کو دبائیں، وہ یہاں رہے گا۔';
+
+  @override
+  String get favoriteAdd => 'پسندیدہ میں شامل کریں';
+
+  @override
+  String get favoriteRemove => 'پسندیدہ سے ہٹائیں';
+
+  @override
+  String get textSize => 'تحریر کا سائز';
+
+  @override
+  String get textSizeNormal => 'عام';
+
+  @override
+  String get textSizeLarge => 'بڑا';
+
+  @override
+  String get textSizeLarger => 'اور بڑا';
+
+  @override
+  String get textSizeNote =>
+      'Heliora کی تحریر بڑی کر دیتا ہے۔ یہ آپ کے فون کے اپنے تحریری سائز سے کبھی چھوٹا نہیں ہوتا۔';
 }

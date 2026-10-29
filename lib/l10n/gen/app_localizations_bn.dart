@@ -1527,4 +1527,129 @@ class AppLocalizationsBn extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'ভারত চাঁদে নিরাপদে নামা চতুর্থ দেশ হলো, এবং দক্ষিণ মেরুর কাছে নামা প্রথম। বিক্রম ল্যান্ডার সঙ্গে নিয়ে গিয়েছিল প্রজ্ঞান রোভার।';
+
+  @override
+  String get spacecraftTitle => 'মহাকাশযান এখন';
+
+  @override
+  String get spacecraftSubtitle =>
+      'কিছু বিখ্যাত মহাকাশযান এই মুহূর্তে পৃথিবী থেকে কত দূরে।';
+
+  @override
+  String get spacecraftCardHint =>
+      'ভয়েজার, JWST, মঙ্গলের রোভার আর আরও অনেক কিছু';
+
+  @override
+  String get spacecraftDistance => 'পৃথিবী থেকে দূরত্ব';
+
+  @override
+  String get spacecraftAltitude => 'পৃথিবী থেকে উচ্চতা';
+
+  @override
+  String get spacecraftInAu => 'জ্যোতির্বিজ্ঞান একক-এ';
+
+  @override
+  String get spacecraftSpeed => 'গতি';
+
+  @override
+  String get spacecraftSignal => 'রেডিও সংকেতের লাগে';
+
+  @override
+  String get spacecraftNote =>
+      'দূরত্বগুলো আনুমানিক। দূরের যানগুলোর ক্ষেত্রে এগুলো গড় গতি থেকে হিসাব করা, আর পৃথিবী সূর্যকে ঘিরে ঘোরে বলে প্রায় ১% ভুল হতে পারে। মঙ্গলের দূরত্ব আজকের জন্য হিসাব করা। এক AU (জ্যোতির্বিজ্ঞান একক) হলো পৃথিবী থেকে সূর্যের দূরত্ব।';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value বিলিয়ন কিমি';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value কিমি/সেকেন্ড';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      '১৯৭৭ সালে ছাড়া হয়েছিল। ২০১২ সালে এটি নক্ষত্রের মধ্যবর্তী মহাকাশে পৌঁছানো প্রথম মহাকাশযান হয়। এর রেডিও সংকেত আমাদের কাছে পৌঁছাতে পৌঁছাতে প্রায় এক দিন পুরোনো হয়ে যায়।';
+
+  @override
+  String get spacecraftVoyager2 =>
+      '১৯৭৭ সালে ছাড়া হয়েছিল। ইউরেনাস আর নেপচুনে পৌঁছানো এটিই একমাত্র মহাকাশযান, আর ২০১৮ সালে এটি নক্ষত্রের মধ্যবর্তী মহাকাশে পৌঁছায়।';
+
+  @override
+  String get spacecraftNewHorizons =>
+      '২০১৫ সালে প্লুটোর পাশ দিয়ে এবং ২০১৯ সালে কুইপার বেল্টের বস্তু অ্যারোকোথের পাশ দিয়ে গেছে। এখনও বাইরের দিকে এগোচ্ছে আর তথ্য পাঠাচ্ছে।';
+
+  @override
+  String get spacecraftJwst =>
+      'সবচেয়ে বড় মহাকাশ টেলিস্কোপ, ২০২১ সালে ছাড়া হয়েছে। এটি L2 নামের একটি বিন্দুর কাছে, পৃথিবী থেকে প্রায় ১৫ লক্ষ কিমি দূরে থাকে, আর এর সূর্যঢাল সবসময় সূর্যের দিকে ফেরানো।';
+
+  @override
+  String get spacecraftIss =>
+      'প্রায় প্রতি ৯০ মিনিটে পৃথিবীকে একবার ঘোরে। ২০০০ সাল থেকে এতে মানুষ বিরতিহীনভাবে বাস করছে।';
+
+  @override
+  String get spacecraftHubble =>
+      '১৯৯০ সালে ছাড়া হয়েছে আর এখনও কাজ করছে। ঝাপসা করা বাতাসের ওপর দিয়ে পৃথিবীকে ঘোরে, তাই এর ছবি খুব স্পষ্ট।';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'কিউরিওসিটি (২০১২ সালে নেমেছে) আর পারসিভিয়ারেন্স (২০২১ সালে নেমেছে) মঙ্গলে চলছে। মঙ্গলের দূরত্ব প্রায় ৫ কোটি ৫০ লক্ষ কিমি থেকে বদলে ৪০ কোটি কিমির বেশি হয়ে যায়।';
+
+  @override
+  String get searchTooltip => 'খুঁজুন';
+
+  @override
+  String get searchHint => 'গ্রহ, চাঁদ, অভিযান খুঁজুন…';
+
+  @override
+  String get searchClear => 'মুছুন';
+
+  @override
+  String searchEmpty(String query) {
+    return '“$query”-এর জন্য কিছু পাওয়া যায়নি।';
+  }
+
+  @override
+  String get searchBodies => 'গ্রহ ও চাঁদ';
+
+  @override
+  String get searchMissions => 'অভিযান';
+
+  @override
+  String get searchSpacecraft => 'মহাকাশযান';
+
+  @override
+  String get favoritesTitle => 'প্রিয়';
+
+  @override
+  String get favoritesEmpty =>
+      'কোনো গ্রহ, অভিযান বা মহাকাশযানের তারায় চাপ দিন, সেটি এখানে থাকবে।';
+
+  @override
+  String get favoriteAdd => 'প্রিয়তে যোগ করুন';
+
+  @override
+  String get favoriteRemove => 'প্রিয় থেকে সরান';
+
+  @override
+  String get textSize => 'লেখার আকার';
+
+  @override
+  String get textSizeNormal => 'সাধারণ';
+
+  @override
+  String get textSizeLarge => 'বড়';
+
+  @override
+  String get textSizeLarger => 'আরও বড়';
+
+  @override
+  String get textSizeNote =>
+      'Heliora-র লেখা বড় করে। এটি কখনও আপনার ফোনের নিজের লেখার আকারের চেয়ে ছোট হয় না।';
 }

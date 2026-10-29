@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/version.dart';
+import '../data/favorites.dart';
 import '../data/native_bridge.dart';
 import '../data/online_service.dart';
 import 'online_state.dart';
@@ -109,6 +110,17 @@ class AppState extends ChangeNotifier {
   /// Sets when the daily note is shown, in minutes after midnight.
   Future<void> setTonightMinutes(int minutes) =>
       _update(_settings.copyWith(tonightMinutes: minutes));
+
+  /// Whether [key] (see favorites.dart) is starred.
+  bool isFavorite(String key) => _settings.favorites.contains(key);
+
+  /// Stars or un-stars [key].
+  Future<void> toggleFavorite(String key) => _update(_settings.copyWith(
+      favorites: toggledFavorite(_settings.favorites, key)));
+
+  /// Sets the text size in percent (one of [textScaleChoices]).
+  Future<void> setTextScale(int percent) =>
+      _update(_settings.copyWith(textScalePercent: percent));
 
   /// Forgets reminders that are over. Only reminders for which [inScope] is
   /// true are looked at; those not in [valid] are dropped.

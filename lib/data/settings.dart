@@ -8,6 +8,10 @@ import 'native_bridge.dart';
 /// Which solar-system view the Explore tab shows.
 enum ViewMode { flat, globe }
 
+/// The text sizes offered in Settings, in percent. Larger sizes would break
+/// the fixed layouts of some screens, so 130 is the limit.
+const List<int> textScaleChoices = <int>[100, 115, 130];
+
 /// Everything Heliora remembers. Stored as one small JSON file in the app's
 /// private folder, which Android keeps when the app is updated.
 @immutable
@@ -26,6 +30,8 @@ class HelioraSettings {
     this.quizBests = const <String, int>{},
     this.tonightAlert = false,
     this.tonightMinutes = 1200,
+    this.favorites = const <String>[],
+    this.textScalePercent = 100,
   });
 
   final ThemeMode themeMode;
@@ -61,6 +67,13 @@ class HelioraSettings {
   /// When that note is shown, in minutes after midnight (1200 = 20:00).
   final int tonightMinutes;
 
+  /// Keys of the planets, missions and spacecraft the user starred (see
+  /// favorites.dart).
+  final List<String> favorites;
+
+  /// Text size chosen in Settings, in percent: 100, 115 or 130.
+  final int textScalePercent;
+
   /// The best score of a quiz level, 0 when not played yet.
   int bestFor(String level) {
     final saved = quizBests[level];
@@ -88,6 +101,8 @@ class HelioraSettings {
     Map<String, int>? quizBests,
     bool? tonightAlert,
     int? tonightMinutes,
+    List<String>? favorites,
+    int? textScalePercent,
   }) {
     return HelioraSettings(
       themeMode: themeMode ?? this.themeMode,
@@ -103,6 +118,8 @@ class HelioraSettings {
       quizBests: quizBests ?? this.quizBests,
       tonightAlert: tonightAlert ?? this.tonightAlert,
       tonightMinutes: tonightMinutes ?? this.tonightMinutes,
+      favorites: favorites ?? this.favorites,
+      textScalePercent: textScalePercent ?? this.textScalePercent,
     );
   }
 
@@ -122,6 +139,8 @@ class HelioraSettings {
       'quizBests': quizBests,
       'tonightAlert': tonightAlert,
       'tonightMinutes': tonightMinutes,
+      'favorites': favorites,
+      'textScale': textScalePercent,
     };
   }
 
@@ -152,6 +171,8 @@ class HelioraSettings {
     final bests = json['quizBests'];
     final alert = json['tonightAlert'];
     final minutes = json['tonightMinutes'];
+    final favs = json['favorites'];
+    final scale = json['textScale'];
     return HelioraSettings(
       themeMode: theme,
       localeCode: locale is String ? locale : d.localeCode,
@@ -175,6 +196,11 @@ class HelioraSettings {
       tonightMinutes: minutes is int && minutes >= 0 && minutes < 1440
           ? minutes
           : d.tonightMinutes,
+      favorites: favs is List
+          ? <String>[for (final f in favs) if (f is String) f]
+          : d.favorites,
+      textScalePercent:
+          scale is int && textScaleChoices.contains(scale) ? scale : d.textScalePercent,
     );
   }
 }

@@ -16,6 +16,7 @@ import 'events_screen.dart';
 import 'finder_screen.dart';
 import 'iss_screen.dart';
 import 'missions_screen.dart';
+import 'spacecraft_screen.dart';
 
 /// "Tonight's sky": the Moon's phase and which planets can be seen tonight
 /// from the chosen city, with rise and set times.
@@ -112,6 +113,8 @@ class _SkyScreenState extends State<SkyScreen> {
           const SizedBox(height: 12),
           const _MissionsCard(),
           const SizedBox(height: 12),
+          const _SpacecraftCard(),
+          const SizedBox(height: 12),
           SurfaceCard(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -149,6 +152,8 @@ class _SkyScreenState extends State<SkyScreen> {
         _IssCard(city: city),
         const SizedBox(height: 12),
         const _MissionsCard(),
+        const SizedBox(height: 12),
+        const _SpacecraftCard(),
         const SizedBox(height: 12),
         // The Moon tonight.
         SurfaceCard(
@@ -433,42 +438,48 @@ class _EventsCard extends StatelessWidget {
   }
 }
 
-/// Opens the missions timeline.
-class _MissionsCard extends StatelessWidget {
-  const _MissionsCard();
+/// A card that opens another screen.
+class _NavCard extends StatelessWidget {
+  const _NavCard({
+    required this.icon,
+    required this.title,
+    required this.hint,
+    required this.builder,
+  });
+
+  final IconData icon;
+  final String title;
+  final String hint;
+  final WidgetBuilder builder;
 
   @override
   Widget build(BuildContext context) {
-    final l = context.l10n;
     final p = Palette.of(context);
     return Semantics(
       button: true,
-      label: l.missionsTitle,
+      label: title,
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: () {
-          Navigator.of(context).push(MaterialPageRoute<void>(
-            builder: (_) => const MissionsScreen(),
-          ));
+          Navigator.of(context).push(MaterialPageRoute<void>(builder: builder));
         },
         child: SurfaceCard(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           child: Row(
             children: <Widget>[
-              Icon(Icons.timeline, color: p.accentText),
+              Icon(icon, color: p.accentText),
               const SizedBox(width: 14),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(l.missionsTitle,
+                    Text(title,
                         style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                             color: p.text)),
                     const SizedBox(height: 2),
-                    Text(l.missionsCardHint,
-                        style: TextStyle(fontSize: 13, color: p.muted)),
+                    Text(hint, style: TextStyle(fontSize: 13, color: p.muted)),
                   ],
                 ),
               ),
@@ -477,6 +488,38 @@ class _MissionsCard extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+/// Opens the missions timeline.
+class _MissionsCard extends StatelessWidget {
+  const _MissionsCard();
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    return _NavCard(
+      icon: Icons.timeline,
+      title: l.missionsTitle,
+      hint: l.missionsCardHint,
+      builder: (_) => const MissionsScreen(),
+    );
+  }
+}
+
+/// Opens "Spacecraft now".
+class _SpacecraftCard extends StatelessWidget {
+  const _SpacecraftCard();
+
+  @override
+  Widget build(BuildContext context) {
+    final l = context.l10n;
+    return _NavCard(
+      icon: Icons.rocket_launch_outlined,
+      title: l.spacecraftTitle,
+      hint: l.spacecraftCardHint,
+      builder: (_) => const SpacecraftScreen(),
     );
   }
 }

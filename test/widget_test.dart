@@ -13,7 +13,9 @@ import 'package:heliora/core/iss.dart';
 import 'package:heliora/core/orbits.dart';
 import 'package:heliora/core/sgp4.dart';
 import 'package:heliora/core/sky.dart';
+import 'package:heliora/core/spacecraft.dart';
 import 'package:heliora/data/cities.dart';
+import 'package:heliora/data/favorites.dart';
 import 'package:heliora/data/missions.dart';
 import 'package:heliora/data/tonight_alerts.dart';
 import 'package:heliora/l10n/gen/app_localizations.dart';
@@ -946,6 +948,130 @@ void main() {
         expect(m.name, isNotEmpty);
         expect(m.agency, isNotEmpty);
       }
+    });
+  });
+
+  group('spacecraft', () {
+    Spacecraft byId(String id) => spacecraft.firstWhere((c) => c.id == id);
+
+    test('are listed once each with a name', () {
+      expect(spacecraft.length, 7);
+      expect(spacecraft.map((c) => c.id).toSet().length, spacecraft.length);
+      for (final c in spacecraft) {
+        expect(c.name, isNotEmpty);
+      }
+    });
+
+    test('Voyager 1 is one light-day away on the NASA date', () {
+      final v1 = byId('voyager1');
+      final day = DateTime.utc(2026, 11, 18);
+      expect(v1.distanceAu(day), closeTo(173.14, 0.001));
+      // A light-day is 86,400 light-seconds.
+      expect(v1.signalSeconds(day), closeTo(86400, 50));
+      final later = DateTime.utc(2027, 11, 18);
+      final grown = v1.distanceAu(later) - v1.distanceAu(day);
+      expect(grown, inInclusiveRange(3.4, 3.7));
+    });
+
+    test('Voyager 2 reaches one light-day in 2035', () {
+      expect(byId('voyager2').distanceAu(DateTime.utc(2035, 11, 15)),
+          closeTo(173.14, 0.001));
+    });
+
+    test('far probes are in the right order and range today', () {
+      final now = DateTime.utc(2026, 10, 29);
+      final v1 = byId('voyager1').distanceAu(now);
+      final v2 = byId('voyager2').distanceAu(now);
+      final nh = byId('newhorizons').distanceAu(now);
+      expect(v1, inInclusiveRange(172, 174));
+      expect(v2, inInclusiveRange(140, 150));
+      expect(nh, inInclusiveRange(60, 70));
+      expect(v1 > v2 && v2 > nh, isTrue);
+    });
+
+    test('close spacecraft stay close and rovers follow Mars', () {
+      final now = DateTime.utc(2026, 10, 29);
+      expect(byId('iss').isAltitude, isTrue);
+      expect(byId('iss').distanceKm(now), lessThan(byId('hubble').distanceKm(now)));
+      expect(byId('hubble').distanceKm(now), lessThan(byId('jwst').distanceKm(now)));
+      expect(byId('jwst').signalSeconds(now), closeTo(5, 0.1));
+      for (var year = 2020; year <= 2040; year++) {
+        final km = byId('marsrovers').distanceKm(DateTime.utc(year, 6, 15));
+        expect(km, inInclusiveRange(5.4e7, 4.1e8));
+      }
+    });
+  });
+
+  group('favourites and search', () {
+    test('toggling adds, removes and keeps the order', () {
+      const list = <String>['mars'];
+      final added = toggledFavorite(list, missionKey('apollo11'));
+      expect(added, <String>['mars', 'mission:apollo11']);
+      expect(list, <String>['mars']);
+      expect(toggledFavorite(added, 'mars'), <String>['mission:apollo11']);
+      expect(craftKey('iss'), 'craft:iss');
+    });
+
+    test('the list never grows past the limit', () {
+      var list = <String>[];
+      for (var i = 0; i < maxFavorites + 5; i++) {
+        list = toggledFavorite(list, 'k$i');
+      }
+      expect(list.length, maxFavorites);
+      expect(list.last, 'k${maxFavorites + 4}');
+      expect(list.contains('k0'), isFalse);
+    });
+
+    test('text is folded for searching', () {
+      expect(foldText('  Plutón '), 'pluton');
+      expect(foldText('Земля'), 'земля');
+      expect(foldText('Ёж'), 'еж');
+      expect(foldText('Réunion'), 'reunion');
+    });
+
+    test('queries match names', () {
+      expect(matchesQuery('mer', <String>['Mercury']), isTrue);
+      expect(matchesQuery('PLUTON', <String>['Plutón']), isTrue);
+      expect(matchesQuery('voy', <String>['Voyager 1', 'NASA']), isTrue);
+      expect(matchesQuery('', <String>['Mercury']), isFalse);
+      expect(matchesQuery('   ', <String>['Mercury']), isFalse);
+      expect(matchesQuery('zzz', <String>['Mercury', 'Venus']), isFalse);
+    });
+
+    test('every planet and spacecraft can be found by its English name', () {
+      for (final b in allBodies) {
+        expect(matchesQuery(b.id, <String>[b.id]), isTrue);
+      }
+      for (final m in missions) {
+        expect(matchesQuery(m.name, <String>[m.name]), isTrue);
+      }
+    });
+
+    test('favourites and text size are saved', () {
+      const s = HelioraSettings(
+        favorites: <String>['mars', 'craft:iss'],
+        textScalePercent: 130,
+      );
+      final back = HelioraSettings.fromJson(s.toJson());
+      expect(back.favorites, <String>['mars', 'craft:iss']);
+      expect(back.textScalePercent, 130);
+    });
+
+    test('broken favourites and text size fall back', () {
+      final bad = HelioraSettings.fromJson(<String, dynamic>{
+        'favorites': <Object?>['x', 3, null],
+        'textScale': 117,
+      });
+      expect(bad.favorites, <String>['x']);
+      expect(bad.textScalePercent, 100);
+      final worse = HelioraSettings.fromJson(<String, dynamic>{
+        'favorites': 'no',
+        'textScale': 'big',
+      });
+      expect(worse.favorites, isEmpty);
+      expect(worse.textScalePercent, 100);
+      expect(HelioraSettings.fromJson(<String, dynamic>{}).textScalePercent, 100);
+      expect(textScaleChoices, <int>[100, 115, 130]);
     });
   });
 

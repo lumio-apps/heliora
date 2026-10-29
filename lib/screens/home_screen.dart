@@ -17,6 +17,7 @@ import '../widgets/orbit_view.dart';
 import 'compare_screen.dart';
 import 'planet_screen.dart';
 import 'quiz_screen.dart';
+import 'search_screen.dart';
 import 'settings_screen.dart';
 import 'sky_screen.dart';
 import 'update_dialog.dart';
@@ -248,17 +249,38 @@ class _ExploreTabState extends State<ExploreTab>
               const HelioraLogo(size: 32),
               const SizedBox(width: 10),
               Expanded(
-                child: Text(
-                  l.appTitle,
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    color: p.text,
+                // Shrinks instead of wrapping when the buttons need room.
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: AlignmentDirectional.centerStart,
+                  child: Text(
+                    l.appTitle,
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
+                      color: p.text,
+                    ),
                   ),
                 ),
               ),
               IconButton.filledTonal(
+                tooltip: l.searchTooltip,
+                visualDensity: VisualDensity.compact,
+                style: IconButton.styleFrom(
+                  backgroundColor: p.surface,
+                  foregroundColor: p.text,
+                ),
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                      builder: (_) => const SearchScreen()),
+                ),
+                icon: const Icon(Icons.search),
+              ),
+              const SizedBox(width: 4),
+              IconButton.filledTonal(
                 tooltip: l.settings,
+                visualDensity: VisualDensity.compact,
                 style: IconButton.styleFrom(
                   backgroundColor: p.surface,
                   foregroundColor: p.text,

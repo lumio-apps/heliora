@@ -2707,6 +2707,216 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'India became the fourth country to land softly on the Moon, and the first near its south pole. The Vikram lander carried the Pragyan rover.'**
   String get missionChandrayaan3;
+
+  /// No description provided for @spacecraftTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Spacecraft now'**
+  String get spacecraftTitle;
+
+  /// No description provided for @spacecraftSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'How far some famous spacecraft are from Earth right now.'**
+  String get spacecraftSubtitle;
+
+  /// No description provided for @spacecraftCardHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Voyager, JWST, Mars rovers and more'**
+  String get spacecraftCardHint;
+
+  /// No description provided for @spacecraftDistance.
+  ///
+  /// In en, this message translates to:
+  /// **'Distance from Earth'**
+  String get spacecraftDistance;
+
+  /// No description provided for @spacecraftAltitude.
+  ///
+  /// In en, this message translates to:
+  /// **'Height above Earth'**
+  String get spacecraftAltitude;
+
+  /// No description provided for @spacecraftInAu.
+  ///
+  /// In en, this message translates to:
+  /// **'In astronomical units'**
+  String get spacecraftInAu;
+
+  /// No description provided for @spacecraftSpeed.
+  ///
+  /// In en, this message translates to:
+  /// **'Speed'**
+  String get spacecraftSpeed;
+
+  /// No description provided for @spacecraftSignal.
+  ///
+  /// In en, this message translates to:
+  /// **'Radio signal takes'**
+  String get spacecraftSignal;
+
+  /// No description provided for @spacecraftNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Distances are estimates. For the far probes they are worked out from average speed and can be off by about 1%, because Earth moves round the Sun. The Mars distance is calculated for today. One AU (astronomical unit) is the distance from Earth to the Sun.'**
+  String get spacecraftNote;
+
+  /// No description provided for @valueBillionKm.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} billion km'**
+  String valueBillionKm(String value);
+
+  /// No description provided for @valueAu.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} AU'**
+  String valueAu(String value);
+
+  /// No description provided for @valueKmS.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} km/s'**
+  String valueKmS(String value);
+
+  /// No description provided for @spacecraftVoyager1.
+  ///
+  /// In en, this message translates to:
+  /// **'Launched in 1977. In 2012 it became the first spacecraft to enter interstellar space. Its radio signal is already about a day old when it reaches us.'**
+  String get spacecraftVoyager1;
+
+  /// No description provided for @spacecraftVoyager2.
+  ///
+  /// In en, this message translates to:
+  /// **'Launched in 1977. It is the only spacecraft that has visited Uranus and Neptune, and it entered interstellar space in 2018.'**
+  String get spacecraftVoyager2;
+
+  /// No description provided for @spacecraftNewHorizons.
+  ///
+  /// In en, this message translates to:
+  /// **'Flew past Pluto in 2015 and the Kuiper Belt object Arrokoth in 2019. It is still travelling outward and still sending data.'**
+  String get spacecraftNewHorizons;
+
+  /// No description provided for @spacecraftJwst.
+  ///
+  /// In en, this message translates to:
+  /// **'The largest space telescope, launched in 2021. It sits near a point called L2, about 1.5 million km from Earth, with its sunshield always facing the Sun.'**
+  String get spacecraftJwst;
+
+  /// No description provided for @spacecraftIss.
+  ///
+  /// In en, this message translates to:
+  /// **'Circles Earth about every 90 minutes. People have lived on board without a break since 2000.'**
+  String get spacecraftIss;
+
+  /// No description provided for @spacecraftHubble.
+  ///
+  /// In en, this message translates to:
+  /// **'Launched in 1990 and still working. It circles Earth above the blurring air, so its pictures are very sharp.'**
+  String get spacecraftHubble;
+
+  /// No description provided for @spacecraftMarsRovers.
+  ///
+  /// In en, this message translates to:
+  /// **'Curiosity (landed 2012) and Perseverance (landed 2021) are driving on Mars. The distance to Mars changes from about 55 million km to over 400 million km.'**
+  String get spacecraftMarsRovers;
+
+  /// No description provided for @searchTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get searchTooltip;
+
+  /// No description provided for @searchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search planets, moons, missions…'**
+  String get searchHint;
+
+  /// No description provided for @searchClear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get searchClear;
+
+  /// No description provided for @searchEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing found for “{query}”.'**
+  String searchEmpty(String query);
+
+  /// No description provided for @searchBodies.
+  ///
+  /// In en, this message translates to:
+  /// **'Planets and moons'**
+  String get searchBodies;
+
+  /// No description provided for @searchMissions.
+  ///
+  /// In en, this message translates to:
+  /// **'Missions'**
+  String get searchMissions;
+
+  /// No description provided for @searchSpacecraft.
+  ///
+  /// In en, this message translates to:
+  /// **'Spacecraft'**
+  String get searchSpacecraft;
+
+  /// No description provided for @favoritesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Favourites'**
+  String get favoritesTitle;
+
+  /// No description provided for @favoritesEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the star on a planet, mission or spacecraft to keep it here.'**
+  String get favoritesEmpty;
+
+  /// No description provided for @favoriteAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to favourites'**
+  String get favoriteAdd;
+
+  /// No description provided for @favoriteRemove.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove from favourites'**
+  String get favoriteRemove;
+
+  /// No description provided for @textSize.
+  ///
+  /// In en, this message translates to:
+  /// **'Text size'**
+  String get textSize;
+
+  /// No description provided for @textSizeNormal.
+  ///
+  /// In en, this message translates to:
+  /// **'Normal'**
+  String get textSizeNormal;
+
+  /// No description provided for @textSizeLarge.
+  ///
+  /// In en, this message translates to:
+  /// **'Large'**
+  String get textSizeLarge;
+
+  /// No description provided for @textSizeLarger.
+  ///
+  /// In en, this message translates to:
+  /// **'Larger'**
+  String get textSizeLarger;
+
+  /// No description provided for @textSizeNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Makes the text in Heliora bigger. It never goes below your phone\'s own text size.'**
+  String get textSizeNote;
 }
 
 class _AppLocalizationsDelegate

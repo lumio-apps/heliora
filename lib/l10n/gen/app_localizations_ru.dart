@@ -1535,4 +1535,128 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'Индия стала четвёртой страной, мягко севшей на Луну, и первой у её южного полюса. Посадочный модуль «Викрам» нёс ровер «Прагъян».';
+
+  @override
+  String get spacecraftTitle => 'Космические аппараты сейчас';
+
+  @override
+  String get spacecraftSubtitle =>
+      'Как далеко от Земли находятся сейчас некоторые известные космические аппараты.';
+
+  @override
+  String get spacecraftCardHint => '«Вояджеры», JWST, марсоходы и другие';
+
+  @override
+  String get spacecraftDistance => 'Расстояние до Земли';
+
+  @override
+  String get spacecraftAltitude => 'Высота над Землёй';
+
+  @override
+  String get spacecraftInAu => 'В астрономических единицах';
+
+  @override
+  String get spacecraftSpeed => 'Скорость';
+
+  @override
+  String get spacecraftSignal => 'Радиосигнал идёт';
+
+  @override
+  String get spacecraftNote =>
+      'Расстояния приблизительные. Для далёких зондов они рассчитаны по средней скорости и могут отличаться примерно на 1 %, потому что Земля движется вокруг Солнца. Расстояние до Марса рассчитано на сегодня. Одна а. е. (астрономическая единица) — это расстояние от Земли до Солнца.';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value млрд км';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value а. е.';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value км/с';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      'Запущен в 1977 году. В 2012 году стал первым аппаратом, вошедшим в межзвёздное пространство. Его радиосигнал доходит до нас уже примерно суточной давности.';
+
+  @override
+  String get spacecraftVoyager2 =>
+      'Запущен в 1977 году. Единственный аппарат, побывавший у Урана и Нептуна. В 2018 году вошёл в межзвёздное пространство.';
+
+  @override
+  String get spacecraftNewHorizons =>
+      'Пролетел мимо Плутона в 2015 году и мимо объекта пояса Койпера Аррокот в 2019 году. Он всё ещё летит наружу и всё ещё присылает данные.';
+
+  @override
+  String get spacecraftJwst =>
+      'Самый большой космический телескоп, запущен в 2021 году. Находится возле точки L2, примерно в 1,5 млн км от Земли, а его солнечный экран всегда повёрнут к Солнцу.';
+
+  @override
+  String get spacecraftIss =>
+      'Облетает Землю примерно каждые 90 минут. С 2000 года на борту без перерыва живут люди.';
+
+  @override
+  String get spacecraftHubble =>
+      'Запущен в 1990 году и всё ещё работает. Он обращается вокруг Земли выше воздуха, который размывает изображение, поэтому его снимки очень чёткие.';
+
+  @override
+  String get spacecraftMarsRovers =>
+      '«Кьюриосити» (сел в 2012 году) и «Персеверанс» (сел в 2021 году) ездят по Марсу. Расстояние до Марса меняется примерно от 55 млн км до более чем 400 млн км.';
+
+  @override
+  String get searchTooltip => 'Поиск';
+
+  @override
+  String get searchHint => 'Ищите планеты, спутники, миссии…';
+
+  @override
+  String get searchClear => 'Очистить';
+
+  @override
+  String searchEmpty(String query) {
+    return 'По запросу «$query» ничего не найдено.';
+  }
+
+  @override
+  String get searchBodies => 'Планеты и спутники';
+
+  @override
+  String get searchMissions => 'Миссии';
+
+  @override
+  String get searchSpacecraft => 'Космические аппараты';
+
+  @override
+  String get favoritesTitle => 'Избранное';
+
+  @override
+  String get favoritesEmpty =>
+      'Нажмите на звёздочку у планеты, миссии или аппарата, и он останется здесь.';
+
+  @override
+  String get favoriteAdd => 'Добавить в избранное';
+
+  @override
+  String get favoriteRemove => 'Убрать из избранного';
+
+  @override
+  String get textSize => 'Размер текста';
+
+  @override
+  String get textSizeNormal => 'Обычный';
+
+  @override
+  String get textSizeLarge => 'Крупный';
+
+  @override
+  String get textSizeLarger => 'Ещё крупнее';
+
+  @override
+  String get textSizeNote =>
+      'Увеличивает текст в Heliora. Он никогда не становится меньше размера текста, заданного в самом телефоне.';
 }

@@ -1466,4 +1466,124 @@ class AppLocalizationsJa extends AppLocalizations {
   @override
   String get missionChandrayaan3 =>
       'インドは月に軟着陸した 4 番目の国になり、月の南極付近に着陸した最初の国になりました。ビクラム着陸機は探査車プラギャンを載せていました。';
+
+  @override
+  String get spacecraftTitle => 'いまの宇宙機';
+
+  @override
+  String get spacecraftSubtitle => '有名な宇宙機が、いま地球からどれくらい離れているか。';
+
+  @override
+  String get spacecraftCardHint => 'ボイジャー、JWST、火星ローバーなど';
+
+  @override
+  String get spacecraftDistance => '地球からの距離';
+
+  @override
+  String get spacecraftAltitude => '地上からの高さ';
+
+  @override
+  String get spacecraftInAu => '天文単位で';
+
+  @override
+  String get spacecraftSpeed => '速さ';
+
+  @override
+  String get spacecraftSignal => '電波が届くまで';
+
+  @override
+  String get spacecraftNote =>
+      '距離は推定値です。遠くの探査機は平均の速さから計算していて、地球が太陽のまわりを回るため約1%ずれることがあります。火星までの距離は今日の分を計算しています。1 AU（天文単位）は地球から太陽までの距離です。';
+
+  @override
+  String valueBillionKm(String value) {
+    return '$value 十億 km';
+  }
+
+  @override
+  String valueAu(String value) {
+    return '$value AU';
+  }
+
+  @override
+  String valueKmS(String value) {
+    return '$value km/秒';
+  }
+
+  @override
+  String get spacecraftVoyager1 =>
+      '1977年に打ち上げ。2012年に星間空間に入った最初の探査機になりました。電波が私たちに届くころには、およそ1日前のものになっています。';
+
+  @override
+  String get spacecraftVoyager2 =>
+      '1977年に打ち上げ。天王星と海王星の両方を訪れた唯一の探査機で、2018年に星間空間に入りました。';
+
+  @override
+  String get spacecraftNewHorizons =>
+      '2015年に冥王星、2019年にカイパーベルト天体アロコスのそばを通過。いまも外へ向かって進み、データを送り続けています。';
+
+  @override
+  String get spacecraftJwst =>
+      '最大の宇宙望遠鏡で、2021年に打ち上げ。L2という点の近く、地球から約150万kmにあり、日よけはいつも太陽の方を向いています。';
+
+  @override
+  String get spacecraftIss => '約90分で地球を1周します。2000年から、人が途切れることなく暮らしています。';
+
+  @override
+  String get spacecraftHubble =>
+      '1990年に打ち上げられ、いまも活躍中。画像をぼやけさせる大気の上を回っているので、とても鮮明な写真が撮れます。';
+
+  @override
+  String get spacecraftMarsRovers =>
+      'キュリオシティ（2012年着陸）とパーセベランス（2021年着陸）が火星を走っています。火星までの距離は約5500万kmから4億km以上まで変わります。';
+
+  @override
+  String get searchTooltip => '検索';
+
+  @override
+  String get searchHint => '惑星、衛星、ミッションを検索…';
+
+  @override
+  String get searchClear => '消去';
+
+  @override
+  String searchEmpty(String query) {
+    return '「$query」は見つかりませんでした。';
+  }
+
+  @override
+  String get searchBodies => '惑星と衛星';
+
+  @override
+  String get searchMissions => 'ミッション';
+
+  @override
+  String get searchSpacecraft => '宇宙機';
+
+  @override
+  String get favoritesTitle => 'お気に入り';
+
+  @override
+  String get favoritesEmpty => '惑星、ミッション、宇宙機の星をタップすると、ここに残ります。';
+
+  @override
+  String get favoriteAdd => 'お気に入りに追加';
+
+  @override
+  String get favoriteRemove => 'お気に入りから削除';
+
+  @override
+  String get textSize => '文字の大きさ';
+
+  @override
+  String get textSizeNormal => '標準';
+
+  @override
+  String get textSizeLarge => '大';
+
+  @override
+  String get textSizeLarger => '特大';
+
+  @override
+  String get textSizeNote => 'Heliora の文字を大きくします。スマホ自体の文字サイズより小さくなることはありません。';
 }
